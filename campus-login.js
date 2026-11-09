@@ -61,6 +61,7 @@ const campusAssetStyles = new Map();
 let pastExamCatalogRequest;
 
 window.loadPastExamCatalog = () => {
+    if (window.CampusCatalogs?.past) return Promise.resolve(window.CampusCatalogs.past);
     if (!pastExamCatalogRequest) {
         pastExamCatalogRequest = fetch('/content/past-exams/catalog.json?v=examenes-umss')
             .then(response => {
@@ -156,11 +157,11 @@ async function initAuth() {
     }
     document.body.classList.add('login-active');
 
-    var checker = document.createElement('div');
-    checker.className = 'login-checking';
-    checker.innerHTML = '<div class="login-checking-spinner"></div>' +
-        '<span class="login-checking-text">verificando sesión...</span>';
-
+    const login = document.getElementById('login-screen');
+    try {
+        const project = new URL(SUPABASE_URL).hostname.split('.')[0];
+        if (localStorage.getItem('sb-' + project + '-auth-token')) window.loadCampusAssets('campus').catch(() => {});
+    } catch (_) { /* Sign-in also works with browser storage disabled. */ }
     try {
         await ensureSupabaseSdk();
         var client = getSupabase();
@@ -169,7 +170,7 @@ async function initAuth() {
         var session = res.data.session;
 
         if (session?.user && !currentUser) {
-            document.body.appendChild(checker);
+            if (login) login.inert = true;
             currentUser = session.user;
             await enterApp(currentUser);
         }
@@ -181,8 +182,7 @@ async function initAuth() {
              setTimeout(function() { showLoginError('error al conectar con el servidor. revisa tu internet.'); }, 500);
         }
     } finally {
-        checker.classList.add('fade-out');
-        setTimeout(function () { checker.remove(); }, 350);
+        if (login) login.inert = false;
     }
 
     try {
@@ -264,6 +264,7 @@ window.handleLogin = async function (e) {
     if (password.length < 6) { showLoginError('la contraseña debe tener al menos 6 caracteres'); return; }
 
     setLoginLoading(true);
+    window.loadCampusAssets('campus').catch(() => {});
     try {
         await ensureSupabaseSdk();
         var client = getSupabase();

@@ -4,10 +4,9 @@
     const list = document.getElementById('library-topics');
     const status = document.getElementById('library-status');
     const search = document.getElementById('library-search');
-    const buttons = [...document.querySelectorAll('[data-subject]')];
+    const buttons = [...document.getElementById('library-subjects').querySelectorAll('[data-subject]')];
     let request = 0;
     let topics = [];
-    let rows = [];
     let subject = '';
 
     function stage(isTopics) {
@@ -22,16 +21,17 @@
         panel.hidden = !isTopics;
     }
     window.openStudyLibrary = function () {
+        if (showScreen('study-library') === false) return;
         ++request;
-        showScreen('study-library');
         stage(false);
     };
     window.backToStudyTopics = function () {
-        showScreen('study-library');
+        if (showScreen('study-library') === false) return;
+        ++request;
         stage(Boolean(subject));
     };
     window.quickStartSubject = function (value) {
-        showScreen('study-library');
+        if (showScreen('study-library') === false) return;
         return chooseSubject(value);
     };
 
@@ -58,64 +58,73 @@
             if (topic.locked) action.href = '/planes?desde=campus#planes';
             else {
                 action.type = 'button';
-                action.addEventListener('click', () => startDeck(topic.name, subject, rows));
+                action.addEventListener('click', () => openTopic(topic));
             }
             const info = document.createElement('div');
             info.className = 'library-topic-info';
             const count = document.createElement('span');
             count.className = 'library-topic-count' + (!topic.locked && topic.count < 10 ? ' is-small' : '');
-            count.textContent = topic.locked ? 'Requiere un plan vigente' : topic.count + ' tarjetas en el tema' + (topic.count < 10 ? ' · colección breve' : '');
+            count.textContent = topic.locked ? 'Requiere un plan vigente'
+                : topic.pending ? 'Tarjetas de repaso' : topic.count + ' tarjetas en el tema' + (topic.count < 10 ? ' · colección breve' : '');
             info.append(title, count);
             row.append(info, action);
             list.append(row);
         });
     }
 
-    async function chooseSubject(value) {
+    function chooseSubject(value) {
         const token = ++request;
         subject = value;
         stage(true);
-        topics = [];
-        rows = [];
         search.value = '';
-        search.disabled = true;
+        search.disabled = false;
         panel.hidden = false;
-        list.replaceChildren();
-        status.textContent = 'Cargando tus temas…';
         buttons.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.subject === value)));
-        try {
-            const data = await loadFlashcards();
-            if (token !== request) return;
-            rows = data.filter(row => normalizeDbText(campo(row, 'materia')) === normalizeDbText(value));
-            const groups = new Map();
-            rows.forEach(row => {
-                const name = String(campo(row, 'tema') || '').trim();
-                if (!name) return;
-                const key = normalizeDbText(name);
-                const group = groups.get(key) || { name, count: 0 };
-                group.count++;
-                groups.set(key, group);
+        const belongs = row => normalizeDbText(row.materia) === normalizeDbText(value);
+        const free = CampusAccess.isFree();
+        const index = window.CampusCatalogs.flashcards.filter(belongs);
+        topics = index.map(row => ({ name: row.tema, count: row.count, pending: free }));
+        renderTopics();
+        if (free) CampusAccess.catalog().then(policy => {
+            if (token !== request || !CampusAccess.isFree()) return;
+            const counts = new Map(policy.filter(belongs).map(row => [normalizeDbText(row.tema), Number(row.free_count)]));
+            topics = index.map(row => {
+                const count = Math.min(row.count, counts.get(normalizeDbText(row.tema)) || 0);
+                return { name: row.tema, count, locked: !count };
             });
-            topics = [...groups.values()].sort((a, b) => a.name.localeCompare(b.name, 'es', { numeric: true }));
-            if (window.OfficialFlashcards) {
-                const free = Boolean(window.CampusAccess?.isFree());
-                topics = OfficialFlashcards.catalog().filter(t => normalizeDbText(t.materia) === normalizeDbText(value))
-                    .map(t => ({name:t.tema,count:free?Number(t.free_count):Number(t.count),locked:Boolean(t.locked)}));
-            } else if (window.CampusAccess && CampusAccess.isFree()) {
-                const catalog = await CampusAccess.catalog();
-                if (token !== request) return;
-                topics = catalog.filter(t => normalizeDbText(t.materia) === normalizeDbText(value)).map(t => ({name:t.tema,count:Number(t.free_count),locked:!Number(t.free_count)}));
-            }
-            search.disabled = false;
             renderTopics();
-        } catch (error) {
-            if (token !== request) return;
-            status.textContent = 'No pudimos cargar los temas. Revisa tu conexión y vuelve a intentar.';
-            const retry = document.createElement('button');
-            retry.type = 'button';
-            retry.textContent = 'Volver a intentar';
-            retry.addEventListener('click', () => chooseSubject(value));
-            list.append(retry);
+        }).catch(() => {});
+    }
+
+    async function openTopic(topic) {
+        const matter = subject;
+        const owner = currentUser?.id;
+        const area = document.getElementById('study-area');
+        area.setAttribute('data-deck-pending', '');
+        if (showScreen('study-area') === false) {
+            area.removeAttribute('data-deck-pending');
+            return;
+        }
+        const token = ++request;
+        const isCurrent = () => request === token && currentUser?.id === owner && currentCampusScreen === 'study-area';
+        area.setAttribute('aria-busy', 'true');
+        document.getElementById('current-subject').textContent = matter.toLowerCase().replace(/^salud pública$|^salud publica$/, 'educación para la salud');
+        document.getElementById('card-tema-name').textContent = topic.name;
+        document.getElementById('study-topic-message').textContent = topic.pending
+            ? 'Repaso por tema' : 'Repaso por tema · ' + topic.count + ' tarjetas';
+        try {
+            const [cards] = await Promise.all([OfficialFlashcards.load(matter, topic.name), window.loadCampusAssets('flashcard-deck')]);
+            if (!isCurrent()) return;
+            if (!cards.length) {
+                if (CampusAccess.isFree()) return CampusAccess.unlock();
+                throw new Error('Este tema no tiene tarjetas disponibles.');
+            }
+            area.removeAttribute('data-deck-pending');
+            startDeck(topic.name, matter, cards);
+        } catch (_) {
+            if (isCurrent()) document.getElementById('study-topic-message').textContent = 'No pudimos abrir las tarjetas. Vuelve a Temas para reintentar.';
+        } finally {
+            if (isCurrent()) area.removeAttribute('aria-busy');
         }
     }
     buttons.forEach(button => button.addEventListener('click', () => chooseSubject(button.dataset.subject)));

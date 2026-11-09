@@ -133,7 +133,7 @@ test('topic practice always uses difficult items and retains the selected subjec
  vm.createContext(context);vm.runInContext(fs.readFileSync(require.resolve('../suficiencia.js'),'utf8'),context);
  const opening=context.window.Sufficiency.open();
  assert.match(root.innerHTML,/id="sf-config-subject"/);
- assert.match(root.innerHTML,/Cargando temas y progreso/);
+ assert.match(root.innerHTML,/id="sf-config-topic"[^>]+disabled/);
  await opening;
  assert.match(root.innerHTML,/banco-config-card/);assert.ok(!root.innerHTML.includes('sf-matter-grid'));
  assert.match(root.innerHTML,/id="sf-config-topic"[^>]*disabled/);

@@ -7,6 +7,7 @@
     const normalize = value => String(value).normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().trim();
     const questionCount = count => count + (count === 1 ? ' pregunta' : ' preguntas');
     async function catalog() {
+        if (window.CampusCatalogs?.evaluations) return window.CampusCatalogs.evaluations;
         if (!catalogPromise) catalogPromise = fetch('/api/topic-evaluation?id=catalogo')
             .then(r => { if (!r.ok) throw new Error('No se pudo cargar la lista de evaluaciones.'); return r.json(); })
             .catch(error => { catalogPromise = null; throw error; });
@@ -53,7 +54,7 @@
             $('topic-eval-grid').replaceChildren();
             $('topic-eval-count').textContent = '';
         }
-        $('topic-eval-status').textContent='Cargando evaluaciones…';
+        $('topic-eval-status').textContent='';
         return render().catch(error => { $('topic-eval-status').textContent=error.message; });
     };
     async function start(exam, button, assigned) {

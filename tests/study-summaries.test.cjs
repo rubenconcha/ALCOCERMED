@@ -63,8 +63,10 @@ test('a previous document finishing after close cannot hide the new loading stat
     const pending = [];
     const t = setup({ open: () => new Promise(resolve => pending.push(resolve)) });
     const first = t.card(0).click();
+    await new Promise(setImmediate);
     t.ids['resumenes-viewer'].close();
     const second = t.card(1).click();
+    await new Promise(setImmediate);
     pending[0](); await first;
     assert.equal(t.ids['resumenes-loading'].hidden, false);
     assert.match(t.ids['resumenes-download'].download, /capitulo-2/);

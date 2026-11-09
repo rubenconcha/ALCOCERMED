@@ -19,6 +19,7 @@ function fixture() {
     const element = () => ({
         textContent: '', dataset: {}, children: [], classList: { add() {}, remove() {}, toggle() {} },
         setAttribute(k, value) { this[k] = value; },
+        removeAttribute(k) { delete this[k]; },
         appendChild(child) { this.children.push(child); },
         replaceChildren() { this.children = []; },
     });

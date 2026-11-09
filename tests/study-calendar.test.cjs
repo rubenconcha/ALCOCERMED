@@ -111,7 +111,7 @@ test('the authenticated campus and cache use the same calendar resources', () =>
         assert.ok(loaded, asset);
         assert.ok(worker.includes('./' + loaded), asset);
     }
-    for (const asset of ['vendor/fullcalendar/index.global.min.js', 'vendor/fullcalendar/es.global.min.js', 'vendor/jspdf/jspdf.umd.min.js']) {
+    for (const asset of ['vendor/jspdf/jspdf.umd.min.js']) {
         assert.ok(worker.includes('./' + asset), asset);
         assert.ok(fs.statSync(path.join(__dirname, '..', asset)).size > 500, asset);
     }

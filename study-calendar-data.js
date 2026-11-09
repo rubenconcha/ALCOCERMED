@@ -168,13 +168,17 @@
         ];
     }
 
+    let sampleStart, sample;
     function buildSample(reference) {
         const start = move(monday(reference), -28);
+        if (sampleStart === start) return sample;
         const plan = new Map();
         for (let index = 0; index < 77; index += 1) {
             const key = move(start, index);
             plan.set(key, day(key));
         }
+        sampleStart = start;
+        sample = plan;
         return plan;
     }
 

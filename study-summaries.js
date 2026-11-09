@@ -30,7 +30,7 @@
     const count = document.getElementById('resumenes-count');
     const empty = document.getElementById('resumenes-empty');
     const dialog = document.getElementById('resumenes-viewer');
-    const reader = new SummaryPdfReader(document.getElementById('resumenes-frame'));
+    let reader;
     const retry = document.getElementById('resumenes-retry');
     let currentItem = null;
     const loading = document.getElementById('resumenes-loading');
@@ -45,7 +45,10 @@
         pdfCache.clear();
     }
 
-    async function showPdf(url, item, revision, signal) {
+    async function showPdf(url, item, revision, signal, assets) {
+        await assets;
+        if (signal.aborted || revision !== openRevision || !dialog.open) return;
+        reader ||= new SummaryPdfReader(document.getElementById('resumenes-frame'));
         download.href = url;
         download.download = `${item.file}.pdf`;
         download.hidden = false;
@@ -115,21 +118,23 @@
         const revision = ++openRevision;
         if (pendingRequest) pendingRequest.abort();
         pendingRequest = null;
-        reader.destroy();
+        reader?.destroy();
         document.getElementById('resumenes-viewer-subject').textContent = `${item.subject} · ${item.topic}`;
         document.getElementById('resumenes-viewer-title').textContent = item.title;
         currentItem = item;
         retry.hidden = true;
         download.hidden = true;
-        loading.textContent = 'Cargando PDF…';
+        loading.textContent = item.pages + ' páginas · ' + item.subject;
         loading.hidden = false;
         if (!dialog.open) dialog.showModal();
+        const assets = window.loadCampusAssets?.('reader');
+        assets?.catch(() => {});
         const controller = new AbortController();
         pendingRequest = controller;
         const timeout = setTimeout(() => {
             controller.abort();
             if (revision === openRevision && dialog.open) {
-                reader.destroy();
+                reader?.destroy();
                 loading.hidden = false;
                 retry.hidden = false;
                 loading.textContent = 'La conexión está tardando. Pulsa Reintentar para volver a cargar el resumen.';
@@ -137,7 +142,7 @@
         }, 30000);
         try {
             if (item.free) {
-                await showPdf(`/resumenes/${item.file}.pdf?v=${pdfVersion}`, item, revision, controller.signal);
+                await showPdf(`/resumenes/${item.file}.pdf?v=${pdfVersion}`, item, revision, controller.signal, assets);
                 return;
             }
             const { data } = await getSupabase().auth.getSession();
@@ -148,7 +153,7 @@
                 const url = pdfCache.get(key);
                 pdfCache.delete(key);
                 pdfCache.set(key, url);
-                await showPdf(url, item, revision, controller.signal);
+                await showPdf(url, item, revision, controller.signal, assets);
                 return;
             }
             const response = await fetch(`/api/resumen?file=${encodeURIComponent(item.file)}`, {
@@ -166,10 +171,10 @@
                 URL.revokeObjectURL(pdfCache.get(oldest));
                 pdfCache.delete(oldest);
             }
-            await showPdf(url, item, revision, controller.signal);
+            await showPdf(url, item, revision, controller.signal, assets);
         } catch (error) {
             if (revision === openRevision && dialog.open) {
-                reader.destroy();
+                reader?.destroy();
                 loading.hidden = false;
                 retry.hidden = false;
                 loading.textContent = controller.signal.aborted ? 'La conexión está tardando. Cierra y vuelve a abrir el resumen.' : error.message;
@@ -198,7 +203,7 @@
         ++openRevision;
         if (pendingRequest) pendingRequest.abort();
         pendingRequest = null;
-        reader.destroy();
+        reader?.destroy();
     });
     window.addEventListener('campus-access-change', () => { clearPdfCache(); render(); });
     window.addEventListener('pagehide', clearPdfCache);

@@ -52,7 +52,7 @@
         bookCoverUrl = null;
     }
 
-    async function prepareBook(text, headers, signal, page, citations) {
+    async function prepareBook(text, headers, signal, page, citations, getReader) {
         const response = await fetch(resourceUrl(text) + '&vista=portada', { method: citations ? 'HEAD' : 'GET', headers, signal });
         if (!response.ok) return false;
         const grant = response.headers.get('X-Official-Reader');
@@ -72,7 +72,9 @@
             if (signal.aborted) return false;
             cover = { page: text.coverPage || 1, url: previewUrl, alt: preview.alt, width: preview.naturalWidth, height: preview.naturalHeight };
         }
-        await reader.openBook({
+        const viewer = await getReader();
+        if (signal.aborted) return false;
+        await viewer.openBook({
             numPages: text.pages,
             starts,
             async fetchSegment(start, cancel) {
@@ -106,7 +108,7 @@
     }
 
     function showCitations(citations) {
-        citationsBar.hidden = !citations || citations.length < 2 || SummaryPdfReader.usesPagePicker(citations);
+        citationsBar.hidden = !citations || citations.length < 2 || citations.length > 4;
         citationsBar.replaceChildren();
         if (citationsBar.hidden) return;
         const label = document.createElement('span');
@@ -146,16 +148,26 @@
         discardReader();
         const controller = opening = new AbortController();
         const { signal } = controller;
-        status.textContent = 'Cargando PDF…';
+        status.textContent = citations ? 'Páginas seleccionadas · ' + citations.map(ref => ref.printed || ref.page).join(', ')
+            : text.credit + ' · ' + text.edition;
         status.hidden = false;
         toolbar.inert = pages.inert = citationsBar.inert = true;
+        const assets = window.loadCampusAssets?.('reader');
+        assets?.catch(() => {});
+        const getReader = async () => {
+            await assets;
+            if (signal.aborted) return;
+            return reader ||= new SummaryPdfReader(pages, { label: 'texto oficial', pageJump: true, toolbarHost: toolbar });
+        };
         try {
             const headers = await authorization();
             if (version !== revision || !dialog.open) return;
-            reader ||= new SummaryPdfReader(pages, { label: 'texto oficial', pageJump: true, toolbarHost: toolbar });
-            const ready = await prepareBook(text, headers, signal, initialPage, citations).catch(() => false);
+            const ready = await prepareBook(text, headers, signal, initialPage, citations, getReader).catch(() => false);
             if (signal.aborted) return;
-            if (!ready) await openFullReader(text, headers, signal, initialPage, citations);
+            if (!ready) {
+                await getReader();
+                if (!signal.aborted) await openFullReader(text, headers, signal, initialPage, citations);
+            }
             if (version !== revision || !dialog.open) return;
             controller.abort();
             clearPreview();
@@ -222,6 +234,7 @@
         open.className = 'btn-primary';
         open.textContent = 'Leer en el campus';
         open.setAttribute('aria-label', 'Leer ' + text.title + ' en el campus');
+        open.setAttribute('data-campus-load', 'reader');
         open.onclick = () => read(text);
         const save = document.createElement('button');
         save.type = 'button';
@@ -295,9 +308,6 @@
             return read(text, first, rangeCitations(first, last, printedFirst));
         },
         closeInline,
-        preload() {
-            if (!navigator.connection?.saveData) SummaryPdfReader.preload().catch(() => {});
-        },
         close() {
             ++revision;
             opening?.abort();

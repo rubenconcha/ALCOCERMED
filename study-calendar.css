@@ -29,7 +29,7 @@
     --fc-neutral-bg-color:var(--cal-day-band); --fc-list-event-hover-bg-color:var(--cal-hover);
     color:var(--cal-ink); min-width:0;
 }
-#calendar-board .fc-toolbar { column-gap:14px; row-gap:12px; margin-bottom:20px }
+#calendar-board .fc-toolbar { display:flex; justify-content:space-between; align-items:center; column-gap:14px; row-gap:12px; margin-bottom:20px }
 #calendar-board .fc-toolbar-chunk { display:flex; align-items:center; gap:8px; min-width:0 }
 #calendar-board .fc-toolbar-title { color:var(--cal-ink); font-size:clamp(18px, 2.2vw, 25px); line-height:1.32; font-weight:500; text-align:center }
 #calendar-board .fc-button-group { gap:8px }
@@ -71,6 +71,33 @@
 #calendar-board .fc-list-event-dot { border-color:var(--kind-color) }
 #calendar-board .fc-list-event-title a { color:inherit; font-weight:500 }
 #calendar-board .fc-list-empty { background:var(--cal-hover); color:var(--cal-muted) }
+
+.calendar-month { width:100%; table-layout:fixed; border-collapse:collapse }
+.calendar-month :is(th,td) { border:1px solid var(--cal-grid) }
+.calendar-month td { height:clamp(95px,12vh,130px); padding:0; vertical-align:top; cursor:pointer }
+.calendar-month .fc-day-today { background:var(--cal-today) }
+.calendar-month .fc-daygrid-day-top { display:flex; justify-content:flex-end }
+.calendar-month :is(.fc-daygrid-day-number,.fc-daygrid-more-link),
+.calendar-agenda-date { background:none; border:0; color:inherit; text-align:start }
+.calendar-month .fc-daygrid-event { display:block; width:calc(100% - 4px); text-align:start }
+.calendar-month .fc-event-title { display:block; white-space:nowrap }
+.calendar-month .fc-daygrid-more-link { color:var(--cal-action); margin-inline:4px; font-size:11px }
+.calendar-agenda { display:grid; gap:8px }
+.calendar-agenda-day { border:1px solid var(--cal-grid); border-radius:6px; overflow:hidden }
+.calendar-agenda-day h3 { margin:0 }
+.calendar-agenda .fc-list-event {
+    display:grid; grid-template-columns:7.2rem minmax(0,1fr); align-items:center; gap:10px;
+    width:100%; padding:11px 13px; border:0; border-bottom:1px solid var(--cal-panel);
+    text-align:start; color:var(--kind-ink,var(--cal-ink));
+}
+.calendar-agenda .fc-list-event:hover { background:var(--fc-list-event-hover-bg-color) }
+.calendar-agenda .fc-list-event-time { font-variant-numeric:tabular-nums }
+.calendar-agenda .fc-list-empty { padding:20px; text-align:center }
+@media(max-width:768px) {
+    .calendar-month td { height:72px }
+    .calendar-month .fc-daygrid-more-link { margin-inline:0; padding:1px; font-size:8px }
+    .calendar-agenda .fc-list-event { grid-template-columns:5.6rem minmax(0,1fr); gap:6px; padding:9px 7px; font-size:11px }
+}
 
 .calendar-day {
     display:grid; grid-template:"plan header" auto "plan detail" 1fr / clamp(260px,19vw,325px) minmax(0,1fr);

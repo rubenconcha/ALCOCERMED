@@ -24,9 +24,10 @@
         flashcards: ['Repasar con flashcards', () => window.openStudyLibrary()],
     };
     const state = { user: '', date: '', active: null, completed: new Set(), ratings: {}, plan: new Map(), reference: '' };
-    let calendar;
-    let loading;
-    let lastBoardWidth = 0;
+    let overviewDate = '';
+    let overviewMode = small.matches ? 'agenda' : 'month';
+    const monthLabel = new Intl.DateTimeFormat('es-BO', { month: 'long', year: 'numeric', timeZone: 'UTC' });
+    const shortDate = new Intl.DateTimeFormat('es-BO', { day: 'numeric', month: 'short', timeZone: 'UTC' });
     let view, reading, releasePanel, lastEvaluation;
     let revision = 0;
     let examMounted = false;
@@ -91,6 +92,7 @@
         if (state.user !== id) {
             state.user = id;
             state.date = '';
+            overviewDate = '';
             state.active = null;
             lastEvaluation = null;
             state.completed = new Set();
@@ -107,11 +109,10 @@
         if (!id) screenChanged(false);
     }
 
-    function setStatus(text, retry = false) {
+    function setStatus(text) {
         const status = byId('calendar-load-status');
         status.textContent = text;
         status.hidden = !text;
-        byId('calendar-retry').hidden = !retry;
     }
 
     function currentDateKey(date) {
@@ -123,60 +124,90 @@
         if (readingSlug) node.dataset.subject = readingSlug;
     }
 
-    function getEvents(info, success) {
-        const start = currentDateKey(info.start);
-        const end = currentDateKey(info.end);
-        const events = [];
-        for (const [date, items] of state.plan) {
-            if (date < start || date >= end) continue;
-            const kindsShown = new Set();
-            for (const item of items) {
-                if (!item.show) continue;
-                // Give each activity type a turn in the two monthly preview slots.
-                const monthPriority = kindsShown.has(item.kind) ? 1 : 0;
-                kindsShown.add(item.kind);
-                events.push({
-                    id: item.id, title: item.title, start: date + 'T' + item.start,
-                    end: item.end ? date + 'T' + item.end : undefined,
-                    extendedProps: { date, kind: item.kind, subject: item.reading?.slug, monthPriority },
-                });
+    function monthShift(date, offset) {
+        const value = new Date(date + 'T00:00:00Z');
+        value.setUTCDate(1);
+        value.setUTCMonth(value.getUTCMonth() + offset);
+        return currentDateKey(value);
+    }
+
+    function range() {
+        const start = overviewMode === 'agenda' ? data.monday(overviewDate) : monthShift(overviewDate, 0);
+        return [start, overviewMode === 'agenda' ? data.move(start, 7) : monthShift(start, 1)];
+    }
+
+    function dayButton(date, label, css, item) {
+        const control = button(css, label, () => showDay(date, true, item?.id));
+        control.setAttribute('aria-label', item ? label + ' · ' + data.formatDay(date) : data.formatDay(date));
+        return control;
+    }
+
+    function monthGrid(start) {
+        const table = element('table', 'fc-dayGridMonth-view calendar-month');
+        table.setAttribute('aria-label', 'Actividades del mes');
+        const heading = table.createTHead().insertRow();
+        for (const day of ['lun', 'mar', 'mié', 'jue', 'vie', 'sáb', 'dom']) {
+            const th = element('th', 'fc-col-header-cell-cushion', day);
+            th.scope = 'col';
+            heading.append(th);
+        }
+        const first = data.monday(start);
+        const body = table.createTBody();
+        for (let week = 0; week < 6; week++) {
+            const row = body.insertRow();
+            for (let weekday = 0; weekday < 7; weekday++) {
+                const date = data.move(first, week * 7 + weekday);
+                const cell = row.insertCell();
+                cell.dataset.date = date;
+                cell.className = 'fc-daygrid-day';
+                if (date.slice(0, 7) !== start.slice(0, 7)) cell.classList.add('fc-day-other');
+                if (date === state.reference) cell.classList.add('fc-day-today');
+                cell.onclick = event => { if (!event.target.closest('button')) showDay(date); };
+                const top = element('div', 'fc-daygrid-day-top');
+                const dateControl = dayButton(date, String(Number(date.slice(-2))), 'fc-daygrid-day-number');
+                if (date === state.reference) dateControl.setAttribute('aria-current', 'date');
+                top.append(dateControl);
+                cell.append(top);
+                const activities = (state.plan.get(date) || []).filter(item => item.show);
+                const kinds = new Set();
+                const distinct = [], repeated = [];
+                for (const item of activities) {
+                    (kinds.has(item.kind) ? repeated : distinct).push(item);
+                    kinds.add(item.kind);
+                }
+                for (const item of distinct.concat(repeated).slice(0, 2)) {
+                    const control = dayButton(date, item.title, 'fc-daygrid-event', item);
+                    control.replaceChildren(element('span', 'fc-event-title', item.title));
+                    setActivityStyle(control, item.kind, item.reading?.slug);
+                    cell.append(control);
+                }
+                if (activities.length > 2) cell.append(dayButton(date, '+' + (activities.length - 2) + ' más', 'fc-daygrid-more-link'));
             }
         }
-        success(events);
+        return table;
     }
 
-    function decorateToolbar() {
-        for (const [name, symbol] of [['dayGridMonth', 'calendar'], ['listWeek', 'agenda']]) {
-            const control = board.querySelector('.fc-' + name + '-button');
-            if (control && !control.querySelector('svg')) control.prepend(icon(symbol));
+    function agenda(start) {
+        const list = element('div', 'fc-listWeek-view calendar-agenda');
+        for (let offset = 0; offset < 7; offset++) {
+            const date = data.move(start, offset);
+            const activities = (state.plan.get(date) || []).filter(item => item.show);
+            if (!activities.length) continue;
+            const section = element('section', 'calendar-agenda-day');
+            const heading = element('h3', 'fc-list-day-cushion');
+            heading.append(dayButton(date, data.formatDay(date), 'calendar-agenda-date'));
+            section.append(heading);
+            for (const item of activities) {
+                const row = dayButton(date, item.title, 'fc-list-event', item);
+                row.replaceChildren(element('span', 'fc-list-event-time', item.end ? item.start + ' – ' + item.end : item.start),
+                    element('span', 'fc-list-event-title', item.title));
+                setActivityStyle(row, item.kind, item.reading?.slug);
+                section.append(row);
+            }
+            list.append(section);
         }
-    }
-
-    function defaultView() {
-        return small.matches ? 'listWeek' : 'dayGridMonth';
-    }
-
-    function calendarHeight() {
-        return small.matches ? 'auto' : 'max(785px, calc(100dvh - var(--shell-top, 63px) - 74px))';
-    }
-
-    async function downloadProgram() {
-        const control = board.querySelector('.fc-program-button');
-        if (!calendar || control?.disabled) return;
-        const start = currentDateKey(calendar.view.currentStart);
-        const end = currentDateKey(calendar.view.currentEnd);
-        if (control) control.disabled = true;
-        setStatus('Preparando el programa…');
-        try {
-            await loadScript('/vendor/jspdf/jspdf.umd.min.js');
-            const pdf = window.StudyCalendarPdf.create(window.jspdf.jsPDF, state.plan, start, end);
-            pdf.save('AlcocerMed-programa-de-muestra-' + start + '.pdf');
-            setStatus('');
-        } catch (_) {
-            setStatus('No se pudo preparar el programa. Vuelve a pulsar Descargar programa.');
-        } finally {
-            if (control) control.disabled = false;
-        }
+        if (!list.children.length) list.append(element('p', 'fc-list-empty', 'No hay actividades de muestra para esta semana.'));
+        return list;
     }
 
     function updatePlan() {
@@ -184,64 +215,63 @@
         if (state.reference !== reference) {
             state.reference = reference;
             state.plan = data.buildSample(reference);
-            calendar?.setOption('now', reference);
-            calendar?.refetchEvents();
         }
     }
 
-    async function initCalendar() {
+    function renderOverview(focusClass) {
         updatePlan();
-        if (calendar || loading) return loading;
-        setStatus('Cargando el calendario…');
-        loading = (async () => {
-            try {
-                await loadScript('/vendor/fullcalendar/index.global.min.js');
-                await loadScript('/vendor/fullcalendar/es.global.min.js');
-                calendar = new window.FullCalendar.Calendar(board, {
-                    locale: 'es', firstDay: 1, timeZone: 'UTC', now: state.reference,
-                    initialView: defaultView(), initialDate: state.date || state.reference,
-                    headerToolbar: { left: 'prev,next today', center: 'title', right: 'dayGridMonth,listWeek program' },
-                    buttonText: { month: 'Mes', list: 'Agenda', today: 'Hoy' },
-                    customButtons: { program: { text: 'Descargar programa', click: downloadProgram } },
-                    height: calendarHeight(), fixedWeekCount: true, dayMaxEvents: 2,
-                    eventDisplay: 'block', displayEventTime: false,
-                    eventTimeFormat: { hour: '2-digit', minute: '2-digit', hour12: false },
-                    views: {
-                        dayGridMonth: { eventOrder: 'monthPriority,start', eventOrderStrict: true },
-                        listWeek: { displayEventTime: true, displayEventEnd: true },
-                    },
-                    noEventsText: 'No hay actividades de muestra para esta semana.',
-                    navLinks: true,
-                    navLinkDayClick: date => showDay(currentDateKey(date)),
-                    dateClick: info => showDay(info.dateStr.slice(0, 10)),
-                    eventClick: info => showDay(info.event.extendedProps.date, true, info.event.id),
-                    eventDidMount: info => {
-                        const { kind, subject } = info.event.extendedProps;
-                        setActivityStyle(info.el, kind, subject);
-                        const control = info.el.querySelector('.fc-list-event-title a') || info.el;
-                        control.tabIndex = 0;
-                        control.setAttribute('role', 'button');
-                        control.setAttribute('aria-label', 'Abrir día · ' + info.event.title);
-                        control.addEventListener('keydown', event => {
-                            if (event.key !== 'Enter' && event.key !== ' ') return;
-                            event.preventDefault();
-                            showDay(info.event.extendedProps.date, true, info.event.id);
-                        });
-                    },
-                    datesSet: () => requestAnimationFrame(decorateToolbar),
-                    events: getEvents,
-                });
-                calendar.render();
-                setStatus('');
-            } catch (_) {
-                calendar?.destroy();
-                calendar = null;
-                setStatus('No se pudo cargar el calendario.', true);
-            } finally {
-                loading = null;
-            }
-        })();
-        return loading;
+        overviewDate ||= state.date || state.reference;
+        const [start, end] = range();
+        const toolbar = element('div', 'fc-toolbar');
+        const navigation = element('div', 'fc-toolbar-chunk');
+        const center = element('div', 'fc-toolbar-chunk');
+        const actions = element('div', 'fc-toolbar-chunk');
+        const move = (amount, name) => {
+            overviewDate = overviewMode === 'agenda' ? data.move(start, amount * 7) : monthShift(start, amount);
+            renderOverview(name);
+        };
+        function control(name, label, action, symbol) {
+            const node = button('fc-button fc-' + name + '-button', label, action);
+            if (symbol) node.prepend(icon(symbol));
+            return node;
+        }
+        const prev = control('prev', '', () => move(-1, 'prev'), 'previous');
+        const next = control('next', '', () => move(1, 'next'), 'next');
+        prev.setAttribute('aria-label', overviewMode === 'agenda' ? 'Semana anterior' : 'Mes anterior');
+        next.setAttribute('aria-label', overviewMode === 'agenda' ? 'Semana siguiente' : 'Mes siguiente');
+        const today = control('today', 'Hoy', () => { overviewDate = state.reference; renderOverview(); });
+        today.disabled = state.reference >= start && state.reference < end;
+        navigation.append(prev, next, today);
+        const title = overviewMode === 'month' ? monthLabel.format(new Date(start + 'T00:00:00Z'))
+            : shortDate.format(new Date(start + 'T00:00:00Z')) + ' – ' + shortDate.format(new Date(data.move(end, -1) + 'T00:00:00Z'));
+        center.append(element('h3', 'fc-toolbar-title', title));
+        for (const [mode, name, label, symbol] of [['month', 'dayGridMonth', 'Mes', 'calendar'], ['agenda', 'listWeek', 'Agenda', 'agenda']]) {
+            const node = control(name, label, () => { overviewMode = mode; renderOverview(name); }, symbol);
+            node.classList.toggle('fc-button-active', overviewMode === mode);
+            node.setAttribute('aria-pressed', String(overviewMode === mode));
+            actions.append(node);
+        }
+        actions.append(control('program', 'Descargar programa', downloadProgram));
+        toolbar.append(navigation, center, actions);
+        board.replaceChildren(toolbar, overviewMode === 'month' ? monthGrid(start) : agenda(start));
+        if (focusClass) board.querySelector('.fc-' + focusClass + '-button')?.focus();
+    }
+
+    async function downloadProgram() {
+        const control = board.querySelector('.fc-program-button');
+        if (!control || control.disabled) return;
+        const [start, end] = range();
+        control.disabled = true;
+        try {
+            await Promise.all([window.loadCampusAssets('calendar-pdf'), loadScript('/vendor/jspdf/jspdf.umd.min.js')]);
+            const pdf = window.StudyCalendarPdf.create(window.jspdf.jsPDF, state.plan, start, end);
+            pdf.save('AlcocerMed-programa-de-muestra-' + start + '.pdf');
+            setStatus('');
+        } catch (_) {
+            setStatus('No se pudo preparar el programa. Vuelve a pulsar Descargar programa.');
+        } finally {
+            control.disabled = false;
+        }
     }
 
     function activities() {
@@ -436,7 +466,7 @@
 
         const book = reading;
         const fallback = book.bankTopic ? () => openBank(book) : null;
-        const status = message(workspace, 'Cargando preguntas del tema…');
+        const status = message(workspace, book.subject + ' · ' + book.topic);
         try {
             await window.loadCampusAssets('past');
             if (isCurrent()) {
@@ -474,14 +504,15 @@
 
     function renderEvaluation(item, isCurrent) {
         const card = element('section', 'calendar-evaluation-card');
-        const status = message(card, 'Cargando evaluación del tema…');
+        const status = message(card, reading.subject + ' · ' + reading.topic);
         workspace.append(card);
         const book = reading;
         const controller = new AbortController();
         releasePanel = () => controller.abort();
-        window.loadCampusAssets('evaluations').then(() => {
-            if (isCurrent()) return window.TopicEvaluations.describe(book.topicLinks.evaluation);
-        }).then(exam => {
+        const evaluation = window.TopicEvaluations
+            ? window.TopicEvaluations.describe(book.topicLinks.evaluation)
+            : window.loadCampusAssets('evaluations').then(() => window.TopicEvaluations.describe(book.topicLinks.evaluation));
+        evaluation.then(exam => {
             if (!isCurrent()) return;
             if (!exam) throw new Error('La evaluación de este tema aún no está disponible.');
             const result = resultFor(book);
@@ -655,14 +686,11 @@
         clearPanel();
         overview.hidden = false;
         dayPanel.hidden = true;
-        if (calendar && !screen.classList.contains('hidden')) requestAnimationFrame(() => calendar.updateSize());
     }
 
     function screenChanged(active) {
         if (!active && !dayPanel.hidden) {
             clearPanel();
-        } else if (active && calendar && !overview.hidden) {
-            requestAnimationFrame(() => calendar.updateSize());
         } else if (active && !dayPanel.hidden) {
             const version = revision;
             requestAnimationFrame(() => {
@@ -672,16 +700,9 @@
     }
 
     small.addEventListener('change', () => {
-        if (!calendar) return;
-        calendar.setOption('height', calendarHeight());
-        calendar.changeView(defaultView());
+        overviewMode = small.matches ? 'agenda' : 'month';
+        if (!overview.hidden && !screen.classList.contains('hidden')) renderOverview();
     });
-    new ResizeObserver(([entry]) => {
-        const width = Math.round(entry.contentRect.width);
-        if (!width || width === lastBoardWidth) return;
-        lastBoardWidth = width;
-        if (calendar && !overview.hidden) requestAnimationFrame(() => calendar.updateSize());
-    }).observe(board);
     compact.addEventListener('change', () => setPlanOpen(!compact.matches));
     planToggle.onclick = () => setPlanOpen(plan.hidden);
     byId('calendar-day-prev').onclick = () => showDay(data.move(state.date, -1), false);
@@ -689,10 +710,9 @@
     byId('calendar-back').onclick = () => {
         if (!canLeaveActivity()) return;
         showOverview();
-        if (calendar) calendar.gotoDate(state.date);
-        initCalendar();
+        overviewDate = state.date;
+        renderOverview();
     };
-    byId('calendar-retry').onclick = initCalendar;
     window.addEventListener('campus-access-change', () => {
         if (CampusAccess.isFree()) lastEvaluation = null;
         if (dayIsVisible() && view === 'evaluation' && (!examMounted || CampusAccess.isFree())) renderActivity();
@@ -701,7 +721,7 @@
         open() {
             if (!canLeaveActivity() || showScreen('study-calendar-screen') === false) return;
             showOverview();
-            initCalendar();
+            renderOverview();
         },
         openDate(date, activityId) {
             const value = new Date(date + 'T00:00:00Z');

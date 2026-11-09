@@ -90,20 +90,39 @@
  [['','Todos los tipos'],['simulacros','Simulacros'],['evaluaciones','Evaluaciones'],['examenes','Exámenes'],['historicos','Históricos sin tipo']].forEach(([value,label])=>{const o=el('option',label);o.value=value;type.append(o);});
  [['Tipo',type],['Desde (UTC)',from],['Hasta (UTC)',to]].forEach(([label,input])=>{const l=el('label',label);input.setAttribute('aria-label',label);l.append(input);filters.append(l);});filters.append(refresh);
  const status=el('p'),content=el('div'),detail=el('div');status.setAttribute('role','status');screen.append(header,filters,status,content,detail);document.querySelector('main').append(screen);
- let data=null,detailGeneration=0,owner=null;
+ let data=null,detailGeneration=0,owner=null,pending=null;
  function clear(){data=null;owner=null;detailGeneration++;content.replaceChildren();detail.replaceChildren();status.textContent='';}
  let api,load;
  const actor=()=>typeof currentUser==='undefined'?null:currentUser?.id;
- function reset(){if(load)load.clear();else clear();content.hidden=false;filters.hidden=false;type.value=from.value=to.value='';}
+ function closeDetail(){detailGeneration++;detail.replaceChildren();content.hidden=false;filters.hidden=false;}
+ function reset(){pending=null;screen.removeAttribute('aria-busy');clear();load?.clear();closeDetail();type.value=from.value=to.value='';}
  root.StudentResults={clear:reset};
  async function ready(){
   if(load)return;
   if(typeof ensureSupabaseSdk==='function')await ensureSupabaseSdk();
   api=getSupabase();
-  load=loader(api,actor,value=>{clear();if(!value){status.textContent=actor()?'Cargando tu historial…':'Inicia sesión para ver tus resultados.';return;}if(value.error){status.textContent=value.error;return;}let local=[];try{local=localRows(localStorage,value.owner);}catch(_){}data=[...value.rows,...local];owner=value.owner;render();});
+  load=loader(api,actor,value=>{
+   if(!value)return;
+   if(value.error){status.textContent=value.error;return;}
+   let local=[];try{local=localRows(localStorage,value.owner);}catch(_){}
+   data=[...value.rows,...local];owner=value.owner;
+   if(!content.hidden&&currentCampusScreen===screen.id)render();
+  });
   api.auth.onAuthStateChange(event=>{if(!['INITIAL_SESSION','TOKEN_REFRESHED'].includes(event))reset();});
  }
- async function reload(){const account=actor();reset();try{await ready();if(actor()===account&&currentCampusScreen===screen.id)await load.load();}catch(_){if(actor()===account)status.textContent='No se pudo conectar. Vuelve a intentar actualizar tu historial.';}}
+ function reload(){
+  const account=actor();
+  if(!account){status.textContent='Inicia sesión para ver tus resultados.';return;}
+  if(pending?.account===account)return pending.task;
+  const request={account};
+  pending=request;screen.setAttribute('aria-busy','true');
+  request.task=(async()=>{
+   try{await ready();if(pending===request&&actor()===account)await load.load();}
+   catch(_){if(pending===request&&actor()===account)status.textContent='No se pudo conectar. Vuelve a intentar actualizar tu historial.';}
+   finally{if(pending===request){pending=null;screen.removeAttribute('aria-busy');}}
+  })();
+  return request.task;
+ }
  function metric(label,value){const card=el('div',null,'eval-metric-card');card.append(el('strong',value,'eval-metric-num'),el('span',label));return card;}
  function render(){
   if(!data||actor()!==owner)return;detailGeneration++;detail.replaceChildren();content.replaceChildren();
@@ -157,7 +176,7 @@
   });
  }
  async function review(row){
-  if(actor()!==owner)return;const account=owner,request=++detailGeneration;content.hidden=true;filters.hidden=true;detail.replaceChildren();const close=el('button','← Volver a mi historial','btn-back-game');close.type='button';close.onclick=()=>{detailGeneration++;detail.replaceChildren();content.hidden=false;filters.hidden=false;};detail.append(close,el('h2',attemptTitle(row,'Resultado')),el('p','Cargando respuestas guardadas…'));detail.scrollIntoView({block:'start'});
+  if(actor()!==owner)return;const account=owner,request=++detailGeneration;content.hidden=true;filters.hidden=true;detail.replaceChildren();const close=el('button','← Volver a mi historial','btn-back-game');close.type='button';close.onclick=()=>{closeDetail();render();};detail.append(close,el('h2',attemptTitle(row,'Resultado')),el('p','Cargando respuestas guardadas…'));detail.scrollIntoView({block:'start'});
   const valid=()=>request===detailGeneration&&actor()===account&&owner===account;
   try{
    const session=(await api.auth.getSession()).data.session;if(session?.user?.id!==account)throw Error('Vuelve a iniciar sesión.');
@@ -199,7 +218,17 @@
   }catch(error){if(valid())detail.replaceChildren(close,el('p',error.message));}
  }
  refresh.onclick=reload;[type,from,to].forEach(n=>n.addEventListener('change',render));
- root.openStudentResults=()=>{if(showScreen(screen.id)===false)return;return reload();};
+ root.openStudentResults=()=>{
+  if(showScreen(screen.id)===false)return;
+  const account=actor();
+  if(data&&owner!==account)reset();
+  if(!data&&account){
+   let local=[];try{local=localRows(localStorage,account);}catch(_){}
+   if(local.length){data=local;owner=account;}
+  }
+  if(data)render();
+  return reload();
+ };
  // Browser Back / campus navigation must invalidate pending detail requests as well.
- new MutationObserver(()=>{if(screen.classList.contains('hidden')){reset();}}).observe(screen,{attributes:true,attributeFilter:['class']});
+ new MutationObserver(()=>{if(screen.classList.contains('hidden'))closeDetail();}).observe(screen,{attributes:true,attributeFilter:['class']});
 })(typeof window==='undefined'?globalThis:window);

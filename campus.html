@@ -35,7 +35,7 @@
     <script defer src="config.js"></script>
     <script defer src="device_guard.js?v=9"></script>
     <script defer src="campus-access.js?v=10"></script>
-    <script defer src="campus-login.js?v=1"></script>
+    <script defer src="campus-login.js?v=2"></script>
 </head>
 
 <body class="login-active campus-shell">
@@ -308,7 +308,7 @@
                     </a>
                 </li>
                 <li class="nav-item nav-item-simple" id="nav-sufficiency-practice">
-                    <a data-campus-screen="sufficiency-practice-screen" href="/campus?seccion=practica-suficiencia" onclick="showScreen('sufficiency-practice-screen'); return false;" aria-label="Práctica de suficiencia" data-tooltip="práctica de suficiencia">
+                    <a data-campus-screen="sufficiency-practice-screen" data-campus-load="practice" href="/campus?seccion=practica-suficiencia" onclick="showScreen('sufficiency-practice-screen'); return false;" aria-label="Práctica de suficiencia" data-tooltip="práctica de suficiencia">
                         <span class="nav-icon nav-icon-summary"><svg class="sidebar-tool-icon" aria-hidden="true"><use href="/assets/calendar-icons.svg#practice"></use></svg></span>
                         <span class="nav-label">Práctica de suficiencia</span>
                     </a>
@@ -319,7 +319,7 @@
             <summary aria-label="Exámenes y práctica"><span class="nav-icon"><svg aria-hidden="true" focusable="false"><use href="/assets/study-tools.svg?v=3#exam"></use></svg></span><span class="nav-label">Exámenes y práctica</span><span class="campus-nav-chevron" aria-hidden="true"></span></summary>
             <ul class="nav-links">
                 <li class="nav-item nav-item-simple" id="nav-banco">
-                    <a data-campus-screen="banco-screen" href="#" onclick="openBanco(); return false;" aria-label="Banco de preguntas" data-tooltip="banco de preguntas">
+                    <a data-campus-screen="banco-screen" data-campus-load="bank-index" href="#" onclick="openBanco(); return false;" aria-label="Banco de preguntas" data-tooltip="banco de preguntas">
                         <span class="nav-icon nav-icon-banco">
                             <svg class="sidebar-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg?v=3#bank"></use></svg>
                         </span>
@@ -491,7 +491,7 @@
       <div class="dashboard-activity-grid">
         <button class="dashboard-activity dashboard-activity-gold" data-campus-load="flashcards" onclick="openStudyLibrary()"><img src="/assets/study-art/cards.webp" alt="" loading="lazy" decoding="async"><span><strong>Flashcards</strong><small>Repasa por materia y tema</small></span></button>
         <button class="dashboard-activity dashboard-activity-blue" onclick="openMindMaps()"><img src="/assets/study-art/map.webp" alt="" loading="lazy" decoding="async"><span><strong>Mapas mentales</strong><small>Visualiza las ideas del tema</small></span></button>
-        <button class="dashboard-activity dashboard-activity-olive" onclick="openBanco()"><svg class="study-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg?v=3#bank"></use></svg><span><strong>Banco de preguntas</strong><small>Practica por materia</small></span></button>
+        <button class="dashboard-activity dashboard-activity-olive" data-campus-load="bank-index" onclick="openBanco()"><svg class="study-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg?v=3#bank"></use></svg><span><strong>Banco de preguntas</strong><small>Practica por materia</small></span></button>
         <button class="dashboard-activity dashboard-activity-navy" data-campus-load="simulations" onclick="openCampusSimulations()"><img src="/assets/study-art/quiz.webp" alt="" loading="lazy" decoding="async"><span><strong>Simulacros</strong><small>Resuelve un examen con tiempo</small></span></button>
       </div>
     </section>
@@ -605,6 +605,7 @@
                 <button id="flashcard-settings-toggle" type="button" aria-expanded="false" aria-controls="flashcard-settings">Ajustes</button>
             </div>
 
+            <div class="study-topic-overview" id="study-topic-message" role="status"></div>
             <div class="flashcard-controls" id="flashcard-settings" hidden>
                 <div class="flashcard-control-row"><label>Sesión<select id="flashcard-mode"><option value="due">Repaso programado</option><option value="all">Explorar todas</option></select></label><label>Subtema<select id="flashcard-subtopic"><option value="">Todos los subtemas</option></select></label><button id="flashcard-shuffle" type="button">Mezclar</button></div>
             </div>
@@ -1029,7 +1030,7 @@
                     <label for="sim-library-kind">Tipo de simulacro<select id="sim-library-kind"><option value="">Todos</option><option value="general">Generales</option><option value="topic">Por tema</option></select></label>
                     <label for="sim-library-topic">Tema<select id="sim-library-topic"><option value="">Todos los temas</option></select></label>
                     <label for="sim-library-scope">Parcial<select id="sim-library-scope"><option value="">Todos los parciales</option><option value="first">Primer parcial</option><option value="second">Segundo parcial</option><option value="final">Examen final</option><option value="mini-foundations">Minisimulacros</option></select></label>
-                    <p id="sim-library-status" role="status" aria-live="polite">Cargando simulacros…</p>
+                    <p id="sim-library-status" role="status" aria-live="polite"></p>
                 </div>
                 <div class="sim-library-tools">
                     <button type="button" class="campus-secondary sim-library-practice" data-campus-load="sufficiency" onclick="openSufficiency()">Práctica por materia y tema</button>
@@ -1328,9 +1329,9 @@
                 </div>
             </div>
 
-            <div id="vc-loading" class="vc-state-wrap">
-                <div class="vc-spinner"><i class="fas fa-spinner fa-spin"></i></div>
-                <p>cargando videoclases...</p>
+            <div id="vc-error" class="vc-state-wrap hidden" role="status">
+                <p>No pudimos abrir la biblioteca de videoclases.</p>
+                <button type="button" class="btn-back-game" onclick="loadVideoclases()">Reintentar</button>
             </div>
             <div id="vc-grid" class="vc-grid hidden"></div>
             <div id="vc-empty" class="vc-state-wrap hidden">
@@ -1397,7 +1398,7 @@
                         <button id="resumenes-close" type="button" aria-label="Cerrar PDF">Cerrar</button>
                     </div>
                 </div>
-                <p id="resumenes-loading" class="resumenes-loading" role="status">Cargando PDF…</p>
+                <p id="resumenes-loading" class="resumenes-loading" role="status"></p>
                 <button id="resumenes-retry" class="resumenes-retry" type="button" hidden>Reintentar</button>
                 <div id="resumenes-frame" aria-label="Lector de resúmenes en PDF"></div>
             </dialog>
@@ -1408,7 +1409,6 @@
                 <div class="calendar-sheet">
                     <h2 class="calendar-overview-title">Calendario de estudio</h2>
                     <p id="calendar-load-status" class="calendar-load-status" role="status" hidden></p>
-                    <button id="calendar-retry" class="calendar-outline" type="button" hidden>Reintentar</button>
                     <div id="calendar-board"></div>
                     <div class="calendar-sample">
                         <span class="calendar-sample-badge">Plan de práctica de muestra</span>
@@ -1683,7 +1683,7 @@
             </form>
         </section>
 
-        <section id="suficiencia-screen" class="hidden" aria-label="Simulacro"></section>
+        <section id="suficiencia-screen" class="hidden" aria-label="Simulacro"><header class="past-header"><button type="button" class="btn-back-game" onclick="openCampusSimulations()">← Volver</button><div><h2>Práctica por materia</h2><p>Elige una materia y un tema. Puedes revisar las respuestas al terminar.</p></div></header></section>
     </main>
 
     <!-- Lector de mapas a pantalla completa -->
@@ -1750,58 +1750,59 @@
 
 <a class="support-float" href="https://wa.me/59173752688?text=Hola%2C%20tengo%20una%20consulta%20sobre%20AlcocerMed" target="_blank" rel="noopener noreferrer" aria-label="Hablar con AlcocerMed por WhatsApp" title="¿Te ayudamos? Escríbenos"><svg aria-hidden="true"><use href="/assets/calendar-icons.svg#whatsapp"></use></svg></a>
     <template id="campus-section-assets">
-        <link rel="stylesheet" data-campus-assets="campus" href="/assets/vendor/font-awesome-6.4.0/css/all.min.css">
+        <link rel="stylesheet" data-campus-assets="campus-extra" href="/assets/vendor/font-awesome-6.4.0/css/all.min.css">
         <script data-campus-assets="exam-engine entrance-attempt" src="campus-exam-engine.js?v=1"></script>
-        <link rel="stylesheet" data-campus-assets="campus" href="campus-navigation.css?v=3">
+        <link rel="stylesheet" data-campus-assets="campus" href="campus-navigation.css?v=4">
         <link rel="stylesheet" data-campus-assets="campus" href="campus-home.css?v=5">
         <link rel="stylesheet" data-campus-assets="campus" href="campus-topics.css?v=4">
         <link rel="stylesheet" data-campus-assets="campus" href="study-depth.css?v=3">
         <link rel="stylesheet" data-campus-assets="campus" href="study-media.css?v=20261021-visual5c">
-        <script data-campus-assets="campus" src="official-flashcards.js?v=1"></script>
+        <script data-campus-assets="campus" src="campus-catalogs.js?v=1"></script>
+        <script data-campus-assets="campus" src="official-flashcards.js?v=2"></script>
         <script data-campus-assets="campus" src="study-depth.js?v=20"></script>
         <script data-campus-assets="campus" src="campus-section-tracking.js?v=1"></script>
         <script data-campus-assets="campus" src="question-review.js?v=12"></script>
         <script data-campus-assets="campus" src="study-media.js?v=20261021-visual5b"></script>
-        <script data-campus-assets="campus" src="script.js?v=20261109-carga"></script>
+        <script data-campus-assets="campus" src="script.js?v=20261109-apertura"></script>
         <script data-campus-assets="campus" src="study-assessments.js?v=2"></script>
-        <script data-campus-assets="campus" src="study-calendar-data.js?v=6"></script>
-        <script data-campus-assets="campus" src="campus-shell.js?v=3"></script>
-        <script data-campus-assets="campus" src="student-results.js?v=5"></script>
-        <link rel="stylesheet" data-campus-assets="simulations" href="simulacro-library.css?v=7">
-        <link rel="stylesheet" data-campus-assets="past evaluations entrance-attempt" href="past-exams.css?v=7">
-        <link rel="stylesheet" data-campus-assets="evaluations" href="topic-evaluations.css?v=5">
-        <link rel="stylesheet" data-campus-assets="atlas" href="campus-atlas.css?v=5">
+        <script data-campus-assets="campus" src="study-calendar-data.js?v=7"></script>
+        <script data-campus-assets="campus" src="campus-shell.js?v=4"></script>
+        <script data-campus-assets="campus" src="student-results.js?v=6"></script>
+        <link rel="stylesheet" data-campus-assets="campus-extra simulations" href="simulacro-library.css?v=7">
+        <link rel="stylesheet" data-campus-assets="campus past evaluations entrance-attempt" href="past-exams.css?v=7">
+        <link rel="stylesheet" data-campus-assets="campus-extra evaluations" href="topic-evaluations.css?v=5">
+        <link rel="stylesheet" data-campus-assets="campus-extra atlas" href="campus-atlas.css?v=5">
         <link rel="stylesheet" data-campus-assets="sufficiency" href="suficiencia.css?v=9">
-        <script data-campus-assets="flashcards" src="student-library.js?v=10"></script>
-        <script data-campus-assets="flashcards" src="flashcard-workspace.js?v=20261109-foco"></script>
-        <script data-campus-assets="calendar" src="study-calendar-pdf.js?v=2"></script>
-        <script data-campus-assets="calendar" src="study-calendar.js?v=13"></script>
+        <script data-campus-assets="campus flashcards" src="student-library.js?v=11"></script>
+        <script data-campus-assets="campus flashcard-deck" src="flashcard-workspace.js?v=20261109-foco"></script>
+        <script data-campus-assets="calendar-pdf" src="study-calendar-pdf.js?v=2"></script>
+        <script data-campus-assets="campus calendar" src="study-calendar.js?v=14"></script>
         <script data-campus-assets="past-topics" src="past-exam-breakdown.js?v=8"></script>
-        <script data-campus-assets="past evaluations entrance-attempt" src="past-exams.js?v=14"></script>
+        <script data-campus-assets="campus-extra past evaluations entrance-attempt" src="past-exams.js?v=15"></script>
         <script data-campus-assets="entrance-attempt" src="simulation-scope.js?v=11"></script>
         <script data-campus-assets="entrance-attempt" src="simulacro-ingreso.js?v=14"></script>
-        <script data-campus-assets="simulations" src="simulacro-library.js?v=9"></script>
-        <script data-campus-assets="evaluations" src="topic-evaluations.js?v=20261109-carga"></script>
-        <script data-campus-assets="atlas" src="campus-atlas.js?v=12"></script>
+        <script data-campus-assets="campus-extra simulations" src="simulacro-library.js?v=10"></script>
+        <script data-campus-assets="campus-extra evaluations" src="topic-evaluations.js?v=20261109-apertura"></script>
+        <script data-campus-assets="campus-extra atlas" src="campus-atlas.js?v=12"></script>
         <script data-campus-assets="sufficiency" src="suficiencia-core.js?v=12"></script>
-        <script data-campus-assets="sufficiency" src="suficiencia.js?v=16"></script>
-        <link rel="stylesheet" data-campus-assets="flashcards" href="flashcard-workspace.css?v=5">
-        <link rel="stylesheet" data-campus-assets="flashcards" href="flashcard-approved.css?v=6">
-        <link rel="stylesheet" data-campus-assets="calendar" href="study-calendar.css?v=11">
-        <link rel="stylesheet" data-campus-assets="results" href="student-results.css?v=1">
+        <script data-campus-assets="sufficiency" src="suficiencia.js?v=17"></script>
+        <link rel="stylesheet" data-campus-assets="campus flashcard-deck" href="flashcard-workspace.css?v=5">
+        <link rel="stylesheet" data-campus-assets="campus flashcard-deck" href="flashcard-approved.css?v=6">
+        <link rel="stylesheet" data-campus-assets="campus calendar" href="study-calendar.css?v=12">
+        <link rel="stylesheet" data-campus-assets="campus results" href="student-results.css?v=1">
         <link rel="stylesheet" data-campus-assets="maps" href="mindmap-viewer.css?v=8">
-        <link rel="stylesheet" data-campus-assets="maps" href="intocables-sheets.css?v=1">
-        <link rel="stylesheet" data-campus-assets="summaries texts" href="summary-pdf-reader.css?v=5">
-        <link rel="stylesheet" data-campus-assets="texts practice" href="campus-study-resources.css?v=8">
+        <link rel="stylesheet" data-campus-assets="campus-extra intocables maps" href="intocables-sheets.css?v=1">
+        <link rel="stylesheet" data-campus-assets="reader" href="summary-pdf-reader.css?v=5">
+        <link rel="stylesheet" data-campus-assets="campus texts practice" href="campus-study-resources.css?v=8">
         <script data-campus-assets="maps" src="mindmap-premium.js?v=3"></script>
         <script data-campus-assets="maps" src="mindmap-practice.js?v=20261021-visual5b"></script>
         <script data-campus-assets="maps" src="mindmap-viewer.js?v=20"></script>
-        <script data-campus-assets="maps" src="intocables-hub.js?v=4"></script>
-        <script data-campus-assets="summaries texts" src="summary-pdf-reader.js?v=9"></script>
-        <script data-campus-assets="texts" src="official-texts.js?v=12"></script>
+        <script data-campus-assets="campus-extra intocables maps" src="intocables-hub.js?v=5"></script>
+        <script data-campus-assets="reader" src="summary-pdf-reader.js?v=9"></script>
+        <script data-campus-assets="campus texts" src="official-texts.js?v=13"></script>
         <script data-campus-assets="practice" src="sufficiency-practice-content.js?v=2"></script>
         <script data-campus-assets="practice" src="sufficiency-practice.js?v=3"></script>
-        <script data-campus-assets="summaries" src="study-summaries.js?v=20261021-visual5b"></script>
+        <script data-campus-assets="campus-extra summaries" src="study-summaries.js?v=20261109-apertura"></script>
     </template>
 </body>
 

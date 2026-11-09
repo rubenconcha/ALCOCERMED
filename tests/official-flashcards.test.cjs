@@ -60,7 +60,7 @@ function server({premium=true,ready=true,status=200,token='valid'}={}){
  const response={headers:{},code:null,body:null,setHeader(k,v){this.headers[k]=v;},status(n){this.code=n;return this;},end(){return this;},json(body){this.body=body;return this;}};
  const c={module:{exports:{}},process:{env:{}},AbortSignal,fetch:async url=>({ok:status===200,status,json:async()=>url.endsWith('campus_catalog')?[{materia:'MORFOFUNCION',tema:'anatomia',free_count:1}]:({premium,ready})}),require:name=>name==='node:fs'?{promises:{readFile:async()=>JSON.stringify(library)}}:name==='node:path'?path:name==='./_flashcards/config.json'?{anonKey:'public-test'}:null,__dirname:path.join(ROOT,'api')};
  vm.runInNewContext(fs.readFileSync(path.join(ROOT,'api/flashcards.js'),'utf8'),c);
- return {run:()=>c.module.exports({method:'GET',headers:{authorization:token?'Bearer '+token:''},query:{}},response),response};
+ return {run:(query={})=>c.module.exports({method:'GET',headers:{authorization:token?'Bearer '+token:''},query},response),response};
 }
 test('paid catalogue requires a ready authenticated membership; free users receive only reviewed samples',async()=>{
  const unauth=server({token:''});await unauth.run();assert.equal(unauth.response.code,401);
@@ -69,6 +69,16 @@ test('paid catalogue requires a ready authenticated membership; free users recei
  const paid=server();await paid.run();assert.equal(paid.response.body.cards.length,2);assert.equal(paid.response.headers['Cache-Control'],'private, no-store');
  const free=server({premium:false});await free.run();assert.equal(free.response.body.cards.length,1);assert.equal(free.response.body.catalog[1].locked,true);
  assert.equal(free.response.body.cards[0].evidence,undefined);
+});
+test('topic requests return only the requested deck and apply free access to that deck',async()=>{
+ const paid=server();await paid.run({materia:'Morfofunción',tema:'Anatomía'});assert.equal(paid.response.code,200);
+ assert.equal(paid.response.body.cards.length,2);
+ assert.deepEqual(Array.from(paid.response.body.catalog, item=>item.tema),['anatomia']);
+ const free=server({premium:false});await free.run({materia:'MORFOFUNCION',tema:'anatomia'});
+ assert.deepEqual(Array.from(free.response.body.cards, card=>card.id),[row.id]);
+ const locked=server({premium:false});await locked.run({materia:'MORFOFUNCION',tema:'hueso'});
+ assert.equal(locked.response.body.cards.length,0);assert.equal(locked.response.body.catalog[0].locked,true);
+ const missing=server();await missing.run({tema:'anatomia'});assert.equal(missing.response.code,400);
 });
 test('main loader replaces database flashcards and never calls the old supplemental merge',async()=>{
  const source=fs.readFileSync(path.join(ROOT,'script.js'),'utf8');const begin=source.indexOf('async function loadFlashcards()'),end=source.indexOf('\nwindow.toggleMenu',begin);

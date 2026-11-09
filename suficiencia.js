@@ -237,7 +237,7 @@
         if(catalogueMode==='config') {
             root.classList.add?.('sf-bank-layout');
             if (!bank) {
-                root.innerHTML = header() + configurationControls() + '<p role="status" class="sf-notice">Cargando temas y progreso…</p>';
+                root.innerHTML = header() + configurationControls();
                 return;
             }
             const medicineNotice = hasMedicine ? '' : `<div class="sf-notice" role="status">No pudimos cargar las materias de Medicina. ${button('reload','Volver a cargar')}</div>`;

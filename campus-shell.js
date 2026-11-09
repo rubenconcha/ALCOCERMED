@@ -323,7 +323,8 @@
     function warmSection(event) {
         if (!userId || navigator.connection?.saveData) return;
         const group = event.target.closest('[data-campus-load]')?.dataset.campusLoad;
-        if (group) window.loadCampusAssets(group).catch(() => {});
+        if (group === 'bank-index') window.warmBancoCatalog?.();
+        else if (group) window.loadCampusAssets(group).catch(() => {});
     }
     document.addEventListener('pointerover', event => {
         if (event.pointerType === 'mouse') warmSection(event);

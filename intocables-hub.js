@@ -34,16 +34,26 @@ window.IntocablesHub = (() => {
   const filtered=catalogue.filter(i=>i.kind===format&&(!subject||i.materia===subject)&&(!topic||i.tema===topic)&&normal([i.titulo,i.tema,i.materia].join(' ')).includes(normal(query)));
   $('itc-count').textContent=filtered.length+' '+(format==='sheets'?'láminas':'fichas');
   $('itc-grid').innerHTML=filtered.length?filtered.map(i=>{const locked=!i.acceso_gratis&&window.CampusAccess?.isFree(),sheet=i.kind==='sheets';
-   const cover=sheet?`<span class="itc-sheet-cover" data-cover-id="${esc(i.id)}"><span class="itc-cover-placeholder"><img src="/promo-ben-carson-tiktok/public/authentic/logo.png" alt=""><span>${locked?'Lámina protegida':'Lámina ilustrada'}</span></span><img data-sheet-id="${esc(i.id)}" alt="Vista de ${esc(i.titulo)}" hidden></span>`:'';
-   return `<button type="button" class="itc-card ${sheet?'itc-sheet-card ':''}${locked?'is-locked':''}" data-id="${esc(i.id)}" aria-label="${locked?'Bloqueado: ':''}${esc(i.titulo)}">${cover}<span class="itc-card-top"><span class="itc-number">${sheet?'LÁMINA':String(i.orden).padStart(2,'0')}</span><span class="itc-card-symbol" aria-hidden="true">${locked?'🔒':'↗'}</span></span><span class="itc-card-middle"><span class="itc-card-subject">${esc(i.materia)}</span><strong>${esc(i.titulo)}</strong><span class="itc-card-topic">${esc(i.tema)}</span></span><span class="itc-card-bottom">${locked?'Disponible con un plan':sheet?'Abrir lámina':lessons.has(i.id)?'Abrir ficha':'Cargando ficha'} <span aria-hidden="true">→</span></span></button>`;}).join(''):'<div class="itc-empty">No hay material con estos filtros. Prueba con otro tema.</div>';
+   const cover=sheet?`<span class="itc-sheet-cover" data-cover-id="${esc(i.id)}"><span class="itc-cover-placeholder"><img src="/assets/campus-study-brand.webp" alt=""><span>${locked?'Lámina protegida':'Lámina ilustrada'}</span></span><img data-sheet-id="${esc(i.id)}" alt="Vista de ${esc(i.titulo)}" hidden></span>`:'';
+   return `<button type="button" class="itc-card ${sheet?'itc-sheet-card ':''}${locked?'is-locked':''}" data-id="${esc(i.id)}" aria-label="${locked?'Bloqueado: ':''}${esc(i.titulo)}">${cover}<span class="itc-card-top"><span class="itc-number">${sheet?'LÁMINA':String(i.orden).padStart(2,'0')}</span><span class="itc-card-symbol" aria-hidden="true">${locked?'🔒':'↗'}</span></span><span class="itc-card-middle"><span class="itc-card-subject">${esc(i.materia)}</span><strong>${esc(i.titulo)}</strong><span class="itc-card-topic">${esc(i.tema)}</span></span><span class="itc-card-bottom">${locked?'Disponible con un plan':sheet?'Abrir lámina':'Abrir ficha'} <span aria-hidden="true">→</span></span></button>`;}).join(''):'<div class="itc-empty">No hay material con estos filtros. Prueba con otro tema.</div>';
   showCovers().catch(()=>{});
  }
- async function load(){const current=++requestId;status('Cargando material…');try{
+ async function load(){const current=++requestId;status('');try{
+  if(!catalogue.length)catalogue=window.CampusCatalogs?.intocables||[];
   if(!catalogue.length){const [response]=await Promise.all([fetch('/content/intocables_catalogo_2026.json'),window.loadMindmapCatalog?.()]);if(!response.ok)throw Error();const cards=await response.json();catalogue=cards.map(i=>({...i,kind:'cards'})).concat((window.MINDMAP_PREMIUM_CATALOG||[]).filter(m=>m.curated||m.section==='intocables').map((m,i)=>({...m,kind:'sheets',tema:m.id.startsWith('morfo_18_sangre__')?'Sangre':m.tema,orden:i+1,original:m})));}
   if(current!==requestId)return;render();if(format==='sheets'){status('');return;}
   await ensureSupabaseSdk();const {data,error}=await getSupabase().from('intocables_esenciales').select('*').order('orden');if(error)throw error;if(current!==requestId)return;lessons=new Map((data||[]).map(i=>[i.id,i]));status(lessons.size?'':'Inicia sesión para leer las fichas disponibles.');render();
  }catch(_){if(current===requestId){status('No pudimos cargar este material. Comprueba tu conexión y vuelve a entrar.');render();}}}
- function openSheet(id){const meta=(window.MINDMAP_PREMIUM_CATALOG||[]).find(m=>m.id===id&&(m.curated||m.section==='intocables'));if(!meta)return;if(window.CampusAccess?.isFree())return window.CampusAccess.unlock();return window.openMmLightbox({...meta,section:'intocables',format:'illustrated-sheet'});}
+ async function openSheet(id){
+  if(window.CampusAccess?.isFree())return window.CampusAccess.unlock();
+  const owner=currentUser?.id;
+  try{
+   await Promise.all([window.loadMindmapCatalog(),window.loadCampusAssets('maps')]);
+   if(owner!==currentUser?.id||currentCampusScreen!=='intocables-hub-screen')return;
+   const meta=window.MINDMAP_PREMIUM_CATALOG.find(m=>m.id===id&&(m.curated||m.section==='intocables'));
+   if(meta)return window.openMmLightbox({...meta,section:'intocables',format:'illustrated-sheet'});
+  }catch(_){if(currentCampusScreen==='intocables-hub-screen')status('No pudimos abrir la lámina. Vuelve a intentarlo.');}
+ }
  function openLesson(id){const meta=catalogue.find(i=>i.id===id);if(!meta)return;if(!meta.acceso_gratis&&window.CampusAccess?.isFree())return window.CampusAccess.unlock();if(meta.kind==='sheets')return openSheet(id);const item=lessons.get(id);if(!item){status('La ficha aún no está disponible. Vuelve a intentarlo.');load();return;}
   $('itc-dialog-kicker').textContent=item.materia+' · '+item.tema;$('itc-dialog-title').textContent=item.titulo;for(const [id,key] of [['itc-key','clave'],['itc-explain','explicacion'],['itc-mistake','error_comun'],['itc-question','pregunta'],['itc-answer','respuesta']])$(id).textContent=item[key];$('itc-answer').hidden=true;$('itc-reveal').hidden=false;$('itc-source').textContent='Referencia: '+item.fuente;$('itc-dialog').showModal();window.CampusTracking?.record('intocables','opened',item.materia,item.tema,id);
  }
@@ -54,6 +64,6 @@ window.IntocablesHub = (() => {
   window.addEventListener('campus-access-change',()=>{++requestId;lessons.clear();clearCovers();$('itc-dialog').close();['itc-key','itc-explain','itc-mistake','itc-question','itc-answer','itc-source'].forEach(id=>$(id).textContent='');if(!$('intocables-hub-screen').classList.contains('hidden'))load();});
   new MutationObserver(()=>{if($('intocables-hub-screen').classList.contains('hidden'))clearCovers();}).observe($('intocables-hub-screen'),{attributes:true,attributeFilter:['class']});
  }
- function open(){init();render();return load();}
+ function open(){init();return load();}
  return {open,openSheet};
 })();

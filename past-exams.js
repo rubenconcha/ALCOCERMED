@@ -141,7 +141,7 @@
         const isCurrent = () => request === openRequest && currentUser?.id === account &&
             (typeof currentCampusScreen === 'undefined' || currentCampusScreen === 'past-exams-screen');
         showList();
-        $('past-status').textContent = 'Cargando exámenes…';
+        $('past-status').textContent = '';
         try {
             const data = await catalog();
             if (!isCurrent()) return;

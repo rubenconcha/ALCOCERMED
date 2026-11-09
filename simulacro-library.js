@@ -43,6 +43,7 @@
  }
  async function open(){
   try{
+   if(window.CampusCatalogs?.simulations){entries=window.CampusCatalogs.simulations.entries;updateTopics();render();return;}
    if(!catalogPromise)catalogPromise=fetch('/content/simulacros-catalog.json',{cache:'no-cache'}).then(r=>{if(!r.ok)throw Error();return r.json();}).catch(e=>{catalogPromise=null;throw e;});
    entries=(await catalogPromise).entries;updateTopics();render();
   }catch(_){$('sim-library-status').textContent='No pudimos cargar las pruebas.';list.replaceChildren();resetSelection();const retry=document.createElement('button');retry.type='button';retry.className='sim-library-retry';retry.textContent='Volver a cargar';retry.onclick=open;list.append(retry);}

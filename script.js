@@ -8,8 +8,9 @@ function shuffleArray(arr) {
     return a;
 }
 
-function openCampusFeature(group, open) {
+function openCampusFeature(group, open, screen) {
     return async (...args) => {
+        if (screen && showScreen(screen) === false) return;
         const request = (window.campusNavigationRequest || 0) + 1;
         window.campusNavigationRequest = request;
         const owner = currentUser?.id;
@@ -23,27 +24,29 @@ function openCampusFeature(group, open) {
     };
 }
 
-function lazyCampusExport(group, name) {
-    const load = openCampusFeature(group, (...args) => {
-        const open = window[name];
-        if (open === load) throw new Error('No pudimos abrir la sección. Intenta de nuevo.');
-        return open(...args);
-    });
-    window[name] = load;
+function deferCampusExport(group, name, screen) {
+    const open = openCampusFeature(group, (...args) => {
+        if (window[name] === open) throw new Error('No pudimos abrir la sección. Vuelve a intentarlo.');
+        return window[name](...args);
+    }, screen);
+    window[name] = open;
 }
+deferCampusExport('past', 'openPastExams', 'past-exams-screen');
+deferCampusExport('atlas', 'openAtlas', 'atlas-screen');
 
-lazyCampusExport('flashcards', 'openStudyLibrary');
-lazyCampusExport('atlas', 'openAtlas');
-lazyCampusExport('past', 'openPastExams');
-window.openTopicEvaluations = openCampusFeature('evaluations', (...args) => window.openEvaluacion(...args));
-window.openCampusSimulations = openCampusFeature('simulations', () => window.EntranceLibrary.openScreen());
-window.openCampusRequestedSimulation = openCampusFeature('simulations', () => window.EntranceLibrary.openRequested());
-window.openSufficiency = openCampusFeature('sufficiency', () => window.Sufficiency.open());
-window.openStudyCalendar = openCampusFeature('calendar', (date, activityId) => {
+const loadTopicEvaluations = openCampusFeature('evaluations', (...args) => window.openEvaluacion(...args), 'evaluacion-screen');
+window.openTopicEvaluations = (...args) => window.TopicEvaluations ? window.openEvaluacion(...args) : loadTopicEvaluations(...args);
+const loadCampusSimulations = openCampusFeature('simulations', () => window.EntranceLibrary.openScreen(), 'simulacro-screen');
+window.openCampusSimulations = () => window.EntranceLibrary ? window.EntranceLibrary.openScreen() : loadCampusSimulations();
+const loadRequestedSimulation = openCampusFeature('simulations', () => window.EntranceLibrary.openRequested());
+window.openCampusRequestedSimulation = () => window.EntranceLibrary ? window.EntranceLibrary.openRequested() : loadRequestedSimulation();
+const openSufficiencyPractice = openCampusFeature('sufficiency', () => window.Sufficiency.open(), 'suficiencia-screen');
+window.openSufficiency = () => CampusAccess.isFree() ? CampusAccess.unlock() : openSufficiencyPractice();
+window.openStudyCalendar = (date, activityId) => {
     const calendar = window.CampusCalendar;
     calendar.setUser(currentUser.id);
     if (!date || !calendar.openDate(date, activityId)) calendar.open();
-});
+};
 
 window.loadMindmapCatalog = () => window.MINDMAP_PREMIUM_CATALOG
     ? Promise.resolve() : loadScriptOnce('/mindmap-premium-catalog.js?v=20261021-visual5b');
@@ -124,6 +127,9 @@ function enterVerifiedApp(user) {
     restoreSidebarState();
     updateHomeStats();
     updateDailyGoalUI();
+    requestAnimationFrame(() => requestAnimationFrame(() => {
+        if (verifiedCampusUserId === user.id) window.loadCampusAssets('campus-extra').catch(() => {});
+    }));
     setTimeout(() => {
         if (verifiedCampusUserId === user.id) sincronizarPerfilEnNube();
     }, 2500);
@@ -325,19 +331,9 @@ function showScreen(screenId, fromBack) {
         ? 'evaluacion-screen' : screenId;
     window.CampusShell?.screenChanged(navScreen);
     window.CampusPastExams?.screenChanged(screenId === 'past-exams-screen');
-    if (screenId === 'study-area') refreshFlashcardReviews();
-    const group = {
-        'study-library': 'flashcards',
-        'study-area': 'flashcards',
-        'study-calendar-screen': 'calendar',
-        'student-results-screen': 'results',
-        'resumenes-screen': 'summaries',
-        'official-texts-screen': 'texts',
-        'sufficiency-practice-screen': 'practice',
-    }[screenId];
-    if (group) window.loadCampusAssets?.(group).then(() => {
-        if (screenId === currentCampusScreen && group === 'texts') window.OfficialTexts?.preload();
-    }).catch(() => {
+    if (screenId === 'study-area' && !document.getElementById('study-area')?.hasAttribute?.('data-deck-pending')) refreshFlashcardReviews();
+    const group = { 'sufficiency-practice-screen': 'practice', 'resumenes-screen': 'summaries' }[screenId];
+    if (group) window.loadCampusAssets?.(group).catch(() => {
         if (screenId === currentCampusScreen) showToast('No pudimos cargar esta sección. Vuelve a abrirla.', 'error');
     });
     return true;
@@ -510,6 +506,8 @@ function startDeck(tema, asignatura, data) {
         showToast('no se encontraron tarjetas para este tema', 'error');
         return;
     }
+    document.getElementById('study-area')?.removeAttribute?.('data-deck-pending');
+    document.getElementById('study-area')?.removeAttribute?.('aria-busy');
     if (window.FlashcardWorkspace) flashcardTopicCards = FlashcardWorkspace.prepare(tema, asignatura, flashcardTopicCards);
     // La exploración no cambia las fechas guardadas del repaso programado.
     deck = shuffleArray(window.FlashcardWorkspace?.isExploring() ? flashcardTopicCards.slice() : flashcardTopicCards.filter(isCardDue));
@@ -548,7 +546,7 @@ function renderCard() {
     card.querySelectorAll('.depth-brand').forEach(function(logo){logo.remove();});
     if (isDepthCard) card.querySelectorAll('.face').forEach(function(face){
         const logo = document.createElement('img');
-        logo.className = 'depth-brand'; logo.src = '/promo-ben-carson-tiktok/public/authentic/logo.png';
+        logo.className = 'depth-brand'; logo.src = '/assets/campus-study-brand.webp';
         logo.alt = 'Preparatoria Ben Carson'; face.appendChild(logo);
     });
     aText.parentElement.tabIndex = isDepthCard ? 0 : -1;
@@ -1677,6 +1675,7 @@ let bancoState = {
     _cache: []                // caché de todas las filas (evita re-queries)
 };
 let bancoMateriaRequest = 0;
+let bancoMenuScope = null;
 let bancoIndexRequest;
 const BANCO_MAX_QUESTIONS = 50;
 
@@ -1777,6 +1776,12 @@ async function fetchBancoSuficiencia(owner) {
 // ──────────────────────────────────────────────
 // ABRIR BANCO (pantalla selector)
 // ──────────────────────────────────────────────
+window.warmBancoCatalog = function () {
+    const owner = currentUser?.id;
+    if (!owner || CampusAccess.isFree()) return;
+    Promise.allSettled([fetchBancoCourseIndex(owner), fetchBancoSuficiencia(owner)]);
+};
+
 window.openBanco = async function (filter) {
     // Advertir si hay banco en progreso
     const enProgreso = bancoState.preguntas.length > 0 && !bancoState.finalized &&
@@ -1837,7 +1842,12 @@ async function loadBancoMaterias() {
     const request = ++bancoMateriaRequest;
     const owner = currentUser?.id;
     const free = CampusAccess.isFree();
-    menu.innerHTML = '<div class="banco-loading-opts" role="status">Cargando materias…</div>';
+    const scope = owner + ':' + free;
+    if (bancoMenuScope !== scope) {
+        menu.replaceChildren();
+        bancoMenuScope = scope;
+    }
+    menu.setAttribute('aria-busy', 'true');
     function appendSubjects(label, names) {
         if (!names.length) return;
         const group = label ? bancoDropdownGroup(label) : menu;
@@ -1867,13 +1877,9 @@ async function loadBancoMaterias() {
         appendSubjects(extra.length ? 'Materias de Medicina' : '', original);
         appendSubjects('Suficiencia académica', extra);
         if (focus) [...menu.querySelectorAll('[data-materia]')].find(button => button.dataset.materia === focus)?.focus();
-        if (!course || !sufficiency) {
-            const status = document.createElement('div');
-            status.className = 'banco-loading-opts';
-            status.setAttribute('role', 'status');
-            status.textContent = 'Cargando las demás materias…';
-            menu.appendChild(status);
-        } else if (course.status === 'rejected' || sufficiency.status === 'rejected') {
+        if (!course || !sufficiency) return;
+        menu.removeAttribute('aria-busy');
+        if (course.status === 'rejected' || sufficiency.status === 'rejected') {
             const retry = document.createElement('button');
             retry.type = 'button';
             retry.className = 'banco-dropdown-item';
@@ -3495,7 +3501,9 @@ async function loadVideoclases() {
     }
     const request = { owner, expires: 0 };
     vcState.catalog = request;
-    setVcState('loading');
+    const list = document.getElementById('videoclases-screen');
+    list.setAttribute('aria-busy', 'true');
+    if (!vcState.allVideos.length) setVcState('pending');
     try {
         const res = await getSupabase().from('videoclases').select('*').order('MATERIA', { ascending: true });
         if (request !== vcState.catalog || currentUser?.id !== owner || CampusAccess.isFree()) return;
@@ -3509,8 +3517,10 @@ async function loadVideoclases() {
     } catch (e) {
         if (request !== vcState.catalog || currentUser?.id !== owner || CampusAccess.isFree()) return;
         vcState.catalog = null;
-        setVcState('empty');
+        if (!vcState.allVideos.length) setVcState('error');
         console.warn('[Videoclases] Error:', e.message);
+    } finally {
+        if (vcState.catalog === request || !vcState.catalog) list.removeAttribute('aria-busy');
     }
 }
 
@@ -3674,10 +3684,10 @@ window.closeVcModal = function (e) {
 };
 
 function setVcState(state) {
-    var loading = document.getElementById('vc-loading');
+    var error = document.getElementById('vc-error');
+    if (error) error.classList.toggle('hidden', state !== 'error');
     var grid = document.getElementById('vc-grid');
     var empty = document.getElementById('vc-empty');
-    if (loading) loading.classList.toggle('hidden', state !== 'loading');
     if (grid) grid.classList.toggle('hidden', state !== 'grid');
     if (empty) empty.classList.toggle('hidden', state !== 'empty');
 }
@@ -3707,14 +3717,11 @@ window.openMindMaps = async function () {
     await loadMapasMentales();
     closeMobileSidebar();
 };
-window.openIntocables = async function () {
+const loadIntocables = openCampusFeature('intocables', () => window.IntocablesHub.open(), 'intocables-hub-screen');
+window.openIntocables = function () {
+    if (!window.IntocablesHub) return loadIntocables();
     if (showScreen('intocables-hub-screen') === false) return;
-    try {
-        await window.loadCampusAssets('maps');
-        if (currentCampusScreen === 'intocables-hub-screen') return window.IntocablesHub?.open();
-    } catch (_) {
-        if (currentCampusScreen === 'intocables-hub-screen') showToast('No pudimos cargar Intocables. Vuelve a abrirlo.', 'error');
-    }
+    return window.IntocablesHub.open();
 };
 
 window.switchIntocTab = function (tab) {
@@ -3728,9 +3735,12 @@ window.switchIntocTab = function (tab) {
 };
 
 async function loadMapasMentales() {
-    setMmState('loading');
+    if (mmState.catalogReady) {
+        populateMmMaterias();
+        populateMmTemas();
+        return filterMapas();
+    }
     try {
-        await Promise.all([window.loadMindmapCatalog(), window.loadCampusAssets?.('maps')]);
         var localMapas = [
             { titulo: 'Temas principales de anatomía y fisiología', materia: 'Morfofunción', url_imagen: 'mapas mentales/morfo_01_anatomia_y_fisiologia.webp', descripcion: 'Anatomía, fisiología, organización del cuerpo y homeostasis. Basado en el capítulo 1 de Saladin.', acceso_gratis: true, fecha: new Date().toISOString() },
             { titulo: 'La química de la vida', materia: 'Morfofunción', url_imagen: 'mapas mentales/morfo_02_quimica_de_la_vida.webp', descripcion: 'Átomos, agua, metabolismo, biomoléculas y ATP. Basado en el capítulo 2 de Saladin.', acceso_gratis: true, fecha: new Date().toISOString() },
@@ -3821,13 +3831,21 @@ async function loadMapasMentales() {
                 m.url_imagen='private/'+m.id+'.json';
             }
         });
-        mmState.allMapas = localMapas.concat((window.MINDMAP_PREMIUM_CATALOG || []).filter(m => !m.curated && m.section !== 'intocables'));
-        populateMmMaterias();
-        populateMmTemas();
-        updateIntocStats();
-        filterMapas();
+        function renderMaps(maps) {
+            mmState.allMapas = maps;
+            populateMmMaterias();
+            populateMmTemas();
+            updateIntocStats();
+            filterMapas();
+        }
+        renderMaps(localMapas);
+        await window.loadMindmapCatalog();
+        const maps = localMapas.concat(window.MINDMAP_PREMIUM_CATALOG.filter(map => !map.curated && map.section !== 'intocables'));
+        mmState.catalogReady = true;
+        if (currentCampusScreen === 'intocables-screen') renderMaps(maps);
+        else mmState.allMapas = maps;
     } catch (e) {
-        setMmState('empty');
+        if (!mmState.allMapas.length) setMmState('empty');
         console.warn('[MapasMentales] Error:', e.message);
     }
 }
@@ -3935,16 +3953,18 @@ window.filterMapas = function () {
     var emptyText = document.getElementById('mm-empty-text');
     if (emptyTitle) emptyTitle.textContent = mmState.allMapas.length ? 'No hay mapas para estos filtros' : 'Aún no hay mapas mentales';
     if (emptyText) emptyText.textContent = mmState.allMapas.length ? 'Prueba otra materia, tema o palabra.' : 'Los mapas se irán publicando poco a poco.';
-    renderMmGrid();
+    renderMmGrid(0);
 };
 
-function renderMmGrid() {
+function renderMmGrid(start) {
     setMmState(mmState.filteredMapas.length === 0 ? 'empty' : 'grid');
     var grid = document.getElementById('mm-grid');
     if (!grid) return;
-    grid.innerHTML = '';
-    if (mmState.filteredMapas.length === 0) return;
-    mmState.filteredMapas.forEach(function (m, index) {
+    if (!start) grid.replaceChildren();
+    if (!mmState.filteredMapas.length) return;
+    const end = Math.min(start + 24, mmState.filteredMapas.length);
+    const cards = document.createDocumentFragment();
+    mmState.filteredMapas.slice(start, end).forEach(function (m, index) {
         var titulo = campo(m, 'titulo') || 'Sin título';
         var materia = campo(m, 'materia') || '';
         var urlImg = campo(m, 'url_imagen') || campo(m, 'url_image') || '';
@@ -3957,13 +3977,13 @@ function renderMmGrid() {
         var previewUrl = campo(m, 'preview') || getMmThumbnailUrl(urlImg);
         var safePreviewUrl = escapeMmText(previewUrl);
         var fallbackAttr = !campo(m, 'premium') && previewUrl !== urlImg ? ' data-fallback="' + safeUrl + '"' : '';
-        var loadingAttr = index < 3 ? ' loading="eager" fetchpriority="high"' : ' loading="lazy"';
+        var loadingAttr = start + index < 3 ? ' loading="eager" fetchpriority="high"' : ' loading="lazy"';
 
         var card = document.createElement('button');
         card.type = 'button';
         card.className = 'mm-card' + (locked ? ' mm-card-locked' : '');
         card.setAttribute('aria-label', locked ? 'Desbloquear mapa ' + titulo : 'Abrir mapa ' + titulo);
-        card.onclick = function () { if (locked) openMmUnlockDialog(m); else openMmLightbox(m); };
+        card.onclick = function () { if (locked) openMmUnlockDialog(m); else openCampusMap(m); };
         card.innerHTML =
             '<div class="mm-card-thumb">' +
             (urlImg
@@ -3979,9 +3999,21 @@ function renderMmGrid() {
             '<h3 class="mm-card-title">' + safeTitle + '</h3>' +
             (locked ? '<span class="mm-card-preview-action">Desbloquear</span>' : desc ? '<p class="mm-card-desc">' + safeDesc + '</p>' : '') +
             '</div>';
-        grid.appendChild(card);
+        cards.appendChild(card);
     });
-
+    grid.append(cards);
+    if (end < mmState.filteredMapas.length) {
+        const more = document.createElement('button');
+        more.type = 'button';
+        more.className = 'btn-back-game';
+        more.textContent = 'Mostrar más mapas';
+        more.onclick = () => {
+            more.remove();
+            renderMmGrid(end);
+            grid.children[end]?.focus();
+        };
+        grid.append(more);
+    }
 }
 function getMmThumbnailUrl(url) {
     var key = (url || '').split('/').pop().split('?')[0];
@@ -4040,6 +4072,17 @@ function updateIntocStats() {
     if (matEl) {
         var mats = new Set(mmState.allMapas.map(function (m) { return campo(m, 'materia'); }).filter(Boolean));
         matEl.textContent = mats.size;
+    }
+}
+
+async function openCampusMap(map) {
+    const screen = currentCampusScreen;
+    const owner = currentUser?.id;
+    try {
+        await window.loadCampusAssets('maps');
+        if (screen === currentCampusScreen && owner === currentUser?.id) return window.openMmLightbox(map);
+    } catch (_) {
+        if (screen === currentCampusScreen && owner === currentUser?.id) showToast('No pudimos abrir este mapa. Vuelve a intentarlo.', 'error');
     }
 }
 

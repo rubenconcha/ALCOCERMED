@@ -19,7 +19,7 @@ test('incomplete historical papers and mini formats cannot be selected as comple
  assert.ok(!config.includes('6</b>')&&!config.includes('40</b>')&&!config.includes('Mini simulacro'));
  const evaluation=h.slice(h.indexOf('id="evaluacion-screen"'));
  assert.ok(evaluation.includes('id="topic-eval-grid"'));
- assert.match(h, /<script data-campus-assets="evaluations" src="topic-evaluations\.js\?v=[^"]+">/);
+ assert.match(h, /<script data-campus-assets="campus-extra evaluations" src="topic-evaluations\.js\?v=[^"]+">/);
 });
 test('free access remains limited to the existing free year; locked selection does not fetch questions',async()=>{
  const t=setup({free:true});t.c.clearEntranceExam();t.c.selectEntranceExam('real:2024-2025-2');assert.equal(t.c.getSelectedEntranceExam(),null);assert.ok(t.events.includes('unlock'));assert.equal(t.calls(),0);

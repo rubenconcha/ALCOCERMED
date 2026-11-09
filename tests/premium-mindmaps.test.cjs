@@ -8,7 +8,7 @@ const handler=require('../api/mindmap.js');
 
 test('77 general maps are free; Sangre and Sentidos and all detailed maps require a plan',async()=>{
  const start=script.indexOf('async function loadMapasMentales()'),end=script.indexOf('function populateMmMaterias()',start);
- const ctx={mmState:{},async loadMindmapCatalog(){ctx.MINDMAP_PREMIUM_CATALOG=catalog;},setMmState(){},populateMmMaterias(){},populateMmTemas(){},updateIntocStats(){},filterMapas(){},console};ctx.window=ctx;
+ const ctx={mmState:{},currentCampusScreen:'intocables-screen',async loadMindmapCatalog(){ctx.MINDMAP_PREMIUM_CATALOG=catalog;},setMmState(){},populateMmMaterias(){},populateMmTemas(){},updateIntocStats(){},filterMapas(){},console};ctx.window=ctx;
  vm.runInNewContext(script.slice(start,end),ctx);await ctx.loadMapasMentales();
  assert.equal(ctx.mmState.allMapas.length,79+catalog.filter(m=>!m.curated&&m.section!=='intocables').length);
  assert.ok(ctx.mmState.allMapas.every(m=>!m.curated&&m.section!=='intocables'));

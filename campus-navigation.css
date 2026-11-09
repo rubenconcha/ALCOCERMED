@@ -1,3 +1,20 @@
+#study-area:not([data-deck-pending]) .study-topic-overview {
+    display: none;
+}
+
+.study-topic-overview {
+    margin: 1rem auto;
+    padding: 1.25rem;
+    max-width: 46rem;
+    color: var(--campus-muted, #52637a);
+    text-align: center;
+}
+
+#study-area[data-deck-pending] :is(.flashcard-controls, .study-progress-row, .flashcard-progress,
+    #flashcard-context, .card-container, .action-zone, #flashcard-settings-toggle) {
+    display: none !important;
+}
+
 /* Centered campus navigation; shared with the existing study engines. */
 [hidden]{display:none!important}#menu-flashcards,#arrow-flashcards{display:none!important}
 .campus-dashboard,.campus-browser{max-width:1180px;margin:24px auto;padding:16px 20px 60px;color:#1c2942}

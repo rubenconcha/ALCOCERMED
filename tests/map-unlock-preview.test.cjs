@@ -4,7 +4,7 @@ const fs = require('node:fs');
 const vm = require('node:vm');
 
 const script = fs.readFileSync('script.js', 'utf8');
-const start = script.indexOf('function renderMmGrid()');
+const start = script.indexOf('function renderMmGrid(');
 const end = script.indexOf('function updateIntocStats()', start);
 
 test('los 18 capítulos de Biología Celular conservan el acceso gratuito inicial', () => {
@@ -39,7 +39,7 @@ test('cada mapa local tiene una miniatura ligera', () => {
 test('el mapa bloqueado muestra la vista previa antes de abrir los planes', () => {
   assert.ok(start >= 0 && end > start);
   const map = { titulo: 'Forma y función celulares', materia: 'Morfofunción', url_imagen: 'mapas mentales/morfo_03_forma_y_funcion_celulares.png' };
-  const grid = { innerHTML: '', cards: [], appendChild(card) { this.cards.push(card); } };
+  const grid = { cards: [], replaceChildren() { this.cards = []; }, append(fragment) { this.cards.push(...fragment.cards); } };
   const dialog = { open: false, showModal() { this.open = true; }, close() { this.open = false; } };
   const title = { textContent: '' };
   const image = { src: '', dataset: {}, style: {} };
@@ -48,14 +48,14 @@ test('el mapa bloqueado muestra la vista previa antes de abrir los planes', () =
   const context = {
     mmState: { filteredMapas: [map] },
     CampusAccess: { isFree: () => true, unlock() { planVisits++; } },
-    document: { getElementById: id => elements[id], createElement: () => ({ setAttribute() {} }) },
+    document: { getElementById: id => elements[id], createElement: () => ({ setAttribute() {} }), createDocumentFragment: () => ({ cards: [], appendChild(card) { this.cards.push(card); } }) },
     campo: (item, key) => item[key],
     setMmState() {},
     openMmLightbox() { throw new Error('El contenido bloqueado no debe abrirse'); }
   };
   context.window = context;
   vm.runInNewContext(script.slice(start, end), context);
-  vm.runInNewContext('renderMmGrid()', context);
+  vm.runInNewContext('renderMmGrid(0)', context);
 
   assert.equal(grid.cards.length, 1);
   assert.match(grid.cards[0].innerHTML, /mm-card-img-locked/);
