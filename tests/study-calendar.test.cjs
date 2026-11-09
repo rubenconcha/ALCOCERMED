@@ -48,9 +48,9 @@ test('weekdays assign the example blocks and rotate verified readings and existi
     const plan = buildSample('2026-11-09');
     const monday = plan.get('2026-11-09');
     assert.deepEqual(monday.map(({ start, end }) => [start, end]), [
-        ['08:00', '10:00'], ['10:00', '11:00'], ['11:00', '12:00'], ['12:00', '13:00'], ['13:00', '16:00'],
+        ['08:00', '10:00'], ['10:00', '11:00'], ['11:00', '12:00'], ['12:00', '13:00'], ['13:00', '16:00'], ['16:00', '16:30'],
     ]);
-    assert.deepEqual(monday.map(item => item.resource), ['reading', 'questions', 'reading', undefined, 'practice']);
+    assert.deepEqual(monday.map(item => item.resource), ['reading', 'questions', 'reading', undefined, 'practice', 'evaluation']);
     assert.match(monday[0].title, /Morfofunción · Sangre/);
     assert.equal(monday[0].reading.section, 'Capítulo 18');
     assert.equal(pageRange(monday[0].reading.printed), '679–695');
@@ -67,6 +67,9 @@ test('weekdays assign the example blocks and rotate verified readings and existi
     for (const items of plan.values()) {
         if (items[0].resource !== 'reading') continue;
         assert.deepEqual(items[1].topicLinks, items[0].reading.topicLinks);
+        assert.equal(items[1].title, 'Desglose · ' + items[0].reading.topic);
+        assert.equal(items[5].resource, 'evaluation');
+        assert.deepEqual(items[5].topicLinks, items[0].reading.topicLinks);
     }
     const evaluations = new Map(evaluationCatalog.exams.map(exam => [exam.id, exam]));
     const expectedSubjects = { morfofuncion: 'MORFOFUNCION', 'biologia-celular': 'BIOLOGIA CELULAR', 'educacion-salud': 'SALUD PUBLICA' };

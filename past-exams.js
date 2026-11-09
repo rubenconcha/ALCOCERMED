@@ -231,12 +231,17 @@
         examCache.clear();
         releasePattern();
         breakdown?.clear();
+        if (breakdown?.isAssigned?.()) {
+            breakdown.refresh();
+            return;
+        }
         showMode(false);
     }
     window.CampusPastExams = {
         clear,
+        openAssigned: (host, context) => breakdown.openAssigned(host, context),
         screenChanged(visible) {
-            if (!opening) breakdown?.show(visible && topicsMode);
+            if (!opening && !breakdown?.isAssigned?.()) breakdown?.show(visible && topicsMode);
         },
     };
     window.addEventListener('campus-access-change', clear);

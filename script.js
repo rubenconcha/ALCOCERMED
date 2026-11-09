@@ -317,7 +317,7 @@ function enterVerifiedApp(user) {
     else if (section === 'practica-suficiencia') showScreen('sufficiency-practice-screen');
     else if (section === 'calendario') {
         const day = campusParams.get('dia');
-        if (!day || !window.CampusCalendar?.openDate(day)) window.CampusCalendar?.open();
+        if (!day || !window.CampusCalendar?.openDate(day, campusParams.get('actividad') || '')) window.CampusCalendar?.open();
     }
     else if (section === 'simulacros') window.openSimulacro();
     else if (section === 'examenes-pasados') window.openPastExams(campusParams.get('vista') === 'temas');
@@ -3682,6 +3682,7 @@ window.finalizarSimulacro = function () {
 
     if (window.renderPastExamResult) window.renderPastExamResult();
     showSimScreen('sim-result');
+    window.CampusCalendar?.evaluationFinished();
 };
 
 function guardarEnHistorial(pct, correctas, total, tiempoSeg, materia) {

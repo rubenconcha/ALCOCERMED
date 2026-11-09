@@ -32,7 +32,7 @@
     <link rel="stylesheet" href="campus-preview.css?v=3">
     <link rel="stylesheet" href="study-depth.css?v=3">
     <link rel="stylesheet" href="simulacro-library.css?v=6">
-    <link rel="stylesheet" href="past-exams.css?v=5">
+    <link rel="stylesheet" href="past-exams.css?v=6">
     <link rel="stylesheet" href="topic-evaluations.css?v=5">
     <link rel="stylesheet" href="campus-atlas.css?v=5">
 <link rel="stylesheet" href="/device-limit.css?v=1">
@@ -48,20 +48,20 @@
     <script defer src="campus-section-tracking.js?v=1"></script>
     <script defer src="question-review.js?v=5"></script>
     <script defer src="study-media.js?v=20261021-visual5b"></script>
-    <script defer src="script.js?v=20261108-comentarios"></script>
+    <script defer src="script.js?v=20261109-estudio"></script>
     <script defer src="study-assessments.js?v=2"></script>
     <script defer src="simulation-scope.js?v=8"></script>
     <script defer src="simulacro-ingreso.js?v=12"></script>
     <script defer src="simulacro-library.js?v=7"></script>
     <script defer src="student-library.js?v=10"></script>
     <script defer src="flashcard-workspace.js?v=20261021-visual5b"></script>
-    <script defer src="study-calendar-data.js?v=4"></script>
+    <script defer src="study-calendar-data.js?v=5"></script>
     <script defer src="study-calendar-pdf.js?v=2"></script>
-    <script defer src="study-calendar.js?v=7"></script>
+    <script defer src="study-calendar.js?v=8"></script>
     <script defer src="campus-shell.js?v=2"></script>
-    <script defer src="past-exam-breakdown.js?v=6"></script>
-    <script defer src="past-exams.js?v=11"></script>
-    <script defer src="topic-evaluations.js?v=20261108-calendario"></script>
+    <script defer src="past-exam-breakdown.js?v=7"></script>
+    <script defer src="past-exams.js?v=12"></script>
+    <script defer src="topic-evaluations.js?v=20261109-estudio"></script>
     <script defer src="campus-atlas.js?v=12"></script>
     <script defer src="suficiencia-core.js?v=11"></script>
     <script defer src="suficiencia.js?v=14"></script>
@@ -1448,43 +1448,41 @@
             </div>
             <section id="calendar-day" class="calendar-day" aria-labelledby="calendar-day-title" hidden>
                 <header class="calendar-day-header">
-                    <button id="calendar-back" class="calendar-outline" type="button">
-                        <svg aria-hidden="true"><use href="/assets/calendar-icons.svg#previous"></use></svg> Calendario
+                    <button id="calendar-show-schedule" class="calendar-plan-toggle" type="button" aria-label="Mostrar horario" aria-controls="calendar-plan" aria-expanded="false">
+                        <svg aria-hidden="true"><use href="/assets/calendar-icons.svg#panel"></use></svg><span>Horario</span>
                     </button>
                     <div class="calendar-day-titles">
-                        <p id="calendar-day-label"></p>
                         <h2 id="calendar-day-title" tabindex="-1">Estudio del día</h2>
+                        <p id="calendar-day-label"></p>
                     </div>
-                    <span class="calendar-sample-badge">Plan de práctica de muestra</span>
+                    <div id="calendar-workspace-tools" class="calendar-workspace-tools"></div>
+                    <button id="calendar-back" class="calendar-outline" type="button" aria-label="Volver al calendario">
+                        <svg aria-hidden="true"><use href="/assets/calendar-icons.svg#calendar"></use></svg><span>Calendario</span>
+                    </button>
                 </header>
-                <div class="calendar-day-body">
-                    <aside id="calendar-plan" class="calendar-plan" aria-labelledby="calendar-plan-title">
-                        <div class="calendar-plan-head">
-                            <div class="calendar-plan-heading">
-                                <h3 id="calendar-plan-title">Horario del día</h3>
-                                <span>Hora de Bolivia</span>
-                            </div>
-                            <div class="calendar-plan-date">
-                                <button id="calendar-day-prev" class="calendar-outline" type="button" aria-label="Día anterior">
-                                    <svg aria-hidden="true"><use href="/assets/calendar-icons.svg#previous"></use></svg>
-                                </button>
-                                <time id="calendar-plan-date"></time>
-                                <button id="calendar-day-next" class="calendar-outline" type="button" aria-label="Día siguiente">
-                                    <svg aria-hidden="true"><use href="/assets/calendar-icons.svg#next"></use></svg>
-                                </button>
-                            </div>
-                            <progress id="calendar-plan-progress" max="1" value="0" aria-label="Avance del día"></progress>
-                            <p id="calendar-plan-count" aria-live="polite"></p>
+                <aside id="calendar-plan" class="calendar-plan" aria-labelledby="calendar-plan-title">
+                    <div class="calendar-plan-head">
+                        <progress id="calendar-plan-progress" max="1" value="0" aria-label="Avance del día"></progress>
+                        <div class="calendar-plan-heading">
+                            <h3 id="calendar-plan-title">Estudio</h3>
+                            <span>Hora de Bolivia</span>
                         </div>
-                        <ol id="calendar-plan-list" class="calendar-plan-list"></ol>
-                    </aside>
-                    <div class="calendar-day-detail">
-                        <button id="calendar-show-schedule" class="calendar-outline calendar-show-schedule" type="button">
-                            Volver al horario
-                        </button>
-                        <article id="calendar-activity" class="calendar-activity" tabindex="-1" aria-labelledby="calendar-activity-title"></article>
-                        <div id="calendar-rating" class="calendar-rating" role="group" aria-label="Valora esta actividad" hidden></div>
+                        <div class="calendar-plan-date">
+                            <button id="calendar-day-prev" class="calendar-outline" type="button" aria-label="Día anterior">
+                                <svg aria-hidden="true"><use href="/assets/calendar-icons.svg#previous"></use></svg>
+                            </button>
+                            <time id="calendar-plan-date"></time>
+                            <button id="calendar-day-next" class="calendar-outline" type="button" aria-label="Día siguiente">
+                                <svg aria-hidden="true"><use href="/assets/calendar-icons.svg#next"></use></svg>
+                            </button>
+                        </div>
+                        <p id="calendar-plan-count" aria-live="polite"></p>
                     </div>
+                    <ol id="calendar-plan-list" class="calendar-plan-list"></ol>
+                </aside>
+                <div class="calendar-day-detail">
+                    <div id="calendar-activity" class="calendar-activity" aria-labelledby="calendar-day-title"></div>
+                    <div id="calendar-rating" class="calendar-rating" role="group" aria-label="Valora esta actividad" hidden></div>
                 </div>
             </section>
         </section>
@@ -1776,7 +1774,7 @@
     <template id="campus-section-assets">
         <link rel="stylesheet" data-campus-assets="flashcards" href="flashcard-workspace.css?v=4">
         <link rel="stylesheet" data-campus-assets="flashcards" href="flashcard-approved.css?v=5">
-        <link rel="stylesheet" data-campus-assets="calendar" href="study-calendar.css?v=8">
+        <link rel="stylesheet" data-campus-assets="calendar" href="study-calendar.css?v=9">
         <link rel="stylesheet" data-campus-assets="results" href="student-results.css?v=1">
         <link rel="stylesheet" data-campus-assets="maps" href="mindmap-viewer.css?v=8">
         <link rel="stylesheet" data-campus-assets="maps" href="intocables-sheets.css?v=1">
@@ -1787,7 +1785,7 @@
         <script data-campus-assets="maps" src="mindmap-viewer.js?v=20"></script>
         <script data-campus-assets="maps" src="intocables-hub.js?v=4"></script>
         <script data-campus-assets="summaries texts" src="summary-pdf-reader.js?v=6"></script>
-        <script data-campus-assets="texts" src="official-texts.js?v=7"></script>
+        <script data-campus-assets="texts" src="official-texts.js?v=8"></script>
         <script data-campus-assets="practice" src="sufficiency-practice-content.js?v=1"></script>
         <script data-campus-assets="practice" src="sufficiency-practice.js?v=2"></script>
         <script data-campus-assets="summaries" src="study-summaries.js?v=20261021-visual5b"></script>

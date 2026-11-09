@@ -160,6 +160,34 @@ test('abrir una evaluación desde el calendario selecciona su identificador y pe
  await node('topic-eval-search').handlers.input();
  assert.ok(node('topic-eval-grid').children.some(card => card.children[1].textContent === 'Histología'));
 });
+test('el calendario inicia su evaluación en el horario y descarta las aperturas que ya no corresponden', async () => {
+ const { c, node, events } = uiSetup();
+ c.currentCampusScreen = 'study-calendar-screen';
+ const exam = await c.TopicEvaluations.describe('morfo-18');
+ const button = node('calendar-assigned-test');
+ button.textContent = 'Iniciar evaluación';
+ let current = false, mounted = 0, returned = 0;
+ const assigned = {
+  isCurrent: () => current,
+  mount: () => { mounted += 1; },
+  signal: new AbortController().signal,
+ };
+ await c.TopicEvaluations.startAssigned(exam, button, assigned);
+ assert.equal(mounted, 0);
+ assert.ok(!events.includes('timer'));
+ assert.equal(button.textContent, 'Iniciar evaluación');
+ current = true;
+ await c.TopicEvaluations.startAssigned(exam, button, assigned);
+ assert.equal(mounted, 1);
+ assert.equal(c.simState.topicEvaluationId, 'morfo-18');
+ assert.equal(c.currentCampusScreen, 'study-calendar-screen');
+ assert.deepEqual(events, ['sim-exam', 'timer']);
+ c.CampusCalendar = { returnFromEvaluation: () => { returned += 1; return true; } };
+ c.returnToExamSelection();
+ assert.equal(returned, 1);
+ assert.equal(c.currentCampusScreen, 'study-calendar-screen');
+});
+
 test('al cerrar sesión se cancela el temporizador y se retira la evaluación activa', async () => {
  const t = uiSetup();
  t.c.openEvaluacion();

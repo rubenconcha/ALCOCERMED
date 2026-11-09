@@ -27,7 +27,7 @@
     const downloadButton = $('official-texts-download');
     const readerDownloadStatus = $('official-texts-reader-download-status');
     const resourceUrl = text => '/api/texto-oficial?materia=' + text.slug;
-    let reader, current, requestedPage, loaded, releaseTimer, revision = 0, opening, previewUrl, bookCoverUrl;
+    let reader, current, requestedPage, loaded, releaseTimer, revision = 0, opening, previewUrl, bookCoverUrl, inlineHome;
 
     async function authorization() {
         const { data } = await getSupabase().auth.getSession();
@@ -218,15 +218,38 @@
         if (loaded) releaseTimer = setTimeout(discardReader, 120000);
         else discardReader();
     });
+    function findPage(slug, page) {
+        return texts.find(text => text.slug === slug && Number.isInteger(page) && page >= 1 && page <= text.pages);
+    }
+
+    function closeInline() {
+        if (!inlineHome) return;
+        if (dialog.open) dialog.close();
+        dialog.classList.remove('calendar-inline-reader');
+        inlineHome.append(dialog);
+        inlineHome = null;
+    }
+
     window.OfficialTexts = {
         open() {
             return showScreen('official-texts-screen');
         },
         readPage(slug, page) {
-            const text = texts.find(item => item.slug === slug);
-            if (!text || !Number.isInteger(page) || page < 1 || page > text.pages) return;
+            const text = findPage(slug, page);
+            if (text) return read(text, page);
+        },
+        readIn(host, slug, page) {
+            const text = findPage(slug, page);
+            if (!text) return;
+            closeInline();
+            if (dialog.open) dialog.close();
+            inlineHome = dialog.parentElement;
+            host.append(dialog);
+            dialog.classList.add('calendar-inline-reader');
+            dialog.show();
             return read(text, page);
         },
+        closeInline,
         preload() {
             if (!navigator.connection?.saveData) SummaryPdfReader.preload().catch(() => {});
         },
@@ -234,6 +257,7 @@
             ++revision;
             opening?.abort();
             discardReader();
+            closeInline();
             if (dialog.open) dialog.close();
         },
     };

@@ -55,18 +55,21 @@
         $('topic-eval-status').textContent='Cargando evaluaciones…';
         return render().catch(error => { $('topic-eval-status').textContent=error.message; });
     };
-    async function start(exam, button) {
+    async function start(exam, button, assigned) {
         if (loading) return;
         if (!window.CampusAccess || CampusAccess.isFree()) return window.CampusAccess?.unlock();
         const number=++request, account=currentUser?.id;
-        const isCurrent = () => number === request && account === currentUser?.id && currentCampusScreen === 'evaluacion-screen' && !CampusAccess.isFree();
+        const label = button.textContent;
+        const isCurrent = () => number === request && account === currentUser?.id && !CampusAccess.isFree()
+            && (assigned ? assigned.isCurrent() : currentCampusScreen === 'evaluacion-screen');
         loading=number;button.disabled=true;button.textContent='Preparando evaluación…';
         try {
             const session=(await getSupabase().auth.getSession()).data.session;
             if (!session?.access_token || session.user?.id !== account) throw new Error('Vuelve a iniciar sesión para abrir la evaluación.');
             if (!isCurrent()) return;
             const response=await fetch('/api/topic-evaluation?id='+encodeURIComponent(exam.id),{
-                headers:{Authorization:'Bearer '+session.access_token},cache:'no-store',signal:AbortSignal.timeout(15000)
+                headers:{Authorization:'Bearer '+session.access_token},cache:'no-store',
+                signal: assigned ? AbortSignal.any([assigned.signal, AbortSignal.timeout(15000)]) : AbortSignal.timeout(15000)
             });
             if (!isCurrent()) return;
             if(response.status===403){CampusAccess.unlock();return;}
@@ -85,19 +88,22 @@
             simState.secondsLeft=paper.duration*60;simState.startTimestamp=Date.now();simState.endTimestamp=Date.now()+simState.secondsLeft*1000;
             $('sim-exam-materia').textContent=simState.selectedExamen;
             $('sim-exam-nq-info').textContent=questionCount(paper.count);$('sim-total-num').textContent=paper.count;
-            $('sim-another-exam').textContent='Elegir otra evaluación';
+            $('sim-another-exam').textContent=assigned ? 'Volver al horario de evaluación' : 'Elegir otra evaluación';
             $('past-result-tools').hidden=true;$('past-pattern-image').hidden=true;
-            showScreen('simulacro-screen');showSimScreen('sim-exam');buildSimCircles();renderSimQuestion();startSimTimer();
+            if (assigned) assigned.mount();
+            else showScreen('simulacro-screen');
+            showSimScreen('sim-exam');buildSimCircles();renderSimQuestion();startSimTimer();
         } catch(error) {if (isCurrent()) showToast(error.message,'error');}
         finally {
             if (loading === number) loading = 0;
             button.disabled = false;
-            button.textContent = CampusAccess.isFree() ? 'Desbloquear evaluación' : 'Realizar evaluación →';
+            button.textContent = CampusAccess.isFree() ? 'Desbloquear evaluación' : label;
         }
     }
     const returnToSelection=window.returnToExamSelection;
     window.returnToExamSelection=function(){
         if(simState.mode==='tema'){
+            if (window.CampusCalendar?.returnFromEvaluation()) return;
             if(campusScreenHistory.at(-1)==='evaluacion-screen')campusScreenHistory.pop();
             currentCampusScreen='evaluacion-screen';
             window.openEvaluacion();
@@ -121,7 +127,11 @@
         $('sim-question-text').textContent = '';
         for (const id of ['sim-options', 'sim-circles', 'sim-review-list']) $(id).replaceChildren();
     }
-    window.TopicEvaluations = { clear };
+    window.TopicEvaluations = {
+        clear,
+        describe: async id => (await catalog()).exams.find(exam => exam.id === id),
+        startAssigned: start,
+    };
     window.addEventListener('campus-access-change', () => {
         if (CampusAccess.isFree()) clear();
         else { ++request; loading = 0; }

@@ -7,11 +7,15 @@
     const overview = byId('calendar-overview');
     const dayPanel = byId('calendar-day');
     const small = window.matchMedia('(max-width: 768px)');
+    const compact = window.matchMedia('(max-width: 950px)');
+    const plan = byId('calendar-plan');
+    const planToggle = byId('calendar-show-schedule');
+    const workspace = byId('calendar-activity');
+    const tools = byId('calendar-workspace-tools');
     const scripts = new Map();
+    const activityViews = { reading: 'study', questions: 'breakdown', evaluation: 'evaluation' };
+    const viewTitles = { study: 'Estudio', orientation: 'Estudio', manual: 'Estudio', breakdown: 'Desglose', evaluation: 'Evaluación' };
     const actions = {
-        reading: ['Abrir lectura en el campus', item => openStudyAsset(item, 'texts',
-            () => window.OfficialTexts.readPage(item.reading.slug, item.reading.pdf[0]))],
-        questions: ['Abrir preguntas del tema', item => window.openBanco({ materia: item.bankSubject, tema: item.bankTopic })],
         practice: ['Abrir ejercicio', item => openStudyAsset(item, 'practice', () => {
             if (showScreen('sufficiency-practice-screen') !== false) window.SufficiencyPractice.openExercise(item.practice.id);
         })],
@@ -23,6 +27,9 @@
     let calendar;
     let loading;
     let lastBoardWidth = 0;
+    let view, reading, releasePanel, lastEvaluation;
+    let revision = 0;
+    let examMounted = false;
 
     function element(tag, css, text) {
         const node = document.createElement(tag);
@@ -85,6 +92,7 @@
             state.user = id;
             state.date = '';
             state.active = null;
+            lastEvaluation = null;
             state.completed = new Set();
             state.ratings = {};
             if (id) {
@@ -261,7 +269,8 @@
             if (state.completed.has(item.id)) state.completed.delete(item.id);
             else state.completed.add(item.id);
             saveProgress();
-            renderProgress();
+            if (item === state.active && view === 'evaluation' && !examMounted) renderActivity();
+            else renderProgress();
         });
         control.dataset.calendarComplete = item.id;
         control.setAttribute('aria-label', 'Completar ' + item.title);
@@ -291,86 +300,304 @@
         }
     }
 
-    function artwork(item) {
-        if (item.kind === 'exam') return '/assets/study-art/quiz.png';
-        if (item.kind === 'free') return '/assets/study-art/cards.png';
-        switch (item.reading?.slug) {
-            case 'morfofuncion': return '/assets/study-art/morphology.png';
-            case 'biologia-celular': return '/assets/study-art/cell.png';
-            case 'educacion-salud': return '/assets/study-art/health-education.png';
-            default: return '/assets/calendar-study-art.svg';
+    function clearPanel() {
+        ++revision;
+        releasePanel?.();
+        releasePanel = null;
+    }
+
+    function dayIsVisible() {
+        return !dayPanel.hidden && !screen.classList.contains('hidden');
+    }
+
+    function focusDay() {
+        window.scrollTo({ top: 0, behavior: 'instant' });
+        byId('calendar-day-title').focus({ preventScroll: true });
+    }
+
+    function setPlanOpen(open) {
+        plan.hidden = !open;
+        dayPanel.classList.toggle('calendar-plan-closed', !open);
+        planToggle.setAttribute('aria-expanded', String(open));
+        planToggle.setAttribute('aria-label', open ? 'Ocultar horario' : 'Mostrar horario');
+    }
+
+    function updateView(next, selectedReading = reading) {
+        view = next;
+        reading = selectedReading;
+        renderActivity();
+        focusDay();
+    }
+
+    function chooseTopic(next) {
+        const resource = next === 'breakdown' ? 'questions' : 'evaluation';
+        const scheduled = activities().find(item => item.resource === resource && item.topicLinks === reading.topicLinks);
+        if (scheduled) selectActivity(scheduled);
+        else updateView(next);
+    }
+
+    function tool(text, symbol, run) {
+        const control = button('calendar-outline calendar-resource-tool', text, run);
+        control.prepend(icon(symbol));
+        return control;
+    }
+
+    function readingSource(book) {
+        const source = element('div', 'calendar-reading-source');
+        source.append(
+            element('strong', '', book.title),
+            element('span', '', book.credit + ' · ' + book.section),
+            element('span', '', 'Páginas impresas ' + data.pageRange(book.printed) + ' · PDF ' + data.pageRange(book.pdf))
+        );
+        return source;
+    }
+
+    function renderStudy(item) {
+        const card = element('section', 'calendar-study-card');
+        const content = element('div', 'calendar-study-topic');
+        const symbol = element('span', 'calendar-topic-symbol');
+        symbol.append(icon('book'));
+        const copy = element('div');
+        copy.append(element('small', '', reading.subject + ' · ' + reading.section), element('h3', '', reading.topic));
+        content.append(symbol, copy);
+        const group = element('div', 'calendar-study-tools');
+        group.append(
+            tool('Manual', 'book', () => updateView('orientation')),
+            tool('Desglose', 'agenda', () => chooseTopic('breakdown')),
+            tool('Evaluación', 'practice', () => chooseTopic('evaluation'))
+        );
+        card.append(content, group, readingSource(reading), element('p', 'calendar-study-guide', item.description));
+        workspace.append(card);
+    }
+
+    function manualNav() {
+        const nav = element('nav', 'calendar-manual-nav');
+        nav.setAttribute('aria-label', 'Lectura asignada');
+        const back = button('calendar-manual-back', '', () => updateView('study'));
+        back.setAttribute('aria-label', 'Volver a Estudio');
+        back.append(icon('previous'));
+        nav.append(back);
+        for (const [id, label] of [['orientation', 'Orientación'], ['manual', 'Manual']]) {
+            const tab = button('calendar-manual-tab', label, () => updateView(id));
+            tab.setAttribute('aria-pressed', String(view === id));
+            nav.append(tab);
+        }
+        return nav;
+    }
+
+    function message(host, text) {
+        const status = element('p', 'calendar-workspace-status', text);
+        status.setAttribute('role', 'status');
+        host.append(status);
+        return status;
+    }
+
+    function renderManual(item, isCurrent) {
+        workspace.append(manualNav());
+        const title = element('div', 'calendar-reading-heading');
+        title.append(element('h3', '', reading.topic), element('p', '', reading.subject + ' · ' + reading.section));
+        workspace.append(title);
+        if (view === 'orientation') {
+            const card = element('section', 'calendar-orientation');
+            card.append(element('h3', '', 'Orientación de la lectura'), element('p', '', item.description),
+                readingSource(reading), button('calendar-primary', 'Abrir páginas del manual', () => updateView('manual')));
+            workspace.append(card);
+            return;
+        }
+        const book = reading;
+        const host = element('div', 'calendar-reader-host');
+        const status = message(host, 'Preparando el manual…');
+        workspace.append(host);
+        window.loadCampusAssets('texts').then(() => {
+            if (!isCurrent()) return;
+            releasePanel = () => window.OfficialTexts.closeInline();
+            status.hidden = true;
+            return window.OfficialTexts.readIn(host, book.slug, book.pdf[0]);
+        }).catch(() => {
+            if (!isCurrent()) return;
+            status.hidden = false;
+            status.textContent = 'No se pudo abrir el manual.';
+            host.append(button('calendar-outline', 'Reintentar', () => updateView('manual')));
+        });
+    }
+
+    function openBank(book) {
+        return window.openBanco({ materia: book.bankSubject, tema: book.bankTopic });
+    }
+
+    function renderBreakdown() {
+        const readings = activities().filter(item => item.reading).map(item => item.reading);
+        const select = element('select', 'calendar-topic-select');
+        select.setAttribute('aria-label', 'Tema del desglose');
+        readings.forEach((book, i) => select.add(new Option(book.subject + ' · ' + book.topic, String(i))));
+        select.value = String(readings.indexOf(reading));
+        select.onchange = () => updateView('breakdown', readings[Number(select.value)]);
+        tools.append(select);
+
+        const bar = element('div', 'calendar-breakdown-tools');
+        const count = element('span', 'calendar-breakdown-count');
+        count.setAttribute('aria-live', 'polite');
+        bar.append(count);
+        const book = reading;
+        const fallback = book.bankTopic ? () => openBank(book) : null;
+        if (fallback) bar.append(tool('Banco de preguntas', 'practice', fallback));
+        const status = message(workspace, '');
+        workspace.append(bar);
+        releasePanel = window.CampusPastExams.openAssigned(workspace, { filter: book.topicLinks.past, status, count, fallback });
+    }
+
+    function mountEvaluation() {
+        const exam = byId('sim-exam');
+        const result = byId('sim-result');
+        const home = exam.parentElement;
+        releasePanel?.();
+        workspace.dataset.view = 'attempt';
+        workspace.replaceChildren(exam, result);
+        examMounted = true;
+        releasePanel = () => {
+            exam.classList.add('hidden');
+            result.classList.add('hidden');
+            home.append(exam, result);
+            examMounted = false;
+        };
+    }
+
+    function resultFor(book) {
+        return lastEvaluation?.date === state.date && lastEvaluation.topic === book.topicLinks.evaluation
+            && lastEvaluation.answers === simState.answers && !CampusAccess.isFree() ? lastEvaluation : null;
+    }
+
+    function renderEvaluation(item, isCurrent) {
+        const card = element('section', 'calendar-evaluation-card');
+        const status = message(card, 'Cargando evaluación del tema…');
+        workspace.append(card);
+        const book = reading;
+        const controller = new AbortController();
+        releasePanel = () => controller.abort();
+        window.TopicEvaluations.describe(book.topicLinks.evaluation).then(exam => {
+            if (!isCurrent()) return;
+            if (!exam) throw new Error('La evaluación de este tema aún no está disponible.');
+            const result = resultFor(book);
+            status.classList.add('calendar-evaluation-status');
+            const marked = item.resource === 'evaluation' && state.completed.has(item.id);
+            status.textContent = result ? 'Evaluación completada.'
+                : marked ? 'Actividad marcada como completada.' : 'Tienes una evaluación pendiente.';
+            const fields = element('dl', 'calendar-evaluation-fields');
+            const values = [['Evaluación', exam.title], ['Preguntas', exam.count], ['Duración', exam.duration + ' minutos']];
+            if (item.resource === 'evaluation') values.push(['Horario del plan', item.start + ' – ' + item.end]);
+            if (result) {
+                const time = new Intl.DateTimeFormat('es-BO', { timeZone: data.zone, hour: '2-digit', minute: '2-digit', hour12: false });
+                values.push(['Iniciado', time.format(result.started)], ['Última actividad', time.format(result.finished)]);
+            }
+            for (const [label, value] of values) {
+                fields.append(element('dt', '', label), element('dd', '', String(value)));
+            }
+            const group = element('div', 'calendar-study-tools');
+            if (result) group.append(button('calendar-primary', 'Revisar respuestas', () => {
+                mountEvaluation();
+                showSimScreen('sim-result');
+                focusDay();
+            }));
+            const label = CampusAccess.isFree() ? 'Desbloquear evaluación' : result ? 'Repetir evaluación' : 'Iniciar evaluación';
+            const start = button('calendar-evaluation-start', label, () =>
+                window.TopicEvaluations.startAssigned(exam, start, { isCurrent, signal: controller.signal, mount: mountEvaluation }));
+            group.append(start);
+            card.append(fields, group);
+        }).catch(error => {
+            if (!isCurrent()) return;
+            status.textContent = error.message;
+            card.append(button('calendar-outline', 'Reintentar', () => updateView('evaluation')));
+        });
+    }
+
+    function evaluationFinished() {
+        if (!examMounted || !reading || simState.topicEvaluationId !== reading.topicLinks.evaluation) return;
+        lastEvaluation = {
+            date: state.date, topic: simState.topicEvaluationId, answers: simState.answers,
+            started: simState.startTimestamp, finished: Date.now(),
+        };
+        const scheduled = activities().find(item => item.resource === 'evaluation' && item.topicLinks === reading.topicLinks);
+        if (scheduled) {
+            state.completed.add(scheduled.id);
+            saveProgress();
+            renderProgress();
         }
     }
 
-    function renderActivity() {
-        const item = state.active;
-        const target = byId('calendar-activity');
-        target.classList.toggle('calendar-activity-empty', !item?.resource);
-        const heading = element('h3', '', item?.title || 'Día sin actividades de muestra');
-        heading.id = 'calendar-activity-title';
-        target.replaceChildren();
-        renderRating();
+    function returnFromEvaluation() {
+        if (!examMounted) return false;
+        updateView('evaluation');
+        return true;
+    }
 
-        if (!item) {
-            target.append(heading, element('p', '', 'Usa las flechas del horario para consultar otro día.'));
-            return;
-        }
-
-        const copy = element('div', 'calendar-activity-copy');
-        const kind = element('span', 'calendar-kind', data.kinds[item.kind].label);
-        setActivityStyle(kind, item.kind, item.reading?.slug);
-        const time = item.end ? item.start + ' – ' + item.end : item.start;
-        copy.append(kind, heading, element('p', 'calendar-activity-time', time), element('p', '', item.description));
-
-        if (item.reading) {
-            const { title, credit, section, printed, pdf } = item.reading;
-            const source = element('div', 'calendar-reading-source');
-            source.append(
-                element('strong', '', title),
-                element('span', '', credit + ' · ' + section),
-                element('span', '', 'Páginas impresas ' + data.pageRange(printed) + ' · PDF ' + data.pageRange(pdf))
-            );
-            copy.append(source);
-        }
-
-        const group = element('div', 'calendar-activity-actions');
-        const action = actions[item.resource];
+    function renderDefault(item) {
+        const card = element('section', 'calendar-info-card');
+        const body = element('div');
+        const title = item?.title || 'Día sin actividades de muestra';
+        const detail = item?.description || 'Usa las flechas del horario para consultar otro día.';
+        card.append(icon('info'), body);
+        body.append(element('h3', '', title), element('p', '', detail));
+        const action = actions[item?.resource];
         if (action) {
             const [label, run] = action;
-            const launch = button('calendar-primary', label, async () => {
-                launch.disabled = true;
+            const control = button('calendar-primary', label, async () => {
+                control.disabled = true;
                 try {
                     await run(item);
                 } catch (_) {
                     showToast('No pudimos abrir esta actividad. Vuelve a intentarlo.', 'error');
                 } finally {
-                    launch.disabled = false;
+                    control.disabled = false;
                 }
             });
-            group.append(launch);
+            const group = element('div', 'calendar-study-tools');
+            group.append(control, completionButton(item, 'calendar-outline calendar-complete-detail', false));
+            body.append(group);
         }
-        group.append(completionButton(item, 'calendar-outline calendar-complete-detail', false));
-        copy.append(group);
+        workspace.append(card);
+    }
 
-        const topicLinks = item.reading?.topicLinks || item.topicLinks;
-        if (topicLinks) {
-            const resources = element('div', 'calendar-topic-actions');
-            resources.setAttribute('role', 'group');
-            resources.setAttribute('aria-label', 'Práctica de este tema');
-            resources.append(
-                button('calendar-outline', 'Evaluación del tema', () => window.openEvaluacion(topicLinks.evaluation)),
-                button('calendar-outline', 'Exámenes pasados del tema', () => window.openPastExams(true, topicLinks.past))
-            );
-            copy.append(resources);
-        }
-        target.append(copy);
-        if (item.resource) {
-            const illustration = element('img', 'calendar-activity-art');
-            illustration.alt = '';
-            illustration.loading = 'lazy';
-            illustration.src = artwork(item);
-            target.append(illustration);
-        }
+    function renderActivity() {
+        clearPanel();
+        const version = revision;
+        const isCurrent = () => version === revision && dayIsVisible();
+        const item = state.active;
+        workspace.replaceChildren();
+        workspace.dataset.view = view || '';
+        tools.replaceChildren();
+        byId('calendar-day-title').textContent = viewTitles[view] && reading
+            ? viewTitles[view] + ' · ' + reading.topic
+            : item?.title || 'Estudio del día';
+        byId('calendar-day-label').textContent = data.formatDay(state.date) + ' · Plan de muestra';
+        if (view === 'study') renderStudy(item);
+        else if (view === 'manual' || view === 'orientation') renderManual(item, isCurrent);
+        else if (view === 'breakdown') renderBreakdown();
+        else if (view === 'evaluation') renderEvaluation(item, isCurrent);
+        else renderDefault(item);
+        renderRating();
+        renderProgress();
+    }
+
+    function canLeaveActivity() {
+        if (!examMounted || !simState.timerInterval) return true;
+        if (!confirm('¿Salir de la evaluación? Se descartarán tus respuestas.')) return false;
+        window.TopicEvaluations.clear();
+        return true;
+    }
+
+    function setActivity(item) {
+        state.active = item || null;
+        view = activityViews[item?.resource];
+        reading = item?.reading || (item?.topicLinks && activities().find(entry => entry.reading?.topicLinks === item.topicLinks)?.reading);
+    }
+
+    function selectActivity(item) {
+        if (!canLeaveActivity()) return;
+        setActivity(item);
+        if (compact.matches) setPlanOpen(false);
+        renderActivity();
+        updateSelection();
+        focusDay();
     }
 
     function updateSelection() {
@@ -385,19 +612,12 @@
         const date = byId('calendar-plan-date');
         date.dateTime = state.date;
         date.textContent = state.date.split('-').reverse().join('/');
-        byId('calendar-day-label').textContent = data.formatDay(state.date);
         const list = byId('calendar-plan-list');
         list.replaceChildren();
         for (const item of activities()) {
             const row = element('li', 'calendar-plan-row');
             setActivityStyle(row, item.kind, item.reading?.slug);
-            const select = button('calendar-plan-item', '', () => {
-                state.active = item;
-                renderActivity();
-                updateSelection();
-                renderProgress();
-                if (small.matches) byId('calendar-activity').focus();
-            });
+            const select = button('calendar-plan-item', '', () => selectActivity(item));
             select.dataset.calendarActivity = item.id;
             const times = element('span', 'calendar-plan-times', item.start);
             if (item.end) times.append(element('span', '', item.end));
@@ -411,27 +631,37 @@
     }
 
     function showDay(date, focus = true, activityId = '') {
+        if (!canLeaveActivity()) return;
+        const entering = dayPanel.hidden;
         state.date = date;
         const items = activities();
-        state.active = items.find(item => item.id === activityId) || items[0] || null;
+        setActivity(items.find(item => item.id === activityId) || items[0]);
         overview.hidden = true;
         dayPanel.hidden = false;
+        if (entering) setPlanOpen(!compact.matches || !activityId);
         renderActivity();
         renderPlan();
-        if (focus) {
-            window.scrollTo(0, 0);
-            byId('calendar-day-title').focus({ preventScroll: true });
-        }
+        if (focus) focusDay();
     }
 
     function showOverview() {
+        clearPanel();
         overview.hidden = false;
         dayPanel.hidden = true;
         if (calendar && !screen.classList.contains('hidden')) requestAnimationFrame(() => calendar.updateSize());
     }
 
     function screenChanged(active) {
-        if (active && calendar && !overview.hidden) requestAnimationFrame(() => calendar.updateSize());
+        if (!active && !dayPanel.hidden) {
+            clearPanel();
+        } else if (active && calendar && !overview.hidden) {
+            requestAnimationFrame(() => calendar.updateSize());
+        } else if (active && !dayPanel.hidden) {
+            const version = revision;
+            requestAnimationFrame(() => {
+                if (version === revision && dayIsVisible() && !examMounted) renderActivity();
+            });
+        }
     }
 
     small.addEventListener('change', () => {
@@ -445,21 +675,24 @@
         lastBoardWidth = width;
         if (calendar && !overview.hidden) requestAnimationFrame(() => calendar.updateSize());
     }).observe(board);
-    byId('calendar-show-schedule').onclick = () => {
-        const selected = byId('calendar-plan-list').querySelector('[aria-current="true"]');
-        (selected || byId('calendar-day-prev')).focus();
-    };
+    compact.addEventListener('change', () => setPlanOpen(!compact.matches));
+    planToggle.onclick = () => setPlanOpen(plan.hidden);
     byId('calendar-day-prev').onclick = () => showDay(data.move(state.date, -1), false);
     byId('calendar-day-next').onclick = () => showDay(data.move(state.date, 1), false);
     byId('calendar-back').onclick = () => {
+        if (!canLeaveActivity()) return;
         showOverview();
         if (calendar) calendar.gotoDate(state.date);
         initCalendar();
     };
     byId('calendar-retry').onclick = initCalendar;
+    window.addEventListener('campus-access-change', () => {
+        if (CampusAccess.isFree()) lastEvaluation = null;
+        if (dayIsVisible() && view === 'evaluation' && (!examMounted || CampusAccess.isFree())) renderActivity();
+    });
     window.CampusCalendar = {
         open() {
-            if (showScreen('study-calendar-screen') === false) return;
+            if (!canLeaveActivity() || showScreen('study-calendar-screen') === false) return;
             showOverview();
             initCalendar();
         },
@@ -473,5 +706,7 @@
         },
         screenChanged,
         setUser,
+        evaluationFinished,
+        returnFromEvaluation,
     };
 })();

@@ -151,8 +151,8 @@
             make('lectura-principal', 'study', '08:00', '10:00', morning.subject + ' · ' + morning.topic,
                 'Lee las páginas indicadas y anota las ideas que quieras comprobar en el bloque de preguntas.',
                 { resource: 'reading', reading: morning }),
-            make('repaso-preguntas', 'exam', '10:00', '11:00', 'Revisar preguntas · ' + morning.topic,
-                'Responde las preguntas del tema y revisa las explicaciones para identificar qué debes repasar.',
+            make('repaso-preguntas', 'exam', '10:00', '11:00', 'Desglose · ' + morning.topic,
+                'Practica las preguntas de ingreso del tema y comprueba tus respuestas con el comentario.',
                 { resource: 'questions', bankSubject: morning.bankSubject, bankTopic: morning.bankTopic, topicLinks: morning.topicLinks }),
             make('lectura-salud', 'study', '11:00', '12:00', 'Salud · ' + healthReading.topic,
                 'Lee el tramo indicado y resume las ideas principales con tus propias palabras.',
@@ -162,6 +162,9 @@
             make('ejercicios-tarde', 'practice', '13:00', '16:00', practice.subject + ' · ' + practice.topic,
                 'Resuelve el ejercicio del campus, comprueba tus respuestas y repite los pasos que te costaron.',
                 { resource: 'practice', practice }),
+            make('evaluacion-tema', 'exam', '16:00', '16:30', 'Evaluación · ' + morning.topic,
+                'Comprueba lo que aprendiste en la evaluación cronometrada del tema.',
+                { resource: 'evaluation', topicLinks: morning.topicLinks }),
         ];
     }
 

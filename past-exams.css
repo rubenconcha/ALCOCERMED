@@ -29,7 +29,7 @@
 .past-lock-badge{display:inline-flex;align-items:center;gap:5px;color:#8a5b13;background:#fff5dc;border:1px solid #f1dda7;border-radius:20px;padding:5px 9px;font-size:.7rem;font-weight:700}
 
 /* Archivo histórico y práctica por temas. */
-#past-exams-screen {
+:is(#past-exams-screen,#calendar-activity[data-view="breakdown"]) {
     --past-shadow: 0 10px 28px #19385a0d;
     --past-gold-soft: #fff2d7;
     --past-gold-ink: #76511c;
@@ -41,7 +41,7 @@
     --past-bad-ink: #a33f32;
     color: var(--shell-ink);
 }
-.campus-dark #past-exams-screen {
+.campus-dark :is(#past-exams-screen,#calendar-activity[data-view="breakdown"]) {
     --past-shadow: 0 10px 28px #0002;
     --past-gold-soft: #423726;
     --past-gold-ink: #ffe0a0;
@@ -144,7 +144,7 @@
     background: var(--shell-panel);
     box-shadow: var(--past-shadow);
 }
-#past-exams-screen :where(.past-mode button, .past-action, .past-text-button) {
+:is(#past-exams-screen,#calendar-activity[data-view="breakdown"]) :where(.past-mode button, .past-action, .past-text-button) {
     min-height: 42px;
     padding: 8px 13px;
     border: 1px solid transparent;
@@ -160,12 +160,12 @@
 #past-exams-screen .past-mode [aria-pressed="true"] { color: #fff; background: #173951 }
 #past-exams-screen .past-mode button[aria-pressed="false"]:hover { background: var(--shell-soft) }
 .campus-dark #past-exams-screen .past-mode [aria-pressed="true"] { color: var(--shell-blue); background: var(--shell-blue-soft); border-color: var(--shell-blue) }
-#past-exams-screen .past-action { background: linear-gradient(115deg, #f6a43a, #ffcb70); color: #272331; font-weight: 700 }
-#past-exams-screen .past-action:hover:not(:disabled) { background: #ffd185 }
-#past-exams-screen .past-text-button, #past-exams-screen .past-action.is-retry { color: var(--shell-blue) }
-#past-exams-screen .past-action.is-retry { background: var(--shell-blue-soft); border-color: var(--shell-line) }
-#past-exams-screen :is(.past-text-button, .past-action.is-retry):hover:not(:disabled) { background: var(--shell-blue-soft) }
-#past-exams-screen :is(.past-action, .past-text-button):disabled { opacity: .56; cursor: default }
+:is(#past-exams-screen,#calendar-activity[data-view="breakdown"]) .past-action { background: linear-gradient(115deg, #f6a43a, #ffcb70); color: #272331; font-weight: 700 }
+:is(#past-exams-screen,#calendar-activity[data-view="breakdown"]) .past-action:hover:not(:disabled) { background: #ffd185 }
+:is(#past-exams-screen,#calendar-activity[data-view="breakdown"]) .past-text-button, :is(#past-exams-screen,#calendar-activity[data-view="breakdown"]) .past-action.is-retry { color: var(--shell-blue) }
+:is(#past-exams-screen,#calendar-activity[data-view="breakdown"]) .past-action.is-retry { background: var(--shell-blue-soft); border-color: var(--shell-line) }
+:is(#past-exams-screen,#calendar-activity[data-view="breakdown"]) :is(.past-text-button, .past-action.is-retry):hover:not(:disabled) { background: var(--shell-blue-soft) }
+:is(#past-exams-screen,#calendar-activity[data-view="breakdown"]) :is(.past-action, .past-text-button):disabled { opacity: .56; cursor: default }
 .past-filter-toggle { display: none }
 #past-count {
     padding: 7px 12px;
@@ -300,7 +300,7 @@
     cursor: pointer;
 }
 #past-reset-filters { flex: none }
-#past-exams-screen input:is([type="checkbox"], [type="radio"]) { flex: none; width: 16px; height: 16px; accent-color: var(--shell-blue); cursor: inherit }
+:is(#past-exams-screen,#calendar-activity[data-view="breakdown"]) input:is([type="checkbox"], [type="radio"]) { flex: none; width: 16px; height: 16px; accent-color: var(--shell-blue); cursor: inherit }
 
 #past-breakdown :is(.past-breakdown-empty, .past-question-card, .past-question-navigation) {
     min-width: 0;

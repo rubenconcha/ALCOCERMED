@@ -8,7 +8,7 @@ window.createPastExamBreakdown = function (request, scope) {
     const unconfirmed = $('past-unconfirmed');
     const answers = new Map();
     const recent = new Map();
-    let data, controller, active = false, showAll = false, cursor = 0, search = '';
+    let data, controller, assigned, active = false, showAll = false, cursor = 0, search = '';
     let subjects = new Set(), topics = new Set(), draftSubjects = new Set(), draftTopics = new Set();
     const fold = text => text.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
 
@@ -96,7 +96,13 @@ window.createPastExamBreakdown = function (request, scope) {
         if (subject) meta.push(node('span', subject.label, 'past-meta-subject'));
         if (topic) meta.push(node('span', topic.title, 'past-meta-topic'));
         $('past-question-meta').replaceChildren(...meta);
-        $('past-question-title').textContent = 'Pregunta original ' + question.numero_original;
+        const title = $('past-question-title');
+        if (assigned) {
+            title.replaceChildren(document.createTextNode('Pregunta original '),
+                node('span', String(question.numero_original), 'calendar-question-badge'));
+        } else {
+            title.textContent = 'Pregunta original ' + question.numero_original;
+        }
         $('past-question-stem').textContent = question.pregunta;
         const options = $('past-answer-options');
         options.replaceChildren(node('legend', 'Elige una alternativa'));
@@ -153,8 +159,9 @@ window.createPastExamBreakdown = function (request, scope) {
         $('past-question-pages').hidden = data.pages <= 1;
         $('past-page-label').textContent = 'Página ' + data.page + ' de ' + data.pages;
         let reviewed = 0;
-        $('past-question-numbers').replaceChildren(...data.questions.map((item, i) => {
-            const number = node('button', String((data.page - 1) * data.pageSize + i + 1));
+        const buttons = data.questions.map((item, i) => {
+            const position = (data.page - 1) * data.pageSize + i + 1;
+            const number = node('button', String(assigned ? item.question.numero_original : position));
             number.type = 'button';
             const attempt = answers.get(item.question.id);
             let status = 'Pendiente';
@@ -164,12 +171,28 @@ window.createPastExamBreakdown = function (request, scope) {
                 number.classList.add(correct ? 'is-correct' : 'is-incorrect');
                 status = correct ? 'Correcta' : 'Incorrecta';
             }
-            number.setAttribute('aria-label', 'Pregunta ' + number.textContent + ' de los resultados. Original ' +
+            number.setAttribute('aria-label', 'Pregunta ' + position + ' de los resultados. Original ' +
                 item.question.numero_original + ' · ' + item.year + ' · ' + item.type + ' · ' + status);
             if (i === cursor) number.setAttribute('aria-current', 'true');
             number.onclick = () => { cursor = i; renderQuestion(true); };
             return number;
-        }));
+        });
+        const numbers = $('past-question-numbers');
+        if (assigned) {
+            const groups = new Map();
+            for (const [index, item] of data.questions.entries()) {
+                const exam = item.year + ' · ' + item.type;
+                if (!groups.has(exam)) {
+                    const group = node('div', '', 'calendar-question-year');
+                    group.append(node('span', exam));
+                    groups.set(exam, group);
+                }
+                groups.get(exam).append(buttons[index]);
+            }
+            numbers.replaceChildren(...groups.values());
+        } else {
+            numbers.replaceChildren(...buttons);
+        }
         $('past-progress').max = data.questions.length;
         $('past-progress').value = reviewed;
         $('past-progress-label').textContent = data.pages > 1 ? 'Revisadas en esta página' : 'Preguntas revisadas';
@@ -189,6 +212,10 @@ window.createPastExamBreakdown = function (request, scope) {
     }
 
     function parameters(page) {
+        if (assigned) {
+            const { subject, topics } = assigned.filter;
+            return { year: '', type: '', page: String(page), subjects: subject, topics: topics.join(','), search: '', all: '', unconfirmed: '' };
+        }
         const current = scope();
         return { ...current, page: String(page), subjects: [...subjects].join(','), topics: [...topics].join(','),
             search, all: showAll ? '1' : '', unconfirmed: unconfirmed.checked ? '1' : '' };
@@ -200,12 +227,14 @@ window.createPastExamBreakdown = function (request, scope) {
         const next = new AbortController();
         controller = next;
         const query = parameters(page);
+        const status = assigned?.status || $('past-status');
+        const total = assigned?.count || $('past-count');
         const key = JSON.stringify(query);
         const cached = recent.get(key);
         const saved = cached && cached.expires > Date.now() ? cached.result : null;
         if (!saved) {
-            $('past-status').textContent = 'Cargando preguntas…';
-            $('past-count').textContent = '';
+            status.textContent = 'Cargando preguntas…';
+            total.textContent = '';
             $('past-breakdown-results').hidden = true;
             $('past-breakdown-empty').hidden = true;
         }
@@ -217,10 +246,10 @@ window.createPastExamBreakdown = function (request, scope) {
                 if (recent.size > 12) recent.delete(recent.keys().next().value);
             }
             data = result;
-            updatePickerLabels();
-            $('past-status').textContent = '';
+            if (!assigned) updatePickerLabels();
+            status.textContent = '';
             const count = data.requested ? data.count : data.available;
-            $('past-count').textContent = count + (count === 1 ? ' pregunta' : ' preguntas') + (data.requested ? '' : ' disponibles');
+            total.textContent = count + (count === 1 ? ' pregunta' : ' preguntas') + (data.requested ? '' : ' disponibles');
             if (data.locked) {
                 empty('Gestión reservada', 'Elige una gestión disponible o consulta los planes para practicar esta selección.',
                     'Consultar planes', () => CampusAccess.unlock());
@@ -228,7 +257,10 @@ window.createPastExamBreakdown = function (request, scope) {
                 empty('Elige qué quieres practicar', 'Selecciona la gestión, el parcial, una materia o un tema. También puedes buscar por texto.',
                     'Ver todas las preguntas disponibles', () => { showAll = true; load(); });
             } else if (!data.questions.length) {
-                if (topics.size && !query.year && !query.type && !query.search) {
+                if (assigned) {
+                    empty('Sin preguntas originales para este tema', 'Puedes elegir otro tema del horario.',
+                        assigned.fallback ? 'Practicar en el banco' : '', assigned.fallback);
+                } else if (topics.size && !query.year && !query.type && !query.search) {
                     empty('No hay preguntas de esta selección', 'En las gestiones disponibles para tu cuenta no hay preguntas originales de los temas seleccionados.');
                 } else {
                     empty('No hay preguntas con estos filtros', 'Prueba con otro tema o amplía la gestión.');
@@ -241,7 +273,7 @@ window.createPastExamBreakdown = function (request, scope) {
             }
         } catch (error) {
             if (next.signal.aborted || !active) return;
-            $('past-status').textContent = '';
+            status.textContent = '';
             empty('No se pudo cargar el desglose', error.message, 'Reintentar', () => load(page, last, focus));
         }
     }
@@ -319,7 +351,7 @@ window.createPastExamBreakdown = function (request, scope) {
         if (answer?.checked) answers.delete(id);
         else if (answer) answer.checked = true;
         renderQuestion();
-        $('past-check-answer').focus();
+        $('past-check-answer').focus({ preventScroll: Boolean(assigned) });
     };
     $('past-question-prev').onclick = () => step(-1);
     $('past-question-next').onclick = () => step(1);
@@ -347,17 +379,56 @@ window.createPastExamBreakdown = function (request, scope) {
         }
     });
 
+    function show(enabled) {
+        if (active === enabled) return;
+        active = enabled;
+        if (enabled) load();
+        else {
+            controller?.abort();
+            subjectPicker.open = false;
+            topicPicker.open = false;
+        }
+    }
+
+    function openAssigned(host, context) {
+        show(false);
+        const panel = $('past-breakdown');
+        const commentary = $('past-commentary');
+        const index = $('past-question-index');
+        const home = panel.parentElement;
+        const commentHome = commentary.parentElement;
+        const title = $('past-question-title');
+        const meta = $('past-question-meta');
+        const arrows = $('past-question-prev').parentElement;
+        const arrowsHome = arrows.parentElement;
+        const arrowsNext = arrows.nextElementSibling;
+        const heading = node('div', '', 'calendar-question-heading');
+        const wasOpen = index.open;
+        assigned = context;
+        host.append(panel);
+        index.before(commentary);
+        meta.before(heading);
+        heading.append(title, arrows);
+        index.open = !matchMedia('(max-width: 760px)').matches;
+        panel.hidden = false;
+        show(true);
+        return () => {
+            show(false);
+            assigned = null;
+            panel.hidden = true;
+            home.append(panel);
+            commentHome.append(commentary);
+            meta.after(title);
+            arrowsHome.insertBefore(arrows, arrowsNext);
+            heading.remove();
+            index.open = wasOpen;
+        };
+    }
+
     return {
-        show(enabled) {
-            if (active === enabled) return;
-            active = enabled;
-            if (enabled) load();
-            else {
-                controller?.abort();
-                subjectPicker.open = false;
-                topicPicker.open = false;
-            }
-        },
+        show,
+        openAssigned,
+        isAssigned: () => Boolean(assigned),
         refresh: () => load(),
         resetFilters,
         clear() {
