@@ -1,4 +1,4 @@
-const CACHE_NAME = 'alcocermed-main-v183-fluidez';
+const CACHE_NAME = 'alcocermed-main-v184-carga';
 const APP_SHELL = [
     './student-results.js?v=5',
     './student-results.css?v=1',
@@ -32,21 +32,23 @@ const APP_SHELL = [
     '/device-limit.css?v=1',
     './campus-home.css?v=5',
     './campus-topics.css?v=4',
-    './login-polish.css?v=2',
+    './login-polish.css?v=3',
     './campus-preview.css?v=3',
     './platform-polish.js?v=1',
     './config.js',
     './device_guard.js?v=9',
     './campus-access.js?v=10',
     './official-flashcards.js?v=1',
-    './study-depth.js?v=19',
+    './study-depth.js?v=20',
     './study-depth.css?v=3',
     './flashcard-workspace.css?v=5',
     './flashcard-approved.css?v=6',
     './assets/fonts/outfit-900.woff2',
     './flashcard-workspace.js?v=20261109-foco',
-    './script.js?v=20261109-fluidez',
-    './topic-evaluations.js?v=20261109-practica-suficiencia',
+    './script.js?v=20261109-carga',
+    './campus-login.js?v=1',
+    './campus-exam-engine.js?v=1',
+    './topic-evaluations.js?v=20261109-carga',
     './topic-evaluations.css?v=5',
     './recuperar.html',
     './password-recovery.js?v=1',
@@ -74,8 +76,8 @@ const APP_SHELL = [
     './assets/study-art/intocables-hero.webp',
     './study-assessments.js?v=2',
     './simulation-scope.js?v=11',
-    './simulacro-ingreso.js?v=13',
-    './simulacro-library.js?v=8',
+    './simulacro-ingreso.js?v=14',
+    './simulacro-library.js?v=9',
     './simulacro-library.css?v=7',
     './student-library.js?v=10',
     './study-summaries.js?v=20261021-visual5b',
@@ -85,7 +87,7 @@ const APP_SHELL = [
     './study-calendar.css?v=11',
     './study-calendar-data.js?v=6',
     './study-calendar-pdf.js?v=2',
-    './study-calendar.js?v=12',
+    './study-calendar.js?v=13',
     './campus-shell.css?v=4',
     './campus-shell.js?v=3',
     './campus-section-tracking.js?v=1',
@@ -111,7 +113,7 @@ const APP_SHELL = [
     './assets/study-art/health-education.webp',
     './sufficiency-practice-content.js?v=2',
     './sufficiency-practice.js?v=3',
-    './past-exams.js?v=13',
+    './past-exams.js?v=14',
     './past-exam-breakdown.js?v=8',
     './past-exams.css?v=7',
     './content/past-exams/catalog.json?v=examenes-umss',
@@ -119,7 +121,7 @@ const APP_SHELL = [
 
 const BOOTSTRAP = new Set([
     './campus', './campus.html', './index.html', './ventas.html', './config.js',
-    './styles.css', './campus-shell.css', './script.js', './assets/calendar-icons.svg',
+    './styles.css', './campus-shell.css', './campus-login.js', './assets/calendar-icons.svg',
 ]);
 const staticUrls = new Set(APP_SHELL
     .filter(url => !/\.html$|\/campus$/.test(url))

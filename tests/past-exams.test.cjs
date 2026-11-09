@@ -77,7 +77,7 @@ test('cada pregunta histórica tiene un comentario y las referencias distinguen 
 });
 
 test('el cronómetro de exámenes pasados permite responder después de 100 minutos y conserva el cierre de simulacros', () => {
-    const source = fs.readFileSync('script.js', 'utf8');
+    const source = fs.readFileSync('campus-exam-engine.js', 'utf8');
     let tick, finished = 0;
     const display = {}, wrap = { classList: { toggle() {} } };
     const context = {
@@ -103,7 +103,7 @@ test('el cronómetro de exámenes pasados permite responder después de 100 minu
 test('las claves especiales de los exámenes originales aceptan las alternativas marcadas y corregidas', () => {
     const source = fs.readFileSync('script.js', 'utf8');
     const context = { campo: (row, name) => row[name] };
-    vm.runInNewContext(source.slice(source.indexOf('function simAcceptedAnswerIndices(q)'), source.indexOf('window.finalizarSimulacro')), context);
+    vm.runInNewContext(source.slice(source.indexOf('function simAcceptedAnswerIndices(q)'), source.indexOf('function guardarEnHistorial')), context);
     const paper = require('../api/_past_exams/2025-2026-2.json');
     for (const number of [95, 97, 100]) {
         const indices = context.simAcceptedAnswerIndices(paper.questions.find(q => q.numero_original === number));

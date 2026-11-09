@@ -123,7 +123,7 @@ test('cerrar sesión conserva las fechas de repaso y elimina la sesión de acces
         getSupabase: () => ({ auth: { signOut() {} } }), showLoginScreen() {},
         history: { replaceState() {} }, document: { title: 'Campus' }
     });
-    vm.runInContext(source.slice(source.indexOf('window.handleLogout ='), source.indexOf('/** Toggle visibilidad contraseña */')), context);
+    vm.runInContext(source.slice(source.indexOf('window.handleLogout ='), source.indexOf('function campo(row, nombre)')), context);
     context.window.handleLogout();
     assert.equal(localStorage.srs_v2_student_one_card_1, stored.srs_v2_student_one_card_1);
     assert.equal(localStorage.alcocer_device_id, stored.alcocer_device_id);

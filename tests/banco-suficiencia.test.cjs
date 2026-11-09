@@ -11,6 +11,7 @@ const source = fs.readFileSync(require.resolve('../script.js'), 'utf8');
 const banco = source.slice(source.indexOf('let bancoState ='), source.indexOf('var simState ='));
 const bank = { ...base, questions: base.questions.concat(guides) };
 const existing = [{ id: 7, MATERIA: 'MORFOFUNCION', TEMA: 'el sistema oseo', DIFICULTAD: 'facil' }];
+const course = { groups: [{ materia: 'MORFOFUNCION', tema: 'el sistema oseo', dificultad: 'facil', ids: ['db:7'] }] };
 
 function fixture() {
     const nodes = new Map();
@@ -42,7 +43,7 @@ function fixture() {
         }),
         fetch: async (url, config) => {
             requests.push({ url, config });
-            return { ok: true, json: async () => bank };
+            return { ok: true, json: async () => url === '/api/banco' ? course : bank };
         },
         fetchAllBancoQuestions: async () => existing,
         freePracticeRows: () => existing,
@@ -62,10 +63,10 @@ function fixture() {
 test('uses all four existing Sufficiency subjects with topics, levels, five options and explanations', async () => {
     const { context, state, requests } = fixture();
     await context.loadBancoMaterias();
-    assert.equal(requests.length, 1);
-    assert.equal(requests[0].url, '/api/suficiencia?collection=umsa-2026');
-    assert.equal(requests[0].config.headers.Authorization, 'Bearer fixture-token');
-    assert.equal(requests[0].config.cache, 'no-store');
+    assert.equal(requests.length, 2);
+    const sufficiency = requests.find(r => r.url === '/api/suficiencia?collection=umsa-2026');
+    assert.equal(sufficiency.config.headers.Authorization, 'Bearer fixture-token');
+    assert.equal(sufficiency.config.cache, 'no-store');
     const menu = context.document.getElementById('banco-materia-dropdown');
     assert.deepEqual(menu.children.map(g => g['aria-label']), ['Materias de Medicina', 'Suficiencia académica']);
     const counts = Object.fromEntries(Object.values(core.subjects).map(subject => [subject, context.bancoMateriaRows(subject).length]));
@@ -107,7 +108,7 @@ test('reading keeps full passages and freezes the passage with the submitted ans
 
 test('free and expired access cannot keep private Sufficiency questions; the course stays usable', async () => {
     const { context, state, requests, setFree } = fixture();
-    context.fetch = async () => ({ ok: false, status: 403 });
+    context.fetch = async url => url === '/api/banco' ? { ok: true, json: async () => course } : { ok: false, status: 403 };
     await context.loadBancoMaterias();
     assert.equal(state.suficiencia.length, 0);
     assert.equal(context.bancoMateriaRows('MORFOFUNCION').length, 1);

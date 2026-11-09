@@ -1020,9 +1020,53 @@ function getSupabase() {
 
 // ═══ AUTHENTICATION ═══
 
-function initAuth() {
-    if (typeof nervousClassMode !== "undefined" && nervousClassMode) { initNervousClass(); return; }
+const gameAssetRequests = new Map();
+
+function loadGameAssets(group) {
+    const nodes = document.getElementById('game-section-assets').content.querySelectorAll('[data-game-assets~="' + group + '"]');
+    return Promise.all(Array.from(nodes, node => {
+        const script = node.localName === 'script';
+        const path = node.getAttribute(script ? 'src' : 'href');
+        if (gameAssetRequests.has(path)) return gameAssetRequests.get(path);
+        const request = new Promise((resolve, reject) => {
+            const asset = document.createElement(node.localName);
+            if (script) {
+                asset.src = path;
+                asset.async = false;
+            } else {
+                asset.rel = 'stylesheet';
+                asset.href = path;
+            }
+            asset.onload = resolve;
+            asset.onerror = () => { asset.remove(); reject(new Error('No pudimos preparar los recursos de la partida.')); };
+            document.head.append(asset);
+        }).catch(error => { gameAssetRequests.delete(path); throw error; });
+        gameAssetRequests.set(path, request);
+        return request;
+    }));
+}
+
+async function prepareGameRound(owner, practice) {
+    try {
+        await Promise.all([loadGameAssets('round'), practice ? loadGameAssets('practice') : null]);
+        return currentUser?.id === owner;
+    } catch (error) {
+        if (currentUser?.id === owner) showCustomAlert(error.message);
+        return false;
+    }
+}
+
+async function initAuth() {
     var urlParams = new URLSearchParams(window.location.search);
+    const topic = urlParams.get('tema');
+    if (['sentidos-saladin', 'tejido-nervioso', 'tejido-nervioso-41-50', 'tejido-nervioso-jhuly'].includes(topic) ||
+        (!topic && urlParams.get('docente') === '1')) {
+        try {
+            await loadGameAssets('class');
+            if (nervousClassMode) initNervousClass();
+        } catch (error) { showLoginError(error.message); }
+        return;
+    }
     if (urlParams.get('debug') === 'true') {
         console.log('Debug mode active - Bypassing real login');
         currentUser = {
@@ -3556,6 +3600,7 @@ function loadSubjectEvaluations(subject) {
 }
 
 function startSelfStudy(evalId, round) {
+    const owner = currentUser?.id;
     round = GameRounds.roundNumber(round);
     if (!currentUser) { alert('Inicia sesión primero'); return; }
     var client = getSupabase();
@@ -3585,7 +3630,9 @@ function startSelfStudy(evalId, round) {
         evaluacion.codigo = code;
         evaluacion.publicado = true;
 
+        const assets = prepareGameRound(owner, true);
         client.from('evaluacion_preguntas').select('*').eq('evaluacion_id', evaluacion.id).order('orden').then(async function(pResult) {
+            if (!await assets || currentUser?.id !== owner) return;
             if (pResult.error || !pResult.data || pResult.data.length === 0) {
                 alert('Esta evaluación no tiene preguntas');
                 sessionStorage.removeItem('alcocer_quiz_code');
@@ -3625,6 +3672,7 @@ function startSelfStudy(evalId, round) {
 }
 
 function restoreSelfStudy(evalId, code) {
+    const owner = currentUser?.id;
     var round = GameRounds.roundNumber(sessionStorage.getItem('alcocer_self_round_' + code));
     var client = getSupabase();
     if (!client) { navigateTo('jugar', true); return; }
@@ -3642,7 +3690,9 @@ function restoreSelfStudy(evalId, code) {
         evaluacion.codigo = code;
         evaluacion.publicado = true;
 
+        const assets = prepareGameRound(owner, true);
         client.from('evaluacion_preguntas').select('*').eq('evaluacion_id', evalId).order('orden').then(async function(pResult) {
+            if (!await assets || currentUser?.id !== owner) return;
             if (pResult.error || !pResult.data || pResult.data.length === 0) { clearSelfSession(); navigateTo('jugar', true); return; }
 
             if (typeof GamePractice !== 'undefined') pResult.data = await GamePractice.load(client, evaluacion, pResult.data, code, true);
@@ -3757,6 +3807,7 @@ function joinByCodeFull() {
 window.joinByCodeFull = joinByCodeFull;
 
 function searchAndStartQuiz(code) {
+    const owner = currentUser?.id;
     var client = getSupabase();
     if (!client) {
         sessionStorage.removeItem('alcocer_quiz_code');
@@ -3788,7 +3839,9 @@ function searchAndStartQuiz(code) {
         }
 
         // Cargar preguntas
-        client.from('evaluacion_preguntas').select('*').eq('evaluacion_id', evaluacion.id).order('orden').then(function(pResult) {
+        const assets = prepareGameRound(owner, false);
+        client.from('evaluacion_preguntas').select('*').eq('evaluacion_id', evaluacion.id).order('orden').then(async function(pResult) {
+            if (!await assets || currentUser?.id !== owner) return;
             if (pResult.error || !pResult.data || pResult.data.length === 0) {
                 sessionStorage.removeItem('alcocer_quiz_code');
                 showCustomAlert('Esta evaluación no tiene preguntas todavía.');
@@ -5979,7 +6032,10 @@ window.openReportDetail = function(evalId, userId) {
     document.body.appendChild(overlay);
     
     var client = getSupabase();
-    client.from('evaluacion_preguntas').select('id, orden, texto, opciones, tipo').eq('evaluacion_id', evalId).order('orden').then(function(qRes) {
+    const images = loadGameAssets('round').catch(() => {});
+    client.from('evaluacion_preguntas').select('id, orden, texto, opciones, tipo').eq('evaluacion_id', evalId).order('orden').then(async function(qRes) {
+        await images;
+        if (!overlay.isConnected) return;
         if(qRes.error || !qRes.data) {
             bodyContainer.innerHTML = '<div style="color:#EF4444;text-align:center;padding:20px;font-weight:700;"><i class="fas fa-exclamation-triangle"></i> Error cargando preguntas</div>';
             return;

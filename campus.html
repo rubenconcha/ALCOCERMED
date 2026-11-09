@@ -20,37 +20,40 @@
 
     <style>body.login-active :is(.sidebar,.main-content,.watermark,.overlay){display:none!important}</style>
     <link href="assets/mindmaps/fonts/outfit.css?v=3" rel="stylesheet">
-    <link rel="stylesheet" href="/assets/vendor/font-awesome-6.4.0/css/all.min.css" media="print" fetchpriority="low" onload="this.media='all'">
     <link rel="stylesheet" href="styles.css?v=46">
     <link rel="stylesheet" href="commerce.css?v=1">
     <link rel="stylesheet" href="student-white.css?v=2">
     <link rel="stylesheet" href="campus-theme.css?v=4">
-<link rel="stylesheet" href="campus-access.css?v=2"><link rel="stylesheet" href="campus-navigation.css?v=3"><link rel="stylesheet" href="campus-home.css?v=5"><link rel="stylesheet" href="campus-topics.css?v=4">
-    <link rel="stylesheet" href="login-polish.css?v=2">
+    <link rel="stylesheet" href="campus-access.css?v=2">
+    <link rel="stylesheet" href="login-polish.css?v=3">
     <link rel="stylesheet" href="campus-preview.css?v=3">
-    <link rel="stylesheet" href="study-depth.css?v=3">
-<link rel="stylesheet" href="/device-limit.css?v=1">
-<link rel="stylesheet" href="study-media.css?v=20261021-visual5c">
+
+    <link rel="stylesheet" href="/device-limit.css?v=1">
+
     <link id="campus-shell-style" rel="stylesheet" href="campus-shell.css?v=4">
     <script defer src="platform-polish.js?v=1"></script>
     <script defer src="config.js"></script>
     <script defer src="device_guard.js?v=9"></script>
     <script defer src="campus-access.js?v=10"></script>
-    <script defer src="official-flashcards.js?v=1"></script>
-    <script defer src="study-depth.js?v=19"></script>
-    <script defer src="campus-section-tracking.js?v=1"></script>
-    <script defer src="question-review.js?v=12"></script>
-    <script defer src="study-media.js?v=20261021-visual5b"></script>
-    <script defer src="script.js?v=20261109-fluidez"></script>
-    <script defer src="study-assessments.js?v=2"></script>
-    <script defer src="study-calendar-data.js?v=6"></script>
-    <script defer src="campus-shell.js?v=3"></script>
-    <script defer src="student-results.js?v=5"></script>
+    <script defer src="campus-login.js?v=1"></script>
 </head>
 
 <body class="login-active campus-shell">
 
     <!-- ══ PANTALLA DE LOGIN ══ -->
+    <svg aria-hidden="true" width="0" height="0" style="position:absolute">
+        <symbol id="login-envelope" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></g></symbol>
+        <symbol id="login-lock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3m-4 4v3"/></g></symbol>
+        <symbol id="login-eye" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6-10-6-10-6Z"/><circle cx="12" cy="12" r="2.5"/></g></symbol>
+        <symbol id="login-eye-slash" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m3 3 18 18M10 6a12 12 0 0 1 2 0c6.5 0 10 6 10 6a14 14 0 0 1-3 3M6 8a15 15 0 0 0-4 4s3.5 6 10 6a11 11 0 0 0 4-.7"/></g></symbol>
+        <symbol id="login-exclamation-circle" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v6m0 3h.01"/></g></symbol>
+        <symbol id="login-sign-in-alt" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4h6a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-6M3 12h12m-4-4 4 4-4 4"/></g></symbol>
+        <symbol id="login-spinner" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12a8 8 0 1 1-8-8"/></g></symbol>
+        <symbol id="login-shield-alt" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 8 3v5c0 4-3 7-8 10-5-3-8-6-8-10V6l8-3Z"/><path d="m8 12 2.5 2.5L16 9"/></g></symbol>
+        <symbol id="login-heartbeat" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21S2 15 2 8a5 5 0 0 1 10-1 5 5 0 0 1 10 1c0 7-10 13-10 13Z"/><path d="M3 12h5l2-3 3 6 2-3h6"/></g></symbol>
+        <symbol id="login-dna" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3c0 5 3 7 6 9s6 4 6 9M18 3c0 5-3 7-6 9s-6 4-6 9M8 5h8m-6 4h4m-4 6h4m-6 4h8"/></g></symbol>
+        <symbol id="login-brain" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6a3 3 0 0 0-5-2 4 4 0 0 0-3 5 4 4 0 0 0 0 7 4 4 0 0 0 4 4 3 3 0 0 0 4-3m0-11a3 3 0 0 1 5-2 4 4 0 0 1 3 5 4 4 0 0 1 0 7 4 4 0 0 1-4 4 3 3 0 0 1-4-3m0-11v11M8 8a3 3 0 0 1 0 5m8-5a3 3 0 0 0 0 5"/></g></symbol>
+    </svg>
     <div id="login-screen" class="login-screen">
         <div class="login-bg-glow"></div>
         <div class="login-bg-glow login-bg-glow-2"></div>
@@ -81,7 +84,7 @@
             <form id="login-form" class="login-form" onsubmit="handleLogin(event)">
                 <div class="login-field">
                     <label class="login-label" for="login-email">
-                        <i class="fas fa-envelope"></i> Correo electrónico
+                        <svg class="login-icon" aria-hidden="true"><use href="#login-envelope"></use></svg> Correo electrónico
                     </label>
                     <input type="email" id="login-email" class="login-input" placeholder="tu@correo.com" required pattern="[^\s@]+@[^\s@]+\.[^\s@]+"
                         autocomplete="email">
@@ -89,14 +92,14 @@
 
                 <div class="login-field">
                     <label class="login-label" for="login-password">
-                        <i class="fas fa-lock"></i> Contraseña
+                        <svg class="login-icon" aria-hidden="true"><use href="#login-lock"></use></svg> Contraseña
                     </label>
                     <div class="login-input-wrap">
                         <input type="password" id="login-password" class="login-input" placeholder="••••••••" required minlength="6"
                             autocomplete="current-password">
                         <button type="button" class="login-eye-btn"
                             title="mostrar/ocultar" onclick="togglePasswordVisibility()">
-                            <i class="fas fa-eye" id="login-eye-icon"></i>
+                            <svg class="login-icon" aria-hidden="true"><use href="#login-eye" id="login-eye-icon"></use></svg>
                         </button>
                     </div>
                 </div>
@@ -105,15 +108,15 @@
 
                 <!-- Error -->
                 <div id="login-error" class="login-error hidden" role="alert" aria-live="polite">
-                    <i class="fas fa-exclamation-circle"></i>
+                    <svg class="login-icon" aria-hidden="true"><use href="#login-exclamation-circle"></use></svg>
                     <span id="login-error-text">credenciales incorrectas</span>
                 </div>
 
                 <!-- Botón -->
                 <button type="submit" class="login-btn" id="login-btn">
-                    <span id="login-btn-text"><i class="fas fa-sign-in-alt"></i> ingresar</span>
+                    <span id="login-btn-text"><svg class="login-icon" aria-hidden="true"><use href="#login-sign-in-alt"></use></svg> ingresar</span>
                     <span id="login-btn-loading" class="hidden">
-                        <i class="fas fa-spinner fa-spin"></i> verificando...
+                        <svg class="login-icon login-icon-spin" aria-hidden="true"><use href="#login-spinner"></use></svg> verificando...
                     </span>
                 </button>
             </form>
@@ -125,15 +128,15 @@
 
             <!-- Footer -->
             <div class="login-footer">
-                <i class="fas fa-shield-alt"></i>
+                <svg class="login-icon" aria-hidden="true"><use href="#login-shield-alt"></use></svg>
                 acceso exclusivo para estudiantes · prepa ben carson
             </div>
         </div>
 
         <!-- Decoración flotante -->
-        <div class="login-deco login-deco-1"><i class="fas fa-heartbeat"></i></div>
-        <div class="login-deco login-deco-2"><i class="fas fa-dna"></i></div>
-        <div class="login-deco login-deco-3"><i class="fas fa-brain"></i></div>
+        <div class="login-deco login-deco-1"><svg class="login-icon" aria-hidden="true"><use href="#login-heartbeat"></use></svg></div>
+        <div class="login-deco login-deco-2"><svg class="login-icon" aria-hidden="true"><use href="#login-dna"></use></svg></div>
+        <div class="login-deco login-deco-3"><svg class="login-icon" aria-hidden="true"><use href="#login-brain"></use></svg></div>
     </div>
 
     <!-- Marca de agua global del sitio -->
@@ -1034,7 +1037,7 @@
                 <div id="sim-library-list" class="entrance-choices" role="group" aria-label="Simulacros disponibles"></div>
                 <div class="entrance-launch" hidden>
                     <div><span>Prueba seleccionada</span><strong id="entrance-selected-name">Simulacro completo</strong><small id="entrance-selected-detail">100 preguntas · 100 minutos</small></div>
-                    <button class="btn-primary entrance-start" id="sim-start-btn" onclick="iniciarSimulacro()"><i class="fas fa-play"></i> Comenzar</button>
+                    <button class="btn-primary entrance-start" id="sim-start-btn" onclick="EntranceLibrary.start()"><i class="fas fa-play"></i> Comenzar</button>
                 </div>
                 <p class="entrance-note">Puedes dejar preguntas en blanco y volver a ellas. Al terminar el tiempo, se entrega automáticamente.</p>
             </div>
@@ -1747,21 +1750,38 @@
 
 <a class="support-float" href="https://wa.me/59173752688?text=Hola%2C%20tengo%20una%20consulta%20sobre%20AlcocerMed" target="_blank" rel="noopener noreferrer" aria-label="Hablar con AlcocerMed por WhatsApp" title="¿Te ayudamos? Escríbenos"><svg aria-hidden="true"><use href="/assets/calendar-icons.svg#whatsapp"></use></svg></a>
     <template id="campus-section-assets">
+        <link rel="stylesheet" data-campus-assets="campus" href="/assets/vendor/font-awesome-6.4.0/css/all.min.css">
+        <script data-campus-assets="exam-engine entrance-attempt" src="campus-exam-engine.js?v=1"></script>
+        <link rel="stylesheet" data-campus-assets="campus" href="campus-navigation.css?v=3">
+        <link rel="stylesheet" data-campus-assets="campus" href="campus-home.css?v=5">
+        <link rel="stylesheet" data-campus-assets="campus" href="campus-topics.css?v=4">
+        <link rel="stylesheet" data-campus-assets="campus" href="study-depth.css?v=3">
+        <link rel="stylesheet" data-campus-assets="campus" href="study-media.css?v=20261021-visual5c">
+        <script data-campus-assets="campus" src="official-flashcards.js?v=1"></script>
+        <script data-campus-assets="campus" src="study-depth.js?v=20"></script>
+        <script data-campus-assets="campus" src="campus-section-tracking.js?v=1"></script>
+        <script data-campus-assets="campus" src="question-review.js?v=12"></script>
+        <script data-campus-assets="campus" src="study-media.js?v=20261021-visual5b"></script>
+        <script data-campus-assets="campus" src="script.js?v=20261109-carga"></script>
+        <script data-campus-assets="campus" src="study-assessments.js?v=2"></script>
+        <script data-campus-assets="campus" src="study-calendar-data.js?v=6"></script>
+        <script data-campus-assets="campus" src="campus-shell.js?v=3"></script>
+        <script data-campus-assets="campus" src="student-results.js?v=5"></script>
         <link rel="stylesheet" data-campus-assets="simulations" href="simulacro-library.css?v=7">
-        <link rel="stylesheet" data-campus-assets="past simulations evaluations" href="past-exams.css?v=7">
+        <link rel="stylesheet" data-campus-assets="past evaluations entrance-attempt" href="past-exams.css?v=7">
         <link rel="stylesheet" data-campus-assets="evaluations" href="topic-evaluations.css?v=5">
         <link rel="stylesheet" data-campus-assets="atlas" href="campus-atlas.css?v=5">
         <link rel="stylesheet" data-campus-assets="sufficiency" href="suficiencia.css?v=9">
         <script data-campus-assets="flashcards" src="student-library.js?v=10"></script>
         <script data-campus-assets="flashcards" src="flashcard-workspace.js?v=20261109-foco"></script>
         <script data-campus-assets="calendar" src="study-calendar-pdf.js?v=2"></script>
-        <script data-campus-assets="calendar" src="study-calendar.js?v=12"></script>
-        <script data-campus-assets="past simulations evaluations" src="past-exam-breakdown.js?v=8"></script>
-        <script data-campus-assets="past simulations evaluations" src="past-exams.js?v=13"></script>
-        <script data-campus-assets="simulations" src="simulation-scope.js?v=11"></script>
-        <script data-campus-assets="simulations" src="simulacro-ingreso.js?v=13"></script>
-        <script data-campus-assets="simulations" src="simulacro-library.js?v=8"></script>
-        <script data-campus-assets="evaluations" src="topic-evaluations.js?v=20261109-practica-suficiencia"></script>
+        <script data-campus-assets="calendar" src="study-calendar.js?v=13"></script>
+        <script data-campus-assets="past-topics" src="past-exam-breakdown.js?v=8"></script>
+        <script data-campus-assets="past evaluations entrance-attempt" src="past-exams.js?v=14"></script>
+        <script data-campus-assets="entrance-attempt" src="simulation-scope.js?v=11"></script>
+        <script data-campus-assets="entrance-attempt" src="simulacro-ingreso.js?v=14"></script>
+        <script data-campus-assets="simulations" src="simulacro-library.js?v=9"></script>
+        <script data-campus-assets="evaluations" src="topic-evaluations.js?v=20261109-carga"></script>
         <script data-campus-assets="atlas" src="campus-atlas.js?v=12"></script>
         <script data-campus-assets="sufficiency" src="suficiencia-core.js?v=12"></script>
         <script data-campus-assets="sufficiency" src="suficiencia.js?v=16"></script>

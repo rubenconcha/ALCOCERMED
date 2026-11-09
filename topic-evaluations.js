@@ -68,10 +68,10 @@
             const session=(await getSupabase().auth.getSession()).data.session;
             if (!session?.access_token || session.user?.id !== account) throw new Error('Vuelve a iniciar sesión para abrir la evaluación.');
             if (!isCurrent()) return;
-            const response=await fetch('/api/topic-evaluation?id='+encodeURIComponent(exam.id),{
+            const [response]=await Promise.all([fetch('/api/topic-evaluation?id='+encodeURIComponent(exam.id),{
                 headers:{Authorization:'Bearer '+session.access_token},cache:'no-store',
                 signal: assigned ? AbortSignal.any([assigned.signal, AbortSignal.timeout(15000)]) : AbortSignal.timeout(15000)
-            });
+            }), window.loadCampusAssets?.('exam-engine')]);
             if (!isCurrent()) return;
             if(response.status===403){CampusAccess.unlock();return;}
             if(!response.ok)throw new Error(response.status===401?'Tu sesión venció. Vuelve a iniciar sesión.':'No se pudo cargar la evaluación. Intenta de nuevo.');

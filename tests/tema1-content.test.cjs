@@ -21,7 +21,7 @@ test('Tema 1: twenty distinct questions, balanced keys and feedback for every al
 });
 
 test('The review displays each option and its source in both topic evaluations and mock exams',()=>{
- const code=fs.readFileSync('script.js','utf8');
+ const code=fs.readFileSync('campus-exam-engine.js','utf8');
  const review=code.slice(code.indexOf("    var reviewList = document.getElementById('sim-review-list');"),code.indexOf('    // Guardar en historial local'));
  class Node{
   constructor(tag){this.tag=tag;this.children=[];this.textContent='';this.classList={add:()=>{}};}

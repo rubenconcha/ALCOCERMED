@@ -1,13 +1,3 @@
-// Configuracion compartida. Se carga desde config.js cuando esta disponible.
-const CONFIG = window.ALCOCER_CONFIG || {
-    SUPABASE_URL: 'https://asnwhddmurstzmghuyin.supabase.co',
-    SUPABASE_KEY: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFzbndoZGRtdXJzdHptZ2h1eWluIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzY1MDcwODAsImV4cCI6MjA5MjA4MzA4MH0.bd3kz5Xji6gQknGVw_M2d80XUTwcKzLyOEqKQwfaTmo',
-    ADMIN_EMAILS: ['admin@alcocermed.com', 'admin@bencarson.com', 'rubenconcha@example.com', 'pichon4488@gmail.com']
-};
-const SUPABASE_URL = CONFIG.SUPABASE_URL;
-const SUPABASE_KEY = CONFIG.SUPABASE_KEY;
-const ADMIN_EMAILS = (CONFIG.ADMIN_EMAILS || []).map(function(e) { return String(e).toLowerCase(); });
-
 // Utilidad: barajar array (Fisher-Yates)
 function shuffleArray(arr) {
     var a = arr.slice();
@@ -17,105 +7,6 @@ function shuffleArray(arr) {
     }
     return a;
 }
-
-let _supabase = null;
-let _supabaseSdkPromise = null;
-const scriptRequests = new Map();
-
-function loadScriptOnce(src, ordered = false) {
-    const url = new URL(src, document.baseURI).href;
-    if (scriptRequests.has(url)) return scriptRequests.get(url);
-    const request = new Promise(function(resolve, reject) {
-        const existing = Array.from(document.scripts).find(function(script) { return script.src === url; });
-        if (existing && existing.dataset.loaded === '1') {
-            resolve();
-            return;
-        }
-
-        const script = existing || document.createElement('script');
-        let done = false;
-        const timer = setTimeout(function() {
-            if (done) return;
-            done = true;
-            if (!existing) script.remove();
-            reject(new Error('timeout cargando ' + src));
-        }, existing ? 8000 : 25000);
-
-        script.onload = function() {
-            if (done) return;
-            done = true;
-            clearTimeout(timer);
-            script.dataset.loaded = '1';
-            resolve();
-        };
-        script.onerror = function() {
-            if (done) return;
-            done = true;
-            clearTimeout(timer);
-            if (!existing) script.remove();
-            reject(new Error('no se pudo cargar ' + src));
-        };
-
-        if (!existing) {
-            script.src = url;
-            script.async = !ordered;
-            document.head.appendChild(script);
-        }
-    }).catch(error => { scriptRequests.delete(url); throw error; });
-    scriptRequests.set(url, request);
-    return request;
-}
-
-const campusAssetRequests = new Map();
-const campusAssetStyles = new Map();
-let pastExamCatalogRequest;
-
-window.loadPastExamCatalog = () => {
-    if (!pastExamCatalogRequest) {
-        pastExamCatalogRequest = fetch('/content/past-exams/catalog.json?v=examenes-umss')
-            .then(response => {
-                if (!response.ok) throw new Error('No se pudo cargar el catálogo de exámenes. Intenta de nuevo.');
-                return response.json();
-            }).catch(error => {
-                pastExamCatalogRequest = null;
-                throw error;
-            });
-    }
-    return pastExamCatalogRequest;
-};
-
-function loadCampusStyle(url) {
-    if (campusAssetStyles.has(url)) return campusAssetStyles.get(url);
-    const request = new Promise((resolve, reject) => {
-        const link = document.createElement('link');
-        link.rel = 'stylesheet';
-        link.href = url;
-        const timeout = setTimeout(() => link.onerror(), 25000);
-        link.onload = () => { clearTimeout(timeout); resolve(); };
-        link.onerror = () => {
-            clearTimeout(timeout);
-            link.remove();
-            reject(new Error('No se pudo cargar ' + url));
-        };
-        document.head.insertBefore(link, document.getElementById('campus-shell-style'));
-    }).catch(error => { campusAssetStyles.delete(url); throw error; });
-    campusAssetStyles.set(url, request);
-    return request;
-}
-
-window.loadCampusAssets = function (group) {
-    if (group === 'past') window.loadPastExamCatalog().catch(() => {});
-    if (campusAssetRequests.has(group)) return campusAssetRequests.get(group);
-    const template = document.getElementById('campus-section-assets');
-    if (!template) return Promise.resolve();
-    const nodes = template.content.querySelectorAll(`[data-campus-assets~="${group}"]`);
-    const request = Promise.all(Array.from(nodes, node => node.localName === 'link'
-        ? loadCampusStyle(node.getAttribute('href'))
-        : loadScriptOnce(node.getAttribute('src'), true)))
-        .catch(error => { campusAssetRequests.delete(group); throw error; });
-    campusAssetRequests.set(group, request);
-    return request;
-};
 
 function openCampusFeature(group, open) {
     return async (...args) => {
@@ -145,8 +36,8 @@ lazyCampusExport('flashcards', 'openStudyLibrary');
 lazyCampusExport('atlas', 'openAtlas');
 lazyCampusExport('past', 'openPastExams');
 window.openTopicEvaluations = openCampusFeature('evaluations', (...args) => window.openEvaluacion(...args));
-window.openCampusSimulations = openCampusFeature('simulations', () => window.openSimulacro());
-window.openCampusRequestedSimulation = openCampusFeature('simulations', () => window.openRequestedSimulation());
+window.openCampusSimulations = openCampusFeature('simulations', () => window.EntranceLibrary.openScreen());
+window.openCampusRequestedSimulation = openCampusFeature('simulations', () => window.EntranceLibrary.openRequested());
 window.openSufficiency = openCampusFeature('sufficiency', () => window.Sufficiency.open());
 window.openStudyCalendar = openCampusFeature('calendar', (date, activityId) => {
     const calendar = window.CampusCalendar;
@@ -162,104 +53,7 @@ window.loadMindmapContent = () => Promise.all([
     window.MINDMAP_DETAILED_CONTENT || loadScriptOnce('/mindmap-detailed-content.js?v=20261021-visual5b'),
 ]);
 
-async function ensureSupabaseSdk() {
-    if (window.supabase && window.supabase.createClient) return window.supabase;
-    if (!_supabaseSdkPromise) {
-        _supabaseSdkPromise = loadScriptOnce('/assets/vendor/supabase.js?v=2.118.0')
-            .catch(function() {
-                return loadScriptOnce('https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.118.0');
-            })
-            .then(function() {
-                if (!window.supabase || !window.supabase.createClient) {
-                    throw new Error('Supabase SDK no disponible');
-                }
-                return window.supabase;
-            });
-    }
-    return _supabaseSdkPromise;
-}
-
-function getSupabase() {
-    if (!SUPABASE_URL || !SUPABASE_KEY) throw new Error('Supabase config incompleta');
-    if (!window.supabase || !window.supabase.createClient) throw new Error('Supabase SDK no cargado');
-    if (!_supabase) _supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
-    return _supabase;
-}
-
-// ══════════════════════════════════════════════
-// ██  AUTENTICACIÓN SUPABASE  ██
-// ══════════════════════════════════════════════
-
-let currentUser = null;
-
-// Si la URL contiene logout=1, forzar showLoginScreen apenas cargue
-if (new URLSearchParams(window.location.search).get("logout") === "1") {
-    document.addEventListener("DOMContentLoaded", function() {
-        showLoginScreen();
-        // Eliminar parámetro de la URL sin recargar
-        try {
-            history.replaceState({}, document.title, window.location.pathname);
-        } catch (e) {}
-    });
-}
-
-// ── initAuth ────────────────────────────────────
-async function initAuth() {
-    if (new URLSearchParams(window.location.hash.slice(1)).get("type") === "recovery") {
-        window.location.replace("/recuperar.html" + window.location.hash);
-        return;
-    }
-    document.body.classList.add('login-active');
-
-    var checker = document.createElement('div');
-    checker.className = 'login-checking';
-    checker.innerHTML = '<div class="login-checking-spinner"></div>' +
-        '<span class="login-checking-text">verificando sesión...</span>';
-    document.body.appendChild(checker);
-
-    try {
-        await ensureSupabaseSdk();
-        var client = getSupabase();
-        if (!client) throw new Error('Supabase client failed to initialize');
-        var res = await client.auth.getSession();
-        var session = res.data.session;
-
-        if (session && session.user) {
-            currentUser = session.user;
-            await enterApp(currentUser);
-        } else {
-            showLoginScreen();
-        }
-    } catch (e) {
-        console.error('Error verificando sesión:', e);
-        showLoginScreen();
-        // Mostrar error visual si es un fallo de inicialización
-        if (e.message.includes('Supabase')) {
-             setTimeout(function() { showLoginError('error al conectar con el servidor. revisa tu internet.'); }, 500);
-        }
-    } finally {
-        checker.classList.add('fade-out');
-        setTimeout(function () { checker.remove(); }, 350);
-    }
-
-    try {
-        getSupabase().auth.onAuthStateChange(function (event, session) {
-            if (event === 'INITIAL_SESSION') return;
-            if (event === 'SIGNED_IN' && session && session.user) {
-                currentUser = session.user;
-                setTimeout(function () { enterApp(currentUser); }, 0);
-            } else if (event === 'SIGNED_OUT') {
-                currentUser = null;
-                showLoginScreen();
-            }
-        });
-    } catch (e) {
-        console.warn('No se pudo registrar auth listener:', e.message);
-    }
-}
-
-/** Muestra login y oculta app */
-function showLoginScreen() {
+function resetCampusStudy() {
     window.StudentResults?.clear();
     window.TopicEvaluations?.clear();
     window.OfficialTexts?.close();
@@ -270,6 +64,8 @@ function showLoginScreen() {
     window.Sufficiency?.clear?.();
     clearVideoclases();
     bancoQuestionsRequest = null;
+    bancoIndexRequest = null;
+    bancoState.courseIndex = [];
     closeMobileSidebar();
     window.CampusShell?.syncMenu();
     clearBancoSuficiencia();
@@ -281,14 +77,6 @@ function showLoginScreen() {
     flashcardTopicCards = [];
     deck = [];
     currentIndex = 0;
-    document.body.classList.add('login-active');
-    var loginScreen = document.getElementById('login-screen');
-    if (loginScreen) loginScreen.classList.remove('hidden');
-    var emailEl = document.getElementById('login-email');
-    var passEl = document.getElementById('login-password');
-    if (emailEl) emailEl.value = '';
-    if (passEl) passEl.value = '';
-    hideLoginError();
     setAdminSectionVisible(false);
 }
 
@@ -297,50 +85,24 @@ function setAdminSectionVisible(visible) {
     if (adminSec) adminSec.style.display = visible ? 'block' : 'none';
 }
 
-/** Oculta login y muestra app */
-let campusEntry = null;
-let verifiedCampusUserId = null;
-async function verifyCampusDevice(client, user) {
-    if (!user.email || ADMIN_EMAILS.includes(user.email.toLowerCase())) return;
-    if (typeof DeviceGuard === 'undefined') throw new Error('No pudimos verificar tus dispositivos. Recarga la página.');
-    const device = await DeviceGuard.activateDevice(client, user.email);
-    if (device.ok) return;
-    if (device.code === 'DEVICE_LIMIT') {
-        await client.auth.signOut({ scope: 'local' });
-        if (currentUser?.id === user.id) currentUser = null;
-    }
-    throw new Error(device.error || 'No pudimos verificar este dispositivo.');
+function activateCampusStudy(user, access) {
+    CampusAccess.apply(access);
+    clearVideoclases();
+    window.TopicEvaluations?.clear();
+    clearBancoSuficiencia();
+    flashcardsCache = null;
+    bancoState._cache = [];
+    bancoIndexRequest = null;
+    bancoState.courseIndex = [];
+    bancoState.allPreguntas = [];
+    bancoState.preguntas = [];
+    simState._cache = [];
+    simState._oficialesCache = [];
+    simState.preguntas = [];
+    showScreen('home-screen');
+    enterVerifiedApp(user);
 }
-function enterApp(user) {
-    if (!user || currentUser?.id !== user.id) return Promise.resolve();
-    if (verifiedCampusUserId === user?.id && !document.body.classList.contains('login-active')) return Promise.resolve();
-    if (campusEntry) return campusEntry;
-    campusEntry = (async function () {
-        try {
-            const client = getSupabase();
-            const [, access] = await Promise.all([verifyCampusDevice(client, user), CampusAccess.check(client)]);
-            await campusDomReady;
-            if (currentUser?.id !== user.id) return;
-            CampusAccess.apply(access);
-            clearVideoclases();
-            window.TopicEvaluations?.clear();
-            clearBancoSuficiencia();
-            flashcardsCache = null;
-            bancoState._cache = [];
-            bancoState.allPreguntas = [];
-            bancoState.preguntas = [];
-            simState._cache = [];
-            simState._oficialesCache = [];
-            simState.preguntas = [];
-            showScreen('home-screen');
-            enterVerifiedApp(user);
-        } catch (error) {
-            showLoginScreen();
-            showLoginError(error.message);
-        } finally { campusEntry = null; }
-    })();
-    return campusEntry;
-}
+
 function enterVerifiedApp(user) {
     verifiedCampusUserId = user.id;
     document.body.classList.remove('login-active');
@@ -431,42 +193,6 @@ async function restoreCampusAfterPlans() {
 }
 
 /** handleLogin */
-window.handleLogin = async function (e) {
-    e.preventDefault();
-    hideLoginError();
-
-    var email = document.getElementById('login-email').value.trim();
-    var password = document.getElementById('login-password').value;
-
-    if (!email || !password) { showLoginError('completa todos los campos'); return; }
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { showLoginError('formato de correo inválido'); return; }
-    if (password.length < 6) { showLoginError('la contraseña debe tener al menos 6 caracteres'); return; }
-
-    setLoginLoading(true);
-    try {
-        await ensureSupabaseSdk();
-        var client = getSupabase();
-        var result = await client.auth.signInWithPassword({ email: email, password: password });
-
-        if (result.error) {
-            var msg = 'credenciales incorrectas. verifica tu correo y contraseña.';
-            if (result.error.message.indexOf('Invalid login') !== -1) msg = 'correo o contraseña incorrectos.';
-            else if (result.error.message.indexOf('Email not confirmed') !== -1) msg = 'confirma tu correo antes de ingresar.';
-            else if (result.error.message.indexOf('Too many requests') !== -1) msg = 'demasiados intentos. espera unos minutos.';
-            showLoginError(msg);
-            return;
-        }
-
-        currentUser = result.data.user;
-        await enterApp(currentUser);
-    } catch (err) {
-        console.error('Error de login:', err);
-        showLoginError('error de conexión. revisa tu internet.');
-    } finally {
-        setLoginLoading(false);
-    }
-};
-
 /** handleLogout */
 window.handleLogout = function() {
         // 0. Detener verificación de dispositivo
@@ -498,42 +224,6 @@ window.handleLogout = function() {
     } catch (e) {}
 };
 
-
-/** Toggle visibilidad contraseña */
-window.togglePasswordVisibility = function () {
-    const input = document.getElementById('login-password');
-    const icon = document.getElementById('login-eye-icon');
-    if (!input) return;
-    if (input.type === 'password') {
-        input.type = 'text';
-        if (icon) { icon.classList.remove('fa-eye'); icon.classList.add('fa-eye-slash'); }
-    } else {
-        input.type = 'password';
-        if (icon) { icon.classList.remove('fa-eye-slash'); icon.classList.add('fa-eye'); }
-    }
-};
-
-// ── Helpers UI Login ──────────────────────────
-function showLoginError(msg) {
-    const el = document.getElementById('login-error');
-    const textEl = document.getElementById('login-error-text');
-    if (el) el.classList.remove('hidden');
-    if (textEl) textEl.textContent = msg;
-    if (el) { el.style.animation = 'none'; el.offsetHeight; el.style.animation = ''; }
-}
-function hideLoginError() {
-    const el = document.getElementById('login-error');
-    if (el) el.classList.add('hidden');
-}
-function setLoginLoading(loading) {
-    const btn = document.getElementById('login-btn');
-    const btnText = document.getElementById('login-btn-text');
-    const btnLoading = document.getElementById('login-btn-loading');
-    if (!btn) return;
-    btn.disabled = loading;
-    if (btnText) btnText.classList.toggle('hidden', loading);
-    if (btnLoading) btnLoading.classList.toggle('hidden', !loading);
-}
 
 // ──────────────────────────────────────────────
 // HELPER: acceder a campos con mayúsculas o minúsculas
@@ -1889,7 +1579,7 @@ window.addEventListener('appinstalled', function () {
 // PROTECCIÓN ANTI-COPIA EN CARDS
 // ──────────────────────────────────────────────
 // Inicialización unificada al cargar el DOM
-const campusDomReady = new Promise(resolve => document.addEventListener('DOMContentLoaded', function () {
+function initializeCampusStudy() {
     initPwaInstall();
 
     // Botón revelar respuesta
@@ -1912,8 +1602,9 @@ const campusDomReady = new Promise(resolve => document.addEventListener('DOMCont
         cc.addEventListener('selectstart', function (e) { e.preventDefault(); return false; });
     }
 
-    resolve();
-}, { once: true }));
+}
+if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initializeCampusStudy, { once: true });
+else initializeCampusStudy();
 
 document.addEventListener('copy', function (e) {
     const sel = window.getSelection();
@@ -1981,10 +1672,12 @@ let bancoState = {
     currentIdx: 0,
     answers: [],              // { selected: null|idx, correct: idx }
     finalized: false,
+    courseIndex: [],
     suficiencia: [],          // colección autenticada para este selector
     _cache: []                // caché de todas las filas (evita re-queries)
 };
 let bancoMateriaRequest = 0;
+let bancoIndexRequest;
 const BANCO_MAX_QUESTIONS = 50;
 
 function clearBancoSuficiencia() {
@@ -2004,8 +1697,55 @@ function clearBancoSuficiencia() {
 }
 
 window.addEventListener('campus-access-change', function () {
-    if (CampusAccess.isFree()) clearBancoSuficiencia();
+    if (CampusAccess.isFree()) {
+        bancoIndexRequest = null;
+        bancoState.courseIndex = [];
+        clearBancoSuficiencia();
+    }
 });
+
+async function readBancoCourse(owner, ids) {
+    const { data } = await getSupabase().auth.getSession();
+    const session = data?.session;
+    if (!owner || session?.user?.id !== owner || !session.access_token || CampusAccess.isFree()) {
+        throw new Error('Vuelve a iniciar sesión para abrir el banco.');
+    }
+    const headers = { Authorization: 'Bearer ' + session.access_token };
+    const options = { headers, cache: 'no-store', signal: AbortSignal.timeout(20000) };
+    if (ids) {
+        headers['Content-Type'] = 'application/json';
+        options.method = 'POST';
+        options.body = JSON.stringify({ ids });
+    }
+    const response = await fetch('/api/banco', options);
+    if (!response.ok || currentUser?.id !== owner || CampusAccess.isFree()) {
+        if (response.status === 409) bancoIndexRequest = null;
+        throw Object.assign(new Error('No pudimos cargar las preguntas del banco.'), { status: response.status });
+    }
+    return response.json();
+}
+
+function fetchBancoCourseIndex(owner) {
+    if (bancoIndexRequest?.owner === owner && bancoIndexRequest.expires > Date.now()) return bancoIndexRequest.promise;
+    const request = { owner, expires: Infinity };
+    request.promise = readBancoCourse(owner).then(({ groups }) => {
+        request.expires = Date.now() + 120_000;
+        return groups.flatMap(({ materia, tema, dificultad, ids }) =>
+            ids.map(bankIndexId => ({ materia, tema, dificultad, bankIndexId })));
+    }).catch(error => {
+        if ((error.status === 404 || error.status === 503) && currentUser?.id === owner && !CampusAccess.isFree()) {
+            request.expires = Date.now() + 30_000;
+            return fetchAllBancoQuestions().catch(fallbackError => {
+                if (bancoIndexRequest === request) bancoIndexRequest = null;
+                throw fallbackError;
+            });
+        }
+        if (bancoIndexRequest === request) bancoIndexRequest = null;
+        throw error;
+    });
+    bancoIndexRequest = request;
+    return request.promise;
+}
 
 async function fetchBancoSuficiencia(owner) {
     await window.loadCampusAssets?.('sufficiency');
@@ -2098,18 +1838,6 @@ async function loadBancoMaterias() {
     const owner = currentUser?.id;
     const free = CampusAccess.isFree();
     menu.innerHTML = '<div class="banco-loading-opts" role="status">Cargando materias…</div>';
-    const [curso, suficiencia] = await Promise.allSettled([
-        free ? freePracticeRows() : fetchAllBancoQuestions(),
-        free ? [] : fetchBancoSuficiencia(owner)
-    ]);
-    if (request !== bancoMateriaRequest || currentUser?.id !== owner || free !== CampusAccess.isFree()) return;
-
-    bancoState.suficiencia = suficiencia.status === 'fulfilled' ? suficiencia.value : [];
-    const subjects = rows => [...new Set(rows.map(row => campo(row, 'materia')).filter(Boolean))];
-    const extra = subjects(bancoState.suficiencia);
-    const original = curso.status === 'fulfilled' ? subjects(curso.value).filter(m => !extra.includes(m)).sort() : [];
-    bancoState.materias = original.concat(extra);
-    menu.replaceChildren();
     function appendSubjects(label, names) {
         if (!names.length) return;
         const group = label ? bancoDropdownGroup(label) : menu;
@@ -2125,19 +1853,46 @@ async function loadBancoMaterias() {
         });
         if (label) menu.appendChild(group);
     }
-    appendSubjects(extra.length ? 'Materias de Medicina' : '', original);
-    appendSubjects('Suficiencia académica', extra);
-    if (curso.status === 'rejected' || suficiencia.status === 'rejected') {
-        const retry = document.createElement('button');
-        retry.type = 'button';
-        retry.className = 'banco-dropdown-item';
-        const unavailable = curso.status === 'fulfilled' ? 'Suficiencia académica' : suficiencia.status === 'fulfilled' ? 'materias del curso' : 'materias';
-        retry.textContent = 'Volver a cargar ' + unavailable;
-        retry.onclick = window.openBanco;
-        menu.appendChild(retry);
-    } else if (!bancoState.materias.length) {
-        menu.innerHTML = '<div class="banco-loading-opts">Sin materias disponibles</div>';
+    const results = [];
+    function render() {
+        const [course, sufficiency] = results;
+        bancoState.courseIndex = course?.status === 'fulfilled' ? course.value : [];
+        bancoState.suficiencia = sufficiency?.status === 'fulfilled' ? sufficiency.value : [];
+        const subjects = rows => [...new Set(rows.map(row => campo(row, 'materia')).filter(Boolean))];
+        const extra = subjects(bancoState.suficiencia);
+        const original = subjects(bancoState.courseIndex).filter(m => !extra.includes(m)).sort();
+        bancoState.materias = original.concat(extra);
+        const focus = document.activeElement?.dataset?.materia;
+        menu.replaceChildren();
+        appendSubjects(extra.length ? 'Materias de Medicina' : '', original);
+        appendSubjects('Suficiencia académica', extra);
+        if (focus) [...menu.querySelectorAll('[data-materia]')].find(button => button.dataset.materia === focus)?.focus();
+        if (!course || !sufficiency) {
+            const status = document.createElement('div');
+            status.className = 'banco-loading-opts';
+            status.setAttribute('role', 'status');
+            status.textContent = 'Cargando las demás materias…';
+            menu.appendChild(status);
+        } else if (course.status === 'rejected' || sufficiency.status === 'rejected') {
+            const retry = document.createElement('button');
+            retry.type = 'button';
+            retry.className = 'banco-dropdown-item';
+            const unavailable = course.status === 'fulfilled' ? 'Suficiencia académica'
+                : sufficiency.status === 'fulfilled' ? 'materias del curso' : 'materias';
+            retry.textContent = 'Volver a cargar ' + unavailable;
+            retry.onclick = window.openBanco;
+            menu.appendChild(retry);
+        } else if (!bancoState.materias.length) {
+            menu.innerHTML = '<div class="banco-loading-opts">Sin materias disponibles</div>';
+        }
     }
+    const catalogues = [free ? freePracticeRows() : fetchBancoCourseIndex(owner), free ? [] : fetchBancoSuficiencia(owner)];
+    await Promise.all(catalogues.map(async (pending, index) => {
+        try { results[index] = { status: 'fulfilled', value: await pending }; }
+        catch (_) { results[index] = { status: 'rejected' }; }
+        if (request === bancoMateriaRequest && currentUser?.id === owner && free === CampusAccess.isFree()) render();
+    }));
+
 }
 
 function bancoDropdownGroup(label) {
@@ -2292,7 +2047,7 @@ function sortBancoTopics(materia, topics) {
 }
 
 function bancoMateriaRows(materia) {
-    const rows = CampusAccess.isFree() ? freePracticeRows() : bancoState._cache.concat(bancoState.suficiencia || []);
+    const rows = CampusAccess.isFree() ? freePracticeRows() : bancoState.courseIndex.concat(bancoState.suficiencia);
     return rows.filter(row => campo(row, 'materia') === materia);
 }
 // Fin del orden de capítulos del banco.
@@ -2459,27 +2214,39 @@ window.startBanco = async function () {
 
     const rows = bancoState.allPreguntas;
     let chosen = sampleBancoQuestions(rows);
-    const ids = chosen.filter(q => q.sufficiencyId).map(q => q.sufficiencyId);
-    if (ids.length) {
+    const courseIds = chosen.filter(q => q.bankIndexId).map(q => q.bankIndexId);
+    const sufficiencyIds = chosen.filter(q => q.sufficiencyId).map(q => q.sufficiencyId);
+    if (courseIds.length || sufficiencyIds.length) {
+        const owner = currentUser?.id;
         const request = bancoMateriaRequest;
         const start = document.getElementById('banco-start-btn');
         if (start.disabled) return;
         start.disabled = true;
         start.setAttribute('aria-busy', 'true');
         try {
-            const pack = await window.Sufficiency.readQuestions(ids);
-            if (request !== bancoMateriaRequest || currentCampusScreen !== 'banco-screen' || bancoState.allPreguntas !== rows) return;
-            const hydrated = new Map(pack.questions.map(q => [q.id, {
+            const [course, pack] = await Promise.all([
+                courseIds.length ? readBancoCourse(owner, courseIds) : { questions: [] },
+                sufficiencyIds.length ? window.Sufficiency.readQuestions(sufficiencyIds) : { questions: [] },
+            ]);
+            if (request !== bancoMateriaRequest || currentUser?.id !== owner || CampusAccess.isFree() ||
+                currentCampusScreen !== 'banco-screen' || bancoState.allPreguntas !== rows) return;
+            const courseRows = new Map(courseIds.map((id, index) => [id, course.questions[index]]));
+            const sufficiencyRows = new Map(pack.questions.map(q => [q.id, {
                 ...window.SufficiencyCore.toQuestionRow(q, pack),
                 bankWorkedSolution: q.solution ? q : null,
             }]));
-            chosen = chosen.map(q => hydrated.get(q.sufficiencyId) || q);
-        } catch (_) {
-            if (request === bancoMateriaRequest && currentCampusScreen === 'banco-screen') showToast('No pudimos abrir estas preguntas. Intenta de nuevo.', 'error');
+            chosen = chosen.map(q => q.bankIndexId ? courseRows.get(q.bankIndexId)
+                : q.sufficiencyId ? sufficiencyRows.get(q.sufficiencyId) : q);
+            if (chosen.some(q => !q)) throw new Error('El banco cambió. Vuelve a elegir el tema.');
+        } catch (error) {
+            if (request === bancoMateriaRequest && currentCampusScreen === 'banco-screen') {
+                showToast(error.status === 409 ? 'El catálogo cambió. Vuelve a abrir el banco para actualizarlo.'
+                    : 'No pudimos abrir estas preguntas. Intenta de nuevo.', 'error');
+            }
             return;
         } finally {
-            start.removeAttribute('aria-busy');
             if (request === bancoMateriaRequest && bancoState.allPreguntas === rows) start.disabled = false;
+            if (start.disabled === false || bancoState.allPreguntas === rows) start.removeAttribute('aria-busy');
         }
     }
     bancoState.preguntas = chosen.map(q => window.StudyDepth?.prepareBankQuestion(q) || q);
@@ -3401,6 +3168,7 @@ window.iniciarSimulacro = async function () {
             return;
         }
 
+        await window.loadCampusAssets('exam-engine');
         simState.preguntas = filtradas;
         simState.answers = simState.preguntas.map(function () { return { selected: null }; });
         simState.currentIdx = 0;
@@ -3430,188 +3198,6 @@ window.iniciarSimulacro = async function () {
     }
 };
 
-function startSimTimer() {
-    clearInterval(simState.timerInterval);
-    updateSimTimerDisplay();
-    simState.timerInterval = setInterval(function () {
-        var remaining = Math.ceil((simState.endTimestamp - Date.now()) / 1000);
-        simState.secondsLeft = simState.mode === 'pasado' && !simState.strictTiming ? remaining : Math.max(0, remaining);
-        updateSimTimerDisplay();
-        if (simState.secondsLeft <= 0 && (simState.mode !== 'pasado' || simState.strictTiming)) {
-            clearInterval(simState.timerInterval);
-            simState.timerInterval = null;
-            showToast('⏰ tiempo agotado — finalizando simulacro', 'info');
-            finalizarSimulacro();
-        }
-    }, 1000);
-}
-
-function updateSimTimerDisplay() {
-    var overtime = simState.mode === 'pasado' && !simState.strictTiming && simState.secondsLeft < 0;
-    var s = overtime ? Math.abs(simState.secondsLeft) : Math.max(0, simState.secondsLeft);
-    var m = Math.floor(s / 60);
-    var sec = s % 60;
-    var txt = (overtime ? '+' : '') + (m < 10 ? '0' : '') + m + ':' + (sec < 10 ? '0' : '') + sec;
-    var el = document.getElementById('sim-timer-display');
-    var wrap = document.getElementById('sim-timer-wrap');
-    if (el) el.textContent = txt;
-    if (wrap) {
-        wrap.classList.toggle('sim-timer-danger', simState.mode !== 'pasado' && s <= 120);
-        wrap.title = simState.mode === 'pasado' && !simState.strictTiming ? '100 minutos de referencia. Puedes seguir respondiendo después; el signo + indica tiempo adicional.' : '';
-    }
-}
-
-function isWeeklySimQuestion(q) {
-    return /^semana(?:2-testb|3-virtual)-/.test(q.id || '');
-}
-
-function renderSimQuestion() {
-    var idx = simState.currentIdx;
-    var q = simState.preguntas[idx];
-    var ans = simState.answers[idx];
-
-    document.getElementById('sim-cur-num').textContent = idx + 1;
-    document.getElementById('sim-exam-section').textContent = ({
-        MORFOFUNCION: 'Morfofunción', 'BIOLOGIA CELULAR': 'Biología celular',
-        'SALUD PUBLICA': 'Educación para la Vida'
-    })[normalizeDbText(campo(q, 'materia'))] ||
-        (simState.mode === 'tema' ? campo(q, 'materia') : simState.mode === 'pasado' ? 'Examen pasado' : 'Simulacro');
-    document.getElementById('sim-answered-count').textContent =
-        simState.answers.filter(function (answer) { return answer.selected !== null; }).length +
-        ' de ' + simState.preguntas.length + ' respondidas';
-    document.getElementById('sim-num-badge').textContent = 'N° ' + (q.numero_original || idx + 1);
-    const questionText = document.getElementById('sim-question-text');
-    questionText.textContent = campo(q, 'pregunta') || '';
-    questionText.style.whiteSpace = questionText.textContent.includes('\n') ? 'pre-line' : '';
-    if (q.passage || document.getElementById('sim-passage')?.dataset?.passage) renderPracticePassage('sim', q.passage);
-    window.StudyMedia?.render(document.getElementById('sim-question-text'),q.study_image);
-    renderBqDificultad_sim(campo(q, 'dificultad') || 'facil');
-
-    var optsEl = document.getElementById('sim-options');
-    optsEl.innerHTML = '';
-    var opciones = [
-        campo(q, 'opcion_a'), campo(q, 'opcion_b'),
-        campo(q, 'opcion_c'), campo(q, 'opcion_d'),
-        campo(q, 'opcion_e')
-    ].filter(function (o) { return o && o.toString().trim() !== ''; });
-
-    var letras = ['a', 'b', 'c', 'd', 'e'];
-    opciones.forEach(function (opcion, i) {
-        var btn = document.createElement('button');
-        btn.className = 'bq-option-btn sim-opt-btn' + (ans.selected === i ? ' sim-opt-selected' : '');
-        var letter = document.createElement('span');
-        letter.className = 'bq-option-letter';
-        letter.textContent = letras[i];
-        var label = document.createElement('span');
-        label.className = 'bq-option-text';
-        label.textContent = opcion;
-        btn.append(letter, label);
-        btn.onclick = function () { selectSimAnswer(i); };
-        optsEl.appendChild(btn);
-    });
-
-    var prevBtn = document.getElementById('sim-btn-prev');
-    var nextBtn = document.getElementById('sim-btn-next');
-    if (prevBtn) prevBtn.disabled = idx === 0;
-    if (nextBtn) nextBtn.disabled = idx === simState.preguntas.length - 1;
-
-    updateSimCircles();
-}
-
-function renderBqDificultad_sim(dificultad) {
-    var el = document.getElementById('sim-dificultad');
-    if (!el) return;
-    el.innerHTML = '';
-    const hideDifficulty = simState.entranceOrigin || simState.mode === 'pasado' || (simState.mode === 'tema' && !simState.topicEvaluationId?.startsWith('suf-'));
-    el.hidden = hideDifficulty;
-    const label = document.querySelector('#sim-exam .bq-dificultad-label');
-    if (label) label.hidden = hideDifficulty;
-    if (hideDifficulty) return;
-    var d = (dificultad || 'facil').toString().toLowerCase()
-        .normalize('NFD').replace(/[\u0300-\u036f]/g, '');
-    var isFacil = d === 'facil' || d.startsWith('fac');
-    var isMedio = d === 'medio' || d === 'media' || d.startsWith('med');
-    var isDificil = d === 'dificil' || d.startsWith('dif');
-    var levels = [
-        { cls: isFacil ? 'active-facil' : '' },
-        { cls: isFacil ? 'active-facil' : (isMedio ? 'active-medio' : '') },
-        { cls: isDificil ? 'active-dificil' : (isMedio ? 'active-medio' : '') },
-        { cls: isDificil ? 'active-dificil' : '' },
-        { cls: isDificil ? 'active-dificil' : '' }
-    ];
-    levels.forEach(function (lvl) {
-        var dot = document.createElement('span');
-        dot.className = 'bq-dot ' + lvl.cls;
-        el.appendChild(dot);
-    });
-}
-
-function selectSimAnswer(selectedIdx) {
-    simState.answers[simState.currentIdx].selected = selectedIdx;
-    var btns = document.querySelectorAll('#sim-options .bq-option-btn');
-    btns.forEach(function (b, i) {
-        b.classList.toggle('sim-opt-selected', i === selectedIdx);
-    });
-    updateSimCircles();
-    document.getElementById('sim-answered-count').textContent =
-        simState.answers.filter(function (answer) { return answer.selected !== null; }).length +
-        ' de ' + simState.preguntas.length + ' respondidas';
-}
-
-function buildSimCircles() {
-    var container = document.getElementById('sim-circles');
-    if (!container) return;
-    container.innerHTML = '';
-    var labels = { MORFOFUNCION: 'Morfofunción', 'BIOLOGIA CELULAR': 'Biología celular', 'SALUD PUBLICA': 'Educación para la Vida' };
-    var currentSubject = '';
-    simState.preguntas.forEach(function (question, i) {
-        var subject = normalizeDbText(campo(question, 'materia'));
-        if (subject !== currentSubject) {
-            currentSubject = subject;
-            var heading = document.createElement('div');
-            heading.className = 'entrance-nav-heading';
-            heading.textContent = labels[subject] || campo(question, 'materia') || subject;
-            container.appendChild(heading);
-        }
-        var btn = document.createElement('button');
-        btn.className = 'bq-circle';
-        btn.textContent = question.numero_original || i + 1;
-        btn.onclick = function () { simGoTo(i); };
-        container.appendChild(btn);
-    });
-}
-
-function updateSimCircles() {
-    var circles = document.querySelectorAll('#sim-circles .bq-circle');
-    circles.forEach(function (c, i) {
-        c.className = 'bq-circle';
-        if (simState.answers[i] && simState.answers[i].selected !== null) {
-            c.classList.add('bq-circle-correct'); // marcada (azul en sim)
-        }
-        if (i === simState.currentIdx) c.classList.add('bq-circle-active');
-    });
-}
-
-window.simGoTo = function (idx) {
-    simState.currentIdx = idx;
-    renderSimQuestion();
-};
-
-window.simNavigate = function (dir) {
-    var newIdx = simState.currentIdx + dir;
-    if (newIdx < 0 || newIdx >= simState.preguntas.length) return;
-    simState.currentIdx = newIdx;
-    renderSimQuestion();
-};
-
-window.confirmarSalirSimulacro = function () {
-    if (!confirm(simState.mode === 'tema' ? '¿Salir de la evaluación? Se descartarán tus respuestas.' : '¿salir del simulacro? perderás todo tu progreso.')) return;
-    clearInterval(simState.timerInterval);
-    simState.timerInterval = null;
-    if (simState.mode === 'pasado' || simState.mode === 'tema') { simState.preguntas = []; simState.answers = []; returnToExamSelection(); }
-    else showSimScreen('sim-config');
-};
-
 function simAcceptedAnswerIndices(q) {
     var values = Array.isArray(q.respuestas_aceptadas) && q.respuestas_aceptadas.length ? q.respuestas_aceptadas : [campo(q, 'respuesta_correcta') || 'A'];
     return values.map(function (value) {
@@ -3619,141 +3205,6 @@ function simAcceptedAnswerIndices(q) {
         return /^[A-E]$/.test(key) ? 'ABCDE'.indexOf(key) : parseInt(key, 10) - 1;
     }).filter(function (index) { return Number.isInteger(index) && index >= 0 && index < 5; });
 }
-
-window.finalizarSimulacro = function () {
-    if (simState.finalized) return;
-    simState.finalized = true;
-    clearInterval(simState.timerInterval);
-    simState.timerInterval = null;
-
-    var tiempoUsado = simState.mode === 'pasado'
-        ? Math.max(0, Math.floor((Date.now() - simState.startTimestamp) / 1000))
-        : simState.duracion * 60 - Math.max(0, simState.secondsLeft);
-    var totalMin = Math.floor(tiempoUsado / 60);
-    var totalSec = tiempoUsado % 60;
-
-    var total = simState.preguntas.length;
-    var correctas = 0, incorrectas = 0, sinResponder = 0;
-
-    simState.answers.forEach(function (ans, i) {
-        if (ans.selected === null) {
-            sinResponder++;
-        } else {
-            var q = simState.preguntas[i];
-            var correctaRaw = (campo(q, 'respuesta_correcta') || 'A').toString().trim().toUpperCase();
-            var letrasMap = { 'A': 0, 'B': 1, 'C': 2, 'D': 3, 'E': 4 };
-            var correctIdx = letrasMap[correctaRaw] !== undefined ? letrasMap[correctaRaw] : parseInt(correctaRaw) - 1;
-            simState.answers[i].correct = correctIdx;
-            if (simAcceptedAnswerIndices(q).includes(ans.selected)) correctas++; else incorrectas++;
-        }
-    });
-
-    var pct = total > 0 ? Math.round((correctas / total) * 100) : 0;
-    var emoji = '😅', title = 'sigue practicando';
-    if (pct >= 80) { emoji = '🏆'; title = '¡excelente dominio!'; }
-    else if (pct >= 60) { emoji = '👏'; title = '¡muy bien!'; }
-    else if (pct >= 40) { emoji = '📚'; title = 'puedes mejorar'; }
-
-    document.getElementById('sim-result-emoji').textContent = emoji;
-    document.getElementById('sim-result-title').textContent = simState.mode === 'oficial' && simState.independentScope
-        ? (pct >= 80 ? 'Buen resultado en este bloque' : 'Revisa los mecanismos de este bloque') : title;
-    document.getElementById('sim-result-score').textContent =
-        correctas + ' de ' + total + ' correctas · ' + pct + '% de acierto' +
-        (simState.preguntas.every(isWeeklySimQuestion) ? ' · ' + correctas + '/' + total + ' puntos' : '');
-    document.getElementById('sim-rs-correct').textContent = correctas;
-    document.getElementById('sim-rs-wrong').textContent = incorrectas;
-    document.getElementById('sim-rs-pending').textContent = sinResponder;
-    document.getElementById('sim-rs-time').textContent =
-        (totalMin < 10 ? '0' : '') + totalMin + ':' + (totalSec < 10 ? '0' : '') + totalSec;
-
-    var gradBar = document.getElementById('sim-grade-bar');
-    var gradPct = document.getElementById('sim-grade-pct');
-    if (gradBar) gradBar.style.width = pct + '%';
-    if (gradPct) gradPct.textContent = pct + '%';
-    if (gradBar) {
-        gradBar.style.background = pct >= 70
-            ? 'linear-gradient(90deg,#22c55e,#16a34a)'
-            : pct >= 40
-                ? 'linear-gradient(90deg,#f59e0b,#d97706)'
-                : 'linear-gradient(90deg,#ef4444,#dc2626)';
-    }
-
-    if (window.renderEntranceBreakdown) window.renderEntranceBreakdown();
-
-    // Revisión pregunta a pregunta
-    var reviewList = document.getElementById('sim-review-list');
-    if (reviewList) {
-        const historical = simState.mode === 'pasado';
-        reviewList.replaceChildren();
-        simState.preguntas.forEach(function (q, i) {
-            const selected = simState.answers[i].selected;
-            const accepted = simAcceptedAnswerIndices(q);
-            const disputedKey = historical && q.clave_en_discrepancia;
-            const review = { ...QuestionReview.commentaryData(q, campo), selected, accepted };
-            const isCorrect = accepted.includes(selected);
-            const unanswered = selected === null;
-
-            const item = document.createElement('article');
-            item.className = 'sim-review-item qr-container' + (isCorrect ? ' sim-rev-ok' : unanswered ? ' sim-rev-pending' : ' sim-rev-fail');
-            const header = document.createElement('div');
-            header.className = 'sim-rev-header';
-            const number = document.createElement('span');
-            number.className = 'sim-rev-num';
-            number.textContent = 'N° ' + (q.numero_original || i + 1);
-            const badge = document.createElement('span');
-            badge.className = 'sim-rev-badge';
-            badge.textContent = unanswered ? '— Sin responder' : disputedKey
-                ? (isCorrect ? '✓ Coincide con la clave' : '✗ La clave marca otra opción')
-                : (isCorrect ? '✓ Correcta' : '✗ Incorrecta');
-            header.append(number, badge);
-
-            const layout = document.createElement('div');
-            layout.className = 'qr-layout';
-            const questionSide = document.createElement('div');
-            questionSide.className = 'qr-question';
-            const question = document.createElement('p');
-            question.className = 'sim-rev-question';
-            question.textContent = campo(q, 'pregunta') || '';
-            questionSide.append(question);
-            if (q.passage) {
-                const passage = document.createElement('details');
-                passage.className = 'bq-passage sim-rev-passage';
-                const heading = document.createElement('summary');
-                heading.textContent = q.passage.title;
-                const text = document.createElement('p');
-                text.textContent = q.passage.text;
-                passage.append(heading, text);
-                questionSide.append(passage);
-            }
-            questionSide.append(QuestionReview.showOptions(review, disputedKey ? 'Clave original' : undefined));
-            layout.append(questionSide, QuestionReview.showCommentary(review, { compactSource: historical }));
-            item.append(header, layout);
-            reviewList.append(item);
-        });
-    }
-
-    // Guardar en historial local
-    guardarEnHistorial(pct, correctas, total, tiempoUsado,
-        (simState.mode === 'materia' || simState.mode === 'tema') ? simState.selectedMateria : 'todas');
-
-    // Sincronizar con la nube para el Panel de Admin
-    guardarResultadoSimulacroEnNube({
-        questionReview: window.QuestionReview?.snapshot(simState.preguntas,simState.answers,campo,simAcceptedAnswerIndices) || null,
-        menuSection: simState.mode === 'tema' ? 'evaluaciones' : simState.mode === 'pasado' && !simState.entranceOrigin ? 'examenes' : 'simulacros',
-        titulo: (simState.mode === 'oficial' || simState.mode === 'pasado' || simState.mode === 'tema') ? (simState.selectedExamen || 'Simulacro preparado') : 'Simulacro personalizado',
-        materia: (simState.mode === 'materia' || simState.mode === 'tema') ? simState.selectedMateria :
-            simState.mode === 'oficial' ? (simState._oficialesCache.find(function (r) { return r.nombre === simState.selectedExamen; }) || {}).materia || 'todas' : 'todas',
-        porcentaje: pct,
-        correctas: correctas,
-        incorrectas: incorrectas,
-        sinRespuesta: sinResponder,
-        tiempoSegundos: tiempoUsado
-    });
-
-    if (window.renderPastExamResult) window.renderPastExamResult();
-    showSimScreen('sim-result');
-    window.CampusCalendar?.evaluationFinished();
-};
 
 function guardarEnHistorial(pct, correctas, total, tiempoSeg, materia) {
     var historial = JSON.parse(localStorage.getItem('pb_historial') || '[]');
@@ -3946,10 +3397,73 @@ var vcState = {
     allVideos: [],
     filteredVideos: [],
     selectedMateria: null,
-    catalog: null
+    catalog: null,
+    stopMeasurement: null
 };
 
+function measureVideoLoad(stage, start) {
+    const name = 'alcocermed:videoclases:' + stage;
+    performance.clearMeasures(name);
+    performance.measure(name, { start, end: performance.now() });
+}
+
+function videoPlayerOrigin(src) {
+    try {
+        const url = new URL(src, location.href);
+        if (url.protocol === 'https:' && ['iframe.mediadelivery.net', 'player.mediadelivery.net'].includes(url.hostname)) return url.origin;
+    } catch (_) { /* A malformed URL has no player events to measure. */ }
+    return null;
+}
+
+function warmVideoPlayer() {
+    if (navigator.connection?.saveData) return;
+    const origin = vcState.allVideos.map(v => videoPlayerOrigin(getEmbedUrl(campo(v, 'url_video')))).find(Boolean);
+    if (!origin || [...document.querySelectorAll('link[rel="preconnect"]')].some(link => link.href === origin + '/')) return;
+    const link = document.createElement('link');
+    link.rel = 'preconnect';
+    link.href = origin;
+    document.head.append(link);
+}
+
+function measureVideoPlayback(frame, url) {
+    const start = performance.now();
+    const controller = new AbortController();
+    const origin = videoPlayerOrigin(url);
+    let playingAt, subscribed = false;
+    frame.addEventListener('load', () => measureVideoLoad('iframe', start), { once: true, signal: controller.signal });
+    if (!origin) return () => controller.abort();
+
+    // Bunny reports playback through the Player.js postMessage protocol.
+    window.addEventListener('message', event => {
+        if (event.source !== frame.contentWindow || event.origin !== origin) return;
+        try {
+            const message = typeof event.data === 'string' ? JSON.parse(event.data) : event.data;
+            if (message?.context !== 'player.js') return;
+            if (message.event === 'ready' && !subscribed) {
+                subscribed = true;
+                measureVideoLoad('reproductor-listo', start);
+                for (const name of ['play', 'timeupdate']) frame.contentWindow.postMessage(JSON.stringify({
+                    context: 'player.js', version: '0.0.11', method: 'addEventListener',
+                    value: name, listener: 'alcocermed-' + name,
+                }), origin);
+            }
+            if (message.event === 'play') playingAt ??= performance.now();
+            if (message.event === 'timeupdate') {
+                const timing = typeof message.value === 'string' ? JSON.parse(message.value) : message.value;
+                if (Number(timing?.seconds) > 0) {
+                    measureVideoLoad('reproduccion-desde-apertura', start);
+                    if (playingAt !== undefined) measureVideoLoad('reproduccion-desde-play', playingAt);
+                    controller.abort();
+                }
+            }
+        } catch (_) { /* Ignore messages unrelated to playback. */ }
+    }, { signal: controller.signal });
+    return () => controller.abort();
+}
+
 function clearVideoclases() {
+    const modal = document.getElementById('vc-modal');
+    if (modal && !modal.classList.contains('hidden')) window.closeVcModal();
     vcState.catalog = null;
     vcState.allVideos = [];
     vcState.filteredVideos = [];
@@ -3971,10 +3485,14 @@ window.openVideoclases = function () {
 };
 
 async function loadVideoclases() {
+    const start = performance.now();
     const owner = currentUser?.id;
     if (!owner || CampusAccess.isFree()) return;
     const cached = vcState.catalog;
-    if (cached?.owner === owner && (!cached.expires || cached.expires > Date.now())) return;
+    if (cached?.owner === owner && (!cached.expires || cached.expires > Date.now())) {
+        if (cached.expires) measureVideoLoad('catalogo-cache', start);
+        return;
+    }
     const request = { owner, expires: 0 };
     vcState.catalog = request;
     setVcState('loading');
@@ -3985,6 +3503,8 @@ async function loadVideoclases() {
         vcState.allVideos = res.data || [];
         populateVcMaterias();
         filterVideoclases();
+        measureVideoLoad('catalogo', start);
+        warmVideoPlayer();
         request.expires = Date.now() + 60_000;
     } catch (e) {
         if (request !== vcState.catalog || currentUser?.id !== owner || CampusAccess.isFree()) return;
@@ -4113,6 +3633,7 @@ function getEmbedUrl(url) {
 var getYtEmbedUrl = getEmbedUrl;
 
 window.openVcModal = function (v) {
+    if (CampusAccess.isFree()) return;
     var modal = document.getElementById('vc-modal');
     if (!modal) return;
     document.getElementById('vc-modal-title').textContent = campo(v, 'titulo') || '';
@@ -4121,6 +3642,8 @@ window.openVcModal = function (v) {
     var embedUrl = getEmbedUrl(campo(v, 'url_video') || '');
     var iframe = document.getElementById('vc-iframe');
     if (iframe) {
+        vcState.stopMeasurement?.();
+        vcState.stopMeasurement = measureVideoPlayback(iframe, embedUrl);
         iframe.src = embedUrl;
         // Bunny.net requiere allow="autoplay" para reproducción automática
         iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen');
@@ -4143,8 +3666,10 @@ window.closeVcModal = function (e) {
     if (!modal) return;
     if (e && e.target !== modal) return;
     modal.classList.add('hidden');
+    vcState.stopMeasurement?.();
+    vcState.stopMeasurement = null;
     var iframe = document.getElementById('vc-iframe');
-    if (iframe) iframe.src = '';
+    if (iframe) iframe.removeAttribute('src');
     document.body.style.overflow = '';
 };
 
@@ -4720,5 +4245,5 @@ async function sincronizarPerfilEnNube() {
     }
 }
 
-// Start verification while the deferred study modules finish loading.
-initAuth();
+
+window.CampusStudy = { reset: resetCampusStudy, activate: activateCampusStudy };

@@ -48,9 +48,9 @@ for (const [file, prefix] of [['sw.js', 'alcocermed-main-'], ['juegos/sw.js', 'a
 }
 
 test('una comprobación repetida de la misma sesión conserva la sección del campus', async () => {
-  const source = fs.readFileSync('script.js', 'utf8');
+  const source = fs.readFileSync('campus-login.js', 'utf8');
   const start = source.indexOf('function enterApp(user)');
-  const end = source.indexOf('function enterVerifiedApp(user)', start);
+  const end = source.indexOf('/** handleLogin */', start);
   const context = {
     verifiedCampusUserId: 'student-1', currentUser: { id: 'student-1' },
     document: { body: { classList: { contains: () => false } } },
@@ -62,9 +62,9 @@ test('una comprobación repetida de la misma sesión conserva la sección del ca
 });
 
 test('la verificación paralela no abre el campus si se rechaza el dispositivo', async () => {
-  const source = fs.readFileSync('script.js', 'utf8');
+  const source = fs.readFileSync('campus-login.js', 'utf8');
   const start = source.indexOf('let campusEntry = null;');
-  const end = source.indexOf('function enterVerifiedApp(user)', start);
+  const end = source.indexOf('/** handleLogin */', start);
   const student = { id: 'student-1', email: 'student@example.invalid' };
   const events = [];
   let finishDevice;
@@ -75,7 +75,7 @@ test('la verificación paralela no abre el campus si se rechaza el dispositivo',
     CampusAccess: { check: async () => { events.push('check'); return { ready: true }; }, apply: () => events.push('apply') },
     showLoginScreen() {},
     showLoginError(message) { events.push(message); },
-    campusDomReady: Promise.resolve(),
+    window: { loadCampusAssets: async () => {} },
   };
   vm.runInNewContext(source.slice(start, end), context);
   const entry = context.enterApp(student);

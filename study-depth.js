@@ -55,6 +55,27 @@
         return updated;
     }
 
+    function withBankTeaching(row, teaching) {
+        const bankTeaching = findTeaching(row, teaching);
+        return bankTeaching ? { ...row, bankTeaching } : row;
+    }
+
+    function mergeBankRows(existing, { questions, teaching, reviewedQuestions = [] }) {
+        const eligible = existing.filter(keepCourseQuestion);
+        const seen = new Set(eligible.map(key));
+        return eligible.concat(questions.filter(row => {
+            const id = key(row);
+            if (!keepCourseQuestion(row) || seen.has(id)) return false;
+            seen.add(id);
+            return true;
+        })).map(row => withBankTeaching(row, teaching)).concat(reviewedQuestions);
+    }
+
+    if (typeof module === 'object' && module.exports) {
+        module.exports = { mergeBankRows, keepCourseQuestion, withBankTeaching };
+    }
+    if (typeof window === 'undefined') return;
+
     async function readBank() {
         const { data } = await getSupabase().auth.getSession();
         const token = data.session?.access_token;
@@ -89,18 +110,8 @@
             }
             if (!window.CampusAccess || CampusAccess.isFree()) return rows;
             if (kind !== 'bank') throw new Error('Recurso de estudio desconocido.');
-            const [existing, { questions, teaching, reviewedQuestions = [] }] = await Promise.all([rows, readBank()]);
-            const eligible = existing.filter(keepCourseQuestion);
-            const seen = new Set(eligible.map(key));
-            return eligible.concat(questions.filter(row => {
-                const id = key(row);
-                if (!keepCourseQuestion(row) || seen.has(id)) return false;
-                seen.add(id);
-                return true;
-            })).map(row => {
-                const bankTeaching = findTeaching(row, teaching);
-                return bankTeaching ? { ...row, bankTeaching } : row;
-            }).concat(reviewedQuestions);
+            const [existing, bank] = await Promise.all([rows, readBank()]);
+            return mergeBankRows(existing, bank);
         },
     };
 })();

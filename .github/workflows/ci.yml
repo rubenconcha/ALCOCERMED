@@ -24,7 +24,7 @@ jobs:
       - name: Check sufficiency exam bank and student flow
         run: node --test tests/suficiencia.test.cjs tests/suficiencia-levels.test.cjs tests/suficiencia-medicina.test.cjs
       - name: Check Sufficiency questions in the question bank
-        run: node --test tests/banco-suficiencia.test.cjs tests/banco-chapters.test.cjs
+        run: node --test tests/banco-suficiencia.test.cjs tests/banco-chapters.test.cjs tests/banco-performance.test.cjs
       - name: Check official texts and Sufficiency practice
         run: |
           node --check sufficiency-practice.js
@@ -42,6 +42,8 @@ jobs:
       - name: Syntax check JavaScript
         run: |
           node --check script.js
+          node --check campus-login.js
+          node --check campus-exam-engine.js
           node --check admin.js
           node --check question-review.js
           node --test tests/question-review.test.cjs

@@ -9,6 +9,9 @@
     "api/mindmap.js": {
       "includeFiles": "api/_mindmaps/**"
     },
+    "api/banco.js": {
+      "includeFiles": "api/_mindmaps/{morfo_18_sangre__*,morfo_16_organos_sentidos__*}.json"
+    },
     "api/atlas.js": {
       "includeFiles": "api/_atlas/**"
     },

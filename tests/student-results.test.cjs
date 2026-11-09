@@ -33,7 +33,7 @@ test('topics are counted only from stored detail; explicit unknown subject is no
 });
 test('Mis resultados is its own campus screen and logout clears it synchronously',()=>{
  const fs=require('node:fs'),vm=require('node:vm'),source=fs.readFileSync('script.js','utf8'),html=fs.readFileSync('campus.html','utf8');
- assert.match(html,/onclick="openStudentResults\(\)"><svg[\s\S]*?<strong>Mis resultados/);assert.match(html,/src="student-results\.js\?v=\d+"/);assert.match(source,/function showLoginScreen\(\) \{\s*window.StudentResults\?\.clear\(\)/);
+ assert.match(html,/onclick="openStudentResults\(\)"><svg[\s\S]*?<strong>Mis resultados/);assert.match(html,/src="student-results\.js\?v=\d+"/);assert.match(source,/function resetCampusStudy\(\) \{\s*window.StudentResults\?\.clear\(\)/);
  const visible=new Set(['home-screen']),ids=['home-screen','student-results-screen','evaluacion-screen'];
  const context={window:{scrollTo(){},innerWidth:1200},document:{getElementById:id=>ids.includes(id)?{classList:{remove:()=>visible.add(id),add:()=>visible.delete(id)}}:null},closeMobileSidebar(){},quizTimer:null,flashcardReviewTimer:null,bancoState:null,updateHomeStats(){},confirm:()=>true};
  const start=source.indexOf("let currentCampusScreen = 'home-screen';"),end=source.indexOf('function updateHomeStats()',start);vm.runInNewContext(source.slice(start,end),context);context.showScreen('student-results-screen');assert.deepEqual([...visible],['student-results-screen']);context.window.goBack();assert.deepEqual([...visible],['home-screen']);

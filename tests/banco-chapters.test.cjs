@@ -9,12 +9,12 @@ function setup() {
     const nodes = new Map();
     const node = () => ({ textContent: '', dataset: {}, children: [], classList: { add() {}, remove() {}, toggle() {} }, appendChild(child) { this.children.push(child); } });
     const document = { getElementById(id) { if (!nodes.has(id)) nodes.set(id, node()); return nodes.get(id); }, createElement: node, querySelectorAll() { return document.getElementById('banco-tema-dropdown').children; } };
-    const state = { selectedMateria: 'BIOLOGIA CELULAR', _cache: [
+    const state = { selectedMateria: 'BIOLOGIA CELULAR', courseIndex: [
         {materia:'BIOLOGIA CELULAR',tema:'ciclo celular'},
         {materia:'BIOLOGIA CELULAR',tema:'introduccion a la biologia celular'},
         {materia:'MORFOFUNCION',tema:'sistema endocrino'},
         {materia:'BIOLOGIA CELULAR',tema:'citoesqueleto'}
-    ] };
+    ], suficiencia: [] };
     const context = { document, bancoState: state, window: {}, CampusAccess: { isFree: () => false }, campo: (r,k) => r[k], loadBancoPreguntas: async () => {}, console };
     context.window = context;
     vm.createContext(context);

@@ -1,9 +1,9 @@
-const CACHE_NAME = 'alcocermed-juegos-v113-fluidez';
+const CACHE_NAME = 'alcocermed-juegos-v114-carga';
 const ASSETS_TO_CACHE = [
     './game-rounds.js?v=1',
     './game-practice.js?v=20261021-visual5b',
     './game-question-images.js?v=1',
-    './app.js?v=20261108-campus',
+    './app.js?v=20261109-carga',
     './styles.css?v=87',
     '/juegos/logo-ben-carson-160.webp',
     './assets/preguntas-apoyo/mano-muneca.svg',
@@ -59,7 +59,8 @@ const ASSETS_TO_CACHE = [
 ];
 
 const STATIC_ASSETS = new Set(ASSETS_TO_CACHE.map(asset => new URL(asset, self.location.origin + '/juegos/').href));
-const ENTRY_ASSETS = ASSETS_TO_CACHE.filter(asset => !asset.includes('/assets/preguntas') &&
+const ENTRY_ASSETS = ASSETS_TO_CACHE.filter(asset => !/(?:tejido-nervioso(?:-imagenes)?|encefalo-native-data|sentidos-imagenes|relacionar|premium-game-images|game-practice|game-question-images)\./.test(asset) &&
+    !asset.includes('/assets/preguntas') &&
     !asset.endsWith('result_arena_bg.png') && !asset.endsWith('logo-ben-carson-160.webp') &&
     !asset.endsWith('latin-ext.woff2'));
 

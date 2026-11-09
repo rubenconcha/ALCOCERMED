@@ -22,7 +22,7 @@ test('review distinguishes accepted alternatives, wrong answers, omissions and m
 });
 test('new native deliveries save review snapshots and admin fetches them only when requested',()=>{
  const script=fs.readFileSync('script.js','utf8'),admin=fs.readFileSync('admin.js','utf8'),html=fs.readFileSync('campus.html','utf8'),viewer=fs.readFileSync('question-review.js','utf8');
- assert.match(script,/snapshot\(simState.preguntas,simState.answers/);assert.match(script,/snapshot\(bancoState.preguntas,bancoState.answers/);assert.equal((script.match(/question_review: resultado.questionReview/g)||[]).length,2);
+ assert.match(fs.readFileSync('campus-exam-engine.js','utf8'),/snapshot\(simState.preguntas,simState.answers/);assert.match(script,/snapshot\(bancoState.preguntas,bancoState.answers/);assert.equal((script.match(/question_review: resultado.questionReview/g)||[]).length,2);
  assert.ok(html.indexOf('question-review.js')<html.indexOf('script.js?v='));assert.match(viewer,/select\('question_review'\)/);assert.ok(!viewer.includes('.innerHTML'));assert.ok(!admin.includes("safeSelect(sb, 'resultados_simulacros', '*'"));
 });
 test('both cloud writers send the captured review in the same insert as the grade',async()=>{

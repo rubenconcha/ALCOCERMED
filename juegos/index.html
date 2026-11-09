@@ -8,7 +8,6 @@
   <link href="/assets/fonts/inter/inter.css?v=1" rel="stylesheet">
   <link rel="stylesheet" href="/assets/vendor/font-awesome-6.4.0/css/all.min.css" media="print" onload="this.media='all'">
   <link rel="stylesheet" href="styles.css?v=87">
-  <link rel="stylesheet" href="tejido-nervioso.css?v=8">
   
   <!-- PWA Meta Tags -->
   <link rel="manifest" href="manifest.json">
@@ -854,19 +853,22 @@
 <!-- SCRIPTS -->
 <script defer src="/assets/vendor/supabase.js?v=2.118.0"></script>
 <script defer src="../device_guard.js?v=9"></script>
-<script defer src="tejido-nervioso-imagenes.js?v=5"></script>
-<script defer src="encefalo-native-data.js?v=1"></script>
-<script defer src="sentidos-imagenes.js?v=1"></script>
-<script defer src="relacionar.js?v=2"></script>
 <script defer src="acceso-noche.js?v=1"></script>
 <script defer src="game-access.js?v=2"></script>
-<script defer src="premium-game-images.js?v=6"></script>
 <script defer src="quiz-copy.js?v=1"></script>
 <script defer src="game-rounds.js?v=1"></script>
-<script defer src="game-practice.js?v=20261021-visual5b"></script>
-<script defer src="game-question-images.js?v=1"></script>
-<script defer src="app.js?v=20261108-campus"></script>
-<script defer src="tejido-nervioso.js?v=14"></script>
+<template id="game-section-assets">
+  <script data-game-assets="round" src="tejido-nervioso-imagenes.js?v=5"></script>
+  <script data-game-assets="round" src="encefalo-native-data.js?v=1"></script>
+  <script data-game-assets="round" src="sentidos-imagenes.js?v=1"></script>
+  <script data-game-assets="round" src="relacionar.js?v=2"></script>
+  <script data-game-assets="round" src="premium-game-images.js?v=6"></script>
+  <script data-game-assets="practice" src="game-practice.js?v=20261021-visual5b"></script>
+  <script data-game-assets="round" src="game-question-images.js?v=1"></script>
+  <script data-game-assets="class" src="tejido-nervioso.js?v=14"></script>
+  <link rel="stylesheet" data-game-assets="class" href="tejido-nervioso.css?v=8">
+</template>
+<script defer src="app.js?v=20261109-carga"></script>
 
 <!-- PWA Service Worker Registration -->
 <!-- AVATAR MODAL -->

@@ -13,6 +13,7 @@
     const subjects = ['MORFOFUNCION', 'BIOLOGIA CELULAR', 'SALUD PUBLICA'];
     let selected = 'full';
     let demoPromise;
+    let prepared;
     let launchRequest = 0;
     const formatFor = key => formats[key] || window.EntranceLibrary?.format(key);
     const requiresPlan = format => !format.demo && !format.free;
@@ -45,7 +46,7 @@
             const session=(await getSupabase().auth.getSession()).data.session;
             if(!session?.access_token)throw new Error('Vuelve a iniciar sesión.');
             const response=await fetch('/api/simulation?id='+encodeURIComponent(format.curatedId),{headers:{Authorization:'Bearer '+session.access_token},cache:'no-store',signal:AbortSignal.timeout(15000)});
-            if(response.status===403){CampusAccess.unlock();return null;}
+            if(response.status===403)throw Object.assign(new Error('Esta prueba requiere acceso.'),{status:403});
             if(!response.ok)throw new Error('No pudimos abrir este simulacro. Reintenta.');
             const paper=await response.json(),current=(await getSupabase().auth.getSession()).data.session;
             if(current?.access_token!==session.access_token||CampusAccess.isFree())throw new Error('Tu sesión cambió. Vuelve a abrir el simulacro.');
@@ -56,7 +57,7 @@
             const session = (await getSupabase().auth.getSession()).data.session;
             if (!session?.access_token) throw new Error('Vuelve a iniciar sesión para abrir el examen.');
             const response = await fetch('/api/past-exam?id='+encodeURIComponent(format.pastId), {headers:{Authorization:'Bearer '+session.access_token},cache:'no-store',signal:AbortSignal.timeout(15000)});
-            if (response.status===403) { CampusAccess.unlock(); return null; }
+            if (response.status === 403) throw Object.assign(new Error('Esta prueba requiere acceso.'), { status: 403 });
             if (!response.ok) throw new Error('No pudimos cargar el examen real. Comprueba tu sesión y vuelve a intentar.');
             const paper=await response.json();
             const current=(await getSupabase().auth.getSession()).data.session;
@@ -118,36 +119,18 @@
         showScreen('simulacro-screen');selectEntranceExam(key);await window.iniciarSimulacro();
     };
 
-    window.openSimulacro = function () {
-        if (simState.timerInterval) {
-            if (!confirm('Hay un simulacro en curso. ¿Deseas descartarlo?')) return;
-            clearInterval(simState.timerInterval);
-            simState.timerInterval = null;
-        }
-        simState.finalized = false; simState.mode = 'oficial'; simState.pastExamId = null;
-        simState.strictTiming = false; simState.entranceOrigin = false;
-        document.getElementById('sim-another-exam').textContent = 'Nuevo simulacro';
-        document.getElementById('past-result-tools').hidden = true;
-        showSimScreen('sim-config');
-        showScreen('simulacro-screen');
-        window.clearEntranceExam();
-        window.EntranceLibrary?.open();
-        if (window.innerWidth <= 768) {
-            document.getElementById('sidebar').classList.remove('open');
-            document.getElementById('overlay').classList.remove('active');
-        }
-    };
-
-    const openEntranceLibrary = window.openSimulacro;
-    window.openRequestedSimulation = async function () {
-        const key = new URLSearchParams(window.location.search).get('simulacro');
-        if (!key) return;
-        openEntranceLibrary();
-        await window.EntranceLibrary.open();
-        const format = window.EntranceLibrary.format(key);
-        if (!format) return showToast('No encontramos el simulacro solicitado.', 'info');
-        window.EntranceLibrary.reveal(format);
-        window.selectEntranceExam(key);
+    window.prepareEntranceExam = function () {
+        const format = formatFor(selected);
+        if (!format || (requiresPlan(format) && CampusAccess.isFree())) return Promise.resolve(null);
+        const owner = typeof currentUser === 'undefined' ? null : currentUser?.id;
+        if (prepared?.key === selected && prepared.owner === owner && prepared.expires > Date.now()) return prepared.promise;
+        const entry = { key: selected, owner, expires: Date.now() + 120_000 };
+        entry.promise = loadQuestions(format).catch(error => {
+            if (prepared === entry) prepared = null;
+            throw error;
+        });
+        prepared = entry;
+        return entry.promise;
     };
 
     window.iniciarSimulacro = async function () {
@@ -159,8 +142,8 @@
         button.disabled = true;
         button.textContent = 'Preparando preguntas…';
         try {
-            const rows = await loadQuestions(format);
-            if (!rows || request!==launchRequest || (typeof currentUser==='undefined'?null:currentUser?.id)!==account || (typeof currentCampusScreen!=='undefined'&&currentCampusScreen!=='simulacro-screen')) return;
+            const rows = await window.prepareEntranceExam();
+            if (!rows || (requiresPlan(format) && CampusAccess.isFree()) || request!==launchRequest || (typeof currentUser==='undefined'?null:currentUser?.id)!==account || (typeof currentCampusScreen!=='undefined'&&currentCampusScreen!=='simulacro-screen')) return;
             simState.mode = (format.pastId || format.curatedId) ? 'pasado' : 'oficial';
             simState.pastExamId = format.pastId || null;
             simState.strictTiming = true;
@@ -189,6 +172,9 @@
             renderSimQuestion();
             startSimTimer();
         } catch (error) {
+            if (request !== launchRequest || (typeof currentUser==='undefined'?null:currentUser?.id)!==account ||
+                (typeof currentCampusScreen!=='undefined'&&currentCampusScreen!=='simulacro-screen')) return;
+            if (error.status === 403) return CampusAccess.unlock();
             console.error('[Simulacro]', error);
             showToast(error.message || 'No se pudo preparar el simulacro.', 'error');
         } finally {
@@ -196,6 +182,8 @@
             button.innerHTML = '<i class="fas fa-play"></i> Comenzar';
         }
     };
+
+    window.addEventListener?.('campus-access-change', () => { prepared = null; });
 
     window.renderEntranceBreakdown = function () {
         const root = document.getElementById('sim-subject-breakdown');

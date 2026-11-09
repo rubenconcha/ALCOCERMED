@@ -439,7 +439,11 @@
         const status = message(workspace, 'Cargando preguntas del tema…');
         try {
             await window.loadCampusAssets('past');
-            if (isCurrent()) releasePanel = window.CampusPastExams.openAssigned(workspace, { filter: book.topicLinks.past, status, fallback });
+            if (isCurrent()) {
+                const release = await window.CampusPastExams.openAssigned(workspace, { filter: book.topicLinks.past, status, fallback, isCurrent });
+                if (isCurrent()) releasePanel = release;
+                else release?.();
+            }
         } catch (_) {
             if (!isCurrent()) return;
             status.textContent = 'No pudimos cargar las preguntas del tema.';
