@@ -1,4 +1,4 @@
-const CACHE_NAME = 'alcocermed-main-v170-lector-amplio';
+const CACHE_NAME = 'alcocermed-main-v171-practica-guiada';
 const APP_SHELL = [
     './student-results.js?v=3',
     './student-results.css?v=1',
@@ -77,7 +77,7 @@ const APP_SHELL = [
     './study-summaries.js?v=20261021-visual5b',
     './summary-pdf-reader.js?v=7',
     './summary-pdf-reader.css?v=3',
-    './campus-study-resources.css?v=6',
+    './campus-study-resources.css?v=7',
     './study-calendar.css?v=11',
     './study-calendar-data.js?v=6',
     './study-calendar-pdf.js?v=2',
@@ -105,8 +105,8 @@ const APP_SHELL = [
     './assets/study-art/morphology.png',
     './assets/study-art/cell.png',
     './assets/study-art/health-education.png',
-    './sufficiency-practice-content.js?v=1',
-    './sufficiency-practice.js?v=2',
+    './sufficiency-practice-content.js?v=2',
+    './sufficiency-practice.js?v=3',
     './past-exams.js?v=12',
     './past-exam-breakdown.js?v=8',
     './past-exams.css?v=7',

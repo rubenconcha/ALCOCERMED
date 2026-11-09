@@ -15,11 +15,13 @@ test('practice covers all ten adapted cases and the two conversion blocks', () =
     assert.equal(exercises.filter(block => block.kind === 'Conversiones').length, 2);
     assert.deepEqual([...new Set(exercises.map(block => block.subject))].sort(), ['Física', 'Matemáticas', 'Química']);
     assert.equal(new Set(exercises.map(block => block.id)).size, exercises.length);
+    assert.ok(exercises.every(block => block.route && block.context));
     const questions = exercises.flatMap(block => block.questions);
     assert.equal(questions.length, 81);
     for (const question of questions) {
         assert.ok(Number.isFinite(question.answer), question.prompt);
-        assert.ok(question.unit && question.steps.length, question.prompt);
+        assert.ok(question.unit && question.data.length && question.steps.length >= 2, question.prompt);
+        assert.ok(question.hint && question.check, question.prompt);
         assert.ok(isCorrect(formatAnswer(question), question), question.prompt);
         assert.ok(!isCorrect('1e999', question), question.prompt);
     }

@@ -1517,14 +1517,9 @@
                 <div>
                     <span class="entrance-eyebrow">PREPARACIÓN PARA EL INGRESO</span>
                     <h2 id="sufficiency-practice-title">Práctica de suficiencia</h2>
-                    <p>Resuelve conversiones y casos de cálculo. Comprueba cada respuesta y consulta el procedimiento.</p>
+                    <p>Elige un ejercicio de Matemáticas, Física o Química y resuélvelo con pistas y cálculos explicados.</p>
                 </div>
             </div>
-            <details id="practice-reference" class="practice-reference">
-                <summary>Consultar la tabla de unidades y factores de conversión</summary>
-                <p>El signo ≈ indica un valor redondeado. En cada ejercicio usa el factor que aparece en el enunciado y redondea al final.</p>
-                <div id="practice-reference-groups" class="practice-reference-groups"></div>
-            </details>
             <div id="sufficiency-practice-catalog">
                 <div class="past-filters practice-filters">
                     <label for="practice-subject">Materia
@@ -1533,12 +1528,19 @@
                     <label for="practice-kind">Tipo de práctica
                         <select id="practice-kind"><option value="">Todos los tipos</option></select>
                     </label>
+                    <button id="practice-reference-open" type="button" class="campus-resource-secondary">Tabla de conversiones</button>
                     <span id="practice-count" aria-live="polite"></span>
                 </div>
                 <div id="practice-grid" class="past-grid"></div>
                 <p id="practice-empty" hidden>No hay ejercicios con esta combinación. Prueba con otra materia o tipo.</p>
             </div>
             <div id="practice-session" class="practice-session" hidden></div>
+            <details id="practice-reference" class="practice-reference">
+                <summary>Consultar la tabla de unidades y factores de conversión</summary>
+                <p>El signo ≈ indica un valor redondeado. En cada ejercicio usa el factor que aparece en el enunciado y redondea al final.</p>
+                <button id="practice-reference-return" type="button" class="campus-resource-secondary" hidden>Volver a la pregunta</button>
+                <div id="practice-reference-groups" class="practice-reference-groups"></div>
+            </details>
         </section>
 
         <section id="intocables-hub-screen" class="itc-page hidden" aria-labelledby="itc-title">
@@ -1770,15 +1772,15 @@
         <link rel="stylesheet" data-campus-assets="maps" href="mindmap-viewer.css?v=8">
         <link rel="stylesheet" data-campus-assets="maps" href="intocables-sheets.css?v=1">
         <link rel="stylesheet" data-campus-assets="summaries texts" href="summary-pdf-reader.css?v=3">
-        <link rel="stylesheet" data-campus-assets="texts practice" href="campus-study-resources.css?v=6">
+        <link rel="stylesheet" data-campus-assets="texts practice" href="campus-study-resources.css?v=7">
         <script data-campus-assets="maps" src="mindmap-premium.js?v=3"></script>
         <script data-campus-assets="maps" src="mindmap-practice.js?v=20261021-visual5b"></script>
         <script data-campus-assets="maps" src="mindmap-viewer.js?v=20"></script>
         <script data-campus-assets="maps" src="intocables-hub.js?v=4"></script>
         <script data-campus-assets="summaries texts" src="summary-pdf-reader.js?v=7"></script>
         <script data-campus-assets="texts" src="official-texts.js?v=9"></script>
-        <script data-campus-assets="practice" src="sufficiency-practice-content.js?v=1"></script>
-        <script data-campus-assets="practice" src="sufficiency-practice.js?v=2"></script>
+        <script data-campus-assets="practice" src="sufficiency-practice-content.js?v=2"></script>
+        <script data-campus-assets="practice" src="sufficiency-practice.js?v=3"></script>
         <script data-campus-assets="summaries" src="study-summaries.js?v=20261021-visual5b"></script>
     </template>
 </body>

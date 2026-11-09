@@ -50,7 +50,7 @@
         article.append(
             element('span', exercise.subject + ' · ' + exercise.kind, 'entrance-eyebrow'),
             element('h3', exercise.title),
-            element('p', exercise.questions.length + ' preguntas con resolución', 'past-card-note'),
+            element('p', exercise.questions.length + ' preguntas con pistas y pasos', 'past-card-note'),
             start
         );
         return article;
@@ -66,13 +66,42 @@
         $('practice-empty').hidden = visible.length !== 0;
     }
 
-    function questionForm(question, index, updateProgress) {
+    function questionForm(question, index, total, updateProgress) {
         const id = 'practice-answer-' + index;
         const form = element('form', '', 'practice-exercise');
-        const label = element('label', (index + 1) + '. ' + question.prompt);
+        const header = element('div', '', 'practice-question-head');
+        const title = element('h4', question.prompt);
+        title.id = id + '-title';
+        title.tabIndex = -1;
+        header.append(element('span', 'Pregunta ' + (index + 1) + ' de ' + total, 'practice-question-number'), title);
+        form.setAttribute('aria-labelledby', title.id);
+
+        const data = element('div', '', 'practice-givens');
+        const list = element('ul');
+        list.append(...question.data.map(value => element('li', value)));
+        data.append(element('h5', 'Datos que necesitas'), list);
+
+        const guidance = element('aside', '', 'practice-guidance');
+        const solution = element('details', '', 'practice-solution');
+        const steps = element('ol');
+        steps.append(...question.steps.map(step => element('li', step)));
+        solution.append(
+            element('summary', 'Ver el paso a paso'),
+            steps,
+            element('p', 'Resultado · ' + formatAnswer(question) + ' ' + question.unit, 'practice-result'),
+            element('h5', 'Cómo comprobarlo'),
+            element('p', question.check)
+        );
+        guidance.append(element('h5', 'Por dónde empezar'), element('p', question.hint));
+
+        const response = element('div', '', 'practice-response');
+        const label = element('label', 'Tu respuesta');
         label.htmlFor = id;
-        const precision = question.decimals === 0 ? 'al entero' : 'a ' + question.decimals + (question.decimals === 1 ? ' decimal' : ' decimales');
-        const hint = element('p', 'Responde en ' + question.unit + ' y redondea ' + precision + '.', 'practice-form-hint');
+        const precision = question.decimals === 0 ? 'un número entero' : question.decimals + (question.decimals === 1 ? ' decimal' : ' decimales');
+        const numberHelp = Math.abs(question.answer) >= 1000
+            ? ' Separa los miles con un espacio.'
+            : ' Puedes usar coma o punto decimal.';
+        const hint = element('p', 'Responde en ' + question.unit + ' con ' + precision + '.' + numberHelp, 'practice-form-hint');
         hint.id = id + '-hint';
         const input = element('input');
         input.id = id;
@@ -88,14 +117,7 @@
         const feedback = element('p', '', 'practice-feedback');
         feedback.setAttribute('role', 'status');
         feedback.hidden = true;
-        const solution = element('details', '', 'practice-solution');
-        const steps = element('ol');
-        steps.append(...question.steps.map(step => element('li', step)));
-        solution.append(
-            element('summary', 'Ver resolución'),
-            steps,
-            element('p', 'Resultado · ' + formatAnswer(question) + ' ' + question.unit)
-        );
+        response.append(label, hint, row, feedback);
 
         form.addEventListener('submit', event => {
             event.preventDefault();
@@ -105,63 +127,120 @@
             feedback.hidden = false;
             feedback.classList.toggle('is-correct', correct);
             if (!valid) {
-                feedback.textContent = 'Escribe un número. Puedes usar coma o punto decimal.';
+                feedback.textContent = 'Escribe solo el número. La unidad ya está indicada al lado.';
                 input.focus();
                 return;
             }
             feedback.textContent = correct
-                ? '¡Correcto!'
-                : 'Revisa el cálculo y las unidades. Puedes volver a intentarlo o ver la resolución.';
+                ? 'Correcto. Revisa cómo se comprueba el resultado.'
+                : 'Todavía no coincide. Revisa la pista y las unidades o abre el paso a paso.';
             if (correct) solution.open = true;
             updateProgress(index, correct);
         });
-        form.append(label, hint, row, feedback, solution);
+        form.append(header, data, guidance, response, solution);
         return form;
+    }
+
+    function showReference() {
+        referencePanel.open = true;
+        referencePanel.querySelector('summary').focus();
+        referencePanel.scrollIntoView({ block: 'start' });
     }
 
     function resetSession() {
         session.hidden = true;
         session.replaceChildren();
         catalog.hidden = false;
+        $('practice-reference-return').hidden = true;
     }
 
     function startExercise(exercise, startButton) {
-        const head = element('div', '', 'practice-session-head');
         const navigation = element('div', '', 'practice-session-nav');
         navigation.append(
-            button('← Volver a los ejercicios', 'campus-resource-secondary', () => {
+            button('← Todos los ejercicios', 'campus-resource-secondary', () => {
                 resetSession();
                 startButton.focus();
             }),
-            button('Consultar tabla', 'campus-resource-secondary', () => {
-                referencePanel.open = true;
-                referencePanel.querySelector('summary').focus();
-                referencePanel.scrollIntoView({ block: 'start' });
-            })
+            button('Tabla de unidades', 'campus-resource-secondary', showReference)
         );
-        const progress = element('output', '0 de ' + exercise.questions.length + ' correctas');
-        head.append(navigation, progress);
         const heading = element('h3', exercise.title);
         heading.tabIndex = -1;
-        const solved = new Set();
+        const context = element('details', '', 'practice-case');
+        context.append(
+            element('summary', exercise.kind === 'Casos aplicados' ? 'Ver el caso completo' : 'Ver las instrucciones del bloque'),
+            element('p', exercise.context)
+        );
+
+        const total = exercise.questions.length;
+        const states = Array(total).fill(null);
+        const progress = element('output', '', 'practice-progress');
+        progress.setAttribute('aria-live', 'polite');
+        const selector = element('nav', '', 'practice-question-picker');
+        selector.setAttribute('aria-label', 'Preguntas del bloque');
+        let current = 0;
+        const numbers = exercise.questions.map((_, i) =>
+            button(String(i + 1), 'practice-question-link', () => selectQuestion(i, true)));
         const updateProgress = (index, correct) => {
-            if (correct) solved.add(index);
-            else solved.delete(index);
-            progress.textContent = solved.size + ' de ' + exercise.questions.length + ' correctas';
+            states[index] = correct;
+            renderProgress();
         };
+        const forms = exercise.questions.map((question, i) => questionForm(question, i, total, updateProgress));
+        const previous = button('← Anterior', 'campus-resource-secondary', () => selectQuestion(current - 1, true));
+        const next = button('Siguiente →', 'campus-resource-secondary', () => selectQuestion(current + 1, true));
+
+        function renderProgress() {
+            progress.textContent = states.filter(value => value === true).length + ' de ' + total + ' correctas';
+            numbers.forEach((control, i) => {
+                const state = states[i];
+                control.classList.toggle('is-correct', state === true);
+                control.setAttribute('aria-label', 'Pregunta ' + (i + 1) + ' · ' +
+                    (state === true ? 'Correcta' : state === false ? 'Por revisar' : 'Pendiente'));
+            });
+        }
+
+        function selectQuestion(index, focus) {
+            current = index;
+            forms.forEach((form, i) => {
+                form.hidden = i !== current;
+                if (i === current) numbers[i].setAttribute('aria-current', 'step');
+                else numbers[i].removeAttribute('aria-current');
+            });
+            previous.disabled = current === 0;
+            next.disabled = current === total - 1;
+            if (focus) forms[current].querySelector('h4').focus();
+        }
+
+        selector.append(...numbers);
+        const picker = element('div', '', 'practice-session-head');
+        picker.append(selector, progress);
+        const paging = element('div', '', 'practice-paging');
+        paging.append(previous, next);
         session.replaceChildren(
-            head,
+            navigation,
+            element('p', exercise.subject + ' · ' + exercise.kind, 'practice-session-subject'),
             heading,
-            element('p', exercise.context, 'practice-context'),
-            element('p', 'Usa coma o punto decimal. Para separar miles usa espacios. Conserva los decimales hasta el último paso.'),
-            ...exercise.questions.map((question, index) => questionForm(question, index, updateProgress))
+            element('p', exercise.route, 'practice-route'),
+            context,
+            picker,
+            ...forms,
+            paging
         );
         catalog.hidden = true;
+        referencePanel.open = false;
+        $('practice-reference-return').hidden = false;
         session.hidden = false;
         session.dataset.exercise = exercise.id;
+        selectQuestion(0, false);
+        renderProgress();
         heading.focus({ preventScroll: true });
         session.scrollIntoView({ block: 'nearest' });
     }
+
+    $('practice-reference-open').onclick = showReference;
+    $('practice-reference-return').onclick = () => {
+        referencePanel.open = false;
+        session.querySelector('.practice-exercise:not([hidden]) h4').focus();
+    };
 
     $('practice-reference-groups').replaceChildren(...reference.map(referenceGroup));
     for (const [filter, field] of [[subject, 'subject'], [kind, 'kind']]) {
