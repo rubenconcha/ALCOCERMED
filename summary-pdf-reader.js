@@ -72,6 +72,8 @@
             this.label = label;
             this.revision = 0;
             this.entries = [];
+            this.highlights = new Map();
+            this.highlightedEntries = new Set();
             this.zoom = 1;
             this.currentPage = 1;
             this.host.classList.add('summary-pdf-reader');
@@ -186,10 +188,50 @@
             await this.renderPage(initialPage, this.revision);
         }
 
-        goToPage(number) {
+        setHighlights(citations) {
+            for (const entry of this.highlightedEntries) entry.el.querySelector('.summary-pdf-highlights')?.remove();
+            this.highlightedEntries.clear();
+            this.highlights = new Map(citations.filter(ref => ref.marks?.length).map(ref => [ref.page, ref.marks]));
+            for (const number of this.highlights.keys()) {
+                const entry = this.entries[number - 1];
+                if (entry?.canvas) this.paintHighlights(entry);
+            }
+        }
+
+        paintHighlights(entry) {
+            const marks = this.highlights.get(entry.number);
+            if (!marks) return;
+            const overlay = document.createElement('div');
+            overlay.className = 'summary-pdf-highlights';
+            overlay.setAttribute('aria-hidden', 'true');
+            for (const [x, y, width, height] of marks) {
+                const mark = document.createElement('span');
+                mark.style.left = x * 100 + '%';
+                mark.style.top = y * 100 + '%';
+                mark.style.width = width * 100 + '%';
+                mark.style.height = height * 100 + '%';
+                overlay.append(mark);
+            }
+            entry.el.append(overlay);
+            this.highlightedEntries.add(entry);
+        }
+
+        goToPage(number, focus = false) {
             const page = this.entries[number - 1];
             if (!page) return;
-            this.pages.scrollTop += page.el.getBoundingClientRect().top - this.pages.getBoundingClientRect().top - 12;
+            const box = page.el.getBoundingClientRect();
+            const view = this.pages.getBoundingClientRect();
+            const mark = focus && this.highlights.get(number)?.[0];
+            const context = Math.min(200, this.pages.clientHeight * .27);
+            const offset = mark ? Math.max(0, mark[1] * box.height - context) : 0;
+            this.pages.scrollTop += box.top - view.top - 12 + offset;
+            if (mark && box.width > this.pages.clientWidth) {
+                const left = box.left + mark[0] * box.width;
+                const right = left + mark[2] * box.width;
+                if (left < view.left || right > view.right) {
+                    this.pages.scrollLeft += left - view.left - this.pages.clientWidth * .25;
+                }
+            }
             this.currentPage = page.number;
             this.updateControls();
         }
@@ -218,8 +260,8 @@
                 this.entries.push({ el, placeholder, number });
             }
             this.pages.replaceChildren(fragment);
-            this.pages.scrollTop = (pageNumber - 1) * (height + 16);
             this.pages.scrollLeft = 0;
+            this.goToPage(pageNumber, true);
             this.observer = new IntersectionObserver(records => {
                 for (const record of records) {
                     if (record.isIntersecting) this.renderPage(Number(record.target.dataset.page), revision)
@@ -227,7 +269,6 @@
                 }
             }, { root: this.pages, rootMargin: '200px 0px' });
             this.entries.forEach(entry => this.observer.observe(entry.el));
-            this.updateControls();
         }
 
         async renderPage(number, revision) {
@@ -265,6 +306,7 @@
                 if (revision !== this.revision) return;
                 entry.page = page; entry.canvas = canvas;
                 entry.el.replaceChildren(canvas);
+                this.paintHighlights(entry);
                 const text = await page.getTextContent().catch(() => null);
                 if (!text || revision !== this.revision || entry.canvas !== canvas) return;
                 const accessible = document.createElement('p');
@@ -327,6 +369,7 @@
                     entry.canvas.width = 0; entry.canvas.height = 0;
                     entry.canvas = null;
                     entry.el.replaceChildren(entry.placeholder);
+                    this.highlightedEntries.delete(entry);
                     if (entry.page) entry.page.cleanup();
                     entry.page = null;
                 }
@@ -335,6 +378,7 @@
 
         cancelRendering() {
             if (this.observer) this.observer.disconnect();
+            this.highlightedEntries.clear();
             for (const entry of this.entries) {
                 if (entry.task) entry.task.cancel();
                 if (entry.canvas) { entry.canvas.width = 0; entry.canvas.height = 0; }
@@ -351,6 +395,7 @@
             this.loading = null; this.pdf = null; this.pageSize = null;
             this.book?.destroy();
             this.book = null; this.cover = null;
+            this.highlights.clear();
             this.entries = []; this.pages.replaceChildren();
             this.zoom = 1; this.currentPage = 1;
             this.updateControls();

@@ -82,7 +82,7 @@ test('the three verified UMSS books open their private page segments and downloa
         },
     };
     const get = suffix => document.getElementById('official-texts-' + suffix);
-    const loaded = [], firstPages = [], jumps = [];
+    const loaded = [], firstPages = [], jumps = [], highlights = [];
     const window = {};
     vm.runInNewContext(read('official-texts.js'), {
         document, window, AbortController, AbortSignal, URL, clearTimeout,
@@ -113,6 +113,7 @@ test('the three verified UMSS books open their private page segments and downloa
                 assert.equal(options.pageJump, true);
             }
             goToPage(number) { jumps.push(number); }
+            setHighlights(citations) { highlights.push(citations); }
             async openBook(book, cover, initialPage) {
                 firstPages.push(initialPage);
                 assert.equal(book.starts.join(','), '1,9,10');
@@ -160,6 +161,17 @@ test('the three verified UMSS books open their private page segments and downloa
     assert.deepEqual(jumps, [743]);
     await window.OfficialTexts.readPage('morfofuncion', 1252);
     assert.deepEqual(jumps, [743]);
+    const citations = [{ page: 42, printed: 42, marks: [[.1, .2, .1, .02]] }, { page: 43, printed: 43 }];
+    await window.OfficialTexts.readPage('biologia-celular', 42, citations);
+    assert.equal(firstPages.at(-1), 42);
+    assert.equal(highlights.at(-1), citations);
+    assert.equal(get('citations').hidden, false);
+    assert.deepEqual(get('citations').children.map(child => child.textContent), ['Páginas citadas', '42', '43']);
+    get('citations').children.at(-1).onclick();
+    assert.deepEqual(jumps, [743, 42, 43]);
+    await window.OfficialTexts.readPage('biologia-celular', 45);
+    assert.equal(get('citations').hidden, true);
+    assert.equal(highlights.at(-1).length, 0);
 });
 
 test('the PDF relay checks campus access, streams private PDFs and grants one short-lived download', async () => {

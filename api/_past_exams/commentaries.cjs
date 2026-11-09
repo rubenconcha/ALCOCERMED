@@ -1,6 +1,7 @@
 'use strict';
 
 const comments = require('./commentaries.json');
+const anchors = require('./reading-anchors.json');
 
 const books = {
     M: { slug: 'morfofuncion', label: 'Saladin', title: 'Saladin, Anatomía y fisiología. La unidad entre forma y función, 6.ª edición' },
@@ -16,6 +17,7 @@ function formatReference({ book, section, pdf, printed }) {
 function withCommentary(question) {
     const comment = comments[question.id];
     if (!comment) return question;
+    const citations = anchors[question.id];
     return {
         ...question,
         justificacion: comment.text,
@@ -23,7 +25,8 @@ function withCommentary(question) {
         ...(comment.references.length ? {
             lecturas_comentario: comment.references.map(({ book, section, pdf, printed }) => {
                 const { slug, label } = books[book];
-                return { slug, label, section, page: pdf, printed };
+                const marks = citations?.[book + pdf];
+                return { slug, label, section, page: pdf, printed, ...(marks ? { marks } : {}) };
             }),
         } : {}),
         ...(comment.status === 'd' ? { clave_en_discrepancia: true } : {}),

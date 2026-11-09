@@ -54,6 +54,12 @@ test('cada pregunta histórica tiene un comentario y las referencias distinguen 
         assert.equal(enriched.justificacion, text, question.id);
         assert.deepEqual((enriched.lecturas_comentario || []).map(r => [r.slug, r.section, r.page, r.printed]),
             references.map(r => [readerSlugs[r.book], r.section, r.pdf, r.printed]), question.id);
+        if (references.length) assert.ok(enriched.lecturas_comentario.some(r => r.marks?.length), question.id);
+        for (const { marks = [] } of enriched.lecturas_comentario || []) {
+            for (const [x, y, w, h] of marks) {
+                assert.ok(x >= 0 && y >= 0 && w > 0 && h > 0 && x + w <= 1.0001 && y + h <= 1.0001, question.id);
+            }
+        }
         assert.deepEqual(enriched.respuestas_aceptadas, question.respuestas_aceptadas, question.id);
         assert.equal(Boolean(enriched.clave_en_discrepancia), status === 'd', question.id);
     }
@@ -61,9 +67,13 @@ test('cada pregunta histórica tiene un comentario y las referencias distinguen 
     assert.match(blood.justificacion, /albúmina.*pequeña.*globulinas/i);
     assert.match(blood.fuente_comentario, /Saladin.*pág\. impresa 681.*pág\. PDF 709/);
     const elements = withCommentary(questions.find(question => question.id === '2025-2026-1-2'));
-    assert.deepEqual(elements.lecturas_comentario, [{
+    const [{ marks, ...elementCitation }] = elements.lecturas_comentario;
+    assert.deepEqual(elementCitation, {
         slug: 'morfofuncion', label: 'Saladin', section: 'Cuadro 2.1 · Elementos del cuerpo humano', page: 72, printed: 44,
-    }]);
+    });
+    assert.equal(marks.length, 3);
+    const capsule = withCommentary(questions.find(question => question.id === '2025-2026-1-29'));
+    assert.deepEqual(capsule.lecturas_comentario.map(ref => [ref.page, ref.marks.length]), [[42, 3], [43, 3]]);
 });
 
 test('el cronómetro de exámenes pasados permite responder después de 100 minutos y conserva el cierre de simulacros', () => {

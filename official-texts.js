@@ -25,10 +25,11 @@
     const preview = $('official-texts-preview');
     const pages = $('official-texts-pages');
     const toolbar = $('official-texts-controls');
+    const citationsBar = $('official-texts-citations');
     const downloadButton = $('official-texts-download');
     const readerDownloadStatus = $('official-texts-reader-download-status');
     const resourceUrl = text => '/api/texto-oficial?materia=' + text.slug;
-    let reader, current, requestedPage, loaded, releaseTimer, revision = 0, opening, previewUrl, bookCoverUrl, inlineHome;
+    let reader, current, requestedPage, requestedCitations, loaded, releaseTimer, revision = 0, opening, previewUrl, bookCoverUrl, inlineHome;
 
     async function authorization() {
         const { data } = await getSupabase().auth.getSession();
@@ -100,19 +101,40 @@
         if (!signal.aborted) await reader.open(url, { headers, rangeOnly: true, initialPage: page });
     }
 
-    async function read(text, page) {
+    function showCitations(citations) {
+        citationsBar.hidden = citations.length < 2;
+        citationsBar.replaceChildren();
+        if (citationsBar.hidden) return;
+        const label = document.createElement('span');
+        label.textContent = 'Páginas citadas';
+        citationsBar.append(label);
+        for (const { page, printed } of citations) {
+            const button = document.createElement('button');
+            button.type = 'button';
+            button.textContent = String(printed || page);
+            button.setAttribute('aria-label', printed && printed !== page
+                ? `Página impresa ${printed}, PDF ${page}` : `Página ${page}`);
+            button.onclick = () => reader?.goToPage(page, true);
+            citationsBar.append(button);
+        }
+    }
+
+    async function read(text, page, citations = []) {
         const version = ++revision;
         opening?.abort();
         clearPreview();
         clearTimeout(releaseTimer);
         current = text;
         requestedPage = page;
+        requestedCitations = citations;
+        showCitations(citations);
         $('official-texts-reader-title').textContent = text.title;
         readerDownloadStatus.hidden = true;
         fallback.hidden = true;
         if (!dialog.open) dialog.showModal();
         if (loaded === text) {
-            if (page) reader.goToPage(page);
+            reader.setHighlights(citations);
+            if (page) reader.goToPage(page, true);
             return;
         }
         const initialPage = page ?? text.coverPage ?? 1;
@@ -121,7 +143,7 @@
         const { signal } = controller;
         status.textContent = 'Cargando PDF…';
         status.hidden = false;
-        toolbar.inert = pages.inert = true;
+        toolbar.inert = pages.inert = citationsBar.inert = true;
         try {
             const headers = await authorization();
             if (version !== revision || !dialog.open) return;
@@ -133,7 +155,9 @@
             controller.abort();
             clearPreview();
             loaded = text;
-            toolbar.inert = pages.inert = false;
+            reader.setHighlights(citations);
+            if (page && citations.length) reader.goToPage(page, true);
+            toolbar.inert = pages.inert = citationsBar.inert = false;
             status.hidden = true;
         } catch (_) {
             if (version !== revision || !dialog.open) return;
@@ -209,7 +233,7 @@
     $('official-texts-grid').replaceChildren(...texts.map(card));
     $('official-texts-close').onclick = () => dialog.close();
     downloadButton.onclick = () => { if (current) return download(current, downloadButton, readerDownloadStatus); };
-    $('official-texts-retry').onclick = () => { if (current) read(current, requestedPage); };
+    $('official-texts-retry').onclick = () => { if (current) read(current, requestedPage, requestedCitations); };
     dialog.addEventListener('close', () => {
         if (dialog.open) return;
         ++revision;
@@ -235,9 +259,9 @@
         open() {
             return showScreen('official-texts-screen');
         },
-        readPage(slug, page) {
+        readPage(slug, page, citations) {
             const text = findPage(slug, page);
-            if (text) return read(text, page);
+            if (text) return read(text, page, citations);
         },
         readIn(host, slug, page) {
             const text = findPage(slug, page);

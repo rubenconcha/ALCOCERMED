@@ -103,7 +103,7 @@
   try {
    await root.loadCampusAssets('texts');
    if (button.isConnected && !button.closest('.hidden, [hidden]')) {
-    await root.OfficialTexts.readPage(reference.slug, reference.page);
+    await root.OfficialTexts.readPage(reference.slug, reference.page, reference.citations);
    }
   } catch (_) {
    if (button.isConnected) root.showToast?.('No pudimos abrir el texto. Vuelve a intentarlo.', 'error');
@@ -116,22 +116,30 @@
  function showReferences(references) {
   const block = el('section', null, 'qr-reading qr-source-reading');
   block.append(el('h5', 'Fuente oficial', 'qr-subheading'));
-  function action(reference, primary) {
+  const byBook = new Map();
+  for (const reference of references) {
+   if (!byBook.has(reference.slug)) byBook.set(reference.slug, new Map());
+   byBook.get(reference.slug).set(reference.page, reference);
+  }
+  for (const pages of byBook.values()) {
+   const citations = [...pages.values()].sort((a, b) => a.page - b.page);
+   const { slug, label } = citations[0];
+   const page = (citations.find(reference => reference.marks?.length) || citations[0]).page;
+   const printed = citations.map(reference => reference.printed).filter(Boolean);
+   const digital = citations.map(reference => reference.page);
+   const sameNumbers = citations.every(reference => reference.printed === reference.page);
+   const sections = [...new Set(citations.map(reference => reference.section).filter(Boolean))];
+   const locator = sameNumbers
+    ? (digital.length === 1 ? 'Pág. ' : 'Págs. ') + digital.join(', ')
+    : [
+      printed.length && (printed.length === 1 ? 'Pág. impresa ' : 'Págs. impresas ') + printed.join(', '),
+      'PDF ' + digital.join(', '),
+     ].filter(Boolean).join(' · ');
    const button = el('button', null, 'qr-reading-link');
    button.type = 'button';
-   const locator = (reference.printed ? 'Pág. impresa ' + reference.printed + ' · ' : '') + 'PDF ' + reference.page;
-   const label = primary ? 'Ver en el texto' : reference.label + ' · ' + reference.section;
-   const detail = primary ? reference.label + ' · ' + reference.section + ' · ' + locator : locator;
-   button.append(el('span', label), el('small', detail));
-   button.onclick = () => openReference(reference, button);
-   return button;
-  }
-  block.append(action(references[0], true));
-  if (references.length > 1) {
-   const others = el('details', null, 'qr-bank-reasons qr-source-others');
-   others.append(el('summary', 'Otras páginas citadas (' + (references.length - 1) + ')'));
-   for (const reference of references.slice(1)) others.append(action(reference, false));
-   block.append(others);
+   button.append(el('span', 'Ver en el texto'), el('small', [label, ...sections, locator].join(' · ')));
+   button.onclick = () => openReference({ slug, page, citations }, button);
+   block.append(button);
   }
   warmReferenceReader();
   return block;
