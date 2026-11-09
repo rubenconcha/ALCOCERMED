@@ -412,7 +412,7 @@
             if (!isCurrent()) return;
             releasePanel = () => window.OfficialTexts.closeInline();
             status.hidden = true;
-            return window.OfficialTexts.readIn(host, book.slug, book.pdf[0]);
+            return window.OfficialTexts.readIn(host, book.slug, book.pdf, book.printed);
         }).catch(() => {
             if (!isCurrent()) return;
             status.hidden = false;

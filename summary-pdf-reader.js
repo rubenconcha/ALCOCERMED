@@ -66,12 +66,15 @@
     // Render PDF pages ourselves: Android browsers may replace embedded PDFs with an Open button.
     class SummaryPdfReader {
         static preload() { return loadLibrary(); }
+        static usesPagePicker(citations) { return citations?.length > 4; }
 
         constructor(host, { label = 'resumen', pageJump = false, toolbarHost } = {}) {
             this.host = host;
             this.label = label;
             this.revision = 0;
             this.entries = [];
+            this.entriesByPage = new Map();
+            this.selection = null;
             this.highlights = new Map();
             this.highlightedEntries = new Set();
             this.zoom = 1;
@@ -108,6 +111,7 @@
             if (pageJump) {
                 const form = document.createElement('form');
                 form.className = 'summary-pdf-page-jump';
+                this.pageJump = form;
                 this.pageInput = document.createElement('input');
                 this.pageInput.type = 'number';
                 this.pageInput.inputMode = 'numeric';
@@ -125,6 +129,11 @@
                     this.goToPage(this.pageInput.valueAsNumber);
                 });
                 toolbar.append(form);
+                this.pagePicker = document.createElement('select');
+                this.pagePicker.className = 'summary-pdf-page-picker';
+                this.pagePicker.setAttribute('aria-label', 'Ir a una página citada');
+                this.pagePicker.addEventListener('change', () => this.goToPage(Number(this.pagePicker.value), true));
+                toolbar.append(this.pagePicker);
             }
             toolbar.append(this.counter);
             this.pages = document.createElement('div');
@@ -151,10 +160,11 @@
             this.updateControls();
         }
 
-        async open(url, { headers, rangeOnly = false, initialPage = 1 } = {}) {
+        async open(url, { headers, rangeOnly = false, initialPage = 1, citations = null } = {}) {
             this.destroy();
             const revision = this.revision;
             this.host.hidden = false;
+            this.setReading(citations);
             const pdfjs = await loadLibrary();
             if (revision !== this.revision) return;
             this.loading = pdfjs.getDocument({
@@ -177,15 +187,35 @@
             await this.renderPage(initialPage, this.revision);
         }
 
-        async openBook(book, cover, initialPage = cover.page) {
+        async openBook(book, cover, initialPage = cover?.page ?? 1, citations = null) {
             this.destroy();
+            const revision = this.revision;
             this.host.hidden = false;
+            this.setReading(citations);
             this.pdf = this.book = segmentedDocument(book);
             this.cover = cover;
-            this.pageSize = { width: cover.width, height: cover.height };
+            const first = cover ? null : await this.pdf.getPage(initialPage);
+            if (revision !== this.revision) return;
+            this.pageSize = cover || first.getViewport({ scale: 1 });
             this.currentPage = initialPage;
             this.layout();
             await this.renderPage(initialPage, this.revision);
+        }
+
+        setReading(citations, page) {
+            const previous = this.selection;
+            const samePages = previous === citations || Boolean(previous && citations &&
+                previous.length === citations.length && citations.every((ref, i) =>
+                    ref.page === previous[i].page && ref.printed === previous[i].printed));
+            this.selection = citations;
+            this.setHighlights(citations || []);
+            if (!this.pdf) return;
+            if (samePages) {
+                if (page) this.goToPage(page, true);
+                return;
+            }
+            this.currentPage = page ?? citations?.[0]?.page ?? this.currentPage;
+            this.layout();
         }
 
         setHighlights(citations) {
@@ -193,7 +223,7 @@
             this.highlightedEntries.clear();
             this.highlights = new Map(citations.filter(ref => ref.marks?.length).map(ref => [ref.page, ref.marks]));
             for (const number of this.highlights.keys()) {
-                const entry = this.entries[number - 1];
+                const entry = this.entriesByPage.get(number);
                 if (entry?.canvas) this.paintHighlights(entry);
             }
         }
@@ -217,7 +247,7 @@
         }
 
         goToPage(number, focus = false) {
-            const page = this.entries[number - 1];
+            const page = this.entriesByPage.get(number);
             if (!page) return;
             const box = page.el.getBoundingClientRect();
             const view = this.pages.getBoundingClientRect();
@@ -245,20 +275,36 @@
             this.pageWidth = Math.max(200, Math.min(900, this.lastWidth - 24)) * this.zoom;
             const height = this.pageWidth * this.pageSize.height / this.pageSize.width;
             this.entries = [];
+            this.entriesByPage.clear();
+            const usePicker = this.pagePicker && SummaryPdfReader.usesPagePicker(this.selection);
+            const pageOptions = usePicker ? document.createDocumentFragment() : null;
             const fragment = document.createDocumentFragment();
-            for (let number = 1; number <= this.pdf.numPages; number++) {
+            const count = this.selection?.length ?? this.pdf.numPages;
+            for (let index = 0; index < count; index++) {
+                const ref = this.selection?.[index];
+                const number = ref?.page ?? index + 1;
+                const label = ref ? (ref.printed ? `Página ${ref.printed}` : `Página PDF ${number}`) : `Página ${number}`;
                 const el = document.createElement('section');
                 el.className = 'summary-pdf-page';
                 el.dataset.page = String(number);
-                el.setAttribute('aria-label', `Página ${number} de ${this.pdf.numPages}`);
+                el.setAttribute('aria-label', ref ? label : `${label} de ${count}`);
                 el.style.width = this.pageWidth + 'px'; el.style.height = height + 'px';
                 const placeholder = document.createElement('span');
                 placeholder.className = 'summary-pdf-placeholder';
-                placeholder.textContent = `Página ${number}`;
+                placeholder.textContent = label;
                 el.append(placeholder);
                 fragment.append(el);
-                this.entries.push({ el, placeholder, number });
+                const entry = { el, placeholder, number, label, index };
+                this.entries.push(entry);
+                this.entriesByPage.set(number, entry);
+                if (pageOptions) {
+                    const option = document.createElement('option');
+                    option.value = number;
+                    option.textContent = label;
+                    pageOptions.append(option);
+                }
             }
+            if (this.pagePicker) this.pagePicker.replaceChildren(...(pageOptions ? [pageOptions] : []));
             this.pages.replaceChildren(fragment);
             this.pages.scrollLeft = 0;
             this.goToPage(pageNumber, true);
@@ -272,7 +318,7 @@
         }
 
         async renderPage(number, revision) {
-            const entry = this.entries[number - 1];
+            const entry = this.entriesByPage.get(number);
             if (!entry || revision !== this.revision || entry.canvas || entry.preview) return;
             if (entry.pending) return entry.pending;
             if (number === this.cover?.page && this.zoom === 1) {
@@ -298,7 +344,7 @@
                 canvas.height = Math.ceil(viewport.height * density);
                 canvas.style.width = viewport.width + 'px'; canvas.style.height = viewport.height + 'px';
                 canvas.setAttribute('role', 'img');
-                canvas.setAttribute('aria-label', `Página ${number} del ${this.label}`);
+                canvas.setAttribute('aria-label', `${entry.label} del ${this.label}`);
                 entry.el.style.height = viewport.height + 'px';
                 entry.task = page.render({ canvasContext: canvas.getContext('2d', { alpha: false }), viewport,
                     transform: [density, 0, 0, density, 0, 0] });
@@ -332,11 +378,20 @@
             this.less.disabled = !this.pdf || this.zoom <= 1;
             this.more.disabled = !this.pdf || this.zoom >= 3;
             this.fit.disabled = !this.pdf;
-            this.counter.textContent = this.pdf ? `${this.currentPage} / ${this.pdf.numPages}` : '';
+            const entry = this.entriesByPage.get(this.currentPage);
+            if (!this.pdf) this.counter.textContent = '';
+            else if (this.selection && entry) {
+                const label = entry.label.replace('Página', 'Pág.');
+                this.counter.textContent = this.selection.length === 1 ? label
+                    : `${label} · ${entry.index + 1} de ${this.selection.length}`;
+            } else this.counter.textContent = `${this.currentPage} / ${this.pdf.numPages}`;
             if (this.pageInput) {
-                this.pageInput.disabled = this.jump.disabled = !this.pdf;
+                this.pageJump.hidden = Boolean(this.selection);
+                this.pageInput.disabled = this.jump.disabled = !this.pdf || this.pageJump.hidden;
                 this.pageInput.max = this.pdf?.numPages || 1;
                 if (document.activeElement !== this.pageInput) this.pageInput.value = this.pdf ? this.currentPage : '';
+                this.pagePicker.hidden = !SummaryPdfReader.usesPagePicker(this.selection);
+                if (!this.pagePicker.hidden) this.pagePicker.value = this.currentPage;
             }
         }
 
@@ -349,7 +404,9 @@
                 if (this.entries[mid].el.getBoundingClientRect().bottom <= top) first = mid + 1;
                 else last = mid;
             }
-            const current = this.entries[first];
+            const remaining = this.pages.scrollHeight - this.pages.clientHeight;
+            const atEnd = this.selection && remaining > 2 && this.pages.scrollTop >= remaining - 2;
+            const current = atEnd ? this.entries.at(-1) : this.entries[first];
             if (current && current.number !== this.currentPage) {
                 this.currentPage = current.number;
                 this.updateControls();
@@ -364,8 +421,9 @@
         }
 
         releaseDistantPages() {
+            const current = this.entriesByPage.get(this.currentPage)?.index;
             for (const entry of this.entries) {
-                if (entry.canvas && Math.abs(entry.number - this.currentPage) > 2) {
+                if (entry.canvas && Math.abs(entry.index - current) > 2) {
                     entry.canvas.width = 0; entry.canvas.height = 0;
                     entry.canvas = null;
                     entry.el.replaceChildren(entry.placeholder);
@@ -395,8 +453,11 @@
             this.loading = null; this.pdf = null; this.pageSize = null;
             this.book?.destroy();
             this.book = null; this.cover = null;
+            this.selection = null;
             this.highlights.clear();
-            this.entries = []; this.pages.replaceChildren();
+            this.entries = [];
+            this.entriesByPage.clear();
+            this.pages.replaceChildren();
             this.zoom = 1; this.currentPage = 1;
             this.updateControls();
             if (loading) loading.destroy().catch(() => {});

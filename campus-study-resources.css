@@ -122,6 +122,7 @@
 #official-texts-controls .summary-pdf-counter { font-size: .75rem; white-space: nowrap; }
 #official-texts-reader .resumenes-viewer-actions { width: auto; gap: 6px; }
 #official-texts-download { background: var(--shell-gold, #ffce45); border-color: transparent; color: #272331; }
+#official-texts-download[hidden] { display: none; }
 #official-texts-download:disabled { opacity: .65; cursor: wait; }
 :is(#official-texts-close, #official-texts-download) svg { display: none; width: 20px; height: 20px; }
 :is(#official-texts-close, #official-texts-download) span,

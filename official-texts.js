@@ -52,22 +52,26 @@
         bookCoverUrl = null;
     }
 
-    async function prepareBook(text, headers, signal, page) {
-        const response = await fetch(resourceUrl(text) + '&vista=portada', { headers, signal });
+    async function prepareBook(text, headers, signal, page, citations) {
+        const response = await fetch(resourceUrl(text) + '&vista=portada', { method: citations ? 'HEAD' : 'GET', headers, signal });
         if (!response.ok) return false;
         const grant = response.headers.get('X-Official-Reader');
         if (grant) headers['X-Official-Reader'] = grant;
         const starts = (response.headers.get('X-Official-Page-Starts') || '').split(',').map(Number);
-        const blob = await response.blob();
-        if (signal.aborted) return false;
-        previewUrl = URL.createObjectURL(blob);
-        preview.alt = 'Portada de ' + text.title;
-        preview.src = previewUrl;
-        preview.hidden = page !== (text.coverPage || 1);
         if (starts[0] !== 1 || !starts.every((page, i) => Number.isInteger(page) && page <= text.pages && (!i || page > starts[i - 1]))) return false;
-        await preview.decode();
         if (signal.aborted) return false;
-        const url = previewUrl;
+        let cover;
+        if (!citations) {
+            const blob = await response.blob();
+            if (signal.aborted) return false;
+            previewUrl = URL.createObjectURL(blob);
+            preview.alt = 'Portada de ' + text.title;
+            preview.src = previewUrl;
+            preview.hidden = page !== (text.coverPage || 1);
+            await preview.decode();
+            if (signal.aborted) return false;
+            cover = { page: text.coverPage || 1, url: previewUrl, alt: preview.alt, width: preview.naturalWidth, height: preview.naturalHeight };
+        }
         await reader.openBook({
             numPages: text.pages,
             starts,
@@ -82,14 +86,14 @@
                 if (!result.ok) throw new Error('No pudimos cargar estas páginas.');
                 return new Uint8Array(await result.arrayBuffer());
             },
-        }, { page: text.coverPage || 1, url, alt: preview.alt, width: preview.naturalWidth, height: preview.naturalHeight }, page);
+        }, cover, page, citations);
         if (signal.aborted) return false;
-        bookCoverUrl = url;
+        bookCoverUrl = cover?.url;
         previewUrl = null;
         return true;
     }
 
-    async function openFullReader(text, headers, signal, page) {
+    async function openFullReader(text, headers, signal, page, citations) {
         const url = resourceUrl(text) + '&vista=lector';
         if (!headers['X-Official-Reader']) {
             const response = await fetch(url, { method: 'POST', headers, signal });
@@ -98,11 +102,11 @@
             if (typeof grant !== 'string') throw new Error('Lector no disponible');
             headers['X-Official-Reader'] = grant;
         }
-        if (!signal.aborted) await reader.open(url, { headers, rangeOnly: true, initialPage: page });
+        if (!signal.aborted) await reader.open(url, { headers, rangeOnly: true, initialPage: page, citations });
     }
 
     function showCitations(citations) {
-        citationsBar.hidden = citations.length < 2;
+        citationsBar.hidden = !citations || citations.length < 2 || SummaryPdfReader.usesPagePicker(citations);
         citationsBar.replaceChildren();
         if (citationsBar.hidden) return;
         const label = document.createElement('span');
@@ -119,8 +123,9 @@
         }
     }
 
-    async function read(text, page, citations = []) {
+    async function read(text, page, citations = null) {
         const version = ++revision;
+        const returningToBook = !citations && requestedCitations;
         opening?.abort();
         clearPreview();
         clearTimeout(releaseTimer);
@@ -128,13 +133,13 @@
         requestedPage = page;
         requestedCitations = citations;
         showCitations(citations);
+        downloadButton.hidden = Boolean(citations);
         $('official-texts-reader-title').textContent = text.title;
         readerDownloadStatus.hidden = true;
         fallback.hidden = true;
         if (!dialog.open) dialog.showModal();
         if (loaded === text) {
-            reader.setHighlights(citations);
-            if (page) reader.goToPage(page, true);
+            reader.setReading(citations, returningToBook ? text.coverPage ?? 1 : page);
             return;
         }
         const initialPage = page ?? text.coverPage ?? 1;
@@ -148,21 +153,20 @@
             const headers = await authorization();
             if (version !== revision || !dialog.open) return;
             reader ||= new SummaryPdfReader(pages, { label: 'texto oficial', pageJump: true, toolbarHost: toolbar });
-            const ready = await prepareBook(text, headers, signal, initialPage).catch(() => false);
+            const ready = await prepareBook(text, headers, signal, initialPage, citations).catch(() => false);
             if (signal.aborted) return;
-            if (!ready) await openFullReader(text, headers, signal, initialPage);
+            if (!ready) await openFullReader(text, headers, signal, initialPage, citations);
             if (version !== revision || !dialog.open) return;
             controller.abort();
             clearPreview();
             loaded = text;
-            reader.setHighlights(citations);
-            if (page && citations.length) reader.goToPage(page, true);
             toolbar.inert = pages.inert = citationsBar.inert = false;
             status.hidden = true;
         } catch (_) {
             if (version !== revision || !dialog.open) return;
             reader?.destroy();
-            status.textContent = 'No pudimos abrir el PDF. Puedes reintentar o consultar la publicación oficial.';
+            status.textContent = citations ? 'No pudimos abrir las páginas indicadas. Puedes reintentar.'
+                : 'No pudimos abrir el PDF. Puedes reintentar o consultar la publicación oficial.';
             fallback.hidden = false;
         }
     }
@@ -232,7 +236,7 @@
 
     $('official-texts-grid').replaceChildren(...texts.map(card));
     $('official-texts-close').onclick = () => dialog.close();
-    downloadButton.onclick = () => { if (current) return download(current, downloadButton, readerDownloadStatus); };
+    downloadButton.onclick = () => { if (current && !requestedCitations) return download(current, downloadButton, readerDownloadStatus); };
     $('official-texts-retry').onclick = () => { if (current) read(current, requestedPage, requestedCitations); };
     dialog.addEventListener('close', () => {
         if (dialog.open) return;
@@ -247,6 +251,13 @@
         return texts.find(text => text.slug === slug && Number.isInteger(page) && page >= 1 && page <= text.pages);
     }
 
+    function rangeCitations(first, last, printedFirst) {
+        return Array.from({ length: last - first + 1 }, (_, i) => ({
+            page: first + i,
+            ...(Number.isInteger(printedFirst) ? { printed: printedFirst + i } : {}),
+        }));
+    }
+
     function closeInline() {
         if (!inlineHome) return;
         if (dialog.open) dialog.close();
@@ -259,20 +270,29 @@
         open() {
             return showScreen('official-texts-screen');
         },
-        readPage(slug, page, citations) {
-            const text = findPage(slug, page);
-            if (text) return read(text, page, citations);
-        },
-        readIn(host, slug, page) {
+        readPage(slug, page, citations = [{ page }]) {
             const text = findPage(slug, page);
             if (!text) return;
+            const selected = new Map(citations.filter(ref => findPage(slug, ref?.page)).map(ref => [ref.page, ref]));
+            if (!selected.has(page)) selected.set(page, { page });
+            return read(text, page, [...selected.values()].sort((a, b) => a.page - b.page));
+        },
+        readRange(slug, first, last = first, printedFirst) {
+            const text = findPage(slug, first);
+            if (text && first <= last && findPage(slug, last)) {
+                return read(text, first, rangeCitations(first, last, printedFirst));
+            }
+        },
+        readIn(host, slug, [first, last = first], [printedFirst] = []) {
+            const text = findPage(slug, first);
+            if (!text || first > last || !findPage(slug, last)) return;
             closeInline();
             if (dialog.open) dialog.close();
             inlineHome = dialog.parentElement;
             host.append(dialog);
             dialog.classList.add('calendar-inline-reader');
             dialog.show();
-            return read(text, page);
+            return read(text, first, rangeCitations(first, last, printedFirst));
         },
         closeInline,
         preload() {

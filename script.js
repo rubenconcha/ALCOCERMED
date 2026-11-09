@@ -2569,12 +2569,12 @@ function renderBancoCommentary(question, selected, correct, checked) {
         bankMode: true,
         lockedMessage: checked ? '' : 'Responde la pregunta para ver el comentario.',
         workedSolution,
-        async openReading(slug, page, button) {
+        async openReading(slug, page, button, end, printed) {
             button.disabled = true;
             try {
                 await window.loadCampusAssets('texts');
                 if (button.isConnected && currentCampusScreen === 'banco-screen') {
-                    await window.OfficialTexts.readPage(slug, page);
+                    await window.OfficialTexts.readRange(slug, page, end, printed);
                 }
             } catch (_) {
                 if (button.isConnected) showToast('No pudimos abrir el texto. Vuelve a intentarlo.', 'error');

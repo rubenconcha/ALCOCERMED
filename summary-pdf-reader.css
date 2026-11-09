@@ -9,8 +9,12 @@
 .summary-pdf-toolbar output { min-width: 48px; text-align: center; font-size: 14px; font-weight: 700; }
 .summary-pdf-counter { margin-left: auto; padding: 0 4px; font-size: 14px; font-weight: 700; }
 .summary-pdf-page-jump { display: inline-flex; align-items: center; gap: 4px; }
+.summary-pdf-page-jump[hidden] { display: none; }
 .summary-pdf-page-jump input { width: 56px; min-height: 44px; padding: 5px; border: 1px solid #cbd9e7; border-radius: 9px; background: #fff; color: #183552; font: inherit; text-align: center; }
 .summary-pdf-page-jump input:focus-visible { outline: 2px solid #147ba2; }
+.summary-pdf-page-picker { min-width: 0; min-height: 40px; padding: 4px; border: 1px solid #cbd9e7; border-radius: 9px; background: #f5f8fb; color: #183552; font: inherit; font-size: .8rem; font-weight: 700; }
+.summary-pdf-page-picker:focus-visible { outline: 2px solid #147ba2; }
+.summary-pdf-toolbar:has(.summary-pdf-page-picker:not([hidden])) .summary-pdf-counter { display: none; }
 .summary-pdf-scroll { flex: 1; min-height: 0; overflow: auto; padding: 12px; overscroll-behavior: contain; -webkit-overflow-scrolling: touch; touch-action: pan-x pan-y pinch-zoom; overflow-anchor: none; scrollbar-gutter: stable; }
 .summary-pdf-page { position: relative; margin: 0 auto 16px; background: #fff; box-shadow: 0 2px 9px #19304720; }
 .summary-pdf-page canvas { display: block; max-width: none; }

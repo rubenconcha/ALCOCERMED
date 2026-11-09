@@ -60,17 +60,17 @@
   block.append(el('p', 'Capítulo ' + reading.chapter + ' · ' + reading.chapterTitle, 'qr-reading-chapter'));
   block.append(el('p', reading.title, 'qr-reading-section'));
 
-  function pageAction(label, page, printed) {
-   const locator = (printed ? 'p. impresa ' + printed + ' · ' : '') + 'PDF ' + page;
+  function pageAction(label, page, printed, end = page) {
+   const locator = (printed ? 'Pág. impresa ' + printed + ' · ' : '') + 'PDF ' + (end === page ? page : page + '–' + end);
    if (!openReading) return el('strong', label + ' · ' + locator, 'qr-reading-page');
    const action = el('button', null, 'qr-reading-link');
    action.type = 'button';
    action.append(el('span', label), el('small', locator));
-   action.onclick = () => openReading(reading.slug, page, action);
+   action.onclick = () => openReading(reading.slug, page, action, end, Number.parseInt(printed, 10));
    return action;
   }
 
-  block.append(pageAction('Leer el apartado', reading.start));
+  block.append(pageAction('Leer el apartado', reading.start, reading.printed, reading.end));
   if (reading.figures?.length) {
    const list = el('ul', null, 'qr-reading-visuals');
    for (const figure of reading.figures) {
@@ -167,7 +167,9 @@
     const button = el('button', null, 'qr-reading-link');
     button.type = 'button';
     button.append(el('span', tema), el('small', 'Pág. impresa ' + impresa + ' · PDF ' + pagina));
-    button.onclick = () => openReference({ slug: 'morfofuncion', page: pagina }, button);
+    button.onclick = () => openReference({
+     slug: 'morfofuncion', page: pagina, citations: [{ page: pagina, printed: impresa }],
+    }, button);
     reading.append(button);
    }
    content.append(reading);

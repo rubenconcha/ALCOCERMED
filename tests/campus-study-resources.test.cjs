@@ -82,7 +82,7 @@ test('the three verified UMSS books open their private page segments and downloa
         },
     };
     const get = suffix => document.getElementById('official-texts-' + suffix);
-    const loaded = [], firstPages = [], jumps = [], highlights = [];
+    const loaded = [], firstPages = [], jumps = [], readings = [], coverMethods = [];
     const window = {};
     vm.runInNewContext(read('official-texts.js'), {
         document, window, AbortController, AbortSignal, URL, clearTimeout,
@@ -91,7 +91,9 @@ test('the three verified UMSS books open their private page segments and downloa
             assert.equal(options.headers.Authorization, 'Bearer test');
             if (url.endsWith('&vista=portada')) {
                 assert.equal(options.headers['X-Official-Reader'], undefined);
-                return new Response('portada', { headers: { 'X-Official-Reader': 'reader', 'X-Official-Page-Starts': '1,9,10' } });
+                coverMethods.push(options.method);
+                return new Response(options.method === 'HEAD' ? null : 'portada',
+                    { headers: { 'X-Official-Reader': 'reader', 'X-Official-Page-Starts': '1,9,10' } });
             }
             if (url.includes('&vista=tramo')) {
                 assert.equal(options.headers['X-Official-Reader'], 'reader');
@@ -106,6 +108,7 @@ test('the three verified UMSS books open their private page segments and downloa
             return Response.json({ grant: 'fixture' });
         },
         SummaryPdfReader: class {
+            static usesPagePicker(citations) { return citations?.length > 4; }
             destroy() {}
             constructor(host, options) {
                 assert.equal(host, get('pages'));
@@ -113,12 +116,13 @@ test('the three verified UMSS books open their private page segments and downloa
                 assert.equal(options.pageJump, true);
             }
             goToPage(number) { jumps.push(number); }
-            setHighlights(citations) { highlights.push(citations); }
-            async openBook(book, cover, initialPage) {
+            setReading(citations, page) { readings.push({ citations, page }); }
+            async openBook(book, cover, initialPage, citations) {
                 firstPages.push(initialPage);
                 assert.equal(book.starts.join(','), '1,9,10');
-                assert.equal(cover.width, 480);
-                assert.equal(cover.page, book.numPages === 829 ? 9 : 1);
+                assert.equal(cover?.width, citations ? undefined : 480);
+                if (cover) assert.equal(cover.page, book.numPages === 829 ? 9 : 1);
+                readings.push({ citations, page: initialPage });
                 const bytes = await book.fetchSegment(10, new AbortController().signal);
                 assert.equal(Buffer.from(bytes).toString(), '%PDF-');
             }
@@ -157,21 +161,30 @@ test('the three verified UMSS books open their private page segments and downloa
     assert.deepEqual(firstPages, [1, 9, 1]);
     await window.OfficialTexts.readPage('morfofuncion', 707);
     assert.equal(firstPages.at(-1), 707);
+    assert.equal(get('download').hidden, true);
+    assert.deepEqual(readings.at(-1).citations.map(ref => ref.page).join(), '707');
     await window.OfficialTexts.readPage('morfofuncion', 743);
-    assert.deepEqual(jumps, [743]);
+    assert.equal(readings.at(-1).page, 743);
     await window.OfficialTexts.readPage('morfofuncion', 1252);
-    assert.deepEqual(jumps, [743]);
+    assert.equal(readings.at(-1).page, 743);
     const citations = [{ page: 42, printed: 42, marks: [[.1, .2, .1, .02]] }, { page: 43, printed: 43 }];
     await window.OfficialTexts.readPage('biologia-celular', 42, citations);
     assert.equal(firstPages.at(-1), 42);
-    assert.equal(highlights.at(-1), citations);
+    assert.equal(readings.at(-1).citations[0], citations[0]);
     assert.equal(get('citations').hidden, false);
     assert.deepEqual(get('citations').children.map(child => child.textContent), ['Páginas citadas', '42', '43']);
     get('citations').children.at(-1).onclick();
-    assert.deepEqual(jumps, [743, 42, 43]);
+    assert.deepEqual(jumps, [43]);
     await window.OfficialTexts.readPage('biologia-celular', 45);
     assert.equal(get('citations').hidden, true);
-    assert.equal(highlights.at(-1).length, 0);
+    assert.equal(readings.at(-1).citations.map(ref => ref.page).join(), '45');
+    await window.OfficialTexts.readRange('biologia-celular', 582, 584, 582);
+    assert.equal(readings.at(-1).citations.map(ref => ref.page).join(), '582,583,584');
+    await get('grid').children[1].children[5].children[0].onclick();
+    assert.equal(readings.at(-1).page, 9);
+    assert.equal(readings.at(-1).citations, null);
+    assert.equal(get('download').hidden, false);
+    assert.deepEqual(coverMethods, ['GET', 'GET', 'GET', 'HEAD', 'HEAD']);
 });
 
 test('the PDF relay checks campus access, streams private PDFs and grants one short-lived download', async () => {
