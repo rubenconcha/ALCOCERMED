@@ -82,7 +82,7 @@
 343|epimisio|+|El tejido conjuntivo que envuelve al músculo entero corresponde al epimisio.|La jerarquía de las cubiertas va del endomisio de la fibra al perimisio del fascículo y al epimisio del músculo.
 @morfo-11|estructura-fibra|Estructura microscópica de la fibra
 435|sarcolema|−|Sarcolema es el nombre del citoplasma de una fibra muscular.|El sarcolema es su membrana plasmática. El citoplasma se denomina sarcoplasma.
-432|retículo sarcoplásmico|+|El retículo sarcoplásmico actúa como reserva de calcio en la fibra muscular.|El calcio almacenado en el retículo se libera para participar en la contracción.
+435|depósito de Ca|+|El retículo sarcoplásmico actúa como reserva de calcio en la fibra muscular.|El cuadro identifica al retículo sarcoplásmico como un depósito de calcio.
 @morfo-12|vias|Divisiones funcionales del sistema nervioso
 470|aferente|+|Una señal que viaja desde un receptor periférico hacia la médula lleva dirección aferente.|La vía aferente conduce información sensitiva hacia el sistema nervioso central.
 470|eferente|−|La dirección eferente describe una señal que entra al sistema nervioso central desde un receptor.|La vía eferente lleva órdenes desde el sistema nervioso central a un efector.
@@ -90,8 +90,8 @@
 507|agujero magno|+|La médula espinal continúa al tallo encefálico a nivel del agujero magno.|Ese punto corresponde al límite superior de la médula descrito en el capítulo.
 508|cola de caballo|−|La cola de caballo es la porción final del tejido de la médula espinal.|La cola de caballo está formada por raíces nerviosas que descienden más allá del extremo medular.
 @morfo-14|regiones|Tallo encefálico y diencéfalo
-553|mesencéfalo|+|El mesencéfalo forma parte del tallo encefálico junto con el puente y la médula oblongada.|Esas son las tres porciones del tallo encefálico.
-556|epitálamo|−|El epitálamo pertenece al tallo encefálico y queda fuera del diencéfalo.|El epitálamo forma parte del diencéfalo junto con el tálamo y el hipotálamo.
+542|principales campos|+|En la clasificación que adopta Saladin, el diencéfalo se incluye entre los campos principales del tallo encefálico.|Saladin enumera diencéfalo, mesencéfalo, protuberancia y bulbo raquídeo. También describe la clasificación de otros autores que excluye el diencéfalo.
+556|epitálamo|−|El epitálamo se describe como una subdivisión del mesencéfalo.|El epitálamo forma parte del diencéfalo junto con el tálamo y el hipotálamo.
 @morfo-15|vias-autonomas|Vías motoras autónomas
 592|preganglionar|−|En la vía autónoma típica la neurona preganglionar contacta directamente al órgano efector.|En la vía de dos neuronas, la preganglionar hace sinapsis en el ganglio con la posganglionar.
 592|posganglionar|+|La neurona que se dirige del ganglio al órgano efector es la posganglionar.|El soma posganglionar está en un ganglio periférico y su axón alcanza al efector.
@@ -99,8 +99,8 @@
 613|mecanorreceptores|+|Un receptor activado por la deformación debida al estiramiento se clasifica como mecanorreceptor.|Los mecanorreceptores responden a estímulos mecánicos, como el estiramiento o la presión.
 613|quimiorreceptores|−|Un receptor que detecta sustancias químicas se clasifica como termorreceptor.|Los quimiorreceptores detectan sustancias. Los termorreceptores responden a la temperatura.
 @morfo-17|secrecion|Glándulas endocrinas y exocrinas
-663|glándulas endocrinas|−|Las glándulas endocrinas requieren conductos para que su producto llegue al medio interno.|La secreción endocrina se vierte al medio interno sin conducto excretor. El conducto caracteriza a la secreción exocrina.
-665|receptores|−|Una célula expuesta a una hormona responde a ella aunque carezca del receptor apropiado.|La respuesta depende de que la célula diana posea un receptor específico.
+662|carecen de conductos|−|Las glándulas endocrinas requieren conductos para que su producto llegue al medio interno.|La secreción endocrina se vierte al medio interno sin conducto excretor. El conducto caracteriza a la secreción exocrina.
+688|células que tienen receptores|−|Una célula expuesta a una hormona responde a ella aunque carezca del receptor apropiado.|La respuesta depende de que la célula diana posea un receptor específico.
 @morfo-18|proteinas-plasma|Plasma sanguíneo · Proteínas plasmáticas
 709|albúmina|+|Que la albúmina sea la proteína plasmática más abundante no implica que sea la de mayor tamaño.|Saladin describe a la albúmina como la proteína plasmática más pequeña y abundante.
 709|globulinas|+|Las subclases de globulinas ordenadas de menor a mayor peso molecular son alfa, beta y gamma.|El orden que presenta el texto es alfa, beta y gamma.
