@@ -33,9 +33,15 @@ const root=path.resolve(__dirname,'..');
   if(width<600){
    assert.equal(await page.locator('#mobile-topbar').isVisible(),false);
    assert.equal(await page.locator('.support-float').isVisible(),false);
-   assert.equal(await page.locator('#flashcard-settings').isVisible(),false);
-   assert.equal(await page.locator('#flashcard-settings-toggle').getAttribute('aria-expanded'),'false');
-  }else assert.equal(await page.locator('#flashcard-settings').isVisible(),true);
+  }
+  assert.equal(await page.locator('#flashcard-settings').isVisible(),false);
+  assert.equal(await page.locator('#flashcard-settings-toggle').isVisible(),true);
+  assert.equal(await page.locator('#flashcard-settings-toggle').getAttribute('aria-expanded'),'false');
+  assert.equal(await page.locator('#flashcard-inventory, #flashcard-mode-help').count(),0);
+  await page.locator('#flashcard-settings-toggle').click();
+  assert.equal(await page.locator('#flashcard-settings').isVisible(),true);
+  await page.locator('#flashcard-settings-toggle').click();
+  assert.equal(await page.locator('#flashcard-settings').isVisible(),false);
   await page.screenshot({path:path.join(directory,'question-'+width+'.png'),fullPage:true});
   await page.locator('#btn-reveal').click();
   assert.equal(await page.locator('.fc-answer-source').innerText(),sample.reference);

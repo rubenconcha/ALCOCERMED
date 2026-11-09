@@ -26,7 +26,9 @@ const seed=JSON.parse(fs.readFileSync(path.join(root,'content/flashcards_morfo_2
  assert.match(await page.$eval('#library-topics',n=>n.innerText),/52 tarjetas en el tema/);
  await page.screenshot({path:path.join(folder,'library-desktop.png')});
  await page.click('[aria-label="Empezar tejido nervioso"]');assert.equal(await page.$eval('#card-total',n=>n.textContent), '52');
- assert.match(await page.$eval('#flashcard-inventory',n=>n.textContent),/52 tarjetas en el tema/);
+ assert.equal(await page.$eval('#flashcard-settings',n=>n.hidden),true);
+ assert.equal(await page.$('#flashcard-inventory, #flashcard-mode-help'),null);
+ await page.click('#flashcard-settings-toggle');
  // Preserve one future review, then prove browse mode neither hides it nor writes a review.
  await page.evaluate(()=>saveSrs(deck[0],86400000));
  await page.select('#flashcard-mode','all');assert.equal(await page.$eval('#card-total',n=>n.textContent),'52');
@@ -111,6 +113,7 @@ const seed=JSON.parse(fs.readFileSync(path.join(root,'content/flashcards_morfo_2
   }
  }
  await page.evaluate(()=>{FlashcardWorkspace.clear();currentUser={id:'another-account'};deck=[];});
+ await page.click('#flashcard-settings-toggle');
  await page.click('#flashcard-shuffle');assert.equal(await page.evaluate(()=>deck.length),0,'cleared private cards cannot restart in another account');
  assert.deepEqual(errors,[]);
  console.log('PASS: all 68 official decks open with >=20 cards, correct subject and sources; subtopic controls, longest answers at 390/1440, logos; 51 due vs 52 total; browse preserves dates and cleared caches cannot cross accounts.');

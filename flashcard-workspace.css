@@ -3,8 +3,6 @@
 #study-area .flashcard-control-row label{display:grid;gap:7px;flex:1;min-width:150px;color:#43556d;font-size:12px;font-weight:700;text-transform:none}
 #study-area .flashcard-control-row select{width:100%;padding:10px 12px;border:1px solid #cbd9e6;border-radius:10px;background:#f7fafc;color:#152b46;font:inherit;font-size:14px;min-height:42px;text-transform:none}
 #study-area #flashcard-shuffle{padding:11px 14px;border:1px solid #cbd9e6;border-radius:10px;background:#fff;color:#1c3652;font-weight:700;min-height:42px;cursor:pointer}
-#study-area #flashcard-inventory{margin:14px 0 6px;font-size:13px;color:#17627c;font-weight:700;text-transform:none}
-#study-area #flashcard-mode-help{margin:0;font-size:12px;line-height:1.5;color:#64758c;text-transform:none}
 #study-area #flashcard-context{text-transform:none;color:#44627b;font-size:13px;margin:10px auto 0;font-weight:600;max-width:620px}
 #study-area .flashcard-progress{width:100%;max-width:620px;height:5px;border-radius:8px;background:#dce6ef;margin:10px auto 14px;overflow:hidden}
 #study-area #flashcard-progress-fill{display:block;height:100%;background:linear-gradient(90deg,#1485a4,#38b1a1);border-radius:8px;transition:width .2s ease}

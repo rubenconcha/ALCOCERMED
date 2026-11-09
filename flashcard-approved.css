@@ -5,8 +5,8 @@
 #study-area .study-mobile-header,#study-area .study-progress-row,#study-area .flashcard-progress,#study-area .flashcard-controls,#study-area .card-container{width:100%;max-width:830px;margin-left:auto;margin-right:auto}
 #study-area #flashcard-context,#study-area .fc-recall-hint,#study-area .fc-context-art{display:none}
 #study-area .flashcard-controls{padding:14px 18px;margin-bottom:14px}
-#study-area .flashcard-controls #flashcard-inventory{font-size:12px;margin:10px 0 4px}
-#study-area .flashcard-controls #flashcard-mode-help{font-size:11px}
+#study-area .study-mobile-header > div{flex:1 1 0;min-width:0;width:auto}
+#study-area .study-mobile-header h2{overflow-wrap:anywhere}
 #study-area .study-progress-row{margin:6px auto 0}
 #study-area .card-counter{margin:0;font-size:13px;letter-spacing:0;color:#687e98}
 #study-area .flashcard-progress{height:4px;margin:10px auto 16px}
@@ -46,20 +46,33 @@
 #study-area .btn-nav{min-height:52px;border-radius:19px;font-size:14px;font-weight:900;box-shadow:0 15px 24px #16335412}
 #study-area .btn-nav-left{background:#e8eef5;color:#263c55}
 #study-area .btn-nav-right{background:#101a2c;color:#fff}
-#study-area #flashcard-settings-toggle{display:none}
+#study-area #flashcard-settings-toggle {
+ margin-inline-start: auto;
+ min-height: 44px;
+ padding: 0 12px;
+ border: 1px solid var(--shell-line, #d3dfed);
+ border-radius: 9px;
+ background: var(--shell-panel, #fff);
+ color: var(--shell-muted, #365779);
+ font: inherit;
+ font-size: 13px;
+ font-weight: 700;
+ cursor: pointer;
+}
+#study-area #flashcard-settings-toggle:focus-visible{outline:2px solid #159da2;outline-offset:3px}
+#study-area #flashcard-settings-toggle[aria-expanded=true]{background:var(--shell-blue-soft,#e3f2f4);color:var(--shell-blue,#00768a)}
 body:has(#study-area:not(.hidden)) .support-float{display:none!important}
 @media(max-width:600px){
  body:has(#study-area:not(.hidden)) #mobile-topbar{display:none!important}
  #study-area.study-area{width:100%;min-height:100svh;padding-top:max(16px,env(safe-area-inset-top));padding-bottom:max(18px,env(safe-area-inset-bottom))}
- #study-area .study-mobile-header{grid-template-columns:auto minmax(0,1fr) auto;gap:10px;margin-bottom:12px}
+ #study-area .study-mobile-header,
+ .campus-shell #study-area.study-area .study-mobile-header{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:12px}
+ #study-area .study-mobile-header > div{grid-column:1/-1;grid-row:2}
+ #study-area .study-mobile-header .btn-back-game{justify-self:start}
+ #study-area #flashcard-settings-toggle{grid-column:2;grid-row:1}
  #study-area .study-mobile-header h2{font-size:18px;line-height:1.2;margin:0}
  #study-area .study-subject-pill{display:none}
  #study-area .btn-back-game{font-size:12px;min-height:44px;padding:0 11px;box-shadow:none}
- #study-area #flashcard-settings-toggle{display:block;min-height:44px;padding:0 11px;border:1px solid #d3dfed;border-radius:14px;background:#fff;color:#365779;font:inherit;font-size:12px;font-weight:700;cursor:pointer}
- #study-area #flashcard-settings-toggle:focus-visible{outline:3px solid #159da2;outline-offset:3px}
- #study-area #flashcard-settings-toggle[aria-expanded=true]{background:#e3f2f4;color:#00768a;border-color:#a8d5d6}
- #study-area .flashcard-controls{display:none}
- #study-area.fc-settings-open .flashcard-controls{display:block}
  #study-area .flashcard-controls{padding:12px}
  #study-area .flashcard-control-row{gap:9px}
  #study-area .flashcard-control-row label{min-width:0;flex:1}

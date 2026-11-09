@@ -755,7 +755,7 @@
 }
 .campus-shell.campus-dark :is(
     .sf-bank-links button, .sf-card-meta, .sf-original, .sf-time, .sf-level-description, .sf-level-badge, .sf-question p,
-    .sr-count, .eval-metric-card span, .eval-section-title, .card-counter, #flashcard-inventory, #flashcard-mode-help,
+    .sr-count, .eval-metric-card span, .eval-section-title, .card-counter,
     .dashboard-progress :is(.daily-goal-title, .daily-goal-count, .daily-goal-msg, .prog-label, .prog-materia-row, .prog-bar-labels),
     .banco-select-label, .vc-search-wrap i, .mm-filter-field label, .resumenes-filters label
 ) { color: var(--shell-muted) }

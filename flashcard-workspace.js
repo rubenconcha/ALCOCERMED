@@ -3,11 +3,12 @@
  const modeSelect=document.getElementById('flashcard-mode'),subSelect=document.getElementById('flashcard-subtopic');
  if(!modeSelect||!subSelect)return;
  const settingsToggle=document.getElementById('flashcard-settings-toggle');
+ const settingsPanel=document.getElementById('flashcard-settings');
  function setSettings(open){
-  document.getElementById('study-area').classList.toggle('fc-settings-open',open);
-  if(settingsToggle){settingsToggle.setAttribute('aria-expanded',String(open));settingsToggle.textContent=open?'Cerrar':'Ajustes';}
+  settingsPanel.hidden=!open;
+  settingsToggle.setAttribute('aria-expanded',String(open));
  }
- settingsToggle?.addEventListener('click',()=>setSettings(settingsToggle.getAttribute('aria-expanded')!=='true'));
+ settingsToggle.addEventListener('click',()=>setSettings(settingsPanel.hidden));
  let topic='',subject='',all=[],mode='due',subtopic='',pending=false,owner=null;
  const value=(row,key)=>row?.[key]??row?.[key.toUpperCase()]??'';
  const make=(tag,cls,text)=>{const n=document.createElement(tag);n.className=cls;if(text)n.textContent=text;return n;};
@@ -32,7 +33,7 @@
  subSelect.addEventListener('change',()=>{subtopic=subSelect.value;restart();});
  document.getElementById('flashcard-shuffle').addEventListener('click',restart);
  window.FlashcardWorkspace={
-  clear(){setSettings(false);topic='';subject='';all=[];mode='due';subtopic='';pending=false;owner=null;document.getElementById('flashcard-inventory').textContent='';document.getElementById('flashcard-context').textContent='';},
+  clear(){setSettings(false);topic='';subject='';all=[];mode='due';subtopic='';pending=false;owner=null;document.getElementById('flashcard-context').textContent='';},
   isExploring:()=>mode==='all',
   renderAnswer(node,card){
    node.replaceChildren();
@@ -66,12 +67,8 @@
    const every=document.createElement('option');every.value='';every.textContent='Todos los subtemas · '+cards.length;subSelect.append(every);
    for(const [label,count] of groups){const o=document.createElement('option');o.value=label;o.textContent=label+' · '+count+' tarjetas';subSelect.append(o);}
    subSelect.value=subtopic;
-   const filtered=cards.filter(c=>!subtopic||(value(c,'subtema')||'Base del tema')===subtopic);
-   const due=filtered.filter(isCardDue).length;
-   document.getElementById('flashcard-inventory').textContent=cards.length+' tarjetas en el tema · '+filtered.length+' en esta selección · '+due+' disponibles hoy';
-   document.getElementById('flashcard-mode-help').textContent=mode==='all'?'Exploración: puedes verlas todas sin cambiar tus fechas de repaso.':'Repaso programado: las tarjetas calificadas vuelven cuando llega su fecha.';
    document.getElementById('study-area').classList.toggle('fc-exploring',mode==='all');
-   return filtered;
+   return cards.filter(c=>!subtopic||(value(c,'subtema')||'Base del tema')===subtopic);
   },
   render(card){
    decorate(card);
