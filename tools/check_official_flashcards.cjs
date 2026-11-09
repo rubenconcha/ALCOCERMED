@@ -31,7 +31,6 @@ const root=path.resolve(__dirname,'..');
   console.log(JSON.stringify({width,metrics}));
   assert.ok(metrics.scroll<=width+1,'horizontal overflow at '+width);
   if(width<600){
-   assert.equal(await page.locator('#mobile-topbar').isVisible(),false);
    assert.equal(await page.locator('.support-float').isVisible(),false);
   }
   assert.equal(await page.locator('#flashcard-settings').isVisible(),false);
@@ -95,9 +94,11 @@ const root=path.resolve(__dirname,'..');
  await page.evaluate(rows=>startDeck(rows[0].tema,rows[0].materia,rows),cards);
  await page.locator('#btn-reveal').click();
  assert.equal(await page.locator('.fc-answer-table').count(),0,'the table must not remain on unrelated answers');
- await page.evaluate(()=>document.getElementById('study-area').classList.add('hidden'));
- assert.equal(await page.locator('#mobile-topbar').isVisible(),true,'the campus header returns when leaving study');
- assert.equal(await page.locator('.support-float').isVisible(),true,'support remains available outside study');
+ await page.locator('#study-area .btn-back-game').click();
+ assert.equal(await page.locator('#study-area').isVisible(),false);
+ assert.equal(await page.locator('#study-library').isVisible(),true);
+ assert.equal(await page.locator('#campus-menu').isVisible(),true);
+ assert.equal(await page.locator('.campus-toolbar-support').isVisible(),true,'mobile support remains available outside study');
  assert.deepEqual(errors,[]);
  await browser.close();
  console.log('PC and mobile study flow passed.');
