@@ -3003,6 +3003,8 @@ body.wayground-active .main-content {
 .qr-commentary-muted { color: var(--shell-muted, #53647a); }
 .qr-reasons, .qr-answers { display: grid; gap: 8px; margin: 0; padding: 0; list-style: none; }
 .qr-commentary-copy + .qr-reasons { margin-top: 12px; }
+.qr-teaching-claims { list-style: none; padding: 0; margin: 10px 0 14px; }
+.qr-teaching .qr-reading-link + .qr-reading-link { margin-top: 6px; }
 .qr-reason, .qr-answer {
     min-width: 0;
     border: 1px solid var(--shell-line, #dce3eb);

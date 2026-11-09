@@ -44,6 +44,18 @@
   return lines.length===count&&lines.every((line,i)=>line.startsWith((i+1)+'. '))&&
    combinations['ABCDE'.indexOf(q.respuesta_correcta)]===q.truth_values.map(Number).join('');
  }
+ function validateTeaching(review, count){
+  if(!review?.concepto?.trim() || review.afirmaciones?.length!==count ||
+     !Array.isArray(review.repaso) || !review.repaso.length || review.repaso.length>count)return false;
+  const pages=new Set();
+  for(const entry of review.repaso){
+   if(!Number.isInteger(entry.pagina)||entry.pagina<29||entry.pagina>1175||
+      entry.impresa!==entry.pagina-28||!entry.tema?.trim()||pages.has(entry.pagina))return false;
+   pages.add(entry.pagina);
+  }
+  return Array.isArray(review.afirmaciones)&&review.afirmaciones.every(row=>
+   ['correcta','incorrecta','contraste'].includes(row.estado)&&row.comentario?.trim()&&pages.has(row.pagina));
+ }
  function validatePrepa(paper, format){
   if(!format || paper?.id!==format.curatedId || paper.scope!=='prepa' || paper.title!==format.title ||
      paper.duration!==format.minutes || paper.total_points!==format.questionCount ||
@@ -69,7 +81,7 @@
     lines.slice(1).every((line,j)=>line.startsWith((j+1)+'. ')&&line.slice(3).trim())&&
     [...letters].every(letter=>Boolean(q['opcion_'+letter.toLowerCase()]))&&(count===3||!q.opcion_e)&&
     [...letters].includes(q.respuesta_correcta)&&q.respuestas_aceptadas?.length===1&&
-    q.respuestas_aceptadas[0]===q.respuesta_correcta;
+    q.respuestas_aceptadas[0]===q.respuesta_correcta&&validateTeaching(q.revision_docente,count);
   });
  }
  function validate(paper,scope,format){

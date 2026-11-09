@@ -124,6 +124,35 @@
   if(a.questions.length){box.append(el('h3','Preguntas con más errores (detalle guardado)'));a.questions.forEach(q=>{const row=el('div',null,'sr-rate');row.append(el('p',q.label+' · '+q.wrong+' errores / '+q.answered+' respuestas con clave'));const bar=el('div',null,'sr-bar'),fill=el('span');fill.style.width=(q.wrong/a.questions[0].wrong*100)+'%';bar.append(fill);row.append(bar);box.append(row);});}
   target.append(box);
  }
+ async function loadPrepaTeaching(items, token) {
+  const oldMixed = {
+   'prepa-06': ['prepa-06','prepa-07'],
+   'prepa-07-08': ['prepa-07','prepa-08'],
+   'prepa-08-09': ['prepa-08','prepa-09']
+  };
+  const ids = new Set();
+  for (const item of items || []) {
+   if (item.teaching) continue;
+   const match = /^(prepa-(?:\d{2}(?:-\d{2})?|segundo-a))-\d+$/.exec(item.id);
+   if (match) for (const id of oldMixed[match[1]] || [match[1]]) ids.add(id);
+  }
+  if (!ids.size || !token) return items;
+  const replies = await Promise.allSettled([...ids].map(async id => {
+   const response = await fetch('/api/simulation?id='+encodeURIComponent(id), {
+    headers: { Authorization:'Bearer '+token }, cache:'no-store', signal:AbortSignal.timeout(8000)
+   });
+   if (!response.ok) return [];
+   const paper = await response.json();
+   return paper.id === id && Array.isArray(paper.questions) ? paper.questions : [];
+  }));
+  const latest = new Map(replies.flatMap(reply => reply.status === 'fulfilled' ? reply.value.map(q => [q.id,q]) : []));
+  return items.map(item => {
+   const q = latest.get(item.id);
+   if (item.teaching || !q?.revision_docente || q.pregunta !== item.question) return item;
+   const { teaching, source, printed_page, pdf_page } = root.QuestionReview.commentaryData(q, (row,key) => row[key]);
+   return { ...item, teaching, source, printed_page, pdf_page };
+  });
+ }
  async function review(row){
   if(actor()!==owner)return;const account=owner,request=++detailGeneration;content.hidden=true;filters.hidden=true;detail.replaceChildren();const close=el('button','← Volver a mi historial','btn-back-game');close.type='button';close.onclick=()=>{detailGeneration++;detail.replaceChildren();content.hidden=false;filters.hidden=false;};detail.append(close,el('h2',row.simulacro_titulo||'Resultado'),el('p','Cargando respuestas guardadas…'));detail.scrollIntoView({block:'start'});
   const valid=()=>request===detailGeneration&&actor()===account&&owner===account;
@@ -134,7 +163,10 @@
    if(res.error&&!missing)throw Error('No se pudo cargar el detalle de este intento. Vuelve al historial e inténtalo de nuevo.');
    const live=(await api.auth.getSession()).data.session;if(!valid()||live?.user?.id!==account)return;
    if(!missing&&(res.data?.user_id!==account||String(res.data?.id)!==String(row.id)))throw Error('Este intento no está disponible para tu cuenta.');
-   const record={...row,question_review:missing?null:res.data.question_review},s=summary(record);detail.replaceChildren(close,el('h2',row.simulacro_titulo||'Resultado'));
+   const record={...row,question_review:missing?null:res.data.question_review},s=summary(record);
+   s.items=await loadPrepaTeaching(s.items,live?.access_token);
+   if(!valid())return;
+   detail.replaceChildren(close,el('h2',row.simulacro_titulo||'Resultado'));
    const stats=el('div',null,'eval-metrics-grid');[['correct','Aciertos'],['wrong','Errores'],['omitted','Omitidas'],['unknown','Sin clave / detalle incompleto']].forEach(([key,label])=>stats.append(metric(label,s[key]??'No registrado')));detail.append(stats);drawAnalysis([record],detail);
    if(!s.items){detail.append(el('p',record.question_review==null?'Este intento conserva solo el resumen. No se guardaron las respuestas individuales; no es posible reconstruir aciertos y errores por pregunta.':'El detalle guardado está incompleto o no tiene un formato compatible. Se conserva la nota original.','sr-note'));return;}
    const tabs=el('div',null,'sr-review-filters'),questions=el('div');detail.append(tabs,questions);

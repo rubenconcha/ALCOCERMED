@@ -19,7 +19,14 @@ function fixture(format) {
                 pregunta: 'Enunciado de prueba\n1. Primera\n2. Segunda' + (n <= 25 ? '\n3. Tercera' : ''),
                 opcion_a: 'Primera', opcion_b: 'Segunda', opcion_c: 'Combinación', opcion_d: 'Otra',
                 ...(n <= 25 ? { opcion_e: 'Ninguna' } : {}),
-                respuesta_correcta: 'B', respuestas_aceptadas: ['B'], puntos: 1, materia: 'MORFOFUNCION'
+                respuesta_correcta: 'B', respuestas_aceptadas: ['B'], puntos: 1, materia: 'MORFOFUNCION',
+                revision_docente: {
+                    concepto: 'Concepto de ejemplo',
+                    afirmaciones: Array.from({ length: n <= 25 ? 3 : 2 }, () => ({
+                        estado: 'correcta', comentario: 'Fundamento de ejemplo', pagina: 72
+                    })),
+                    repaso: [{ tema: 'Lectura de ejemplo', pagina: 72, impresa: 44 }]
+                }
             };
         })
     };
@@ -49,6 +56,12 @@ test('exam validator preserves the question numbering and both answer formats', 
         item.opcion_e = optionE;
         item.numero_original++;
         assert.equal(validate(paper, 'prepa', format), false);
+        item.numero_original--;
+        item.revision_docente.repaso[0].impresa = 72;
+        assert.equal(validate(paper, 'prepa', format), false);
+        item.revision_docente.repaso[0].impresa = 44;
+        item.revision_docente.afirmaciones.pop();
+        assert.equal(validate(paper, 'prepa', format), false);
     }
 });
 
@@ -65,7 +78,7 @@ test('the private paper is requested only after the campus authorizes paid acces
         if (String(url).endsWith('/rpc/campus_access')) {
             return Response.json({ ready: true, premium: init.headers.Authorization === 'Bearer paid' });
         }
-        assert.match(String(url), /\/simulacros\/preparatoria-v2\/prepa-01\.json$/);
+        assert.match(String(url), /\/simulacros\/preparatoria-v3\/prepa-01\.json$/);
         assert.equal(init.headers.Authorization, 'Bearer test-blob-token');
         reads++;
         return Response.json(fixture(format));

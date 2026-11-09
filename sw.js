@@ -1,8 +1,8 @@
-const CACHE_NAME = 'alcocermed-main-v176-simulacros-por-capitulo';
+const CACHE_NAME = 'alcocermed-main-v177-comentarios-simulacros';
 const APP_SHELL = [
-    './student-results.js?v=3',
+    './student-results.js?v=4',
     './student-results.css?v=1',
-    './question-review.js?v=7',
+    './question-review.js?v=8',
     './suficiencia-core.js?v=11',
     './suficiencia.js?v=14',
     './suficiencia.css?v=8',
@@ -22,7 +22,7 @@ const APP_SHELL = [
     './assets/flashcard-icons/bien-smile-3d.png',
     './assets/flashcard-icons/facil-3d.png',
     './manifest.webmanifest',
-    './styles.css?v=43',
+    './styles.css?v=44',
     './commerce.css?v=1',
     './student-white.css?v=2',
     './campus-theme.css?v=4',
@@ -70,7 +70,7 @@ const APP_SHELL = [
     './intocables-sheets.css?v=1',
     './assets/study-art/intocables-hero.webp',
     './study-assessments.js?v=2',
-    './simulation-scope.js?v=10',
+    './simulation-scope.js?v=11',
     './simulacro-ingreso.js?v=13',
     './simulacro-library.js?v=8',
     './simulacro-library.css?v=7',

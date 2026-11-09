@@ -7,7 +7,7 @@ const week3Id = 'semana3-grupo-virtual-2';
 scopes.set(week3Id, week3Id);
 const prepa = new Map(catalog.entries.filter(entry => entry.scope === 'prepa').map(entry => [entry.curatedId, entry]));
 for (const id of prepa.keys()) scopes.set(id, 'prepa');
-const prepaStorage = 'https://ln3dltv3md2wx5wh.private.blob.vercel-storage.com/simulacros/preparatoria-v2/';
+const prepaStorage = 'https://ln3dltv3md2wx5wh.private.blob.vercel-storage.com/simulacros/preparatoria-v3/';
 const supabaseUrl = 'https://asnwhddmurstzmghuyin.supabase.co';
 const anonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFzbndoZGRtdXJzdHptZ2h1eWluIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzY1MDcwODAsImV4cCI6MjA5MjA4MzA4MH0.bd3kz5Xji6gQknGVw_M2d80XUTwcKzLyOEqKQwfaTmo';
 
