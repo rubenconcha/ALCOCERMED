@@ -68,6 +68,22 @@ function loadScriptOnce(src, ordered = false) {
 
 const campusAssetRequests = new Map();
 const campusAssetStyles = new Map();
+let pastExamCatalogRequest;
+
+window.loadPastExamCatalog = () => {
+    if (!pastExamCatalogRequest) {
+        pastExamCatalogRequest = fetch('/content/past-exams/catalog.json?v=examenes-umss')
+            .then(response => {
+                if (!response.ok) throw new Error('No se pudo cargar el catálogo de exámenes. Intenta de nuevo.');
+                return response.json();
+            }).catch(error => {
+                pastExamCatalogRequest = null;
+                throw error;
+            });
+    }
+    return pastExamCatalogRequest;
+};
+
 function loadCampusStyle(url) {
     if (campusAssetStyles.has(url)) return campusAssetStyles.get(url);
     const request = new Promise((resolve, reject) => {
@@ -88,6 +104,7 @@ function loadCampusStyle(url) {
 }
 
 window.loadCampusAssets = function (group) {
+    if (group === 'past') window.loadPastExamCatalog().catch(() => {});
     if (campusAssetRequests.has(group)) return campusAssetRequests.get(group);
     const template = document.getElementById('campus-section-assets');
     if (!template) return Promise.resolve();
@@ -100,6 +117,43 @@ window.loadCampusAssets = function (group) {
     return request;
 };
 
+function openCampusFeature(group, open) {
+    return async (...args) => {
+        const request = (window.campusNavigationRequest || 0) + 1;
+        window.campusNavigationRequest = request;
+        const owner = currentUser?.id;
+        const isCurrent = () => request === window.campusNavigationRequest && owner === currentUser?.id;
+        try {
+            await window.loadCampusAssets(group);
+            if (isCurrent()) return await open(...args);
+        } catch (error) {
+            if (isCurrent()) showToast(error.message || 'Vuelve a abrir la sección.', 'error');
+        }
+    };
+}
+
+function lazyCampusExport(group, name) {
+    const load = openCampusFeature(group, (...args) => {
+        const open = window[name];
+        if (open === load) throw new Error('No pudimos abrir la sección. Intenta de nuevo.');
+        return open(...args);
+    });
+    window[name] = load;
+}
+
+lazyCampusExport('flashcards', 'openStudyLibrary');
+lazyCampusExport('atlas', 'openAtlas');
+lazyCampusExport('past', 'openPastExams');
+window.openTopicEvaluations = openCampusFeature('evaluations', (...args) => window.openEvaluacion(...args));
+window.openCampusSimulations = openCampusFeature('simulations', () => window.openSimulacro());
+window.openCampusRequestedSimulation = openCampusFeature('simulations', () => window.openRequestedSimulation());
+window.openSufficiency = openCampusFeature('sufficiency', () => window.Sufficiency.open());
+window.openStudyCalendar = openCampusFeature('calendar', (date, activityId) => {
+    const calendar = window.CampusCalendar;
+    calendar.setUser(currentUser.id);
+    if (!date || !calendar.openDate(date, activityId)) calendar.open();
+});
+
 window.loadMindmapCatalog = () => window.MINDMAP_PREMIUM_CATALOG
     ? Promise.resolve() : loadScriptOnce('/mindmap-premium-catalog.js?v=20261021-visual5b');
 window.loadMindmapContent = () => Promise.all([
@@ -111,9 +165,9 @@ window.loadMindmapContent = () => Promise.all([
 async function ensureSupabaseSdk() {
     if (window.supabase && window.supabase.createClient) return window.supabase;
     if (!_supabaseSdkPromise) {
-        _supabaseSdkPromise = loadScriptOnce('https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2')
+        _supabaseSdkPromise = loadScriptOnce('/assets/vendor/supabase.js?v=2.118.0')
             .catch(function() {
-                return loadScriptOnce('https://unpkg.com/@supabase/supabase-js@2');
+                return loadScriptOnce('https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.118.0');
             })
             .then(function() {
                 if (!window.supabase || !window.supabase.createClient) {
@@ -214,6 +268,7 @@ function showLoginScreen() {
     window.CampusShell?.setUser();
     window.CampusPastExams?.clear();
     window.Sufficiency?.clear?.();
+    clearVideoclases();
     bancoQuestionsRequest = null;
     closeMobileSidebar();
     window.CampusShell?.syncMenu();
@@ -267,6 +322,7 @@ function enterApp(user) {
             await campusDomReady;
             if (currentUser?.id !== user.id) return;
             CampusAccess.apply(access);
+            clearVideoclases();
             window.TopicEvaluations?.clear();
             clearBancoSuficiencia();
             flashcardsCache = null;
@@ -317,12 +373,12 @@ function enterVerifiedApp(user) {
     else if (section === 'practica-suficiencia') showScreen('sufficiency-practice-screen');
     else if (section === 'calendario') {
         const day = campusParams.get('dia');
-        if (!day || !window.CampusCalendar?.openDate(day, campusParams.get('actividad') || '')) window.CampusCalendar?.open();
+        window.openStudyCalendar(day, campusParams.get('actividad') || '');
     }
-    else if (section === 'simulacros') window.openSimulacro();
+    else if (section === 'simulacros') window.openCampusSimulations();
     else if (section === 'examenes-pasados') window.openPastExams(campusParams.get('vista') === 'temas');
     else if (section === 'contacto') showScreen('campus-contact-screen');
-    else if (campusParams.get('simulacro') && window.openRequestedSimulation) window.openRequestedSimulation().catch(function(error) { showToast(error.message, 'error'); });
+    else if (campusParams.get('simulacro')) window.openCampusRequestedSimulation();
     else restoreCampusAfterPlans();
     if (campusParams.has('mapa')) window.loadCampusAssets('maps')
         .then(() => { if (verifiedCampusUserId === user.id) return window.openRequestedMindmap?.(); })
@@ -356,7 +412,7 @@ async function restoreCampusAfterPlans() {
             'resource-browser': () => openGameMenu(),
             'banco-screen': () => openBanco(),
             'past-exams-screen': () => openPastExams(),
-            'simulacro-screen': () => openSimulacro(),
+            'simulacro-screen': () => openCampusSimulations(),
             'intocables-hub-screen': () => openIntocables()
         };
         if (destinations[saved.screen]) await destinations[saved.screen]();
@@ -549,6 +605,7 @@ function showScreen(screenId, fromBack) {
         clearInterval(simState.timerInterval); simState.timerInterval = null;
         simState.preguntas = []; simState.answers = [];
     }
+    window.campusNavigationRequest = (window.campusNavigationRequest || 0) + 1;
     if (screenId !== currentCampusScreen) {
         if (!fromBack) campusScreenHistory.push(currentCampusScreen);
         currentCampusScreen = screenId;
@@ -1885,7 +1942,7 @@ async function fetchAllBancoQuestions() {
         const client = getSupabase();
         const course = (async () => {
             const rows = [];
-            const pageSize = 500;
+            const pageSize = 1000;
             for (let offset = 0; ; offset += pageSize) {
                 const { data, error } = await client.from('banco_preguntas')
                     .select('*').order('id', { ascending: true })
@@ -1951,6 +2008,7 @@ window.addEventListener('campus-access-change', function () {
 });
 
 async function fetchBancoSuficiencia(owner) {
+    await window.loadCampusAssets?.('sufficiency');
     const core = window.SufficiencyCore;
     if (window.Sufficiency?.readIndex) {
         const bank = await window.Sufficiency.readIndex();
@@ -3887,26 +3945,50 @@ async function renderEvaluacion() {
 var vcState = {
     allVideos: [],
     filteredVideos: [],
-    selectedMateria: null
+    selectedMateria: null,
+    catalog: null
 };
+
+function clearVideoclases() {
+    vcState.catalog = null;
+    vcState.allVideos = [];
+    vcState.filteredVideos = [];
+    vcState.selectedMateria = null;
+    document.getElementById('vc-grid')?.replaceChildren();
+    const matter = document.getElementById('vc-materia-text');
+    if (matter) matter.textContent = 'todas las materias';
+}
+
+window.addEventListener('campus-access-change', () => {
+    if (CampusAccess.isFree()) clearVideoclases();
+});
 
 window.openVideoclases = function () {
     if (CampusAccess.isFree()) return CampusAccess.unlock();
-    showScreen('videoclases-screen');
+    if (showScreen('videoclases-screen') === false) return;
     closeMobileSidebar();
     loadVideoclases();
 };
 
 async function loadVideoclases() {
+    const owner = currentUser?.id;
+    if (!owner || CampusAccess.isFree()) return;
+    const cached = vcState.catalog;
+    if (cached?.owner === owner && (!cached.expires || cached.expires > Date.now())) return;
+    const request = { owner, expires: 0 };
+    vcState.catalog = request;
     setVcState('loading');
     try {
-        var client = getSupabase();
-        var res = await client.from('videoclases').select('*').order('MATERIA', { ascending: true });
+        const res = await getSupabase().from('videoclases').select('*').order('MATERIA', { ascending: true });
+        if (request !== vcState.catalog || currentUser?.id !== owner || CampusAccess.isFree()) return;
         if (res.error) throw res.error;
         vcState.allVideos = res.data || [];
         populateVcMaterias();
         filterVideoclases();
+        request.expires = Date.now() + 60_000;
     } catch (e) {
+        if (request !== vcState.catalog || currentUser?.id !== owner || CampusAccess.isFree()) return;
+        vcState.catalog = null;
         setVcState('empty');
         console.warn('[Videoclases] Error:', e.message);
     }
@@ -3970,8 +4052,8 @@ window.filterVideoclases = function () {
 function renderVcGrid() {
     setVcState(vcState.filteredVideos.length === 0 ? 'empty' : 'grid');
     var grid = document.getElementById('vc-grid');
-    if (!grid || vcState.filteredVideos.length === 0) return;
-    grid.innerHTML = '';
+    if (!grid) return;
+    const cards = document.createDocumentFragment();
     vcState.filteredVideos.forEach(function (v) {
         var titulo = campo(v, 'titulo') || 'Sin título';
         var desc = campo(v, 'descripcion') || '';
@@ -3988,7 +4070,7 @@ function renderVcGrid() {
         card.innerHTML =
             '<div class="vc-thumb-wrap">' +
             (thumbSrc
-                ? '<img class="vc-thumb" src="' + thumbSrc + '" alt="' + titulo + '" onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">' +
+                ? '<img class="vc-thumb" loading="lazy" decoding="async" src="' + thumbSrc + '" alt="' + titulo + '" onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">' +
                 '<div class="vc-thumb-placeholder" style="display:none"><i class="fas fa-play-circle"></i></div>'
                 : '<div class="vc-thumb-placeholder"><i class="fas fa-play-circle"></i></div>') +
             '<div class="vc-play-overlay"><i class="fas fa-play"></i></div>' +
@@ -4000,8 +4082,9 @@ function renderVcGrid() {
             (desc ? '<p class="vc-card-desc">' + desc + '</p>' : '') +
             (tema ? '<span class="vc-card-tema"><i class="fas fa-tag"></i> ' + tema.toLowerCase() + '</span>' : '') +
             '</div>';
-        grid.appendChild(card);
+        cards.appendChild(card);
     });
+    grid.replaceChildren(cards);
 }
 
 function getYtThumbnail(url) {

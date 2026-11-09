@@ -142,7 +142,7 @@ test('the three verified UMSS books open their private page segments and downloa
     for (const [index, card] of get('grid').children.entries()) {
         const [subject, art] = catalog[index];
         const icon = card.children[0];
-        assert.equal(icon.src, '/assets/study-art/' + art + '.png');
+        assert.equal(icon.src, '/assets/study-art/' + art + '.webp');
         assert.equal(icon.alt, '');
         assert.ok(funnel.includes('src="' + icon.src + '"'), subject);
         assert.ok(fs.existsSync(path.join(__dirname, '..', icon.src.slice(1))), icon.src);

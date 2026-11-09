@@ -1,7 +1,7 @@
-const CACHE_NAME = 'alcocermed-juegos-v111-campus';
+const CACHE_NAME = 'alcocermed-juegos-v112-fluidez';
 const ASSETS_TO_CACHE = [
     './game-rounds.js?v=1',
-    './game-practice.js?v=2',
+    './game-practice.js?v=20261021-visual5b',
     './game-question-images.js?v=1',
     './app.js?v=20261108-campus',
     './styles.css?v=87',
@@ -39,8 +39,12 @@ const ASSETS_TO_CACHE = [
     './assets/preguntas-contextuales/prevencion.svg',
     './tejido-nervioso.css?v=8',
     './manifest.json',
-    '././logo_app.png',
-    './bg_music.mp4',
+    './logo-app-240.webp',
+    '/assets/vendor/supabase.js?v=2.118.0',
+    '/assets/vendor/font-awesome-6.4.0/css/all.min.css',
+    '/assets/fonts/inter/inter.css?v=1',
+    '/assets/fonts/inter/latin.woff2',
+    '/assets/fonts/inter/latin-ext.woff2',
     '../device_guard.js?v=9',
     '/device-limit.css?v=1',
     './tejido-nervioso-imagenes.js?v=5',
@@ -54,12 +58,16 @@ const ASSETS_TO_CACHE = [
     './tejido-nervioso.js?v=14',
 ];
 
+const STATIC_ASSETS = new Set(ASSETS_TO_CACHE.map(asset => new URL(asset, self.location.origin + '/juegos/').href));
+const ENTRY_ASSETS = ASSETS_TO_CACHE.filter(asset => !asset.includes('/assets/preguntas') &&
+    !asset.endsWith('result_arena_bg.png') && !asset.endsWith('latin-ext.woff2'));
+
 // Instalar el Service Worker y almacenar en caché los recursos estáticos
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then((cache) => {
-        return Promise.allSettled(ASSETS_TO_CACHE.map((asset) => cache.add(asset)));
+        return Promise.allSettled(ENTRY_ASSETS.map((asset) => cache.add(asset)));
       })
   );
   self.skipWaiting();
@@ -81,11 +89,10 @@ self.addEventListener('activate', (event) => {
   self.clients.claim();
 });
 
-// Estrategia de Fetch: Network First, fallback to Cache
-// Para que siempre intente traer la versión más nueva de la red, pero si no hay internet cargue la caché.
 self.addEventListener('fetch', (event) => {
   // Ignorar peticiones que no sean GET (como el API de Supabase)
-  if (event.request.method !== 'GET') return;
+  if (event.request.method !== 'GET' || event.request.headers?.has('Range') ||
+      event.request.headers?.has('Authorization')) return;
   
   // Ignorar absolutamente todo lo que vaya a Supabase para evitar cuelgues de red en PWA
   const url = new URL(event.request.url);
@@ -94,21 +101,21 @@ self.addEventListener('fetch', (event) => {
   // Ignorar extensiones de Chrome y peticiones cruzadas extrañas
   if (!event.request.url.startsWith('http')) return;
 
-  event.respondWith(
-    fetch(event.request)
-      .then((networkResponse) => {
-        // Clonar la respuesta de la red y actualizar la caché si es un recurso local o de asset
-        if(networkResponse && networkResponse.status === 200 && networkResponse.type === 'basic' && !/no-store|private/i.test(networkResponse.headers.get('Cache-Control') || '')) {
-            const responseToCache = networkResponse.clone();
-            caches.open(CACHE_NAME).then((cache) => {
-              cache.put(event.request, responseToCache);
-            });
-        }
-        return networkResponse;
-      })
-      .catch(() => {
-        // Si falla la red (offline), intentar desde la caché
-        return caches.match(event.request);
-      })
-  );
+  event.respondWith((async () => {
+    const cache = await caches.open(CACHE_NAME);
+    if (STATIC_ASSETS.has(url.href) && (url.searchParams.has('v') || url.pathname.startsWith('/assets/vendor/'))) {
+      const hit = await cache.match(event.request);
+      if (hit) return hit;
+    }
+    try {
+      const response = await fetch(event.request);
+      if (response.status === 200 && response.type === 'basic' &&
+          !/no-store|private/i.test(response.headers.get('Cache-Control') || '')) {
+        cache.put(event.request, response.clone()).catch(() => {});
+      }
+      return response;
+    } catch (_) {
+      return (await cache.match(event.request)) || Response.error();
+    }
+  })());
 });

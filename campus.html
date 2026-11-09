@@ -14,15 +14,13 @@
     <meta name="apple-mobile-web-app-title" content="AlcocerMed">
     <link rel="manifest" href="manifest.webmanifest">
     <link rel="apple-touch-icon" href="logo%20app%20juegos.png">
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
     <link rel="preconnect" href="https://asnwhddmurstzmghuyin.supabase.co" crossorigin>
-    <link rel="preload" href="/content/past-exams/catalog.json?v=examenes-umss" as="fetch" crossorigin="anonymous" fetchpriority="low">
 
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" async data-supabase-sdk></script>
+    <script src="/assets/vendor/supabase.js?v=2.118.0" async data-supabase-sdk></script>
 
     <style>body.login-active :is(.sidebar,.main-content,.watermark,.overlay){display:none!important}</style>
-    <link href="assets/mindmaps/fonts/outfit.css?v=2" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" fetchpriority="low" onload="this.media='all'">
+    <link href="assets/mindmaps/fonts/outfit.css?v=3" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/vendor/font-awesome-6.4.0/css/all.min.css" media="print" fetchpriority="low" onload="this.media='all'">
     <link rel="stylesheet" href="styles.css?v=46">
     <link rel="stylesheet" href="commerce.css?v=1">
     <link rel="stylesheet" href="student-white.css?v=2">
@@ -31,13 +29,8 @@
     <link rel="stylesheet" href="login-polish.css?v=2">
     <link rel="stylesheet" href="campus-preview.css?v=3">
     <link rel="stylesheet" href="study-depth.css?v=3">
-    <link rel="stylesheet" href="simulacro-library.css?v=7">
-    <link rel="stylesheet" href="past-exams.css?v=7">
-    <link rel="stylesheet" href="topic-evaluations.css?v=5">
-    <link rel="stylesheet" href="campus-atlas.css?v=5">
 <link rel="stylesheet" href="/device-limit.css?v=1">
 <link rel="stylesheet" href="study-media.css?v=20261021-visual5c">
-    <link rel="stylesheet" href="suficiencia.css?v=9">
     <link id="campus-shell-style" rel="stylesheet" href="campus-shell.css?v=4">
     <script defer src="platform-polish.js?v=1"></script>
     <script defer src="config.js"></script>
@@ -48,23 +41,10 @@
     <script defer src="campus-section-tracking.js?v=1"></script>
     <script defer src="question-review.js?v=12"></script>
     <script defer src="study-media.js?v=20261021-visual5b"></script>
-    <script defer src="script.js?v=20261109-lecturas-acotadas"></script>
+    <script defer src="script.js?v=20261109-fluidez"></script>
     <script defer src="study-assessments.js?v=2"></script>
-    <script defer src="simulation-scope.js?v=11"></script>
-    <script defer src="simulacro-ingreso.js?v=13"></script>
-    <script defer src="simulacro-library.js?v=8"></script>
-    <script defer src="student-library.js?v=10"></script>
-    <script defer src="flashcard-workspace.js?v=20261109-foco"></script>
     <script defer src="study-calendar-data.js?v=6"></script>
-    <script defer src="study-calendar-pdf.js?v=2"></script>
-    <script defer src="study-calendar.js?v=11"></script>
-    <script defer src="campus-shell.js?v=2"></script>
-    <script defer src="past-exam-breakdown.js?v=8"></script>
-    <script defer src="past-exams.js?v=12"></script>
-    <script defer src="topic-evaluations.js?v=20261109-practica-suficiencia"></script>
-    <script defer src="campus-atlas.js?v=12"></script>
-    <script defer src="suficiencia-core.js?v=12"></script>
-    <script defer src="suficiencia.js?v=15"></script>
+    <script defer src="campus-shell.js?v=3"></script>
     <script defer src="student-results.js?v=5"></script>
 </head>
 
@@ -210,13 +190,13 @@
                 <li class="nav-item nav-item-simple" id="nav-inicio">
                     <a data-campus-screen="home-screen" href="#" onclick="goHome(); return false;" aria-label="Inicio" data-tooltip="inicio">
                         <span class="nav-icon nav-icon-inicio">
-                            <svg class="sidebar-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg?v=2#home"></use></svg>
+                            <svg class="sidebar-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg?v=3#home"></use></svg>
                         </span>
                         <span class="nav-label">Inicio</span>
                     </a>
                 </li>
                 <li class="nav-item nav-item-simple" id="nav-study-calendar">
-                    <a data-campus-screen="study-calendar-screen" href="/campus?seccion=calendario" onclick="CampusCalendar.open(); return false;" aria-label="Calendario" data-tooltip="calendario">
+                    <a data-campus-screen="study-calendar-screen" href="/campus?seccion=calendario" data-campus-load="calendar" onclick="openStudyCalendar(); return false;" aria-label="Calendario" data-tooltip="calendario">
                         <span class="nav-icon"><svg class="sidebar-tool-icon" aria-hidden="true"><use href="/assets/calendar-icons.svg#calendar"></use></svg></span>
                         <span class="nav-label">Calendario</span>
                     </a>
@@ -224,9 +204,9 @@
 
                 <!-- ── FLASHCARDS ── -->
                 <li class="nav-item">
-                    <a href="#" data-campus-screen="study-library study-area" onclick="toggleFlashcards(); return false;" aria-label="Flashcards" data-tooltip="flashcards">
+                    <a href="#" data-campus-screen="study-library study-area" data-campus-load="flashcards" onclick="toggleFlashcards(); return false;" aria-label="Flashcards" data-tooltip="flashcards">
                         <span class="nav-icon nav-icon-anki">
-                            <svg class="sidebar-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg?v=2#cards"></use></svg>
+                            <svg class="sidebar-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg?v=3#cards"></use></svg>
                         </span>
                         <span class="nav-label">Flashcards</span>
                         <i class="fas fa-chevron-right arrow" id="arrow-flashcards"></i>
@@ -291,14 +271,14 @@
                 <li class="nav-item nav-item-simple" id="nav-mapas-mentales">
                     <a data-campus-screen="intocables-screen" href="#" onclick="openMindMaps(); return false;" aria-label="Mapas mentales" data-tooltip="mapas mentales">
                         <span class="nav-icon nav-icon-map">
-                            <svg class="sidebar-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg?v=2#map"></use></svg>
+                            <svg class="sidebar-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg?v=3#map"></use></svg>
                         </span>
                         <span class="nav-label">Mapas mentales</span>
 
                     </a>
                 </li>
                 <li class="nav-item nav-item-simple" id="nav-atlas">
-                    <a data-campus-screen="atlas-screen" href="/campus?seccion=atlas" onclick="openAtlas(); return false;" aria-label="Atlas anatómico" data-tooltip="atlas anatómico">
+                    <a data-campus-screen="atlas-screen" href="/campus?seccion=atlas" data-campus-load="atlas" onclick="openAtlas(); return false;" aria-label="Atlas anatómico" data-tooltip="atlas anatómico">
                         <span class="nav-icon nav-icon-atlas"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 28V7a3 3 0 0 1 3-3h18v24H8a3 3 0 0 1 0-6h18M9 4v18"/><path d="M18 11c-1-3-5-3-5 1 0 3 5 6 5 6s5-3 5-6c0-4-4-4-5-1Z"/></svg></span>
                         <span class="nav-label">Atlas anatómico</span>
                     </a>
@@ -319,7 +299,7 @@
                 <li class="nav-item nav-item-simple" id="nav-intocables">
                     <a data-campus-screen="intocables-hub-screen" href="#" onclick="openIntocables(); return false;" aria-label="Intocables" data-tooltip="intocables">
                         <span class="nav-icon nav-icon-fire">
-                            <svg class="sidebar-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg?v=2#core"></use></svg>
+                            <svg class="sidebar-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg?v=3#core"></use></svg>
                         </span>
                         <span class="nav-label">Intocables</span>
                     </a>
@@ -333,41 +313,41 @@
             </ul>
         </details>
         <details class="campus-nav-group nav-section">
-            <summary aria-label="Exámenes y práctica"><span class="nav-icon"><svg aria-hidden="true" focusable="false"><use href="/assets/study-tools.svg?v=2#exam"></use></svg></span><span class="nav-label">Exámenes y práctica</span><span class="campus-nav-chevron" aria-hidden="true"></span></summary>
+            <summary aria-label="Exámenes y práctica"><span class="nav-icon"><svg aria-hidden="true" focusable="false"><use href="/assets/study-tools.svg?v=3#exam"></use></svg></span><span class="nav-label">Exámenes y práctica</span><span class="campus-nav-chevron" aria-hidden="true"></span></summary>
             <ul class="nav-links">
                 <li class="nav-item nav-item-simple" id="nav-banco">
                     <a data-campus-screen="banco-screen" href="#" onclick="openBanco(); return false;" aria-label="Banco de preguntas" data-tooltip="banco de preguntas">
                         <span class="nav-icon nav-icon-banco">
-                            <svg class="sidebar-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg?v=2#bank"></use></svg>
+                            <svg class="sidebar-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg?v=3#bank"></use></svg>
                         </span>
                         <span class="nav-label">Banco de preguntas</span>
                     </a>
                 </li>
                 <li class="nav-item nav-item-simple" id="nav-past-exams">
-                    <a data-campus-screen="past-exams-screen" href="#" onclick="openPastExams(); return false;" aria-label="Exámenes pasados" data-tooltip="exámenes pasados">
-                        <span class="nav-icon nav-icon-banco"><svg class="sidebar-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg?v=2#exam"></use></svg></span>
+                    <a data-campus-screen="past-exams-screen" href="#" data-campus-load="past" onclick="openPastExams(); return false;" aria-label="Exámenes pasados" data-tooltip="exámenes pasados">
+                        <span class="nav-icon nav-icon-banco"><svg class="sidebar-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg?v=3#exam"></use></svg></span>
                         <span class="nav-label">Exámenes pasados</span>
                     </a>
                 </li>
                 <li class="nav-item nav-item-simple" id="nav-simulacro">
-                    <a data-campus-screen="suficiencia-screen simulacro-screen" href="/campus?seccion=simulacros" onclick="openSimulacro(); return false;" aria-label="Simulacros" data-tooltip="simulacros">
+                    <a data-campus-screen="suficiencia-screen simulacro-screen" href="/campus?seccion=simulacros" data-campus-load="simulations" onclick="openCampusSimulations(); return false;" aria-label="Simulacros" data-tooltip="simulacros">
                         <span class="nav-icon nav-icon-sim">
-                            <svg class="sidebar-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg?v=2#exam"></use></svg>
+                            <svg class="sidebar-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg?v=3#exam"></use></svg>
                         </span>
                         <span class="nav-label">Simulacros</span>
                     </a>
                 </li>
                 <li class="nav-item nav-item-simple" id="nav-evaluacion">
-                    <a data-campus-screen="evaluacion-screen" href="#" onclick="openEvaluacion(); return false;" aria-label="Evaluación" data-tooltip="evaluación">
+                    <a data-campus-screen="evaluacion-screen" href="#" data-campus-load="evaluations" onclick="openTopicEvaluations(); return false;" aria-label="Evaluación" data-tooltip="evaluación">
                         <span class="nav-icon nav-icon-eval">
-                            <svg class="sidebar-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg?v=2#results"></use></svg>
+                            <svg class="sidebar-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg?v=3#results"></use></svg>
                         </span>
                         <span class="nav-label">Evaluación por tema</span>
                     </a>
                 </li>
                 <li class="nav-item nav-item-simple" id="nav-student-results">
                     <a href="#" onclick="openStudentResults(); return false;" data-tooltip="Mis resultados" aria-label="Mis resultados" data-campus-screen="student-results-screen">
-                        <span class="nav-icon"><svg aria-hidden="true" focusable="false"><use href="/assets/study-tools.svg?v=2#progress"></use></svg></span><span class="nav-label">Mis resultados</span>
+                        <span class="nav-icon"><svg aria-hidden="true" focusable="false"><use href="/assets/study-tools.svg?v=3#progress"></use></svg></span><span class="nav-label">Mis resultados</span>
                     </a>
                 </li>
             </ul>
@@ -381,7 +361,7 @@
                 <li class="nav-item nav-item-simple">
                     <a href="#" data-campus-screen="game-quiz" onclick="openGame('quiz'); return false;" aria-label="Quiz relámpago" data-tooltip="quiz relámpago">
                         <span class="nav-icon nav-icon-quiz">
-                            <svg class="sidebar-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg?v=2#quiz"></use></svg>
+                            <svg class="sidebar-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg?v=3#quiz"></use></svg>
                         </span>
                         <span class="nav-label">Quiz relámpago</span>
                         <span class="nav-badge badge-game">JUGAR</span>
@@ -391,7 +371,7 @@
                 <li class="nav-item nav-item-simple">
                     <a href="#" data-campus-screen="game-hangman" onclick="openGame('hangman'); return false;" aria-label="Ahorcado médico" data-tooltip="ahorcado médico">
                         <span class="nav-icon nav-icon-hang">
-                            <svg class="sidebar-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg?v=2#word"></use></svg>
+                            <svg class="sidebar-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg?v=3#word"></use></svg>
                         </span>
                         <span class="nav-label">Ahorcado médico</span>
                         <span class="nav-badge badge-game">JUGAR</span>
@@ -399,7 +379,7 @@
                 </li>
                 <li class="nav-item nav-item-simple">
                     <a href="/juegos/" data-tooltip="juegos por materias" aria-label="Juegos por materias">
-                        <span class="nav-icon nav-icon-arena"><svg class="sidebar-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg?v=2#gamepad"></use></svg></span>
+                        <span class="nav-icon nav-icon-arena"><svg class="sidebar-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg?v=3#gamepad"></use></svg></span>
                         <span class="nav-label">Juegos por materias</span>
                     </a>
                 </li>
@@ -419,7 +399,7 @@
                 <li class="nav-item nav-item-simple">
                     <a href="admin.html" aria-label="Panel de control" data-tooltip="panel de control">
                         <span class="nav-icon nav-icon-admin">
-                            <svg class="sidebar-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg?v=2#shield"></use></svg>
+                            <svg class="sidebar-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg?v=3#shield"></use></svg>
                         </span>
                         <span class="nav-label">Panel de control</span>
                     </a>
@@ -506,13 +486,13 @@
 
     <section class="dashboard-launch" aria-labelledby="dashboard-launch-title"><div class="dashboard-launch-heading"><div><span class="dashboard-eyebrow">TU ESPACIO DE ESTUDIO</span><h2 id="dashboard-launch-title">¿Qué vas a estudiar hoy?</h2></div></div>
       <div class="dashboard-activity-grid">
-        <button class="dashboard-activity dashboard-activity-gold" onclick="openStudyLibrary()"><img src="/assets/study-art/cards.png" alt="" loading="lazy" decoding="async"><span><strong>Flashcards</strong><small>Repasa por materia y tema</small></span></button>
-        <button class="dashboard-activity dashboard-activity-blue" onclick="openMindMaps()"><img src="/assets/study-art/map.png" alt="" loading="lazy" decoding="async"><span><strong>Mapas mentales</strong><small>Visualiza las ideas del tema</small></span></button>
-        <button class="dashboard-activity dashboard-activity-olive" onclick="openBanco()"><svg class="study-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg?v=2#bank"></use></svg><span><strong>Banco de preguntas</strong><small>Practica por materia</small></span></button>
-        <button class="dashboard-activity dashboard-activity-navy" onclick="openSimulacro()"><img src="/assets/study-art/quiz.png" alt="" loading="lazy" decoding="async"><span><strong>Simulacros</strong><small>Resuelve un examen con tiempo</small></span></button>
+        <button class="dashboard-activity dashboard-activity-gold" data-campus-load="flashcards" onclick="openStudyLibrary()"><img src="/assets/study-art/cards.webp" alt="" loading="lazy" decoding="async"><span><strong>Flashcards</strong><small>Repasa por materia y tema</small></span></button>
+        <button class="dashboard-activity dashboard-activity-blue" onclick="openMindMaps()"><img src="/assets/study-art/map.webp" alt="" loading="lazy" decoding="async"><span><strong>Mapas mentales</strong><small>Visualiza las ideas del tema</small></span></button>
+        <button class="dashboard-activity dashboard-activity-olive" onclick="openBanco()"><svg class="study-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg?v=3#bank"></use></svg><span><strong>Banco de preguntas</strong><small>Practica por materia</small></span></button>
+        <button class="dashboard-activity dashboard-activity-navy" data-campus-load="simulations" onclick="openCampusSimulations()"><img src="/assets/study-art/quiz.webp" alt="" loading="lazy" decoding="async"><span><strong>Simulacros</strong><small>Resuelve un examen con tiempo</small></span></button>
       </div>
     </section>
-    <div class="dashboard-more"><button onclick="openGameMenu()"><img src="/assets/study-art/word.png" alt="" loading="lazy" decoding="async"><span><strong>Aprende jugando</strong><small>Quiz, ahorcado y Juegos por materias</small></span><span class="dashboard-more-arrow" aria-hidden="true">→</span></button><button onclick="openStudentResults()"><svg class="study-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg?v=2#progress"></use></svg><span><strong>Mis resultados</strong><small>Consulta tu historial y métricas</small></span><span aria-hidden="true">→</span></button></div>
+    <div class="dashboard-more"><button onclick="openGameMenu()"><img src="/assets/study-art/word.webp" alt="" loading="lazy" decoding="async"><span><strong>Aprende jugando</strong><small>Quiz, ahorcado y Juegos por materias</small></span><span class="dashboard-more-arrow" aria-hidden="true">→</span></button><button onclick="openStudentResults()"><svg class="study-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg?v=3#progress"></use></svg><span><strong>Mis resultados</strong><small>Consulta tu historial y métricas</small></span><span aria-hidden="true">→</span></button></div>
   </div><aside class="dashboard-progress" aria-label="Tu progreso"><div class="dashboard-progress-heading"><span>TU AVANCE</span><h2>Tu progreso</h2></div>        <!-- ══ MI PROGRESO ══ -->
         <div class="nav-section progress-section">
             <span class="section-title">MI PROGRESO</span>
@@ -603,10 +583,10 @@
 </aside></div></section>
             <section class="study-library campus-browser hidden" id="study-library" aria-labelledby="library-title">
 <div class="home-section-head campus-page-head"><div><p class="library-kicker">FLASHCARDS</p><h2 id="library-title">Elige una materia</h2></div><p id="library-instruction">Selecciona una materia para ver sus temas.</p></div>
-<button id="library-back" class="campus-back" onclick="openStudyLibrary()" hidden>← Materias</button><div id="library-subjects" class="subject-picker" aria-label="Materias">
-<button type="button" data-subject="MORFOFUNCION" aria-pressed="false"><img src="/assets/study-art/morphology.png" alt="" loading="lazy" decoding="async"><span>Morfofunción<small>Anatomía y fisiología</small></span><i class="fas fa-arrow-right"></i></button>
-<button type="button" data-subject="BIOLOGIA CELULAR" aria-pressed="false"><img src="/assets/study-art/cell.png" alt="" loading="lazy" decoding="async"><span>Biología celular<small>Célula, membrana y organelos</small></span><i class="fas fa-arrow-right"></i></button>
-<button type="button" data-subject="SALUD PUBLICA" aria-pressed="false"><img src="/assets/study-art/health-education.png" alt="" loading="lazy" decoding="async"><span>Educación para la Salud<small>Población, prevención y salud</small></span><i class="fas fa-arrow-right"></i></button>
+<button id="library-back" class="campus-back" data-campus-load="flashcards" onclick="openStudyLibrary()" hidden>← Materias</button><div id="library-subjects" class="subject-picker" aria-label="Materias">
+<button type="button" data-subject="MORFOFUNCION" aria-pressed="false"><img src="/assets/study-art/morphology.webp" alt="" loading="lazy" decoding="async"><span>Morfofunción<small>Anatomía y fisiología</small></span><i class="fas fa-arrow-right"></i></button>
+<button type="button" data-subject="BIOLOGIA CELULAR" aria-pressed="false"><img src="/assets/study-art/cell.webp" alt="" loading="lazy" decoding="async"><span>Biología celular<small>Célula, membrana y organelos</small></span><i class="fas fa-arrow-right"></i></button>
+<button type="button" data-subject="SALUD PUBLICA" aria-pressed="false"><img src="/assets/study-art/health-education.webp" alt="" loading="lazy" decoding="async"><span>Educación para la Salud<small>Población, prevención y salud</small></span><i class="fas fa-arrow-right"></i></button>
 </div>
 <div id="library-topics-panel" hidden><label for="library-search">Buscar un tema</label><input type="search" id="library-search" placeholder="Escribe el nombre del tema…"><p id="library-status" role="status"></p><div id="library-topics" class="library-topics"></div></div>
 </section>
@@ -703,7 +683,7 @@
                 <div class="banco-header campus-page-head">
                     <button class="btn-back-game" onclick="goBack()"><i class="fas fa-arrow-left"></i> volver</button>
                     <div>
-                        <h2 class="banco-title"><svg class="study-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg?v=2#bank"></use></svg> banco de preguntas</h2>
+                        <h2 class="banco-title"><svg class="study-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg?v=3#bank"></use></svg> banco de preguntas</h2>
                         <p class="banco-subtitle">Elige una materia y un tema. Responde y revisa la explicación.</p>
                     </div>
                 </div>
@@ -741,7 +721,7 @@
 
                     <!-- Fila de dificultad — ocupa ancho completo -->
                     <div class="banco-dificultad-row">
-                        <label class="banco-select-label"><img class="study-art" src="/assets/study-art/cards.png" alt="" aria-hidden="true" width="80" height="80" loading="lazy" decoding="async"> nivel de dificultad</label>
+                        <label class="banco-select-label"><img class="study-art" src="/assets/study-art/cards.webp" alt="" aria-hidden="true" width="80" height="80" loading="lazy" decoding="async"> nivel de dificultad</label>
                         <div class="banco-dificultad-btns" id="banco-dificultad-btns">
                             <button class="banco-dif-btn banco-dif-active" id="banco-dif-todos" onclick="selectBancoDificultad(null)">
                                 <i class="fas fa-th"></i> todos
@@ -910,14 +890,14 @@
                     <h2>Exámenes pasados</h2>
                     <p>Resuelve un examen completo o practica preguntas originales por materia y tema.</p>
                 </div>
-                <div class="past-hero-art" aria-hidden="true"><img src="/assets/study-art/past-exams.png" alt="" width="256" height="256" loading="lazy"></div>
+                <div class="past-hero-art" aria-hidden="true"><img src="/assets/study-art/past-exams.webp" alt="" width="256" height="256" loading="lazy"></div>
             </header>
             <p id="past-status" role="status" aria-live="polite"></p>
             <div id="past-list">
                 <div class="past-list-bar">
                     <div class="past-mode" role="group" aria-label="Vista de exámenes pasados">
-                        <button id="past-mode-exams" type="button" aria-pressed="true" aria-controls="past-exam-cards"><svg aria-hidden="true"><use href="/assets/study-tools.svg?v=2#exam"></use></svg> Exámenes completos</button>
-                        <button id="past-mode-topics" type="button" aria-pressed="false" aria-controls="past-breakdown"><svg aria-hidden="true"><use href="/assets/study-tools.svg?v=2#map"></use></svg> Preguntas por tema</button>
+                        <button id="past-mode-exams" type="button" aria-pressed="true" aria-controls="past-exam-cards"><svg aria-hidden="true"><use href="/assets/study-tools.svg?v=3#exam"></use></svg> Exámenes completos</button>
+                        <button id="past-mode-topics" type="button" aria-pressed="false" aria-controls="past-breakdown"><svg aria-hidden="true"><use href="/assets/study-tools.svg?v=3#map"></use></svg> Preguntas por tema</button>
                     </div>
                     <button type="button" class="past-filter-toggle" id="past-toggle-filters" aria-expanded="true" aria-controls="past-filters">Ocultar filtros</button>
                     <span id="past-count" aria-live="polite"></span>
@@ -977,7 +957,7 @@
                 </div>
                 <section id="past-breakdown" aria-label="Preguntas de exámenes pasados por tema" hidden>
                     <div id="past-breakdown-empty" class="past-breakdown-empty">
-                        <svg class="study-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg?v=2#exam"></use></svg>
+                        <svg class="study-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg?v=3#exam"></use></svg>
                         <h3 id="past-breakdown-empty-title">Elige qué quieres practicar</h3>
                         <p id="past-breakdown-empty-copy">Selecciona la gestión, el parcial, una materia o un tema.</p>
                         <button type="button" class="past-action" id="past-breakdown-empty-action" hidden></button>
@@ -1049,7 +1029,7 @@
                     <p id="sim-library-status" role="status" aria-live="polite">Cargando simulacros…</p>
                 </div>
                 <div class="sim-library-tools">
-                    <button type="button" class="campus-secondary sim-library-practice" onclick="Sufficiency.open()">Práctica por materia y tema</button>
+                    <button type="button" class="campus-secondary sim-library-practice" data-campus-load="sufficiency" onclick="openSufficiency()">Práctica por materia y tema</button>
                 </div>
                 <div id="sim-library-list" class="entrance-choices" role="group" aria-label="Simulacros disponibles"></div>
                 <div class="entrance-launch" hidden>
@@ -1151,7 +1131,7 @@
                             <label>sin responder</label>
                         </div>
                         <div class="bq-rs-box bq-rs-time">
-                            <img class="study-art" src="/assets/study-art/quiz.png" alt="" aria-hidden="true" width="80" height="80" loading="lazy" decoding="async">
+                            <img class="study-art" src="/assets/study-art/quiz.webp" alt="" aria-hidden="true" width="80" height="80" loading="lazy" decoding="async">
                             <span id="sim-rs-time">—</span>
                             <label>tiempo usado</label>
                         </div>
@@ -1565,7 +1545,7 @@
             <div class="intoc-header campus-page-head">
                 <button class="btn-back-game" onclick="goBack()"><i class="fas fa-arrow-left"></i> volver</button>
                 <div>
-                    <h2 class="intoc-title"><svg class="study-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg?v=2#core"></use></svg> Mapas mentales</h2>
+                    <h2 class="intoc-title"><svg class="study-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg?v=3#core"></use></svg> Mapas mentales</h2>
                     <p class="intoc-subtitle">Explora los mapas por materia y tema.</p>
                 </div>
             </div>
@@ -1581,7 +1561,7 @@
             <!-- Tabs -->
             <div class="intoc-tabs">
                 <button class="intoc-tab intoc-tab-active" id="tab-mapas" onclick="switchIntocTab('mapas')">
-                    <img class="study-art" src="/assets/study-art/map.png" alt="" aria-hidden="true" width="80" height="80" loading="lazy" decoding="async"> mapas mentales
+                    <img class="study-art" src="/assets/study-art/map.webp" alt="" aria-hidden="true" width="80" height="80" loading="lazy" decoding="async"> mapas mentales
                 </button>
                 <button class="intoc-tab" hidden id="tab-conceptos" onclick="switchIntocTab('conceptos')">
                     <i class="fas fa-lightbulb"></i> conceptos clave
@@ -1767,6 +1747,24 @@
 
 <a class="support-float" href="https://wa.me/59173752688?text=Hola%2C%20tengo%20una%20consulta%20sobre%20AlcocerMed" target="_blank" rel="noopener noreferrer" aria-label="Hablar con AlcocerMed por WhatsApp" title="¿Te ayudamos? Escríbenos"><svg aria-hidden="true"><use href="/assets/calendar-icons.svg#whatsapp"></use></svg></a>
     <template id="campus-section-assets">
+        <link rel="stylesheet" data-campus-assets="simulations" href="simulacro-library.css?v=7">
+        <link rel="stylesheet" data-campus-assets="past simulations evaluations" href="past-exams.css?v=7">
+        <link rel="stylesheet" data-campus-assets="evaluations" href="topic-evaluations.css?v=5">
+        <link rel="stylesheet" data-campus-assets="atlas" href="campus-atlas.css?v=5">
+        <link rel="stylesheet" data-campus-assets="sufficiency" href="suficiencia.css?v=9">
+        <script data-campus-assets="flashcards" src="student-library.js?v=10"></script>
+        <script data-campus-assets="flashcards" src="flashcard-workspace.js?v=20261109-foco"></script>
+        <script data-campus-assets="calendar" src="study-calendar-pdf.js?v=2"></script>
+        <script data-campus-assets="calendar" src="study-calendar.js?v=12"></script>
+        <script data-campus-assets="past simulations evaluations" src="past-exam-breakdown.js?v=8"></script>
+        <script data-campus-assets="past simulations evaluations" src="past-exams.js?v=13"></script>
+        <script data-campus-assets="simulations" src="simulation-scope.js?v=11"></script>
+        <script data-campus-assets="simulations" src="simulacro-ingreso.js?v=13"></script>
+        <script data-campus-assets="simulations" src="simulacro-library.js?v=8"></script>
+        <script data-campus-assets="evaluations" src="topic-evaluations.js?v=20261109-practica-suficiencia"></script>
+        <script data-campus-assets="atlas" src="campus-atlas.js?v=12"></script>
+        <script data-campus-assets="sufficiency" src="suficiencia-core.js?v=12"></script>
+        <script data-campus-assets="sufficiency" src="suficiencia.js?v=16"></script>
         <link rel="stylesheet" data-campus-assets="flashcards" href="flashcard-workspace.css?v=5">
         <link rel="stylesheet" data-campus-assets="flashcards" href="flashcard-approved.css?v=6">
         <link rel="stylesheet" data-campus-assets="calendar" href="study-calendar.css?v=11">
@@ -1780,7 +1778,7 @@
         <script data-campus-assets="maps" src="mindmap-viewer.js?v=20"></script>
         <script data-campus-assets="maps" src="intocables-hub.js?v=4"></script>
         <script data-campus-assets="summaries texts" src="summary-pdf-reader.js?v=9"></script>
-        <script data-campus-assets="texts" src="official-texts.js?v=11"></script>
+        <script data-campus-assets="texts" src="official-texts.js?v=12"></script>
         <script data-campus-assets="practice" src="sufficiency-practice-content.js?v=2"></script>
         <script data-campus-assets="practice" src="sufficiency-practice.js?v=3"></script>
         <script data-campus-assets="summaries" src="study-summaries.js?v=20261021-visual5b"></script>

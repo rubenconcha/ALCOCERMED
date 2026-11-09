@@ -5,9 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AlcocerMed — Evaluaciones Interactivas</title>
   <meta name="description" content="Plataforma de evaluaciones interactivas para estudiantes de medicina — Prepa Bencarson">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="/assets/fonts/inter/inter.css?v=1" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/vendor/font-awesome-6.4.0/css/all.min.css" media="print" onload="this.media='all'">
   <link rel="stylesheet" href="styles.css?v=87">
   <link rel="stylesheet" href="tejido-nervioso.css?v=8">
   
@@ -35,7 +34,7 @@
   <div class="login-card">
     <header class="login-header">
       <div class="login-logo-ring">
-        <img src="./logo_app.png" alt="Prepa Ben Carson" class="login-header-logo"
+        <img src="./logo-app-240.webp" alt="Prepa Ben Carson" class="login-header-logo" decoding="async"
              onerror="this.style.display='none';this.nextElementSibling.classList.remove('hidden');">
         <span class="login-header-logo-fallback hidden" aria-hidden="true"><i class="fas fa-graduation-cap"></i></span>
       </div>
@@ -819,7 +818,7 @@
       </div>
 
       <!-- Audio Element for background music -->
-      <audio id="quiz-bg-music" loop preload="auto">
+      <audio id="quiz-bg-music" loop preload="none">
         <source src="bg_music.mp4" type="audio/mp4">
       </audio>
     </section>
@@ -853,21 +852,21 @@
 </div>
 
 <!-- SCRIPTS -->
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-<script src="../device_guard.js?v=9"></script>
-<script src="tejido-nervioso-imagenes.js?v=5"></script>
-<script src="encefalo-native-data.js?v=1"></script>
-<script src="sentidos-imagenes.js?v=1"></script>
-<script src="relacionar.js?v=2"></script>
-<script src="acceso-noche.js?v=1"></script>
-<script src="game-access.js?v=2"></script>
-<script src="premium-game-images.js?v=6"></script>
-<script src="quiz-copy.js?v=1"></script>
-<script src="game-rounds.js?v=1"></script>
-<script src="game-practice.js?v=20261021-visual5b"></script>
-<script src="game-question-images.js?v=1"></script>
-<script src="app.js?v=20261108-campus"></script>
-<script src="tejido-nervioso.js?v=14"></script>
+<script defer src="/assets/vendor/supabase.js?v=2.118.0"></script>
+<script defer src="../device_guard.js?v=9"></script>
+<script defer src="tejido-nervioso-imagenes.js?v=5"></script>
+<script defer src="encefalo-native-data.js?v=1"></script>
+<script defer src="sentidos-imagenes.js?v=1"></script>
+<script defer src="relacionar.js?v=2"></script>
+<script defer src="acceso-noche.js?v=1"></script>
+<script defer src="game-access.js?v=2"></script>
+<script defer src="premium-game-images.js?v=6"></script>
+<script defer src="quiz-copy.js?v=1"></script>
+<script defer src="game-rounds.js?v=1"></script>
+<script defer src="game-practice.js?v=20261021-visual5b"></script>
+<script defer src="game-question-images.js?v=1"></script>
+<script defer src="app.js?v=20261108-campus"></script>
+<script defer src="tejido-nervioso.js?v=14"></script>
 
 <!-- PWA Service Worker Registration -->
 <!-- AVATAR MODAL -->
@@ -907,14 +906,8 @@
 <script>
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
-      var hadController = !!navigator.serviceWorker.controller;
-      var reloading = false;
-      navigator.serviceWorker.addEventListener('controllerchange', () => {
-        if (hadController && !reloading) { reloading = true; window.location.reload(); }
-      });
-      navigator.serviceWorker.register('/juegos/sw.js', {updateViaCache: 'none'}).then((reg) => {
-        reg.update().catch(() => {});
-      }).catch((err) => console.log('Error SW:', err));
+      navigator.serviceWorker.register('/juegos/sw.js', {updateViaCache: 'none'})
+        .catch((err) => console.log('Error SW:', err));
     });
   }
 </script>

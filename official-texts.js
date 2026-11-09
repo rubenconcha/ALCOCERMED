@@ -199,7 +199,7 @@
         article.className = 'past-card campus-resource-card official-text-card';
         const illustration = document.createElement('img');
         illustration.className = 'official-text-icon';
-        illustration.src = '/assets/study-art/' + text.art + '.png';
+        illustration.src = '/assets/study-art/' + text.art + '.webp';
         illustration.alt = '';
         illustration.width = illustration.height = 84;
         illustration.loading = 'lazy';

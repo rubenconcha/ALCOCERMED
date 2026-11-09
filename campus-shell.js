@@ -17,7 +17,7 @@
     const planList = byId('campus-plan-preview');
     const monthFormat = new Intl.DateTimeFormat('es-BO', { month: 'long', year: 'numeric', timeZone: 'UTC' });
     const actions = {
-        calendar: () => window.CampusCalendar?.open(),
+        calendar: () => window.openStudyCalendar(),
         texts: () => window.openOfficialTexts(),
         practice: () => window.showScreen('sufficiency-practice-screen'),
         results: () => window.openStudentResults(),
@@ -125,7 +125,7 @@
             const title = document.createElement('span');
             title.textContent = item.title;
             button.append(time, title);
-            button.onclick = () => window.CampusCalendar?.openDate(selectedDate, item.id);
+            button.onclick = () => window.openStudyCalendar(selectedDate, item.id);
             row.append(button);
             planList.append(row);
         }
@@ -299,7 +299,7 @@
         paintMood();
     };
     byId('campus-open-calendar').onclick = actions.calendar;
-    byId('campus-open-day').onclick = () => window.CampusCalendar?.openDate(selectedDate);
+    byId('campus-open-day').onclick = () => window.openStudyCalendar(selectedDate);
     for (const [id, offset] of [['campus-month-prev', -1], ['campus-month-next', 1]]) {
         byId(id).onclick = () => {
             month = monthOffset(month, offset);
@@ -320,6 +320,16 @@
         if (profileDialog.open) profileDialog.close();
         actions[action]();
     });
+    function warmSection(event) {
+        if (!userId || navigator.connection?.saveData) return;
+        const group = event.target.closest('[data-campus-load]')?.dataset.campusLoad;
+        if (group) window.loadCampusAssets(group).catch(() => {});
+    }
+    document.addEventListener('pointerover', event => {
+        if (event.pointerType === 'mouse') warmSection(event);
+    });
+    document.addEventListener('pointerdown', warmSection);
+    document.addEventListener('focusin', warmSection);
     document.addEventListener('keydown', event => {
         if (event.key === 'Escape' && mobile.matches && sidebar.classList.contains('open') && !document.querySelector('dialog[open]')) {
             window.toggleSidebar();

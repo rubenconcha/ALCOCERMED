@@ -3,7 +3,7 @@
     'use strict';
     const C = window.SufficiencyCore, labels = C.practiceSubjects;
     const examLevel = 'dificil';
-    const openEntranceLibrary = window.openSimulacro;
+    const openEntranceLibrary = window.openCampusSimulations || window.openSimulacro;
     const root = document.getElementById('suficiencia-screen');
     let bank = null, hasMedicine = false, owner = null, attempt = null, questions = [], clock = null, generation = 0, area = 'matematicas', level = 'facil', catalogueArea = 'matematicas', catalogueMode = 'config', configSubject = '', configTopic = '', ending = false, starting = false, pendingConfirmation = null, renderedPassage = null, cataloguePage = 0, catalogueQuery = '';
     let catalogueRequest = null, viewRevision = 0;

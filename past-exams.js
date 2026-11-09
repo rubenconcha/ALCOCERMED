@@ -7,6 +7,11 @@
     const readableError = () => 'No se pudo cargar el examen. Intenta de nuevo.';
 
     async function catalog() {
+        if (window.loadPastExamCatalog) {
+            const data = await window.loadPastExamCatalog();
+            freeYear = data.freeYear;
+            return data;
+        }
         if (!catalogPromise) catalogPromise = fetch('/content/past-exams/catalog.json?v=examenes-umss')
             .then(response => { if (!response.ok) throw new Error(readableError()); return response.json(); })
             .then(data => { freeYear = data.freeYear; return data; })
@@ -176,13 +181,13 @@
         finally { loading = false; $('past-start').disabled = false; $('past-start').textContent = isLocked(exam) ? 'Desbloquear' : 'Comenzar examen'; }
     };
     window.returnToExamSelection = function () {
-        if (simState.entranceOrigin) { window.openSimulacro(); return; }
+        if (simState.entranceOrigin) { window.openCampusSimulations(); return; }
         if (simState.mode === 'pasado') {
             // Remove the completed attempt from the campus back stack.
             if (campusScreenHistory.at(-1) === 'past-exams-screen') campusScreenHistory.pop();
             currentCampusScreen = 'past-exams-screen';
             window.openPastExams();
-        } else openSimulacro();
+        } else window.openCampusSimulations();
     };
     window.showPastExamPattern = async function () {
         if (simState.mode !== 'pasado' || !simState.finalized) return;

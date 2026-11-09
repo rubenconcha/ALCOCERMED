@@ -4,9 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Editor de Evaluación — AlcocerMed</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="/assets/fonts/inter/inter.css?v=1" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/vendor/font-awesome-6.4.0/css/all.min.css" media="print" onload="this.media='all'">
   <link rel="stylesheet" href="editor.css?v=11">
   
   <!-- PWA Meta Tags -->
@@ -537,8 +536,8 @@
   </div>
 
   <!-- SCRIPTS -->
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-  <script src="editor.js?v=23"></script>
+  <script defer src="/assets/vendor/supabase.js?v=2.118.0"></script>
+  <script defer src="editor.js?v=23"></script>
   
   <!-- PWA Service Worker Registration -->
   <script>

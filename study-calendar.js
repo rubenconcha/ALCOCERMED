@@ -19,7 +19,7 @@
         practice: ['Abrir ejercicio', item => openStudyAsset(item, 'practice', () => {
             if (showScreen('sufficiency-practice-screen') !== false) window.SufficiencyPractice.openExercise(item.practice.id);
         })],
-        simulation: ['Ver simulacros', () => window.openSimulacro()],
+        simulation: ['Ver simulacros', () => window.openCampusSimulations()],
         results: ['Ver mis resultados', () => window.openStudentResults()],
         flashcards: ['Repasar con flashcards', () => window.openStudyLibrary()],
     };
@@ -425,7 +425,7 @@
         return window.openBanco({ materia: book.bankSubject, tema: book.bankTopic });
     }
 
-    function renderBreakdown() {
+    async function renderBreakdown(isCurrent) {
         const readings = activities().filter(item => item.reading).map(item => item.reading);
         const select = element('select', 'calendar-topic-select');
         select.setAttribute('aria-label', 'Tema del examen pasado');
@@ -436,8 +436,15 @@
 
         const book = reading;
         const fallback = book.bankTopic ? () => openBank(book) : null;
-        const status = message(workspace, '');
-        releasePanel = window.CampusPastExams.openAssigned(workspace, { filter: book.topicLinks.past, status, fallback });
+        const status = message(workspace, 'Cargando preguntas del tema…');
+        try {
+            await window.loadCampusAssets('past');
+            if (isCurrent()) releasePanel = window.CampusPastExams.openAssigned(workspace, { filter: book.topicLinks.past, status, fallback });
+        } catch (_) {
+            if (!isCurrent()) return;
+            status.textContent = 'No pudimos cargar las preguntas del tema.';
+            workspace.append(button('calendar-outline', 'Reintentar', () => updateView('breakdown', book)));
+        }
     }
 
     function mountEvaluation() {
@@ -468,7 +475,9 @@
         const book = reading;
         const controller = new AbortController();
         releasePanel = () => controller.abort();
-        window.TopicEvaluations.describe(book.topicLinks.evaluation).then(exam => {
+        window.loadCampusAssets('evaluations').then(() => {
+            if (isCurrent()) return window.TopicEvaluations.describe(book.topicLinks.evaluation);
+        }).then(exam => {
             if (!isCurrent()) return;
             if (!exam) throw new Error('La evaluación de este tema aún no está disponible.');
             const result = resultFor(book);
@@ -565,7 +574,7 @@
         byId('calendar-day-label').textContent = data.formatDay(state.date) + ' · Plan de muestra';
         if (view === 'study') renderStudy(item);
         else if (view === 'manual' || view === 'orientation') renderManual(item, isCurrent);
-        else if (view === 'breakdown') renderBreakdown();
+        else if (view === 'breakdown') renderBreakdown(isCurrent);
         else if (view === 'evaluation') renderEvaluation(item, isCurrent);
         else renderDefault(item);
         renderRating();

@@ -60,7 +60,7 @@ test('la carga del banco sigue leyendo después de la primera página de Supabas
   vm.runInNewContext(script.slice(start, end) + '\nglobalThis.load = fetchAllBancoQuestions;', context);
   const result = await context.load();
   assert.equal(result.length, 1300);
-  assert.deepEqual(ranges, [[0, 499], [500, 999], [1000, 1499]]);
+  assert.deepEqual(ranges, [[0, 999], [1000, 1999]]);
   await context.load();
-  assert.equal(ranges.length, 3, 'la segunda lectura reutiliza la caché');
+  assert.equal(ranges.length, 2, 'la segunda lectura reutiliza la caché');
 });
