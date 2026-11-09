@@ -33,13 +33,18 @@ def reading_definitions():
             continue
         if line.startswith("@"):
             topic, identity, section = line[1:].split("|")
-            current = {"topic": topic, "identity": identity, "section": section, "claims": []}
+            current = {"topic": topic, "identity": identity, "section": section, "anchors": []}
             yield current
+        elif line.startswith("Q|"):
+            _, prompt, answer, a, b, c, explanation = line.split("|")
+            choices = [answer, a, b, c]
+            if (not prompt.endswith("?") or prompt.count("?") != 1
+                    or not all(choices) or len(set(choices)) != 4 or not explanation):
+                raise ValueError(f"Expected one question and four distinct choices in {current['identity']}")
+            current.update(prompt=prompt, answer=answer, distractors=[a, b, c], explanation=explanation)
         else:
-            number, anchor, truth, claim, reason = line.split("|")
-            if truth not in ("+", "−"):
-                raise ValueError(f"Invalid truth marker on {line}")
-            current["claims"].append((int(number), anchor, truth == "+", claim, reason))
+            number, anchor = line.split("|")
+            current["anchors"].append((int(number), anchor))
 
 
 def printed_page(area, number, page):
@@ -75,8 +80,10 @@ def item(entry, topics, pdfs):
     if area != "salud" and not section.startswith("Atlas"):
         section = f"Capítulo {chapter} · {section}"
     subject, slug, label = SUBJECTS[area]
-    questions, readings, missing = [], {}, []
-    for number, anchor, correct, text, reason in entry["claims"]:
+    readings, missing = {}, []
+    if not entry["anchors"]:
+        raise ValueError(f"No PDF anchors for {entry['identity']}")
+    for number, anchor in entry["anchors"]:
         page = pdfs[area][number - 1]
         marks = positions(page, anchor)
         if not marks:
@@ -86,10 +93,11 @@ def item(entry, topics, pdfs):
             "page": number, "printed": printed_page(area, number, page), "marks": [],
         })
         reading["marks"].extend(mark for mark in marks if mark not in reading["marks"])
-        questions.append({"text": text, "correct": correct, "reason": reason})
     return {
         "id": f"banco-verificado:{topic}:{entry['identity']}",
-        "materia": subject, "tema": topics[subject][chapter - 1], "claims": questions,
+        "materia": subject, "tema": topics[subject][chapter - 1],
+        "prompt": entry["prompt"], "answer": entry["answer"], "distractors": entry["distractors"],
+        "explanation": entry["explanation"],
         "references": list(readings.values()),
     }, missing
 

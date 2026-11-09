@@ -2,6 +2,7 @@ const {test}=require('node:test'),assert=require('node:assert/strict'),fs=requir
 const readBank=require('../api/_mindmaps/bank.cjs');
 const teaching=require('../api/_mindmaps/banco-docente.json');
 const reviewed=require('../api/_mindmaps/verified-bank.cjs');
+const authored=require('../api/_mindmaps/banco-verificado.json');
 function setup({free=false,status=200,changeSession=false,reviewedQuestions=[]}={}){
  let calls=0,sessions=0;const official=[{id:'morfo-01-001',pregunta:'¿Qué estudia la anatomía?',respuesta:'La estructura corporal.'}];
  const c={window:null,CampusAccess:{isFree:()=>free},OfficialFlashcards:{load:async()=>official},getSupabase:()=>({auth:{getSession:async()=>({data:{session:{access_token:changeSession&&++sessions>1?'changed':'paid-test'}}})}}),AbortSignal,fetch:async(url,options)=>{calls++;assert.equal(url,'/api/mindmap?id=banco-ampliado&revision=docente');assert.equal(options.headers.Authorization,'Bearer paid-test');return {ok:status===200,json:async()=>({questions:JSON.parse(await readBank()),teaching,reviewedQuestions})};}};c.window=c;
@@ -72,17 +73,22 @@ test('the difficult Medicine bank replaces unaudited items and links every comme
  assert.equal(reviewed.filter(q=>q.content_id.startsWith('banco-verificado:morfo-01:')).length,16);
  const read = (q,name) => q[name];
  const { commentaryData } = require('../question-review.js');
+ const direct = new Map(authored.map(entry=>[entry.id,entry]));
  for (const q of reviewed) {
   const review = commentaryData(q,read);
   assert.ok(review.references.every(ref=>ref.page>0&&ref.marks.length&&ref.marks.every(
    ([x,y,w,h])=>x>=0&&y>=0&&w>0&&h>0&&x+w<=1.0001&&y+h<=1.0001
   )),q.content_id);
-  const correct = review.teaching.afirmaciones.flatMap((claim,index)=>claim.estado==='correcta'?[index]:[]);
-  const key = correct.length===0 ? review.options.length-1 : correct.length===review.teaching.afirmaciones.length ?
-   review.options.length-2 : correct[0];
-  assert.equal(q.respuesta_correcta,'ABCDE'[key],q.content_id);
+  assert.match(q.pregunta,/^[^?\n]+\?$/u,q.content_id);
+  assert.equal(new Set(review.options).size,4,q.content_id);
+  assert.ok(review.options.every(option=>!/(?:afirmaci[oó]n\s+\d|ambas afirmaciones|ninguna afirmación)/i.test(option)),q.content_id);
+  assert.equal(review.options['ABCD'.indexOf(q.respuesta_correcta)],direct.get(q.content_id).answer,q.content_id);
+  assert.ok(review.explanation.length>50&&!review.teaching,q.content_id);
  }
  const law=reviewed.find(q=>q.content_id.endsWith(':ley-teoria'));
- assert.match(law.revision_docente.afirmaciones[0].comentario,/Boyle/);
+ assert.match(law.justificacion,/Boyle/);
  assert.deepEqual(law.lecturas_comentario.map(({page,printed})=>[page,printed]),[[37,9]]);
+ const variation=reviewed.find(q=>q.content_id.endsWith(':variacion'));
+ assert.match(variation.pregunta,/dos arterias renales/);
+ assert.deepEqual(variation.lecturas_comentario.map(({page,printed})=>[page,printed]),[[42,14]]);
 });
