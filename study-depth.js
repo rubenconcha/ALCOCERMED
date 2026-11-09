@@ -7,6 +7,15 @@
     const field = (row, name) => row[name] ?? row[name.toUpperCase()];
     const key = row => ['materia', 'tema', 'pregunta'].map(name => normalize(field(row, name))).join('|');
     const letters = ['A', 'B', 'C', 'D'];
+    const medicine = new Set(['morfofuncion', 'biologia celular', 'biologia celular y molecular',
+        'salud publica', 'educacion para la salud', 'educacion en salud e investigacion']);
+
+    function keepCourseQuestion(row) {
+        if (!medicine.has(normalize(field(row, 'materia')))) return true;
+        return !/\b(?:dificil|dificiles|avanzad[oa]|experto|hard)\b/.test(normalize(field(row, 'dificultad'))) &&
+            !/https?:\/\/|ampliacion fisiologica/.test(normalize(field(row, 'fuente'))) &&
+            !/^¿?cual es la diferencia entre una ley natural y una teoria cientifica\??$/.test(normalize(field(row, 'pregunta')));
+    }
 
     function findTeaching(row, teaching) {
         const topic = normalize(field(row, 'tema'));
@@ -80,17 +89,18 @@
             }
             if (!window.CampusAccess || CampusAccess.isFree()) return rows;
             if (kind !== 'bank') throw new Error('Recurso de estudio desconocido.');
-            const [existing, { questions, teaching }] = await Promise.all([rows, readBank()]);
-            const seen = new Set(existing.map(key));
-            return existing.concat(questions.filter(row => {
+            const [existing, { questions, teaching, reviewedQuestions = [] }] = await Promise.all([rows, readBank()]);
+            const eligible = existing.filter(keepCourseQuestion);
+            const seen = new Set(eligible.map(key));
+            return eligible.concat(questions.filter(row => {
                 const id = key(row);
-                if (seen.has(id)) return false;
+                if (!keepCourseQuestion(row) || seen.has(id)) return false;
                 seen.add(id);
                 return true;
             })).map(row => {
                 const bankTeaching = findTeaching(row, teaching);
                 return bankTeaching ? { ...row, bankTeaching } : row;
-            });
+            }).concat(reviewedQuestions);
         },
     };
 })();

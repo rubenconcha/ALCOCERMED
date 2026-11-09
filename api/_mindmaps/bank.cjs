@@ -32,8 +32,8 @@ async function readQuestions([id, topic, chapter]) {
     const payload = JSON.parse(await fs.readFile(path.join(__dirname, id + '.json'), 'utf8'));
     const practice = payload.assets?.practice;
     if (payload.id !== id || !Array.isArray(practice?.questions)) throw new Error('Invalid bank source');
-    const reference = 'Saladin, Anatomía y fisiología · capítulo ' + chapter +
-        (practice.supplementary_reference ? ' · Ampliación fisiológica: ' + practice.supplementary_reference : '');
+    if (practice.supplementary_reference) return [];
+    const reference = 'Saladin, Anatomía y fisiología · capítulo ' + chapter;
     return practice.questions.map(q => ({
         MATERIA: 'MORFOFUNCION',
         TEMA: topic,

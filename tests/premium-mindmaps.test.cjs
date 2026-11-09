@@ -48,7 +48,7 @@ test('the combined question supplement verifies access once and returns only ban
  const result=await call({id,token:'paid',access:{ready:true,premium:true}});
  assert.equal(result.calls,1);assert.equal(result.code,200);assert.equal(result.headers['Cache-Control'],'private, no-store');
  const rows=JSON.parse(result.body);
- assert.equal(rows.length,84);
+ assert.equal(rows.length,30);
  assert.ok(rows.every(q=>q.PREGUNTA&&q.FUENTE&&q.content_id.startsWith('depth:')&&!q.assets));
  const revision='docente';
  assert.equal((await call({id,revision})).code,401);
@@ -58,6 +58,8 @@ test('the combined question supplement verifies access once and returns only ban
  const payload=JSON.parse(reviewed.body);
  assert.equal(Object.keys(payload.teaching.cycle.questions).length,98);
  assert.deepEqual(payload.questions,rows);
+ assert.equal(payload.reviewedQuestions.length,86);
+ assert.ok(payload.reviewedQuestions.every(q=>q.lecturas_comentario?.length));
 });
 
 test('Sangre and Sentidos general maps are private for both content and downloads',async()=>{

@@ -1,0 +1,265 @@
+@morfo-01|ley-teoria|Datos, leyes y teorías
+37|ley de Boyle|+|Saladin usa la relación entre volumen y presión en condiciones específicas como ejemplo de una ley natural.|La ley de Boyle expresa una regularidad mediante una fórmula. Bajo las condiciones indicadas, el volumen es inversamente proporcional a la presión.
+37|Una teoría es una aseveración|−|Una teoría científica equivale a una conjetura inicial que todavía no se apoya en datos ni en hipótesis confirmadas.|En el texto, una teoría explica observaciones mediante afirmaciones apoyadas en datos, leyes e hipótesis confirmadas.
+37|pronosticar|−|La utilidad de una teoría termina al resumir lo conocido, pues no permite formular predicciones para nuevos estudios.|Saladin también le atribuye la capacidad de orientar estudios y anticipar resultados comprobables.
+@morfo-01|exploracion|Métodos de exploración
+30|percusión|−|Para estimar la consistencia de una estructura con los dedos se emplea percusión.|La consistencia se explora con el tacto en la palpación. La percusión usa golpes breves y permite interpretar el sonido y la resistencia.
+30|auscultación|+|Si el examinador escucha los sonidos que ya produce el corazón, la maniobra corresponde a la auscultación.|En la auscultación se escuchan sonidos naturales, como los cardíacos o pulmonares.
+30|disección|−|La separación de tejidos mediante cortes para observar sus relaciones se denomina inspección.|Separar estructuras mediante corte corresponde a la disección. La inspección examina mediante la observación.
+@morfo-01|niveles|1.5 Estructura humana
+41|Un órgano|−|Una estructura compuesta por dos o más tipos de tejido corresponde al nivel de organelo.|Dos o más tipos de tejido que forman una estructura con una función constituyen un órgano.
+41|moléculas|−|En la jerarquía corporal, la formación de moléculas ocurre al asociarse células del mismo tipo.|Las moléculas se forman a partir de átomos. Las células ocupan un nivel de organización superior.
+41|organelos|+|Una célula puede contener organelos y, al mismo tiempo, integrar un tejido.|Los organelos son componentes celulares. Las células, con su material extracelular, se organizan en tejidos.
+@morfo-01|posicion|Atlas A.1 · Posición anatómica
+57|antebrazo está en supinación|+|Con el cuerpo erguido en posición anatómica, la supinación del antebrazo orienta la palma hacia el frente.|En la posición anatómica, las palmas miran hacia adelante con los antebrazos supinados.
+58|decúbito supino|−|Una persona acostada boca abajo está en decúbito supino.|El decúbito supino describe la posición boca arriba. La posición boca abajo es el decúbito prono.
+57|posición anatómica|−|La orientación estándar de la derecha y la izquierda depende de la perspectiva de quien observa.|La referencia es el cuerpo de la persona descrita en posición anatómica.
+@morfo-01|planos|Atlas A.1 · Planos anatómicos
+58|plano sagital|−|Todo plano sagital divide el cuerpo en dos mitades iguales.|Cualquier plano sagital separa porciones derecha e izquierda. Solo el plano medio sagital las divide en mitades iguales.
+58|plano frontal|−|Un plano frontal divide el cuerpo en porciones superior e inferior.|El plano frontal o coronal separa las porciones anterior y posterior. La separación entre porciones superior e inferior es transversal.
+58|plano transversal|−|Un corte perpendicular al eje largo de un órgano es un corte parasagital.|El plano transversal atraviesa perpendicularmente el eje largo. Un plano parasagital es paralelo al medio sagital.
+@morfo-01|ciclo-control|Homeostasis y retroalimentación
+46|centro inte|−|En un ciclo de retroalimentación el efector procesa la información y selecciona la respuesta.|El centro integrador procesa la información y determina la respuesta. El efector la ejecuta.
+46|barorreceptores|+|En el control de la presión arterial, detectar una distensión corresponde a la función de un receptor.|El receptor percibe cambios, como la distensión de la pared vascular, y envía información al centro integrador.
+46|efector|−|El receptor es el componente que ejecuta el cambio ordenado para corregir la variable.|La ejecución corresponde al efector. El receptor detecta el cambio que pone en marcha el ciclo.
+@morfo-01|control-temperatura|Homeostasis y retroalimentación
+45|Sudación|+|El sudor, cuando facilita el descenso de una temperatura elevada, es parte de una respuesta de retroalimentación negativa.|Al favorecer la pérdida de calor, la respuesta reduce la desviación que la inició.
+46|retroalimentación positiva|−|Una respuesta que amplifica una subida inicial de temperatura constituye retroalimentación negativa.|Amplificar el cambio inicial caracteriza la retroalimentación positiva. La negativa tiende a compensarlo.
+@morfo-01|peritoneo|Atlas A.2 · Cavidades y membranas
+64|cavidad peritoneal|+|El espacio potencial entre las hojas peritoneales contiene líquido que reduce la fricción entre superficies.|El líquido peritoneal lubrica las superficies de las capas parietal y visceral.
+64|retroperitoneal|−|La posición de los riñones se describe como intraperitoneal porque quedan dentro de la cavidad peritoneal.|El texto ubica a los riñones detrás del peritoneo parietal, en posición retroperitoneal.
+64|doblez interno|−|Los mesenterios son pliegues del pericardio que unen el intestino con la pared corporal.|Los mesenterios son pliegues del peritoneo. El pericardio se relaciona con el corazón.
+@morfo-01|variacion|1.5 Variación anatómica
+42|arterias renales|+|Que una persona tenga dos arterias renales en un lado es un ejemplo de variación anatómica descrita en el capítulo.|Saladin incluye arterias renales o uréteres dobles entre las variaciones que pueden encontrarse.
+42|palmar|−|El ejemplo de ausencia del palmar se refiere a un músculo del muslo.|El ejemplo del músculo palmar se sitúa en el antebrazo.
+@morfo-01|imagenes|Imágenes médicas
+52|Tomografía por emisión de positrones|−|La tomografía por emisión de positrones del ejemplo registra neutrones emitidos por el marcador.|El marcador radiactivo emite positrones. El procedimiento detecta señales asociadas con su aniquilación.
+52|glucosa radiomarcada|+|La glucosa radiomarcada permite relacionar la señal de PET con la actividad metabólica de un tejido.|La técnica descrita usa glucosa radiomarcada para obtener información funcional de los tejidos.
+@morfo-01|cavidades|Atlas A.2 · Cavidades y membranas
+63|mediastino|+|El mediastino es la región torácica situada entre los pulmones.|Es el compartimento central del tórax y contiene, entre otras estructuras, al corazón.
+63|pleura visceral|−|La hoja visceral de la pleura reviste internamente la pared torácica.|La pleura visceral cubre el pulmón. La pleura parietal se relaciona con la pared de la cavidad.
+@morfo-01|ramas|Métodos y ramas de la anatomía
+31|histología|+|Para examinar microscópicamente cómo se organizan las células y la matriz de un tejido se emplea la histología.|La histología examina los tejidos a escala microscópica.
+31|anatomía macroscópica|−|Un estudio de estructuras visibles sin microscopio se clasifica como citología.|La anatomía macroscópica estudia estructuras visibles a simple vista. La citología se centra en las células.
+@morfo-01|direccion|Atlas A.1 · Términos direccionales
+59|codo es proximal|−|En el miembro superior, el codo es distal respecto de la muñeca.|Proximal indica mayor cercanía al punto de unión del miembro con el tronco.
+59|más lejos del punto de unión|−|Si se comparan hombro y codo, el hombro es distal respecto del codo.|Distal indica mayor lejanía del punto de unión. El hombro está más cerca de ese punto.
+@morfo-01|control-parto|Retroalimentación positiva
+46|hormona oxitocina|+|Durante el parto, la oxitocina fortalece las contracciones uterinas y contribuye a amplificar el estímulo inicial.|El estiramiento del cuello uterino promueve la liberación de oxitocina. Las contracciones aumentan ese estiramiento.
+46|retroalimentación positiva|−|El ciclo descrito durante el parto se clasifica como negativo porque cada contracción atenúa el estímulo que la originó.|Las contracciones incrementan el estiramiento cervical, que estimula nuevas contracciones. Es un ciclo de amplificación.
+@morfo-01|diseno|El método científico · Diseño experimental
+36|grupo testigo|−|Un grupo control debe recibir siempre la misma intervención activa que se está evaluando en el grupo experimental.|El control ofrece una comparación sin el tratamiento activo. La diferencia de exposición permite atribuir mejor los efectos a la intervención.
+36|placebo|+|Un placebo puede ayudar a distinguir los efectos de las expectativas del efecto de un tratamiento activo.|El placebo imita la intervención sin el ingrediente activo que se evalúa.
+@morfo-01|ciencia|El método científico
+36|una buena hipótesis|−|Para cumplir su papel en el método científico, una hipótesis debe formularse de manera que resulte imposible ponerla a prueba.|Una hipótesis propone una explicación comprobable. El diseño de la prueba permite contrastarla.
+36|hace una deducción|+|Al derivar una predicción que debería cumplirse si una hipótesis es cierta se realiza un razonamiento deductivo.|La deducción parte de la hipótesis para anticipar un resultado específico que puede ponerse a prueba.
+@morfo-02|atomo|Átomos, isótopos e iones
+71|número atómico|+|Si dos átomos tienen el mismo número de protones, pertenecen al mismo elemento aunque cambie su masa.|El número atómico, definido por la cantidad de protones, identifica al elemento.
+73|isótopos|+|Dos isótopos de un elemento pueden tener distinto número de neutrones y conservar el mismo número atómico.|Los isótopos de un elemento comparten el número de protones y difieren en el número de neutrones.
+@morfo-03|membrana|Membrana plasmática · Bicapa de fosfolípidos
+112|cabezas|−|Las cabezas con fosfato de los fosfolípidos quedan enfrentadas hacia el centro de la bicapa.|Las cabezas que contienen fosfato se orientan hacia el agua a ambos lados de la membrana.
+112|desplazan de manera lateral|+|Los fosfolípidos pueden desplazarse lateralmente en el plano de la bicapa.|Saladin describe ese movimiento como uno de los que mantienen la fluidez de la membrana.
+@morfo-04|acidos|Ácidos nucleicos
+147|uracilo|+|Al comparar ARN con ADN, el ARN incorpora uracilo donde el ADN emplea timina.|La comparación de los nucleótidos distingue al uracilo como base del ARN y a la timina como base del ADN.
+148|Desoxirribosa|+|La desoxirribosa permite distinguir los nucleótidos del ADN de los nucleótidos del ARN, que contienen ribosa.|El ARN contiene ribosa. La desoxirribosa se encuentra en el ADN.
+@morfo-05|epitelios|Tejido epitelial · Clasificación
+176|epitelio simple|+|Un epitelio de una sola capa se clasifica como simple aunque su función no sea la absorción.|Simple indica una capa celular. La clasificación por capas no depende de que el epitelio absorba sustancias.
+176|estratificado|+|En un epitelio estratificado, la forma se nombra según las células de su superficie libre.|El nombre de la forma corresponde a las células de la capa apical.
+@morfo-06|piel|Estructura de la piel
+209|estratificado|+|La capa superficial de la piel está formada por epitelio pavimentoso estratificado queratinizado.|Esa descripción corresponde a la epidermis. La dermis subyacente es tejido conjuntivo.
+214|hipodermis|−|El tejido subcutáneo forma la capa más superficial de la piel propiamente dicha.|La hipodermis se ubica debajo de la dermis y no es una capa de la piel propiamente dicha.
+@morfo-07|celulas-oseas|Células del tejido óseo
+237|osteoblastos|−|La célula que deposita matriz nueva en la superficie ósea es el osteoclasto.|Depositar matriz es función del osteoblasto. El osteoclasto participa en su resorción.
+238|osteocitos|+|Una célula ósea alojada en una laguna de la matriz madura corresponde a un osteocito.|El osteocito es la célula ósea madura situada en una laguna.
+@morfo-08|esqueleto|Divisiones del esqueleto
+262|leto axial|−|La cintura escapular se incluye en el esqueleto axial porque une una extremidad al tronco.|Las cinturas, junto con las extremidades, pertenecen a la división apendicular.
+262|apendi|−|La columna vertebral pertenece al esqueleto apendicular por su relación con las cinturas.|La columna forma parte del eje corporal y corresponde al esqueleto axial.
+@morfo-09|articulaciones|Clasificación de las articulaciones
+307|articulaciones fibrosas|+|Una sutura se clasifica estructuralmente como una articulación fibrosa.|En las suturas los huesos se unen mediante tejido conjuntivo fibroso.
+311|anfiartrosis|−|Una articulación con movimiento limitado es una diartrosis por el hecho de admitir algo de movimiento.|La anfiartrosis admite movimiento limitado. La diartrosis tiene movimiento libre.
+@morfo-10|envolturas|Organización del músculo esquelético
+342|endomisio|−|La cubierta que rodea a cada fibra muscular individual es el perimisio.|El endomisio rodea a cada fibra. El perimisio envuelve al fascículo.
+343|epimisio|+|El tejido conjuntivo que envuelve al músculo entero corresponde al epimisio.|La jerarquía de las cubiertas va del endomisio de la fibra al perimisio del fascículo y al epimisio del músculo.
+@morfo-11|estructura-fibra|Estructura microscópica de la fibra
+435|sarcolema|−|Sarcolema es el nombre del citoplasma de una fibra muscular.|El sarcolema es su membrana plasmática. El citoplasma se denomina sarcoplasma.
+432|retículo sarcoplásmico|+|El retículo sarcoplásmico actúa como reserva de calcio en la fibra muscular.|El calcio almacenado en el retículo se libera para participar en la contracción.
+@morfo-12|vias|Divisiones funcionales del sistema nervioso
+470|aferente|+|Una señal que viaja desde un receptor periférico hacia la médula lleva dirección aferente.|La vía aferente conduce información sensitiva hacia el sistema nervioso central.
+470|eferente|−|La dirección eferente describe una señal que entra al sistema nervioso central desde un receptor.|La vía eferente lleva órdenes desde el sistema nervioso central a un efector.
+@morfo-13|medula|Anatomía macroscópica de la médula
+507|agujero magno|+|La médula espinal continúa al tallo encefálico a nivel del agujero magno.|Ese punto corresponde al límite superior de la médula descrito en el capítulo.
+508|cola de caballo|−|La cola de caballo es la porción final del tejido de la médula espinal.|La cola de caballo está formada por raíces nerviosas que descienden más allá del extremo medular.
+@morfo-14|regiones|Tallo encefálico y diencéfalo
+553|mesencéfalo|+|El mesencéfalo forma parte del tallo encefálico junto con el puente y la médula oblongada.|Esas son las tres porciones del tallo encefálico.
+556|epitálamo|−|El epitálamo pertenece al tallo encefálico y queda fuera del diencéfalo.|El epitálamo forma parte del diencéfalo junto con el tálamo y el hipotálamo.
+@morfo-15|vias-autonomas|Vías motoras autónomas
+592|preganglionar|−|En la vía autónoma típica la neurona preganglionar contacta directamente al órgano efector.|En la vía de dos neuronas, la preganglionar hace sinapsis en el ganglio con la posganglionar.
+592|posganglionar|+|La neurona que se dirige del ganglio al órgano efector es la posganglionar.|El soma posganglionar está en un ganglio periférico y su axón alcanza al efector.
+@morfo-16|receptores|Clasificación de los receptores sensoriales
+613|mecanorreceptores|+|Un receptor activado por la deformación debida al estiramiento se clasifica como mecanorreceptor.|Los mecanorreceptores responden a estímulos mecánicos, como el estiramiento o la presión.
+613|quimiorreceptores|−|Un receptor que detecta sustancias químicas se clasifica como termorreceptor.|Los quimiorreceptores detectan sustancias. Los termorreceptores responden a la temperatura.
+@morfo-17|secrecion|Glándulas endocrinas y exocrinas
+663|glándulas endocrinas|−|Las glándulas endocrinas requieren conductos para que su producto llegue al medio interno.|La secreción endocrina se vierte al medio interno sin conducto excretor. El conducto caracteriza a la secreción exocrina.
+665|receptores|−|Una célula expuesta a una hormona responde a ella aunque carezca del receptor apropiado.|La respuesta depende de que la célula diana posea un receptor específico.
+@morfo-18|proteinas-plasma|Plasma sanguíneo · Proteínas plasmáticas
+709|albúmina|+|Que la albúmina sea la proteína plasmática más abundante no implica que sea la de mayor tamaño.|Saladin describe a la albúmina como la proteína plasmática más pequeña y abundante.
+709|globulinas|+|Las subclases de globulinas ordenadas de menor a mayor peso molecular son alfa, beta y gamma.|El orden que presenta el texto es alfa, beta y gamma.
+@morfo-19|cavidades-cardiacas|Cámaras cardíacas y trayecto de la sangre
+750|aurícula derecha|−|La sangre de la vena cava superior entra primero en la aurícula izquierda.|Las venas cavas desembocan en la aurícula derecha.
+750|tronco pulmonar|−|La cámara que impulsa sangre al tronco pulmonar es el ventrículo izquierdo.|El tronco pulmonar recibe sangre del ventrículo derecho. El izquierdo la impulsa hacia la aorta.
+@morfo-20|vasos|Anatomía general de los vasos
+779|túnica media|+|En la pared de un vaso, la capa que contiene músculo liso es la túnica media.|La túnica media se sitúa entre la interna y la externa y contiene músculo liso.
+778|endotelio|−|El endotelio vascular está formado por epitelio cúbico estratificado.|El endotelio que reviste la luz es epitelio pavimentoso simple.
+@morfo-21|linfa|Drenaje linfático
+841|debajo del diafragma|−|La linfa de las extremidades inferiores desemboca en el conducto linfático derecho por su cercanía con el lado derecho del cuerpo.|El conducto torácico recoge la linfa de la mayor parte del organismo, incluidas las regiones inferiores.
+840|brazo derecho|−|El conducto linfático derecho drena las dos extremidades superiores.|Drena el miembro superior derecho y regiones derechas de la parte superior del cuerpo. El miembro superior izquierdo drena al conducto torácico.
+@morfo-22|pulmones|Árbol bronquial y pulmones
+890|bronquio principal derecho|+|Un objeto aspirado tiene mayor probabilidad de seguir el bronquio principal derecho por su trayecto más vertical.|El bronquio principal derecho es más ancho, corto y vertical que el izquierdo.
+890|lóbulos|−|El pulmón izquierdo tiene tres lóbulos y el derecho dos.|El pulmón derecho tiene tres lóbulos. El izquierdo tiene dos.
+@morfo-23|nefrona|Corpúsculo renal
+929|cápsula glomerular|−|El corpúsculo renal está formado por la arteriola aferente y la arteriola eferente.|El corpúsculo reúne el glomérulo capilar y la cápsula glomerular.
+928|arteriola aferente|+|La arteriola aferente es la vía de entrada a los capilares glomerulares.|La arteriola aferente lleva sangre al glomérulo. La eferente la retira.
+@morfo-24|compartimentos|Equilibrio de agua y electrolitos
+959|líquido intracelular|−|La mayor parte del agua corporal se localiza en el líquido extracelular.|El compartimento intracelular contiene la mayor proporción del agua corporal.
+965|sodio|+|El sodio es el catión principal del líquido extracelular y el potasio predomina dentro de las células.|El texto diferencia ambos compartimentos por su predominio catiónico.
+@morfo-25|plexos|Inervación del tubo digestivo
+984|plexo mientérico|−|El plexo mientérico se especializa en regular la secreción mucosa, mientras que la motilidad depende del submucoso.|El plexo mientérico se relaciona sobre todo con la motilidad. El submucoso regula la secreción y el flujo de la mucosa.
+984|plexo submucoso|+|La regulación local del flujo sanguíneo en la mucosa corresponde principalmente al plexo submucoso.|Esa función, junto con el control de la secreción, se atribuye al plexo submucoso.
+@morfo-26|energia|Nutrientes · Valor energético
+1032|kcal|+|En cantidades iguales, la grasa aporta más energía que los carbohidratos.|La grasa aporta alrededor de 9 kcal por gramo. Los carbohidratos aportan alrededor de 4.
+1032|proteínas|−|Por gramo, las proteínas aportan aproximadamente el doble de energía que los carbohidratos.|Ambos aportan alrededor de 4 kcal por gramo.
+@morfo-27|testiculo|Organización testicular
+1070|intersticiales|+|La testosterona testicular se secreta desde células situadas en el espacio intersticial.|Las células intersticiales de Leydig producen testosterona.
+1072|sustentaculares|−|Las células de Sertoli corresponden a las células intersticiales que secretan testosterona.|Las células sustentaculares de Sertoli se relacionan con el sostén de las células germinales. Las de Leydig secretan testosterona.
+@morfo-28|ovocitos|Ovogénesis
+1105|ovocito secundario|+|La célula que se libera normalmente en la ovulación es un ovocito secundario.|El ovocito primario completa la primera división meiótica antes de la ovulación y origina el ovocito secundario.
+1105|ovocitos primarios|−|La producción inicial de ovocitos primarios comienza con la pubertad.|Los ovocitos primarios ya se forman durante la vida fetal. En la pubertad se reanuda su maduración.
+@morfo-29|fecundacion|Fecundación
+1132|reacción acrosómica|−|La reacción acrosómica corresponde a la descarga de los gránulos corticales del ovocito.|La reacción acrosómica ocurre en el espermatozoide y libera contenido del acrosoma.
+1133|reacción cortical|+|La reacción cortical contribuye a impedir que entren espermatozoides adicionales.|Los cambios tras la descarga de gránulos corticales bloquean la polispermia.
+@biologia-01|capsula|Bacterias · Glucocáliz
+43|glucocáliz|+|La cubierta polisacarídica que favorece la adhesión de algunas bacterias también puede protegerlas de la fagocitosis.|Calvo describe ambas funciones para la cápsula o glucocáliz bacteriano.
+43|gramnegativas como en grampositivas|−|La presencia de cápsula permite concluir que la bacteria es grampositiva.|El texto indica que puede existir cápsula tanto en bacterias gramnegativas como grampositivas.
+@biologia-01|procariotas|Organización celular de las bacterias
+43|ADN circular|−|El cromosoma bacteriano típico es una molécula lineal asociada a histonas.|El genoma bacteriano típico descrito tiene ADN de doble cadena circular y no está unido a histonas.
+43|70 S|+|Las bacterias descritas traducen sus proteínas en ribosomas de 70 S.|Calvo contrasta ese tamaño con los ribosomas citoplasmáticos de las células eucariotas.
+@biologia-02|resolucion|Microscopía · Poder de resolución
+58|límite de resolución|−|Si dos puntos se acercan por debajo del límite de resolución, aumentar el tamaño de la imagen garantiza que se vean por separado.|La resolución es la capacidad de distinguir dos puntos. Aumentar la imagen por sí solo no recupera detalles que el instrumento no resolvió.
+60|contraste de fases|+|Para observar células vivas sin una tinción convencional, se puede usar microscopía de contraste de fases.|El contraste de fases permite distinguir detalles en células vivas sin teñirlas por métodos que exijan fijación.
+@biologia-03|bicapa|Composición y orientación de los lípidos de membrana
+129|anfipáticos|+|Un lípido de membrana puede interactuar con el agua por un extremo y evitarla por el otro.|El carácter anfipático se explica por una región hidrófila y otra hidrófoba.
+130|hidrófobas|−|En la bicapa, las regiones hidrófobas de los lípidos quedan expuestas a los medios acuosos.|Las regiones hidrófobas quedan enfrentadas dentro de la bicapa. Las cabezas polares se orientan hacia el agua.
+@biologia-04|gradientes|Transporte activo y difusión
+169|transporte activo|+|Si el desplazamiento neto de un soluto se produce contra su gradiente, el transporte requiere energía.|El transporte activo puede mover un soluto contra su gradiente y necesita una fuente de energía.
+170|glucosa|−|Por ser una molécula sin carga neta, la glucosa atraviesa fácilmente la bicapa mediante difusión simple.|La glucosa es un soluto polar grande. Para atravesar la membrana utiliza proteínas de transporte.
+@biologia-05|endocitosis|Endocitosis mediada por receptor
+218|clatrina|+|Las vesículas de la vía endocítica clásica mediada por receptor pueden formarse a partir de depresiones revestidas de clatrina.|La clatrina contribuye a formar la cubierta durante la invaginación.
+222|dinamina|−|La proteína que constriñe el cuello de la vesícula para separarla de la membrana es la clatrina.|En el mecanismo descrito, la dinamina rodea el cuello y favorece la separación. La clatrina forma el revestimiento.
+@biologia-06|uniones|Uniones de anclaje
+262|actina|−|La unión adherente en cinturón se ancla a la misma clase de filamentos que un desmosoma.|La zonula adherens se conecta con el citoesqueleto de actina.
+263|filamentos intermedios|−|El desmosoma presenta un anclaje intracelular de actina equivalente al de la unión adherente.|Los desmosomas se anclan a filamentos intermedios. La actina se asocia a la unión adherente.
+@biologia-07|envoltura|Envoltura y poro nucleares
+295|retículo endoplasmático|+|La membrana externa de la envoltura nuclear es continua con el retículo endoplasmático.|La continuidad estructural corresponde a la membrana externa de la envoltura nuclear.
+296|nucleoporinas|+|Las nucleoporinas son componentes proteicos del complejo del poro nuclear.|Son proteínas que componen el complejo del poro nuclear.
+@biologia-08|polimerasas|Tipos de ARN polimerasa
+356|ARNm|+|La transcripción del precursor del ARN mensajero corresponde a la ARN polimerasa II.|La polimerasa II transcribe los precursores de los ARNm.
+356|ARNt|+|La ARN polimerasa III produce ARN de transferencia y ARNr 5 S.|La polimerasa III transcribe los ARNt y el ARNr 5 S. La polimerasa I transcribe el precursor de otros ARNr.
+@biologia-09|traduccion|Traducción · Ribosoma y ARNt
+389|polirribosoma|+|Varios ribosomas que traducen simultáneamente un mismo ARNm forman un polirribosoma.|La unidad observada consiste en un ARNm asociado a varios ribosomas en traducción.
+391|CCA|+|En el ARNt, el aminoácido y el ARNm interaccionan con regiones diferentes del ARNt.|El aminoácido se une en el extremo 3′ que termina en CCA. El anticodón reconoce el codón.
+@biologia-10|rer|Entrada de proteínas al retículo endoplasmático
+425|péptido señal|−|En el ejemplo de entrada al RER, la señal que dirige la cadena se presenta únicamente al final, en el extremo C-terminal.|El péptido señal dirige la cadena naciente hacia el retículo.
+426|reconocedora de la señal|−|En la vía descrita, la peptidasa que corta la señal es la partícula que primero reconoce y dirige la cadena naciente al RER.|El reconocimiento corresponde a la partícula de reconocimiento de la señal. La peptidasa actúa en el corte posterior.
+@biologia-11|mitocondria|Estructura y genoma mitocondriales
+458|crestas|−|Las crestas mitocondriales son invaginaciones de la membrana externa.|Las crestas son pliegues de la membrana interna.
+461|16.569|+|El ADN mitocondrial humano descrito es circular y tiene una longitud de 16.569 pares de bases.|Calvo especifica la forma circular cerrada y el tamaño de su genoma mitocondrial.
+@biologia-12|microtubulos|Microtúbulos · Polaridad y polimerización
+495|extremo (+)|−|En el microtúbulo del ejemplo, la concentración crítica de tubulina para incorporar subunidades es mayor en el extremo positivo que en el negativo.|La concentración crítica es menor en el extremo positivo, lo que favorece la incorporación en ese extremo.
+495|GTP|−|Para incorporarse a un microtúbulo en crecimiento, la tubulina debe asociarse exclusivamente a GDP.|La incorporación de heterodímeros se asocia a tubulina unida a GTP.
+@biologia-13|senal|Señalización autocrina y paracrina
+539|paracrina|+|Si la señal secretada alcanza células próximas, puede actuar por un mecanismo paracrino.|La acción paracrina es local y se dirige a células vecinas.
+539|autocrina|−|La señal que actúa sobre la misma célula que la libera se denomina endocrina.|Cuando la célula emisora es también diana, el mecanismo es autocrino.
+@biologia-14|g2m|Punto de control G2/M
+606|Cdc25|+|El punto de control G2/M puede retrasar la entrada en mitosis cuando hay daño en el ADN.|El control impide activar el complejo mitótico mientras se atiende el daño del ADN.
+606|Cdk1|−|Para detener la entrada en mitosis por daño en el ADN, el control G2/M activa el complejo mitótico Cdk1-ciclina B.|La detención mantiene inactivo el complejo que impulsa el comienzo de M.
+@biologia-14|secuencia|Fases del ciclo celular
+583|interfase|−|En un ciclo proliferativo, la fase S forma parte de la división celular y ocurre después de la interfase.|La interfase comprende G1, S y G2 antes de la división.
+584|fase G1|−|G1 se define por situarse después de la replicación del ADN y antes de la mitosis.|G1 es previa a la replicación de S. G2 se sitúa entre S y M.
+@biologia-14|cohesion|Final de la interfase y división
+587|cohesinas|−|Tras la replicación, las cromátidas hermanas quedan unidas por la misma clase de proteínas que compacta los cromosomas en mitosis.|La cohesión de cromátidas hermanas se debe a las cohesinas. Las condensinas cumplen una función de compactación.
+587|citocinesis|+|Durante la división celular se distinguen la división del núcleo y la del citoplasma.|Cariocinesis y citocinesis designan esos dos procesos.
+@biologia-15|mitosis|Etapas de la mitosis
+621|prometafase|+|La prometafase precede a la alineación cromosómica característica de la metafase.|La secuencia va de profase y prometafase a metafase, anafase y telofase.
+622|profase|−|La compactación inicial de la cromatina en cromosomas se produce recién en la telofase.|La condensación comienza en profase. Al final de la mitosis los cromosomas se descondensan.
+@biologia-16|tumores|Proliferación tumoral y diseminación
+657|metástasis|−|Un tumor que permanece localizado y no produce metástasis se define como maligno por esa característica.|La permanencia local sin metástasis caracteriza a los tumores benignos en la clasificación descrita.
+656|Bcl-2|+|Aumentar una proteína como Bcl-2 puede contribuir a que una célula tumoral evada la apoptosis.|Bcl-2 tiene una función antiapoptótica.
+@biologia-17|inmunidad|Inmunidad adaptativa y humoral
+700|inmunidad adaptativa|+|La respuesta cuya magnitud aumenta con exposiciones sucesivas es la adaptativa.|La capacidad de mejorar la respuesta ante nuevas exposiciones es una característica de la inmunidad adaptativa.
+701|humoral|−|La defensa principal frente a toxinas y microorganismos extracelulares es exclusivamente la respuesta citotóxica.|La inmunidad humoral, mediada por anticuerpos, se dirige contra agentes extracelulares y sus toxinas.
+@biologia-18|potencia|Potencia de las células madre
+739|autorrenovarse a largo plazo|+|La capacidad de generar células especializadas por sí sola es insuficiente para definir a una célula madre.|Además de diferenciarse, las células madre pueden autorrenovarse a largo plazo.
+740|totipotentes|−|Una célula pluripotente produce todos los tejidos extraembrionarios, incluida la placenta, igual que una totipotente.|El criterio que distingue a la totipotencia incluye producir tejidos extraembrionarios. La pluripotencia abarca derivados de las tres capas embrionarias.
+@salud-01|educacion|Educación en salud · Alcance y resultados
+2|actitudes|+|Al evaluar una intervención educativa importa observar cambios en conocimientos, actitudes y prácticas.|El compendio integra esos tres resultados en la educación en salud.
+2|familias|−|Una actividad con familias y comunidades queda fuera de la educación en salud porque no se dirige a un paciente individual.|El alcance de la educación en salud incluye a individuos, familias y comunidades.
+@salud-02|enfoques|Enfoques biomédico y biopsicosocial
+2|ausencia de enfermedad|−|En la perspectiva biomédica tradicional descrita, la ausencia de enfermedad es insuficiente porque se exige valorar en conjunto las dimensiones psicológica y social.|Esa integración corresponde al enfoque biopsicosocial. La visión biomédica tradicional define la salud en términos de ausencia de enfermedad.
+3|biopsicosocial|+|Un enfoque que relaciona factores biológicos, psicológicos y sociales corresponde a la perspectiva biopsicosocial.|El compendio presenta la salud como resultado de la interacción de esas dimensiones.
+@salud-03|funciones|Funciones de la salud pública
+5|vigilancia|+|Recolectar y analizar datos para detectar brotes corresponde a una función de vigilancia.|La vigilancia permite identificar cambios, riesgos y brotes a partir de la información recogida.
+5|participación comunitaria|+|Involucrar a la población al identificar un problema ya constituye participación comunitaria, incluso antes de ejecutar una intervención.|El compendio incluye involucrar a la población en la identificación de problemas y en las decisiones.
+@salud-04|prevencion|Niveles de prevención
+19|vacunación|+|Una vacunación aplicada para evitar que aparezca una enfermedad es una medida de prevención primaria.|La prevención primaria interviene antes de la aparición de la enfermedad.
+19|detección temprana|−|Buscar casos asintomáticos mediante tamizaje es prevención primaria porque la persona todavía no tiene síntomas.|El tamizaje busca detectar precozmente una enfermedad que ya puede estar presente. Corresponde a la prevención secundaria.
+@salud-05|ottawa|Carta de Ottawa · Áreas de acción
+6|entornos favorables|+|Crear entornos favorables y desarrollar habilidades personales son áreas de acción de promoción de la salud.|Ambas forman parte de las áreas de acción descritas en la Carta de Ottawa.
+6|acción comunitaria|−|La promoción de la salud propuesta en Ottawa limita la acción a los servicios sanitarios y excluye la acción comunitaria.|Además de reorientar los servicios, la Carta plantea fortalecer la acción comunitaria.
+@salud-06|aps|Atención Primaria de Salud
+16|socialmente aceptables|−|En la definición de Alma-Ata, el fundamento científico basta para elegir una tecnología aunque no sea socialmente aceptable.|La definición combina fundamento científico, aplicación práctica y aceptación social.
+17|primer nivel de contacto|−|La APS se define como un contacto posterior al paso inicial por el hospital de especialidades.|Es el primer nivel de contacto de individuos, familias y comunidad con el sistema.
+@salud-07|riesgo|Factores de riesgo
+21|Un factor de riesgo|−|Al identificar un factor de riesgo se demuestra automáticamente que constituye una causa directa.|Un factor de riesgo aumenta la probabilidad de un resultado adverso. Esa relación no establece por sí sola causalidad directa.
+21|tabaquismo|+|El tabaquismo se clasifica como un factor de riesgo modificable.|Los factores conductuales pueden modificarse, a diferencia de características como la edad o la herencia.
+@salud-08|agenda|Agenda 2030 · Objetivos y metas
+7|2030|+|El horizonte 2030 de la Agenda indica hasta cuándo se orientan las acciones, aunque su adopción ocurrió antes.|La Agenda se adoptó en 2015 y fija un horizonte de acción hasta 2030.
+8|169 metas|+|El compendio distingue las 169 metas de los 17 objetivos que las agrupan.|El compendio distingue 17 objetivos de desarrollo sostenible y 169 metas.
+@salud-09|safci|Políticas de salud en Bolivia · SAFCI
+10|saberes ancestrales|+|El modelo SAFCI articula saberes ancestrales con la biomedicina.|La articulación de saberes forma parte del enfoque intercultural descrito.
+10|participación social|−|El enfoque de salud que describe el compendio excluye la participación social de la organización de la atención.|El texto incorpora la participación social junto con la interculturalidad.
+@salud-10|epidemiologia|Epidemiología social y de campo
+34|terreno|+|Ante un brote, la epidemiología de campo procura controlar la transmisión y utiliza información recogida en el terreno.|El texto vincula el estudio de campo con la obtención directa de datos y la acción para controlar el brote.
+34|macro espacios|−|La epidemiología social se limita a microespacios como escuelas o asilos.|El texto contrasta los microespacios de la epidemiología de campo con los macroespacios, como regiones y países, de la epidemiología social.
+@salud-11|investigacion|Etapas de la investigación
+41|planificación|−|La planificación de una investigación cuantitativa se inicia después de haber terminado de recolectar los datos.|En el proceso descrito, la planificación precede a la ejecución, durante la cual se recolectan datos.
+41|informe final|+|El informe final constituye un momento distinto de la planificación y de la ejecución.|El compendio organiza el proceso en planificación, ejecución e informe final.
+@salud-12|planteamiento|El problema y el objeto de estudio
+51|Plantear un problema|+|Al plantear el problema se precisa y estructura formalmente una idea de investigación.|El planteamiento convierte la idea inicial en un problema concreto.
+52|espaciales|−|Al delimitar un objeto de estudio basta con definir el periodo, pues su ubicación no forma parte de la delimitación.|El texto incluye límites temporales y espaciales en la construcción del objeto de estudio.
+@salud-13|marco|Fundamentación teórica
+61|revisión de la literatura|+|Revisar la literatura ayuda a decidir si se adopta una teoría o se construye una perspectiva para el estudio.|La revisión y la adopción o desarrollo de una perspectiva son etapas de elaboración del marco.
+62|observables|−|Los conceptos empíricos se distinguen porque nunca pueden observarse ni medirse directamente.|El texto distingue los conceptos empíricos, observables y medibles, de los teóricos.
+@salud-14|variables|Variables según su posición en la hipótesis
+72|independiente|+|La variable que se propone como explicación de cambios en otra ocupa el papel de independiente.|La independiente explica, condiciona o determina cambios en la dependiente.
+72|dependiente|−|La variable dependiente es la que se introduce como causa para explicar cambios en la independiente.|La dependiente es el resultado o fenómeno que se busca explicar.
+@salud-15|estadistica|Estadística descriptiva e inferencial
+89|estadística descriptiva|+|Elaborar tablas para resumir únicamente los datos observados es una tarea de estadística descriptiva.|La descriptiva organiza y resume la información recolectada.
+89|estadística inferencial|−|Generalizar conclusiones de una muestra a su población es exclusivamente descriptivo.|La generalización desde una muestra corresponde a la estadística inferencial.
+@salud-16|muestreo|Muestreo aleatorio y sistemático
+99|sistemático|+|Elegir un inicio al azar y luego tomar cada elemento número k corresponde al muestreo sistemático.|La selección combina un arranque aleatorio con un intervalo regular.
+99|de k en k|+|Si el tamaño muestral se mantiene fijo y la población aumenta, el intervalo de selección aumenta.|Para el procedimiento descrito se divide el tamaño poblacional entre el tamaño muestral.
+@salud-17|tabulacion|Tabulación y recorrido de datos
+110|intervalos|+|Cuando los datos de una variable continua son numerosos, se pueden presentar sus frecuencias agrupadas en intervalos.|El compendio usa los intervalos para organizar datos continuos o numerosos.
+110|recorrido|−|Para establecer el recorrido se suman los valores extremos de la distribución.|El rango o recorrido se obtiene restando el valor mínimo al máximo.
+@salud-18|media|Medidas de tendencia central
+148|media aritmética|−|Para calcular la media aritmética de los datos individuales basta con identificar el valor más frecuente.|La media se obtiene al sumar los valores y dividir por el número de datos. El valor más frecuente es la moda.
+148|mediana|+|La media, la mediana y la moda describen tendencia central, aunque pueden dar valores diferentes.|Las tres son medidas de tendencia central y se definen con criterios distintos.
+@salud-19|cuartiles|Cuartiles
+162|cuartiles|−|Se necesitan cuatro valores cuartílicos para delimitar cuatro partes de una distribución ordenada.|Q1, Q2 y Q3 separan las cuatro partes.
+162|25%|−|Por debajo de Q1 se sitúa aproximadamente el 75 % de los datos.|Q1 corresponde al primer 25 % de los datos. El 75 % se asocia a Q3.
+@salud-20|dispersion|Rango y rango intercuartílico
+172|valores extremos|+|Dos conjuntos con los mismos valores mínimo y máximo tienen el mismo rango, aunque se distribuyan de forma distinta por dentro.|El rango solo depende de los dos extremos.
+173|intercuartil|+|El rango intercuartílico puede permanecer igual si un cambio en el valor máximo no modifica Q1 ni Q3.|El rango intercuartílico es Q3 menos Q1. La diferencia entre máximo y mínimo es el rango total.
+@salud-21|excel|Estadística descriptiva en Excel
+195|Estadística descriptiva|−|En la ruta presentada, la opción Estadística descriptiva se usa para instalar los complementos de Excel.|Ese procedimiento abre la herramienta de resúmenes descriptivos.
+195|columna de datos|−|La herramienta ilustrada se aplica directamente a etiquetas nominales sin codificar como si fueran datos numéricos.|La herramienta presentada opera sobre datos numéricos. Una etiqueta nominal por sí sola no constituye ese tipo de dato.

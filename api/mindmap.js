@@ -38,6 +38,7 @@ module.exports = async function handler(req, res) {
       return res.status(200).end(JSON.stringify({
         questions: JSON.parse(body),
         teaching: require('./_mindmaps/banco-docente.json'),
+        reviewedQuestions: require('./_mindmaps/verified-bank.cjs'),
       }));
     } catch (_) { return res.status(503).end(); }
   }

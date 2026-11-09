@@ -26,7 +26,7 @@
    pdf_page: String(read(q, 'paginas_pdf') || ''),
    ...(reading?.title ? { reading } : {}),
    ...(Array.isArray(references) && references.length ? { references } : {}),
-   ...(teaching?.concepto && teaching.afirmaciones?.length ? { teaching } : {}),
+   ...(teaching?.afirmaciones?.length ? { teaching } : {}),
   };
  }
  function snapshot(questions, answers, read, accepted) {
@@ -147,7 +147,7 @@
 
  function showTeaching(teaching) {
   const content = el('div', null, 'qr-teaching');
-  content.append(el('h5', 'Idea clave', 'qr-subheading'), el('p', teaching.concepto, 'qr-commentary-copy'));
+  if (teaching.concepto) content.append(el('h5', 'Idea clave', 'qr-subheading'), el('p', teaching.concepto, 'qr-commentary-copy'));
   const list = el('ol', null, 'qr-reasons qr-teaching-claims');
   teaching.afirmaciones.forEach(({ estado, comentario }, index) => {
    const row = el('li', null, 'qr-reason');
