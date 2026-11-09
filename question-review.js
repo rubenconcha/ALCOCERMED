@@ -9,6 +9,7 @@
   let explanation = studentComment(read(q, 'justificacion') || read(q, 'explicacion') || read(q, 'comentario'));
   const options = [...'abcde'].map(letter => read(q, 'opcion_' + letter)).filter(value => value != null && String(value).trim()).map(String);
   const comments = read(q, 'comentarios_opciones');
+  const reading = read(q, 'banco_lectura');
   const option_explanations = options.map((_, i) => String(comments?.['ABCDE'[i]] || '').trim());
   const blocks = explanation.split(/\n\s*\n/);
   // Some saved bank questions carry their existing option comments in a single field.
@@ -21,6 +22,7 @@
    source: String(read(q, 'fuente_comentario') || read(q, 'fuente') || ''),
    printed_page: String(read(q, 'pagina_impresa') || ''),
    pdf_page: String(read(q, 'paginas_pdf') || ''),
+   ...(reading?.title ? { reading } : {}),
   };
  }
  function snapshot(questions, answers, read, accepted) {
@@ -48,7 +50,36 @@
  if(typeof module!=='undefined'&&module.exports)module.exports=root.QuestionReview;
  if(typeof document==='undefined')return;
  const el=(tag,value,cls)=>{const node=document.createElement(tag);if(value!=null)node.textContent=value;if(cls)node.className=cls;return node;};
- function showCommentary(review, { lockedMessage, workedSolution, sourceNote, compactSource = false } = {}) {
+ function showReading(reading, openReading) {
+  const block = el('section', null, 'qr-reading');
+  block.append(el('h5', 'Qué repasar', 'qr-subheading'));
+  block.append(el('p', 'Capítulo ' + reading.chapter + ' · ' + reading.chapterTitle, 'qr-reading-chapter'));
+  block.append(el('p', reading.title, 'qr-reading-section'));
+
+  function pageAction(label, page, printed) {
+   const locator = (printed ? 'p. impresa ' + printed + ' · ' : '') + 'PDF ' + page;
+   if (!openReading) return el('strong', label + ' · ' + locator, 'qr-reading-page');
+   const action = el('button', null, 'qr-reading-link');
+   action.type = 'button';
+   action.append(el('span', label), el('small', locator));
+   action.onclick = () => openReading(reading.slug, page, action);
+   return action;
+  }
+
+  block.append(pageAction('Leer el apartado', reading.start));
+  if (reading.figures?.length) {
+   const list = el('ul', null, 'qr-reading-visuals');
+   for (const figure of reading.figures) {
+    const item = el('li');
+    item.append(pageAction(figure.label, figure.page, figure.printed), el('p', figure.note));
+    list.append(item);
+   }
+   block.append(list);
+  }
+  return block;
+ }
+
+ function showCommentary(review, { lockedMessage, workedSolution, sourceNote, compactSource = false, bankMode = false, openReading } = {}) {
   const panel = el('section', null, 'qr-commentary');
   const heading = el('h4', null, 'qr-commentary-title');
   const icon = el('i', null, 'far fa-comment-alt');
@@ -62,7 +93,7 @@
    return panel;
   }
 
-  const { options = [], selected, accepted = [], option_explanations = [], source, printed_page, pdf_page } = review;
+  const { options = [], selected, accepted = [], option_explanations = [], source, printed_page, pdf_page, reading } = review;
   const explanation = studentComment(review.explanation);
   const fromPattern = /^Examen pasado\b/i.test(source || '');
   const patternOnly = fromPattern && (!explanation || /^Respuesta según el patrón original\./i.test(explanation));
@@ -71,13 +102,21 @@
    return typeof comment === 'string' && comment.trim() ? [{ index, comment: comment.trim() }] : [];
   });
 
-  if (workedSolution) panel.append(workedSolution);
-  else if (!patternOnly && explanation && !reasons.some(({ comment }) => comment === explanation)) {
+  if (workedSolution) {
+   if (bankMode) panel.append(el('h5', 'Cómo se resuelve', 'qr-subheading'));
+   panel.append(workedSolution);
+  } else if (!patternOnly && explanation && !reasons.some(({ comment }) => comment === explanation)) {
+   if (bankMode) {
+    const tidy = text => String(text || '').trim().toLowerCase().replace(/[.!?]+$/, '');
+    const echo = accepted.some(index => tidy(options[index]) === tidy(explanation));
+    panel.append(el('h5', echo ? 'Respuesta correcta' : 'Por qué es correcta', 'qr-subheading'));
+   }
    panel.append(el('p', explanation, 'qr-commentary-copy'));
   }
 
   if (reasons.length) {
    const list = el('ul', null, 'qr-reasons');
+   const more = bankMode && reasons.length > 1 ? el('ul', null, 'qr-reasons') : null;
    for (const { index, comment } of reasons) {
     const correct = accepted.includes(index);
     const state = accepted.length ? (correct ? 'Correcta' : 'Incorrecta') : '';
@@ -89,20 +128,28 @@
     if (state) label.append(el('span', state, 'qr-reason-state'));
     if (index === selected) label.append(el('span', 'Tu respuesta', 'qr-selected'));
     entry.append(label, el('p', comment, 'qr-commentary-copy'));
-    list.append(entry);
+    const showNow = index === selected && !correct || correct && !explanation && !workedSolution;
+    (more && !showNow ? more : list).append(entry);
    }
-   panel.append(list);
+   if (list.childElementCount) panel.append(list);
+   if (more?.childElementCount) {
+    const detail = el('details', null, 'qr-bank-reasons');
+    detail.append(el('summary', 'Revisar los incisos'), more);
+    panel.append(detail);
+   }
   }
 
   if (!workedSolution && !reasons.length && (patternOnly || !explanation)) {
    const keys = accepted.map(index => 'ABCDE'[index]).filter(Boolean).join(', ');
-   if (keys) panel.append(el('p', 'Clave del examen · ' + keys, 'qr-commentary-copy'));
+   if (keys) panel.append(el('p', (bankMode ? 'Respuesta correcta · ' : 'Clave del examen · ') + keys, 'qr-commentary-copy'));
    else if (!source) panel.hidden = true;
   }
 
+  if (reading) panel.append(showReading(reading, openReading));
+
   if (source && !(compactSource && fromPattern)) {
    const reference = el(compactSource ? 'details' : 'div', null, compactSource ? 'qr-reference qr-reference-compact' : 'qr-reference');
-   const label = compactSource ? 'Fuente oficial' : fromPattern ? 'Origen de la clave' : 'Fuente del comentario';
+   const label = compactSource ? 'Fuente oficial' : fromPattern ? 'Origen de la clave' : reading ? 'Bibliografía oficial' : 'Fuente del comentario';
    reference.append(el(compactSource ? 'summary' : 'strong', label));
    const printed = printed_page && !source.includes('p. impresa ' + printed_page) ? 'Pág. impresa ' + printed_page : '';
    const digital = pdf_page && !source.includes('p. PDF ' + pdf_page) ? 'Pág. PDF ' + pdf_page : '';

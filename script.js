@@ -2411,7 +2411,10 @@ window.startBanco = async function () {
         try {
             const pack = await window.Sufficiency.readQuestions(ids);
             if (request !== bancoMateriaRequest || currentCampusScreen !== 'banco-screen' || bancoState.allPreguntas !== rows) return;
-            const hydrated = new Map(pack.questions.map(q => [q.id, window.SufficiencyCore.toQuestionRow(q, pack)]));
+            const hydrated = new Map(pack.questions.map(q => [q.id, {
+                ...window.SufficiencyCore.toQuestionRow(q, pack),
+                bankWorkedSolution: q.solution ? q : null,
+            }]));
             chosen = chosen.map(q => hydrated.get(q.sufficiencyId) || q);
         } catch (_) {
             if (request === bancoMateriaRequest && currentCampusScreen === 'banco-screen') showToast('No pudimos abrir estas preguntas. Intenta de nuevo.', 'error');
@@ -2421,7 +2424,7 @@ window.startBanco = async function () {
             if (request === bancoMateriaRequest && bancoState.allPreguntas === rows) start.disabled = false;
         }
     }
-    bancoState.preguntas = chosen;
+    bancoState.preguntas = chosen.map(q => window.StudyDepth?.prepareBankQuestion(q) || q);
     bancoState.currentIdx = 0;
     bancoState.finalized = false;
 
@@ -2556,8 +2559,29 @@ function renderBancoQuestion() {
 
 function renderBancoCommentary(question, selected, correct, checked) {
     const review = checked ? { ...QuestionReview.commentaryData(question, campo), selected, accepted: [correct] } : {};
+    let workedSolution;
+    if (checked && question.bankWorkedSolution) {
+        const solution = document.createElement('template');
+        solution.innerHTML = window.SufficiencyCore.solutionHtml(question.bankWorkedSolution);
+        workedSolution = solution.content.firstElementChild;
+    }
     const panel = QuestionReview.showCommentary(review, {
+        bankMode: true,
         lockedMessage: checked ? '' : 'Responde la pregunta para ver el comentario.',
+        workedSolution,
+        async openReading(slug, page, button) {
+            button.disabled = true;
+            try {
+                await window.loadCampusAssets('texts');
+                if (button.isConnected && currentCampusScreen === 'banco-screen') {
+                    await window.OfficialTexts.readPage(slug, page);
+                }
+            } catch (_) {
+                if (button.isConnected) showToast('No pudimos abrir el texto. Vuelve a intentarlo.', 'error');
+            } finally {
+                button.disabled = false;
+            }
+        },
     });
     document.getElementById('bq-comentario-wrap').replaceChildren(panel);
 }
@@ -2954,31 +2978,15 @@ async function loadPreguntasDificiles() {
 // PRACTICAR PREGUNTAS DIFÍCILES
 // ──────────────────────────────────────────────
 window.practicarPreguntasDificiles = async function () {
-    var ids = bancoState._preguntasDificilesIds;
-    if (!ids || ids.length === 0) return;
+    const ids = bancoState._preguntasDificilesIds;
+    const owner = currentUser?.id;
+    if (!ids?.length || !owner || CampusAccess.isFree()) return;
 
     try {
-        var client = getSupabase();
-        var rows = bancoState._cache || [];
-
-        // Normalizar ids a string para comparacion segura (uuid o int)
-        var idsStr = ids.map(String);
-
-        // Si no hay cache completo, traer las preguntas por ID desde Supabase
-        if (rows.length === 0) {
-            var { data, error } = await client
-                .from('banco_preguntas')
-                .select('*')
-                .in('id', ids);
-            if (error) throw error;
-            rows = data || [];
-        } else {
-            // Filtrar del cache comparando como strings
-            rows = rows.filter(function (r) {
-                var rid = campo(r, 'id');
-                return rid !== '' && idsStr.includes(String(rid));
-            });
-        }
+        const questions = await fetchAllBancoQuestions();
+        if (currentUser?.id !== owner || currentCampusScreen !== 'banco-screen' || CampusAccess.isFree()) return;
+        const idsStr = new Set(ids.map(String));
+        const rows = questions.filter(row => idsStr.has(String(campo(row, 'id'))));
 
         if (rows.length === 0) {
             showToast('⚠ no se encontraron las preguntas en la base de datos', 'error');
@@ -2988,7 +2996,7 @@ window.practicarPreguntasDificiles = async function () {
         // Configurar banco con estas preguntas
         bancoState.selectedMateria = 'seguimiento personalizado';
         bancoState.selectedTema = null;
-        bancoState.preguntas = shuffleArray(rows.slice());
+        bancoState.preguntas = shuffleArray(rows).map(q => window.StudyDepth?.prepareBankQuestion(q) || q);
         bancoState.currentIdx = 0;
         bancoState.finalized = false;
         bancoState.answers = bancoState.preguntas.map(function () { return { selected: null }; });

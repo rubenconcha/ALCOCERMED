@@ -3047,6 +3047,53 @@ body.wayground-active .main-content {
 .qr-reference strong { color: var(--shell-ink, #1e293b); }
 .qr-reference p { margin: 3px 0 0; }
 
+/* Lectura orientada desde el comentario del banco */
+.qr-commentary .qr-subheading {
+    margin: 10px 0 5px;
+    color: var(--shell-ink, #1e293b);
+    text-transform: none;
+    font-size: .85rem;
+    font-weight: 700;
+}
+.qr-reading {
+    margin-top: 14px;
+    padding: 10px 12px 12px;
+    border-radius: 11px;
+    background: var(--shell-soft, #f6f8fb);
+}
+.qr-reading > .qr-subheading { margin-top: 0; }
+.qr-reading p { margin: 4px 0; font-size: .81rem; line-height: 1.5; }
+.qr-reading-chapter { color: var(--shell-muted, #53647a); }
+.qr-reading-section { font-weight: 600; }
+.qr-reading-visuals { display: grid; gap: 7px; margin: 8px 0 0; padding: 0; list-style: none; }
+.qr-reading-visuals > li { padding-top: 7px; border-top: 1px solid var(--shell-line, #dce3eb); }
+.qr-reading-link, .qr-reading-page {
+    margin-top: 4px;
+    color: var(--shell-blue, #166f9e);
+    font-size: .79rem;
+    font-weight: 700;
+}
+.qr-reading-link {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 4px 8px;
+    min-height: 40px;
+    max-width: 100%;
+    border: 1px solid var(--shell-line, #dce3eb);
+    border-radius: 8px;
+    padding: 6px 9px;
+    background: var(--shell-panel, #fff);
+    text-align: left;
+    cursor: pointer;
+}
+.qr-reading-link small { color: var(--shell-muted, #53647a); font-size: .71rem; font-weight: 500; }
+.qr-reading-link:hover { background: var(--shell-blue-soft, #e9f4fb); }
+.qr-reading-link:focus-visible { outline: 2px solid var(--shell-blue, #166f9e); outline-offset: 2px; }
+.qr-bank-reasons { margin-top: 10px; }
+.qr-bank-reasons summary { cursor: pointer; color: var(--shell-blue, #166f9e); font-size: .81rem; font-weight: 700; }
+.qr-bank-reasons[open] summary { margin-bottom: 8px; }
+
 /* ── CÍRCULOS DE NAVEGACIÓN MIR ── */
 .bq-nav-section {
     background: #fff;

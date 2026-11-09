@@ -20,13 +20,13 @@ test('77 general maps are free; Sangre and Sentidos and all detailed maps requir
  assert.equal(ctx.mmTopicKey(general[0]),ctx.mmTopicKey(catalog[0]));
 });
 
-async function call({id=catalog[0].id,format='json',token,method='GET',access,status=200,fail=false}){
+async function call({id=catalog[0].id,format='json',token,method='GET',access,revision,status=200,fail=false}){
  const original=global.fetch;let calls=0;
  global.fetch=async(url,options)=>{calls++;assert.match(url,/\/rpc\/campus_access$/);assert.equal(options.headers.Authorization,'Bearer '+token);if(fail)throw new Error('unavailable');return{ok:status===200,status,json:async()=>access};};
  const chunks=[];const response=new Writable({write(chunk,enc,done){chunks.push(chunk);done();}});
  response.statusCode=200;response.headers={};response.setHeader=(k,v)=>response.headers[k]=v;response.status=n=>{response.statusCode=n;return response;};
  const ended=new Promise(resolve=>response.on('finish',resolve));
- try{await handler({method,query:{id,format},headers:{authorization:token?'Bearer '+token:undefined}},response);await ended;return{code:response.statusCode,headers:response.headers,body:Buffer.concat(chunks),calls};}finally{global.fetch=original;}
+ try{await handler({method,query:{id,format,revision},headers:{authorization:token?'Bearer '+token:undefined}},response);await ended;return{code:response.statusCode,headers:response.headers,body:Buffer.concat(chunks),calls};}finally{global.fetch=original;}
 }
 test('no token, expired session, or free subscription cannot obtain premium explanations or downloads',async()=>{
  const missing=await call({});assert.equal(missing.code,401);assert.equal(missing.calls,0);assert.equal(missing.body.length,0);
@@ -50,6 +50,14 @@ test('the combined question supplement verifies access once and returns only ban
  const rows=JSON.parse(result.body);
  assert.equal(rows.length,84);
  assert.ok(rows.every(q=>q.PREGUNTA&&q.FUENTE&&q.content_id.startsWith('depth:')&&!q.assets));
+ const revision='docente';
+ assert.equal((await call({id,revision})).code,401);
+ assert.equal((await call({id,revision,token:'free',access:{ready:true,premium:false}})).code,403);
+ const reviewed=await call({id,revision,token:'paid',access:{ready:true,premium:true}});
+ assert.equal(reviewed.code,200);assert.equal(reviewed.calls,1);
+ const payload=JSON.parse(reviewed.body);
+ assert.equal(Object.keys(payload.teaching.cycle.questions).length,98);
+ assert.deepEqual(payload.questions,rows);
 });
 
 test('Sangre and Sentidos general maps are private for both content and downloads',async()=>{

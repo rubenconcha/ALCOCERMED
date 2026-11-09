@@ -34,7 +34,11 @@ module.exports = async function handler(req, res) {
     try {
       const body = await bankSupplement();
       res.setHeader('Content-Type', 'application/json; charset=utf-8');
-      return res.status(200).end(body);
+      if (req.query.revision !== 'docente') return res.status(200).end(body);
+      return res.status(200).end(JSON.stringify({
+        questions: JSON.parse(body),
+        teaching: require('./_mindmaps/banco-docente.json'),
+      }));
     } catch (_) { return res.status(503).end(); }
   }
   const ext = format === 'image' ? 'webp' : 'json';

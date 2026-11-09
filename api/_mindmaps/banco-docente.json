@@ -1,0 +1,1690 @@
+{
+  "cycle": {
+    "book": "Alfonso Calvo · Biología celular biomédica · Elsevier, 2015",
+    "slug": "biologia-celular",
+    "sections": {
+      "ciclo": {
+        "chapter": 14,
+        "title": "Fases del ciclo celular",
+        "start": 582,
+        "end": 584,
+        "figures": [
+          {
+            "label": "Figura 14-1A",
+            "page": 583,
+            "note": "Sigue el orden de G1, S, G2 y M. En el panel B compara una célula en interfase con una en mitosis."
+          }
+        ],
+        "chapterTitle": "Ciclo celular y destinos vitales de la célula"
+      },
+      "g1": {
+        "chapter": 14,
+        "title": "Fase G1",
+        "start": 584,
+        "end": 584,
+        "figures": [
+          {
+            "label": "Figura 14-1A",
+            "page": 583,
+            "note": "Localiza G1 entre la división anterior y el comienzo de S."
+          }
+        ],
+        "chapterTitle": "Ciclo celular y destinos vitales de la célula"
+      },
+      "faseS": {
+        "chapter": 14,
+        "title": "Fase S",
+        "start": 584,
+        "end": 585,
+        "figures": [
+          {
+            "label": "Figura 14-2A",
+            "page": 585,
+            "note": "Compara el estado del complejo de replicación en G1 y S."
+          }
+        ],
+        "chapterTitle": "Ciclo celular y destinos vitales de la célula"
+      },
+      "g2": {
+        "chapter": 14,
+        "title": "Fase G2 y comienzo de la mitosis",
+        "start": 587,
+        "end": 588,
+        "figures": [
+          {
+            "label": "Figura 14-10",
+            "page": 601,
+            "note": "Sigue el paso de G2 a M y los cambios que permiten armar el huso."
+          }
+        ],
+        "chapterTitle": "Ciclo celular y destinos vitales de la célula"
+      },
+      "mitosis": {
+        "chapter": 14,
+        "title": "Mitosis",
+        "start": 587,
+        "end": 588,
+        "figures": [
+          {
+            "label": "Figura 14-11",
+            "page": 602,
+            "note": "Usa el esquema para distinguir cromátidas unidas en metafase de cromátidas separadas en anafase."
+          }
+        ],
+        "chapterTitle": "Ciclo celular y destinos vitales de la célula"
+      },
+      "citocinesis": {
+        "chapter": 14,
+        "title": "Citocinesis",
+        "start": 588,
+        "end": 588,
+        "figures": [],
+        "chapterTitle": "Ciclo celular y destinos vitales de la célula"
+      },
+      "control": {
+        "chapter": 14,
+        "title": "Regulación del ciclo celular: puntos de control",
+        "start": 590,
+        "end": 590,
+        "figures": [
+          {
+            "label": "Figura 14-3",
+            "page": 590,
+            "note": "Ubica el control antes de S, antes de M y dentro de M."
+          }
+        ],
+        "chapterTitle": "Ciclo celular y destinos vitales de la célula"
+      },
+      "g0": {
+        "chapter": 14,
+        "title": "Fases del ciclo en células de diferentes tejidos",
+        "start": 588,
+        "end": 589,
+        "figures": [
+          {
+            "label": "Figura 14-16",
+            "page": 612,
+            "note": "Distingue la ruta hacia la quiescencia de la que conduce a proliferación."
+          }
+        ],
+        "chapterTitle": "Ciclo celular y destinos vitales de la célula"
+      },
+      "origen": {
+        "chapter": 14,
+        "title": "Fase S · orígenes de la replicación",
+        "start": 584,
+        "end": 585,
+        "figures": [
+          {
+            "label": "Figura 14-2A",
+            "page": 585,
+            "note": "Localiza el complejo Mcm en el origen y sigue el cambio de G1 a S."
+          }
+        ],
+        "chapterTitle": "Ciclo celular y destinos vitales de la célula"
+      },
+      "telomero": {
+        "chapter": 14,
+        "title": "Acortamiento de los telómeros en cada ronda de replicación",
+        "start": 585,
+        "end": 586,
+        "figures": [
+          {
+            "label": "Figura 14-2B",
+            "page": 585,
+            "note": "Sigue qué ocurre con los extremos cromosómicos en sucesivas replicaciones."
+          }
+        ],
+        "chapterTitle": "Ciclo celular y destinos vitales de la célula"
+      },
+      "cdk": {
+        "chapter": 14,
+        "title": "Sistema de proteínas quinasas de activación cíclica",
+        "start": 591,
+        "end": 592,
+        "figures": [
+          {
+            "label": "Figura 14-4A y B",
+            "page": 592,
+            "note": "Relaciona cada complejo Cdk–ciclina con su fase y compara los picos de concentración."
+          }
+        ],
+        "chapterTitle": "Ciclo celular y destinos vitales de la célula"
+      },
+      "cdkmod": {
+        "chapter": 14,
+        "title": "Mecanismos de regulación de las Cdk",
+        "start": 592,
+        "end": 595,
+        "figures": [
+          {
+            "label": "Figura 14-5",
+            "page": 593,
+            "note": "Distingue activación por unión y fosforilación de los mecanismos inhibidores."
+          }
+        ],
+        "chapterTitle": "Ciclo celular y destinos vitales de la célula"
+      },
+      "g2m": {
+        "chapter": 14,
+        "title": "Mecanismo de control del punto G2",
+        "start": 600,
+        "end": 601,
+        "figures": [
+          {
+            "label": "Figura 14-10",
+            "page": 601,
+            "note": "Compara las acciones opuestas de Wee1 y Cdc25 sobre Cdk1."
+          }
+        ],
+        "chapterTitle": "Ciclo celular y destinos vitales de la célula"
+      },
+      "ubiq": {
+        "chapter": 14,
+        "title": "Mecanismos de regulación de las Cdk · degradación de ciclinas",
+        "start": 593,
+        "end": 594,
+        "figures": [
+          {
+            "label": "Figura 14-6",
+            "page": 593,
+            "note": "Sigue la unión de ubiquitina hasta la degradación en el proteasoma."
+          }
+        ],
+        "chapterTitle": "Ciclo celular y destinos vitales de la célula"
+      },
+      "cki": {
+        "chapter": 14,
+        "title": "Inhibidores de las quinasas dependientes de ciclinas",
+        "start": 595,
+        "end": 596,
+        "figures": [
+          {
+            "label": "Figura 14-7",
+            "page": 595,
+            "note": "Compara las dianas de Ink4 con las de Cip/Kip."
+          }
+        ],
+        "chapterTitle": "Ciclo celular y destinos vitales de la célula"
+      },
+      "rb": {
+        "chapter": 14,
+        "title": "Mecanismo de control del punto G1 · Rb y E2F",
+        "start": 597,
+        "end": 599,
+        "figures": [
+          {
+            "label": "Figura 14-8",
+            "page": 598,
+            "note": "Compara E2F retenido por Rb con E2F libre después de la fosforilación."
+          }
+        ],
+        "chapterTitle": "Ciclo celular y destinos vitales de la célula"
+      },
+      "g1s": {
+        "chapter": 14,
+        "title": "Mecanismo de control del punto G1 · transición G1/S",
+        "start": 597,
+        "end": 599,
+        "figures": [
+          {
+            "label": "Figura 14-9",
+            "page": 599,
+            "note": "Sigue el estímulo mitógeno, la fosforilación de Rb y el paso a fase S."
+          }
+        ],
+        "chapterTitle": "Ciclo celular y destinos vitales de la célula"
+      },
+      "anafase": {
+        "chapter": 14,
+        "title": "Control de la transición de metafase a anafase",
+        "start": 601,
+        "end": 602,
+        "figures": [
+          {
+            "label": "Figura 14-11",
+            "page": 602,
+            "note": "Sigue Cdc20 → APC/C → degradación de segurina → separasa → corte de cohesina."
+          }
+        ],
+        "chapterTitle": "Ciclo celular y destinos vitales de la célula"
+      },
+      "huso": {
+        "chapter": 14,
+        "title": "Retrocontrol por incorrecto ensamblaje del huso mitótico",
+        "start": 603,
+        "end": 604,
+        "figures": [
+          {
+            "label": "Figura 14-12",
+            "page": 603,
+            "note": "Observa cómo el cinetocoro libre mantiene retenida a Cdc20 y cómo se libera al unirse el huso."
+          }
+        ],
+        "chapterTitle": "Ciclo celular y destinos vitales de la célula"
+      },
+      "retro": {
+        "chapter": 14,
+        "title": "Elementos de retrocontrol del ciclo celular",
+        "start": 603,
+        "end": 604,
+        "figures": [
+          {
+            "label": "Figura 14-12",
+            "page": 603,
+            "note": "Identifica el control por unión al huso."
+          },
+          {
+            "label": "Figura 14-14",
+            "page": 606,
+            "note": "Compara ese control con la respuesta por daño del ADN."
+          }
+        ],
+        "chapterTitle": "Ciclo celular y destinos vitales de la célula"
+      },
+      "daño": {
+        "chapter": 14,
+        "title": "Retrocontrol por lesión del ADN",
+        "start": 604,
+        "end": 607,
+        "figures": [
+          {
+            "label": "Figura 14-14",
+            "page": 606,
+            "note": "Distingue la rama que frena G2/M mediante Cdc25 de la rama p53–p21 que frena G1/S."
+          },
+          {
+            "label": "Figura 14-15",
+            "page": 607,
+            "note": "Compara la reparación con los destinos posibles si el daño persiste."
+          }
+        ],
+        "chapterTitle": "Ciclo celular y destinos vitales de la célula"
+      },
+      "p53": {
+        "chapter": 14,
+        "title": "Papel central de p53 en el retrocontrol del ciclo celular",
+        "start": 604,
+        "end": 606,
+        "figures": [
+          {
+            "label": "Figura 14-13",
+            "page": 605,
+            "note": "Compara la regulación de p53 por Mdm2 con la respuesta a una lesión."
+          }
+        ],
+        "chapterTitle": "Ciclo celular y destinos vitales de la célula"
+      },
+      "destino53": {
+        "chapter": 14,
+        "title": "Senescencia celular y apoptosis dependientes de p53",
+        "start": 607,
+        "end": 609,
+        "figures": [
+          {
+            "label": "Figura 14-15",
+            "page": 607,
+            "note": "Distingue reparación, senescencia y apoptosis después del daño del ADN."
+          }
+        ],
+        "chapterTitle": "Ciclo celular y destinos vitales de la célula"
+      },
+      "extrinseco": {
+        "chapter": 14,
+        "title": "Elementos extrínsecos que influyen en el control del ciclo celular",
+        "start": 610,
+        "end": 611,
+        "figures": [
+          {
+            "label": "Figura 14-9",
+            "page": 599,
+            "note": "Sigue cómo una señal mitógena modifica la actividad de los complejos de G1."
+          }
+        ],
+        "chapterTitle": "Ciclo celular y destinos vitales de la célula"
+      },
+      "matriz": {
+        "chapter": 14,
+        "title": "Interacción de las células con la matriz extracelular",
+        "start": 611,
+        "end": 611,
+        "figures": [],
+        "chapterTitle": "Ciclo celular y destinos vitales de la célula"
+      },
+      "estres": {
+        "chapter": 14,
+        "title": "Destinos vitales de la célula y respuestas celulares al estrés",
+        "start": 612,
+        "end": 613,
+        "figures": [
+          {
+            "label": "Figura 14-16",
+            "page": 612,
+            "note": "Compara proliferación, diferenciación y los destinos que pueden seguir a una lesión."
+          }
+        ],
+        "chapterTitle": "Ciclo celular y destinos vitales de la célula"
+      },
+      "adaptacion": {
+        "chapter": 14,
+        "title": "Destinos vitales de la célula · respuestas adaptativas al estrés",
+        "start": 612,
+        "end": 613,
+        "figures": [
+          {
+            "label": "Figura 14-16",
+            "page": 612,
+            "note": "Sigue la rama de lesión y adaptación. En la página siguiente compara tamaño, número y fenotipo."
+          }
+        ],
+        "chapterTitle": "Ciclo celular y destinos vitales de la célula"
+      },
+      "horquilla": {
+        "chapter": 7,
+        "title": "Replicación del ADN · orígenes y horquillas",
+        "start": 329,
+        "end": 330,
+        "figures": [
+          {
+            "label": "Figura 7-20",
+            "page": 330,
+            "note": "Usa el esquema de procariotas para seguir la apertura y la síntesis en las dos hebras."
+          }
+        ],
+        "chapterTitle": "El núcleo. Parte I: organización de la cromatina y conservación de la información genética"
+      },
+      "okazaki": {
+        "chapter": 7,
+        "title": "Replicación del ADN · síntesis de la hebra retardada",
+        "start": 329,
+        "end": 330,
+        "figures": [
+          {
+            "label": "Figura 7-20",
+            "page": 330,
+            "note": "Compara la síntesis continua con la síntesis por fragmentos en el esquema de procariotas."
+          }
+        ],
+        "chapterTitle": "El núcleo. Parte I: organización de la cromatina y conservación de la información genética"
+      }
+    },
+    "questions": {
+      "Una célula se prepara para dividirse. ¿Qué tres tareas principales debe completar antes de producir dos hijas?": {
+        "section": "ciclo",
+        "explanation": "La célula necesita aumentar su masa y producir componentes para las dos hijas. Copia el ADN en S y reparte las copias durante M. Un cromosoma unido al huso es una comprobación dentro del último paso.",
+        "answer": "Crecer, duplicar su material genético y repartirlo durante la división."
+      },
+      "¿Por qué la interfase no es un descanso verdadero?": {
+        "section": "ciclo",
+        "explanation": "Interfase significa que la célula está entre dos divisiones. En G1 fabrica componentes y crece, en S duplica el ADN y en G2 termina de prepararse para dividirse. La pausa es aparente si solo se observa la forma del núcleo.",
+        "answer": "Porque la célula sintetiza moléculas y orgánulos, crece y replica su ADN.",
+        "revision": {
+          "previousOptions": [
+            "Porque la célula sintetiza moléculas y orgánulos, crece y replica su ADN.",
+            "Porque la célula se compromete a duplicar su material genético antes de dividirse.",
+            "Porque la síntesis de la hebra retardada no completa del todo el extremo del cromosoma.",
+            "Porque la célula puede superar su capacidad de adaptación y sufrir lesiones irreversibles."
+          ],
+          "reasons": {
+            "A": "Resume las actividades que ocurren entre dos divisiones. En ese periodo la célula crece y duplica el genoma.",
+            "B": "Describe la decisión al pasar de G1 a S. La interfase comprende también las actividades anteriores y posteriores a esa transición.",
+            "C": "Explica el acortamiento de los telómeros durante la replicación. Es un problema particular de S.",
+            "D": "Se refiere a la respuesta a un estrés intenso o prolongado, distinta de las funciones habituales de la interfase."
+          }
+        }
+      },
+      "¿Qué tres fases forman la interfase?": {
+        "section": "ciclo",
+        "explanation": "G1 va antes de la síntesis de ADN y G2 va después. Al colocar S entre esos dos intervalos se obtiene toda la interfase. La fase M empieza cuando termina esa preparación.",
+        "answer": "G1, S y G2."
+      },
+      "¿En qué orden transcurre un ciclo celular típico desde G1 hasta la división?": {
+        "section": "ciclo",
+        "explanation": "S tiene que ir después del crecimiento inicial de G1 y antes de la preparación final de G2. La fase M completa la secuencia al repartir lo que ya se duplicó.",
+        "answer": "G1, S, G2 y fase M."
+      },
+      "Una célula está fabricando proteínas y orgánulos antes de copiar el ADN. ¿En qué fase se encuentra?": {
+        "section": "g1",
+        "explanation": "La pista es «antes de copiar el ADN». Durante G1 el crecimiento depende de la síntesis de ARN, proteínas y lípidos. Si el ADN ya se estuviera copiando, la fase sería S.",
+        "answer": "En G1."
+      },
+      "¿Qué significa la letra S del ciclo celular?": {
+        "section": "faseS",
+        "explanation": "La S se refiere a la síntesis de ADN. Ubica la replicación entre G1, que prepara a la célula, y G2, que sigue una vez duplicado el genoma.",
+        "answer": "Síntesis: es la fase en que se replica el ADN."
+      },
+      "Además de ADN, ¿qué proteínas se sintetizan durante la fase S para empaquetarlo?": {
+        "section": "faseS",
+        "explanation": "Al aumentar la cantidad de ADN, la célula también necesita proteínas para empaquetarlo como cromatina. Las histonas cumplen esa función. La ubiquitina interviene en la degradación de proteínas.",
+        "answer": "Las histonas."
+      },
+      "¿Qué estructura celular comienza a duplicarse en S para ayudar después al huso mitótico?": {
+        "section": "faseS",
+        "explanation": "En S se duplican los centríolos del centrosoma. Los dos centrosomas se separan más adelante y contribuyen a organizar los polos del huso. Las cohesinas unen cromátidas y cumplen otra función.",
+        "answer": "El centrosoma y sus centríolos.",
+        "revision": {
+          "options": {
+            "B": "Los cinetocoros de los cromosomas."
+          },
+          "previousOptions": [
+            "El centrosoma y sus centríolos.",
+            "El centrosoma duplicado.",
+            "Las helicasas del complejo Mcm.",
+            "La proteína de retinoblastoma, Rb."
+          ]
+        }
+      },
+      "Después de copiar su ADN, la célula termina de crecer y prepara la mitosis. ¿En qué fase está?": {
+        "section": "g2",
+        "explanation": "El enunciado dice que el genoma ya se copió. Eso sitúa a la célula después de S, en G2, cuando concluye el crecimiento y se preparan los cambios de la mitosis.",
+        "answer": "En G2."
+      },
+      "¿Qué dos procesos se solapan en la fase M?": {
+        "section": "mitosis",
+        "explanation": "La fase M abarca el reparto nuclear y la división física de la célula. La citocinesis empieza a solaparse con las últimas etapas de la mitosis, mientras se completan los núcleos hijos.",
+        "answer": "La cariocinesis o división nuclear y la citocinesis o división del citoplasma."
+      },
+      "¿Qué sucede con el núcleo durante la cariocinesis?": {
+        "section": "mitosis",
+        "explanation": "En la cariocinesis las cromátidas hermanas se reparten en grupos que se convierten en núcleos hijos. La separación física del citoplasma corresponde a la citocinesis.",
+        "answer": "Se divide para formar dos núcleos hijos con cromosomas equivalentes."
+      },
+      "¿Qué separa físicamente a las dos células hijas?": {
+        "section": "citocinesis",
+        "explanation": "Las dos células se separan cuando el surco ecuatorial se estrecha hasta dividir el citoplasma. El huso ya se ocupó de repartir los cromosomas. Distingue división del citoplasma de división del núcleo.",
+        "answer": "La citocinesis, que reparte el citoplasma."
+      },
+      "¿En qué fase mitótica se alinean los cromosomas en el centro de la célula?": {
+        "section": "mitosis",
+        "explanation": "El centro de la célula es el plano ecuatorial. La disposición de los cromosomas en ese plano caracteriza a la metafase. En la anafase ya se desplazan en direcciones opuestas.",
+        "answer": "En la metafase."
+      },
+      "¿Cuándo se separan las cromátidas hermanas hacia polos opuestos?": {
+        "section": "mitosis",
+        "explanation": "Durante la metafase las cromátidas hermanas todavía permanecen unidas. La anafase comienza cuando se separan y cada grupo se dirige a un polo del huso.",
+        "answer": "Durante la anafase."
+      },
+      "Una nueva envoltura rodea cada grupo de cromosomas. ¿Qué etapa de la mitosis observas?": {
+        "section": "mitosis",
+        "explanation": "En la telofase se restablece la envoltura alrededor de cada grupo de cromosomas hijos. Usa la envoltura como pista. En las etapas iniciales de la mitosis se desorganiza para permitir el acceso del huso.",
+        "answer": "La telofase."
+      },
+      "¿Qué estructura se contrae para dividir el citoplasma de una célula animal?": {
+        "section": "citocinesis",
+        "explanation": "La citocinesis es el proceso. La estructura que lo ejecuta en una célula animal es el anillo contráctil de actina y miosina, que tira de la membrana hacia dentro en el ecuador.",
+        "answer": "Un anillo de actina y miosina en la zona ecuatorial."
+      },
+      "Antes de iniciar la fase S, ¿qué revisa el punto de control G1?": {
+        "section": "control",
+        "explanation": "Antes de comprometerse con la duplicación, la célula necesita un medio favorable, tamaño suficiente e integridad del ADN. El control de la unión al huso se realiza mucho después, durante la fase M.",
+        "answer": "El estado del ADN, el tamaño celular y las condiciones del medio."
+      },
+      "¿Qué puede hacer una célula si detecta un daño importante en un punto de control?": {
+        "section": "daño",
+        "explanation": "El daño puede suspender el avance para dar tiempo a repararlo. Cuando el problema persiste, Calvo describe dos destinos posibles, senescencia y apoptosis. La respuesta depende del estado de la lesión.",
+        "answer": "Detener el ciclo para intentar repararlo o activar muerte celular programada."
+      },
+      "¿En qué tres transiciones se sitúan los puntos de control principales?": {
+        "section": "control",
+        "explanation": "Ubica dos controles en los límites de la interfase y uno dentro de M. G1 precede a la síntesis, G2 precede a la mitosis y el control del huso precede a la separación de las cromátidas.",
+        "answer": "Al final de G1, al final de G2 y durante la fase M."
+      },
+      "¿Qué tejido se renueva constantemente y se considera lábil?": {
+        "section": "g0",
+        "explanation": "En los tejidos lábiles la renovación exige que parte de sus células se divida de forma continua. El libro da como ejemplos la médula ósea, la piel y las mucosas. Los tejidos estables suelen dividirse en respuesta a un estímulo.",
+        "answer": "La piel, las mucosas o la médula ósea."
+      },
+      "¿Por qué el hígado se considera un tejido estable?": {
+        "section": "g0",
+        "explanation": "Las células hepáticas suelen permanecer en quiescencia. Cuando reciben un estímulo adecuado, como el asociado a una resección parcial descrita en el capítulo, pueden volver a proliferar. La capacidad de regreso distingue un tejido estable.",
+        "answer": "Porque suele estar quiescente, pero sus células pueden volver a dividirse tras un estímulo adecuado.",
+        "revision": {
+          "previousOptions": [
+            "Porque la célula se compromete a duplicar su material genético antes de dividirse.",
+            "Porque la célula puede superar su capacidad de adaptación y sufrir lesiones irreversibles.",
+            "Porque la síntesis de la hebra retardada no completa del todo el extremo del cromosoma.",
+            "Porque suele estar quiescente, pero sus células pueden volver a dividirse tras un estímulo adecuado."
+          ],
+          "reasons": {
+            "A": "El compromiso de duplicar ADN se adquiere al pasar a S. Por sí solo no distingue un tejido estable de uno lábil.",
+            "B": "La lesión irreversible puede aparecer ante un estrés intenso. El rasgo del tejido estable es la posibilidad de volver a proliferar.",
+            "C": "La síntesis incompleta de un extremo explica el acortamiento telomérico. La clasificación del hígado se basa en cómo responden sus células a estímulos.",
+            "D": "Los hepatocitos suelen estar en quiescencia y pueden regresar al ciclo si reciben la señal apropiada."
+          }
+        }
+      },
+      "¿Qué caracteriza a un tejido permanente en cuanto a proliferación?": {
+        "section": "g0",
+        "explanation": "La clasificación se basa en la posibilidad de volver a dividirse. En los tejidos permanentes las células diferenciadas prácticamente carecen de esa capacidad, a diferencia de las células quiescentes de un tejido estable.",
+        "answer": "Sus células especializadas prácticamente no vuelven a dividirse."
+      },
+      "Una célula sale del ciclo activo pero puede regresar tras un estímulo. ¿Qué estado es?": {
+        "section": "g0",
+        "explanation": "G0 es una salida reversible del ciclo en las células estables. La pista es que el estímulo permite regresar. Cuando el bloqueo es duradero y resiste estímulos mitógenos, el concepto es senescencia.",
+        "answer": "G0 o quiescencia reversible."
+      },
+      "¿Qué son los orígenes de replicación?": {
+        "section": "origen",
+        "explanation": "Un origen es una región del ADN desde la que comienza la replicación. La maquinaria abre allí la doble hélice. Los fragmentos de Okazaki aparecen más tarde, durante la síntesis de una de las hebras.",
+        "answer": "Sitios del ADN donde empieza la apertura de la doble hélice para copiarla."
+      },
+      "¿Qué abre la doble hélice y genera una horquilla de replicación?": {
+        "section": "origen",
+        "explanation": "La apertura requiere una helicasa. El complejo Mcm se asocia a los orígenes y, cuando se activa la maquinaria de replicación, contribuye a separar las hebras. Rb regula la transición de G1, y las cohesinas mantienen unidas cromátidas.",
+        "answer": "Las helicasas del complejo Mcm."
+      },
+      "¿Por qué los telómeros se acortan en muchas células tras repetidas divisiones?": {
+        "section": "telomero",
+        "explanation": "La polimerasa necesita un extremo 3′ desde el que extender la cadena. Al retirar el último cebador de la hebra retardada queda un extremo que no se puede completar con ese mecanismo. El acortamiento se acumula si la telomerasa no lo compensa.",
+        "answer": "Porque la síntesis de la hebra retardada no completa del todo el extremo del cromosoma.",
+        "revision": {
+          "previousOptions": [
+            "Porque la célula puede superar su capacidad de adaptación y sufrir lesiones irreversibles.",
+            "Porque la síntesis de la hebra retardada no completa del todo el extremo del cromosoma.",
+            "Porque la célula se compromete a duplicar su material genético antes de dividirse.",
+            "Porque la célula sintetiza moléculas y orgánulos, crece y replica su ADN."
+          ],
+          "reasons": {
+            "A": "El estrés celular puede provocar lesión, pero aquí se pregunta por un problema de copia en los extremos del ADN.",
+            "B": "Tras retirar el último cebador de la hebra retardada queda un extremo que la ADN polimerasa no puede completar por esa vía.",
+            "C": "Entrar en S inicia la duplicación. El acortamiento se explica por cómo termina la síntesis de una de las hebras.",
+            "D": "Describe el conjunto de actividades de la interfase. El problema específico es completar la hebra retardada en el extremo."
+          }
+        }
+      },
+      "¿Qué le ocurre a una célula cuando el acortamiento telomérico limita nuevas divisiones?": {
+        "section": "telomero",
+        "explanation": "Cuando los telómeros llegan a una longitud crítica, la célula puede perder la capacidad de seguir dividiéndose. Se denomina senescencia replicativa porque el límite aparece tras sucesivas rondas de replicación.",
+        "answer": "Puede entrar en senescencia replicativa.",
+        "revision": {
+          "options": {
+            "B": "Entra en G0 y recupera su capacidad proliferativa con cualquier estímulo."
+          },
+          "previousOptions": [
+            "Puede entrar en senescencia replicativa.",
+            "Puede entrar en senescencia o activar apoptosis.",
+            "Muerte celular programada y controlada.",
+            "Factores de crecimiento y citocinas."
+          ]
+        }
+      },
+      "¿Qué significa Cdk en el control del ciclo celular?": {
+        "section": "cdk",
+        "explanation": "Cdk nombra a la quinasa que ejecuta la fosforilación. La ciclina es la subunidad que regula cuándo actúa. Piensa en una enzima y su regulador, con funciones distintas.",
+        "answer": "Quinasa dependiente de ciclina."
+      },
+      "¿Qué hacen las Cdk con muchas proteínas que regulan el ciclo?": {
+        "section": "cdk",
+        "explanation": "Una Cdk activa transfiere fosfatos a proteínas diana y así cambia su actividad. Es la forma en que una señal del ciclo se traduce en cambios celulares, como los que ponen en marcha la mitosis.",
+        "answer": "Las fosforilan para cambiar su actividad y permitir la progresión celular."
+      },
+      "Si una Cdk está presente pero inactiva, ¿qué proteína reguladora suele necesitar?": {
+        "section": "cdk",
+        "explanation": "La Cdk puede estar presente de manera relativamente constante. Para activarse necesita unirse a la ciclina que corresponde a esa etapa. La abundancia de la ciclina es una de las señales que determina cuándo actúa el complejo.",
+        "answer": "Una ciclina adecuada a la fase del ciclo."
+      },
+      "¿Por qué las ciclinas se llaman así?": {
+        "section": "cdk",
+        "explanation": "Lo que oscila es la concentración de cada ciclina. Su síntesis eleva la actividad en una etapa y su degradación ayuda a apagarla. Fíjate en los picos del gráfico de concentración.",
+        "answer": "Porque sus niveles suben y bajan de forma cíclica durante la vida de la célula.",
+        "revision": {
+          "previousOptions": [
+            "Para apagar las señales de mitosis y permitir la salida hacia G1.",
+            "Porque la célula se compromete a duplicar su material genético antes de dividirse.",
+            "Porque sus niveles suben y bajan de forma cíclica durante la vida de la célula.",
+            "Porque las dos hebras del ADN se separan y sirven de molde para copiarse."
+          ],
+          "reasons": {
+            "A": "La degradación de ciclina mitótica facilita la salida de M. Es un ejemplo del descenso de una ciclina, mientras que el nombre alude a toda la oscilación.",
+            "B": "El paso de G1 a S se relaciona con la activación de ciertos complejos, pero el nombre se refiere a cómo cambia su concentración.",
+            "C": "El gráfico muestra aumentos y caídas de concentración en momentos definidos de cada vuelta del ciclo.",
+            "D": "Separar las hebras es parte de la replicación. No explica la variación periódica de estas proteínas reguladoras."
+          }
+        }
+      },
+      "¿Qué cambia en la Cdk cuando se une una ciclina?": {
+        "section": "cdkmod",
+        "explanation": "La unión cambia la conformación de la quinasa y favorece la actividad de su sitio catalítico. El complejo todavía puede quedar inhibido por fosforilación o por una proteína inhibidora.",
+        "answer": "Su conformación expone o activa el centro catalítico de la quinasa."
+      },
+      "¿Qué complejo de Cdk y ciclina ayuda especialmente a iniciar la mitosis?": {
+        "section": "g2m",
+        "explanation": "La ciclina B forma con Cdk1 el complejo que promueve la entrada en mitosis. Cdk2 con ciclina E actúa cerca de G1/S, cuando se prepara la replicación.",
+        "answer": "Cdk1 unida a ciclina B."
+      },
+      "¿En qué transición aumenta la actividad de Cdk1-ciclina B?": {
+        "section": "g2m",
+        "explanation": "La ciclina B se acumula durante G2, pero su complejo permanece frenado al comienzo. Al final de G2, Cdc25 retira fosfatos inhibidores y aumenta la actividad que permite entrar en M.",
+        "answer": "En el paso de G2 a la fase M."
+      },
+      "¿Qué puede pasar si una ciclina se acumula sin degradarse cuando corresponde?": {
+        "section": "ubiq",
+        "explanation": "La degradación retira la subunidad que mantiene activa a la Cdk. Si la ciclina persiste, esa actividad puede mantenerse cuando debería disminuir. La figura muestra la degradación como parte de la secuencia de apagado.",
+        "answer": "La célula puede mantener señales de avance que deberían apagarse."
+      },
+      "¿Qué etiqueta molecular marca muchas ciclinas para su degradación?": {
+        "section": "ubiq",
+        "explanation": "La ubiquitina actúa como etiqueta y se fija a la ciclina por acción de ligasas. El proteasoma reconoce la señal y ejecuta la degradación. Distingue la marca de la máquina que destruye la proteína.",
+        "answer": "La ubiquitina."
+      },
+      "¿Dónde se degradan las ciclinas marcadas con ubiquitina?": {
+        "section": "ubiq",
+        "explanation": "El proteasoma es el complejo que degrada la ciclina una vez marcada. APC/C y otras ligasas intervienen en el paso previo, la unión de ubiquitina al sustrato.",
+        "answer": "En el proteasoma."
+      },
+      "¿Qué complejo ayuda a degradar reguladores durante la mitosis y permite avanzar a anafase?": {
+        "section": "anafase",
+        "explanation": "APC/C, activado por Cdc20, marca la segurina para que la degrade el proteasoma. Queda libre la separasa, que corta cohesina y permite la separación de las cromátidas.",
+        "answer": "El complejo promotor de la anafase, APC/C.",
+        "revision": {
+          "options": {
+            "D": "El complejo Cdk2–ciclina E."
+          },
+          "previousOptions": [
+            "El complejo promotor de la anafase, APC/C.",
+            "El complejo de cohesinas.",
+            "La citocinesis, que reparte el citoplasma.",
+            "Las cohesinas que las mantenían unidas."
+          ]
+        }
+      },
+      "¿Qué dos familias de proteínas inhibidoras de Cdk destaca el texto?": {
+        "section": "cki",
+        "explanation": "Ink4 y Cip/Kip son familias de inhibidores. La primera se dirige a Cdk4/6 con ciclina D. La segunda también puede bloquear Cdk2 con ciclina E. La figura organiza sus dianas para compararlas.",
+        "answer": "Ink4 y Cip/Kip."
+      },
+      "¿Qué Cdk bloquean especialmente las proteínas de la familia Ink4?": {
+        "section": "cki",
+        "explanation": "En el esquema, Ink4 se dirige al complejo de ciclina D con Cdk4 o Cdk6. Se trata de complejos asociados al avance por G1. Cdk1 con ciclina B promueve la mitosis.",
+        "answer": "Cdk4 y Cdk6."
+      },
+      "¿Por qué una Cdk no depende solo de la presencia de ciclina?": {
+        "section": "cdkmod",
+        "explanation": "Una ciclina puede estar unida y el complejo seguir inhibido. En G2, por ejemplo, Wee1 añade fosfatos inhibidores. Calvo muestra además inhibidores de Cdk y fosforilaciones que favorecen su actividad.",
+        "answer": "También se regula mediante fosforilación y proteínas inhibidoras.",
+        "revision": {
+          "previousOptions": [
+            "También puede diferenciarse, permanecer quiescente, adaptarse al estrés o morir.",
+            "Su conformación expone o activa el centro catalítico de la quinasa.",
+            "También se regula mediante fosforilación y proteínas inhibidoras.",
+            "Sus células especializadas prácticamente no vuelven a dividirse."
+          ],
+          "reasons": {
+            "A": "Diferenciación y quiescencia son destinos celulares. La pregunta busca mecanismos que actúan sobre la actividad de una quinasa.",
+            "B": "Describe el efecto de unir una ciclina. Lo que se pide es qué regula a la Cdk además de esa unión.",
+            "C": "Una Cdk unida a ciclina puede quedar frenada por fosfatos inhibidores o por proteínas inhibidoras de Cdk.",
+            "D": "Describe el potencial proliferativo de tejidos permanentes. La regulación de la Cdk se decide a nivel molecular."
+          }
+        }
+      },
+      "¿Qué quinasa mantiene inactivo al complejo Cdk1-ciclina B durante parte de G2?": {
+        "section": "g2m",
+        "explanation": "Wee1 añade fosfatos inhibidores a Cdk1 durante G2, aunque ya haya ciclina B unida. Cdc25 actúa en sentido contrario al quitar esos fosfatos cuando la célula está lista.",
+        "answer": "Wee1."
+      },
+      "¿Qué podría pasar si Wee1 deja entrar prematuramente a una célula en mitosis?": {
+        "section": "g2m",
+        "explanation": "Wee1 mantiene inactivo al complejo mitótico mientras la célula continúa creciendo. Si falta ese freno, el complejo puede activarse antes de tiempo y la célula dividirse con un tamaño insuficiente.",
+        "answer": "La célula podría dividirse antes de alcanzar un tamaño adecuado.",
+        "revision": {
+          "prompt": "Si falla el freno que ejerce Wee1 durante G2, ¿qué consecuencia puede tener la entrada prematura en mitosis?",
+          "previousOptions": [
+            "La célula puede mantener señales de avance que deberían apagarse.",
+            "La célula podría seguir dividiéndose con alteraciones genéticas.",
+            "La célula podría dividirse antes de alcanzar un tamaño adecuado.",
+            "La célula crece y se prepara para entrar en la fase S."
+          ]
+        }
+      },
+      "¿Qué fosfatasa ayuda a activar Cdk1-ciclina B al final de G2?": {
+        "section": "g2m",
+        "explanation": "Cdc25 es la fosfatasa que retira los fosfatos inhibidores de Cdk1. El contraste útil es con Wee1, que los añade. Al quitar ese freno, el complejo Cdk1–ciclina B puede actuar.",
+        "answer": "Cdc25."
+      },
+      "¿Qué evalúa el punto de control G2 antes de iniciar la mitosis?": {
+        "section": "g2m",
+        "explanation": "El control G2 ocurre después de la síntesis. Comprueba que la replicación haya concluido de forma adecuada y que la célula pueda iniciar la mitosis. La primera decisión de duplicar el ADN pertenece a G1/S.",
+        "answer": "Que el ADN se haya replicado adecuadamente y que la célula esté preparada para dividirse.",
+        "revision": {
+          "options": {
+            "A": "Que existan condiciones para empezar por primera vez la replicación del ADN."
+          },
+          "previousOptions": [
+            "Que tenga condiciones y tamaño suficientes y que su ADN no presente daño importante.",
+            "Se divide para formar dos núcleos hijos con cromosomas equivalentes.",
+            "Que el ADN se haya replicado adecuadamente y que la célula esté preparada para dividirse.",
+            "Se condensan y se organizan para ser repartidas con precisión."
+          ]
+        }
+      },
+      "¿Qué proteína actúa como freno de la entrada en fase S al unirse a E2F?": {
+        "section": "rb",
+        "explanation": "Rb retiene a los factores E2F activadores y mantiene reprimidos genes de la fase S. La fosforilación de Rb reduce ese freno y permite que E2F promueva su transcripción.",
+        "answer": "La proteína de retinoblastoma, Rb."
+      },
+      "¿Qué necesita E2F para activar genes de la fase S?": {
+        "section": "rb",
+        "explanation": "E2F ya existe, pero mientras está asociado con Rb se mantienen reprimidos sus genes diana. La señal que abre el paso es la liberación de E2F tras la fosforilación de Rb.",
+        "answer": "Liberarse de la inhibición de Rb."
+      },
+      "¿Cómo se libera E2F del freno de Rb durante G1?": {
+        "section": "rb",
+        "explanation": "Los complejos Cdk–ciclina fosforilan a Rb. Ese cambio favorece que Rb deje libre a E2F, que entonces puede activar genes requeridos para pasar a S.",
+        "answer": "Por fosforilación de Rb a cargo de complejos Cdk-ciclina."
+      },
+      "Una célula recibe señales de crecimiento y activa ciclina D. ¿Qué Cdk se asocian con ella?": {
+        "section": "g1s",
+        "explanation": "Una señal mitógena eleva la ciclina D y favorece su asociación con Cdk4 o Cdk6. Esos complejos inician la fosforilación de Rb durante G1.",
+        "answer": "Cdk4 y Cdk6."
+      },
+      "¿Qué complejo G1/S aumenta la fosforilación de Rb al acercarse la fase S?": {
+        "section": "g1s",
+        "explanation": "Cdk4/6 con ciclina D inicia el proceso y Cdk2 con ciclina E lo refuerza al acercarse la fase S. Ubica a Cdk1 con ciclina B más adelante, en G2/M.",
+        "answer": "Cdk2-ciclina E."
+      },
+      "¿Qué genes ayuda a activar E2F después de liberarse de Rb?": {
+        "section": "rb",
+        "explanation": "Una vez libre, E2F se une al ADN y promueve la transcripción de genes que preparan la replicación. La liberación del factor es el paso regulador; la producción de componentes de la fase S es el efecto.",
+        "answer": "Genes necesarios para replicar ADN y avanzar por la fase S."
+      },
+      "¿Por qué el paso de G1 a S se considera una decisión importante?": {
+        "section": "g1s",
+        "explanation": "El cruce de G1/S compromete a la célula con la síntesis de su genoma. Antes de cruzar ese umbral debe integrar señales de crecimiento y controles internos. El reparto del ADN ocurre después, en M.",
+        "answer": "Porque la célula se compromete a duplicar su material genético antes de dividirse.",
+        "revision": {
+          "previousOptions": [
+            "Porque la síntesis de la hebra retardada no completa del todo el extremo del cromosoma.",
+            "Porque la célula se compromete a duplicar su material genético antes de dividirse.",
+            "Porque la célula puede superar su capacidad de adaptación y sufrir lesiones irreversibles.",
+            "Porque la célula sintetiza moléculas y orgánulos, crece y replica su ADN."
+          ],
+          "reasons": {
+            "A": "Es el mecanismo de acortamiento telomérico, que se manifiesta durante la síntesis del extremo cromosómico.",
+            "B": "Al cruzar G1/S la célula asume el compromiso concreto de replicar su genoma.",
+            "C": "Es una consecuencia posible del estrés persistente, distinta de la decisión que se toma al entrar en fase S.",
+            "D": "Enumera actividades de toda la interfase. El enunciado pide qué decisión concreta se toma al cruzar su primer control."
+          },
+          "prompt": "¿Qué compromiso concreto adquiere la célula cuando supera la transición G1/S?"
+        }
+      },
+      "¿Qué debe revisar una célula que recibió una señal de crecimiento antes de copiar el ADN?": {
+        "section": "control",
+        "explanation": "Un estímulo de crecimiento favorece el avance, pero todavía deben cumplirse condiciones internas. Al estar antes de copiar el ADN, el punto pertinente es G1/S. La verificación de una copia ya terminada corresponde a G2/M.",
+        "answer": "Que tenga condiciones y tamaño suficientes y que su ADN no presente daño importante."
+      },
+      "¿Qué hace un factor de crecimiento externo con la maquinaria del ciclo?": {
+        "section": "extrinseco",
+        "explanation": "Una señal mitógena se recibe desde el entorno y favorece cambios internos como el aumento de ciclina D en G1. El efecto depende de la señal y de las condiciones de la célula.",
+        "answer": "Puede activar señales que favorecen el avance, especialmente por G1."
+      },
+      "¿Qué situación bloquearía normalmente la transición G1/S?": {
+        "section": "daño",
+        "explanation": "Si el ADN está lesionado, avanzar a S permitiría copiar la alteración. Por eso se puede frenar el paso G1/S. Una señal de crecimiento puede favorecer el avance, pero no reemplaza el control de la integridad del genoma.",
+        "answer": "Daño del ADN no reparado o condiciones desfavorables para duplicarlo."
+      },
+      "¿Qué proteína une a las cromátidas hermanas antes de separarse?": {
+        "section": "anafase",
+        "explanation": "La cohesina mantiene juntas las cromátidas hermanas. La separasa actúa más tarde cortando un componente de ese complejo. APC/C regula el momento en que la separasa queda libre.",
+        "answer": "El complejo de cohesinas.",
+        "revision": {
+          "options": {
+            "C": "La separasa."
+          },
+          "previousOptions": [
+            "El complejo de cohesinas.",
+            "El complejo promotor de la anafase, APC/C.",
+            "Las cohesinas que las mantenían unidas.",
+            "El centrosoma duplicado."
+          ]
+        }
+      },
+      "¿Qué debe ocurrir con los cromosomas antes de que empiece la anafase?": {
+        "section": "huso",
+        "explanation": "Antes de que se separen las hermanas, los cinetocoros tienen que estar unidos correctamente al huso. Mientras quede un cinetocoro libre, el retrocontrol retrasa la señal que activa APC/C.",
+        "answer": "Todos deben estar unidos correctamente al huso mitótico."
+      },
+      "Si un cromosoma no se unió bien al huso, ¿qué punto de control debe frenar la división?": {
+        "section": "huso",
+        "explanation": "El problema está en la unión al huso, que se comprueba durante M. El control mantiene frenada la anafase hasta corregir esa unión. Los controles G1 y G2 actúan antes de llegar a ese paso.",
+        "answer": "El punto M o control de ensamblaje del huso."
+      },
+      "¿Qué pasaría si la célula separara cromátidas antes de revisar el huso?": {
+        "section": "huso",
+        "explanation": "Si las hermanas se separan con un cromosoma mal unido, el huso puede repartirlas de forma desigual. El control de ensamblaje protege la dotación cromosómica de las hijas.",
+        "answer": "Las células hijas podrían recibir números incorrectos de cromosomas.",
+        "revision": {
+          "previousOptions": [
+            "Las células hijas podrían recibir números incorrectos de cromosomas.",
+            "La célula crece y se prepara para entrar en la fase S.",
+            "La célula puede mantener señales de avance que deberían apagarse.",
+            "La célula podría dividirse antes de alcanzar un tamaño adecuado."
+          ],
+          "reasons": {
+            "A": "El cromosoma mal unido puede segregarse de manera desigual y alterar el número de cromosomas en las hijas.",
+            "B": "El crecimiento previo a la síntesis corresponde a G1. El defecto del enunciado está en la fase M.",
+            "C": "La persistencia de señales puede tener distintos efectos. La consecuencia directa del huso mal ensamblado es un reparto cromosómico defectuoso.",
+            "D": "Entrar en mitosis con un tamaño insuficiente se relaciona con un fallo del freno en G2. Aquí el problema ocurre al separar las hermanas."
+          }
+        }
+      },
+      "¿Qué proteína mantiene inactiva a separasa antes de la anafase?": {
+        "section": "anafase",
+        "explanation": "La segurina se une a la separasa y la mantiene inactiva. Al degradarse la segurina, la separasa puede cortar el complejo de cohesinas y permitir la separación.",
+        "answer": "La segurina."
+      },
+      "¿Qué hace APC/C con la segurina al iniciarse la anafase?": {
+        "section": "anafase",
+        "explanation": "APC/C es la ligasa que marca la segurina. El proteasoma la degrada y, al quedar libre la separasa, esta corta la cohesina. Lee la secuencia en ese orden.",
+        "answer": "La marca para degradación y libera la actividad de separasa."
+      },
+      "¿Qué corta separasa para permitir que las cromátidas hermanas se aparten?": {
+        "section": "anafase",
+        "explanation": "La separasa corta un componente de la cohesina, el complejo que mantiene juntas a las cromátidas hermanas. La segurina es su inhibidor previo y se elimina por otra vía, la del proteasoma.",
+        "answer": "Las cohesinas que las mantenían unidas.",
+        "revision": {
+          "options": {
+            "B": "La segurina que inhibía a la separasa."
+          },
+          "previousOptions": [
+            "Las cohesinas que las mantenían unidas.",
+            "El complejo de cohesinas.",
+            "La piel, las mucosas o la médula ósea.",
+            "La citocinesis, que reparte el citoplasma."
+          ]
+        }
+      },
+      "¿Por qué se degradan ciclinas mitóticas al finalizar la división?": {
+        "section": "ubiq",
+        "explanation": "Al degradar la ciclina mitótica disminuye la actividad de Cdk1 y la célula puede terminar la mitosis. La oscilación del nombre «ciclina» describe un patrón. Aquí se pregunta por su función al salir de M.",
+        "answer": "Para apagar las señales de mitosis y permitir la salida hacia G1.",
+        "revision": {
+          "previousOptions": [
+            "Porque sus niveles suben y bajan de forma cíclica durante la vida de la célula.",
+            "Porque limita la proliferación de células con daño genético.",
+            "Porque las dos hebras del ADN se separan y sirven de molde para copiarse.",
+            "Para apagar las señales de mitosis y permitir la salida hacia G1."
+          ],
+          "reasons": {
+            "A": "La oscilación explica el nombre de las ciclinas. El inciso correcto debe explicar qué se consigue al degradar las ciclinas de M.",
+            "B": "La detención ante daño del ADN limita la proliferación de células dañadas. Aquí se pregunta por la salida normal de la mitosis.",
+            "C": "La separación de hebras para copiarlas ocurre en S. Al terminar M, el ADN ya se duplicó y se repartió.",
+            "D": "Al retirar ciclina B cae la actividad mitótica de Cdk1 y la célula puede completar la transición hacia G1."
+          }
+        }
+      },
+      "¿Qué quiere decir retrocontrol en el ciclo celular?": {
+        "section": "retro",
+        "explanation": "El retrocontrol detecta errores que aparecen mientras el ciclo ya está en marcha. Detiene el siguiente paso si encuentra un problema. El control del huso y el daño del ADN son los dos ejemplos que desarrolla el capítulo.",
+        "answer": "Revisar después de avanzar si hubo errores y detener el proceso si hace falta."
+      },
+      "¿Qué dos grandes problemas detecta el retrocontrol descrito en el capítulo?": {
+        "section": "retro",
+        "explanation": "El texto distingue fallos de ensamblaje del huso y lesiones del ADN. En el primero, la señal viene de la unión de los cinetocoros. En el segundo, viene de la detección del daño genético.",
+        "answer": "Errores de unión al huso mitótico y lesiones del ADN."
+      },
+      "Si se rompe el ADN antes de mitosis, ¿por qué conviene detener el ciclo?": {
+        "section": "daño",
+        "explanation": "La pista es que el ADN ya se duplicó y la célula todavía no entró en mitosis. Si hay roturas de doble hebra, frenar G2/M permite intentar repararlas antes de repartir los cromosomas. Sigue la rama de la figura 14-14 que va de Chk1/Chk2 a la inhibición de Cdc25. Al quedar frenada Cdk1–ciclina B, se demora la entrada en mitosis.",
+        "answer": "Para repararlo antes de transmitir la lesión a células hijas.",
+        "revision": {
+          "prompt": "Una célula ya duplicó su ADN, pero se detectan roturas de doble hebra antes de la mitosis. ¿Qué permite el freno en G2/M?",
+          "options": {
+            "A": "Dar tiempo para reparar las roturas antes del reparto cromosómico.",
+            "B": "Impedir que esas roturas se copien en la fase S que aún no ha empezado.",
+            "C": "Completar la anafase mediante la activación prematura de separasa.",
+            "D": "Reactivar Cdk1–ciclina B de inmediato para entrar en mitosis."
+          },
+          "reasons": {
+            "A": "Detener la entrada en M abre un intervalo para reparar las roturas. Es el objetivo inmediato del freno.",
+            "B": "La fase S ya terminó. Evitar la copia de una alteración corresponde al freno antes de S.",
+            "C": "La separasa participa más tarde en la separación de cromátidas. Activarla no repara el ADN.",
+            "D": "La actividad de Cdk1–ciclina B favorece la entrada en mitosis. El retrocontrol busca retrasar ese paso."
+          },
+          "previousOptions": [
+            "Para repararlo antes de transmitir la lesión a células hijas.",
+            "Porque su bloqueo proliferativo es estable, a diferencia de G0 reversible.",
+            "Porque limita la proliferación de células con daño genético.",
+            "Para apagar las señales de mitosis y permitir la salida hacia G1."
+          ]
+        }
+      },
+      "¿En qué fases se revisa el estado del ADN antes de seguir?": {
+        "section": "daño",
+        "explanation": "Calvo destaca G1/S y G2/M para el retrocontrol inducido por p53. Antes de S se evita copiar una alteración. Antes de M se da tiempo para reparar roturas que comprometerían el reparto de cromosomas. Una lesión también puede detener el ciclo en otros momentos.",
+        "answer": "En puntos de control como G1 y G2; una lesión también puede detener otras fases.",
+        "revision": {
+          "prompt": "¿En qué dos transiciones sitúa Calvo el retrocontrol por daño del ADN inducido por p53?",
+          "options": {
+            "A": "G1/S y G2/M.",
+            "B": "G0/G1 y S/G2.",
+            "C": "Profase/prometafase y metafase/anafase.",
+            "D": "Anafase/telofase y telofase/citocinesis."
+          },
+          "previousOptions": [
+            "En puntos de control como G1 y G2; una lesión también puede detener otras fases.",
+            "En G0, un estado de reposo o quiescencia fuera del ciclo de división activo.",
+            "En la fase S de la interfase.",
+            "En el paso de G2 a la fase M."
+          ]
+        }
+      },
+      "¿Qué proteína se activa frente a daño del ADN y puede frenar el ciclo?": {
+        "section": "p53",
+        "explanation": "p53 es el factor de transcripción que se activa ante daño del ADN. Puede inducir p21, que inhibe complejos Cdk–ciclina. Distingue el regulador de la respuesta, p53, de su efector, p21.",
+        "answer": "p53.",
+        "revision": {
+          "prompt": "¿Qué factor de transcripción se activa ante daño del ADN e induce inhibidores del ciclo?",
+          "previousOptions": [
+            "p21.",
+            "Wee1.",
+            "p53.",
+            "Cdc25."
+          ]
+        }
+      },
+      "¿Qué opciones tiene una célula con ADN dañado si la reparación fracasa?": {
+        "section": "destino53",
+        "explanation": "Primero se detiene el ciclo y se intenta reparar. Si el daño persiste, p53 puede favorecer un bloqueo duradero de la proliferación o la muerte celular programada. Esos destinos son senescencia y apoptosis.",
+        "answer": "Puede entrar en senescencia o activar apoptosis.",
+        "revision": {
+          "options": {
+            "A": "Sale a una quiescencia reversible como consecuencia obligatoria."
+          },
+          "previousOptions": [
+            "Puede entrar en senescencia replicativa.",
+            "Mdm2, que la inhibe y favorece su degradación.",
+            "Puede entrar en senescencia o activar apoptosis.",
+            "Síntesis: es la fase en que se replica el ADN."
+          ]
+        }
+      },
+      "¿Por qué p53 se considera protector frente a la transformación tumoral?": {
+        "section": "destino53",
+        "explanation": "Una célula con lesión genética puede transmitirla si sigue dividiéndose. p53 puede detener ese avance y, si el estrés persiste, favorecer senescencia o apoptosis. Así limita la proliferación que podría contribuir a la transformación tumoral.",
+        "answer": "Porque limita la proliferación de células con daño genético.",
+        "revision": {
+          "previousOptions": [
+            "Porque limita la proliferación de células con daño genético.",
+            "Porque la célula se compromete a duplicar su material genético antes de dividirse.",
+            "Para apagar las señales de mitosis y permitir la salida hacia G1.",
+            "Porque las dos hebras del ADN se separan y sirven de molde para copiarse."
+          ],
+          "reasons": {
+            "A": "Frenar la proliferación de una célula lesionada reduce la posibilidad de que transmita sus alteraciones a la descendencia.",
+            "B": "El compromiso normal de copiar el ADN sucede al pasar de G1 a S. Ante daño, p53 puede detener ese paso.",
+            "C": "La degradación de ciclinas mitóticas facilita la salida normal de M. La protección preguntada se debe a la respuesta frente al daño.",
+            "D": "La apertura de hebras permite copiarlas en S. La protección de p53 opera al regular la respuesta a la lesión."
+          }
+        }
+      },
+      "¿Qué proteína mantiene baja la actividad de p53 cuando no hay daño?": {
+        "section": "p53",
+        "explanation": "En ausencia de daño, Mdm2 se une a p53, disminuye su actividad y favorece su degradación. Cuando la señal de daño altera esa interacción, p53 puede acumularse y actuar.",
+        "answer": "Mdm2, que la inhibe y favorece su degradación."
+      },
+      "¿Qué quinasas conectan sensores de lesión del ADN con la respuesta de control?": {
+        "section": "daño",
+        "explanation": "ATM y ATR actúan entre los sensores de la lesión y los efectores del control. En la figura, ATM activa Chk2 y ATR activa Chk1. Estas últimas quinasas transmiten después el freno a otros componentes.",
+        "answer": "ATM y ATR.",
+        "revision": {
+          "prompt": "Según la figura 14-14, ¿qué quinasas actúan inmediatamente después de los sensores de daño del ADN?",
+          "previousOptions": [
+            "Chk1 y Chk2.",
+            "G1, S y G2.",
+            "ATM y ATR.",
+            "Cdk4 y Cdk6."
+          ]
+        }
+      },
+      "¿Qué quinasas de control pueden inhibir a Cdc25 tras detectar daño?": {
+        "section": "daño",
+        "explanation": "Chk1 y Chk2 son las quinasas de la vía que inhiben Cdc25. ATM y ATR están un paso antes. Si Cdc25 se inhibe, pierde la capacidad de activar los complejos que favorecen la entrada en M.",
+        "answer": "Chk1 y Chk2."
+      },
+      "¿Qué inhibidor de Cdk puede inducir p53 para detener G1/S?": {
+        "section": "daño",
+        "explanation": "p53 induce la expresión de p21. p21 inhibe los complejos de G1 y G1/S, lo que contribuye a frenar el paso a la replicación. La pregunta busca el inhibidor que ejecuta esa parte de la respuesta.",
+        "answer": "p21."
+      },
+      "¿Qué puede pasar si falla una ruta que detecta daño del ADN?": {
+        "section": "daño",
+        "explanation": "Si se pierde la señal de daño, la maquinaria que impulsa el ciclo puede seguir activa a pesar de la lesión. Una célula que continúa dividiéndose puede conservar y transmitir alteraciones a su descendencia.",
+        "answer": "La célula podría seguir dividiéndose con alteraciones genéticas."
+      },
+      "¿Qué distingue quiescencia de senescencia?": {
+        "section": "destino53",
+        "explanation": "En quiescencia, un estímulo apropiado puede devolver la célula al ciclo. Una célula senescente pierde de forma duradera su potencial proliferativo. El criterio es la posibilidad de volver a dividirse.",
+        "answer": "La quiescencia puede revertirse; la senescencia bloquea de modo duradero la proliferación."
+      },
+      "Una célula senescente recibe factores de crecimiento. ¿Por qué no suele reanudar el ciclo?": {
+        "section": "destino53",
+        "explanation": "Los factores de crecimiento pueden reactivar células quiescentes, pero el capítulo describe la senescencia como un estado que persiste frente a estímulos mitógenos. Esa resistencia explica por qué no se reanuda el ciclo.",
+        "answer": "Porque su bloqueo proliferativo es estable, a diferencia de G0 reversible.",
+        "revision": {
+          "previousOptions": [
+            "Para repararlo antes de transmitir la lesión a células hijas.",
+            "Porque las dos hebras del ADN se separan y sirven de molde para copiarse.",
+            "Porque su bloqueo proliferativo es estable, a diferencia de G0 reversible.",
+            "Porque la célula sintetiza moléculas y orgánulos, crece y replica su ADN."
+          ],
+          "reasons": {
+            "A": "Una pausa temporal para reparar ADN puede terminar si se corrige el daño. La senescencia es un bloqueo duradero.",
+            "B": "La apertura de las hebras ocurre durante la replicación. No explica por qué una célula senescente no vuelve a entrar al ciclo.",
+            "C": "La senescencia persiste frente a estímulos mitógenos. G0 reversible permite regresar si se recibe una señal adecuada.",
+            "D": "Sintetizar componentes y duplicar ADN caracteriza la interfase activa. La célula senescente perdió su capacidad de seguir proliferando."
+          }
+        }
+      },
+      "¿Qué significa apoptosis como posible destino de una célula dañada?": {
+        "section": "destino53",
+        "explanation": "La apoptosis es una forma regulada de muerte celular. En la senescencia la célula sigue viva, pero pierde su capacidad de proliferar. Ambos resultados pueden aparecer después de una lesión persistente.",
+        "answer": "Muerte celular programada y controlada."
+      },
+      "¿Por qué la división no es el único destino posible de una célula?": {
+        "section": "estres",
+        "explanation": "El destino depende del estado y de las señales de la célula. El esquema distingue proliferación, diferenciación, quiescencia y respuestas al estrés. La división es una posibilidad entre esas rutas.",
+        "answer": "También puede diferenciarse, permanecer quiescente, adaptarse al estrés o morir.",
+        "revision": {
+          "previousOptions": [
+            "También puede diferenciarse, permanecer quiescente, adaptarse al estrés o morir.",
+            "También se regula mediante fosforilación y proteínas inhibidoras.",
+            "Dos núcleos hijos con la misma información cromosómica que el núcleo progenitor.",
+            "Muerte celular programada y controlada."
+          ],
+          "reasons": {
+            "A": "La figura incluye destinos alternativos a la proliferación, como especializarse, quedar quiescente o responder al estrés.",
+            "B": "Se refiere a cómo se controla una Cdk. La pregunta busca destinos de la célula completa.",
+            "C": "Describe qué produce la mitosis una vez iniciada. No explica por qué algunas células toman otra ruta.",
+            "D": "La apoptosis es una de las rutas. El inciso A reúne varias alternativas que también describe el capítulo."
+          }
+        }
+      },
+      "¿Qué aporta la matriz extracelular al control de proliferación?": {
+        "section": "matriz",
+        "explanation": "Las integrinas vinculan la célula con la matriz y transmiten información que puede influir en la proliferación. El contacto con la matriz cumple por tanto una función reguladora además de la de anclaje.",
+        "answer": "Señales que la célula recibe mediante receptores como las integrinas."
+      },
+      "¿Qué otras señales del microambiente pueden promover o frenar la división?": {
+        "section": "extrinseco",
+        "explanation": "Factores de crecimiento y citocinas forman parte de las señales extracelulares que recibe la célula. Según el estímulo y el contexto, pueden favorecer o frenar la progresión del ciclo.",
+        "answer": "Factores de crecimiento y citocinas."
+      },
+      "¿Qué significa diferenciación celular?": {
+        "section": "estres",
+        "explanation": "Diferenciarse significa adquirir rasgos y funciones de un tipo celular especializado. Metaplasia describe otro fenómeno, el cambio de fenotipo diferenciado ante un estímulo persistente.",
+        "answer": "Adquirir rasgos y funciones especializadas dentro de un tejido."
+      },
+      "Si una célula aumenta de tamaño frente a una mayor demanda, ¿qué adaptación presenta?": {
+        "section": "adaptacion",
+        "explanation": "La pista es que aumenta el tamaño de la célula. Eso define hipertrofia. Si el cambio principal fuera el número de células, hablaríamos de hiperplasia.",
+        "answer": "Hipertrofia."
+      },
+      "Si aumenta el número de células de un tejido, ¿cómo se llama la adaptación?": {
+        "section": "adaptacion",
+        "explanation": "La hiperplasia aumenta el número de células por proliferación. La hipertrofia aumenta el tamaño de cada célula. Identifica qué cantidad cambia en el caso.",
+        "answer": "Hiperplasia."
+      },
+      "Si un tejido pierde tamaño por menor actividad, ¿qué adaptación puede producirse?": {
+        "section": "adaptacion",
+        "explanation": "La atrofia puede reducir el tamaño o el número de células cuando disminuye la actividad del tejido. En el enunciado se describe una reducción, a diferencia del aumento propio de hipertrofia o hiperplasia.",
+        "answer": "Atrofia."
+      },
+      "¿Qué significa metaplasia como respuesta adaptativa?": {
+        "section": "adaptacion",
+        "explanation": "En la metaplasia cambia el fenotipo celular diferenciado bajo condiciones persistentes. La clave está en el tipo de célula que predomina, distinta de un simple cambio de tamaño o de cantidad.",
+        "answer": "Cambio de un tipo celular diferenciado por otro ante condiciones persistentes."
+      },
+      "¿Por qué el estrés celular prolongado puede terminar en muerte?": {
+        "section": "adaptacion",
+        "explanation": "La adaptación tiene un límite. Cuando el estrés supera la capacidad de respuesta por su intensidad o duración, las alteraciones pueden culminar en muerte celular. El capítulo separa adaptación de lesión y muerte.",
+        "answer": "Porque la célula puede superar su capacidad de adaptación y sufrir lesiones irreversibles.",
+        "revision": {
+          "previousOptions": [
+            "Porque la célula puede superar su capacidad de adaptación y sufrir lesiones irreversibles.",
+            "Porque la síntesis de la hebra retardada no completa del todo el extremo del cromosoma.",
+            "Porque la célula se compromete a duplicar su material genético antes de dividirse.",
+            "Porque la célula sintetiza moléculas y orgánulos, crece y replica su ADN."
+          ],
+          "reasons": {
+            "A": "Una lesión que excede la capacidad de adaptación puede llevar a muerte celular. La intensidad y la duración del estrés son relevantes.",
+            "B": "La copia incompleta del extremo explica el acortamiento de telómeros, un fenómeno específico de la replicación.",
+            "C": "La decisión G1/S compromete a copiar el ADN. El problema del enunciado es una lesión que sobrepasa la capacidad de adaptación.",
+            "D": "Sintetizar componentes y replicar ADN son funciones normales de la interfase. No explican por qué falla la adaptación."
+          }
+        }
+      },
+      "¿Qué estructura protege los extremos cromosómicos mientras se replica el ADN?": {
+        "section": "telomero",
+        "explanation": "Los telómeros son regiones terminales de los cromosomas. La telomerasa es la enzima que puede extender esas regiones. Distinguir la estructura de la enzima evita confundir los incisos.",
+        "answer": "Los telómeros."
+      },
+      "¿Qué enzima puede compensar el acortamiento de los telómeros en ciertas células?": {
+        "section": "telomero",
+        "explanation": "La telomerasa añade repeticiones a los extremos cromosómicos en las células que la expresan. Así puede compensar el acortamiento que ocurre en sucesivas replicaciones.",
+        "answer": "La telomerasa."
+      },
+      "¿Por qué se forman horquillas de replicación durante la fase S?": {
+        "section": "horquilla",
+        "explanation": "Al abrirse la doble hélice desde un origen, las hebras quedan expuestas como moldes. Los puntos donde se separan y se va copiando el ADN se llaman horquillas. Puedes seguir su avance desde el origen.",
+        "answer": "Porque las dos hebras del ADN se separan y sirven de molde para copiarse.",
+        "revision": {
+          "previousOptions": [
+            "Porque la célula sintetiza moléculas y orgánulos, crece y replica su ADN.",
+            "Porque sus niveles suben y bajan de forma cíclica durante la vida de la célula.",
+            "Porque las dos hebras del ADN se separan y sirven de molde para copiarse.",
+            "Para apagar las señales de mitosis y permitir la salida hacia G1."
+          ],
+          "reasons": {
+            "A": "Es una descripción general de la interfase. La horquilla tiene una causa concreta, la apertura local de las dos hebras.",
+            "B": "La oscilación de las ciclinas regula el avance del ciclo. La forma de una horquilla aparece cuando se abre la doble hélice.",
+            "C": "La separación de las dos hebras expone los moldes. La horquilla es la zona de avance de esa apertura durante la copia.",
+            "D": "Apagar la señal mitótica permite salir de M. Las horquillas se forman antes, en la fase de síntesis."
+          }
+        }
+      },
+      "¿Qué son los fragmentos de Okazaki?": {
+        "section": "okazaki",
+        "explanation": "La ADN polimerasa sintetiza en dirección 5′ a 3′. Por la orientación del molde, la hebra retardada se construye por tramos, cada uno iniciado con un cebador. Esos tramos son los fragmentos de Okazaki.",
+        "answer": "Segmentos cortos que se sintetizan de forma discontinua en la hebra retardada."
+      },
+      "¿Qué estructura organiza el huso que separará cromosomas?": {
+        "section": "g2",
+        "explanation": "Después de duplicarse el centrosoma, las dos unidades se separan y contribuyen a organizar los polos del huso. La cohesina mantiene unidas las hermanas hasta la anafase y cumple otra función.",
+        "answer": "El centrosoma duplicado.",
+        "revision": {
+          "options": {
+            "B": "El anillo contráctil de actina y miosina."
+          },
+          "previousOptions": [
+            "El centrosoma duplicado.",
+            "El centrosoma y sus centríolos.",
+            "El complejo de cohesinas.",
+            "Los telómeros."
+          ]
+        }
+      },
+      "¿Qué sucede con las cromátidas durante la profase y la metafase?": {
+        "section": "mitosis",
+        "explanation": "En profase se condensa la cromatina y se hacen visibles los cromosomas. En metafase se disponen en el plano ecuatorial. La separación de las cromátidas comienza en anafase.",
+        "answer": "Se condensan y se organizan para ser repartidas con precisión."
+      },
+      "¿Cuál es el resultado esperado de una mitosis normal en una célula somática?": {
+        "section": "mitosis",
+        "explanation": "La fase S aporta dos copias hermanas y la mitosis reparte una de cada cromosoma a cada núcleo hijo. Si el reparto es correcto, ambos conservan la dotación del núcleo progenitor.",
+        "answer": "Dos núcleos hijos con la misma información cromosómica que el núcleo progenitor."
+      },
+      "¿En qué fase del ciclo celular se duplica el ADN?": {
+        "section": "faseS",
+        "explanation": "La fase S recibe su nombre de la síntesis de ADN. La metafase ocurre después y se reconoce por la alineación de los cromosomas ya duplicados.",
+        "answer": "En la fase S de la interfase."
+      },
+      "¿Qué sucede en G1 antes de que la célula copie su ADN?": {
+        "section": "g1",
+        "explanation": "Durante G1 se sintetizan componentes celulares y se acumulan los recursos necesarios para entrar en S. La preparación precede a la copia del ADN.",
+        "answer": "La célula crece y se prepara para entrar en la fase S."
+      },
+      "¿Para qué sirven los puntos de control del ciclo celular?": {
+        "section": "control",
+        "explanation": "Cada control comprueba condiciones distintas antes de permitir un paso. En G1 se valora si conviene iniciar la síntesis. En G2 se verifica la preparación para M. En M se revisa la unión al huso antes de separar hermanas.",
+        "answer": "Para comprobar que las condiciones y el ADN sean adecuados antes de avanzar a la siguiente fase."
+      },
+      "Una célula deja temporalmente de dividirse. ¿En qué estado puede permanecer?": {
+        "section": "g0",
+        "explanation": "Una célula puede salir del ciclo activo y conservar la posibilidad de volver a dividirse si recibe un estímulo adecuado. Esa pausa reversible corresponde a G0, como en las células de tejidos estables.",
+        "answer": "En G0, un estado de reposo o quiescencia fuera del ciclo de división activo."
+      }
+    }
+  },
+  "groups": {
+    "sangre|707-711": {
+      "book": "Kenneth S. Saladin · Anatomía y fisiología. La unidad entre forma y función · 6.ª edición",
+      "slug": "morfofuncion",
+      "chapter": 18,
+      "chapterTitle": "El aparato circulatorio: sangre",
+      "title": "Componentes de la sangre",
+      "start": 707,
+      "end": 711,
+      "printed": "679–683",
+      "figures": [
+        {
+          "label": "Figura 18.2",
+          "page": 709,
+          "note": "Ubica el plasma y los elementos formes después de la centrifugación.",
+          "printed": 681
+        },
+        {
+          "label": "Cuadro 18.1",
+          "page": 709,
+          "note": "Revisa las propiedades generales y los valores habituales.",
+          "printed": 681
+        }
+      ]
+    },
+    "sangre|709-712": {
+      "book": "Kenneth S. Saladin · Anatomía y fisiología. La unidad entre forma y función · 6.ª edición",
+      "slug": "morfofuncion",
+      "chapter": 18,
+      "chapterTitle": "El aparato circulatorio: sangre",
+      "title": "Plasma sanguíneo",
+      "start": 709,
+      "end": 712,
+      "printed": "681–684",
+      "figures": [
+        {
+          "label": "Cuadro 18.2",
+          "page": 710,
+          "note": "Distingue los componentes del plasma.",
+          "printed": 682
+        },
+        {
+          "label": "Cuadro 18.3",
+          "page": 710,
+          "note": "Compara la función de la albúmina, las globulinas y el fibrinógeno.",
+          "printed": 682
+        }
+      ]
+    },
+    "sangre|711-716": {
+      "book": "Kenneth S. Saladin · Anatomía y fisiología. La unidad entre forma y función · 6.ª edición",
+      "slug": "morfofuncion",
+      "chapter": 18,
+      "chapterTitle": "El aparato circulatorio: sangre",
+      "title": "Producción de elementos formes y eritropoyesis",
+      "start": 711,
+      "end": 716,
+      "printed": "683–688",
+      "figures": [
+        {
+          "label": "Figura 18.6",
+          "page": 714,
+          "note": "Sigue las etapas de desarrollo del eritrocito en orden.",
+          "printed": 686
+        }
+      ]
+    },
+    "sangre|712-716": {
+      "book": "Kenneth S. Saladin · Anatomía y fisiología. La unidad entre forma y función · 6.ª edición",
+      "slug": "morfofuncion",
+      "chapter": 18,
+      "chapterTitle": "El aparato circulatorio: sangre",
+      "title": "Eritrocitos y hemoglobina",
+      "start": 712,
+      "end": 716,
+      "printed": "684–688",
+      "figures": [
+        {
+          "label": "Figura 18.4",
+          "page": 713,
+          "note": "Relaciona forma y dimensiones del eritrocito con su estructura.",
+          "printed": 685
+        },
+        {
+          "label": "Figura 18.5",
+          "page": 713,
+          "note": "Identifica las partes de la hemoglobina.",
+          "printed": 685
+        }
+      ]
+    },
+    "sangre|715-720": {
+      "book": "Kenneth S. Saladin · Anatomía y fisiología. La unidad entre forma y función · 6.ª edición",
+      "slug": "morfofuncion",
+      "chapter": 18,
+      "chapterTitle": "El aparato circulatorio: sangre",
+      "title": "Vida, recambio y trastornos de los eritrocitos",
+      "start": 715,
+      "end": 720,
+      "printed": "687–692",
+      "figures": [
+        {
+          "label": "Figura 18.9",
+          "page": 716,
+          "note": "Sigue el destino del eritrocito envejecido y de sus componentes.",
+          "printed": 688
+        },
+        {
+          "label": "Cuadro 18.4",
+          "page": 717,
+          "note": "Compara causas de anemia si la pregunta se refiere a trastornos.",
+          "printed": 689
+        }
+      ]
+    },
+    "sangre|719-723": {
+      "book": "Kenneth S. Saladin · Anatomía y fisiología. La unidad entre forma y función · 6.ª edición",
+      "slug": "morfofuncion",
+      "chapter": 18,
+      "chapterTitle": "El aparato circulatorio: sangre",
+      "title": "Tipos sanguíneos ABO y Rh",
+      "start": 719,
+      "end": 723,
+      "printed": "691–695",
+      "figures": [
+        {
+          "label": "Cuadro 18.5",
+          "page": 719,
+          "note": "Compara antígenos del eritrocito y anticuerpos del plasma en los cuatro grupos.",
+          "printed": 691
+        },
+        {
+          "label": "Figura 18.16",
+          "page": 723,
+          "note": "Sigue la exposición al antígeno Rh y la respuesta materna si la pregunta trata del factor Rh.",
+          "printed": 695
+        }
+      ]
+    },
+    "sangre|724-730": {
+      "book": "Kenneth S. Saladin · Anatomía y fisiología. La unidad entre forma y función · 6.ª edición",
+      "slug": "morfofuncion",
+      "chapter": 18,
+      "chapterTitle": "El aparato circulatorio: sangre",
+      "title": "Leucocitos",
+      "start": 724,
+      "end": 730,
+      "printed": "696–702",
+      "figures": [
+        {
+          "label": "Cuadro 18.6",
+          "page": 726,
+          "note": "Compara aspecto y función de los leucocitos. El cuadro continúa en la página siguiente.",
+          "printed": 698
+        }
+      ]
+    },
+    "sangre|730-734": {
+      "book": "Kenneth S. Saladin · Anatomía y fisiología. La unidad entre forma y función · 6.ª edición",
+      "slug": "morfofuncion",
+      "chapter": 18,
+      "chapterTitle": "El aparato circulatorio: sangre",
+      "title": "Trombocitos y hemostasia",
+      "start": 730,
+      "end": 734,
+      "printed": "702–706",
+      "figures": [
+        {
+          "label": "Figura 18.20",
+          "page": 731,
+          "note": "Identifica la estructura de los trombocitos.",
+          "printed": 703
+        },
+        {
+          "label": "Figura 18.21",
+          "page": 732,
+          "note": "Sigue el orden de los mecanismos de hemostasia.",
+          "printed": 704
+        }
+      ]
+    },
+    "sangre|732-736": {
+      "book": "Kenneth S. Saladin · Anatomía y fisiología. La unidad entre forma y función · 6.ª edición",
+      "slug": "morfofuncion",
+      "chapter": 18,
+      "chapterTitle": "El aparato circulatorio: sangre",
+      "title": "Rutas y factores de la coagulación",
+      "start": 732,
+      "end": 736,
+      "printed": "704–708",
+      "figures": [
+        {
+          "label": "Figura 18.23",
+          "page": 734,
+          "note": "Sigue por separado las dos vías y ubica su convergencia.",
+          "printed": 706
+        },
+        {
+          "label": "Cuadro 18.7",
+          "page": 735,
+          "note": "Relaciona cada número de factor con su nombre y función.",
+          "printed": 707
+        }
+      ]
+    },
+    "sangre|734-738": {
+      "book": "Kenneth S. Saladin · Anatomía y fisiología. La unidad entre forma y función · 6.ª edición",
+      "slug": "morfofuncion",
+      "chapter": 18,
+      "chapterTitle": "El aparato circulatorio: sangre",
+      "title": "Retracción y disolución del coágulo",
+      "start": 734,
+      "end": 738,
+      "printed": "706–710",
+      "figures": [
+        {
+          "label": "Figura 18.25",
+          "page": 735,
+          "note": "Distingue la activación del plasminógeno de la degradación de la fibrina.",
+          "printed": 707
+        }
+      ]
+    },
+    "organos de los sentidos|611-614": {
+      "book": "Kenneth S. Saladin · Anatomía y fisiología. La unidad entre forma y función · 6.ª edición",
+      "slug": "morfofuncion",
+      "chapter": 16,
+      "chapterTitle": "Órganos de los sentidos",
+      "title": "Propiedades de los receptores sensitivos",
+      "start": 611,
+      "end": 614,
+      "printed": "583–586",
+      "figures": [
+        {
+          "label": "Figura 16.1",
+          "page": 612,
+          "note": "Compara campos receptivos grandes y pequeños para interpretar la discriminación sensitiva.",
+          "printed": 584
+        }
+      ]
+    },
+    "organos de los sentidos|613-616": {
+      "book": "Kenneth S. Saladin · Anatomía y fisiología. La unidad entre forma y función · 6.ª edición",
+      "slug": "morfofuncion",
+      "chapter": 16,
+      "chapterTitle": "Órganos de los sentidos",
+      "title": "Receptores de los sentidos generales",
+      "start": 613,
+      "end": 616,
+      "printed": "585–588",
+      "figures": [
+        {
+          "label": "Figura 16.2",
+          "page": 614,
+          "note": "Localiza los receptores en la piel.",
+          "printed": 586
+        },
+        {
+          "label": "Cuadro 16.1",
+          "page": 615,
+          "note": "Relaciona cada receptor con su ubicación y modalidad sensitiva.",
+          "printed": 587
+        }
+      ]
+    },
+    "organos de los sentidos|616-619": {
+      "book": "Kenneth S. Saladin · Anatomía y fisiología. La unidad entre forma y función · 6.ª edición",
+      "slug": "morfofuncion",
+      "chapter": 16,
+      "chapterTitle": "Órganos de los sentidos",
+      "title": "Dolor y vías sensitivas",
+      "start": 616,
+      "end": 619,
+      "printed": "588–591",
+      "figures": [
+        {
+          "label": "Figura 16.3",
+          "page": 617,
+          "note": "Sigue la proyección de las señales de dolor.",
+          "printed": 589
+        },
+        {
+          "label": "Figura 16.4",
+          "page": 617,
+          "note": "Ubica la convergencia que explica el dolor referido.",
+          "printed": 589
+        }
+      ]
+    },
+    "organos de los sentidos|619-622": {
+      "book": "Kenneth S. Saladin · Anatomía y fisiología. La unidad entre forma y función · 6.ª edición",
+      "slug": "morfofuncion",
+      "chapter": 16,
+      "chapterTitle": "Órganos de los sentidos",
+      "title": "Gusto",
+      "start": 619,
+      "end": 622,
+      "printed": "591–594",
+      "figures": [
+        {
+          "label": "Figura 16.6",
+          "page": 620,
+          "note": "Distingue papila, botón gustativo y células receptoras en los paneles.",
+          "printed": 592
+        }
+      ]
+    },
+    "organos de los sentidos|621-624": {
+      "book": "Kenneth S. Saladin · Anatomía y fisiología. La unidad entre forma y función · 6.ª edición",
+      "slug": "morfofuncion",
+      "chapter": 16,
+      "chapterTitle": "Órganos de los sentidos",
+      "title": "Olfato",
+      "start": 621,
+      "end": 624,
+      "printed": "593–596",
+      "figures": [
+        {
+          "label": "Figura 16.7",
+          "page": 622,
+          "note": "Ubica el epitelio olfatorio y reconoce las partes del receptor.",
+          "printed": 594
+        },
+        {
+          "label": "Figura 16.8",
+          "page": 623,
+          "note": "Sigue la proyección hacia el encéfalo.",
+          "printed": 595
+        }
+      ]
+    },
+    "organos de los sentidos|624-630": {
+      "book": "Kenneth S. Saladin · Anatomía y fisiología. La unidad entre forma y función · 6.ª edición",
+      "slug": "morfofuncion",
+      "chapter": 16,
+      "chapterTitle": "Órganos de los sentidos",
+      "title": "Anatomía del oído",
+      "start": 624,
+      "end": 630,
+      "printed": "596–602",
+      "figures": [
+        {
+          "label": "Figura 16.11",
+          "page": 626,
+          "note": "Sigue el trayecto desde el tímpano a los huesecillos.",
+          "printed": 598
+        },
+        {
+          "label": "Figura 16.13",
+          "page": 628,
+          "note": "Ubica los compartimentos del caracol.",
+          "printed": 600
+        }
+      ]
+    },
+    "organos de los sentidos|628-633": {
+      "book": "Kenneth S. Saladin · Anatomía y fisiología. La unidad entre forma y función · 6.ª edición",
+      "slug": "morfofuncion",
+      "chapter": 16,
+      "chapterTitle": "Órganos de los sentidos",
+      "title": "Audición y transducción coclear",
+      "start": 628,
+      "end": 633,
+      "printed": "600–605",
+      "figures": [
+        {
+          "label": "Figura 16.15",
+          "page": 630,
+          "note": "Sigue la transmisión mecánica del sonido.",
+          "printed": 602
+        },
+        {
+          "label": "Figura 16.17",
+          "page": 632,
+          "note": "Compara dónde responde la membrana basilar a frecuencias distintas.",
+          "printed": 604
+        }
+      ]
+    },
+    "organos de los sentidos|633-638": {
+      "book": "Kenneth S. Saladin · Anatomía y fisiología. La unidad entre forma y función · 6.ª edición",
+      "slug": "morfofuncion",
+      "chapter": 16,
+      "chapterTitle": "Órganos de los sentidos",
+      "title": "Equilibrio y aparato vestibular",
+      "start": 633,
+      "end": 638,
+      "printed": "605–610",
+      "figures": [
+        {
+          "label": "Figura 16.19",
+          "page": 635,
+          "note": "Ubica las máculas del sáculo y el utrículo.",
+          "printed": 607
+        },
+        {
+          "label": "Figura 16.20",
+          "page": 636,
+          "note": "Compara la cresta ampollar y la cúpula de los conductos semicirculares.",
+          "printed": 608
+        }
+      ]
+    },
+    "organos de los sentidos|638-646": {
+      "book": "Kenneth S. Saladin · Anatomía y fisiología. La unidad entre forma y función · 6.ª edición",
+      "slug": "morfofuncion",
+      "chapter": 16,
+      "chapterTitle": "Órganos de los sentidos",
+      "title": "Anatomía del ojo y formación de imágenes",
+      "start": 638,
+      "end": 646,
+      "printed": "610–618",
+      "figures": [
+        {
+          "label": "Figura 16.25",
+          "page": 641,
+          "note": "Identifica las túnicas y estructuras en el corte sagital.",
+          "printed": 613
+        },
+        {
+          "label": "Cuadro 16.2",
+          "page": 646,
+          "note": "Compara los defectos de formación de imágenes si la pregunta trata de refracción.",
+          "printed": 618
+        }
+      ]
+    },
+    "organos de los sentidos|643-654": {
+      "book": "Kenneth S. Saladin · Anatomía y fisiología. La unidad entre forma y función · 6.ª edición",
+      "slug": "morfofuncion",
+      "chapter": 16,
+      "chapterTitle": "Órganos de los sentidos",
+      "title": "Retina, fotorreceptores y visión",
+      "start": 643,
+      "end": 654,
+      "printed": "615–626",
+      "figures": [
+        {
+          "label": "Figura 16.34",
+          "page": 647,
+          "note": "Ubica los fotorreceptores en las capas de la retina.",
+          "printed": 619
+        },
+        {
+          "label": "Figura 16.39",
+          "page": 652,
+          "note": "Compara la convergencia de bastones con los circuitos de los conos.",
+          "printed": 624
+        }
+      ]
+    }
+  }
+}
