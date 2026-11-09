@@ -1,11 +1,11 @@
-const CACHE_NAME = 'alcocermed-juegos-v112-fluidez';
+const CACHE_NAME = 'alcocermed-juegos-v113-fluidez';
 const ASSETS_TO_CACHE = [
     './game-rounds.js?v=1',
     './game-practice.js?v=20261021-visual5b',
     './game-question-images.js?v=1',
     './app.js?v=20261108-campus',
     './styles.css?v=87',
-    '/promo-ben-carson-tiktok/public/authentic/logo.png',
+    '/juegos/logo-ben-carson-160.webp',
     './assets/preguntas-apoyo/mano-muneca.svg',
     './',
     './index.html',
@@ -60,7 +60,8 @@ const ASSETS_TO_CACHE = [
 
 const STATIC_ASSETS = new Set(ASSETS_TO_CACHE.map(asset => new URL(asset, self.location.origin + '/juegos/').href));
 const ENTRY_ASSETS = ASSETS_TO_CACHE.filter(asset => !asset.includes('/assets/preguntas') &&
-    !asset.endsWith('result_arena_bg.png') && !asset.endsWith('latin-ext.woff2'));
+    !asset.endsWith('result_arena_bg.png') && !asset.endsWith('logo-ben-carson-160.webp') &&
+    !asset.endsWith('latin-ext.woff2'));
 
 // Instalar el Service Worker y almacenar en caché los recursos estáticos
 self.addEventListener('install', (event) => {
