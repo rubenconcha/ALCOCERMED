@@ -10,6 +10,7 @@
   const options = [...'abcde'].map(letter => read(q, 'opcion_' + letter)).filter(value => value != null && String(value).trim()).map(String);
   const comments = read(q, 'comentarios_opciones');
   const reading = read(q, 'banco_lectura');
+  const references = read(q, 'lecturas_comentario');
   const teaching = read(q, 'revision_docente');
   const option_explanations = options.map((_, i) => String(comments?.['ABCDE'[i]] || '').trim());
   const blocks = explanation.split(/\n\s*\n/);
@@ -24,6 +25,7 @@
    printed_page: String(read(q, 'pagina_impresa') || ''),
    pdf_page: String(read(q, 'paginas_pdf') || ''),
    ...(reading?.title ? { reading } : {}),
+   ...(Array.isArray(references) && references.length ? { references } : {}),
    ...(teaching?.concepto && teaching.afirmaciones?.length ? { teaching } : {}),
   };
  }
@@ -81,16 +83,58 @@
   return block;
  }
 
- async function openTeachingPage(page, button) {
-  button.disabled = true;
+ let referencePreloadScheduled = false;
+ function warmReferenceReader() {
+  if (referencePreloadScheduled || root.navigator?.connection?.saveData) return;
+  referencePreloadScheduled = true;
+  const preload = () => root.loadCampusAssets('texts')
+   .then(() => root.OfficialTexts?.preload())
+   .catch(() => { referencePreloadScheduled = false; });
+  if (typeof root.requestIdleCallback === 'function') root.requestIdleCallback(preload, { timeout: 1200 });
+  else root.setTimeout(preload, 300);
+ }
+
+ async function openReference(reference, button) {
+  if (button.hasAttribute('aria-busy')) return;
+  button.setAttribute('aria-busy', 'true');
+  const label = button.firstElementChild;
+  const originalLabel = label.textContent;
+  label.textContent = 'Abriendo página…';
   try {
    await root.loadCampusAssets('texts');
-   if (button.isConnected) await root.OfficialTexts.readPage('morfofuncion', page);
+   if (button.isConnected && !button.closest('.hidden, [hidden]')) {
+    await root.OfficialTexts.readPage(reference.slug, reference.page);
+   }
   } catch (_) {
    if (button.isConnected) root.showToast?.('No pudimos abrir el texto. Vuelve a intentarlo.', 'error');
   } finally {
-   button.disabled = false;
+   button.removeAttribute('aria-busy');
+   label.textContent = originalLabel;
   }
+ }
+
+ function showReferences(references) {
+  const block = el('section', null, 'qr-reading qr-source-reading');
+  block.append(el('h5', 'Fuente oficial', 'qr-subheading'));
+  function action(reference, primary) {
+   const button = el('button', null, 'qr-reading-link');
+   button.type = 'button';
+   const locator = (reference.printed ? 'Pág. impresa ' + reference.printed + ' · ' : '') + 'PDF ' + reference.page;
+   const label = primary ? 'Ver en el texto' : reference.label + ' · ' + reference.section;
+   const detail = primary ? reference.label + ' · ' + reference.section + ' · ' + locator : locator;
+   button.append(el('span', label), el('small', detail));
+   button.onclick = () => openReference(reference, button);
+   return button;
+  }
+  block.append(action(references[0], true));
+  if (references.length > 1) {
+   const others = el('details', null, 'qr-bank-reasons qr-source-others');
+   others.append(el('summary', 'Otras páginas citadas (' + (references.length - 1) + ')'));
+   for (const reference of references.slice(1)) others.append(action(reference, false));
+   block.append(others);
+  }
+  warmReferenceReader();
+  return block;
  }
 
  function showTeaching(teaching) {
@@ -115,7 +159,7 @@
     const button = el('button', null, 'qr-reading-link');
     button.type = 'button';
     button.append(el('span', tema), el('small', 'Pág. impresa ' + impresa + ' · PDF ' + pagina));
-    button.onclick = () => openTeachingPage(pagina, button);
+    button.onclick = () => openReference({ slug: 'morfofuncion', page: pagina }, button);
     reading.append(button);
    }
    content.append(reading);
@@ -193,7 +237,9 @@
 
   if (reading) panel.append(showReading(reading, openReading));
 
-  if (source && !(compactSource && fromPattern)) {
+  const linkedSource = review.references?.length && typeof root.loadCampusAssets === 'function';
+  if (linkedSource) panel.append(showReferences(review.references));
+  else if (source && !(compactSource && fromPattern)) {
    const reference = el(compactSource ? 'details' : 'div', null, compactSource ? 'qr-reference qr-reference-compact' : 'qr-reference');
    const label = compactSource ? 'Fuente oficial' : fromPattern ? 'Origen de la clave' : reading ? 'Bibliografía oficial' : 'Fuente del comentario';
    reference.append(el(compactSource ? 'summary' : 'strong', label));

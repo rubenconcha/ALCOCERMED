@@ -36,6 +36,7 @@ test('cada pregunta histórica tiene un comentario y las referencias distinguen 
     const comments = require('../api/_past_exams/commentaries.json');
     const withCommentary = require('../api/_past_exams/commentaries.cjs');
     const validBooks = { M: 1251, B: 829, S: 232 };
+    const readerSlugs = { M: 'morfofuncion', B: 'biologia-celular', S: 'educacion-salud' };
     const questions = catalog.exams.flatMap(exam => require('../api/_past_exams/' + exam.id + '.json').questions);
     assert.deepEqual(Object.keys(comments).sort(), questions.map(question => question.id).sort());
     for (const question of questions) {
@@ -51,12 +52,18 @@ test('cada pregunta histórica tiene un comentario y las referencias distinguen 
         }
         const enriched = withCommentary(question);
         assert.equal(enriched.justificacion, text, question.id);
+        assert.deepEqual((enriched.lecturas_comentario || []).map(r => [r.slug, r.section, r.page, r.printed]),
+            references.map(r => [readerSlugs[r.book], r.section, r.pdf, r.printed]), question.id);
         assert.deepEqual(enriched.respuestas_aceptadas, question.respuestas_aceptadas, question.id);
         assert.equal(Boolean(enriched.clave_en_discrepancia), status === 'd', question.id);
     }
     const blood = withCommentary(questions.find(question => question.id === '2025-2026-2-5'));
     assert.match(blood.justificacion, /albúmina.*pequeña.*globulinas/i);
     assert.match(blood.fuente_comentario, /Saladin.*pág\. impresa 681.*pág\. PDF 709/);
+    const elements = withCommentary(questions.find(question => question.id === '2025-2026-1-2'));
+    assert.deepEqual(elements.lecturas_comentario, [{
+        slug: 'morfofuncion', label: 'Saladin', section: 'Cuadro 2.1 · Elementos del cuerpo humano', page: 72, printed: 44,
+    }]);
 });
 
 test('el cronómetro de exámenes pasados permite responder después de 100 minutos y conserva el cierre de simulacros', () => {
@@ -237,7 +244,8 @@ test('el desglose aplica filtros, conserva las claves originales y protege las p
             topics: 'morfo-10', search: 'músculo geniogloso' })).body;
         assert.equal(filtered.count, 1);
         const original = require('../api/_past_exams/2025-2026-1.json').questions[0];
-        const { justificacion, fuente_comentario, ...originalFields } = filtered.questions[0].question;
+        const { justificacion, fuente_comentario, lecturas_comentario, ...originalFields } = filtered.questions[0].question;
+        assert.equal(lecturas_comentario[0].slug, 'morfofuncion');
         assert.deepEqual(originalFields, original);
         assert.match(justificacion, /geniogloso/i);
         assert.match(fuente_comentario, /Saladin.*Cap.tulo 10/i);

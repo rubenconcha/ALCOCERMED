@@ -1,8 +1,8 @@
-const CACHE_NAME = 'alcocermed-main-v178-practica-suficiencia';
+const CACHE_NAME = 'alcocermed-main-v179-referencias-examenes';
 const APP_SHELL = [
     './student-results.js?v=5',
     './student-results.css?v=1',
-    './question-review.js?v=8',
+    './question-review.js?v=9',
     './suficiencia-core.js?v=12',
     './suficiencia.js?v=15',
     './suficiencia.css?v=9',
@@ -22,7 +22,7 @@ const APP_SHELL = [
     './assets/flashcard-icons/bien-smile-3d.png',
     './assets/flashcard-icons/facil-3d.png',
     './manifest.webmanifest',
-    './styles.css?v=44',
+    './styles.css?v=45',
     './commerce.css?v=1',
     './student-white.css?v=2',
     './campus-theme.css?v=4',
