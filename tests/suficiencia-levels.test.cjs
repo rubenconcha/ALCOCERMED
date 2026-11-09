@@ -143,7 +143,8 @@ test('topic practice always uses difficult items and retains the selected subjec
  const click=(sf,extra={})=>handlers.click({target:{closest:()=>({disabled:false,dataset:{sf,...extra}})}});
  await click('run',{area:'config'});assert.equal(storage.size,0);assert.equal(packs,0);
  change('sf-config-subject','matematicas');
- assert.match(root.innerHTML,/<optgroup label="Textos oficiales UMSA 2026">[^]*Tema 5 · Productos y cocientes notables/);
+ assert.match(root.innerHTML,/<optgroup label="Capítulos por tema">[^]*Tema 5 · Productos y cocientes notables/);
+ assert.doesNotMatch(root.innerHTML,/Textos oficiales UMSA|Abrir guía de|Bibliografía de las materias|drive\.google/);
  change('sf-config-topic','umsa-2026:5');assert.match(root.innerHTML,/todavía no tiene preguntas difíciles/);
  change('sf-config-topic','conjuntos');
  assert.match(root.innerHTML,/todavía no tiene preguntas difíciles/);

@@ -21,9 +21,7 @@ function evaluations() {
             const questions = groups.get(topic.key);
             if (!questions) continue;
             const official = core.isOfficial(questions[0]);
-            const title = official ? questions[0].source.chapter + ' (UMSA 2026)' : topic.label;
-            const source = official ? 'Texto guía UMSA 2026' :
-                subject === 'lectura' ? 'Saladin · Lectura adaptada' : 'Práctica ABP · UMSA';
+            const title = topic.label;
             // Repartir el tema en partes equilibradas permite ofrecer todo el banco con intentos de hasta 30 preguntas.
             const parts = Array.from({ length: Math.ceil(questions.length / maxQuestions) }, () => []);
             questions.forEach((question, i) => parts[i % parts.length].push(question));
@@ -33,7 +31,7 @@ function evaluations() {
                     id, subject: subjectLabel, subjectLabel, topic: topic.label,
                     title: parts.length > 1 ? title + ' · Parte ' + (i + 1) : title,
                     ...(official ? { number: topic.chapter } : {}),
-                    count: part.length, duration: part.length * 2, source,
+                    count: part.length, duration: part.length * 2,
                 };
                 entries.set(id, { exam, questions: part });
             });

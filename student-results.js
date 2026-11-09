@@ -17,7 +17,7 @@
  }
  function freezeSufficiency(questions,attempt,bank,C,label){
   const score=C.grade(questions,attempt.answers);
-  const question_review={version:1,items:questions.map((q,index)=>({number:index+1,id:String(q.id),question:q.text,options:q.options.map((_,i)=>C.optionText(q,i)),selected:attempt.answers[q.id]??null,accepted:[q.correct],materia:(C.practiceSubjects||C.subjects)[q.subject]||q.subject,tema:q.topic||'',explanation:q.explanation||'',option_explanations:q.options.map((_,i)=>q.comentarios_opciones?.['ABCDE'[i]]||''),source:q.source?.pdfPages?.length&&C.referenceText?C.referenceText(q.source):q.source?.document||'',passage:bank.passages?.find(p=>p.id===q.passageId)?.text||''}))};
+  const question_review={version:1,items:questions.map((q,index)=>({number:index+1,id:String(q.id),question:q.text,options:q.options.map((_,i)=>C.optionText(q,i)),selected:attempt.answers[q.id]??null,accepted:[q.correct],materia:(C.practiceSubjects||C.subjects)[q.subject]||q.subject,tema:q.topic||'',explanation:q.explanation||'',option_explanations:q.options.map((_,i)=>q.comentarios_opciones?.['ABCDE'[i]]||''),passage:bank.passages?.find(p=>p.id===q.passageId)?.text||''}))};
   return {owner:attempt.owner,paperId:C.paper(bank,attempt.area)?.id||'last-practice',title:label,at:attempt.finishedAt,percent:score.percent,correct:score.correct,total:score.total,question_review};
  }
  function localRows(storage,id){
@@ -26,6 +26,9 @@
    const entries=Object.entries(records);if(last?.owner===id&&last.finished===true&&last.result_snapshot)entries.push([last.result_snapshot.paperId,last.result_snapshot]);
    return own(entries.flatMap(([key,r])=>r&&r.owner===id&&r.paperId===key&&count(r.correct)!==null&&count(r.total)!==null&&r.correct<=r.total&&r.percent!==null&&Number.isFinite(r.percent)&&r.percent>=0&&r.percent<=100&&Number.isFinite(Date.parse(localDate(r.at)))?[{id:'local:'+key+':'+localDate(r.at),user_id:id,menu_section:'simulacros',simulacro_titulo:r.title||'Simulacro '+key,materia:'Sin materia registrada',created_at:localDate(r.at),porcentaje:r.percent,correctas:r.correct,incorrectas:null,sin_respuesta:null,local:true,question_review:r.question_review??null}]:[]),id);
   }catch(_){return [];}
+ }
+ function attemptTitle(row,fallback){
+  return String(row.simulacro_titulo||'').replace(/ · UMSA 2026(?= · |$)| \(UMSA 2026\)(?= · |$)/g,'') || fallback;
  }
  function kind(r){return ['simulacros','evaluaciones','examenes'].includes(r.menu_section)?r.menu_section:/^evaluaci[oó]n\s*:/i.test(r.simulacro_titulo||'')?'evaluaciones':'historicos';}
  function own(rows,id,filters={}){
@@ -109,7 +112,7 @@
   const scores=rows.map(r=>r.porcentaje).filter(n=>n!==null&&n!==''&&Number.isFinite(Number(n))&&Number(n)>=0&&Number(n)<=100).map(Number),metrics=el('div',null,'eval-metrics-grid');
   metrics.append(metric('Intentos',rows.length),metric('Simulacros',rows.filter(r=>kind(r)==='simulacros').length),metric('Promedio de notas registradas',pct(scores.length?scores.reduce((a,b)=>a+b,0)/scores.length:null)),metric('Mejor nota registrada',pct(scores.length?Math.max(...scores):null)));content.append(metrics);
   const note=el('p','El historial usa resultados guardados en tu cuenta; no incluye actividad de flashcards. Suficiencia conserva los últimos resultados locales por simulacro y cuenta en este navegador; se identifica como local, sin reconstruir sus respuestas. Los intentos antiguos sin tipo se muestran como históricos.','sr-note');content.append(note);
-  const list=el('div',null,'sr-attempts');rows.forEach(r=>{const card=el('article',null,'eval-section-card'),text=el('div');text.append(el('small',labels[kind(r)]+(r.local?' · Último resultado local':'')+' · '+String(r.created_at||'').replace('T',' ').slice(0,16)+' UTC'),el('h3',r.simulacro_titulo||'Intento realizado'),el('p',(r.materia||'Materia sin registrar')+' · Nota registrada: '+pct(r.porcentaje==null?null:Number(r.porcentaje))));const button=el('button','Ver resultado y revisar preguntas','btn-primary');button.type='button';button.onclick=()=>review(r);card.append(text,button);list.append(card);});drawAnalysis(rows,content);content.append(el('h3','Historial de intentos'),list);
+  const list=el('div',null,'sr-attempts');rows.forEach(r=>{const card=el('article',null,'eval-section-card'),text=el('div');text.append(el('small',labels[kind(r)]+(r.local?' · Último resultado local':'')+' · '+String(r.created_at||'').replace('T',' ').slice(0,16)+' UTC'),el('h3',attemptTitle(r,'Intento realizado')),el('p',(r.materia||'Materia sin registrar')+' · Nota registrada: '+pct(r.porcentaje==null?null:Number(r.porcentaje))));const button=el('button','Ver resultado y revisar preguntas','btn-primary');button.type='button';button.onclick=()=>review(r);card.append(text,button);list.append(card);});drawAnalysis(rows,content);content.append(el('h3','Historial de intentos'),list);
  }
  function drawAnalysis(rows,target){
   const a=analyze(rows),box=el('section',null,'eval-section-card');box.append(el('h3','Errores por materia'));
@@ -154,7 +157,7 @@
   });
  }
  async function review(row){
-  if(actor()!==owner)return;const account=owner,request=++detailGeneration;content.hidden=true;filters.hidden=true;detail.replaceChildren();const close=el('button','← Volver a mi historial','btn-back-game');close.type='button';close.onclick=()=>{detailGeneration++;detail.replaceChildren();content.hidden=false;filters.hidden=false;};detail.append(close,el('h2',row.simulacro_titulo||'Resultado'),el('p','Cargando respuestas guardadas…'));detail.scrollIntoView({block:'start'});
+  if(actor()!==owner)return;const account=owner,request=++detailGeneration;content.hidden=true;filters.hidden=true;detail.replaceChildren();const close=el('button','← Volver a mi historial','btn-back-game');close.type='button';close.onclick=()=>{detailGeneration++;detail.replaceChildren();content.hidden=false;filters.hidden=false;};detail.append(close,el('h2',attemptTitle(row,'Resultado')),el('p','Cargando respuestas guardadas…'));detail.scrollIntoView({block:'start'});
   const valid=()=>request===detailGeneration&&actor()===account&&owner===account;
   try{
    const session=(await api.auth.getSession()).data.session;if(session?.user?.id!==account)throw Error('Vuelve a iniciar sesión.');
@@ -166,7 +169,7 @@
    const record={...row,question_review:missing?null:res.data.question_review},s=summary(record);
    s.items=await loadPrepaTeaching(s.items,live?.access_token);
    if(!valid())return;
-   detail.replaceChildren(close,el('h2',row.simulacro_titulo||'Resultado'));
+   detail.replaceChildren(close,el('h2',attemptTitle(row,'Resultado')));
    const stats=el('div',null,'eval-metrics-grid');[['correct','Aciertos'],['wrong','Errores'],['omitted','Omitidas'],['unknown','Sin clave / detalle incompleto']].forEach(([key,label])=>stats.append(metric(label,s[key]??'No registrado')));detail.append(stats);drawAnalysis([record],detail);
    if(!s.items){detail.append(el('p',record.question_review==null?'Este intento conserva solo el resumen. No se guardaron las respuestas individuales; no es posible reconstruir aciertos y errores por pregunta.':'El detalle guardado está incompleto o no tiene un formato compatible. Se conserva la nota original.','sr-note'));return;}
    const tabs=el('div',null,'sr-review-filters'),questions=el('div');detail.append(tabs,questions);
@@ -183,6 +186,7 @@
      question.append(el('h3',q.question||'Enunciado no guardado'));
      if(q.passage)question.append(el('p',q.passage,'sr-passage'));
      const review={...q,accepted:q.key?q.accepted:[]};
+     if(row.local||String(q.id).startsWith('suficiencia:'))review.source='';
      question.append(root.QuestionReview.showOptions(review));
      if(q.status==='unanswered')question.append(el('p','No respondiste esta pregunta.'));
      if(q.status==='unknown')question.append(el('p','No hay clave o detalle válido suficiente para calificar esta respuesta.'));

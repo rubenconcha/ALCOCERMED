@@ -59,7 +59,7 @@ function fixture() {
     };
 }
 
-test('uses all four existing Sufficiency subjects with topics, levels, five options and references', async () => {
+test('uses all four existing Sufficiency subjects with topics, levels, five options and explanations', async () => {
     const { context, state, requests } = fixture();
     await context.loadBancoMaterias();
     assert.equal(requests.length, 1);
@@ -73,7 +73,7 @@ test('uses all four existing Sufficiency subjects with topics, levels, five opti
     assert.equal(state._cache, existing);
     const q = state.suficiencia.find(q => q.guiaUmsa && q.dificultad === 'medio');
     assert.ok(q);
-    assert.match(q.fuente, /UMSA.+pág\. impresa.+pág\. PDF/);
+    assert.equal(q.fuente, undefined);
     assert.match(q.justificacion, /\n\n1\. /);
     state.selectedMateria = q.materia;
     state.selectedTema = q.tema;

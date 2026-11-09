@@ -3,11 +3,6 @@
     'use strict';
     const C = window.SufficiencyCore, labels = C.practiceSubjects;
     const examLevel = 'dificil';
-    const officialGuides = {
-        matematicas: 'https://drive.google.com/file/d/1IRuuJCW8oBAOqL2uqwHZv4eWSVtZkwqF/view',
-        fisica: 'https://drive.google.com/file/d/1L1z3zmyHNpzaB4HGrlJNEjMs6QWF7XUz/view',
-        quimica: 'https://drive.google.com/file/d/1kVK0xS3ULILT3oB98-RCbH2aRV4ffqWA/view'
-    };
     const openEntranceLibrary = window.openSimulacro;
     const root = document.getElementById('suficiencia-screen');
     let bank = null, hasMedicine = false, owner = null, attempt = null, questions = [], clock = null, generation = 0, area = 'matematicas', level = 'facil', catalogueArea = 'matematicas', catalogueMode = 'config', configSubject = '', configTopic = '', ending = false, starting = false, pendingConfirmation = null, renderedPassage = null, cataloguePage = 0, catalogueQuery = '';
@@ -60,7 +55,6 @@
         try { localStorage.setItem(key(owner), JSON.stringify(attempt)); }
         catch (_) { const notice = root.querySelector('[data-save-status]'); if (notice) notice.textContent = 'Este navegador no permite guardar el avance. Mantén la página abierta.'; }
     }
-    const sourceText = C.referenceText;
     async function requestResources(view, ids) {
         const { data, error } = await getSupabase().auth.getSession();
         const session = data?.session;
@@ -192,7 +186,7 @@
         const official = options.filter(t=>t.key.startsWith(C.officialTopicPrefix));
         const optionHtml = t => `<option value="${esc(t.key)}" ${configTopic===t.key?'selected':''}>${esc(t.label)}</option>`;
         const topicOptions = options.filter(t=>!t.key.startsWith(C.officialTopicPrefix)).map(optionHtml).join('') +
-            (official.length ? '<optgroup label="Textos oficiales UMSA 2026">' + official.map(optionHtml).join('') + '</optgroup>' : '');
+            (official.length ? '<optgroup label="Capítulos por tema">' + official.map(optionHtml).join('') + '</optgroup>' : '');
         const summary = !configSubject || !configTopic ? 'Elige una materia y un tema para ver las preguntas disponibles.' :
             count ? 'La prueba tiene <strong>' + count + '</strong> ' + (count === 1 ? 'pregunta difícil' : 'preguntas difíciles') + '.' :
                 'Este tema todavía no tiene preguntas difíciles. Elige otro tema.';
@@ -246,10 +240,8 @@
                 root.innerHTML = header() + configurationControls() + '<p role="status" class="sf-notice">Cargando temas y progreso…</p>';
                 return;
             }
-            const count = bank.questions.filter(C.isOfficial).length;
-            const guides = count ? `<details class="sf-sources"><summary>Textos oficiales UMSA 2026</summary><p>${count} ejercicios de AlcocerMed basados en las guías de Medicina UMSA. Elige una materia y busca el grupo «Textos oficiales UMSA 2026» en el selector de temas. Cada resolución indica la sección y las páginas de referencia.</p><ul>${Object.entries(officialGuides).map(([s,url])=>`<li><a href="${url}" target="_blank" rel="noopener noreferrer">Abrir guía de ${labels[s]}</a></li>`).join('')}</ul></details>` : '';
-            const medicine = hasMedicine ? `<details class="sf-sources"><summary>Bibliografía de las materias de Medicina</summary><ul><li>Kenneth S. Saladin, <i>Anatomía y fisiología: la unidad entre forma y función</i>, 6.ª edición.</li><li>Alfonso Calvo González, <i>Biología celular biomédica</i>, Elsevier, 2015.</li><li>UMSS, <i>Educación en Salud e Investigación</i>, Curso Básico 2025–2026.</li></ul><p>Cada explicación indica la sección y las páginas de referencia.</p></details>` : `<div class="sf-notice" role="status">No pudimos cargar las materias de Medicina. ${button('reload','Volver a cargar')}</div>`;
-            root.innerHTML=header()+configurationControls()+medicine+guides+progressPanel()+`<div class="sf-bank-links">${button('legacy','Ver simulacros anteriores')}${typeof openEntranceLibrary==='function'?button('topics','Simulacros completos y semanales'):''}</div><details class="sf-sources"><summary>Sobre el material</summary><p>${bank.questions.length} preguntas con explicación. Las referencias aparecen al revisar las respuestas.</p></details>`;
+            const medicineNotice = hasMedicine ? '' : `<div class="sf-notice" role="status">No pudimos cargar las materias de Medicina. ${button('reload','Volver a cargar')}</div>`;
+            root.innerHTML=header()+configurationControls()+medicineNotice+progressPanel()+`<div class="sf-bank-links">${button('legacy','Ver simulacros anteriores')}${typeof openEntranceLibrary==='function'?button('topics','Simulacros completos y semanales'):''}</div>`;
         } else {
             root.classList.remove?.('sf-bank-layout');
             root.innerHTML=header()+`<div class="sf-legacy-heading"><h2>Simulacros anteriores</h2>${button('config','Volver al selector')}</div><div class="sf-catalogue-filter"><label for="sf-area-filter">Materia<select id="sf-area-filter"><option value="integral">Todos</option>${Object.entries(C.subjects).map(([id,name])=>`<option value="${id}" ${area===id?'selected':''}>${name}</option>`).join('')}</select></label><label for="sf-search">Buscar simulacro<input id="sf-search" type="search" placeholder="Nombre o número" value="${esc(catalogueQuery)}"></label><p data-sf-status role="status" aria-live="polite"></p></div><div class="sf-catalogue" data-sf-cards></div><nav class="sf-pagination" data-sf-pagination aria-label="Páginas de simulacros"></nav>`;
@@ -294,7 +286,7 @@
     }
     function passage(q) {
         const p = bank.passages.find(p => p.id === q.passageId);
-        return p ? `<article class="sf-passage"><span class="sf-eyebrow">LEE EL TEXTO</span><h2>${esc(p.title)}</h2>${p.text.split('\n\n').map(t => `<p>${esc(t)}</p>`).join('')}<small>${esc(sourceText(p.source))}</small></article>` : '';
+        return p ? `<article class="sf-passage"><span class="sf-eyebrow">LEE EL TEXTO</span><h2>${esc(p.title)}</h2>${p.text.split('\n\n').map(t => `<p>${esc(t)}</p>`).join('')}</article>` : '';
     }
     function helpBlock(q) {
         const expanded = attempt.helpOpen?.includes(q.id) === true;
@@ -350,7 +342,6 @@
                 accepted: [q.correct],
                 explanation: q.explanation,
                 option_explanations: q.options.map((_, i) => q.comentarios_opciones?.['ABCDE'[i]]),
-                source: sourceText(q.source),
             };
             const question = layout.firstElementChild;
             if (review.selected === null) {
@@ -363,7 +354,7 @@
             const solution = document.createElement('template');
             if (q.solution) solution.innerHTML = C.solutionHtml(q);
             layout.append(QuestionReview.showCommentary(review, {
-                workedSolution: solution.content.firstElementChild, sourceNote: q.source.note,
+                workedSolution: solution.content.firstElementChild,
             }));
         });
         root.scrollIntoView({ block: 'start', behavior: 'instant' });

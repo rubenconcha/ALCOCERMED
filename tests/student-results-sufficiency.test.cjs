@@ -22,6 +22,7 @@ test('Suficiencia submission freezes the presented responses without changing sc
  assert.equal(finished.finished,true);assert.deepEqual(finished.answers,answered.answers);
  assert.equal(record.percent,expected.percent);assert.equal(record.correct,expected.correct);assert.equal(record.total,expected.total);
  assert.equal(record.question_review.items.length,questions.length);
+ assert.ok(record.question_review.items.every(item=>item.source===undefined && item.explanation));
  const first=record.question_review.items[0];assert.equal(first.selected,1);assert.deepEqual(first.options,questions[0].options.map((_,i)=>C.optionText(questions[0],i)));assert.deepEqual(first.accepted,[questions[0].correct]);
  assert.equal(M.localRows(context.localStorage,'fixture-a').length,1);assert.equal(M.localRows(context.localStorage,'fixture-b').length,0);
  const frozen=JSON.stringify(record.question_review);const changed=structuredClone(bank);changed.questions[0].correct=(changed.questions[0].correct+1)%changed.questions[0].options.length;

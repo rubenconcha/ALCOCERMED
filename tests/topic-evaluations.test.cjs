@@ -59,6 +59,8 @@ test('Suficiencia ofrece todo el banco en partes de hasta 30 y conserva cada lec
   assert.ok(exam.count > 0 && exam.count <= 30);
   assert.equal(exam.duration, 2 * exam.count);
   assert.equal(exam.questions, undefined);
+  assert.equal(exam.source, undefined);
+  assert.doesNotMatch(exam.title, /UMSA|ABP/);
   const paper = sufficiency.paper(exam.id);
   assert.equal(paper.questions.length, exam.count);
   const readings = new Set();
@@ -70,7 +72,9 @@ test('Suficiencia ofrece todo el banco en partes de hasta 30 y conserva cada lec
    assert.equal(core.topicFor(original, bank).label, exam.topic);
    assert.equal(q.respuesta_correcta, 'ABCDE'[original.correct]);
    assert.equal(q['opcion_' + 'abcde'[original.correct]], core.optionText(original, original.correct));
-   assert.equal(q.fuente, core.referenceText(original.source));
+   assert.equal(q.fuente, undefined);
+   assert.ok(original.source.pdfPages.length);
+   assert.match(q.justificacion, /\S/);
    if (original.passageId) {
     readings.add(q.passage.id);
     assert.equal(q.passage.text, base.passages.find(p => p.id === original.passageId).text);

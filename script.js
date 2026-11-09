@@ -2258,7 +2258,7 @@ async function loadBancoTemas(materia) {
     appendTopic(ddEl, null);
     temas.filter(t => !guias.has(t)).forEach(t => appendTopic(ddEl, t));
     if (guias.size) {
-        const group = bancoDropdownGroup('Textos oficiales UMSA 2026');
+        const group = bancoDropdownGroup('Capítulos por tema');
         temas.filter(t => guias.has(t)).forEach(t => appendTopic(group, t));
         ddEl.appendChild(group);
     }

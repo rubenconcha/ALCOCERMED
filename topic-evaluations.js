@@ -31,10 +31,11 @@
         exams.forEach(exam => {
             const card = document.createElement('article'); card.className = 'past-card';
             const eyebrow = document.createElement('span'); eyebrow.className = 'entrance-eyebrow';
-            eyebrow.textContent = exam.subjectLabel + (exam.number ? ' · Tema ' + exam.number : ' · Suficiencia académica');
+            eyebrow.textContent = exam.subjectLabel + (exam.id.startsWith('suf-') ? ' · Suficiencia académica' : exam.number ? ' · Tema ' + exam.number : '');
             const title = document.createElement('h3'); title.textContent = exam.title;
             const count = document.createElement('p'); count.textContent = questionCount(exam.count) + ' · ' + exam.duration + ' minutos';
-            const note = document.createElement('p'); note.className = 'past-card-note'; note.textContent = exam.source + ' · Fuente por pregunta al finalizar.';
+            const note = document.createElement('p'); note.className = 'past-card-note';
+            note.textContent = exam.source ? exam.source + ' · Fuente por pregunta al finalizar.' : 'Revisa tus respuestas al finalizar.';
             const button = document.createElement('button'); button.type='button';button.className='btn-primary';
             button.textContent = window.CampusAccess?.isFree() ? 'Desbloquear evaluación' : 'Realizar evaluación →';
             button.addEventListener('click', () => start(exam, button));

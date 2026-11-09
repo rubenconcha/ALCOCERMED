@@ -87,7 +87,7 @@ test('every Medicine topic offers all three levels with official, identifiable r
     }
 });
 
-test('Medicine practice grades, restores its filters and freezes a citable review', () => {
+test('Medicine practice grades, restores its filters and freezes the explanations', () => {
     const configuration = { subject: 'morfofuncion', topic: 'morfo-08', level: 'dificil' };
     const rows = C.selectConfiguration(bank, configuration, 77);
     const savedRows = rows.filter(q => baseMedical.questions.some(original => original.id === q.id));
@@ -113,7 +113,8 @@ test('Medicine practice grades, restores its filters and freezes a citable revie
     const snapshot = results.freezeSufficiency(rows, attempt, bank, C, 'Simulacro de Medicina');
     const item = snapshot.question_review.items[0];
     assert.equal(item.materia, 'Morfofunción');
-    assert.match(item.source, /Saladin.+Tema 8.+pág\. impresa.+pág\. PDF/);
+    assert.equal(item.source, undefined);
+    assert.ok(rows[0].source.pdfPages.length);
     assert.equal(item.explanation, rows[0].explanation);
     assert.deepEqual(C.selectConfiguration(bank, { subject: 'integral', topic: '*', level: 'todos' }, 19),
         C.selectConfiguration(base, { subject: 'integral', topic: '*', level: 'todos' }, 19));

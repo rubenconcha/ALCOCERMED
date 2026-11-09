@@ -86,7 +86,7 @@
         for(const q of bank.questions.filter(q=>q.subject===subject)){const t=topicFor(q,bank);values.set(t.key,t);}
         const ordered = [...values.values()].sort((a,b)=>Number(!!a.chapter)-Number(!!b.chapter) || (a.chapter && b.chapter ? a.chapter-b.chapter : a.label.localeCompare(b.label,'es')));
         const firstOfficial = ordered.findIndex(t=>t.key.startsWith(officialTopicPrefix));
-        if (firstOfficial !== -1) ordered.splice(firstOfficial,0,{key:officialAll,label:'Todos los capítulos UMSA'});
+        if (firstOfficial !== -1) ordered.splice(firstOfficial,0,{key:officialAll,label:'Todos los capítulos'});
         return ordered;
     }
     function configurationPool(bank, config) {
@@ -119,7 +119,7 @@
     function configurationLabel(bank, config) {
         if(!config)return 'Simulacro';
         const topic=config.topic==='*'?'Todos los temas':topics(bank,config.subject).find(t=>t.key===config.topic)?.label || '';
-        return [subjects[config.subject]||'Completo',config.topic?.startsWith(officialTopicPrefix)?'UMSA 2026':'',topic,levels[config.level]||'Todos los niveles'].filter(Boolean).join(' · ');
+        return [subjects[config.subject]||'Completo',topic,levels[config.level]||'Todos los niveles'].filter(Boolean).join(' · ');
     }
     function validBiomedicalSource(q) {
         const source=q.source, mapping=biomedicalChapters[q.subject];
@@ -130,14 +130,6 @@
             source.chapter===q.topic && [source.document,source.section].every(t=>typeof t==='string'&&t.trim()) &&
             Array.isArray(source.pdfPages) && source.pdfPages.length>0 && source.pdfPages.every(p=>Number.isInteger(p)&&p>0) &&
             Array.isArray(source.printedPages) && source.printedPages.length<=source.pdfPages.length && source.printedPages.every(p=>Number.isInteger(p)&&p>0);
-    }
-    function referenceText(source) {
-        const pages = 'pág. PDF ' + source.pdfPages.join(', ');
-        if (source.collection === biomedicalCollection) return `${source.document} · Tema ${source.chapterNumber}: ${source.chapter} · ${source.section}${source.printedPages.length ? ' · pág. impresa ' + source.printedPages.join(', ') : ''} · ${pages}.`;
-        if (source.collection === officialCollection) return `Ejercicio de AlcocerMed basado en UMSA · ${source.document} · Tema ${source.chapterNumber}: ${source.chapter} · ${source.section} · pág. impresa ${source.printedPages.join(', ')} · ${pages}.`;
-        if (source.kind === 'variante de práctica') return `Práctica nueva de AlcocerMed, basada en el documento ABP de La Paz · ${pages} · ejercicio de referencia ${source.question}.`;
-        if (source.document === 'MEDICINA EXÁMENES PASADOS ABP.pdf') return `Exámenes pasados ABP · UMSA · ${pages} · pregunta ${source.question}. ${source.kind === 'adaptada' ? 'Adaptada para la práctica.' : 'Notación normalizada.'}`;
-        return `${source.author || 'Kenneth S. Saladin'}, ${source.edition || '6.ª edición'} · ${source.chapter || 'cap. 1'} · ${pages}${source.printedPages ? ' · pág. impresa ' + source.printedPages.join(', ') : ''}. Texto adaptado para lectura comprensiva.`;
     }
     function toQuestionIndexRow(q, bank) {
         return {
@@ -158,7 +150,6 @@
             pregunta: q.text,
             respuesta_correcta: 'ABCDE'[q.correct],
             justificacion: [q.explanation, ...steps].join('\n\n'),
-            fuente: referenceText(q.source),
             ...(q.comentarios_opciones ? { comentarios_opciones: q.comentarios_opciones } : {}),
             passage: q.passageId ? bank.passages.find(p => p.id === q.passageId) : undefined,
         };
@@ -291,5 +282,5 @@
         return { ...saved, answers, helpOpen: Array.isArray(saved.helpOpen) ? [...new Set(saved.helpOpen.filter(id => saved.ids.includes(id)))] : [], flags: Array.isArray(saved.flags) ? saved.flags.filter(id => saved.ids.includes(id)) : [], index: Math.max(0, Math.min(saved.ids.length - 1, Number.isInteger(saved.index) ? saved.index : 0)), finished: saved.finished === true };
     }
     function paper(bank, area) { return ['inicial', 'simulacro:inicial'].includes(area) ? bank?.introPaper || null : bank?.papers?.find(p => 'simulacro:' + p.id === area) || bank?.levelPapers?.find(p => 'simulacro:' + p.id === area) || null; }
-    return { subjects: sufficiencySubjects, practiceSubjects: subjects, biomedicalSubjects, levels, officialCollection, officialTopicPrefix, isOfficial, biomedicalCollection, isBiomedical, referenceText, toQuestionIndexRow, toQuestionRow, validate, select, selectRows, grade, restore, paper, solutionHtml, promptHtml, optionText, topics, topicFor, configurationPool, configurationCount, selectConfiguration, selectConfiguredRows, configurationLabel };
+    return { subjects: sufficiencySubjects, practiceSubjects: subjects, biomedicalSubjects, levels, officialCollection, officialTopicPrefix, isOfficial, biomedicalCollection, isBiomedical, toQuestionIndexRow, toQuestionRow, validate, select, selectRows, grade, restore, paper, solutionHtml, promptHtml, optionText, topics, topicFor, configurationPool, configurationCount, selectConfiguration, selectConfiguredRows, configurationLabel };
 });
