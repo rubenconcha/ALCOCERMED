@@ -1,4 +1,4 @@
-const CACHE_NAME = 'alcocermed-main-v171-practica-guiada';
+const CACHE_NAME = 'alcocermed-main-v172-intocables-ilustracion';
 const APP_SHELL = [
     './student-results.js?v=3',
     './student-results.css?v=1',
@@ -22,7 +22,7 @@ const APP_SHELL = [
     './assets/flashcard-icons/bien-smile-3d.png',
     './assets/flashcard-icons/facil-3d.png',
     './manifest.webmanifest',
-    './styles.css?v=41',
+    './styles.css?v=42',
     './commerce.css?v=1',
     './student-white.css?v=2',
     './campus-theme.css?v=4',
@@ -68,6 +68,7 @@ const APP_SHELL = [
 
     './intocables-hub.js?v=4',
     './intocables-sheets.css?v=1',
+    './assets/study-art/intocables-hero.webp',
     './study-assessments.js?v=2',
     './simulation-scope.js?v=8',
     './simulacro-ingreso.js?v=12',
