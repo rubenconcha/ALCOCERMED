@@ -49,11 +49,22 @@
      paper.duration!==format.minutes || paper.total_points!==format.questionCount ||
      paper.questions?.length!==format.questionCount)return false;
   const second=paper.id==='prepa-segundo-a';
+  const sources={
+   'prepa-06':['prepa-06'],
+   'prepa-07':['prepa-06','prepa-07-08'],
+   'prepa-08':['prepa-07-08','prepa-08-09'],
+   'prepa-09':['prepa-08-09']
+  }[paper.id];
+  const ids=new Set();
   return paper.questions.every((q,i)=>{
    const index=i+1,number=second&&index>25?index+25:index;
-   const count=index<=25?3:2,letters=count===3?'ABCDE':'ABCD';
+   const sourceNumber=sources?q.source_numero_original:number;
+   const count=(sources?sourceNumber:index)<=25?3:2,letters=count===3?'ABCDE':'ABCD';
    const lines=String(q.pregunta||'').split('\n');
-   return q.id===paper.id+'-'+number&&q.numero_pregunta===index&&q.numero_original===number&&
+   const validId=sources?sources.some(id=>q.id===id+'-'+sourceNumber):q.id===paper.id+'-'+number;
+   if(ids.has(q.id))return false;
+   ids.add(q.id);
+   return validId&&Number.isInteger(sourceNumber)&&sourceNumber>=1&&(!sources||sourceNumber<=50&&q.tema===format.title)&&q.numero_pregunta===index&&q.numero_original===number&&
     q.materia==='MORFOFUNCION'&&q.puntos===1&&Boolean(lines[0])&&lines.length===count+1&&
     lines.slice(1).every((line,j)=>line.startsWith((j+1)+'. ')&&line.slice(3).trim())&&
     [...letters].every(letter=>Boolean(q['opcion_'+letter.toLowerCase()]))&&(count===3||!q.opcion_e)&&

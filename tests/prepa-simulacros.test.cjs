@@ -12,8 +12,10 @@ function fixture(format) {
         questions: Array.from({ length: format.questionCount }, (_, index) => {
             const n = index + 1;
             const number = format.stage === 'second' && n > 25 ? n + 25 : n;
+            const source = {'prepa-07':'prepa-07-08', 'prepa-08':'prepa-08-09', 'prepa-09':'prepa-08-09'}[format.curatedId] || format.curatedId;
             return {
-                id: format.curatedId + '-' + number, numero_pregunta: n, numero_original: number,
+                id: source + '-' + number, numero_pregunta: n, numero_original: number,
+                ...(format.regrouped ? { source_numero_original: number, tema: format.title } : {}),
                 pregunta: 'Enunciado de prueba\n1. Primera\n2. Segunda' + (n <= 25 ? '\n3. Tercera' : ''),
                 opcion_a: 'Primera', opcion_b: 'Segunda', opcion_c: 'Combinación', opcion_d: 'Otra',
                 ...(n <= 25 ? { opcion_e: 'Ninguna' } : {}),
@@ -23,24 +25,29 @@ function fixture(format) {
     };
 }
 
-test('catalog lists 21 topic papers and the separate second-partial form without the private questions', () => {
-    assert.equal(entries.length, 22);
-    assert.equal(new Set(entries.map(entry => entry.curatedId)).size, 22);
-    assert.equal(entries.filter(entry => entry.topics?.length).length, 21);
+test('catalog gives each chapter its own exam and retains all 1,100 questions in private storage', () => {
+    assert.equal(entries.length, 23);
+    assert.equal(new Set(entries.map(entry => entry.curatedId)).size, 23);
+    assert.equal(entries.filter(entry => entry.topics?.length === 1).length, 22);
     assert.deepEqual(entries.filter(entry => entry.stage === 'second').map(entry => entry.curatedId), ['prepa-segundo-a']);
-    assert.deepEqual(entries.filter(entry => entry.topics?.some(topic => topic.id === 'morfo-8')).map(entry => entry.curatedId), ['prepa-07-08', 'prepa-08-09']);
-    assert.ok(entries.every(entry => entry.questionCount === 50 && entry.minutes === 50 && !entry.questions));
+    assert.deepEqual(entries.filter(entry => entry.regrouped).map(entry => [entry.topics[0].id,entry.questionCount]),
+        [['morfo-6',39],['morfo-7',41],['morfo-8',49],['morfo-9',21]]);
+    assert.ok(entries.every(entry => entry.questionCount === entry.minutes && !entry.questions));
+    assert.equal(entries.reduce((sum, entry) => sum + entry.questionCount, 0), 1100);
 });
 
 test('exam validator preserves the question numbering and both answer formats', () => {
     for (const format of entries) {
         const paper = fixture(format);
         assert.ok(validate(paper, 'prepa', format));
-        assert.equal(paper.questions[25].numero_original, format.stage === 'second' ? 51 : 26);
-        paper.questions[25].opcion_e = 'Opción de otra sección';
+        const index = Math.min(25, paper.questions.length - 1);
+        const item = paper.questions[index];
+        assert.equal(item.numero_original, format.stage === 'second' ? 51 : index + 1);
+        const optionE = item.opcion_e;
+        item.opcion_e = optionE ? '' : 'Opción de otra sección';
         assert.equal(validate(paper, 'prepa', format), false);
-        delete paper.questions[25].opcion_e;
-        paper.questions[25].numero_original++;
+        item.opcion_e = optionE;
+        item.numero_original++;
         assert.equal(validate(paper, 'prepa', format), false);
     }
 });
@@ -58,7 +65,7 @@ test('the private paper is requested only after the campus authorizes paid acces
         if (String(url).endsWith('/rpc/campus_access')) {
             return Response.json({ ready: true, premium: init.headers.Authorization === 'Bearer paid' });
         }
-        assert.match(String(url), /\/simulacros\/preparatoria-v1\/prepa-01\.json$/);
+        assert.match(String(url), /\/simulacros\/preparatoria-v2\/prepa-01\.json$/);
         assert.equal(init.headers.Authorization, 'Bearer test-blob-token');
         reads++;
         return Response.json(fixture(format));

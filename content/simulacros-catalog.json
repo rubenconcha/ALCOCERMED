@@ -210,15 +210,28 @@
       "key": "prepa-06",
       "curatedId": "prepa-06",
       "scope": "prepa",
-      "title": "Sistema tegumentario y parte de tejido óseo",
-      "type": "Morfofunción · Capítulos 6 y 7",
-      "minutes": 50,
-      "questionCount": 50,
+      "title": "Sistema tegumentario",
+      "type": "Morfofunción · Capítulo 6",
+      "minutes": 39,
+      "questionCount": 39,
+      "regrouped": true,
       "topics": [
         {
           "id": "morfo-6",
           "label": "Sistema tegumentario"
-        },
+        }
+      ]
+    },
+    {
+      "key": "prepa-07",
+      "curatedId": "prepa-07",
+      "scope": "prepa",
+      "title": "Tejido óseo",
+      "type": "Morfofunción · Capítulo 7",
+      "minutes": 41,
+      "questionCount": 41,
+      "regrouped": true,
+      "topics": [
         {
           "id": "morfo-7",
           "label": "Tejido óseo"
@@ -226,18 +239,15 @@
       ]
     },
     {
-      "key": "prepa-07-08",
-      "curatedId": "prepa-07-08",
+      "key": "prepa-08",
+      "curatedId": "prepa-08",
       "scope": "prepa",
-      "title": "Tejido óseo y parte de sistema óseo",
-      "type": "Morfofunción · Capítulos 7 y 8",
-      "minutes": 50,
-      "questionCount": 50,
+      "title": "Sistema óseo",
+      "type": "Morfofunción · Capítulo 8",
+      "minutes": 49,
+      "questionCount": 49,
+      "regrouped": true,
       "topics": [
-        {
-          "id": "morfo-7",
-          "label": "Tejido óseo"
-        },
         {
           "id": "morfo-8",
           "label": "Sistema óseo"
@@ -245,18 +255,15 @@
       ]
     },
     {
-      "key": "prepa-08-09",
-      "curatedId": "prepa-08-09",
+      "key": "prepa-09",
+      "curatedId": "prepa-09",
       "scope": "prepa",
-      "title": "Sistema óseo y articulaciones",
-      "type": "Morfofunción · Capítulos 8 y 9",
-      "minutes": 50,
-      "questionCount": 50,
+      "title": "Articulaciones",
+      "type": "Morfofunción · Capítulo 9",
+      "minutes": 21,
+      "questionCount": 21,
+      "regrouped": true,
       "topics": [
-        {
-          "id": "morfo-8",
-          "label": "Sistema óseo"
-        },
         {
           "id": "morfo-9",
           "label": "Articulaciones"
@@ -499,5 +506,5 @@
       "stage": "second"
     }
   ],
-  "version": 7
+  "version": 8
 }

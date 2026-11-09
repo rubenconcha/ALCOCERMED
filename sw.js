@@ -1,4 +1,4 @@
-const CACHE_NAME = 'alcocermed-main-v175-simulacros-preparatoria';
+const CACHE_NAME = 'alcocermed-main-v176-simulacros-por-capitulo';
 const APP_SHELL = [
     './student-results.js?v=3',
     './student-results.css?v=1',
@@ -70,7 +70,7 @@ const APP_SHELL = [
     './intocables-sheets.css?v=1',
     './assets/study-art/intocables-hero.webp',
     './study-assessments.js?v=2',
-    './simulation-scope.js?v=9',
+    './simulation-scope.js?v=10',
     './simulacro-ingreso.js?v=13',
     './simulacro-library.js?v=8',
     './simulacro-library.css?v=7',
