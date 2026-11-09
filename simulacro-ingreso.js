@@ -49,7 +49,7 @@
             if(!response.ok)throw new Error('No pudimos abrir este simulacro. Reintenta.');
             const paper=await response.json(),current=(await getSupabase().auth.getSession()).data.session;
             if(current?.access_token!==session.access_token||CampusAccess.isFree())throw new Error('Tu sesión cambió. Vuelve a abrir el simulacro.');
-            if(paper.id!==format.curatedId||!SimulationScope.validate(paper,format.scope))throw new Error('El contenido no corresponde al parcial elegido.');
+            if(paper.id!==format.curatedId||!SimulationScope.validate(paper,format.scope,format))throw new Error('El contenido no corresponde al parcial elegido.');
             return paper.questions;
         }
         if (format.pastId) {
@@ -146,9 +146,7 @@
         await window.EntranceLibrary.open();
         const format = window.EntranceLibrary.format(key);
         if (!format) return showToast('No encontramos el simulacro solicitado.', 'info');
-        const search = document.getElementById('sim-library-search');
-        search.value = format.title;
-        search.dispatchEvent(new Event('input'));
+        window.EntranceLibrary.reveal(format);
         window.selectEntranceExam(key);
     };
 
@@ -178,7 +176,7 @@
             simState.answers = rows.map(() => ({ selected: null }));
             simState.currentIdx = 0;
             simState.finalized = false;
-            simState.independentScope = Boolean(format.topic);
+            simState.independentScope = Boolean(format.topic || format.topics?.length);
             document.getElementById('sim-review-list')?.replaceChildren();
             simState.secondsLeft = format.minutes * 60;
             simState.startTimestamp = Date.now();

@@ -31,7 +31,7 @@
     <link rel="stylesheet" href="login-polish.css?v=2">
     <link rel="stylesheet" href="campus-preview.css?v=3">
     <link rel="stylesheet" href="study-depth.css?v=3">
-    <link rel="stylesheet" href="simulacro-library.css?v=6">
+    <link rel="stylesheet" href="simulacro-library.css?v=7">
     <link rel="stylesheet" href="past-exams.css?v=7">
     <link rel="stylesheet" href="topic-evaluations.css?v=5">
     <link rel="stylesheet" href="campus-atlas.css?v=5">
@@ -50,9 +50,9 @@
     <script defer src="study-media.js?v=20261021-visual5b"></script>
     <script defer src="script.js?v=20261109-banco-docente"></script>
     <script defer src="study-assessments.js?v=2"></script>
-    <script defer src="simulation-scope.js?v=8"></script>
-    <script defer src="simulacro-ingreso.js?v=12"></script>
-    <script defer src="simulacro-library.js?v=7"></script>
+    <script defer src="simulation-scope.js?v=9"></script>
+    <script defer src="simulacro-ingreso.js?v=13"></script>
+    <script defer src="simulacro-library.js?v=8"></script>
     <script defer src="student-library.js?v=10"></script>
     <script defer src="flashcard-workspace.js?v=20261109-foco"></script>
     <script defer src="study-calendar-data.js?v=6"></script>
@@ -1037,19 +1037,21 @@
                     <div>
                         <span class="entrance-eyebrow">PREPARATORIA BEN CARSON · MEDICINA</span>
                         <h2 class="sim-title">Simulacros de ingreso</h2>
-                        <p class="sim-subtitle">Elige una prueba por parcial y comienza el examen. Revisa las respuestas y explicaciones al terminar.</p>
+                        <p class="sim-subtitle">Elige un simulacro general o practica un tema. Revisa tus respuestas al terminar.</p>
                     </div>
                 </div>
 
                 <div class="sim-library-filters">
-                    <label for="sim-library-search">buscar simulacro<input id="sim-library-search" type="search" placeholder="Por ejemplo: Simulacro 3" autocomplete="off"></label>
-                    <label for="sim-library-scope">parcial<select id="sim-library-scope"><option value="">todos los parciales</option><option value="first">primer parcial</option><option value="second">segundo parcial</option><option value="final">examen final</option><option value="mini-foundations">minisimulacros</option></select></label>
+                    <label for="sim-library-search">Buscar simulacro<input id="sim-library-search" type="search" placeholder="Ej. Sangre o Simulacro 3" autocomplete="off"></label>
+                    <label for="sim-library-kind">Tipo de simulacro<select id="sim-library-kind"><option value="">Todos</option><option value="general">Generales</option><option value="topic">Por tema</option></select></label>
+                    <label for="sim-library-topic">Tema<select id="sim-library-topic"><option value="">Todos los temas</option></select></label>
+                    <label for="sim-library-scope">Parcial<select id="sim-library-scope"><option value="">Todos los parciales</option><option value="first">Primer parcial</option><option value="second">Segundo parcial</option><option value="final">Examen final</option><option value="mini-foundations">Minisimulacros</option></select></label>
                     <p id="sim-library-status" role="status" aria-live="polite">Cargando simulacros…</p>
                 </div>
                 <div class="sim-library-tools">
                     <button type="button" class="campus-secondary sim-library-practice" onclick="Sufficiency.open()">Práctica por materia y tema</button>
                 </div>
-                <div id="sim-library-list" class="entrance-choices" role="group" aria-label="Elegir simulacro completo"></div>
+                <div id="sim-library-list" class="entrance-choices" role="group" aria-label="Simulacros disponibles"></div>
                 <div class="entrance-launch" hidden>
                     <div><span>Prueba seleccionada</span><strong id="entrance-selected-name">Simulacro completo</strong><small id="entrance-selected-detail">100 preguntas · 100 minutos</small></div>
                     <button class="btn-primary entrance-start" id="sim-start-btn" onclick="iniciarSimulacro()"><i class="fas fa-play"></i> Comenzar</button>

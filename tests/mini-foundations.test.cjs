@@ -30,8 +30,8 @@ test('every mini question cites verified official PDF pages and has one answer w
 });
 test('mini is catalogued with its actual length and full models retain their existing format',()=>{
  const entry=catalog.entries.find(e=>e.curatedId===paper.id);assert.equal(entry.questionCount,50);assert.deepEqual(entry.split,[30,20,0]);assert.equal(entry.kind,'mini');
- assert.equal(catalog.entries.filter(e=>e.kind!=='mini').length,14);
- assert.ok(fs.readFileSync('campus.html','utf8').includes('<option value="mini-foundations">minisimulacros</option>'));
+ assert.equal(catalog.entries.filter(e=>e.kind!=='mini'&&e.scope!=='prepa').length,14);
+ assert.ok(fs.readFileSync('campus.html','utf8').includes('<option value="mini-foundations">Minisimulacros</option>'));
 });
 test('new protected API serves the mini only after checking paid access',async()=>{
  const handler=require('../api/simulation.js'),original=global.fetch;

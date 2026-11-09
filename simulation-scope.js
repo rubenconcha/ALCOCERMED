@@ -44,7 +44,25 @@
   return lines.length===count&&lines.every((line,i)=>line.startsWith((i+1)+'. '))&&
    combinations['ABCDE'.indexOf(q.respuesta_correcta)]===q.truth_values.map(Number).join('');
  }
- function validate(paper,scope){
+ function validatePrepa(paper, format){
+  if(!format || paper?.id!==format.curatedId || paper.scope!=='prepa' || paper.title!==format.title ||
+     paper.duration!==format.minutes || paper.total_points!==format.questionCount ||
+     paper.questions?.length!==format.questionCount)return false;
+  const second=paper.id==='prepa-segundo-a';
+  return paper.questions.every((q,i)=>{
+   const index=i+1,number=second&&index>25?index+25:index;
+   const count=index<=25?3:2,letters=count===3?'ABCDE':'ABCD';
+   const lines=String(q.pregunta||'').split('\n');
+   return q.id===paper.id+'-'+number&&q.numero_pregunta===index&&q.numero_original===number&&
+    q.materia==='MORFOFUNCION'&&q.puntos===1&&Boolean(lines[0])&&lines.length===count+1&&
+    lines.slice(1).every((line,j)=>line.startsWith((j+1)+'. ')&&line.slice(3).trim())&&
+    [...letters].every(letter=>Boolean(q['opcion_'+letter.toLowerCase()]))&&(count===3||!q.opcion_e)&&
+    [...letters].includes(q.respuesta_correcta)&&q.respuestas_aceptadas?.length===1&&
+    q.respuestas_aceptadas[0]===q.respuesta_correcta;
+  });
+ }
+ function validate(paper,scope,format){
+  if(scope==='prepa')return validatePrepa(paper,format);
   if(scope==='semana2-testb-virtual')return validateWeek2(paper);
   if(scope==='semana3-grupo-virtual-2')return validateWeek3(paper,scope);
   const mini=scope==='mini-foundations',total=mini?50:100;

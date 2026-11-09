@@ -155,8 +155,349 @@
       "type": "Simulacro Semana 3",
       "minutes": 50,
       "questionCount": 50,
-      "split": [30, 20, 0]
+      "split": [
+        30,
+        20,
+        0
+      ]
+    },
+    {
+      "key": "prepa-01",
+      "curatedId": "prepa-01",
+      "scope": "prepa",
+      "title": "Temas principales de anatomía y fisiología",
+      "type": "Morfofunción · Capítulo 1",
+      "minutes": 50,
+      "questionCount": 50,
+      "topics": [
+        {
+          "id": "morfo-1",
+          "label": "Temas principales de anatomía y fisiología"
+        }
+      ]
+    },
+    {
+      "key": "prepa-02",
+      "curatedId": "prepa-02",
+      "scope": "prepa",
+      "title": "La química de la vida",
+      "type": "Morfofunción · Capítulo 2",
+      "minutes": 50,
+      "questionCount": 50,
+      "topics": [
+        {
+          "id": "morfo-2",
+          "label": "La química de la vida"
+        }
+      ]
+    },
+    {
+      "key": "prepa-05",
+      "curatedId": "prepa-05",
+      "scope": "prepa",
+      "title": "Histología",
+      "type": "Morfofunción · Capítulo 5",
+      "minutes": 50,
+      "questionCount": 50,
+      "topics": [
+        {
+          "id": "morfo-5",
+          "label": "Histología"
+        }
+      ]
+    },
+    {
+      "key": "prepa-06",
+      "curatedId": "prepa-06",
+      "scope": "prepa",
+      "title": "Sistema tegumentario y parte de tejido óseo",
+      "type": "Morfofunción · Capítulos 6 y 7",
+      "minutes": 50,
+      "questionCount": 50,
+      "topics": [
+        {
+          "id": "morfo-6",
+          "label": "Sistema tegumentario"
+        },
+        {
+          "id": "morfo-7",
+          "label": "Tejido óseo"
+        }
+      ]
+    },
+    {
+      "key": "prepa-07-08",
+      "curatedId": "prepa-07-08",
+      "scope": "prepa",
+      "title": "Tejido óseo y parte de sistema óseo",
+      "type": "Morfofunción · Capítulos 7 y 8",
+      "minutes": 50,
+      "questionCount": 50,
+      "topics": [
+        {
+          "id": "morfo-7",
+          "label": "Tejido óseo"
+        },
+        {
+          "id": "morfo-8",
+          "label": "Sistema óseo"
+        }
+      ]
+    },
+    {
+      "key": "prepa-08-09",
+      "curatedId": "prepa-08-09",
+      "scope": "prepa",
+      "title": "Sistema óseo y articulaciones",
+      "type": "Morfofunción · Capítulos 8 y 9",
+      "minutes": 50,
+      "questionCount": 50,
+      "topics": [
+        {
+          "id": "morfo-8",
+          "label": "Sistema óseo"
+        },
+        {
+          "id": "morfo-9",
+          "label": "Articulaciones"
+        }
+      ]
+    },
+    {
+      "key": "prepa-10",
+      "curatedId": "prepa-10",
+      "scope": "prepa",
+      "title": "Sistema muscular",
+      "type": "Morfofunción · Capítulo 10",
+      "minutes": 50,
+      "questionCount": 50,
+      "topics": [
+        {
+          "id": "morfo-10",
+          "label": "Sistema muscular"
+        }
+      ]
+    },
+    {
+      "key": "prepa-11",
+      "curatedId": "prepa-11",
+      "scope": "prepa",
+      "title": "Tejido muscular",
+      "type": "Morfofunción · Capítulo 11",
+      "minutes": 50,
+      "questionCount": 50,
+      "topics": [
+        {
+          "id": "morfo-11",
+          "label": "Tejido muscular"
+        }
+      ]
+    },
+    {
+      "key": "prepa-12",
+      "curatedId": "prepa-12",
+      "scope": "prepa",
+      "title": "Tejido nervioso",
+      "type": "Morfofunción · Capítulo 12",
+      "minutes": 50,
+      "questionCount": 50,
+      "topics": [
+        {
+          "id": "morfo-12",
+          "label": "Tejido nervioso"
+        }
+      ]
+    },
+    {
+      "key": "prepa-13",
+      "curatedId": "prepa-13",
+      "scope": "prepa",
+      "title": "Médula espinal, nervios raquídeos y reflejos somáticos",
+      "type": "Morfofunción · Capítulo 13",
+      "minutes": 50,
+      "questionCount": 50,
+      "topics": [
+        {
+          "id": "morfo-13",
+          "label": "Médula espinal, nervios raquídeos y reflejos somáticos"
+        }
+      ]
+    },
+    {
+      "key": "prepa-14",
+      "curatedId": "prepa-14",
+      "scope": "prepa",
+      "title": "Encéfalo y pares craneales",
+      "type": "Morfofunción · Capítulo 14",
+      "minutes": 50,
+      "questionCount": 50,
+      "topics": [
+        {
+          "id": "morfo-14",
+          "label": "Encéfalo y pares craneales"
+        }
+      ]
+    },
+    {
+      "key": "prepa-16",
+      "curatedId": "prepa-16",
+      "scope": "prepa",
+      "title": "Órganos de los sentidos",
+      "type": "Morfofunción · Capítulo 16",
+      "minutes": 50,
+      "questionCount": 50,
+      "topics": [
+        {
+          "id": "morfo-16",
+          "label": "Órganos de los sentidos"
+        }
+      ]
+    },
+    {
+      "key": "prepa-17",
+      "curatedId": "prepa-17",
+      "scope": "prepa",
+      "title": "Sistema endocrino",
+      "type": "Morfofunción · Capítulo 17",
+      "minutes": 50,
+      "questionCount": 50,
+      "topics": [
+        {
+          "id": "morfo-17",
+          "label": "Sistema endocrino"
+        }
+      ]
+    },
+    {
+      "key": "prepa-18",
+      "curatedId": "prepa-18",
+      "scope": "prepa",
+      "title": "Sangre",
+      "type": "Morfofunción · Capítulo 18",
+      "minutes": 50,
+      "questionCount": 50,
+      "topics": [
+        {
+          "id": "morfo-18",
+          "label": "Sangre"
+        }
+      ]
+    },
+    {
+      "key": "prepa-19",
+      "curatedId": "prepa-19",
+      "scope": "prepa",
+      "title": "Corazón",
+      "type": "Morfofunción · Capítulo 19",
+      "minutes": 50,
+      "questionCount": 50,
+      "topics": [
+        {
+          "id": "morfo-19",
+          "label": "Corazón"
+        }
+      ]
+    },
+    {
+      "key": "prepa-20",
+      "curatedId": "prepa-20",
+      "scope": "prepa",
+      "title": "Vasos sanguíneos y circulación",
+      "type": "Morfofunción · Capítulo 20",
+      "minutes": 50,
+      "questionCount": 50,
+      "topics": [
+        {
+          "id": "morfo-20",
+          "label": "Vasos sanguíneos y circulación"
+        }
+      ]
+    },
+    {
+      "key": "prepa-21",
+      "curatedId": "prepa-21",
+      "scope": "prepa",
+      "title": "Sistema linfático e inmunitario",
+      "type": "Morfofunción · Capítulo 21",
+      "minutes": 50,
+      "questionCount": 50,
+      "topics": [
+        {
+          "id": "morfo-21",
+          "label": "Sistema linfático e inmunitario"
+        }
+      ]
+    },
+    {
+      "key": "prepa-23",
+      "curatedId": "prepa-23",
+      "scope": "prepa",
+      "title": "Aparato urinario",
+      "type": "Morfofunción · Capítulo 23",
+      "minutes": 50,
+      "questionCount": 50,
+      "topics": [
+        {
+          "id": "morfo-23",
+          "label": "Aparato urinario"
+        }
+      ]
+    },
+    {
+      "key": "prepa-25",
+      "curatedId": "prepa-25",
+      "scope": "prepa",
+      "title": "Aparato digestivo",
+      "type": "Morfofunción · Capítulo 25",
+      "minutes": 50,
+      "questionCount": 50,
+      "topics": [
+        {
+          "id": "morfo-25",
+          "label": "Aparato digestivo"
+        }
+      ]
+    },
+    {
+      "key": "prepa-27",
+      "curatedId": "prepa-27",
+      "scope": "prepa",
+      "title": "Aparato reproductor masculino",
+      "type": "Morfofunción · Capítulo 27",
+      "minutes": 50,
+      "questionCount": 50,
+      "topics": [
+        {
+          "id": "morfo-27",
+          "label": "Aparato reproductor masculino"
+        }
+      ]
+    },
+    {
+      "key": "prepa-28",
+      "curatedId": "prepa-28",
+      "scope": "prepa",
+      "title": "Aparato reproductor femenino",
+      "type": "Morfofunción · Capítulo 28",
+      "minutes": 50,
+      "questionCount": 50,
+      "topics": [
+        {
+          "id": "morfo-28",
+          "label": "Aparato reproductor femenino"
+        }
+      ]
+    },
+    {
+      "key": "prepa-segundo-a",
+      "curatedId": "prepa-segundo-a",
+      "scope": "prepa",
+      "title": "Segundo parcial · Test A (sin SNA)",
+      "type": "Segundo parcial · Morfofunción",
+      "minutes": 50,
+      "questionCount": 50,
+      "stage": "second"
     }
   ],
-  "version": 6
+  "version": 7
 }

@@ -1,7 +1,9 @@
 .simulacro-section:has(#sim-config:not(.hidden)){max-width:1160px;margin:0 auto}
-#sim-config .sim-library-filters{display:grid;grid-template-columns:minmax(220px,1.4fr) minmax(190px,.8fr);align-items:end;gap:18px;margin:26px 0 20px;padding:22px;background:#fff;border:1px solid #dae5f0;border-radius:20px;box-shadow:0 6px 20px #19284005}
+#sim-config .sim-library-filters{display:grid;grid-template-columns:minmax(170px,1.25fr) minmax(135px,.85fr) minmax(170px,1.2fr) minmax(140px,.9fr);align-items:end;gap:18px;margin:26px 0 20px;padding:22px;background:#fff;border:1px solid #dae5f0;border-radius:20px;box-shadow:0 6px 20px #19284005}
 #sim-config .sim-library-filters label{display:grid;gap:8px;min-width:0;color:#192840;font-weight:700;font-size:.88rem}
 #sim-config .sim-library-filters input,#sim-config .sim-library-filters select{width:100%;box-sizing:border-box;font:inherit;font-size:.88rem;color:#192840;border:1px solid #d6e1ec;background:#f7faff;border-radius:12px;padding:12px 16px;min-height:46px}
+#sim-config .sim-library-filters label[hidden]{display:none}
+@media(min-width:1001px){#sim-config .sim-library-filters:has(label[hidden]){grid-template-columns:minmax(170px,1.3fr) minmax(135px,.85fr) minmax(170px,1.1fr)}}
 #sim-library-status:empty{display:none}
 #sim-library-status{grid-column:1/-1;margin:0;align-self:center;color:#607694;font-size:.85rem;white-space:nowrap}
 #sim-config #sim-library-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
@@ -23,5 +25,5 @@
 @media(max-width:600px){.sim-mini #sim-exam-materia{flex-basis:100%;line-height:1.45}.sim-mini .sim-top-sep{display:none}}
 #sim-config button:focus-visible,#sim-config input:focus-visible,#sim-config select:focus-visible{outline:3px solid #238fbf;outline-offset:3px}
 #sim-result{min-width:0}#sim-result .sim-result-wrap{width:100%;box-sizing:border-box;min-width:0}#sim-result .sim-review-item{overflow-wrap:anywhere}
-@media(max-width:1000px){#sim-config #sim-library-list{grid-template-columns:repeat(2,minmax(0,1fr))}#sim-config .sim-library-filters{grid-template-columns:1.3fr 1fr}#sim-library-status{grid-column:1/-1}}
-@media(max-width:600px){#sim-config #sim-library-list{grid-template-columns:1fr;gap:14px}#sim-config .sim-library-filters{grid-template-columns:1fr;padding:16px;gap:14px}.sim-library-card{padding:22px}#sim-config .sim-header{align-items:flex-start}#sim-result .sim-stats-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}#sim-result .sim-result-actions{flex-wrap:wrap}#sim-result .sim-result-actions button{min-width:0;width:100%;white-space:normal}}
+@media(max-width:1000px){#sim-config #sim-library-list{grid-template-columns:repeat(2,minmax(0,1fr))}#sim-config .sim-library-filters{grid-template-columns:repeat(2,minmax(0,1fr))}#sim-library-status{grid-column:1/-1}}
+@media(max-width:600px){#sim-config #sim-library-list{grid-template-columns:1fr;gap:14px}#sim-config .sim-library-filters{grid-template-columns:repeat(2,minmax(0,1fr));padding:16px;gap:12px}#sim-config .sim-library-filters label:first-child{grid-column:1/-1}#sim-config .sim-library-filters select{padding-inline:9px}.sim-library-card{padding:22px}#sim-config .sim-header{align-items:flex-start}#sim-result .sim-stats-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}#sim-result .sim-result-actions{flex-wrap:wrap}#sim-result .sim-result-actions button{min-width:0;width:100%;white-space:normal}}

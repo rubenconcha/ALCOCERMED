@@ -1,4 +1,4 @@
-const CACHE_NAME = 'alcocermed-main-v174-banco-docente';
+const CACHE_NAME = 'alcocermed-main-v175-simulacros-preparatoria';
 const APP_SHELL = [
     './student-results.js?v=3',
     './student-results.css?v=1',
@@ -70,10 +70,10 @@ const APP_SHELL = [
     './intocables-sheets.css?v=1',
     './assets/study-art/intocables-hero.webp',
     './study-assessments.js?v=2',
-    './simulation-scope.js?v=8',
-    './simulacro-ingreso.js?v=12',
-    './simulacro-library.js?v=7',
-    './simulacro-library.css?v=6',
+    './simulation-scope.js?v=9',
+    './simulacro-ingreso.js?v=13',
+    './simulacro-library.js?v=8',
+    './simulacro-library.css?v=7',
     './student-library.js?v=10',
     './study-summaries.js?v=20261021-visual5b',
     './summary-pdf-reader.js?v=7',

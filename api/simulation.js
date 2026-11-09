@@ -5,6 +5,9 @@ const catalog = require('../content/simulacros-catalog.json');
 const scopes = new Map([['semana2-testb-virtual','semana2-testb-virtual'],['mini-foundations','mini-foundations'],['partial-first','first'],['partial-second','second'],...['9','10'].map(n=>['partial-first-'+n,'first']),...['11','12'].map(n=>['partial-second-'+n,'second']),...['3','4','5','6','8','13','14'].map(n=>['final-'+n,'final'])]);
 const week3Id = 'semana3-grupo-virtual-2';
 scopes.set(week3Id, week3Id);
+const prepa = new Map(catalog.entries.filter(entry => entry.scope === 'prepa').map(entry => [entry.curatedId, entry]));
+for (const id of prepa.keys()) scopes.set(id, 'prepa');
+const prepaStorage = 'https://ln3dltv3md2wx5wh.private.blob.vercel-storage.com/simulacros/preparatoria-v1/';
 const supabaseUrl = 'https://asnwhddmurstzmghuyin.supabase.co';
 const anonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFzbndoZGRtdXJzdHptZ2h1eWluIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzY1MDcwODAsImV4cCI6MjA5MjA4MzA4MH0.bd3kz5Xji6gQknGVw_M2d80XUTwcKzLyOEqKQwfaTmo';
 
@@ -49,6 +52,17 @@ async function loadWeek3(headers) {
   return { id: week3Id, scope: week3Id, title: format.title, duration: format.minutes, total_points: format.questionCount, questions };
 }
 
+async function loadPrepa(id) {
+  const token = process.env.BLOB_READ_WRITE_TOKEN;
+  if (!token) throw new Error('Private simulation storage unavailable');
+  const response = await fetch(prepaStorage + id + '.json', {
+    headers: { Authorization: 'Bearer ' + token },
+    signal: AbortSignal.timeout(8000)
+  });
+  if (!response.ok) throw new Error('Private simulation unavailable');
+  return response.json();
+}
+
 module.exports = async function handler(req, res) {
   res.setHeader('Cache-Control', 'private, no-store');
   res.setHeader('X-Content-Type-Options', 'nosniff');
@@ -71,8 +85,11 @@ module.exports = async function handler(req, res) {
   } catch (_) { return res.status(503).end(); }
   try {
     const file = path.join(process.cwd(), 'api', '_simulations', id + '.json');
-    const paper = id === week3Id ? await loadWeek3(headers) : JSON.parse(await fs.promises.readFile(file, 'utf8'));
-    if (paper.id !== id || !validate(paper, scopes.get(id))) return res.status(503).end();
+    let paper;
+    if (id === week3Id) paper = await loadWeek3(headers);
+    else if (prepa.has(id)) paper = await loadPrepa(id);
+    else paper = JSON.parse(await fs.promises.readFile(file, 'utf8'));
+    if (paper.id !== id || !validate(paper, scopes.get(id), prepa.get(id))) return res.status(503).end();
     res.setHeader('Content-Type', 'application/json; charset=utf-8');
     return res.status(200).end(JSON.stringify(paper));
   } catch (_) { return res.status(503).end(); }
