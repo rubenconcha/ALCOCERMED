@@ -24,6 +24,7 @@
     const fallback = $('official-texts-fallback');
     const preview = $('official-texts-preview');
     const pages = $('official-texts-pages');
+    const toolbar = $('official-texts-controls');
     const downloadButton = $('official-texts-download');
     const readerDownloadStatus = $('official-texts-reader-download-status');
     const resourceUrl = text => '/api/texto-oficial?materia=' + text.slug;
@@ -120,11 +121,11 @@
         const { signal } = controller;
         status.textContent = 'Cargando PDF…';
         status.hidden = false;
-        pages.inert = true;
+        toolbar.inert = pages.inert = true;
         try {
             const headers = await authorization();
             if (version !== revision || !dialog.open) return;
-            reader ||= new SummaryPdfReader(pages, { label: 'texto oficial', pageJump: true });
+            reader ||= new SummaryPdfReader(pages, { label: 'texto oficial', pageJump: true, toolbarHost: toolbar });
             const ready = await prepareBook(text, headers, signal, initialPage).catch(() => false);
             if (signal.aborted) return;
             if (!ready) await openFullReader(text, headers, signal, initialPage);
@@ -132,7 +133,7 @@
             controller.abort();
             clearPreview();
             loaded = text;
-            pages.inert = false;
+            toolbar.inert = pages.inert = false;
             status.hidden = true;
         } catch (_) {
             if (version !== revision || !dialog.open) return;

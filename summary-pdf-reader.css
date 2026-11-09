@@ -3,6 +3,7 @@
 .summary-pdf-reader { display: flex; flex: 1; flex-direction: column; min-height: 0; overflow: hidden; background: #e8edf2; }
 .summary-pdf-toolbar { display: flex; flex-shrink: 0; flex-wrap: wrap; align-items: center; gap: 6px; padding: 8px 12px; border-bottom: 1px solid #cbd7e2; background: #fff; color: #183552; }
 .summary-pdf-toolbar button { min-width: 44px; min-height: 44px; padding: 6px 12px; border: 1px solid #cbd9e7; border-radius: 9px; background: #f5f8fb; color: #183552; font-family: inherit; font-weight: 700; font-size: 16px; line-height: 1.2; cursor: pointer; }
+.summary-pdf-fit-icon { display: none; }
 .summary-pdf-toolbar button:disabled { opacity: .45; cursor: default; }
 .summary-pdf-toolbar button:focus-visible, .summary-pdf-scroll:focus-visible { outline: 3px solid #147ba2; outline-offset: -3px; }
 .summary-pdf-toolbar output { min-width: 48px; text-align: center; font-size: 14px; font-weight: 700; }

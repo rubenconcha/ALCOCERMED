@@ -282,7 +282,7 @@
         const group = byId('calendar-rating');
         const item = state.active;
         group.replaceChildren();
-        group.hidden = !item?.resource || view === 'breakdown';
+        group.hidden = !item?.resource || view === 'breakdown' || view === 'manual';
         if (group.hidden) return;
         const label = element('span', '', 'Valora esta actividad');
         group.append(label);
@@ -393,11 +393,11 @@
     }
 
     function renderManual(item, isCurrent) {
-        workspace.append(manualNav());
-        const title = element('div', 'calendar-reading-heading');
-        title.append(element('h3', '', reading.topic), element('p', '', reading.subject + ' · ' + reading.section));
-        workspace.append(title);
+        tools.append(manualNav());
         if (view === 'orientation') {
+            const title = element('div', 'calendar-reading-heading');
+            title.append(element('h3', '', reading.topic), element('p', '', reading.subject + ' · ' + reading.section));
+            workspace.append(title);
             const card = element('section', 'calendar-orientation');
             card.append(element('h3', '', 'Orientación de la lectura'), element('p', '', item.description),
                 readingSource(reading), button('calendar-primary', 'Abrir páginas del manual', () => updateView('manual')));

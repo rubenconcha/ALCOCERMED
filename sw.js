@@ -1,4 +1,4 @@
-const CACHE_NAME = 'alcocermed-main-v169-examenes-comentados';
+const CACHE_NAME = 'alcocermed-main-v170-lector-amplio';
 const APP_SHELL = [
     './student-results.js?v=3',
     './student-results.css?v=1',
@@ -75,13 +75,13 @@ const APP_SHELL = [
     './simulacro-library.css?v=6',
     './student-library.js?v=10',
     './study-summaries.js?v=20261021-visual5b',
-    './summary-pdf-reader.js?v=6',
-    './summary-pdf-reader.css?v=2',
-    './campus-study-resources.css?v=5',
-    './study-calendar.css?v=10',
+    './summary-pdf-reader.js?v=7',
+    './summary-pdf-reader.css?v=3',
+    './campus-study-resources.css?v=6',
+    './study-calendar.css?v=11',
     './study-calendar-data.js?v=6',
     './study-calendar-pdf.js?v=2',
-    './study-calendar.js?v=9',
+    './study-calendar.js?v=10',
     './campus-shell.css?v=3',
     './campus-shell.js?v=2',
     './campus-section-tracking.js?v=1',
@@ -101,7 +101,7 @@ const APP_SHELL = [
     './vendor/jspdf/jspdf.umd.min.js',
     './vendor/pdfjs/pdf.min.mjs',
     './vendor/pdfjs/pdf.worker.min.mjs',
-    './official-texts.js?v=8',
+    './official-texts.js?v=9',
     './assets/study-art/morphology.png',
     './assets/study-art/cell.png',
     './assets/study-art/health-education.png',

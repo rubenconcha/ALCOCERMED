@@ -67,7 +67,7 @@
     class SummaryPdfReader {
         static preload() { return loadLibrary(); }
 
-        constructor(host, { label = 'resumen', pageJump = false } = {}) {
+        constructor(host, { label = 'resumen', pageJump = false, toolbarHost } = {}) {
             this.host = host;
             this.label = label;
             this.revision = 0;
@@ -91,6 +91,14 @@
             this.percent = document.createElement('output');
             this.percent.setAttribute('aria-label', 'Nivel de zoom');
             this.fit = button('Ajustar al ancho', 'Al ancho', () => this.setZoom(1));
+            this.fit.className = 'summary-pdf-fit';
+            const fitLabel = document.createElement('span');
+            fitLabel.textContent = this.fit.textContent;
+            const fitIcon = document.createElement('span');
+            fitIcon.className = 'summary-pdf-fit-icon';
+            fitIcon.setAttribute('aria-hidden', 'true');
+            fitIcon.textContent = '↔';
+            this.fit.replaceChildren(fitLabel, fitIcon);
             this.counter = document.createElement('span');
             this.counter.className = 'summary-pdf-counter';
             this.counter.setAttribute('aria-live', 'polite');
@@ -122,7 +130,8 @@
             this.pages.tabIndex = 0;
             this.pages.setAttribute('role', 'region');
             this.pages.setAttribute('aria-label', `Páginas del ${this.label}. Desliza para leer.`);
-            this.host.replaceChildren(toolbar, this.pages);
+            this.host.replaceChildren(this.pages);
+            (toolbarHost || this.host).prepend(toolbar);
             this.pages.addEventListener('scroll', () => {
                 if (!this.scrollFrame) this.scrollFrame = requestAnimationFrame(() => {
                     this.scrollFrame = null;
