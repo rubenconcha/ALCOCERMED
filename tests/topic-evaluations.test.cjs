@@ -3,6 +3,7 @@ const catalog=require('../content/topic-evaluations/catalog.json');
 const sufficiency=require('../api/_evaluations/suficiencia.cjs');
 const audit=require('../api/_evaluations/source-audit.json');
 const publishedOptions=q=>Array.from('abcde', letter=>q['opcion_'+letter]).filter(Boolean);
+const editorial=require('../api/_evaluations/editorial-revision.json');
 const reviewed=new Set(['morfo-01','morfo-08','morfo-09']);
 const authored=new Map([
  ...require('../api/_sufficiency/medicina-oficial.json').questions,
@@ -36,6 +37,15 @@ test('los 68 temas de Medicina tienen alternativas redactadas para sus enunciado
    assert.ok(q.justificacion?.trim());
    assert.ok(!prompts.has(q.pregunta));
    prompts.add(q.pregunta);
+   assert.ok(q.lecturas_comentario.length,q.content_id);
+   const scope=exam.id.split('-')[0];
+   const [slug,maxPage]={morfo:['morfofuncion',1251],biologia:['biologia-celular',829],salud:['educacion-salud',232]}[scope];
+   for(const ref of q.lecturas_comentario){
+    assert.equal(ref.slug,slug);
+    assert.ok(Number.isInteger(ref.page)&&ref.page>=1&&ref.page<=maxPage&&ref.section,q.content_id);
+    assert.ok(ref.marks.every(box=>box.length===4&&box.every(n=>n>=0&&n<=1)),q.content_id);
+    if(scope==='morfo'&&ref.printed)assert.equal(ref.page-ref.printed,28);
+   }
    if(reviewed.has(exam.id)){
     assert.equal(Object.keys(q.comentarios_opciones).length,options.length);
     assert.ok(q.source.sha256 && q.source.pdf_pages.length);
@@ -49,7 +59,14 @@ test('los 68 temas de Medicina tienen alternativas redactadas para sus enunciado
    if(exam.id==='morfo-18')return;
    const original=authored.get(q.content_id);
    assert.ok(original,q.content_id);
-   assert.equal(q.pregunta,original.text||original.prompt);
+   assert.equal(q.pregunta,editorial[original.id]?.text||original.text||original.prompt);
+   if(original.difficulty==='intermedio')assert.equal(Object.keys(q.comentarios_opciones).length,options.length);
+   if(original.truth_values){
+    const truth=original.truth_values;
+    const matches=truth.filter(Boolean).length;
+    const keyIndex=matches===truth.length?truth.length:matches===0?truth.length+1:truth.indexOf(true);
+    assert.equal(q.respuesta_correcta,'ABCDE'[keyIndex],q.content_id);
+   }
    if(original.options)assert.deepEqual(options,original.options);
    else assert.deepEqual(new Set(options),new Set([original.answer,...original.distractors]));
    assert.equal(options['ABCDE'.indexOf(q.respuesta_correcta)],original.answer||original.options[original.correct]);
@@ -76,6 +93,13 @@ test('Sangre conserva treinta preguntas con opciones comparables, comentarios y 
   assert.equal(new Set(Object.values(q.comentarios_opciones)).size,4);
   assert.ok(q.lecturas_comentario.every(ref=>ref.page>=708 && ref.page<=738 && ref.marks.length));
  }
+});
+test('Sistema óseo enlaza la sutura y el recuento craneal a los pasajes comprobados',()=>{
+ const {questions}=require('../api/_evaluations/morfo-08.json');
+ const skull=questions.find(q=>q.content_id==='morfo-08-visual-004');
+ const suture=questions.find(q=>q.content_id==='morfo-08-visual-005');
+ assert.deepEqual([skull,suture].map(q=>q.lecturas_comentario[0].page),[264,270]);
+ assert.ok([skull,suture].every(q=>q.lecturas_comentario[0].marks.length));
 });
 test('Articulaciones evalúa la clasificación con cuatro alternativas comparables', () => {
  const { questions } = require('../api/_evaluations/morfo-09.json');
@@ -118,6 +142,7 @@ test('Suficiencia ofrece todo el banco en partes de hasta 30 y conserva cada lec
   assert.equal(paper.questions.length, exam.count);
   const readings = new Set();
   for (const q of paper.questions) {
+   assert.equal(q.numero_pregunta, paper.questions.indexOf(q) + 1);
    const original = expected.get(q.content_id);
    assert.ok(original, q.content_id);
    expected.delete(q.content_id);
@@ -125,6 +150,7 @@ test('Suficiencia ofrece todo el banco en partes de hasta 30 y conserva cada lec
    assert.equal(core.topicFor(original, bank).label, exam.topic);
    assert.equal(q.respuesta_correcta, 'ABCDE'[original.correct]);
    assert.equal(q['opcion_' + 'abcde'[original.correct]], core.optionText(original, original.correct));
+   assert.equal(new Set(publishedOptions(q)).size,original.options.length);
    assert.equal(q.fuente, undefined);
    assert.ok(original.source.pdfPages.length);
    assert.match(q.justificacion, /\S/);
@@ -141,10 +167,17 @@ test('Suficiencia ofrece todo el banco en partes de hasta 30 y conserva cada lec
  assert.deepEqual(bySubject, {'Matemáticas':22,'Física':24,'Química':25,'Lectura comprensiva':40});
  assert.equal(expected.size, 0);
 });
+test('la evaluación de conjuntos muestra las condiciones y mantiene la clave',()=>{
+ const question=sufficiency.metadata().flatMap(exam=>exam.subject==='Matemáticas'?sufficiency.paper(exam.id).questions:[])
+    .find(row=>row.content_id==='suficiencia:abp-05-01');
+ assert.match(question.pregunta,/Están en C o en D\.\n2\. No están en A\.\n3\. También están en B\./);
+ assert.match(question.pregunta,/B = \{/);
+ assert.equal(question['opcion_'+question.respuesta_correcta.toLowerCase()],'{−8}');
+});
 test('API rechaza accesos no autorizados y entrega todos los temas al estudiante habilitado',async()=>{
  const handler=require('../api/topic-evaluation.js');const original=global.fetch;let access={ready:true,premium:true};global.fetch=async()=>({ok:true,json:async()=>access});
  async function call(id,auth='Bearer test',method='GET'){let output={headers:{}};await handler({method,query:{id},headers:{authorization:auth}},{setHeader(k,v){output.headers[k]=v},status(s){output.status=s;return this},end(body){output.body=body}});return output;}
- try{assert.equal((await call('../source-cards')).status,404);assert.equal((await call('morfo-01','')).status,401);assert.equal((await call('morfo-01','Bearer test','POST')).status,405);access={ready:true,premium:false};assert.equal((await call('morfo-01')).status,403);access={ready:false,premium:true};assert.equal((await call('morfo-01')).status,403);access={ready:true,premium:true};for(const e of catalog.exams){const r=await call(e.id);assert.equal(r.status,200);assert.equal(JSON.parse(r.body).questions.length,e.count);assert.equal(r.headers['Cache-Control'],'private, no-store');}global.fetch=async()=>{throw new Error('offline')};assert.equal((await call('morfo-01')).status,503);}finally{global.fetch=original;}
+ try{assert.equal((await call('../source-cards')).status,404);assert.equal((await call('morfo-01','')).status,401);assert.equal((await call('morfo-01','Bearer test','POST')).status,405);access={ready:true,premium:false};assert.equal((await call('morfo-01')).status,403);access={ready:false,premium:true};assert.equal((await call('morfo-01')).status,403);access={ready:true,premium:true};for(const e of catalog.exams.concat(sufficiency.metadata())){const r=await call(e.id);assert.equal(r.status,200);assert.equal(JSON.parse(r.body).questions.length,e.count);assert.equal(r.headers['Cache-Control'],'private, no-store');}global.fetch=async()=>{throw new Error('offline')};assert.equal((await call('morfo-01')).status,503);}finally{global.fetch=original;}
 });
 test('catálogo combinado entrega metadatos públicos y protege las evaluaciones de Suficiencia', async t => {
  const handler = require('../api/topic-evaluation.js');
@@ -195,6 +228,17 @@ test('filtros, inicio por materia, retorno y protección ante sesión cambiada',
  for(const subject of ['MORFOFUNCION','BIOLOGIA CELULAR','SALUD PUBLICA','Matemáticas','Física','Química','Lectura comprensiva']){const t=uiSetup();t.c.openEvaluacion();await t.settle();assert.equal(t.node('topic-eval-grid').children.length,179);t.node('topic-eval-subject').value=subject;await t.node('topic-eval-subject').handlers.change();const card=t.node('topic-eval-grid').children[0];await card.children[4].handlers.click();assert.equal(t.c.simState.mode,'tema');assert.equal(t.c.simState.selectedMateria,subject);assert.ok(t.events.includes('timer'));t.c.campusScreenHistory.push('evaluacion-screen');t.c.returnToExamSelection();assert.equal(t.c.currentCampusScreen,'evaluacion-screen');assert.equal(t.c.campusScreenHistory.length,0);}
  for(const opts of [{free:true},{changed:true}]){const t=uiSetup(opts);t.c.openEvaluacion();await t.settle();await t.node('topic-eval-grid').children[0].children[4].handlers.click();assert.ok(!t.events.includes('timer'));}
  const t=uiSetup();t.c.openEvaluacion();await t.settle();t.node('topic-eval-subject').value='MORFOFUNCION';t.node('topic-eval-search').value='quimica';await t.node('topic-eval-search').handlers.input();assert.equal(t.node('topic-eval-grid').children.length,1);t.node('topic-eval-search').value='sin coincidencia';await t.node('topic-eval-search').handlers.input();assert.equal(t.node('topic-eval-grid').children.length,0);
+});
+test('Tema 1 devuelve el número exacto y limpiar filtros restaura todo el catálogo',async()=>{
+ const t=uiSetup();
+ await t.c.openEvaluacion();
+ t.node('topic-eval-subject').value='BIOLOGIA CELULAR';
+ t.node('topic-eval-search').value='  Capítulo  1 ';
+ await t.node('topic-eval-search').handlers.input();
+ assert.deepEqual(t.node('topic-eval-grid').children.map(card=>card.children[1].textContent),['Introducción a la biología de las células']);
+ t.node('topic-eval-reset').handlers.click();
+ await t.settle();
+ assert.equal(t.node('topic-eval-grid').children.length,179);
 });
 test('abrir una evaluación desde el calendario selecciona su identificador y permite cambiar la búsqueda', async () => {
  const { c, node, events } = uiSetup();

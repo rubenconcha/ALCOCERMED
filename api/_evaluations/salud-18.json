@@ -28,7 +28,20 @@
           "section": "Medidas de tendencia central · medidas de tendencia central",
           "page": 148,
           "printed": 73,
-          "marks": []
+          "marks": [
+            [
+              0.7816,
+              0.5885,
+              0.1347,
+              0.0192
+            ],
+            [
+              0.1212,
+              0.6115,
+              0.2944,
+              0.0192
+            ]
+          ]
         }
       ],
       "source": {
@@ -44,6 +57,12 @@
         "pdfPages": [
           148
         ]
+      },
+      "comentarios_opciones": {
+        "A": "La media aritmética reparte la suma de los valores entre todas las observaciones.",
+        "B": "La moda es el valor con la mayor frecuencia, sea o no el valor más grande del conjunto.",
+        "C": "La marca de clase es el punto medio que representa al intervalo al calcular la media agrupada.",
+        "D": "La mediana se obtiene a partir de la posición central de los datos ordenados."
       },
       "opcion_a": "Media aritmética",
       "opcion_b": "Moda",
@@ -69,7 +88,14 @@
           "section": "Medidas de tendencia central · medidas de tendencia central",
           "page": 151,
           "printed": 76,
-          "marks": []
+          "marks": [
+            [
+              0.3277,
+              0.965,
+              0.1942,
+              0.0139
+            ]
+          ]
         }
       ],
       "source": {
@@ -85,6 +111,12 @@
         "pdfPages": [
           151
         ]
+      },
+      "comentarios_opciones": {
+        "A": "La media aritmética reparte la suma de los valores entre todas las observaciones.",
+        "B": "La moda es el valor con la mayor frecuencia, sea o no el valor más grande del conjunto.",
+        "C": "La marca de clase es el punto medio que representa al intervalo al calcular la media agrupada.",
+        "D": "La mediana se obtiene a partir de la posición central de los datos ordenados."
       },
       "opcion_a": "Media aritmética",
       "opcion_b": "Moda",
@@ -110,7 +142,20 @@
           "section": "Medidas de tendencia central · medidas de tendencia central",
           "page": 155,
           "printed": 80,
-          "marks": []
+          "marks": [
+            [
+              0.8545,
+              0.7555,
+              0.0315,
+              0.0192
+            ],
+            [
+              0.0909,
+              0.7785,
+              0.2661,
+              0.0192
+            ]
+          ]
         }
       ],
       "source": {
@@ -126,6 +171,12 @@
         "pdfPages": [
           155
         ]
+      },
+      "comentarios_opciones": {
+        "A": "La mediana se obtiene a partir de la posición central de los datos ordenados.",
+        "B": "La moda es el valor con la mayor frecuencia, sea o no el valor más grande del conjunto.",
+        "C": "La marca de clase es el punto medio que representa al intervalo al calcular la media agrupada.",
+        "D": "La media aritmética reparte la suma de los valores entre todas las observaciones."
       },
       "opcion_a": "Mediana",
       "opcion_b": "Moda",
@@ -151,7 +202,20 @@
           "section": "Medidas de tendencia central · medidas de tendencia central",
           "page": 150,
           "printed": 75,
-          "marks": []
+          "marks": [
+            [
+              0.7414,
+              0.1695,
+              0.1748,
+              0.0192
+            ],
+            [
+              0.1212,
+              0.1925,
+              0.0698,
+              0.0192
+            ]
+          ]
         }
       ],
       "source": {
@@ -167,6 +231,12 @@
         "pdfPages": [
           150
         ]
+      },
+      "comentarios_opciones": {
+        "A": "La media aritmética reparte la suma de los valores entre todas las observaciones.",
+        "B": "La mediana se obtiene a partir de la posición central de los datos ordenados.",
+        "C": "La moda es el valor con la mayor frecuencia, sea o no el valor más grande del conjunto.",
+        "D": "La marca de clase es el punto medio que representa al intervalo al calcular la media agrupada."
       },
       "opcion_a": "Media aritmética",
       "opcion_b": "Mediana",
@@ -192,7 +262,14 @@
           "section": "Medidas de tendencia central · medidas de tendencia central",
           "page": 149,
           "printed": 74,
-          "marks": []
+          "marks": [
+            [
+              0.248,
+              0.3238,
+              0.3491,
+              0.0192
+            ]
+          ]
         },
         {
           "slug": "educacion-salud",
@@ -200,7 +277,14 @@
           "section": "Medidas de tendencia central · medidas de tendencia central",
           "page": 152,
           "printed": 77,
-          "marks": []
+          "marks": [
+            [
+              0.1212,
+              0.4521,
+              0.2331,
+              0.0192
+            ]
+          ]
         }
       ],
       "source": {
@@ -263,7 +347,14 @@
           "section": "Medidas de tendencia central · medidas de tendencia central",
           "page": 151,
           "printed": 76,
-          "marks": []
+          "marks": [
+            [
+              0.2829,
+              0.2791,
+              0.2958,
+              0.0192
+            ]
+          ]
         },
         {
           "slug": "educacion-salud",
@@ -271,7 +362,14 @@
           "section": "Medidas de tendencia central · medidas de tendencia central",
           "page": 155,
           "printed": 80,
-          "marks": []
+          "marks": [
+            [
+              0.2554,
+              0.1925,
+              0.3821,
+              0.0192
+            ]
+          ]
         }
       ],
       "source": {
@@ -334,7 +432,14 @@
           "section": "Medidas de tendencia central · medidas de tendencia central",
           "page": 155,
           "printed": 80,
-          "marks": []
+          "marks": [
+            [
+              0.3926,
+              0.8015,
+              0.2193,
+              0.0192
+            ]
+          ]
         },
         {
           "slug": "educacion-salud",
@@ -342,7 +447,20 @@
           "section": "Medidas de tendencia central · medidas de tendencia central",
           "page": 156,
           "printed": 81,
-          "marks": []
+          "marks": [
+            [
+              0.7228,
+              0.7583,
+              0.1934,
+              0.0192
+            ],
+            [
+              0.1212,
+              0.7813,
+              0.1214,
+              0.0192
+            ]
+          ]
         }
       ],
       "source": {
@@ -405,7 +523,14 @@
           "section": "Medidas de tendencia central · medidas de tendencia central",
           "page": 153,
           "printed": 78,
-          "marks": []
+          "marks": [
+            [
+              0.2386,
+              0.1291,
+              0.3508,
+              0.0192
+            ]
+          ]
         },
         {
           "slug": "educacion-salud",
@@ -413,7 +538,14 @@
           "section": "Medidas de tendencia central · medidas de tendencia central",
           "page": 157,
           "printed": 82,
-          "marks": []
+          "marks": [
+            [
+              0.1136,
+              0.965,
+              0.2857,
+              0.0139
+            ]
+          ]
         }
       ],
       "source": {

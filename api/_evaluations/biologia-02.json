@@ -19,7 +19,7 @@
       "justificacion": "La PCR amplifica repetidamente un segmento específico de ADN para generar muchas copias.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "78",
-      "pagina_impresa": "",
+      "pagina_impresa": "78",
       "dificultad": "medio",
       "lecturas_comentario": [
         {
@@ -27,8 +27,21 @@
           "label": "Calvo",
           "section": "Cómo se estudian las células. Métodos y técnicas básicas en biología celular · PCR",
           "page": 78,
-          "printed": null,
-          "marks": []
+          "printed": 78,
+          "marks": [
+            [
+              0.5,
+              0.9076,
+              0.0237,
+              0.0197
+            ],
+            [
+              0.0271,
+              0.9346,
+              0.0047,
+              0.0197
+            ]
+          ]
         }
       ],
       "source": {
@@ -42,6 +55,12 @@
         "pdfPages": [
           78
         ]
+      },
+      "comentarios_opciones": {
+        "A": "La PCR amplifica repetidamente un segmento específico de ADN para generar muchas copias.",
+        "B": "La FISH usa una sonda marcada con un fluorocromo para localizar una secuencia complementaria en la preparación.",
+        "C": "La secuenciación determina en qué orden se encuentran los nucleótidos del ADN.",
+        "D": "El ELISA emplea reconocimiento por anticuerpos para detectar una proteína en una muestra."
       },
       "opcion_a": "Reacción en cadena de la polimerasa (PCR)",
       "opcion_b": "Hibridación in situ fluorescente (FISH)",
@@ -58,7 +77,7 @@
       "justificacion": "La secuenciación determina en qué orden se encuentran los nucleótidos del ADN.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "83",
-      "pagina_impresa": "",
+      "pagina_impresa": "83",
       "dificultad": "medio",
       "lecturas_comentario": [
         {
@@ -66,8 +85,21 @@
           "label": "Calvo",
           "section": "Cómo se estudian las células. Métodos y técnicas básicas en biología celular · Secuenciación",
           "page": 83,
-          "printed": null,
-          "marks": []
+          "printed": 83,
+          "marks": [
+            [
+              0.5,
+              0.9076,
+              0.0237,
+              0.0197
+            ],
+            [
+              0.0271,
+              0.9346,
+              0.0047,
+              0.0197
+            ]
+          ]
         }
       ],
       "source": {
@@ -81,6 +113,12 @@
         "pdfPages": [
           83
         ]
+      },
+      "comentarios_opciones": {
+        "A": "La PCR amplifica repetidamente un segmento específico de ADN para generar muchas copias.",
+        "B": "El ELISA emplea reconocimiento por anticuerpos para detectar una proteína en una muestra.",
+        "C": "La secuenciación determina en qué orden se encuentran los nucleótidos del ADN.",
+        "D": "La FISH usa una sonda marcada con un fluorocromo para localizar una secuencia complementaria en la preparación."
       },
       "opcion_a": "Reacción en cadena de la polimerasa (PCR)",
       "opcion_b": "ELISA",
@@ -97,7 +135,7 @@
       "justificacion": "La FISH usa una sonda marcada con un fluorocromo para localizar una secuencia complementaria en la preparación.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "85",
-      "pagina_impresa": "",
+      "pagina_impresa": "85",
       "dificultad": "medio",
       "lecturas_comentario": [
         {
@@ -105,8 +143,21 @@
           "label": "Calvo",
           "section": "Cómo se estudian las células. Métodos y técnicas básicas en biología celular · Hibridación in situ",
           "page": 85,
-          "printed": null,
-          "marks": []
+          "printed": 85,
+          "marks": [
+            [
+              0.5,
+              0.9076,
+              0.0237,
+              0.0197
+            ],
+            [
+              0.0271,
+              0.9346,
+              0.0047,
+              0.0197
+            ]
+          ]
         }
       ],
       "source": {
@@ -120,6 +171,12 @@
         "pdfPages": [
           85
         ]
+      },
+      "comentarios_opciones": {
+        "A": "La secuenciación determina en qué orden se encuentran los nucleótidos del ADN.",
+        "B": "La PCR amplifica repetidamente un segmento específico de ADN para generar muchas copias.",
+        "C": "El ELISA emplea reconocimiento por anticuerpos para detectar una proteína en una muestra.",
+        "D": "La FISH usa una sonda marcada con un fluorocromo para localizar una secuencia complementaria en la preparación."
       },
       "opcion_a": "Secuenciación de ADN",
       "opcion_b": "Reacción en cadena de la polimerasa (PCR)",
@@ -136,7 +193,7 @@
       "justificacion": "El ELISA emplea reconocimiento por anticuerpos para detectar una proteína en una muestra.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "103",
-      "pagina_impresa": "",
+      "pagina_impresa": "103",
       "dificultad": "medio",
       "lecturas_comentario": [
         {
@@ -144,8 +201,21 @@
           "label": "Calvo",
           "section": "Cómo se estudian las células. Métodos y técnicas básicas en biología celular · ELISA",
           "page": 103,
-          "printed": null,
-          "marks": []
+          "printed": 103,
+          "marks": [
+            [
+              0.4954,
+              0.9076,
+              0.0328,
+              0.0197
+            ],
+            [
+              0.0271,
+              0.9346,
+              0.0047,
+              0.0197
+            ]
+          ]
         }
       ],
       "source": {
@@ -159,6 +229,12 @@
         "pdfPages": [
           103
         ]
+      },
+      "comentarios_opciones": {
+        "A": "La PCR amplifica repetidamente un segmento específico de ADN para generar muchas copias.",
+        "B": "La FISH usa una sonda marcada con un fluorocromo para localizar una secuencia complementaria en la preparación.",
+        "C": "La secuenciación determina en qué orden se encuentran los nucleótidos del ADN.",
+        "D": "El ELISA emplea reconocimiento por anticuerpos para detectar una proteína en una muestra."
       },
       "opcion_a": "Reacción en cadena de la polimerasa (PCR)",
       "opcion_b": "Hibridación in situ fluorescente (FISH)",
@@ -175,7 +251,7 @@
       "justificacion": "1. Correcta. Esta técnica vuelve visibles diferencias ópticas de la muestra sin exigir esa tinción.\n2. Incorrecta. La emisión se produce a una longitud de onda mayor que la de excitación.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "60, 61",
-      "pagina_impresa": "",
+      "pagina_impresa": "60, 61",
       "dificultad": "dificil",
       "lecturas_comentario": [
         {
@@ -183,16 +259,30 @@
           "label": "Calvo",
           "section": "Cómo se estudian las células. Métodos y técnicas básicas en biología celular · Microscopía óptica / Fluorescencia",
           "page": 60,
-          "printed": null,
-          "marks": []
+          "printed": 60,
+          "marks": [
+            [
+              0.4965,
+              0.4116,
+              0.2669,
+              0.0197
+            ]
+          ]
         },
         {
           "slug": "biologia-celular",
           "label": "Calvo",
           "section": "Cómo se estudian las células. Métodos y técnicas básicas en biología celular · Microscopía óptica / Fluorescencia",
           "page": 61,
-          "printed": null,
-          "marks": []
+          "printed": 61,
+          "marks": [
+            [
+              0.5232,
+              0.2028,
+              0.1654,
+              0.0172
+            ]
+          ]
         }
       ],
       "source": {
@@ -243,7 +333,7 @@
       "justificacion": "1. Incorrecta. Las regiones electrodensas dispersan más electrones y se ven oscuras.\n2. Correcta. El primario reconoce el antígeno y el secundario marcado reconoce al primario.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "64, 71",
-      "pagina_impresa": "",
+      "pagina_impresa": "64, 71",
       "dificultad": "dificil",
       "lecturas_comentario": [
         {
@@ -251,16 +341,36 @@
           "label": "Calvo",
           "section": "Cómo se estudian las células. Métodos y técnicas básicas en biología celular · Microscopía electrónica / Inmunohistoquímica",
           "page": 64,
-          "printed": null,
-          "marks": []
+          "printed": 64,
+          "marks": [
+            [
+              0.0271,
+              0.2538,
+              0.2826,
+              0.0181
+            ]
+          ]
         },
         {
           "slug": "biologia-celular",
           "label": "Calvo",
           "section": "Cómo se estudian las células. Métodos y técnicas básicas en biología celular · Microscopía electrónica / Inmunohistoquímica",
           "page": 71,
-          "printed": null,
-          "marks": []
+          "printed": 71,
+          "marks": [
+            [
+              0.5,
+              0.9076,
+              0.0237,
+              0.0197
+            ],
+            [
+              0.0271,
+              0.9346,
+              0.0047,
+              0.0197
+            ]
+          ]
         }
       ],
       "source": {
@@ -311,7 +421,7 @@
       "justificacion": "1. Correcta. La hibridación sigue a la desnaturalización y precede a la extensión.\n2. Correcta. El nucleótido incorporado no permite formar el siguiente enlace de la cadena.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "78, 84",
-      "pagina_impresa": "",
+      "pagina_impresa": "78, 84",
       "dificultad": "dificil",
       "lecturas_comentario": [
         {
@@ -319,16 +429,30 @@
           "label": "Calvo",
           "section": "Cómo se estudian las células. Métodos y técnicas básicas en biología celular · PCR / Secuenciación",
           "page": 78,
-          "printed": null,
-          "marks": []
+          "printed": 78,
+          "marks": [
+            [
+              0.2497,
+              0.2704,
+              0.2307,
+              0.0197
+            ]
+          ]
         },
         {
           "slug": "biologia-celular",
           "label": "Calvo",
           "section": "Cómo se estudian las células. Métodos y técnicas básicas en biología celular · PCR / Secuenciación",
           "page": 84,
-          "printed": null,
-          "marks": []
+          "printed": 84,
+          "marks": [
+            [
+              0.4958,
+              0.0717,
+              0.2012,
+              0.0172
+            ]
+          ]
         }
       ],
       "source": {
@@ -379,7 +503,7 @@
       "justificacion": "1. Incorrecta. La sonda debe reconocer una secuencia de la región que se pretende localizar.\n2. Incorrecta. Los reordenamientos equilibrados no producen ganancias ni pérdidas que detecte esa comparación.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "96, 97",
-      "pagina_impresa": "",
+      "pagina_impresa": "96, 97",
       "dificultad": "dificil",
       "lecturas_comentario": [
         {
@@ -387,16 +511,36 @@
           "label": "Calvo",
           "section": "Cómo se estudian las células. Métodos y técnicas básicas en biología celular · Citogenética",
           "page": 96,
-          "printed": null,
-          "marks": []
+          "printed": 96,
+          "marks": [
+            [
+              0.2137,
+              0.5381,
+              0.2454,
+              0.0197
+            ]
+          ]
         },
         {
           "slug": "biologia-celular",
           "label": "Calvo",
           "section": "Cómo se estudian las células. Métodos y técnicas básicas en biología celular · Citogenética",
           "page": 97,
-          "printed": null,
-          "marks": []
+          "printed": 97,
+          "marks": [
+            [
+              0.5,
+              0.9076,
+              0.0237,
+              0.0197
+            ],
+            [
+              0.0271,
+              0.9346,
+              0.0047,
+              0.0197
+            ]
+          ]
         }
       ],
       "source": {

@@ -19,7 +19,7 @@
       "justificacion": "La clatrina forma el revestimiento. La adaptina contribuye a vincularlo con el receptor.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "218",
-      "pagina_impresa": "",
+      "pagina_impresa": "218",
       "dificultad": "medio",
       "lecturas_comentario": [
         {
@@ -27,8 +27,21 @@
           "label": "Calvo",
           "section": "Macrotransporte a través de la membrana plasmática: endocitosis y exocitosis · Endocitosis mediada por receptor",
           "page": 218,
-          "printed": null,
-          "marks": []
+          "printed": 218,
+          "marks": [
+            [
+              0.4954,
+              0.9076,
+              0.0328,
+              0.0197
+            ],
+            [
+              0.0271,
+              0.9346,
+              0.0047,
+              0.0197
+            ]
+          ]
         }
       ],
       "source": {
@@ -42,6 +55,12 @@
         "pdfPages": [
           218
         ]
+      },
+      "comentarios_opciones": {
+        "A": "Las SNARE de la vesícula y de la membrana diana se acoplan durante el proceso de fusión.",
+        "B": "La clatrina forma el revestimiento. La adaptina contribuye a vincularlo con el receptor.",
+        "C": "El complejo adaptina conecta la zona citosólica de receptores de carga con el revestimiento de clatrina.",
+        "D": "La dinamina actúa en el cuello de la invaginación y facilita la separación de la vesícula."
       },
       "opcion_a": "Proteínas SNARE",
       "opcion_b": "Clatrina",
@@ -58,7 +77,7 @@
       "justificacion": "El complejo adaptina conecta la zona citosólica de receptores de carga con el revestimiento de clatrina.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "221",
-      "pagina_impresa": "",
+      "pagina_impresa": "221",
       "dificultad": "medio",
       "lecturas_comentario": [
         {
@@ -66,8 +85,15 @@
           "label": "Calvo",
           "section": "Macrotransporte a través de la membrana plasmática: endocitosis y exocitosis · Cubierta vesicular",
           "page": 221,
-          "printed": null,
-          "marks": []
+          "printed": 221,
+          "marks": [
+            [
+              0.5147,
+              0.4231,
+              0.2159,
+              0.0131
+            ]
+          ]
         }
       ],
       "source": {
@@ -81,6 +107,12 @@
         "pdfPages": [
           221
         ]
+      },
+      "comentarios_opciones": {
+        "A": "El complejo adaptina conecta la zona citosólica de receptores de carga con el revestimiento de clatrina.",
+        "B": "La dinamina actúa en el cuello de la invaginación y facilita la separación de la vesícula.",
+        "C": "La clatrina forma el revestimiento. La adaptina contribuye a vincularlo con el receptor.",
+        "D": "Las SNARE de la vesícula y de la membrana diana se acoplan durante el proceso de fusión."
       },
       "opcion_a": "Complejo adaptina",
       "opcion_b": "Dinamina",
@@ -97,7 +129,7 @@
       "justificacion": "La dinamina actúa en el cuello de la invaginación y facilita la separación de la vesícula.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "222",
-      "pagina_impresa": "",
+      "pagina_impresa": "222",
       "dificultad": "medio",
       "lecturas_comentario": [
         {
@@ -105,8 +137,21 @@
           "label": "Calvo",
           "section": "Macrotransporte a través de la membrana plasmática: endocitosis y exocitosis · Separación vesicular",
           "page": 222,
-          "printed": null,
-          "marks": []
+          "printed": 222,
+          "marks": [
+            [
+              0.4954,
+              0.9076,
+              0.0328,
+              0.0197
+            ],
+            [
+              0.0271,
+              0.9346,
+              0.0047,
+              0.0197
+            ]
+          ]
         }
       ],
       "source": {
@@ -120,6 +165,12 @@
         "pdfPages": [
           222
         ]
+      },
+      "comentarios_opciones": {
+        "A": "La clatrina forma el revestimiento. La adaptina contribuye a vincularlo con el receptor.",
+        "B": "Las SNARE de la vesícula y de la membrana diana se acoplan durante el proceso de fusión.",
+        "C": "El complejo adaptina conecta la zona citosólica de receptores de carga con el revestimiento de clatrina.",
+        "D": "La dinamina actúa en el cuello de la invaginación y facilita la separación de la vesícula."
       },
       "opcion_a": "Clatrina",
       "opcion_b": "Proteínas SNARE",
@@ -136,7 +187,7 @@
       "justificacion": "Las SNARE de la vesícula y de la membrana diana se acoplan durante el proceso de fusión.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "238",
-      "pagina_impresa": "",
+      "pagina_impresa": "238",
       "dificultad": "medio",
       "lecturas_comentario": [
         {
@@ -144,8 +195,21 @@
           "label": "Calvo",
           "section": "Macrotransporte a través de la membrana plasmática: endocitosis y exocitosis · Fusión vesicular",
           "page": 238,
-          "printed": null,
-          "marks": []
+          "printed": 238,
+          "marks": [
+            [
+              0.701,
+              0.5014,
+              0.1274,
+              0.0131
+            ],
+            [
+              0.8281,
+              0.4982,
+              0.0045,
+              0.0172
+            ]
+          ]
         }
       ],
       "source": {
@@ -159,6 +223,12 @@
         "pdfPages": [
           238
         ]
+      },
+      "comentarios_opciones": {
+        "A": "Las SNARE de la vesícula y de la membrana diana se acoplan durante el proceso de fusión.",
+        "B": "El complejo adaptina conecta la zona citosólica de receptores de carga con el revestimiento de clatrina.",
+        "C": "La dinamina actúa en el cuello de la invaginación y facilita la separación de la vesícula.",
+        "D": "La clatrina forma el revestimiento. La adaptina contribuye a vincularlo con el receptor."
       },
       "opcion_a": "Proteínas SNARE",
       "opcion_b": "Complejo adaptina",
@@ -175,7 +245,7 @@
       "justificacion": "1. Incorrecta. Los receptores pueden reciclarse a la membrana tras separarse de la carga.\n2. Correcta. Transporta protones al interior y contribuye a reducir el pH.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "219, 222",
-      "pagina_impresa": "",
+      "pagina_impresa": "219, 222",
       "dificultad": "dificil",
       "lecturas_comentario": [
         {
@@ -183,16 +253,36 @@
           "label": "Calvo",
           "section": "Macrotransporte a través de la membrana plasmática: endocitosis y exocitosis · Captación de LDL / Endosomas",
           "page": 219,
-          "printed": null,
-          "marks": []
+          "printed": 219,
+          "marks": [
+            [
+              0.8268,
+              0.6692,
+              0.1637,
+              0.0172
+            ],
+            [
+              0.015,
+              0.6846,
+              0.0356,
+              0.0172
+            ]
+          ]
         },
         {
           "slug": "biologia-celular",
           "label": "Calvo",
           "section": "Macrotransporte a través de la membrana plasmática: endocitosis y exocitosis · Captación de LDL / Endosomas",
           "page": 222,
-          "printed": null,
-          "marks": []
+          "printed": 222,
+          "marks": [
+            [
+              0.652,
+              0.7647,
+              0.2384,
+              0.0197
+            ]
+          ]
         }
       ],
       "source": {
@@ -243,7 +333,7 @@
       "justificacion": "1. Correcta. Este compartimento actúa como estación de clasificación.\n2. Incorrecta. El traslado entre dominios de la membrana se denomina transcitosis.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "223, 224",
-      "pagina_impresa": "",
+      "pagina_impresa": "223, 224",
       "dificultad": "dificil",
       "lecturas_comentario": [
         {
@@ -251,16 +341,36 @@
           "label": "Calvo",
           "section": "Macrotransporte a través de la membrana plasmática: endocitosis y exocitosis · Endosomas / Transcitosis",
           "page": 223,
-          "printed": null,
-          "marks": []
+          "printed": 223,
+          "marks": [
+            [
+              0.4219,
+              0.3265,
+              0.1706,
+              0.0172
+            ]
+          ]
         },
         {
           "slug": "biologia-celular",
           "label": "Calvo",
           "section": "Macrotransporte a través de la membrana plasmática: endocitosis y exocitosis · Endosomas / Transcitosis",
           "page": 224,
-          "printed": null,
-          "marks": []
+          "printed": 224,
+          "marks": [
+            [
+              0.4954,
+              0.9076,
+              0.0328,
+              0.0197
+            ],
+            [
+              0.0271,
+              0.9346,
+              0.0047,
+              0.0197
+            ]
+          ]
         }
       ],
       "source": {
@@ -311,7 +421,7 @@
       "justificacion": "1. Correcta. Este fosfolípido expuesto actúa como señal de reconocimiento.\n2. Correcta. Sus efectores coordinan el acercamiento y facilitan la acción de las SNARE.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "231, 238",
-      "pagina_impresa": "",
+      "pagina_impresa": "231, 238",
       "dificultad": "dificil",
       "lecturas_comentario": [
         {
@@ -319,16 +429,36 @@
           "label": "Calvo",
           "section": "Macrotransporte a través de la membrana plasmática: endocitosis y exocitosis · Fagocitosis / Fusión vesicular",
           "page": 231,
-          "printed": null,
-          "marks": []
+          "printed": 231,
+          "marks": [
+            [
+              0.9563,
+              0.6101,
+              0.0334,
+              0.0197
+            ],
+            [
+              0.0082,
+              0.6336,
+              0.2753,
+              0.0197
+            ]
+          ]
         },
         {
           "slug": "biologia-celular",
           "label": "Calvo",
           "section": "Macrotransporte a través de la membrana plasmática: endocitosis y exocitosis · Fagocitosis / Fusión vesicular",
           "page": 238,
-          "printed": null,
-          "marks": []
+          "printed": 238,
+          "marks": [
+            [
+              0.402,
+              0.6664,
+              0.217,
+              0.0197
+            ]
+          ]
         }
       ],
       "source": {
@@ -379,7 +509,7 @@
       "justificacion": "1. Incorrecta. En la vesícula, el sensor de Ca²⁺ descrito es la sinaptotagmina.\n2. Incorrecta. La acetilcolinesterasa produce colina y acetato.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "242, 244",
-      "pagina_impresa": "",
+      "pagina_impresa": "242, 244",
       "dificultad": "dificil",
       "lecturas_comentario": [
         {
@@ -387,16 +517,36 @@
           "label": "Calvo",
           "section": "Macrotransporte a través de la membrana plasmática: endocitosis y exocitosis · Sinapsis / Sinapsis neuromuscular",
           "page": 242,
-          "printed": null,
-          "marks": []
+          "printed": 242,
+          "marks": [
+            [
+              0.6516,
+              0.4472,
+              0.3133,
+              0.0172
+            ]
+          ]
         },
         {
           "slug": "biologia-celular",
           "label": "Calvo",
           "section": "Macrotransporte a través de la membrana plasmática: endocitosis y exocitosis · Sinapsis / Sinapsis neuromuscular",
           "page": 244,
-          "printed": null,
-          "marks": []
+          "printed": 244,
+          "marks": [
+            [
+              0.8114,
+              0.7734,
+              0.0679,
+              0.0131
+            ],
+            [
+              0.8791,
+              0.7702,
+              0.0045,
+              0.0172
+            ]
+          ]
         }
       ],
       "source": {

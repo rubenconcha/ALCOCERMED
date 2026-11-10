@@ -8,7 +8,7 @@ function startSimTimer() {
         if (simState.secondsLeft <= 0 && (simState.mode !== 'pasado' || simState.strictTiming)) {
             clearInterval(simState.timerInterval);
             simState.timerInterval = null;
-            showToast('⏰ tiempo agotado — finalizando simulacro', 'info');
+            showToast(simState.mode === 'tema' ? 'Tiempo agotado. Corrigiendo la evaluación.' : '⏰ tiempo agotado — finalizando simulacro', 'info');
             finalizarSimulacro();
         }
     }, 1000);
@@ -39,7 +39,7 @@ function renderSimQuestion() {
     var ans = simState.answers[idx];
 
     document.getElementById('sim-cur-num').textContent = idx + 1;
-    document.getElementById('sim-exam-section').textContent = ({
+    document.getElementById('sim-exam-section').textContent = simState.mode === 'tema' && simState.topicEvaluationSubject || ({
         MORFOFUNCION: 'Morfofunción', 'BIOLOGIA CELULAR': 'Biología celular',
         'SALUD PUBLICA': 'Educación para la Vida'
     })[normalizeDbText(campo(q, 'materia'))] ||

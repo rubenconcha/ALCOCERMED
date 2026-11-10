@@ -28,7 +28,20 @@
           "section": "Los sistemas linfático e inmunitario · Clases de anticuerpos, cuadro 21.3",
           "page": 868,
           "printed": 840,
-          "marks": []
+          "marks": [
+            [
+              0.6789,
+              0.3179,
+              0.0192,
+              0.0111
+            ],
+            [
+              0.0829,
+              0.6103,
+              0.0182,
+              0.0094
+            ]
+          ]
         }
       ],
       "source": {
@@ -44,6 +57,12 @@
         "pdfPages": [
           868
         ]
+      },
+      "comentarios_opciones": {
+        "A": "La IgE se une a mastocitos y basófilos y participa en respuestas alérgicas y frente a parásitos.",
+        "B": "En la respuesta primaria, la IgM aparece antes que la IgG.",
+        "C": "La IgA se encuentra en secreciones como lágrimas y saliva, donde protege superficies mucosas.",
+        "D": "La IgG materna atraviesa la placenta y puede pasar a la circulación fetal."
       },
       "opcion_a": "IgE",
       "opcion_b": "IgM",
@@ -69,7 +88,20 @@
           "section": "Los sistemas linfático e inmunitario · Anticuerpos",
           "page": 867,
           "printed": 839,
-          "marks": []
+          "marks": [
+            [
+              0.568,
+              0.0491,
+              0.0896,
+              0.0105
+            ],
+            [
+              0.6665,
+              0.0495,
+              0.1161,
+              0.01
+            ]
+          ]
         }
       ],
       "source": {
@@ -85,6 +117,12 @@
         "pdfPages": [
           867
         ]
+      },
+      "comentarios_opciones": {
+        "A": "La IgE se une a mastocitos y basófilos y participa en respuestas alérgicas y frente a parásitos.",
+        "B": "La IgG materna atraviesa la placenta y puede pasar a la circulación fetal.",
+        "C": "En la respuesta primaria, la IgM aparece antes que la IgG.",
+        "D": "La IgA se encuentra en secreciones como lágrimas y saliva, donde protege superficies mucosas."
       },
       "opcion_a": "IgE",
       "opcion_b": "IgG",
@@ -110,7 +148,20 @@
           "section": "Los sistemas linfático e inmunitario · Clases de anticuerpos, cuadro 21.3",
           "page": 868,
           "printed": 840,
-          "marks": []
+          "marks": [
+            [
+              0.0829,
+              0.7004,
+              0.0169,
+              0.0094
+            ],
+            [
+              0.458,
+              0.7004,
+              0.1278,
+              0.0094
+            ]
+          ]
         }
       ],
       "source": {
@@ -126,6 +177,12 @@
         "pdfPages": [
           868
         ]
+      },
+      "comentarios_opciones": {
+        "A": "La IgG materna atraviesa la placenta y puede pasar a la circulación fetal.",
+        "B": "La IgA se encuentra en secreciones como lágrimas y saliva, donde protege superficies mucosas.",
+        "C": "En la respuesta primaria, la IgM aparece antes que la IgG.",
+        "D": "La IgE se une a mastocitos y basófilos y participa en respuestas alérgicas y frente a parásitos."
       },
       "opcion_a": "IgG",
       "opcion_b": "IgA",
@@ -151,7 +208,14 @@
           "section": "Los sistemas linfático e inmunitario · Anticuerpos",
           "page": 869,
           "printed": 841,
-          "marks": []
+          "marks": [
+            [
+              0.2964,
+              0.7693,
+              0.2059,
+              0.0111
+            ]
+          ]
         }
       ],
       "source": {
@@ -167,6 +231,12 @@
         "pdfPages": [
           869
         ]
+      },
+      "comentarios_opciones": {
+        "A": "La IgE se une a mastocitos y basófilos y participa en respuestas alérgicas y frente a parásitos.",
+        "B": "La IgA se encuentra en secreciones como lágrimas y saliva, donde protege superficies mucosas.",
+        "C": "En la respuesta primaria, la IgM aparece antes que la IgG.",
+        "D": "La IgG materna atraviesa la placenta y puede pasar a la circulación fetal."
       },
       "opcion_a": "IgE",
       "opcion_b": "IgA",
@@ -192,7 +262,14 @@
           "section": "Los sistemas linfático e inmunitario · Drenaje linfático / Órganos linfáticos",
           "page": 840,
           "printed": 812,
-          "marks": []
+          "marks": [
+            [
+              0.2733,
+              0.8872,
+              0.1607,
+              0.0111
+            ]
+          ]
         },
         {
           "slug": "morfofuncion",
@@ -200,7 +277,20 @@
           "section": "Los sistemas linfático e inmunitario · Drenaje linfático / Órganos linfáticos",
           "page": 843,
           "printed": 815,
-          "marks": []
+          "marks": [
+            [
+              0.6437,
+              0.4909,
+              0.0056,
+              0.0078
+            ],
+            [
+              0.525,
+              0.5303,
+              0.1793,
+              0.0161
+            ]
+          ]
         }
       ],
       "source": {
@@ -263,7 +353,20 @@
           "section": "Los sistemas linfático e inmunitario · Órganos linfáticos",
           "page": 841,
           "printed": 813,
-          "marks": []
+          "marks": [
+            [
+              0.5539,
+              0.5716,
+              0.0273,
+              0.0111
+            ],
+            [
+              0.5856,
+              0.5716,
+              0.0665,
+              0.0111
+            ]
+          ]
         }
       ],
       "source": {
@@ -324,7 +427,14 @@
           "section": "Los sistemas linfático e inmunitario · Inmunidad innata / Memoria inmunitaria",
           "page": 852,
           "printed": 824,
-          "marks": []
+          "marks": [
+            [
+              0.1504,
+              0.1322,
+              0.1753,
+              0.0111
+            ]
+          ]
         },
         {
           "slug": "morfofuncion",
@@ -332,7 +442,20 @@
           "section": "Los sistemas linfático e inmunitario · Inmunidad innata / Memoria inmunitaria",
           "page": 870,
           "printed": 842,
-          "marks": []
+          "marks": [
+            [
+              0.1947,
+              0.0948,
+              0.0165,
+              0.0136
+            ],
+            [
+              0.2377,
+              0.0954,
+              0.1807,
+              0.0129
+            ]
+          ]
         }
       ],
       "source": {
@@ -395,7 +518,26 @@
           "section": "Los sistemas linfático e inmunitario · Adquisición de inmunidad",
           "page": 859,
           "printed": 831,
-          "marks": []
+          "marks": [
+            [
+              0.7451,
+              0.1469,
+              0.1952,
+              0.0111
+            ],
+            [
+              0.5539,
+              0.1617,
+              0.0241,
+              0.0111
+            ],
+            [
+              0.6744,
+              0.1766,
+              0.2325,
+              0.0111
+            ]
+          ]
         }
       ],
       "source": {

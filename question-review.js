@@ -87,8 +87,8 @@
  function warmReferenceReader() {
   if (referencePreloadScheduled || root.navigator?.connection?.saveData) return;
   referencePreloadScheduled = true;
-  const preload = () => root.loadCampusAssets('texts')
-   .then(() => root.OfficialTexts?.preload())
+  const preload = () => root.loadCampusAssets('reader')
+   .then(() => root.SummaryPdfReader?.preload?.())
    .catch(() => { referencePreloadScheduled = false; });
   if (typeof root.requestIdleCallback === 'function') root.requestIdleCallback(preload, { timeout: 1200 });
   else root.setTimeout(preload, 300);

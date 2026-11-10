@@ -28,7 +28,20 @@
           "section": "Medidas de posición · medidas de posicion",
           "page": 162,
           "printed": 87,
-          "marks": []
+          "marks": [
+            [
+              0.6324,
+              0.4249,
+              0.2766,
+              0.0192
+            ],
+            [
+              0.1212,
+              0.4479,
+              0.0481,
+              0.0192
+            ]
+          ]
         }
       ],
       "source": {
@@ -44,6 +57,12 @@
         "pdfPages": [
           162
         ]
+      },
+      "comentarios_opciones": {
+        "A": "Q₂ corresponde al centro de la distribución ordenada y coincide con la mediana.",
+        "B": "Q₃ corresponde a la posición teórica del 75 % de la distribución ordenada.",
+        "C": "Q₁ marca la posición teórica del 25 % de una distribución ordenada.",
+        "D": "El noveno decil y el percentil 90 señalan la misma posición de la distribución."
       },
       "opcion_a": "Segundo cuartil (Q₂)",
       "opcion_b": "Tercer cuartil (Q₃)",
@@ -69,7 +88,20 @@
           "section": "Medidas de posición · medidas de posicion",
           "page": 162,
           "printed": 87,
-          "marks": []
+          "marks": [
+            [
+              0.7321,
+              0.5113,
+              0.0257,
+              0.0192
+            ],
+            [
+              0.7578,
+              0.5235,
+              0.0083,
+              0.0112
+            ]
+          ]
         }
       ],
       "source": {
@@ -85,6 +117,12 @@
         "pdfPages": [
           162
         ]
+      },
+      "comentarios_opciones": {
+        "A": "Q₃ corresponde a la posición teórica del 75 % de la distribución ordenada.",
+        "B": "Q₁ marca la posición teórica del 25 % de una distribución ordenada.",
+        "C": "El noveno decil y el percentil 90 señalan la misma posición de la distribución.",
+        "D": "Q₂ corresponde al centro de la distribución ordenada y coincide con la mediana."
       },
       "opcion_a": "Tercer cuartil (Q₃)",
       "opcion_b": "Primer cuartil (Q₁)",
@@ -110,7 +148,14 @@
           "section": "Medidas de posición · medidas de posicion",
           "page": 162,
           "printed": 87,
-          "marks": []
+          "marks": [
+            [
+              0.6684,
+              0.5343,
+              0.2407,
+              0.0192
+            ]
+          ]
         }
       ],
       "source": {
@@ -126,6 +171,12 @@
         "pdfPages": [
           162
         ]
+      },
+      "comentarios_opciones": {
+        "A": "Q₃ corresponde a la posición teórica del 75 % de la distribución ordenada.",
+        "B": "El noveno decil y el percentil 90 señalan la misma posición de la distribución.",
+        "C": "Q₂ corresponde al centro de la distribución ordenada y coincide con la mediana.",
+        "D": "Q₁ marca la posición teórica del 25 % de una distribución ordenada."
       },
       "opcion_a": "Tercer cuartil (Q₃)",
       "opcion_b": "Percentil 90 (P₉₀)",
@@ -151,7 +202,14 @@
           "section": "Medidas de posición · medidas de posicion",
           "page": 169,
           "printed": 94,
-          "marks": []
+          "marks": [
+            [
+              0.1136,
+              0.965,
+              0.2857,
+              0.0139
+            ]
+          ]
         }
       ],
       "source": {
@@ -167,6 +225,12 @@
         "pdfPages": [
           169
         ]
+      },
+      "comentarios_opciones": {
+        "A": "Q₁ marca la posición teórica del 25 % de una distribución ordenada.",
+        "B": "El noveno decil y el percentil 90 señalan la misma posición de la distribución.",
+        "C": "Q₂ corresponde al centro de la distribución ordenada y coincide con la mediana.",
+        "D": "Q₃ corresponde a la posición teórica del 75 % de la distribución ordenada."
       },
       "opcion_a": "Primer cuartil (Q₁)",
       "opcion_b": "Percentil 90 (P₉₀)",
@@ -192,7 +256,26 @@
           "section": "Medidas de posición · medidas de posicion",
           "page": 162,
           "printed": 87,
-          "marks": []
+          "marks": [
+            [
+              0.4749,
+              0.4019,
+              0.3903,
+              0.0192
+            ],
+            [
+              0.1682,
+              0.3616,
+              0.1489,
+              0.0191
+            ],
+            [
+              0.1212,
+              0.4019,
+              0.1839,
+              0.0192
+            ]
+          ]
         }
       ],
       "source": {
@@ -253,7 +336,14 @@
           "section": "Medidas de posición · medidas de posicion",
           "page": 162,
           "printed": 87,
-          "marks": []
+          "marks": [
+            [
+              0.2804,
+              0.746,
+              0.2684,
+              0.0192
+            ]
+          ]
         },
         {
           "slug": "educacion-salud",
@@ -261,7 +351,20 @@
           "section": "Medidas de posición · medidas de posicion",
           "page": 164,
           "printed": 89,
-          "marks": []
+          "marks": [
+            [
+              0.4563,
+              0.1695,
+              0.0183,
+              0.0192
+            ],
+            [
+              0.4746,
+              0.1816,
+              0.0125,
+              0.0112
+            ]
+          ]
         }
       ],
       "source": {
@@ -324,7 +427,14 @@
           "section": "Medidas de posición · medidas de posicion",
           "page": 166,
           "printed": 91,
-          "marks": []
+          "marks": [
+            [
+              0.6041,
+              0.782,
+              0.305,
+              0.0192
+            ]
+          ]
         },
         {
           "slug": "educacion-salud",
@@ -332,7 +442,14 @@
           "section": "Medidas de posición · medidas de posicion",
           "page": 168,
           "printed": 93,
-          "marks": []
+          "marks": [
+            [
+              0.4112,
+              0.4888,
+              0.3612,
+              0.0192
+            ]
+          ]
         }
       ],
       "source": {
@@ -395,7 +512,20 @@
           "section": "Medidas de posición · medidas de posicion",
           "page": 167,
           "printed": 92,
-          "marks": []
+          "marks": [
+            [
+              0.6346,
+              0.7609,
+              0.2514,
+              0.0192
+            ],
+            [
+              0.0909,
+              0.784,
+              0.0631,
+              0.0192
+            ]
+          ]
         },
         {
           "slug": "educacion-salud",
@@ -403,7 +533,14 @@
           "section": "Medidas de posición · medidas de posicion",
           "page": 168,
           "printed": 93,
-          "marks": []
+          "marks": [
+            [
+              0.1212,
+              0.4888,
+              0.3684,
+              0.0192
+            ]
+          ]
         }
       ],
       "source": {

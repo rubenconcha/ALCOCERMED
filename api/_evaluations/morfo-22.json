@@ -28,7 +28,20 @@
           "section": "El aparato respiratorio · Volúmenes pulmonares",
           "page": 903,
           "printed": 875,
-          "marks": []
+          "marks": [
+            [
+              0.3959,
+              0.5159,
+              0.1104,
+              0.0111
+            ],
+            [
+              0.0909,
+              0.5308,
+              0.0761,
+              0.0111
+            ]
+          ]
         }
       ],
       "source": {
@@ -44,6 +57,12 @@
         "pdfPages": [
           903
         ]
+      },
+      "comentarios_opciones": {
+        "A": "El volumen corriente se mide por respiración durante la ventilación tranquila.",
+        "B": "El volumen residual es el aire que no se puede expulsar con una espiración máxima.",
+        "C": "El aire del espacio muerto anatómico ocupa vías conductoras y no realiza intercambio gaseoso.",
+        "D": "Primero se resta el espacio muerto al volumen corriente. Después se multiplica el volumen que llega a los alvéolos por la frecuencia."
       },
       "opcion_a": "Volumen corriente",
       "opcion_b": "Volumen residual",
@@ -69,7 +88,14 @@
           "section": "El aparato respiratorio · Volúmenes pulmonares",
           "page": 903,
           "printed": 875,
-          "marks": []
+          "marks": [
+            [
+              0.5686,
+              0.4883,
+              0.1739,
+              0.0111
+            ]
+          ]
         }
       ],
       "source": {
@@ -85,6 +111,12 @@
         "pdfPages": [
           903
         ]
+      },
+      "comentarios_opciones": {
+        "A": "El volumen corriente se mide por respiración durante la ventilación tranquila.",
+        "B": "Primero se resta el espacio muerto al volumen corriente. Después se multiplica el volumen que llega a los alvéolos por la frecuencia.",
+        "C": "El aire del espacio muerto anatómico ocupa vías conductoras y no realiza intercambio gaseoso.",
+        "D": "El volumen residual es el aire que no se puede expulsar con una espiración máxima."
       },
       "opcion_a": "Volumen corriente",
       "opcion_b": "Ventilación alveolar",
@@ -110,7 +142,14 @@
           "section": "El aparato respiratorio · Ventilación alveolar",
           "page": 902,
           "printed": 874,
-          "marks": []
+          "marks": [
+            [
+              0.4977,
+              0.6038,
+              0.116,
+              0.0111
+            ]
+          ]
         }
       ],
       "source": {
@@ -127,6 +166,12 @@
           902
         ]
       },
+      "comentarios_opciones": {
+        "A": "El aire del espacio muerto anatómico ocupa vías conductoras y no realiza intercambio gaseoso.",
+        "B": "Primero se resta el espacio muerto al volumen corriente. Después se multiplica el volumen que llega a los alvéolos por la frecuencia.",
+        "C": "El volumen residual es el aire que no se puede expulsar con una espiración máxima.",
+        "D": "El volumen corriente se mide por respiración durante la ventilación tranquila."
+      },
       "opcion_a": "Espacio muerto anatómico",
       "opcion_b": "Ventilación alveolar",
       "opcion_c": "Volumen residual",
@@ -137,7 +182,7 @@
       "materia": "MORFOFUNCION",
       "tema": "aparato respiratorio",
       "numero_pregunta": 4,
-      "pregunta": "Una respiración introduce 500 mL, de los que 150 mL quedan en las vías de conducción. Hay 12 respiraciones por minuto. El producto 350 × 12 mide el aire que llega a la zona de intercambio por minuto.\n¿Qué opción corresponde al caso?",
+      "pregunta": "En cada inspiración entran 500 mL de aire, de los cuales 150 mL permanecen en las vías de conducción. La frecuencia es de 12 respiraciones por minuto. ¿Qué magnitud se obtiene al multiplicar 350 mL por 12 respiraciones por minuto?",
       "respuesta_correcta": "D",
       "justificacion": "Primero se resta el espacio muerto al volumen corriente. Después se multiplica el volumen que llega a los alvéolos por la frecuencia.",
       "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
@@ -151,7 +196,14 @@
           "section": "El aparato respiratorio · Ventilación alveolar",
           "page": 903,
           "printed": 875,
-          "marks": []
+          "marks": [
+            [
+              0.1309,
+              0.1025,
+              0.2304,
+              0.0111
+            ]
+          ]
         }
       ],
       "source": {
@@ -167,6 +219,12 @@
         "pdfPages": [
           903
         ]
+      },
+      "comentarios_opciones": {
+        "A": "El volumen corriente se mide por respiración durante la ventilación tranquila.",
+        "B": "El volumen residual es el aire que no se puede expulsar con una espiración máxima.",
+        "C": "El aire del espacio muerto anatómico ocupa vías conductoras y no realiza intercambio gaseoso.",
+        "D": "Primero se resta el espacio muerto al volumen corriente. Después se multiplica el volumen que llega a los alvéolos por la frecuencia."
       },
       "opcion_a": "Volumen corriente",
       "opcion_b": "Volumen residual",
@@ -192,7 +250,20 @@
           "section": "El aparato respiratorio · Pleuras",
           "page": 894,
           "printed": 866,
-          "marks": []
+          "marks": [
+            [
+              0.383,
+              0.5332,
+              0.096,
+              0.0111
+            ],
+            [
+              0.0636,
+              0.548,
+              0.1205,
+              0.0111
+            ]
+          ]
         },
         {
           "slug": "morfofuncion",
@@ -200,7 +271,20 @@
           "section": "El aparato respiratorio · Pleuras",
           "page": 900,
           "printed": 872,
-          "marks": []
+          "marks": [
+            [
+              0.3388,
+              0.7387,
+              0.1402,
+              0.0111
+            ],
+            [
+              0.0636,
+              0.7536,
+              0.0421,
+              0.0111
+            ]
+          ]
         }
       ],
       "source": {
@@ -263,7 +347,20 @@
           "section": "El aparato respiratorio · Alvéolos",
           "page": 893,
           "printed": 865,
-          "marks": []
+          "marks": [
+            [
+              0.8621,
+              0.0877,
+              0.0783,
+              0.0111
+            ],
+            [
+              0.525,
+              0.1025,
+              0.0928,
+              0.0111
+            ]
+          ]
         },
         {
           "slug": "morfofuncion",
@@ -271,7 +368,14 @@
           "section": "El aparato respiratorio · Alvéolos",
           "page": 902,
           "printed": 874,
-          "marks": []
+          "marks": [
+            [
+              0.5959,
+              0.0875,
+              0.1525,
+              0.0111
+            ]
+          ]
         }
       ],
       "source": {
@@ -334,7 +438,26 @@
           "section": "El aparato respiratorio · Ventilación / 22.2 Espiración",
           "page": 900,
           "printed": 872,
-          "marks": []
+          "marks": [
+            [
+              0.403,
+              0.1916,
+              0.076,
+              0.0111
+            ],
+            [
+              0.0636,
+              0.2065,
+              0.0867,
+              0.0111
+            ],
+            [
+              0.4977,
+              0.7091,
+              0.2856,
+              0.0111
+            ]
+          ]
         }
       ],
       "source": {
@@ -395,7 +518,14 @@
           "section": "El aparato respiratorio · Transporte de gases",
           "page": 912,
           "printed": 884,
-          "marks": []
+          "marks": [
+            [
+              0.2292,
+              0.1253,
+              0.1494,
+              0.0111
+            ]
+          ]
         },
         {
           "slug": "morfofuncion",
@@ -403,7 +533,14 @@
           "section": "El aparato respiratorio · Transporte de gases",
           "page": 913,
           "printed": 885,
-          "marks": []
+          "marks": [
+            [
+              0.2156,
+              0.5296,
+              0.1724,
+              0.0111
+            ]
+          ]
         }
       ],
       "source": {

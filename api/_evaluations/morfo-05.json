@@ -28,7 +28,20 @@
           "section": "Histología · Epitelio",
           "page": 198,
           "printed": 170,
-          "marks": []
+          "marks": [
+            [
+              0.0636,
+              0.0491,
+              0.0261,
+              0.0105
+            ],
+            [
+              0.1406,
+              0.0491,
+              0.0803,
+              0.0105
+            ]
+          ]
         }
       ],
       "source": {
@@ -44,6 +57,12 @@
         "pdfPages": [
           198
         ]
+      },
+      "comentarios_opciones": {
+        "A": "En el epitelio estratificado queratinizado, la capa más externa está formada por células muertas llenas de queratina.",
+        "B": "Las células superficiales del epitelio transicional cambian de forma cuando se distiende la vejiga.",
+        "C": "El endotelio que tapiza un vaso es una sola capa de células aplanadas.",
+        "D": "Los núcleos a distintas alturas dan aspecto de varias capas. El contacto de todas las células con la base identifica al seudoestratificado."
       },
       "opcion_a": "Epitelio estratificado queratinizado",
       "opcion_b": "Epitelio transicional",
@@ -69,7 +88,20 @@
           "section": "Histología · Epitelio",
           "page": 176,
           "printed": 148,
-          "marks": []
+          "marks": [
+            [
+              0.0636,
+              0.0491,
+              0.0261,
+              0.0105
+            ],
+            [
+              0.1406,
+              0.0491,
+              0.0803,
+              0.0105
+            ]
+          ]
         }
       ],
       "source": {
@@ -85,6 +117,12 @@
         "pdfPages": [
           176
         ]
+      },
+      "comentarios_opciones": {
+        "A": "Las células superficiales del epitelio transicional cambian de forma cuando se distiende la vejiga.",
+        "B": "El endotelio que tapiza un vaso es una sola capa de células aplanadas.",
+        "C": "En el epitelio estratificado queratinizado, la capa más externa está formada por células muertas llenas de queratina.",
+        "D": "Los núcleos a distintas alturas dan aspecto de varias capas. El contacto de todas las células con la base identifica al seudoestratificado."
       },
       "opcion_a": "Epitelio transicional",
       "opcion_b": "Epitelio pavimentoso simple",
@@ -110,7 +148,20 @@
           "section": "Histología · Epitelio",
           "page": 180,
           "printed": 152,
-          "marks": []
+          "marks": [
+            [
+              0.0636,
+              0.0491,
+              0.0261,
+              0.0105
+            ],
+            [
+              0.1406,
+              0.0491,
+              0.0803,
+              0.0105
+            ]
+          ]
         }
       ],
       "source": {
@@ -126,6 +177,12 @@
         "pdfPages": [
           180
         ]
+      },
+      "comentarios_opciones": {
+        "A": "Las células superficiales del epitelio transicional cambian de forma cuando se distiende la vejiga.",
+        "B": "Los núcleos a distintas alturas dan aspecto de varias capas. El contacto de todas las células con la base identifica al seudoestratificado.",
+        "C": "En el epitelio estratificado queratinizado, la capa más externa está formada por células muertas llenas de queratina.",
+        "D": "El endotelio que tapiza un vaso es una sola capa de células aplanadas."
       },
       "opcion_a": "Epitelio transicional",
       "opcion_b": "Epitelio seudoestratificado",
@@ -151,7 +208,20 @@
           "section": "Histología · Epitelio",
           "page": 176,
           "printed": 148,
-          "marks": []
+          "marks": [
+            [
+              0.0636,
+              0.0491,
+              0.0261,
+              0.0105
+            ],
+            [
+              0.1406,
+              0.0491,
+              0.0803,
+              0.0105
+            ]
+          ]
         }
       ],
       "source": {
@@ -167,6 +237,12 @@
         "pdfPages": [
           176
         ]
+      },
+      "comentarios_opciones": {
+        "A": "Las células superficiales del epitelio transicional cambian de forma cuando se distiende la vejiga.",
+        "B": "Los núcleos a distintas alturas dan aspecto de varias capas. El contacto de todas las células con la base identifica al seudoestratificado.",
+        "C": "En el epitelio estratificado queratinizado, la capa más externa está formada por células muertas llenas de queratina.",
+        "D": "El endotelio que tapiza un vaso es una sola capa de células aplanadas."
       },
       "opcion_a": "Epitelio transicional",
       "opcion_b": "Epitelio seudoestratificado",
@@ -192,7 +268,20 @@
           "section": "Histología · Tejido conjuntivo",
           "page": 183,
           "printed": 155,
-          "marks": []
+          "marks": [
+            [
+              0.7124,
+              0.0491,
+              0.0821,
+              0.0105
+            ],
+            [
+              0.8033,
+              0.0495,
+              0.0591,
+              0.01
+            ]
+          ]
         },
         {
           "slug": "morfofuncion",
@@ -200,7 +289,20 @@
           "section": "Histología · Tejido conjuntivo",
           "page": 184,
           "printed": 156,
-          "marks": []
+          "marks": [
+            [
+              0.0636,
+              0.0491,
+              0.0261,
+              0.0105
+            ],
+            [
+              0.1406,
+              0.0491,
+              0.0803,
+              0.0105
+            ]
+          ]
         }
       ],
       "source": {
@@ -263,7 +365,20 @@
           "section": "Histología · Uniones celulares",
           "page": 194,
           "printed": 166,
-          "marks": []
+          "marks": [
+            [
+              0.0636,
+              0.0491,
+              0.0261,
+              0.0105
+            ],
+            [
+              0.1406,
+              0.0491,
+              0.0803,
+              0.0105
+            ]
+          ]
         },
         {
           "slug": "morfofuncion",
@@ -271,7 +386,20 @@
           "section": "Histología · Uniones celulares",
           "page": 195,
           "printed": 167,
-          "marks": []
+          "marks": [
+            [
+              0.7124,
+              0.0491,
+              0.0821,
+              0.0105
+            ],
+            [
+              0.8033,
+              0.0495,
+              0.0591,
+              0.01
+            ]
+          ]
         }
       ],
       "source": {
@@ -334,7 +462,20 @@
           "section": "Histología · Glándulas",
           "page": 197,
           "printed": 169,
-          "marks": []
+          "marks": [
+            [
+              0.7124,
+              0.0491,
+              0.0821,
+              0.0105
+            ],
+            [
+              0.8033,
+              0.0495,
+              0.0591,
+              0.01
+            ]
+          ]
         }
       ],
       "source": {
@@ -395,7 +536,20 @@
           "section": "Histología · Crecimiento tisular / Cambio tisular",
           "page": 200,
           "printed": 172,
-          "marks": []
+          "marks": [
+            [
+              0.0636,
+              0.0491,
+              0.0261,
+              0.0105
+            ],
+            [
+              0.1406,
+              0.0491,
+              0.0803,
+              0.0105
+            ]
+          ]
         }
       ],
       "source": {

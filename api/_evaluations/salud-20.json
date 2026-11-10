@@ -28,7 +28,20 @@
           "section": "Dispersión y forma de los datos · dispersion y forma de los datos",
           "page": 172,
           "printed": 97,
-          "marks": []
+          "marks": [
+            [
+              0.8815,
+              0.4873,
+              0.0347,
+              0.0192
+            ],
+            [
+              0.1212,
+              0.5103,
+              0.3369,
+              0.0192
+            ]
+          ]
         }
       ],
       "source": {
@@ -44,6 +57,12 @@
         "pdfPages": [
           172
         ]
+      },
+      "comentarios_opciones": {
+        "A": "El rango resta el mínimo al máximo y resume la distancia entre los extremos.",
+        "B": "La desviación estándar es la raíz cuadrada de la varianza y se expresa en las unidades originales.",
+        "C": "El coeficiente de variación divide la desviación estándar entre la media y expresa esa relación como porcentaje.",
+        "D": "El rango intercuartil resta Q₁ a Q₃ y mide la amplitud de la mitad central."
       },
       "opcion_a": "Rango total",
       "opcion_b": "Desviación estándar",
@@ -69,7 +88,14 @@
           "section": "Dispersión y forma de los datos · dispersion y forma de los datos",
           "page": 173,
           "printed": 98,
-          "marks": []
+          "marks": [
+            [
+              0.5081,
+              0.2387,
+              0.2589,
+              0.0192
+            ]
+          ]
         }
       ],
       "source": {
@@ -85,6 +111,12 @@
         "pdfPages": [
           173
         ]
+      },
+      "comentarios_opciones": {
+        "A": "El coeficiente de variación divide la desviación estándar entre la media y expresa esa relación como porcentaje.",
+        "B": "El rango intercuartil resta Q₁ a Q₃ y mide la amplitud de la mitad central.",
+        "C": "La desviación estándar es la raíz cuadrada de la varianza y se expresa en las unidades originales.",
+        "D": "El rango resta el mínimo al máximo y resume la distancia entre los extremos."
       },
       "opcion_a": "Coeficiente de variación",
       "opcion_b": "Rango intercuartil",
@@ -110,7 +142,20 @@
           "section": "Dispersión y forma de los datos · dispersion y forma de los datos",
           "page": 177,
           "printed": 102,
-          "marks": []
+          "marks": [
+            [
+              0.8378,
+              0.6323,
+              0.0482,
+              0.0192
+            ],
+            [
+              0.0909,
+              0.6553,
+              0.0797,
+              0.0192
+            ]
+          ]
         }
       ],
       "source": {
@@ -126,6 +171,12 @@
         "pdfPages": [
           177
         ]
+      },
+      "comentarios_opciones": {
+        "A": "El rango resta el mínimo al máximo y resume la distancia entre los extremos.",
+        "B": "El rango intercuartil resta Q₁ a Q₃ y mide la amplitud de la mitad central.",
+        "C": "La desviación estándar es la raíz cuadrada de la varianza y se expresa en las unidades originales.",
+        "D": "El coeficiente de variación divide la desviación estándar entre la media y expresa esa relación como porcentaje."
       },
       "opcion_a": "Rango total",
       "opcion_b": "Rango intercuartil",
@@ -151,7 +202,14 @@
           "section": "Dispersión y forma de los datos · dispersion y forma de los datos",
           "page": 179,
           "printed": 104,
-          "marks": []
+          "marks": [
+            [
+              0.2987,
+              0.3168,
+              0.409,
+              0.0192
+            ]
+          ]
         }
       ],
       "source": {
@@ -167,6 +225,12 @@
         "pdfPages": [
           179
         ]
+      },
+      "comentarios_opciones": {
+        "A": "El rango intercuartil resta Q₁ a Q₃ y mide la amplitud de la mitad central.",
+        "B": "El rango resta el mínimo al máximo y resume la distancia entre los extremos.",
+        "C": "El coeficiente de variación divide la desviación estándar entre la media y expresa esa relación como porcentaje.",
+        "D": "La desviación estándar es la raíz cuadrada de la varianza y se expresa en las unidades originales."
       },
       "opcion_a": "Rango intercuartil",
       "opcion_b": "Rango total",
@@ -192,7 +256,20 @@
           "section": "Dispersión y forma de los datos · dispersion y forma de los datos",
           "page": 172,
           "printed": 97,
-          "marks": []
+          "marks": [
+            [
+              0.3136,
+              0.4412,
+              0.0347,
+              0.0192
+            ],
+            [
+              0.353,
+              0.4412,
+              0.0405,
+              0.0192
+            ]
+          ]
         },
         {
           "slug": "educacion-salud",
@@ -200,7 +277,20 @@
           "section": "Dispersión y forma de los datos · dispersion y forma de los datos",
           "page": 173,
           "printed": 98,
-          "marks": []
+          "marks": [
+            [
+              0.7787,
+              0.1927,
+              0.1072,
+              0.0192
+            ],
+            [
+              0.0909,
+              0.2157,
+              0.0799,
+              0.0192
+            ]
+          ]
         }
       ],
       "source": {
@@ -263,7 +353,20 @@
           "section": "Dispersión y forma de los datos · dispersion y forma de los datos",
           "page": 173,
           "printed": 98,
-          "marks": []
+          "marks": [
+            [
+              0.678,
+              0.7605,
+              0.2079,
+              0.0192
+            ],
+            [
+              0.0909,
+              0.7836,
+              0.0276,
+              0.0192
+            ]
+          ]
         },
         {
           "slug": "educacion-salud",
@@ -271,7 +374,14 @@
           "section": "Dispersión y forma de los datos · dispersion y forma de los datos",
           "page": 174,
           "printed": 99,
-          "marks": []
+          "marks": [
+            [
+              0.274,
+              0.1006,
+              0.359,
+              0.0192
+            ]
+          ]
         }
       ],
       "source": {
@@ -334,7 +444,20 @@
           "section": "Dispersión y forma de los datos · dispersion y forma de los datos",
           "page": 174,
           "printed": 99,
-          "marks": []
+          "marks": [
+            [
+              0.7251,
+              0.3977,
+              0.1912,
+              0.0192
+            ],
+            [
+              0.1212,
+              0.4207,
+              0.0941,
+              0.0192
+            ]
+          ]
         },
         {
           "slug": "educacion-salud",
@@ -342,7 +465,20 @@
           "section": "Dispersión y forma de los datos · dispersion y forma de los datos",
           "page": 178,
           "printed": 103,
-          "marks": []
+          "marks": [
+            [
+              0.7484,
+              0.9659,
+              0.1381,
+              0.0139
+            ],
+            [
+              0.9092,
+              0.9661,
+              0.0312,
+              0.014
+            ]
+          ]
         }
       ],
       "source": {
@@ -405,7 +541,14 @@
           "section": "Dispersión y forma de los datos · dispersion y forma de los datos",
           "page": 186,
           "printed": 111,
-          "marks": []
+          "marks": [
+            [
+              0.3617,
+              0.5934,
+              0.3104,
+              0.0192
+            ]
+          ]
         },
         {
           "slug": "educacion-salud",
@@ -413,7 +556,20 @@
           "section": "Dispersión y forma de los datos · dispersion y forma de los datos",
           "page": 188,
           "printed": 113,
-          "marks": []
+          "marks": [
+            [
+              0.6609,
+              0.6414,
+              0.2554,
+              0.0192
+            ],
+            [
+              0.1212,
+              0.6644,
+              0.1699,
+              0.0192
+            ]
+          ]
         }
       ],
       "source": {

@@ -19,7 +19,7 @@
       "justificacion": "El centríolo se organiza en nueve tripletes de microtúbulos dispuestos como un cilindro.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "501",
-      "pagina_impresa": "",
+      "pagina_impresa": "501",
       "dificultad": "medio",
       "lecturas_comentario": [
         {
@@ -27,8 +27,21 @@
           "label": "Calvo",
           "section": "El citoesqueleto · Centríolos",
           "page": 501,
-          "printed": null,
-          "marks": []
+          "printed": 501,
+          "marks": [
+            [
+              0.8254,
+              0.4362,
+              0.1489,
+              0.0131
+            ],
+            [
+              0.4337,
+              0.4519,
+              0.0556,
+              0.0131
+            ]
+          ]
         }
       ],
       "source": {
@@ -42,6 +55,12 @@
         "pdfPages": [
           501
         ]
+      },
+      "comentarios_opciones": {
+        "A": "El centríolo se organiza en nueve tripletes de microtúbulos dispuestos como un cilindro.",
+        "B": "El axonema del cilio móvil típico tiene nueve dobletes periféricos y dos microtúbulos centrales.",
+        "C": "El axonema del cilio primario típico conserva los nueve dobletes periféricos y carece del par central.",
+        "D": "Las citoqueratinas son filamentos intermedios característicos de las células epiteliales."
       },
       "opcion_a": "Centríolo",
       "opcion_b": "Axonema de un cilio móvil típico",
@@ -58,7 +77,7 @@
       "justificacion": "El axonema del cilio móvil típico tiene nueve dobletes periféricos y dos microtúbulos centrales.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "503",
-      "pagina_impresa": "",
+      "pagina_impresa": "503",
       "dificultad": "medio",
       "lecturas_comentario": [
         {
@@ -66,8 +85,15 @@
           "label": "Calvo",
           "section": "El citoesqueleto · Cilios",
           "page": 503,
-          "printed": null,
-          "marks": []
+          "printed": 503,
+          "marks": [
+            [
+              0.2016,
+              0.7801,
+              0.2182,
+              0.0197
+            ]
+          ]
         }
       ],
       "source": {
@@ -81,6 +107,12 @@
         "pdfPages": [
           503
         ]
+      },
+      "comentarios_opciones": {
+        "A": "El axonema del cilio primario típico conserva los nueve dobletes periféricos y carece del par central.",
+        "B": "Las citoqueratinas son filamentos intermedios característicos de las células epiteliales.",
+        "C": "El axonema del cilio móvil típico tiene nueve dobletes periféricos y dos microtúbulos centrales.",
+        "D": "El centríolo se organiza en nueve tripletes de microtúbulos dispuestos como un cilindro."
       },
       "opcion_a": "Axonema de un cilio primario típico",
       "opcion_b": "Citoqueratinas",
@@ -97,7 +129,7 @@
       "justificacion": "El axonema del cilio primario típico conserva los nueve dobletes periféricos y carece del par central.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "503",
-      "pagina_impresa": "",
+      "pagina_impresa": "503",
       "dificultad": "medio",
       "lecturas_comentario": [
         {
@@ -105,8 +137,15 @@
           "label": "Calvo",
           "section": "El citoesqueleto · Cilios",
           "page": 503,
-          "printed": null,
-          "marks": []
+          "printed": 503,
+          "marks": [
+            [
+              0.2016,
+              0.7801,
+              0.2182,
+              0.0197
+            ]
+          ]
         }
       ],
       "source": {
@@ -120,6 +159,12 @@
         "pdfPages": [
           503
         ]
+      },
+      "comentarios_opciones": {
+        "A": "El axonema del cilio móvil típico tiene nueve dobletes periféricos y dos microtúbulos centrales.",
+        "B": "El axonema del cilio primario típico conserva los nueve dobletes periféricos y carece del par central.",
+        "C": "Las citoqueratinas son filamentos intermedios característicos de las células epiteliales.",
+        "D": "El centríolo se organiza en nueve tripletes de microtúbulos dispuestos como un cilindro."
       },
       "opcion_a": "Axonema de un cilio móvil típico",
       "opcion_b": "Axonema de un cilio primario típico",
@@ -136,7 +181,7 @@
       "justificacion": "Las citoqueratinas son filamentos intermedios característicos de las células epiteliales.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "529",
-      "pagina_impresa": "",
+      "pagina_impresa": "529",
       "dificultad": "medio",
       "lecturas_comentario": [
         {
@@ -144,8 +189,15 @@
           "label": "Calvo",
           "section": "El citoesqueleto · Filamentos intermedios",
           "page": 529,
-          "printed": null,
-          "marks": []
+          "printed": 529,
+          "marks": [
+            [
+              0.0271,
+              0.5217,
+              0.2232,
+              0.0197
+            ]
+          ]
         }
       ],
       "source": {
@@ -159,6 +211,12 @@
         "pdfPages": [
           529
         ]
+      },
+      "comentarios_opciones": {
+        "A": "El centríolo se organiza en nueve tripletes de microtúbulos dispuestos como un cilindro.",
+        "B": "Las citoqueratinas son filamentos intermedios característicos de las células epiteliales.",
+        "C": "El axonema del cilio móvil típico tiene nueve dobletes periféricos y dos microtúbulos centrales.",
+        "D": "El axonema del cilio primario típico conserva los nueve dobletes periféricos y carece del par central."
       },
       "opcion_a": "Centríolo",
       "opcion_b": "Citoqueratinas",
@@ -175,7 +233,7 @@
       "justificacion": "1. Correcta. Esa alternancia es la inestabilidad dinámica.\n2. Incorrecta. Se une a tubulina libre e impide su incorporación normal.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "496, 498",
-      "pagina_impresa": "",
+      "pagina_impresa": "496, 498",
       "dificultad": "dificil",
       "lecturas_comentario": [
         {
@@ -183,16 +241,36 @@
           "label": "Calvo",
           "section": "El citoesqueleto · Microtúbulos / Fármacos y microtúbulos",
           "page": 496,
-          "printed": null,
-          "marks": []
+          "printed": 496,
+          "marks": [
+            [
+              0.4954,
+              0.9076,
+              0.0328,
+              0.0197
+            ],
+            [
+              0.0271,
+              0.9346,
+              0.0047,
+              0.0197
+            ]
+          ]
         },
         {
           "slug": "biologia-celular",
           "label": "Calvo",
           "section": "El citoesqueleto · Microtúbulos / Fármacos y microtúbulos",
           "page": 498,
-          "printed": null,
-          "marks": []
+          "printed": 498,
+          "marks": [
+            [
+              0.1029,
+              0.4846,
+              0.2846,
+              0.0197
+            ]
+          ]
         }
       ],
       "source": {
@@ -243,7 +321,7 @@
       "justificacion": "1. Incorrecta. Tau los estabiliza y favorece su organización en haces.\n2. Correcta. El sitio de unión es el cinetocoro del cromosoma.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "500, 502",
-      "pagina_impresa": "",
+      "pagina_impresa": "500, 502",
       "dificultad": "dificil",
       "lecturas_comentario": [
         {
@@ -251,16 +329,36 @@
           "label": "Calvo",
           "section": "El citoesqueleto · Proteínas asociadas / Huso mitótico",
           "page": 500,
-          "printed": null,
-          "marks": []
+          "printed": 500,
+          "marks": [
+            [
+              0.671,
+              0.35,
+              0.2436,
+              0.0197
+            ],
+            [
+              0.0082,
+              0.3735,
+              0.134,
+              0.0197
+            ]
+          ]
         },
         {
           "slug": "biologia-celular",
           "label": "Calvo",
           "section": "El citoesqueleto · Proteínas asociadas / Huso mitótico",
           "page": 502,
-          "printed": null,
-          "marks": []
+          "printed": 502,
+          "marks": [
+            [
+              0.3605,
+              0.399,
+              0.2594,
+              0.0197
+            ]
+          ]
         }
       ],
       "source": {
@@ -311,7 +409,7 @@
       "justificacion": "1. Correcta. Establece uniones entre dobletes adyacentes.\n2. Correcta. Actina G es la forma monomérica y actina F la filamentosa.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "506, 513",
-      "pagina_impresa": "",
+      "pagina_impresa": "506, 513",
       "dificultad": "dificil",
       "lecturas_comentario": [
         {
@@ -319,16 +417,30 @@
           "label": "Calvo",
           "section": "El citoesqueleto · Cilios móviles / Actina",
           "page": 506,
-          "printed": null,
-          "marks": []
+          "printed": 506,
+          "marks": [
+            [
+              0.1278,
+              0.3929,
+              0.2747,
+              0.0197
+            ]
+          ]
         },
         {
           "slug": "biologia-celular",
           "label": "Calvo",
           "section": "El citoesqueleto · Cilios móviles / Actina",
           "page": 513,
-          "printed": null,
-          "marks": []
+          "printed": 513,
+          "marks": [
+            [
+              0.0271,
+              0.8103,
+              0.2715,
+              0.0197
+            ]
+          ]
         }
       ],
       "source": {
@@ -379,7 +491,7 @@
       "justificacion": "1. Incorrecta. Secuestra el monómero y limita su polimerización espontánea.\n2. Incorrecta. La diana es la cadena ligera de miosina.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "516, 525",
-      "pagina_impresa": "",
+      "pagina_impresa": "516, 525",
       "dificultad": "dificil",
       "lecturas_comentario": [
         {
@@ -387,16 +499,36 @@
           "label": "Calvo",
           "section": "El citoesqueleto · Actina / Músculo liso",
           "page": 516,
-          "printed": null,
-          "marks": []
+          "printed": 516,
+          "marks": [
+            [
+              0.0271,
+              0.6773,
+              0.2441,
+              0.0197
+            ]
+          ]
         },
         {
           "slug": "biologia-celular",
           "label": "Calvo",
           "section": "El citoesqueleto · Actina / Músculo liso",
           "page": 525,
-          "printed": null,
-          "marks": []
+          "printed": 525,
+          "marks": [
+            [
+              0.8771,
+              0.2174,
+              0.093,
+              0.0197
+            ],
+            [
+              0.0082,
+              0.2409,
+              0.1463,
+              0.0197
+            ]
+          ]
         }
       ],
       "source": {

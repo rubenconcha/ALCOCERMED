@@ -19,7 +19,7 @@
       "justificacion": "La helicasa separa las hebras del ADN y deja accesibles las cadenas que se van a copiar.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "329",
-      "pagina_impresa": "",
+      "pagina_impresa": "329",
       "dificultad": "medio",
       "lecturas_comentario": [
         {
@@ -27,8 +27,15 @@
           "label": "Calvo",
           "section": "El núcleo. Parte I: organización de la cromatina y conservación de la información genética · Replicación",
           "page": 329,
-          "printed": null,
-          "marks": []
+          "printed": 329,
+          "marks": [
+            [
+              0.0271,
+              0.4934,
+              0.2454,
+              0.0197
+            ]
+          ]
         }
       ],
       "source": {
@@ -42,6 +49,12 @@
         "pdfPages": [
           329
         ]
+      },
+      "comentarios_opciones": {
+        "A": "La primasa sintetiza el tramo inicial de ARN que sirve de cebador para la síntesis de ADN.",
+        "B": "La ADN ligasa sella la discontinuidad que queda entre fragmentos contiguos después de sustituir el cebador.",
+        "C": "La helicasa separa las hebras del ADN y deja accesibles las cadenas que se van a copiar.",
+        "D": "La topoisomerasa alivia la tensión generada en el ADN al abrirse la doble hélice."
       },
       "opcion_a": "Primasa",
       "opcion_b": "ADN ligasa",
@@ -58,7 +71,7 @@
       "justificacion": "La topoisomerasa alivia la tensión generada en el ADN al abrirse la doble hélice.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "329",
-      "pagina_impresa": "",
+      "pagina_impresa": "329",
       "dificultad": "medio",
       "lecturas_comentario": [
         {
@@ -66,8 +79,15 @@
           "label": "Calvo",
           "section": "El núcleo. Parte I: organización de la cromatina y conservación de la información genética · Replicación",
           "page": 329,
-          "printed": null,
-          "marks": []
+          "printed": 329,
+          "marks": [
+            [
+              0.2337,
+              0.5639,
+              0.1928,
+              0.0197
+            ]
+          ]
         }
       ],
       "source": {
@@ -81,6 +101,12 @@
         "pdfPages": [
           329
         ]
+      },
+      "comentarios_opciones": {
+        "A": "La primasa sintetiza el tramo inicial de ARN que sirve de cebador para la síntesis de ADN.",
+        "B": "La topoisomerasa alivia la tensión generada en el ADN al abrirse la doble hélice.",
+        "C": "La helicasa separa las hebras del ADN y deja accesibles las cadenas que se van a copiar.",
+        "D": "La ADN ligasa sella la discontinuidad que queda entre fragmentos contiguos después de sustituir el cebador."
       },
       "opcion_a": "Primasa",
       "opcion_b": "Topoisomerasa",
@@ -97,7 +123,7 @@
       "justificacion": "La primasa sintetiza el tramo inicial de ARN que sirve de cebador para la síntesis de ADN.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "329",
-      "pagina_impresa": "",
+      "pagina_impresa": "329",
       "dificultad": "medio",
       "lecturas_comentario": [
         {
@@ -105,8 +131,15 @@
           "label": "Calvo",
           "section": "El núcleo. Parte I: organización de la cromatina y conservación de la información genética · Replicación",
           "page": 329,
-          "printed": null,
-          "marks": []
+          "printed": 329,
+          "marks": [
+            [
+              0.0271,
+              0.6889,
+              0.2617,
+              0.0197
+            ]
+          ]
         }
       ],
       "source": {
@@ -120,6 +153,12 @@
         "pdfPages": [
           329
         ]
+      },
+      "comentarios_opciones": {
+        "A": "La topoisomerasa alivia la tensión generada en el ADN al abrirse la doble hélice.",
+        "B": "La ADN ligasa sella la discontinuidad que queda entre fragmentos contiguos después de sustituir el cebador.",
+        "C": "La helicasa separa las hebras del ADN y deja accesibles las cadenas que se van a copiar.",
+        "D": "La primasa sintetiza el tramo inicial de ARN que sirve de cebador para la síntesis de ADN."
       },
       "opcion_a": "Topoisomerasa",
       "opcion_b": "ADN ligasa",
@@ -136,7 +175,7 @@
       "justificacion": "La ADN ligasa sella la discontinuidad que queda entre fragmentos contiguos después de sustituir el cebador.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "331",
-      "pagina_impresa": "",
+      "pagina_impresa": "331",
       "dificultad": "medio",
       "lecturas_comentario": [
         {
@@ -144,8 +183,15 @@
           "label": "Calvo",
           "section": "El núcleo. Parte I: organización de la cromatina y conservación de la información genética · Replicación",
           "page": 331,
-          "printed": null,
-          "marks": []
+          "printed": 331,
+          "marks": [
+            [
+              0.519,
+              0.1235,
+              0.2496,
+              0.0197
+            ]
+          ]
         }
       ],
       "source": {
@@ -159,6 +205,12 @@
         "pdfPages": [
           331
         ]
+      },
+      "comentarios_opciones": {
+        "A": "La topoisomerasa alivia la tensión generada en el ADN al abrirse la doble hélice.",
+        "B": "La ADN ligasa sella la discontinuidad que queda entre fragmentos contiguos después de sustituir el cebador.",
+        "C": "La primasa sintetiza el tramo inicial de ARN que sirve de cebador para la síntesis de ADN.",
+        "D": "La helicasa separa las hebras del ADN y deja accesibles las cadenas que se van a copiar."
       },
       "opcion_a": "Topoisomerasa",
       "opcion_b": "ADN ligasa",
@@ -175,7 +227,7 @@
       "justificacion": "1. Incorrecta. Ran-GTP predomina en el núcleo y Ran-GDP en el citoplasma.\n2. Correcta. Las importinas contribuyen a transportar al núcleo proteínas con esa señal.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "297, 298",
-      "pagina_impresa": "",
+      "pagina_impresa": "297, 298",
       "dificultad": "dificil",
       "lecturas_comentario": [
         {
@@ -183,16 +235,30 @@
           "label": "Calvo",
           "section": "El núcleo. Parte I: organización de la cromatina y conservación de la información genética · Transporte nuclear",
           "page": 297,
-          "printed": null,
-          "marks": []
+          "printed": 297,
+          "marks": [
+            [
+              0.6439,
+              0.6705,
+              0.2571,
+              0.0197
+            ]
+          ]
         },
         {
           "slug": "biologia-celular",
           "label": "Calvo",
           "section": "El núcleo. Parte I: organización de la cromatina y conservación de la información genética · Transporte nuclear",
           "page": 298,
-          "printed": null,
-          "marks": []
+          "printed": 298,
+          "marks": [
+            [
+              0.6931,
+              0.6091,
+              0.2753,
+              0.0172
+            ]
+          ]
         }
       ],
       "source": {
@@ -243,7 +309,7 @@
       "justificacion": "1. Correcta. Esas cuatro parejas forman el núcleo proteico alrededor del que se organiza el ADN.\n2. Incorrecta. El texto la relaciona con compactación y represión transcripcional.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "303, 306",
-      "pagina_impresa": "",
+      "pagina_impresa": "303, 306",
       "dificultad": "dificil",
       "lecturas_comentario": [
         {
@@ -251,16 +317,36 @@
           "label": "Calvo",
           "section": "El núcleo. Parte I: organización de la cromatina y conservación de la información genética · Nucleosomas / Modificaciones de histonas",
           "page": 303,
-          "printed": null,
-          "marks": []
+          "printed": 303,
+          "marks": [
+            [
+              0.8075,
+              0.6144,
+              0.1842,
+              0.0197
+            ],
+            [
+              0.0082,
+              0.6379,
+              0.0231,
+              0.0197
+            ]
+          ]
         },
         {
           "slug": "biologia-celular",
           "label": "Calvo",
           "section": "El núcleo. Parte I: organización de la cromatina y conservación de la información genética · Nucleosomas / Modificaciones de histonas",
           "page": 306,
-          "printed": null,
-          "marks": []
+          "printed": 306,
+          "marks": [
+            [
+              0.6044,
+              0.1,
+              0.2401,
+              0.0197
+            ]
+          ]
         }
       ],
       "source": {
@@ -311,7 +397,7 @@
       "justificacion": "1. Correcta. La constitutiva se mantiene condensada, a diferencia de la facultativa.\n2. Correcta. Es el resultado de empaquetar el cromosoma X inactivo.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "308",
-      "pagina_impresa": "",
+      "pagina_impresa": "308",
       "dificultad": "dificil",
       "lecturas_comentario": [
         {
@@ -319,8 +405,21 @@
           "label": "Calvo",
           "section": "El núcleo. Parte I: organización de la cromatina y conservación de la información genética · Tipos de cromatina / Cromatina sexual",
           "page": 308,
-          "printed": null,
-          "marks": []
+          "printed": 308,
+          "marks": [
+            [
+              0.0271,
+              0.5204,
+              0.3123,
+              0.0197
+            ],
+            [
+              0.0271,
+              0.7158,
+              0.2133,
+              0.0197
+            ]
+          ]
         }
       ],
       "source": {
@@ -370,7 +469,7 @@
       "justificacion": "1. Incorrecta. Se producen en la hebra retrasada, que se sintetiza de modo discontinuo.\n2. Incorrecta. Ese intercambio es una transversión. En una transición se conserva el tipo de base.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "330, 338",
-      "pagina_impresa": "",
+      "pagina_impresa": "330, 338",
       "dificultad": "dificil",
       "lecturas_comentario": [
         {
@@ -378,16 +477,30 @@
           "label": "Calvo",
           "section": "El núcleo. Parte I: organización de la cromatina y conservación de la información genética · Replicación / Mutaciones",
           "page": 330,
-          "printed": null,
-          "marks": []
+          "printed": 330,
+          "marks": [
+            [
+              0.5497,
+              0.3997,
+              0.2244,
+              0.0146
+            ]
+          ]
         },
         {
           "slug": "biologia-celular",
           "label": "Calvo",
           "section": "El núcleo. Parte I: organización de la cromatina y conservación de la información genética · Replicación / Mutaciones",
           "page": 338,
-          "printed": null,
-          "marks": []
+          "printed": 338,
+          "marks": [
+            [
+              0.0271,
+              0.4969,
+              0.2914,
+              0.0197
+            ]
+          ]
         }
       ],
       "source": {

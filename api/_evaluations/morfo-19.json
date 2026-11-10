@@ -28,7 +28,14 @@
           "section": "El aparato circulatorio: el corazón · Cavidades cardíacas",
           "page": 750,
           "printed": 722,
-          "marks": []
+          "marks": [
+            [
+              0.6497,
+              0.7426,
+              0.1463,
+              0.0111
+            ]
+          ]
         }
       ],
       "source": {
@@ -44,6 +51,12 @@
         "pdfPages": [
           750
         ]
+      },
+      "comentarios_opciones": {
+        "A": "El ventrículo izquierdo expulsa sangre a la aorta.",
+        "B": "El ventrículo derecho expulsa sangre hacia el tronco pulmonar.",
+        "C": "La sangre de las venas cavas entra primero en la aurícula derecha.",
+        "D": "Las venas pulmonares devuelven la sangre a la aurícula izquierda."
       },
       "opcion_a": "Ventrículo izquierdo",
       "opcion_b": "Ventrículo derecho",
@@ -69,7 +82,20 @@
           "section": "El aparato circulatorio: el corazón · Cavidades cardíacas",
           "page": 751,
           "printed": 723,
-          "marks": []
+          "marks": [
+            [
+              0.575,
+              0.0491,
+              0.0896,
+              0.0105
+            ],
+            [
+              0.6735,
+              0.0495,
+              0.1248,
+              0.01
+            ]
+          ]
         }
       ],
       "source": {
@@ -85,6 +111,12 @@
         "pdfPages": [
           751
         ]
+      },
+      "comentarios_opciones": {
+        "A": "Las venas pulmonares devuelven la sangre a la aurícula izquierda.",
+        "B": "El ventrículo derecho expulsa sangre hacia el tronco pulmonar.",
+        "C": "La sangre de las venas cavas entra primero en la aurícula derecha.",
+        "D": "El ventrículo izquierdo expulsa sangre a la aorta."
       },
       "opcion_a": "Aurícula izquierda",
       "opcion_b": "Ventrículo derecho",
@@ -110,7 +142,20 @@
           "section": "El aparato circulatorio: el corazón · Circulación pulmonar",
           "page": 750,
           "printed": 722,
-          "marks": []
+          "marks": [
+            [
+              0.5266,
+              0.4505,
+              0.1721,
+              0.0111
+            ],
+            [
+              0.6987,
+              0.4493,
+              0.0112,
+              0.0078
+            ]
+          ]
         }
       ],
       "source": {
@@ -126,6 +171,12 @@
         "pdfPages": [
           750
         ]
+      },
+      "comentarios_opciones": {
+        "A": "La sangre de las venas cavas entra primero en la aurícula derecha.",
+        "B": "Las venas pulmonares devuelven la sangre a la aurícula izquierda.",
+        "C": "El ventrículo izquierdo expulsa sangre a la aorta.",
+        "D": "El ventrículo derecho expulsa sangre hacia el tronco pulmonar."
       },
       "opcion_a": "Aurícula derecha",
       "opcion_b": "Aurícula izquierda",
@@ -151,7 +202,20 @@
           "section": "El aparato circulatorio: el corazón · Circulación sistémica",
           "page": 750,
           "printed": 722,
-          "marks": []
+          "marks": [
+            [
+              0.5266,
+              0.4505,
+              0.1721,
+              0.0111
+            ],
+            [
+              0.6987,
+              0.4493,
+              0.0112,
+              0.0078
+            ]
+          ]
         }
       ],
       "source": {
@@ -167,6 +231,12 @@
         "pdfPages": [
           750
         ]
+      },
+      "comentarios_opciones": {
+        "A": "Las venas pulmonares devuelven la sangre a la aurícula izquierda.",
+        "B": "El ventrículo derecho expulsa sangre hacia el tronco pulmonar.",
+        "C": "El ventrículo izquierdo expulsa sangre a la aorta.",
+        "D": "La sangre de las venas cavas entra primero en la aurícula derecha."
       },
       "opcion_a": "Aurícula izquierda",
       "opcion_b": "Ventrículo derecho",
@@ -192,7 +262,14 @@
           "section": "El aparato circulatorio: el corazón · Válvulas / Circulación coronaria",
           "page": 751,
           "printed": 723,
-          "marks": []
+          "marks": [
+            [
+              0.7942,
+              0.7764,
+              0.1161,
+              0.0111
+            ]
+          ]
         },
         {
           "slug": "morfofuncion",
@@ -200,7 +277,14 @@
           "section": "El aparato circulatorio: el corazón · Válvulas / Circulación coronaria",
           "page": 763,
           "printed": 735,
-          "marks": []
+          "marks": [
+            [
+              0.525,
+              0.2065,
+              0.235,
+              0.0111
+            ]
+          ]
         }
       ],
       "source": {
@@ -263,7 +347,14 @@
           "section": "El aparato circulatorio: el corazón · Conducción cardíaca / Electrocardiograma",
           "page": 758,
           "printed": 730,
-          "marks": []
+          "marks": [
+            [
+              0.2478,
+              0.1174,
+              0.1667,
+              0.0111
+            ]
+          ]
         },
         {
           "slug": "morfofuncion",
@@ -271,7 +362,20 @@
           "section": "El aparato circulatorio: el corazón · Conducción cardíaca / Electrocardiograma",
           "page": 760,
           "printed": 732,
-          "marks": []
+          "marks": [
+            [
+              0.3499,
+              0.7828,
+              0.1291,
+              0.0111
+            ],
+            [
+              0.0636,
+              0.7976,
+              0.0854,
+              0.0111
+            ]
+          ]
         }
       ],
       "source": {
@@ -334,7 +438,20 @@
           "section": "El aparato circulatorio: el corazón · Ciclo cardíaco",
           "page": 764,
           "printed": 736,
-          "marks": []
+          "marks": [
+            [
+              0.4977,
+              0.8045,
+              0.155,
+              0.0161
+            ],
+            [
+              0.4977,
+              0.8282,
+              0.0914,
+              0.0111
+            ]
+          ]
         }
       ],
       "source": {
@@ -395,7 +512,20 @@
           "section": "El aparato circulatorio: el corazón · Gasto cardíaco / Regulación cardíaca",
           "page": 768,
           "printed": 740,
-          "marks": []
+          "marks": [
+            [
+              0.1057,
+              0.5531,
+              0.0199,
+              0.0173
+            ],
+            [
+              0.1374,
+              0.5531,
+              0.1553,
+              0.0173
+            ]
+          ]
         },
         {
           "slug": "morfofuncion",
@@ -403,7 +533,20 @@
           "section": "El aparato circulatorio: el corazón · Gasto cardíaco / Regulación cardíaca",
           "page": 771,
           "printed": 743,
-          "marks": []
+          "marks": [
+            [
+              0.1198,
+              0.5541,
+              0.2019,
+              0.0129
+            ],
+            [
+              0.1198,
+              0.5728,
+              0.0549,
+              0.0112
+            ]
+          ]
         }
       ],
       "source": {

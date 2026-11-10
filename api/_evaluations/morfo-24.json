@@ -28,7 +28,14 @@
           "section": "Equilibrios hídrico, hidroelectrolítico y acidobásico · Trastornos acidobásicos",
           "page": 974,
           "printed": 946,
-          "marks": []
+          "marks": [
+            [
+              0.2914,
+              0.1174,
+              0.1836,
+              0.0111
+            ]
+          ]
         }
       ],
       "source": {
@@ -44,6 +51,12 @@
         "pdfPages": [
           974
         ]
+      },
+      "comentarios_opciones": {
+        "A": "La hipoventilación retiene CO₂ y disminuye el pH. El origen del cambio es respiratorio.",
+        "B": "La hiperventilación elimina CO₂ más deprisa y eleva el pH. El origen del cambio es respiratorio.",
+        "C": "La pérdida de bicarbonato disminuye la reserva de base y reduce el pH. El cambio inicial es metabólico.",
+        "D": "La pérdida de ácido gástrico favorece una elevación del pH de origen metabólico."
       },
       "opcion_a": "Acidosis respiratoria",
       "opcion_b": "Alcalosis respiratoria",
@@ -69,7 +82,20 @@
           "section": "Equilibrios hídrico, hidroelectrolítico y acidobásico · Trastornos acidobásicos",
           "page": 974,
           "printed": 946,
-          "marks": []
+          "marks": [
+            [
+              0.3188,
+              0.1916,
+              0.1602,
+              0.0111
+            ],
+            [
+              0.0636,
+              0.2065,
+              0.0456,
+              0.0111
+            ]
+          ]
         }
       ],
       "source": {
@@ -85,6 +111,12 @@
         "pdfPages": [
           974
         ]
+      },
+      "comentarios_opciones": {
+        "A": "La pérdida de bicarbonato disminuye la reserva de base y reduce el pH. El cambio inicial es metabólico.",
+        "B": "La hipoventilación retiene CO₂ y disminuye el pH. El origen del cambio es respiratorio.",
+        "C": "La pérdida de ácido gástrico favorece una elevación del pH de origen metabólico.",
+        "D": "La hiperventilación elimina CO₂ más deprisa y eleva el pH. El origen del cambio es respiratorio."
       },
       "opcion_a": "Acidosis metabólica",
       "opcion_b": "Acidosis respiratoria",
@@ -110,7 +142,14 @@
           "section": "Equilibrios hídrico, hidroelectrolítico y acidobásico · Trastornos acidobásicos",
           "page": 974,
           "printed": 946,
-          "marks": []
+          "marks": [
+            [
+              0.5266,
+              0.1174,
+              0.2598,
+              0.0111
+            ]
+          ]
         }
       ],
       "source": {
@@ -126,6 +165,12 @@
         "pdfPages": [
           974
         ]
+      },
+      "comentarios_opciones": {
+        "A": "La pérdida de bicarbonato disminuye la reserva de base y reduce el pH. El cambio inicial es metabólico.",
+        "B": "La pérdida de ácido gástrico favorece una elevación del pH de origen metabólico.",
+        "C": "La hiperventilación elimina CO₂ más deprisa y eleva el pH. El origen del cambio es respiratorio.",
+        "D": "La hipoventilación retiene CO₂ y disminuye el pH. El origen del cambio es respiratorio."
       },
       "opcion_a": "Acidosis metabólica",
       "opcion_b": "Alcalosis metabólica",
@@ -151,7 +196,20 @@
           "section": "Equilibrios hídrico, hidroelectrolítico y acidobásico · Trastornos acidobásicos",
           "page": 974,
           "printed": 946,
-          "marks": []
+          "marks": [
+            [
+              0.6346,
+              0.2213,
+              0.02,
+              0.0111
+            ],
+            [
+              0.6578,
+              0.2213,
+              0.0625,
+              0.0111
+            ]
+          ]
         }
       ],
       "source": {
@@ -167,6 +225,12 @@
         "pdfPages": [
           974
         ]
+      },
+      "comentarios_opciones": {
+        "A": "La pérdida de ácido gástrico favorece una elevación del pH de origen metabólico.",
+        "B": "La pérdida de bicarbonato disminuye la reserva de base y reduce el pH. El cambio inicial es metabólico.",
+        "C": "La hiperventilación elimina CO₂ más deprisa y eleva el pH. El origen del cambio es respiratorio.",
+        "D": "La hipoventilación retiene CO₂ y disminuye el pH. El origen del cambio es respiratorio."
       },
       "opcion_a": "Alcalosis metabólica",
       "opcion_b": "Acidosis metabólica",
@@ -192,7 +256,20 @@
           "section": "Equilibrios hídrico, hidroelectrolítico y acidobásico · Compartimentos líquidos / Electrólitos",
           "page": 959,
           "printed": 931,
-          "marks": []
+          "marks": [
+            [
+              0.525,
+              0.3226,
+              0.2857,
+              0.0161
+            ],
+            [
+              0.525,
+              0.3463,
+              0.0474,
+              0.0111
+            ]
+          ]
         },
         {
           "slug": "morfofuncion",
@@ -200,7 +277,14 @@
           "section": "Equilibrios hídrico, hidroelectrolítico y acidobásico · Compartimentos líquidos / Electrólitos",
           "page": 965,
           "printed": 937,
-          "marks": []
+          "marks": [
+            [
+              0.2409,
+              0.371,
+              0.233,
+              0.0111
+            ]
+          ]
         }
       ],
       "source": {
@@ -263,7 +347,20 @@
           "section": "Equilibrios hídrico, hidroelectrolítico y acidobásico · Balance hídrico / Balance de sodio",
           "page": 961,
           "printed": 933,
-          "marks": []
+          "marks": [
+            [
+              0.4862,
+              0.3773,
+              0.02,
+              0.0111
+            ],
+            [
+              0.0909,
+              0.3921,
+              0.2496,
+              0.0111
+            ]
+          ]
         },
         {
           "slug": "morfofuncion",
@@ -271,7 +368,14 @@
           "section": "Equilibrios hídrico, hidroelectrolítico y acidobásico · Balance hídrico / Balance de sodio",
           "page": 966,
           "printed": 938,
-          "marks": []
+          "marks": [
+            [
+              0.4977,
+              0.7114,
+              0.1743,
+              0.0111
+            ]
+          ]
         }
       ],
       "source": {
@@ -334,7 +438,32 @@
           "section": "Equilibrios hídrico, hidroelectrolítico y acidobásico · Alteraciones hídricas",
           "page": 964,
           "printed": 936,
-          "marks": []
+          "marks": [
+            [
+              0.628,
+              0.428,
+              0.0165,
+              0.0136
+            ],
+            [
+              0.6709,
+              0.4285,
+              0.179,
+              0.0129
+            ],
+            [
+              0.0636,
+              0.2246,
+              0.164,
+              0.0149
+            ],
+            [
+              0.0636,
+              0.2474,
+              0.0648,
+              0.0111
+            ]
+          ]
         }
       ],
       "source": {
@@ -395,7 +524,20 @@
           "section": "Equilibrios hídrico, hidroelectrolítico y acidobásico · Compensación acidobásica / Regulación renal",
           "page": 970,
           "printed": 942,
-          "marks": []
+          "marks": [
+            [
+              0.1057,
+              0.0951,
+              0.0199,
+              0.0173
+            ],
+            [
+              0.1374,
+              0.0951,
+              0.2323,
+              0.0173
+            ]
+          ]
         },
         {
           "slug": "morfofuncion",
@@ -403,7 +545,20 @@
           "section": "Equilibrios hídrico, hidroelectrolítico y acidobásico · Compensación acidobásica / Regulación renal",
           "page": 975,
           "printed": 947,
-          "marks": []
+          "marks": [
+            [
+              0.4824,
+              0.0491,
+              0.0896,
+              0.0105
+            ],
+            [
+              0.5808,
+              0.0495,
+              0.1995,
+              0.01
+            ]
+          ]
         }
       ],
       "source": {

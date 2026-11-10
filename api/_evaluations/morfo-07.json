@@ -28,7 +28,20 @@
           "section": "Tejido óseo · Células óseas",
           "page": 237,
           "printed": 209,
-          "marks": []
+          "marks": [
+            [
+              0.7046,
+              0.0491,
+              0.0821,
+              0.0105
+            ],
+            [
+              0.7955,
+              0.0495,
+              0.067,
+              0.01
+            ]
+          ]
         }
       ],
       "source": {
@@ -44,6 +57,12 @@
         "pdfPages": [
           237
         ]
+      },
+      "comentarios_opciones": {
+        "A": "Los osteocitos son células óseas maduras alojadas en lagunas dentro de la matriz.",
+        "B": "Las células osteoprogenitoras se diferencian en osteoblastos, que luego pueden depositar matriz.",
+        "C": "Los osteoblastos depositan matriz ósea. Pueden convertirse en osteocitos cuando quedan rodeados por ella.",
+        "D": "Los osteoclastos resorben matriz ósea durante la remodelación."
       },
       "opcion_a": "Osteocitos",
       "opcion_b": "Células osteoprogenitoras",
@@ -69,7 +88,20 @@
           "section": "Tejido óseo · Células óseas",
           "page": 238,
           "printed": 210,
-          "marks": []
+          "marks": [
+            [
+              0.0636,
+              0.0491,
+              0.0261,
+              0.0105
+            ],
+            [
+              0.1406,
+              0.0491,
+              0.0775,
+              0.0105
+            ]
+          ]
         }
       ],
       "source": {
@@ -85,6 +117,12 @@
         "pdfPages": [
           238
         ]
+      },
+      "comentarios_opciones": {
+        "A": "Las células osteoprogenitoras se diferencian en osteoblastos, que luego pueden depositar matriz.",
+        "B": "Los osteoblastos depositan matriz ósea. Pueden convertirse en osteocitos cuando quedan rodeados por ella.",
+        "C": "Los osteoclastos resorben matriz ósea durante la remodelación.",
+        "D": "Los osteocitos son células óseas maduras alojadas en lagunas dentro de la matriz."
       },
       "opcion_a": "Células osteoprogenitoras",
       "opcion_b": "Osteoblastos",
@@ -110,7 +148,20 @@
           "section": "Tejido óseo · Células óseas",
           "page": 238,
           "printed": 210,
-          "marks": []
+          "marks": [
+            [
+              0.0636,
+              0.0491,
+              0.0261,
+              0.0105
+            ],
+            [
+              0.1406,
+              0.0491,
+              0.0775,
+              0.0105
+            ]
+          ]
         }
       ],
       "source": {
@@ -126,6 +177,12 @@
         "pdfPages": [
           238
         ]
+      },
+      "comentarios_opciones": {
+        "A": "Los osteoclastos resorben matriz ósea durante la remodelación.",
+        "B": "Los osteoblastos depositan matriz ósea. Pueden convertirse en osteocitos cuando quedan rodeados por ella.",
+        "C": "Las células osteoprogenitoras se diferencian en osteoblastos, que luego pueden depositar matriz.",
+        "D": "Los osteocitos son células óseas maduras alojadas en lagunas dentro de la matriz."
       },
       "opcion_a": "Osteoclastos",
       "opcion_b": "Osteoblastos",
@@ -151,7 +208,20 @@
           "section": "Tejido óseo · Células óseas",
           "page": 237,
           "printed": 209,
-          "marks": []
+          "marks": [
+            [
+              0.7046,
+              0.0491,
+              0.0821,
+              0.0105
+            ],
+            [
+              0.7955,
+              0.0495,
+              0.067,
+              0.01
+            ]
+          ]
         }
       ],
       "source": {
@@ -167,6 +237,12 @@
         "pdfPages": [
           237
         ]
+      },
+      "comentarios_opciones": {
+        "A": "Los osteoclastos resorben matriz ósea durante la remodelación.",
+        "B": "Los osteocitos son células óseas maduras alojadas en lagunas dentro de la matriz.",
+        "C": "Los osteoblastos depositan matriz ósea. Pueden convertirse en osteocitos cuando quedan rodeados por ella.",
+        "D": "Las células osteoprogenitoras se diferencian en osteoblastos, que luego pueden depositar matriz."
       },
       "opcion_a": "Osteoclastos",
       "opcion_b": "Osteocitos",
@@ -192,7 +268,20 @@
           "section": "Tejido óseo · Matriz ósea",
           "page": 239,
           "printed": 211,
-          "marks": []
+          "marks": [
+            [
+              0.7046,
+              0.0491,
+              0.0821,
+              0.0105
+            ],
+            [
+              0.7955,
+              0.0495,
+              0.067,
+              0.01
+            ]
+          ]
         }
       ],
       "source": {
@@ -253,7 +342,20 @@
           "section": "Tejido óseo · Anatomía del hueso / Histología ósea",
           "page": 236,
           "printed": 208,
-          "marks": []
+          "marks": [
+            [
+              0.0636,
+              0.0491,
+              0.0261,
+              0.0105
+            ],
+            [
+              0.1406,
+              0.0491,
+              0.0775,
+              0.0105
+            ]
+          ]
         },
         {
           "slug": "morfofuncion",
@@ -261,7 +363,20 @@
           "section": "Tejido óseo · Anatomía del hueso / Histología ósea",
           "page": 237,
           "printed": 209,
-          "marks": []
+          "marks": [
+            [
+              0.7046,
+              0.0491,
+              0.0821,
+              0.0105
+            ],
+            [
+              0.7955,
+              0.0495,
+              0.067,
+              0.01
+            ]
+          ]
         }
       ],
       "source": {
@@ -324,7 +439,20 @@
           "section": "Tejido óseo · 7.3 Osificación endocondral / Crecimiento óseo",
           "page": 242,
           "printed": 214,
-          "marks": []
+          "marks": [
+            [
+              0.8241,
+              0.6486,
+              0.089,
+              0.0111
+            ],
+            [
+              0.4977,
+              0.6634,
+              0.0265,
+              0.0111
+            ]
+          ]
         },
         {
           "slug": "morfofuncion",
@@ -332,7 +460,20 @@
           "section": "Tejido óseo · 7.3 Osificación endocondral / Crecimiento óseo",
           "page": 247,
           "printed": 219,
-          "marks": []
+          "marks": [
+            [
+              0.7046,
+              0.0491,
+              0.0821,
+              0.0105
+            ],
+            [
+              0.7955,
+              0.0495,
+              0.067,
+              0.01
+            ]
+          ]
         }
       ],
       "source": {
@@ -395,7 +536,20 @@
           "section": "Tejido óseo · Reparación de fracturas",
           "page": 254,
           "printed": 226,
-          "marks": []
+          "marks": [
+            [
+              0.0636,
+              0.0491,
+              0.0261,
+              0.0105
+            ],
+            [
+              0.1406,
+              0.0491,
+              0.0775,
+              0.0105
+            ]
+          ]
         }
       ],
       "source": {

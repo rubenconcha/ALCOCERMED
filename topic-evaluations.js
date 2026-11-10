@@ -6,6 +6,7 @@
     let catalogPromise, request = 0, loading = 0, topicId = '';
     const normalize = value => String(value).normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().trim();
     const questionCount = count => count + (count === 1 ? ' pregunta' : ' preguntas');
+    const minutes = count => count + (count === 1 ? ' minuto' : ' minutos');
     async function catalog() {
         if (window.CampusCatalogs?.evaluations) return window.CampusCatalogs.evaluations;
         if (!catalogPromise) catalogPromise = fetch('/api/topic-evaluation?id=catalogo')
@@ -21,11 +22,13 @@
             subjectFilter.value = requested.subject;
             topicFilter.value = requested.title;
         }
-        const query = normalize(topicFilter.value);
+        const query = normalize(topicFilter.value).replace(/\s+/g, ' ');
+        const chapter = /^(?:tema|capitulo)\s+(\d+)$/.exec(query);
         const exams = topicId
             ? (requested ? [requested] : [])
             : data.exams.filter(exam => (!subjectFilter.value || subjectFilter.value === exam.subject) &&
-                normalize([exam.title, exam.topic, exam.subjectLabel, exam.source, exam.number && 'Tema ' + exam.number].filter(Boolean).join(' ')).includes(query));
+                (chapter ? exam.number === Number(chapter[1]) :
+                    normalize([exam.title, exam.topic, exam.subjectLabel, exam.source, exam.number && 'Tema ' + exam.number].filter(Boolean).join(' ')).includes(query)));
         const grid = $('topic-eval-grid'); grid.replaceChildren();
         $('topic-eval-count').textContent = exams.length + (exams.length === 1 ? ' evaluación' : ' evaluaciones');
         $('topic-eval-status').textContent = exams.length ? '' : 'No hay temas que coincidan con tu búsqueda.';
@@ -34,7 +37,7 @@
             const eyebrow = document.createElement('span'); eyebrow.className = 'entrance-eyebrow';
             eyebrow.textContent = exam.subjectLabel + (exam.id.startsWith('suf-') ? ' · Suficiencia académica' : exam.number ? ' · Tema ' + exam.number : '');
             const title = document.createElement('h3'); title.textContent = exam.title;
-            const count = document.createElement('p'); count.textContent = questionCount(exam.count) + ' · ' + exam.duration + ' minutos';
+            const count = document.createElement('p'); count.textContent = questionCount(exam.count) + ' · ' + minutes(exam.duration);
             const note = document.createElement('p'); note.className = 'past-card-note';
             note.textContent = exam.source ? exam.source + ' · Fuente por pregunta al finalizar.' : 'Revisa tus respuestas al finalizar.';
             const button = document.createElement('button'); button.type='button';button.className='btn-primary';
@@ -87,7 +90,7 @@
             }
             if ($('sim-passage')?.dataset?.passage) renderPracticePassage('sim', null);
             simState.mode='tema';simState.selectedMateria=exam.subject;simState.selectedExamen='Evaluación: '+exam.title;
-            simState.topicEvaluationId=exam.id;simState.pastExamId=null;simState.strictTiming=true;simState.entranceOrigin=false;simState.independentScope=null;
+            simState.topicEvaluationId=exam.id;simState.topicEvaluationSubject=exam.subjectLabel;simState.pastExamId=null;simState.strictTiming=true;simState.entranceOrigin=false;simState.independentScope=null;
             simState.duracion=paper.duration;simState.nPreguntas=paper.questions.length;simState.preguntas=paper.questions;
             simState.answers=paper.questions.map(()=>({selected:null}));simState.currentIdx=0;simState.finalized=false;
             simState.secondsLeft=paper.duration*60;simState.startTimestamp=Date.now();simState.endTimestamp=Date.now()+simState.secondsLeft*1000;
@@ -115,9 +118,14 @@
         }else returnToSelection();
     };
     function filterChanged() {
+        ++request; loading = 0;
         topicId = '';
         return render().catch(error => { $('topic-eval-status').textContent = error.message; });
     }
+    $('topic-eval-reset').addEventListener('click', () => {
+        subjectFilter.value = topicFilter.value = '';
+        filterChanged();
+    });
     subjectFilter.addEventListener('change', filterChanged);
     topicFilter.addEventListener('input', filterChanged);
     function clear() {

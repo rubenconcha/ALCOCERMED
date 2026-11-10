@@ -28,7 +28,20 @@
           "section": "Forma y función celulares · Transporte vesicular",
           "page": 127,
           "printed": 99,
-          "marks": []
+          "marks": [
+            [
+              0.6273,
+              0.0491,
+              0.0821,
+              0.0105
+            ],
+            [
+              0.7182,
+              0.0495,
+              0.0891,
+              0.01
+            ]
+          ]
         }
       ],
       "source": {
@@ -44,6 +57,12 @@
         "pdfPages": [
           127
         ]
+      },
+      "comentarios_opciones": {
+        "A": "La fusión de la vesícula con la membrana plasmática expone su contenido al exterior durante la exocitosis.",
+        "B": "En la transcitosis, la endocitosis ocurre en una cara y la exocitosis en la opuesta.",
+        "C": "La pinocitosis incorpora porciones de líquido extracelular con sustancias disueltas.",
+        "D": "En la fagocitosis, la célula envuelve una partícula grande y la incorpora en una vesícula."
       },
       "opcion_a": "Exocitosis",
       "opcion_b": "Transcitosis",
@@ -69,7 +88,20 @@
           "section": "Forma y función celulares · Transporte vesicular",
           "page": 127,
           "printed": 99,
-          "marks": []
+          "marks": [
+            [
+              0.6273,
+              0.0491,
+              0.0821,
+              0.0105
+            ],
+            [
+              0.7182,
+              0.0495,
+              0.0891,
+              0.01
+            ]
+          ]
         }
       ],
       "source": {
@@ -85,6 +117,12 @@
         "pdfPages": [
           127
         ]
+      },
+      "comentarios_opciones": {
+        "A": "La pinocitosis incorpora porciones de líquido extracelular con sustancias disueltas.",
+        "B": "En la fagocitosis, la célula envuelve una partícula grande y la incorpora en una vesícula.",
+        "C": "La fusión de la vesícula con la membrana plasmática expone su contenido al exterior durante la exocitosis.",
+        "D": "En la transcitosis, la endocitosis ocurre en una cara y la exocitosis en la opuesta."
       },
       "opcion_a": "Pinocitosis",
       "opcion_b": "Fagocitosis",
@@ -110,7 +148,20 @@
           "section": "Forma y función celulares · Transporte vesicular",
           "page": 128,
           "printed": 100,
-          "marks": []
+          "marks": [
+            [
+              0.0636,
+              0.0491,
+              0.0261,
+              0.0105
+            ],
+            [
+              0.1406,
+              0.0491,
+              0.0803,
+              0.0105
+            ]
+          ]
         }
       ],
       "source": {
@@ -126,6 +177,12 @@
         "pdfPages": [
           128
         ]
+      },
+      "comentarios_opciones": {
+        "A": "La fusión de la vesícula con la membrana plasmática expone su contenido al exterior durante la exocitosis.",
+        "B": "En la transcitosis, la endocitosis ocurre en una cara y la exocitosis en la opuesta.",
+        "C": "En la fagocitosis, la célula envuelve una partícula grande y la incorpora en una vesícula.",
+        "D": "La pinocitosis incorpora porciones de líquido extracelular con sustancias disueltas."
       },
       "opcion_a": "Exocitosis",
       "opcion_b": "Transcitosis",
@@ -151,7 +208,20 @@
           "section": "Forma y función celulares · Transporte vesicular",
           "page": 128,
           "printed": 100,
-          "marks": []
+          "marks": [
+            [
+              0.0636,
+              0.0491,
+              0.0261,
+              0.0105
+            ],
+            [
+              0.1406,
+              0.0491,
+              0.0803,
+              0.0105
+            ]
+          ]
         }
       ],
       "source": {
@@ -167,6 +237,12 @@
         "pdfPages": [
           128
         ]
+      },
+      "comentarios_opciones": {
+        "A": "En la fagocitosis, la célula envuelve una partícula grande y la incorpora en una vesícula.",
+        "B": "La fusión de la vesícula con la membrana plasmática expone su contenido al exterior durante la exocitosis.",
+        "C": "La pinocitosis incorpora porciones de líquido extracelular con sustancias disueltas.",
+        "D": "En la transcitosis, la endocitosis ocurre en una cara y la exocitosis en la opuesta."
       },
       "opcion_a": "Fagocitosis",
       "opcion_b": "Exocitosis",
@@ -192,7 +268,20 @@
           "section": "Forma y función celulares · Transporte activo / Transporte",
           "page": 125,
           "printed": 97,
-          "marks": []
+          "marks": [
+            [
+              0.6273,
+              0.0491,
+              0.0821,
+              0.0105
+            ],
+            [
+              0.7182,
+              0.0495,
+              0.0891,
+              0.01
+            ]
+          ]
         },
         {
           "slug": "morfofuncion",
@@ -200,7 +289,20 @@
           "section": "Forma y función celulares · Transporte activo / Transporte",
           "page": 129,
           "printed": 101,
-          "marks": []
+          "marks": [
+            [
+              0.6273,
+              0.0491,
+              0.0821,
+              0.0105
+            ],
+            [
+              0.7182,
+              0.0495,
+              0.0891,
+              0.01
+            ]
+          ]
         }
       ],
       "source": {
@@ -263,7 +365,32 @@
           "section": "Forma y función celulares · Tonicidad / 3.3 Tonicidad",
           "page": 122,
           "printed": 94,
-          "marks": []
+          "marks": [
+            [
+              0.0636,
+              0.0491,
+              0.0186,
+              0.0105
+            ],
+            [
+              0.1406,
+              0.0491,
+              0.0803,
+              0.0105
+            ],
+            [
+              0.6639,
+              0.9058,
+              0.215,
+              0.0106
+            ],
+            [
+              0.0636,
+              0.9194,
+              0.0409,
+              0.0106
+            ]
+          ]
         }
       ],
       "source": {
@@ -324,7 +451,20 @@
           "section": "Forma y función celulares · Citoesqueleto / Canales",
           "page": 114,
           "printed": 86,
-          "marks": []
+          "marks": [
+            [
+              0.0636,
+              0.0491,
+              0.0186,
+              0.0105
+            ],
+            [
+              0.1406,
+              0.0491,
+              0.0803,
+              0.0105
+            ]
+          ]
         },
         {
           "slug": "morfofuncion",
@@ -332,7 +472,20 @@
           "section": "Forma y función celulares · Citoesqueleto / Canales",
           "page": 130,
           "printed": 102,
-          "marks": []
+          "marks": [
+            [
+              0.0636,
+              0.0491,
+              0.0261,
+              0.0105
+            ],
+            [
+              0.1406,
+              0.0491,
+              0.0803,
+              0.0105
+            ]
+          ]
         }
       ],
       "source": {
@@ -395,7 +548,20 @@
           "section": "Forma y función celulares · Organelos",
           "page": 134,
           "printed": 106,
-          "marks": []
+          "marks": [
+            [
+              0.0636,
+              0.0491,
+              0.0261,
+              0.0105
+            ],
+            [
+              0.1406,
+              0.0491,
+              0.0803,
+              0.0105
+            ]
+          ]
         },
         {
           "slug": "morfofuncion",
@@ -403,7 +569,20 @@
           "section": "Forma y función celulares · Organelos",
           "page": 135,
           "printed": 107,
-          "marks": []
+          "marks": [
+            [
+              0.6273,
+              0.0491,
+              0.0821,
+              0.0105
+            ],
+            [
+              0.7182,
+              0.0495,
+              0.0891,
+              0.01
+            ]
+          ]
         }
       ],
       "source": {

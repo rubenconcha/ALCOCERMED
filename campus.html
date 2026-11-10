@@ -1182,7 +1182,8 @@
             <div class="sim-header campus-page-head">
                 <button class="btn-back-game" onclick="goBack()"><i class="fas fa-arrow-left" aria-hidden="true"></i> volver</button>
                 <div><span class="entrance-eyebrow">PREPARATORIA BEN CARSON · MEDICINA UMSS</span>
-                <h2>evaluación por tema</h2><p>Elige una materia y un tema. Responde la evaluación y revisa tus respuestas con la bibliografía.</p></div>
+                <h2>Evaluación por tema</h2><p>Elige una materia y un tema. Al terminar podrás revisar tus respuestas y su explicación.</p></div>
+                <button type="button" id="topic-eval-results" class="btn-back-game" onclick="openStudentResults('evaluaciones')">Mis evaluaciones</button>
             </div>
             <div class="past-filters">
                 <label for="topic-eval-subject">materia
@@ -1202,53 +1203,12 @@
                     </select>
                 </label>
                 <label for="topic-eval-search">tema<input id="topic-eval-search" type="search" placeholder="Buscar un tema…" autocomplete="off"></label>
+                <button type="button" id="topic-eval-reset" class="btn-back-game">Limpiar filtros</button>
                 <span id="topic-eval-count" aria-live="polite"></span>
             </div>
             <p id="topic-eval-status" role="status"></p>
             <div id="topic-eval-grid" class="past-grid"></div>
-            <details class="topic-eval-history"><summary>Mis resultados anteriores</summary>
-            <!-- Métricas globales -->
-            <div class="eval-metrics-grid">
-                <div class="eval-metric-card">
-                    <i class="fas fa-clipboard-check eval-metric-icon" style="color:#7c3aed;"></i>
-                    <span class="eval-metric-num" id="eval-total-sims">0</span>
-                    <label>simulacros</label>
-                </div>
-                <div class="eval-metric-card">
-                    <i class="fas fa-trophy eval-metric-icon" style="color:#f59e0b;"></i>
-                    <span class="eval-metric-num" id="eval-mejor">—%</span>
-                    <label>mejor nota</label>
-                </div>
-                <div class="eval-metric-card">
-                    <i class="fas fa-chart-line eval-metric-icon" style="color:#22c55e;"></i>
-                    <span class="eval-metric-num" id="eval-promedio">—%</span>
-                    <label>promedio</label>
-                </div>
-                <div class="eval-metric-card">
-                    <i class="fas fa-clock eval-metric-icon" style="color:#3b82f6;"></i>
-                    <span class="eval-metric-num" id="eval-tiempo-total">0 min</span>
-                    <label>tiempo total</label>
-                </div>
-            </div>
 
-            <!-- Progreso por materia -->
-            <div class="eval-section-card">
-                <h3 class="eval-section-title"><i class="fas fa-book-medical"></i> rendimiento por materia</h3>
-                <div id="eval-materias-list" class="eval-materias-list">
-                    <p class="eval-empty"><i class="fas fa-inbox"></i> aún no hay evaluaciones registradas.<br>completa
-                        un simulacro o banco de preguntas.</p>
-                </div>
-            </div>
-
-            <!-- Historial de simulacros -->
-            <div class="eval-section-card">
-                <h3 class="eval-section-title"><i class="fas fa-history"></i> historial de sesiones</h3>
-                <div id="eval-historial" class="eval-historial">
-                    <p class="eval-empty"><i class="fas fa-inbox"></i> sin sesiones registradas todavía.</p>
-                </div>
-            </div>
-
-            </details>
         </section>
 
         <!-- ══ JUEGO: AHORCADO ══ -->
@@ -1751,7 +1711,7 @@
 <a class="support-float" href="https://wa.me/59173752688?text=Hola%2C%20tengo%20una%20consulta%20sobre%20AlcocerMed" target="_blank" rel="noopener noreferrer" aria-label="Hablar con AlcocerMed por WhatsApp" title="¿Te ayudamos? Escríbenos"><svg aria-hidden="true"><use href="/assets/calendar-icons.svg#whatsapp"></use></svg></a>
     <template id="campus-section-assets">
         <link rel="stylesheet" data-campus-assets="campus-extra" href="/assets/vendor/font-awesome-6.4.0/css/all.min.css">
-        <script data-campus-assets="exam-engine entrance-attempt" src="campus-exam-engine.js?v=1"></script>
+        <script data-campus-assets="exam-engine entrance-attempt" src="campus-exam-engine.js?v=2"></script>
         <link rel="stylesheet" data-campus-assets="campus" href="campus-navigation.css?v=4">
         <link rel="stylesheet" data-campus-assets="campus" href="campus-home.css?v=5">
         <link rel="stylesheet" data-campus-assets="campus" href="campus-topics.css?v=4">
@@ -1761,16 +1721,16 @@
         <script data-campus-assets="campus" src="official-flashcards.js?v=2"></script>
         <script data-campus-assets="campus" src="study-depth.js?v=20"></script>
         <script data-campus-assets="campus" src="campus-section-tracking.js?v=1"></script>
-        <script data-campus-assets="campus" src="question-review.js?v=12"></script>
+        <script data-campus-assets="campus" src="question-review.js?v=13"></script>
         <script data-campus-assets="campus" src="study-media.js?v=20261021-visual5b"></script>
-        <script data-campus-assets="campus" src="script.js?v=20261109-apertura"></script>
+        <script data-campus-assets="campus" src="script.js?v=20261110-temas"></script>
         <script data-campus-assets="campus" src="study-assessments.js?v=2"></script>
         <script data-campus-assets="campus" src="study-calendar-data.js?v=7"></script>
         <script data-campus-assets="campus" src="campus-shell.js?v=4"></script>
-        <script data-campus-assets="campus" src="student-results.js?v=6"></script>
+        <script data-campus-assets="campus" src="student-results.js?v=7"></script>
         <link rel="stylesheet" data-campus-assets="campus-extra simulations" href="simulacro-library.css?v=7">
         <link rel="stylesheet" data-campus-assets="campus past evaluations entrance-attempt" href="past-exams.css?v=7">
-        <link rel="stylesheet" data-campus-assets="campus-extra evaluations" href="topic-evaluations.css?v=5">
+        <link rel="stylesheet" data-campus-assets="campus-extra evaluations" href="topic-evaluations.css?v=6">
         <link rel="stylesheet" data-campus-assets="campus-extra atlas" href="campus-atlas.css?v=5">
         <link rel="stylesheet" data-campus-assets="sufficiency" href="suficiencia.css?v=9">
         <script data-campus-assets="campus flashcards" src="student-library.js?v=11"></script>
@@ -1782,7 +1742,7 @@
         <script data-campus-assets="entrance-attempt" src="simulation-scope.js?v=11"></script>
         <script data-campus-assets="entrance-attempt" src="simulacro-ingreso.js?v=14"></script>
         <script data-campus-assets="campus-extra simulations" src="simulacro-library.js?v=10"></script>
-        <script data-campus-assets="campus-extra evaluations" src="topic-evaluations.js?v=20261110-revision"></script>
+        <script data-campus-assets="campus-extra evaluations" src="topic-evaluations.js?v=20261110-revision2"></script>
         <script data-campus-assets="campus-extra atlas" src="campus-atlas.js?v=12"></script>
         <script data-campus-assets="sufficiency" src="suficiencia-core.js?v=12"></script>
         <script data-campus-assets="sufficiency" src="suficiencia.js?v=17"></script>

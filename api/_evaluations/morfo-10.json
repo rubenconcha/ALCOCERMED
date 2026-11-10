@@ -28,7 +28,14 @@
           "section": "El sistema muscular · Acción muscular",
           "page": 346,
           "printed": 318,
-          "marks": []
+          "marks": [
+            [
+              0.0901,
+              0.6546,
+              0.204,
+              0.0111
+            ]
+          ]
         }
       ],
       "source": {
@@ -44,6 +51,12 @@
         "pdfPages": [
           346
         ]
+      },
+      "comentarios_opciones": {
+        "A": "El antagonista se opone al agonista y puede controlar el movimiento resultante.",
+        "B": "El fijador estabiliza una parte para que el motor principal pueda mover otra.",
+        "C": "El agonista es el motor principal de la acción que se está analizando.",
+        "D": "El sinergista ayuda al agonista a producir la acción del movimiento."
       },
       "opcion_a": "Antagonista",
       "opcion_b": "Fijador",
@@ -69,7 +82,20 @@
           "section": "El sistema muscular · Acción muscular",
           "page": 346,
           "printed": 318,
-          "marks": []
+          "marks": [
+            [
+              0.889,
+              0.1174,
+              0.0241,
+              0.0111
+            ],
+            [
+              0.5266,
+              0.1322,
+              0.2157,
+              0.0111
+            ]
+          ]
         }
       ],
       "source": {
@@ -85,6 +111,12 @@
         "pdfPages": [
           346
         ]
+      },
+      "comentarios_opciones": {
+        "A": "El agonista es el motor principal de la acción que se está analizando.",
+        "B": "El fijador estabiliza una parte para que el motor principal pueda mover otra.",
+        "C": "El sinergista ayuda al agonista a producir la acción del movimiento.",
+        "D": "El antagonista se opone al agonista y puede controlar el movimiento resultante."
       },
       "opcion_a": "Agonista",
       "opcion_b": "Fijador",
@@ -110,7 +142,14 @@
           "section": "El sistema muscular · Acción muscular",
           "page": 346,
           "printed": 318,
-          "marks": []
+          "marks": [
+            [
+              0.0925,
+              0.7412,
+              0.2662,
+              0.0111
+            ]
+          ]
         }
       ],
       "source": {
@@ -126,6 +165,12 @@
         "pdfPages": [
           346
         ]
+      },
+      "comentarios_opciones": {
+        "A": "El antagonista se opone al agonista y puede controlar el movimiento resultante.",
+        "B": "El sinergista ayuda al agonista a producir la acción del movimiento.",
+        "C": "El fijador estabiliza una parte para que el motor principal pueda mover otra.",
+        "D": "El agonista es el motor principal de la acción que se está analizando."
       },
       "opcion_a": "Antagonista",
       "opcion_b": "Sinergista",
@@ -168,6 +213,12 @@
           346
         ]
       },
+      "comentarios_opciones": {
+        "A": "El fijador estabiliza una parte para que el motor principal pueda mover otra.",
+        "B": "El sinergista ayuda al agonista a producir la acción del movimiento.",
+        "C": "El antagonista se opone al agonista y puede controlar el movimiento resultante.",
+        "D": "El agonista es el motor principal de la acción que se está analizando."
+      },
       "opcion_a": "Fijador",
       "opcion_b": "Sinergista",
       "opcion_c": "Antagonista",
@@ -192,7 +243,26 @@
           "section": "El sistema muscular · Organización muscular",
           "page": 343,
           "printed": 315,
-          "marks": []
+          "marks": [
+            [
+              0.2508,
+              0.5733,
+              0.2083,
+              0.0111
+            ],
+            [
+              0.1879,
+              0.5127,
+              0.0056,
+              0.0078
+            ],
+            [
+              0.1935,
+              0.5139,
+              0.1536,
+              0.0111
+            ]
+          ]
         }
       ],
       "source": {
@@ -253,7 +323,20 @@
           "section": "El sistema muscular · Inserciones",
           "page": 345,
           "printed": 317,
-          "marks": []
+          "marks": [
+            [
+              0.2066,
+              0.5898,
+              0.1454,
+              0.0111
+            ],
+            [
+              0.6642,
+              0.5755,
+              0.1582,
+              0.0111
+            ]
+          ]
         }
       ],
       "source": {
@@ -314,7 +397,14 @@
           "section": "El sistema muscular · Músculos de la cabeza / Miembro superior",
           "page": 354,
           "printed": 326,
-          "marks": []
+          "marks": [
+            [
+              0.2685,
+              0.3227,
+              0.1471,
+              0.0094
+            ]
+          ]
         },
         {
           "slug": "morfofuncion",
@@ -322,7 +412,14 @@
           "section": "El sistema muscular · Músculos de la cabeza / Miembro superior",
           "page": 378,
           "printed": 350,
-          "marks": []
+          "marks": [
+            [
+              0.5039,
+              0.5698,
+              0.1365,
+              0.0094
+            ]
+          ]
         }
       ],
       "source": {
@@ -385,7 +482,20 @@
           "section": "El sistema muscular · Miembro inferior",
           "page": 345,
           "printed": 317,
-          "marks": []
+          "marks": [
+            [
+              0.3159,
+              0.5007,
+              0.1904,
+              0.0111
+            ],
+            [
+              0.0909,
+              0.5156,
+              0.0232,
+              0.0111
+            ]
+          ]
         },
         {
           "slug": "morfofuncion",
@@ -393,7 +503,14 @@
           "section": "El sistema muscular · Miembro inferior",
           "page": 394,
           "printed": 366,
-          "marks": []
+          "marks": [
+            [
+              0.3533,
+              0.1664,
+              0.2188,
+              0.0094
+            ]
+          ]
         }
       ],
       "source": {

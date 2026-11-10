@@ -129,8 +129,10 @@
   if(from.value&&to.value&&from.value>to.value){status.textContent='La fecha inicial debe ser anterior a la final.';return;}
   const rows=own(data,owner,{type:type.value,from:from.value,to:to.value});status.textContent=rows.length?rows.length+' intentos realizados · más recientes primero':'No tienes intentos realizados en este período.';
   const scores=rows.map(r=>r.porcentaje).filter(n=>n!==null&&n!==''&&Number.isFinite(Number(n))&&Number(n)>=0&&Number(n)<=100).map(Number),metrics=el('div',null,'eval-metrics-grid');
-  metrics.append(metric('Intentos',rows.length),metric('Simulacros',rows.filter(r=>kind(r)==='simulacros').length),metric('Promedio de notas registradas',pct(scores.length?scores.reduce((a,b)=>a+b,0)/scores.length:null)),metric('Mejor nota registrada',pct(scores.length?Math.max(...scores):null)));content.append(metrics);
-  const note=el('p','El historial usa resultados guardados en tu cuenta; no incluye actividad de flashcards. Suficiencia conserva los últimos resultados locales por simulacro y cuenta en este navegador; se identifica como local, sin reconstruir sus respuestas. Los intentos antiguos sin tipo se muestran como históricos.','sr-note');content.append(note);
+  const summaryType=type.value||'simulacros';
+  const labelsPlural={simulacros:'Simulacros',evaluaciones:'Evaluaciones',examenes:'Exámenes',historicos:'Históricos'};
+  metrics.append(metric('Intentos',rows.length),metric(labelsPlural[summaryType],rows.filter(r=>kind(r)===summaryType).length),metric('Promedio de notas registradas',pct(scores.length?scores.reduce((a,b)=>a+b,0)/scores.length:null)),metric('Mejor nota registrada',pct(scores.length?Math.max(...scores):null)));content.append(metrics);
+  const note=el('p',type.value==='evaluaciones'?'Se muestran las evaluaciones guardadas en tu cuenta.':'El historial usa resultados guardados en tu cuenta; no incluye actividad de flashcards. Suficiencia conserva los últimos resultados locales por simulacro y cuenta en este navegador; se identifica como local, sin reconstruir sus respuestas. Los intentos antiguos sin tipo se muestran como históricos.','sr-note');content.append(note);
   const list=el('div',null,'sr-attempts');rows.forEach(r=>{const card=el('article',null,'eval-section-card'),text=el('div');text.append(el('small',labels[kind(r)]+(r.local?' · Último resultado local':'')+' · '+String(r.created_at||'').replace('T',' ').slice(0,16)+' UTC'),el('h3',attemptTitle(r,'Intento realizado')),el('p',(r.materia||'Materia sin registrar')+' · Nota registrada: '+pct(r.porcentaje==null?null:Number(r.porcentaje))));const button=el('button','Ver resultado y revisar preguntas','btn-primary');button.type='button';button.onclick=()=>review(r);card.append(text,button);list.append(card);});drawAnalysis(rows,content);content.append(el('h3','Historial de intentos'),list);
  }
  function drawAnalysis(rows,target){
@@ -218,10 +220,12 @@
   }catch(error){if(valid())detail.replaceChildren(close,el('p',error.message));}
  }
  refresh.onclick=reload;[type,from,to].forEach(n=>n.addEventListener('change',render));
- root.openStudentResults=()=>{
+ root.openStudentResults=(initialType)=>{
   if(showScreen(screen.id)===false)return;
   const account=actor();
   if(data&&owner!==account)reset();
+  type.value=Object.hasOwn(labels,initialType)?initialType:'';
+  if(initialType)from.value=to.value='';
   if(!data&&account){
    let local=[];try{local=localRows(localStorage,account);}catch(_){}
    if(local.length){data=local;owner=account;}

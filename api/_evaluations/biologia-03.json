@@ -19,7 +19,7 @@
       "justificacion": "Un liposoma es una vesícula cerrada rodeada por una bicapa lipídica.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "131",
-      "pagina_impresa": "",
+      "pagina_impresa": "131",
       "dificultad": "medio",
       "lecturas_comentario": [
         {
@@ -27,8 +27,15 @@
           "label": "Calvo",
           "section": "Estructura de la membrana plasmática · Liposomas",
           "page": 131,
-          "printed": null,
-          "marks": []
+          "printed": 131,
+          "marks": [
+            [
+              0.5683,
+              0.4702,
+              0.1522,
+              0.0172
+            ]
+          ]
         }
       ],
       "source": {
@@ -42,6 +49,12 @@
         "pdfPages": [
           131
         ]
+      },
+      "comentarios_opciones": {
+        "A": "Un liposoma es una vesícula cerrada rodeada por una bicapa lipídica.",
+        "B": "Una balsa lipídica es un dominio transitorio de la membrana que puede reunir lípidos y proteínas de señalización.",
+        "C": "El glucocáliz es la cubierta de glúcidos que se proyecta hacia el exterior celular.",
+        "D": "Las translocasas facilitan el paso de lípidos entre las dos hojas de la bicapa."
       },
       "opcion_a": "Liposoma",
       "opcion_b": "Balsa lipídica",
@@ -58,7 +71,7 @@
       "justificacion": "Las translocasas facilitan el paso de lípidos entre las dos hojas de la bicapa.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "141",
-      "pagina_impresa": "",
+      "pagina_impresa": "141",
       "dificultad": "medio",
       "lecturas_comentario": [
         {
@@ -66,8 +79,15 @@
           "label": "Calvo",
           "section": "Estructura de la membrana plasmática · Asimetría",
           "page": 141,
-          "printed": null,
-          "marks": []
+          "printed": 141,
+          "marks": [
+            [
+              0.2366,
+              0.3604,
+              0.2888,
+              0.0197
+            ]
+          ]
         }
       ],
       "source": {
@@ -81,6 +101,12 @@
         "pdfPages": [
           141
         ]
+      },
+      "comentarios_opciones": {
+        "A": "Las translocasas facilitan el paso de lípidos entre las dos hojas de la bicapa.",
+        "B": "El glucocáliz es la cubierta de glúcidos que se proyecta hacia el exterior celular.",
+        "C": "Un liposoma es una vesícula cerrada rodeada por una bicapa lipídica.",
+        "D": "Una balsa lipídica es un dominio transitorio de la membrana que puede reunir lípidos y proteínas de señalización."
       },
       "opcion_a": "Translocasa",
       "opcion_b": "Glucocáliz",
@@ -97,7 +123,7 @@
       "justificacion": "Una balsa lipídica es un dominio transitorio de la membrana que puede reunir lípidos y proteínas de señalización.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "143",
-      "pagina_impresa": "",
+      "pagina_impresa": "143",
       "dificultad": "medio",
       "lecturas_comentario": [
         {
@@ -105,8 +131,21 @@
           "label": "Calvo",
           "section": "Estructura de la membrana plasmática · Balsas lipídicas",
           "page": 143,
-          "printed": null,
-          "marks": []
+          "printed": 143,
+          "marks": [
+            [
+              0.4954,
+              0.9076,
+              0.0328,
+              0.0197
+            ],
+            [
+              0.0271,
+              0.9346,
+              0.0047,
+              0.0197
+            ]
+          ]
         }
       ],
       "source": {
@@ -120,6 +159,12 @@
         "pdfPages": [
           143
         ]
+      },
+      "comentarios_opciones": {
+        "A": "Una balsa lipídica es un dominio transitorio de la membrana que puede reunir lípidos y proteínas de señalización.",
+        "B": "Las translocasas facilitan el paso de lípidos entre las dos hojas de la bicapa.",
+        "C": "Un liposoma es una vesícula cerrada rodeada por una bicapa lipídica.",
+        "D": "El glucocáliz es la cubierta de glúcidos que se proyecta hacia el exterior celular."
       },
       "opcion_a": "Balsa lipídica",
       "opcion_b": "Translocasa",
@@ -136,7 +181,7 @@
       "justificacion": "El glucocáliz es la cubierta de glúcidos que se proyecta hacia el exterior celular.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "156",
-      "pagina_impresa": "",
+      "pagina_impresa": "156",
       "dificultad": "medio",
       "lecturas_comentario": [
         {
@@ -144,8 +189,15 @@
           "label": "Calvo",
           "section": "Estructura de la membrana plasmática · Glucocáliz",
           "page": 156,
-          "printed": null,
-          "marks": []
+          "printed": 156,
+          "marks": [
+            [
+              0.1033,
+              0.153,
+              0.3095,
+              0.0197
+            ]
+          ]
         }
       ],
       "source": {
@@ -159,6 +211,12 @@
         "pdfPages": [
           156
         ]
+      },
+      "comentarios_opciones": {
+        "A": "El glucocáliz es la cubierta de glúcidos que se proyecta hacia el exterior celular.",
+        "B": "Una balsa lipídica es un dominio transitorio de la membrana que puede reunir lípidos y proteínas de señalización.",
+        "C": "Un liposoma es una vesícula cerrada rodeada por una bicapa lipídica.",
+        "D": "Las translocasas facilitan el paso de lípidos entre las dos hojas de la bicapa."
       },
       "opcion_a": "Glucocáliz",
       "opcion_b": "Balsa lipídica",
@@ -175,7 +233,7 @@
       "justificacion": "1. Incorrecta. Las cadenas cortas y los dobles enlaces cis favorecen la fluidez a temperaturas menores.\n2. Correcta. Al intercalarse entre lípidos, disminuyen la permeabilidad a esos solutos.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "137, 138",
-      "pagina_impresa": "",
+      "pagina_impresa": "137, 138",
       "dificultad": "dificil",
       "lecturas_comentario": [
         {
@@ -183,16 +241,36 @@
           "label": "Calvo",
           "section": "Estructura de la membrana plasmática · Fluidez / Colesterol",
           "page": 137,
-          "printed": null,
-          "marks": []
+          "printed": 137,
+          "marks": [
+            [
+              0.3095,
+              0.0765,
+              0.2405,
+              0.0197
+            ]
+          ]
         },
         {
           "slug": "biologia-celular",
           "label": "Calvo",
           "section": "Estructura de la membrana plasmática · Fluidez / Colesterol",
           "page": 138,
-          "printed": null,
-          "marks": []
+          "printed": 138,
+          "marks": [
+            [
+              0.4954,
+              0.9076,
+              0.0328,
+              0.0197
+            ],
+            [
+              0.0271,
+              0.9346,
+              0.0047,
+              0.0197
+            ]
+          ]
         }
       ],
       "source": {
@@ -243,7 +321,7 @@
       "justificacion": "1. Correcta. Este fosfolípido también se encuentra en membranas bacterianas.\n2. Incorrecta. La síntesis tiene lugar en la hemimembrana que mira al citoplasma.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "133, 141",
-      "pagina_impresa": "",
+      "pagina_impresa": "133, 141",
       "dificultad": "dificil",
       "lecturas_comentario": [
         {
@@ -251,16 +329,36 @@
           "label": "Calvo",
           "section": "Estructura de la membrana plasmática · Fosfolípidos / Síntesis lipídica",
           "page": 133,
-          "printed": null,
-          "marks": []
+          "printed": 133,
+          "marks": [
+            [
+              0.867,
+              0.1546,
+              0.0698,
+              0.0197
+            ],
+            [
+              0.0082,
+              0.178,
+              0.1725,
+              0.0197
+            ]
+          ]
         },
         {
           "slug": "biologia-celular",
           "label": "Calvo",
           "section": "Estructura de la membrana plasmática · Fosfolípidos / Síntesis lipídica",
           "page": 141,
-          "printed": null,
-          "marks": []
+          "printed": 141,
+          "marks": [
+            [
+              0.0667,
+              0.3096,
+              0.1624,
+              0.0172
+            ]
+          ]
         }
       ],
       "source": {
@@ -311,7 +409,7 @@
       "justificacion": "1. Correcta. La exposición refleja un cambio en la asimetría entre ambas caras de la membrana.\n2. Correcta. Las láminas β se organizan formando el barril transmembrana.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "142, 147",
-      "pagina_impresa": "",
+      "pagina_impresa": "142, 147",
       "dificultad": "dificil",
       "lecturas_comentario": [
         {
@@ -319,16 +417,36 @@
           "label": "Calvo",
           "section": "Estructura de la membrana plasmática · Asimetría / Proteínas de membrana",
           "page": 142,
-          "printed": null,
-          "marks": []
+          "printed": 142,
+          "marks": [
+            [
+              0.4954,
+              0.9076,
+              0.0328,
+              0.0197
+            ],
+            [
+              0.0271,
+              0.9346,
+              0.0047,
+              0.0197
+            ]
+          ]
         },
         {
           "slug": "biologia-celular",
           "label": "Calvo",
           "section": "Estructura de la membrana plasmática · Asimetría / Proteínas de membrana",
           "page": 147,
-          "printed": null,
-          "marks": []
+          "printed": 147,
+          "marks": [
+            [
+              0.1984,
+              0.1,
+              0.3757,
+              0.0197
+            ]
+          ]
         }
       ],
       "source": {
@@ -379,7 +497,7 @@
       "justificacion": "1. Incorrecta. Para extraer proteínas integrales se requiere disgregar la bicapa, por ejemplo con detergentes.\n2. Incorrecta. La anquirina enlaza la banda 3 con la espectrina del citoesqueleto.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "146, 152",
-      "pagina_impresa": "",
+      "pagina_impresa": "146, 152",
       "dificultad": "dificil",
       "lecturas_comentario": [
         {
@@ -387,16 +505,42 @@
           "label": "Calvo",
           "section": "Estructura de la membrana plasmática · Proteínas de membrana / Membrana eritrocitaria",
           "page": 146,
-          "printed": null,
-          "marks": []
+          "printed": 146,
+          "marks": [
+            [
+              0.8811,
+              0.1206,
+              0.0679,
+              0.0131
+            ],
+            [
+              0.9487,
+              0.1174,
+              0.0045,
+              0.0172
+            ]
+          ]
         },
         {
           "slug": "biologia-celular",
           "label": "Calvo",
           "section": "Estructura de la membrana plasmática · Proteínas de membrana / Membrana eritrocitaria",
           "page": 152,
-          "printed": null,
-          "marks": []
+          "printed": 152,
+          "marks": [
+            [
+              0.4954,
+              0.9076,
+              0.0328,
+              0.0197
+            ],
+            [
+              0.0271,
+              0.9346,
+              0.0047,
+              0.0197
+            ]
+          ]
         }
       ],
       "source": {

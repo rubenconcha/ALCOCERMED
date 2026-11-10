@@ -28,7 +28,14 @@
           "section": "El aparato digestivo · Boca",
           "page": 990,
           "printed": 962,
-          "marks": []
+          "marks": [
+            [
+              0.5266,
+              0.6867,
+              0.2173,
+              0.0111
+            ]
+          ]
         }
       ],
       "source": {
@@ -44,6 +51,12 @@
         "pdfPages": [
           990
         ]
+      },
+      "comentarios_opciones": {
+        "A": "La lipasa pancreática hidroliza triglicéridos en el intestino.",
+        "B": "La amilasa de la saliva empieza a hidrolizar el almidón durante la digestión oral.",
+        "C": "Las sales biliares dispersan las grasas en gotas pequeñas. Esa emulsificación facilita la acción posterior de la lipasa.",
+        "D": "La pepsina activa comienza la digestión de proteínas en el estómago."
       },
       "opcion_a": "Lipasa pancreática",
       "opcion_b": "Amilasa salival",
@@ -69,7 +82,20 @@
           "section": "El aparato digestivo · Estómago",
           "page": 997,
           "printed": 969,
-          "marks": []
+          "marks": [
+            [
+              0.6498,
+              0.0491,
+              0.0896,
+              0.0105
+            ],
+            [
+              0.7483,
+              0.0495,
+              0.1107,
+              0.01
+            ]
+          ]
         }
       ],
       "source": {
@@ -85,6 +111,12 @@
         "pdfPages": [
           997
         ]
+      },
+      "comentarios_opciones": {
+        "A": "La lipasa pancreática hidroliza triglicéridos en el intestino.",
+        "B": "Las sales biliares dispersan las grasas en gotas pequeñas. Esa emulsificación facilita la acción posterior de la lipasa.",
+        "C": "La pepsina activa comienza la digestión de proteínas en el estómago.",
+        "D": "La amilasa de la saliva empieza a hidrolizar el almidón durante la digestión oral."
       },
       "opcion_a": "Lipasa pancreática",
       "opcion_b": "Sales biliares",
@@ -110,7 +142,20 @@
           "section": "El aparato digestivo · Páncreas exocrino",
           "page": 1007,
           "printed": 979,
-          "marks": []
+          "marks": [
+            [
+              0.1911,
+              0.8879,
+              0.0665,
+              0.0111
+            ],
+            [
+              0.1198,
+              0.9027,
+              0.116,
+              0.0111
+            ]
+          ]
         }
       ],
       "source": {
@@ -126,6 +171,12 @@
         "pdfPages": [
           1007
         ]
+      },
+      "comentarios_opciones": {
+        "A": "La lipasa pancreática hidroliza triglicéridos en el intestino.",
+        "B": "La pepsina activa comienza la digestión de proteínas en el estómago.",
+        "C": "La amilasa de la saliva empieza a hidrolizar el almidón durante la digestión oral.",
+        "D": "Las sales biliares dispersan las grasas en gotas pequeñas. Esa emulsificación facilita la acción posterior de la lipasa."
       },
       "opcion_a": "Lipasa pancreática",
       "opcion_b": "Pepsina",
@@ -151,7 +202,20 @@
           "section": "El aparato digestivo · Digestión de lípidos",
           "page": 1015,
           "printed": 987,
-          "marks": []
+          "marks": [
+            [
+              0.2526,
+              0.3203,
+              0.1601,
+              0.0111
+            ],
+            [
+              0.4862,
+              0.3649,
+              0.02,
+              0.0111
+            ]
+          ]
         }
       ],
       "source": {
@@ -167,6 +231,12 @@
         "pdfPages": [
           1015
         ]
+      },
+      "comentarios_opciones": {
+        "A": "La pepsina activa comienza la digestión de proteínas en el estómago.",
+        "B": "La amilasa de la saliva empieza a hidrolizar el almidón durante la digestión oral.",
+        "C": "Las sales biliares dispersan las grasas en gotas pequeñas. Esa emulsificación facilita la acción posterior de la lipasa.",
+        "D": "La lipasa pancreática hidroliza triglicéridos en el intestino."
       },
       "opcion_a": "Pepsina",
       "opcion_b": "Amilasa salival",
@@ -192,7 +262,32 @@
           "section": "El aparato digestivo · Control digestivo",
           "page": 984,
           "printed": 956,
-          "marks": []
+          "marks": [
+            [
+              0.8321,
+              0.9047,
+              0.02,
+              0.0111
+            ],
+            [
+              0.8554,
+              0.9047,
+              0.0577,
+              0.0111
+            ],
+            [
+              0.0636,
+              0.0491,
+              0.0261,
+              0.0105
+            ],
+            [
+              0.1406,
+              0.0491,
+              0.1035,
+              0.0105
+            ]
+          ]
         }
       ],
       "source": {
@@ -253,7 +348,32 @@
           "section": "El aparato digestivo · Estómago",
           "page": 995,
           "printed": 967,
-          "marks": []
+          "marks": [
+            [
+              0.0909,
+              0.6497,
+              0.0128,
+              0.0111
+            ],
+            [
+              0.1198,
+              0.6497,
+              0.2618,
+              0.0111
+            ],
+            [
+              0.0909,
+              0.7388,
+              0.0128,
+              0.0111
+            ],
+            [
+              0.1198,
+              0.7388,
+              0.1767,
+              0.0111
+            ]
+          ]
         }
       ],
       "source": {
@@ -314,7 +434,20 @@
           "section": "El aparato digestivo · Control hormonal",
           "page": 985,
           "printed": 957,
-          "marks": []
+          "marks": [
+            [
+              0.5518,
+              0.7963,
+              0.0262,
+              0.0111
+            ],
+            [
+              0.581,
+              0.7963,
+              0.0397,
+              0.0111
+            ]
+          ]
         },
         {
           "slug": "morfofuncion",
@@ -322,7 +455,20 @@
           "section": "El aparato digestivo · Control hormonal",
           "page": 1007,
           "printed": 979,
-          "marks": []
+          "marks": [
+            [
+              0.8265,
+              0.6657,
+              0.1139,
+              0.0111
+            ],
+            [
+              0.5539,
+              0.6805,
+              0.0545,
+              0.0111
+            ]
+          ]
         }
       ],
       "source": {
@@ -385,7 +531,14 @@
           "section": "El aparato digestivo · Absorción / 25.4 Circulación enterohepática",
           "page": 1006,
           "printed": 978,
-          "marks": []
+          "marks": [
+            [
+              0.1793,
+              0.5782,
+              0.2756,
+              0.0111
+            ]
+          ]
         },
         {
           "slug": "morfofuncion",
@@ -393,7 +546,14 @@
           "section": "El aparato digestivo · Absorción / 25.4 Circulación enterohepática",
           "page": 1015,
           "printed": 987,
-          "marks": []
+          "marks": [
+            [
+              0.7275,
+              0.1173,
+              0.1596,
+              0.0111
+            ]
+          ]
         }
       ],
       "source": {

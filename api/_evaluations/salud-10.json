@@ -28,7 +28,20 @@
           "section": "Epidemiología social · epidemiologia social",
           "page": 35,
           "printed": 28,
-          "marks": []
+          "marks": [
+            [
+              0.7368,
+              0.28,
+              0.1781,
+              0.0193
+            ],
+            [
+              0.0877,
+              0.2992,
+              0.0792,
+              0.018
+            ]
+          ]
         }
       ],
       "source": {
@@ -44,6 +57,12 @@
         "pdfPages": [
           35
         ]
+      },
+      "comentarios_opciones": {
+        "A": "La investigación en sistemas de salud estudia cómo se organiza la respuesta social ante problemas de salud de la población.",
+        "B": "La investigación epidemiológica analiza cómo se distribuyen las necesidades de salud, con qué frecuencia aparecen y qué las determina.",
+        "C": "La investigación clínica compara la eficacia de intervenciones preventivas, diagnósticas o terapéuticas aplicadas a personas.",
+        "D": "La investigación biomédica estudia procesos y mecanismos de salud y enfermedad, principalmente en el individuo."
       },
       "opcion_a": "Investigación en sistemas de salud",
       "opcion_b": "Investigación epidemiológica",
@@ -69,7 +88,14 @@
           "section": "Epidemiología social · epidemiologia social",
           "page": 35,
           "printed": 28,
-          "marks": []
+          "marks": [
+            [
+              0.3145,
+              0.3354,
+              0.3014,
+              0.018
+            ]
+          ]
         }
       ],
       "source": {
@@ -85,6 +111,12 @@
         "pdfPages": [
           35
         ]
+      },
+      "comentarios_opciones": {
+        "A": "La investigación biomédica estudia procesos y mecanismos de salud y enfermedad, principalmente en el individuo.",
+        "B": "La investigación epidemiológica analiza cómo se distribuyen las necesidades de salud, con qué frecuencia aparecen y qué las determina.",
+        "C": "La investigación en sistemas de salud estudia cómo se organiza la respuesta social ante problemas de salud de la población.",
+        "D": "La investigación clínica compara la eficacia de intervenciones preventivas, diagnósticas o terapéuticas aplicadas a personas."
       },
       "opcion_a": "Investigación biomédica",
       "opcion_b": "Investigación epidemiológica",
@@ -110,7 +142,14 @@
           "section": "Epidemiología social · epidemiologia social",
           "page": 35,
           "printed": 28,
-          "marks": []
+          "marks": [
+            [
+              0.4011,
+              0.4332,
+              0.3379,
+              0.0196
+            ]
+          ]
         }
       ],
       "source": {
@@ -126,6 +165,12 @@
         "pdfPages": [
           35
         ]
+      },
+      "comentarios_opciones": {
+        "A": "La investigación epidemiológica analiza cómo se distribuyen las necesidades de salud, con qué frecuencia aparecen y qué las determina.",
+        "B": "La investigación en sistemas de salud estudia cómo se organiza la respuesta social ante problemas de salud de la población.",
+        "C": "La investigación clínica compara la eficacia de intervenciones preventivas, diagnósticas o terapéuticas aplicadas a personas.",
+        "D": "La investigación biomédica estudia procesos y mecanismos de salud y enfermedad, principalmente en el individuo."
       },
       "opcion_a": "Investigación epidemiológica",
       "opcion_b": "Investigación en sistemas de salud",
@@ -151,7 +196,14 @@
           "section": "Epidemiología social · epidemiologia social",
           "page": 35,
           "printed": 28,
-          "marks": []
+          "marks": [
+            [
+              0.265,
+              0.4889,
+              0.2872,
+              0.018
+            ]
+          ]
         }
       ],
       "source": {
@@ -167,6 +219,12 @@
         "pdfPages": [
           35
         ]
+      },
+      "comentarios_opciones": {
+        "A": "La investigación epidemiológica analiza cómo se distribuyen las necesidades de salud, con qué frecuencia aparecen y qué las determina.",
+        "B": "La investigación biomédica estudia procesos y mecanismos de salud y enfermedad, principalmente en el individuo.",
+        "C": "La investigación en sistemas de salud estudia cómo se organiza la respuesta social ante problemas de salud de la población.",
+        "D": "La investigación clínica compara la eficacia de intervenciones preventivas, diagnósticas o terapéuticas aplicadas a personas."
       },
       "opcion_a": "Investigación epidemiológica",
       "opcion_b": "Investigación biomédica",
@@ -192,7 +250,26 @@
           "section": "Epidemiología social · epidemiologia social",
           "page": 34,
           "printed": 27,
-          "marks": []
+          "marks": [
+            [
+              0.7948,
+              0.6543,
+              0.15,
+              0.0177
+            ],
+            [
+              0.1287,
+              0.6713,
+              0.1762,
+              0.0187
+            ],
+            [
+              0.6388,
+              0.7342,
+              0.3001,
+              0.0177
+            ]
+          ]
         }
       ],
       "source": {
@@ -253,7 +330,14 @@
           "section": "Epidemiología social · epidemiologia social",
           "page": 35,
           "printed": 28,
-          "marks": []
+          "marks": [
+            [
+              0.3556,
+              0.4165,
+              0.3419,
+              0.018
+            ]
+          ]
         },
         {
           "slug": "educacion-salud",
@@ -261,7 +345,20 @@
           "section": "Epidemiología social · epidemiologia social",
           "page": 37,
           "printed": 30,
-          "marks": []
+          "marks": [
+            [
+              0.8936,
+              0.0788,
+              0.0381,
+              0.0191
+            ],
+            [
+              0.0887,
+              0.0977,
+              0.3221,
+              0.0172
+            ]
+          ]
         }
       ],
       "source": {
@@ -324,7 +421,20 @@
           "section": "Epidemiología social · epidemiologia social",
           "page": 37,
           "printed": 30,
-          "marks": []
+          "marks": [
+            [
+              0.2902,
+              0.1319,
+              0.3475,
+              0.0186
+            ],
+            [
+              0.104,
+              0.1864,
+              0.4391,
+              0.0172
+            ]
+          ]
         }
       ],
       "source": {
@@ -385,7 +495,14 @@
           "section": "Epidemiología social · epidemiologia social",
           "page": 34,
           "printed": 27,
-          "marks": []
+          "marks": [
+            [
+              0.4887,
+              0.7695,
+              0.255,
+              0.0183
+            ]
+          ]
         },
         {
           "slug": "educacion-salud",
@@ -393,7 +510,20 @@
           "section": "Epidemiología social · epidemiologia social",
           "page": 37,
           "printed": 30,
-          "marks": []
+          "marks": [
+            [
+              0.2973,
+              0.205,
+              0.0465,
+              0.0165
+            ],
+            [
+              0.3434,
+              0.2034,
+              0.1543,
+              0.0185
+            ]
+          ]
         }
       ],
       "source": {

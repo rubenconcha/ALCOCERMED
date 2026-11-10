@@ -28,7 +28,14 @@
           "section": "Salud en Bolivia y modelo SAFCI · salud en bolivia y modelo safci",
           "page": 23,
           "printed": 22,
-          "marks": []
+          "marks": [
+            [
+              0.1389,
+              0.3815,
+              0.2938,
+              0.0168
+            ]
+          ]
         }
       ],
       "source": {
@@ -44,6 +51,12 @@
         "pdfPages": [
           23
         ]
+      },
+      "comentarios_opciones": {
+        "A": "El material describe Mi Salud como una forma de acercar atención a comunidades pobres y vulnerables.",
+        "B": "El programa de inmunizaciones descrito utiliza vacunación y da prioridad a la niñez y a los grupos de riesgo.",
+        "C": "El programa de tuberculosis del material combina detección temprana, tratamiento supervisado y vigilancia.",
+        "D": "La iniciativa que describe el texto se orienta a la nutrición y la seguridad alimentaria de la primera infancia."
       },
       "opcion_a": "Programa Mi Salud",
       "opcion_b": "Programa Ampliado de Inmunizaciones",
@@ -69,7 +82,14 @@
           "section": "Salud en Bolivia y modelo SAFCI · salud en bolivia y modelo safci",
           "page": 23,
           "printed": 22,
-          "marks": []
+          "marks": [
+            [
+              0.5249,
+              0.5644,
+              0.2526,
+              0.0168
+            ]
+          ]
         }
       ],
       "source": {
@@ -85,6 +105,12 @@
         "pdfPages": [
           23
         ]
+      },
+      "comentarios_opciones": {
+        "A": "El programa de tuberculosis del material combina detección temprana, tratamiento supervisado y vigilancia.",
+        "B": "El material describe Mi Salud como una forma de acercar atención a comunidades pobres y vulnerables.",
+        "C": "El programa de inmunizaciones descrito utiliza vacunación y da prioridad a la niñez y a los grupos de riesgo.",
+        "D": "La iniciativa que describe el texto se orienta a la nutrición y la seguridad alimentaria de la primera infancia."
       },
       "opcion_a": "Programa Nacional de Tuberculosis",
       "opcion_b": "Programa Mi Salud",
@@ -110,7 +136,14 @@
           "section": "Salud en Bolivia y modelo SAFCI · salud en bolivia y modelo safci",
           "page": 23,
           "printed": 22,
-          "marks": []
+          "marks": [
+            [
+              0.3507,
+              0.669,
+              0.21,
+              0.0168
+            ]
+          ]
         }
       ],
       "source": {
@@ -126,6 +159,12 @@
         "pdfPages": [
           23
         ]
+      },
+      "comentarios_opciones": {
+        "A": "El material describe Mi Salud como una forma de acercar atención a comunidades pobres y vulnerables.",
+        "B": "La iniciativa que describe el texto se orienta a la nutrición y la seguridad alimentaria de la primera infancia.",
+        "C": "El programa de tuberculosis del material combina detección temprana, tratamiento supervisado y vigilancia.",
+        "D": "El programa de inmunizaciones descrito utiliza vacunación y da prioridad a la niñez y a los grupos de riesgo."
       },
       "opcion_a": "Programa Mi Salud",
       "opcion_b": "Programa Desnutrición Cero",
@@ -151,7 +190,14 @@
           "section": "Salud en Bolivia y modelo SAFCI · salud en bolivia y modelo safci",
           "page": 23,
           "printed": 22,
-          "marks": []
+          "marks": [
+            [
+              0.2757,
+              0.7736,
+              0.2562,
+              0.0168
+            ]
+          ]
         }
       ],
       "source": {
@@ -167,6 +213,12 @@
         "pdfPages": [
           23
         ]
+      },
+      "comentarios_opciones": {
+        "A": "El material describe Mi Salud como una forma de acercar atención a comunidades pobres y vulnerables.",
+        "B": "El programa de tuberculosis del material combina detección temprana, tratamiento supervisado y vigilancia.",
+        "C": "La iniciativa que describe el texto se orienta a la nutrición y la seguridad alimentaria de la primera infancia.",
+        "D": "El programa de inmunizaciones descrito utiliza vacunación y da prioridad a la niñez y a los grupos de riesgo."
       },
       "opcion_a": "Programa Mi Salud",
       "opcion_b": "Programa Nacional de Tuberculosis",
@@ -192,7 +244,26 @@
           "section": "Salud en Bolivia y modelo SAFCI · salud en bolivia y modelo safci",
           "page": 10,
           "printed": 9,
-          "marks": []
+          "marks": [
+            [
+              0.3344,
+              0.2376,
+              0.1628,
+              0.0168
+            ],
+            [
+              0.1389,
+              0.2662,
+              0.0191,
+              0.0152
+            ],
+            [
+              0.5836,
+              0.5508,
+              0.1317,
+              0.0168
+            ]
+          ]
         }
       ],
       "source": {
@@ -253,7 +324,14 @@
           "section": "Salud en Bolivia y modelo SAFCI · salud en bolivia y modelo safci",
           "page": 23,
           "printed": 22,
-          "marks": []
+          "marks": [
+            [
+              0.5452,
+              0.4075,
+              0.2926,
+              0.0168
+            ]
+          ]
         },
         {
           "slug": "educacion-salud",
@@ -261,7 +339,14 @@
           "section": "Salud en Bolivia y modelo SAFCI · salud en bolivia y modelo safci",
           "page": 24,
           "printed": 23,
-          "marks": []
+          "marks": [
+            [
+              0.1389,
+              0.1724,
+              0.2646,
+              0.0168
+            ]
+          ]
         }
       ],
       "source": {
@@ -324,7 +409,14 @@
           "section": "Salud en Bolivia y modelo SAFCI · salud en bolivia y modelo safci",
           "page": 27,
           "printed": 26,
-          "marks": []
+          "marks": [
+            [
+              0.3661,
+              0.8258,
+              0.243,
+              0.0168
+            ]
+          ]
         },
         {
           "slug": "educacion-salud",
@@ -332,7 +424,20 @@
           "section": "Salud en Bolivia y modelo SAFCI · salud en bolivia y modelo safci",
           "page": 30,
           "printed": 29,
-          "marks": []
+          "marks": [
+            [
+              0.873,
+              0.1461,
+              0.0388,
+              0.0168
+            ],
+            [
+              0.1971,
+              0.1724,
+              0.2255,
+              0.0168
+            ]
+          ]
         }
       ],
       "source": {
@@ -395,7 +500,32 @@
           "section": "Salud en Bolivia y modelo SAFCI · salud en bolivia y modelo safci",
           "page": 28,
           "printed": 27,
-          "marks": []
+          "marks": [
+            [
+              0.728,
+              0.1201,
+              0.1842,
+              0.0168
+            ],
+            [
+              0.1968,
+              0.1461,
+              0.1405,
+              0.0168
+            ],
+            [
+              0.6847,
+              0.6953,
+              0.0526,
+              0.0168
+            ],
+            [
+              0.7431,
+              0.6953,
+              0.0235,
+              0.0168
+            ]
+          ]
         }
       ],
       "source": {

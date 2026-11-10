@@ -19,7 +19,7 @@
       "justificacion": "Gs estimula la adenilato ciclasa como parte de la señal transmitida desde el receptor.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "560",
-      "pagina_impresa": "",
+      "pagina_impresa": "560",
       "dificultad": "medio",
       "lecturas_comentario": [
         {
@@ -27,8 +27,15 @@
           "label": "Calvo",
           "section": "Mecanismos de señalización celular · Vía del AMPc",
           "page": 560,
-          "printed": null,
-          "marks": []
+          "printed": 560,
+          "marks": [
+            [
+              0.0552,
+              0.8323,
+              0.2322,
+              0.0197
+            ]
+          ]
         }
       ],
       "source": {
@@ -42,6 +49,12 @@
         "pdfPages": [
           560
         ]
+      },
+      "comentarios_opciones": {
+        "A": "El IP₃ abre canales del retículo endoplasmático y libera calcio al citosol.",
+        "B": "Gi reduce la actividad de la adenilato ciclasa.",
+        "C": "Gs estimula la adenilato ciclasa como parte de la señal transmitida desde el receptor.",
+        "D": "El diacilglicerol participa en la activación de las proteínas quinasas C. En esta vía, la liberación de calcio del retículo depende del IP₃."
       },
       "opcion_a": "Inositol trisfosfato (IP₃)",
       "opcion_b": "Gi",
@@ -58,7 +71,7 @@
       "justificacion": "Gi reduce la actividad de la adenilato ciclasa.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "561",
-      "pagina_impresa": "",
+      "pagina_impresa": "561",
       "dificultad": "medio",
       "lecturas_comentario": [
         {
@@ -66,8 +79,21 @@
           "label": "Calvo",
           "section": "Mecanismos de señalización celular · Vía del AMPc",
           "page": 561,
-          "printed": null,
-          "marks": []
+          "printed": 561,
+          "marks": [
+            [
+              0.4954,
+              0.9076,
+              0.0328,
+              0.0197
+            ],
+            [
+              0.0271,
+              0.9346,
+              0.0047,
+              0.0197
+            ]
+          ]
         }
       ],
       "source": {
@@ -81,6 +107,12 @@
         "pdfPages": [
           561
         ]
+      },
+      "comentarios_opciones": {
+        "A": "El diacilglicerol participa en la activación de las proteínas quinasas C. En esta vía, la liberación de calcio del retículo depende del IP₃.",
+        "B": "Gs estimula la adenilato ciclasa como parte de la señal transmitida desde el receptor.",
+        "C": "El IP₃ abre canales del retículo endoplasmático y libera calcio al citosol.",
+        "D": "Gi reduce la actividad de la adenilato ciclasa."
       },
       "opcion_a": "Diacilglicerol (DAG)",
       "opcion_b": "Gs",
@@ -97,7 +129,7 @@
       "justificacion": "El IP₃ abre canales del retículo endoplasmático y libera calcio al citosol.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "563",
-      "pagina_impresa": "",
+      "pagina_impresa": "563",
       "dificultad": "medio",
       "lecturas_comentario": [
         {
@@ -105,8 +137,21 @@
           "label": "Calvo",
           "section": "Mecanismos de señalización celular · IP3",
           "page": 563,
-          "printed": null,
-          "marks": []
+          "printed": 563,
+          "marks": [
+            [
+              0.0082,
+              0.4896,
+              0.3048,
+              0.021
+            ],
+            [
+              0.3131,
+              0.5002,
+              0.0042,
+              0.0083
+            ]
+          ]
         }
       ],
       "source": {
@@ -120,6 +165,12 @@
         "pdfPages": [
           563
         ]
+      },
+      "comentarios_opciones": {
+        "A": "El diacilglicerol participa en la activación de las proteínas quinasas C. En esta vía, la liberación de calcio del retículo depende del IP₃.",
+        "B": "El IP₃ abre canales del retículo endoplasmático y libera calcio al citosol.",
+        "C": "Gs estimula la adenilato ciclasa como parte de la señal transmitida desde el receptor.",
+        "D": "Gi reduce la actividad de la adenilato ciclasa."
       },
       "opcion_a": "Diacilglicerol (DAG)",
       "opcion_b": "Inositol trisfosfato (IP₃)",
@@ -136,7 +187,7 @@
       "justificacion": "El diacilglicerol participa en la activación de las proteínas quinasas C. En esta vía, la liberación de calcio del retículo depende del IP₃.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "563",
-      "pagina_impresa": "",
+      "pagina_impresa": "563",
       "dificultad": "medio",
       "lecturas_comentario": [
         {
@@ -144,8 +195,15 @@
           "label": "Calvo",
           "section": "Mecanismos de señalización celular · Actividad del diacilglicerol",
           "page": 563,
-          "printed": null,
-          "marks": []
+          "printed": 563,
+          "marks": [
+            [
+              0.0082,
+              0.7813,
+              0.2965,
+              0.021
+            ]
+          ]
         }
       ],
       "source": {
@@ -159,6 +217,12 @@
         "pdfPages": [
           563
         ]
+      },
+      "comentarios_opciones": {
+        "A": "El diacilglicerol participa en la activación de las proteínas quinasas C. En esta vía, la liberación de calcio del retículo depende del IP₃.",
+        "B": "El IP₃ abre canales del retículo endoplasmático y libera calcio al citosol.",
+        "C": "Gi reduce la actividad de la adenilato ciclasa.",
+        "D": "Gs estimula la adenilato ciclasa como parte de la señal transmitida desde el receptor."
       },
       "opcion_a": "Diacilglicerol (DAG)",
       "opcion_b": "Inositol trisfosfato (IP₃)",
@@ -175,7 +239,7 @@
       "justificacion": "1. Incorrecta. Es señalización autocrina. La paracrina actúa sobre células vecinas.\n2. Correcta. Facilita el intercambio del nucleótido y la activación de la proteína.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "539, 541",
-      "pagina_impresa": "",
+      "pagina_impresa": "539, 541",
       "dificultad": "dificil",
       "lecturas_comentario": [
         {
@@ -183,16 +247,30 @@
           "label": "Calvo",
           "section": "Mecanismos de señalización celular · Tipos de señalización / Interruptores moleculares",
           "page": 539,
-          "printed": null,
-          "marks": []
+          "printed": 539,
+          "marks": [
+            [
+              0.6461,
+              0.7147,
+              0.2614,
+              0.0197
+            ]
+          ]
         },
         {
           "slug": "biologia-celular",
           "label": "Calvo",
           "section": "Mecanismos de señalización celular · Tipos de señalización / Interruptores moleculares",
           "page": 541,
-          "printed": null,
-          "marks": []
+          "printed": 541,
+          "marks": [
+            [
+              0.1389,
+              0.3818,
+              0.2146,
+              0.0197
+            ]
+          ]
         }
       ],
       "source": {
@@ -243,7 +321,7 @@
       "justificacion": "1. Correcta. La relajación de la pared vascular favorece vasodilatación.\n2. Incorrecta. El sustrato de esa ciclasa es el GTP.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "547, 566",
-      "pagina_impresa": "",
+      "pagina_impresa": "547, 566",
       "dificultad": "dificil",
       "lecturas_comentario": [
         {
@@ -251,16 +329,42 @@
           "label": "Calvo",
           "section": "Mecanismos de señalización celular · Óxido nítrico / GMPc",
           "page": 547,
-          "printed": null,
-          "marks": []
+          "printed": 547,
+          "marks": [
+            [
+              0.7736,
+              0.4225,
+              0.1606,
+              0.0197
+            ],
+            [
+              0.0082,
+              0.4459,
+              0.1166,
+              0.0197
+            ]
+          ]
         },
         {
           "slug": "biologia-celular",
           "label": "Calvo",
           "section": "Mecanismos de señalización celular · Óxido nítrico / GMPc",
           "page": 566,
-          "printed": null,
-          "marks": []
+          "printed": 566,
+          "marks": [
+            [
+              0.4954,
+              0.9076,
+              0.0328,
+              0.0197
+            ],
+            [
+              0.0271,
+              0.9346,
+              0.0047,
+              0.0197
+            ]
+          ]
         }
       ],
       "source": {
@@ -311,7 +415,7 @@
       "justificacion": "1. Correcta. La ruptura del fosfolípido produce esas dos señales.\n2. Correcta. La secuencia es Ras, Raf, MEK y ERK.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "562, 568",
-      "pagina_impresa": "",
+      "pagina_impresa": "562, 568",
       "dificultad": "dificil",
       "lecturas_comentario": [
         {
@@ -319,16 +423,42 @@
           "label": "Calvo",
           "section": "Mecanismos de señalización celular · Fosfolipasa C / Vía MAPK",
           "page": 562,
-          "printed": null,
-          "marks": []
+          "printed": 562,
+          "marks": [
+            [
+              0.9248,
+              0.7043,
+              0.0395,
+              0.0197
+            ],
+            [
+              0.9644,
+              0.7144,
+              0.0033,
+              0.0068
+            ]
+          ]
         },
         {
           "slug": "biologia-celular",
           "label": "Calvo",
           "section": "Mecanismos de señalización celular · Fosfolipasa C / Vía MAPK",
           "page": 568,
-          "printed": null,
-          "marks": []
+          "printed": 568,
+          "marks": [
+            [
+              0.4954,
+              0.9076,
+              0.0328,
+              0.0197
+            ],
+            [
+              0.0271,
+              0.9346,
+              0.0047,
+              0.0197
+            ]
+          ]
         }
       ],
       "source": {
@@ -379,7 +509,7 @@
       "justificacion": "1. Incorrecta. PIP₃ sirve para reclutar AKT hacia la membrana.\n2. Incorrecta. Las JAK fosforilan STAT. Estas pueden dimerizar y actuar sobre la transcripción.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "571, 572",
-      "pagina_impresa": "",
+      "pagina_impresa": "571, 572",
       "dificultad": "dificil",
       "lecturas_comentario": [
         {
@@ -387,16 +517,36 @@
           "label": "Calvo",
           "section": "Mecanismos de señalización celular · Supervivencia celular / Vía JAK-STAT",
           "page": 571,
-          "printed": null,
-          "marks": []
+          "printed": 571,
+          "marks": [
+            [
+              0.4954,
+              0.9076,
+              0.0328,
+              0.0197
+            ],
+            [
+              0.0271,
+              0.9346,
+              0.0047,
+              0.0197
+            ]
+          ]
         },
         {
           "slug": "biologia-celular",
           "label": "Calvo",
           "section": "Mecanismos de señalización celular · Supervivencia celular / Vía JAK-STAT",
           "page": 572,
-          "printed": null,
-          "marks": []
+          "printed": 572,
+          "marks": [
+            [
+              0.6863,
+              0.7798,
+              0.2398,
+              0.0197
+            ]
+          ]
         }
       ],
       "source": {

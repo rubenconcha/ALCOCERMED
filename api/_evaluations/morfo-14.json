@@ -28,7 +28,20 @@
           "section": "El encéfalo y los pares craneales · El tálamo",
           "page": 556,
           "printed": 528,
-          "marks": []
+          "marks": [
+            [
+              0.7124,
+              0.2213,
+              0.2007,
+              0.0111
+            ],
+            [
+              0.4977,
+              0.2362,
+              0.0529,
+              0.0111
+            ]
+          ]
         }
       ],
       "source": {
@@ -44,6 +57,12 @@
         "pdfPages": [
           556
         ]
+      },
+      "comentarios_opciones": {
+        "A": "El hipotálamo participa en la regulación de la temperatura, el balance de agua y la ingesta.",
+        "B": "El cerebelo ajusta la coordinación de los movimientos y participa en el equilibrio.",
+        "C": "Gran parte de la información sensitiva pasa por el tálamo antes de proyectarse a la corteza.",
+        "D": "El hipocampo interviene en la formación de nuevos recuerdos declarativos."
       },
       "opcion_a": "Hipotálamo",
       "opcion_b": "Cerebelo",
@@ -69,7 +88,14 @@
           "section": "El encéfalo y los pares craneales · El hipotálamo",
           "page": 557,
           "printed": 529,
-          "marks": []
+          "marks": [
+            [
+              0.7517,
+              0.8726,
+              0.1411,
+              0.0111
+            ]
+          ]
         }
       ],
       "source": {
@@ -85,6 +111,12 @@
         "pdfPages": [
           557
         ]
+      },
+      "comentarios_opciones": {
+        "A": "El hipotálamo participa en la regulación de la temperatura, el balance de agua y la ingesta.",
+        "B": "El cerebelo ajusta la coordinación de los movimientos y participa en el equilibrio.",
+        "C": "El hipocampo interviene en la formación de nuevos recuerdos declarativos.",
+        "D": "Gran parte de la información sensitiva pasa por el tálamo antes de proyectarse a la corteza."
       },
       "opcion_a": "Hipotálamo",
       "opcion_b": "Cerebelo",
@@ -110,7 +142,20 @@
           "section": "El encéfalo y los pares craneales · Cerebelo",
           "page": 571,
           "printed": 543,
-          "marks": []
+          "marks": [
+            [
+              0.8968,
+              0.1916,
+              0.0216,
+              0.0111
+            ],
+            [
+              0.9243,
+              0.1916,
+              0.016,
+              0.0111
+            ]
+          ]
         }
       ],
       "source": {
@@ -126,6 +171,12 @@
         "pdfPages": [
           571
         ]
+      },
+      "comentarios_opciones": {
+        "A": "Gran parte de la información sensitiva pasa por el tálamo antes de proyectarse a la corteza.",
+        "B": "El hipotálamo participa en la regulación de la temperatura, el balance de agua y la ingesta.",
+        "C": "El hipocampo interviene en la formación de nuevos recuerdos declarativos.",
+        "D": "El cerebelo ajusta la coordinación de los movimientos y participa en el equilibrio."
       },
       "opcion_a": "Tálamo",
       "opcion_b": "Hipotálamo",
@@ -151,7 +202,20 @@
           "section": "El encéfalo y los pares craneales · Memoria",
           "page": 567,
           "printed": 539,
-          "marks": []
+          "marks": [
+            [
+              0.5817,
+              0.0491,
+              0.0896,
+              0.0105
+            ],
+            [
+              0.6802,
+              0.0495,
+              0.0705,
+              0.01
+            ]
+          ]
         }
       ],
       "source": {
@@ -167,6 +231,12 @@
         "pdfPages": [
           567
         ]
+      },
+      "comentarios_opciones": {
+        "A": "El hipocampo interviene en la formación de nuevos recuerdos declarativos.",
+        "B": "Gran parte de la información sensitiva pasa por el tálamo antes de proyectarse a la corteza.",
+        "C": "El cerebelo ajusta la coordinación de los movimientos y participa en el equilibrio.",
+        "D": "El hipotálamo participa en la regulación de la temperatura, el balance de agua y la ingesta."
       },
       "opcion_a": "Hipocampo",
       "opcion_b": "Tálamo",
@@ -192,7 +262,20 @@
           "section": "El encéfalo y los pares craneales · Ventrículos",
           "page": 546,
           "printed": 518,
-          "marks": []
+          "marks": [
+            [
+              0.8145,
+              0.5905,
+              0.0986,
+              0.0111
+            ],
+            [
+              0.4977,
+              0.6054,
+              0.056,
+              0.0111
+            ]
+          ]
         },
         {
           "slug": "morfofuncion",
@@ -200,7 +283,20 @@
           "section": "El encéfalo y los pares craneales · Ventrículos",
           "page": 548,
           "printed": 520,
-          "marks": []
+          "marks": [
+            [
+              0.0636,
+              0.0491,
+              0.0261,
+              0.0105
+            ],
+            [
+              0.1406,
+              0.0491,
+              0.0805,
+              0.0105
+            ]
+          ]
         }
       ],
       "source": {
@@ -263,7 +359,20 @@
           "section": "El encéfalo y los pares craneales · Líquido cefalorraquídeo",
           "page": 548,
           "printed": 520,
-          "marks": []
+          "marks": [
+            [
+              0.0886,
+              0.7593,
+              0.1099,
+              0.0093
+            ],
+            [
+              0.0886,
+              0.7698,
+              0.034,
+              0.0093
+            ]
+          ]
         },
         {
           "slug": "morfofuncion",
@@ -271,7 +380,14 @@
           "section": "El encéfalo y los pares craneales · Líquido cefalorraquídeo",
           "page": 549,
           "printed": 521,
-          "marks": []
+          "marks": [
+            [
+              0.525,
+              0.1618,
+              0.206,
+              0.0111
+            ]
+          ]
         }
       ],
       "source": {
@@ -334,7 +450,20 @@
           "section": "El encéfalo y los pares craneales · Lenguaje",
           "page": 571,
           "printed": 543,
-          "marks": []
+          "marks": [
+            [
+              0.8545,
+              0.7932,
+              0.0859,
+              0.0111
+            ],
+            [
+              0.525,
+              0.8081,
+              0.1706,
+              0.0111
+            ]
+          ]
         },
         {
           "slug": "morfofuncion",
@@ -342,7 +471,20 @@
           "section": "El encéfalo y los pares craneales · Lenguaje",
           "page": 573,
           "printed": 545,
-          "marks": []
+          "marks": [
+            [
+              0.5817,
+              0.0491,
+              0.0896,
+              0.0105
+            ],
+            [
+              0.6802,
+              0.0495,
+              0.0705,
+              0.01
+            ]
+          ]
         }
       ],
       "source": {
@@ -405,7 +547,20 @@
           "section": "El encéfalo y los pares craneales · Pares craneales",
           "page": 579,
           "printed": 551,
-          "marks": []
+          "marks": [
+            [
+              0.5817,
+              0.0491,
+              0.0896,
+              0.0105
+            ],
+            [
+              0.6802,
+              0.0495,
+              0.0705,
+              0.01
+            ]
+          ]
         },
         {
           "slug": "morfofuncion",
@@ -413,7 +568,20 @@
           "section": "El encéfalo y los pares craneales · Pares craneales",
           "page": 581,
           "printed": 553,
-          "marks": []
+          "marks": [
+            [
+              0.5817,
+              0.0491,
+              0.0896,
+              0.0105
+            ],
+            [
+              0.6802,
+              0.0495,
+              0.0705,
+              0.01
+            ]
+          ]
         }
       ],
       "source": {

@@ -49,7 +49,20 @@ function paper(id) {
     const { entries, bank } = evaluations();
     const entry = entries.get(id);
     if (!entry) return null;
-    return { ...entry.exam, questions: entry.questions.map(q => core.toQuestionRow(q, bank)) };
+    const questions = entry.questions.map((q, index) => {
+        const row = { ...core.toQuestionRow(q, bank), numero_pregunta: index + 1 };
+        if (q.id === 'abp-05-01') {
+            const data = [...q.text.matchAll(/([UABCD])=(\{[^}]+\})/g)];
+            if (data.length === 5) {
+                const sets = data.map(([, name, values]) => name + ' = ' + values.replace(/,/g, ', '));
+                row.pregunta = '¿Qué números de estos conjuntos cumplen las tres condiciones?\n'
+                    + '1. Están en C o en D.\n2. No están en A.\n3. También están en B.\n\n'
+                    + sets.join('\n');
+            }
+        }
+        return row;
+    });
+    return { ...entry.exam, questions };
 }
 
 module.exports = { metadata, paper };

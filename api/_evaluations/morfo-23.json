@@ -28,7 +28,20 @@
           "section": "El aparato urinario · Filtración glomerular",
           "page": 933,
           "printed": 905,
-          "marks": []
+          "marks": [
+            [
+              0.525,
+              0.4428,
+              0.1985,
+              0.0161
+            ],
+            [
+              0.525,
+              0.4664,
+              0.0337,
+              0.0111
+            ]
+          ]
         }
       ],
       "source": {
@@ -44,6 +57,12 @@
         "pdfPages": [
           933
         ]
+      },
+      "comentarios_opciones": {
+        "A": "La secreción incorpora sustancias de la sangre al líquido que circula por el túbulo.",
+        "B": "La presión hidrostática sanguínea favorece la salida de líquido de los capilares glomerulares al espacio capsular.",
+        "C": "En la reabsorción se recuperan sustancias del líquido tubular y vuelven a la sangre.",
+        "D": "La depuración renal expresa cuántos mililitros de plasma quedan libres del soluto por minuto."
       },
       "opcion_a": "Secreción tubular",
       "opcion_b": "Filtración glomerular",
@@ -69,7 +88,20 @@
           "section": "El aparato urinario · Procesamiento tubular",
           "page": 933,
           "printed": 905,
-          "marks": []
+          "marks": [
+            [
+              0.2894,
+              0.0909,
+              0.0428,
+              0.0093
+            ],
+            [
+              0.2862,
+              0.1014,
+              0.0491,
+              0.0093
+            ]
+          ]
         }
       ],
       "source": {
@@ -85,6 +117,12 @@
         "pdfPages": [
           933
         ]
+      },
+      "comentarios_opciones": {
+        "A": "La secreción incorpora sustancias de la sangre al líquido que circula por el túbulo.",
+        "B": "La presión hidrostática sanguínea favorece la salida de líquido de los capilares glomerulares al espacio capsular.",
+        "C": "La depuración renal expresa cuántos mililitros de plasma quedan libres del soluto por minuto.",
+        "D": "En la reabsorción se recuperan sustancias del líquido tubular y vuelven a la sangre."
       },
       "opcion_a": "Secreción tubular",
       "opcion_b": "Filtración glomerular",
@@ -110,7 +148,20 @@
           "section": "El aparato urinario · Procesamiento tubular",
           "page": 941,
           "printed": 913,
-          "marks": []
+          "marks": [
+            [
+              0.6585,
+              0.0491,
+              0.0896,
+              0.0105
+            ],
+            [
+              0.7569,
+              0.0495,
+              0.1021,
+              0.01
+            ]
+          ]
         }
       ],
       "source": {
@@ -126,6 +177,12 @@
         "pdfPages": [
           941
         ]
+      },
+      "comentarios_opciones": {
+        "A": "La secreción incorpora sustancias de la sangre al líquido que circula por el túbulo.",
+        "B": "En la reabsorción se recuperan sustancias del líquido tubular y vuelven a la sangre.",
+        "C": "La presión hidrostática sanguínea favorece la salida de líquido de los capilares glomerulares al espacio capsular.",
+        "D": "La depuración renal expresa cuántos mililitros de plasma quedan libres del soluto por minuto."
       },
       "opcion_a": "Secreción tubular",
       "opcion_b": "Reabsorción tubular",
@@ -151,7 +208,20 @@
           "section": "El aparato urinario · Evaluación renal",
           "page": 948,
           "printed": 920,
-          "marks": []
+          "marks": [
+            [
+              0.0636,
+              0.0491,
+              0.0261,
+              0.0105
+            ],
+            [
+              0.1406,
+              0.0491,
+              0.1035,
+              0.0105
+            ]
+          ]
         }
       ],
       "source": {
@@ -167,6 +237,12 @@
         "pdfPages": [
           948
         ]
+      },
+      "comentarios_opciones": {
+        "A": "La secreción incorpora sustancias de la sangre al líquido que circula por el túbulo.",
+        "B": "En la reabsorción se recuperan sustancias del líquido tubular y vuelven a la sangre.",
+        "C": "La depuración renal expresa cuántos mililitros de plasma quedan libres del soluto por minuto.",
+        "D": "La presión hidrostática sanguínea favorece la salida de líquido de los capilares glomerulares al espacio capsular."
       },
       "opcion_a": "Secreción tubular",
       "opcion_b": "Reabsorción tubular",
@@ -192,7 +268,20 @@
           "section": "El aparato urinario · Nefrona / Filtración glomerular",
           "page": 929,
           "printed": 901,
-          "marks": []
+          "marks": [
+            [
+              0.4072,
+              0.7359,
+              0.0991,
+              0.0111
+            ],
+            [
+              0.0909,
+              0.7508,
+              0.0694,
+              0.0111
+            ]
+          ]
         },
         {
           "slug": "morfofuncion",
@@ -200,7 +289,14 @@
           "section": "El aparato urinario · Nefrona / Filtración glomerular",
           "page": 930,
           "printed": 902,
-          "marks": []
+          "marks": [
+            [
+              0.5266,
+              0.9171,
+              0.1193,
+              0.0111
+            ]
+          ]
         }
       ],
       "source": {
@@ -263,7 +359,20 @@
           "section": "El aparato urinario · 23.3 Filtro glomerular / Filtración glomerular",
           "page": 933,
           "printed": 905,
-          "marks": []
+          "marks": [
+            [
+              0.1932,
+              0.7618,
+              0.2205,
+              0.0111
+            ],
+            [
+              0.5755,
+              0.2064,
+              0.2205,
+              0.0111
+            ]
+          ]
         }
       ],
       "source": {
@@ -324,7 +433,14 @@
           "section": "El aparato urinario · Reabsorción / Concentración urinaria",
           "page": 939,
           "printed": 911,
-          "marks": []
+          "marks": [
+            [
+              0.5921,
+              0.9172,
+              0.1338,
+              0.0111
+            ]
+          ]
         },
         {
           "slug": "morfofuncion",
@@ -332,7 +448,20 @@
           "section": "El aparato urinario · Reabsorción / Concentración urinaria",
           "page": 941,
           "printed": 913,
-          "marks": []
+          "marks": [
+            [
+              0.0909,
+              0.4364,
+              0.1532,
+              0.0161
+            ],
+            [
+              0.0909,
+              0.4601,
+              0.016,
+              0.0111
+            ]
+          ]
         }
       ],
       "source": {
@@ -395,7 +524,20 @@
           "section": "El aparato urinario · Aparato yuxtaglomerular / Micción",
           "page": 937,
           "printed": 909,
-          "marks": []
+          "marks": [
+            [
+              0.6585,
+              0.0491,
+              0.0896,
+              0.0105
+            ],
+            [
+              0.7569,
+              0.0495,
+              0.1021,
+              0.01
+            ]
+          ]
         },
         {
           "slug": "morfofuncion",
@@ -403,7 +545,14 @@
           "section": "El aparato urinario · Aparato yuxtaglomerular / Micción",
           "page": 950,
           "printed": 922,
-          "marks": []
+          "marks": [
+            [
+              0.6756,
+              0.7218,
+              0.1948,
+              0.0111
+            ]
+          ]
         }
       ],
       "source": {

@@ -53,9 +53,15 @@
         "pdf_pages": [
           262
         ],
-        "anchor": "80",
+        "anchor": "huesos de las extremidades",
         "evidence_page": 262,
-        "evidence_excerpt": "234 PARTE DOS Soporte y movimiento E l conocimiento de la anatomía ósea será útil para el estudio de los capítulos posteriores. Aporta un punto de referencia para estudiar la anatomía macroscópica de otros sistemas, ya que muchos órganos reciben su nombre de su relación con huesos cercanos. Por ejemplo, la arteria y vena subclavias se encuentran adyacentes a la clavícula; el músculo temporal está adjunto al hueso temporal; el nervio cubital y la arteria radial pasan a un lado del cúbito y el radio del antebrazo, respectivamente; y los lóbulos frontal, parietal, temporal y occipital del cerebro reciben ese nombre por los huesos adyacentes del cráneo. La comprensión de la manera en que los mús"
+        "verified_anchors": [
+          {
+            "pdf_page": 262,
+            "anchor": "huesos de las extremidades",
+            "printed_page": 234
+          }
+        ]
       },
       "opcion_a": "Axial y apendicular",
       "opcion_b": "Craneal y facial",
@@ -64,7 +70,30 @@
       "study_image": {
         "src": "/assets/study/oseo/p263-1.jpeg",
         "alt": "Esqueleto completo en vista anterior"
-      }
+      },
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 8 · El sistema óseo",
+          "page": 262,
+          "printed": 234,
+          "marks": [
+            [
+              0.1693,
+              0.7457,
+              0.1804,
+              0.0111
+            ],
+            [
+              0.2443,
+              0.8199,
+              0.1866,
+              0.0111
+            ]
+          ]
+        }
+      ]
     },
     {
       "content_id": "morfo-08-visual-002",
@@ -123,7 +152,30 @@
       "opcion_b": "Un relieve redondeado que articula con otro hueso",
       "opcion_c": "Una ranura para un tendón, nervio o vaso",
       "opcion_d": "Un hueco que aloja una raíz dental",
-      "study_image": null
+      "study_image": null,
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 8 · El sistema óseo",
+          "page": 264,
+          "printed": 236,
+          "marks": [
+            [
+              0.6454,
+              0.4807,
+              0.0431,
+              0.0106
+            ],
+            [
+              0.0796,
+              0.3591,
+              0.0409,
+              0.0094
+            ]
+          ]
+        }
+      ]
     },
     {
       "content_id": "morfo-08-visual-003",
@@ -179,15 +231,31 @@
         "pdf_pages": [
           264
         ],
-        "anchor": "Alvéolo:",
+        "anchor": "Alvéolo",
         "evidence_page": 264,
-        "evidence_excerpt": "236 PARTE DOS Soporte y movimiento Características anatómicas de los huesos Los huesos exhiben diversas crestas, espinas, protuberancias, depresiones, conductos, poros, grietas, cavidades y superfi cies articulares. Es importante conocer los nombres de estas mar- cas óseas, ya que posteriores descripciones de articulaciones, anejos musculares y rutas que recorren nervios y vasos sanguí- neos, se basan en esta terminología. Los términos que designan las características óseas más comunes se presentan en el cua- dro 8.2, y varios de ellos se ilustran en la fi gura 8.2. Es probable que el estudio del sistema óseo se lleve a cabo tanto en esqueletos articulados (huesos secos unidos con alambres y"
+        "verified_anchors": [
+          {
+            "pdf_page": 264,
+            "anchor": "Alvéolo",
+            "printed_page": 236
+          }
+        ]
       },
       "opcion_a": "Fosa",
       "opcion_b": "Foramen",
       "opcion_c": "Alvéolo",
       "opcion_d": "Conducto",
-      "study_image": null
+      "study_image": null,
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 8 · El sistema óseo",
+          "page": 264,
+          "printed": 236,
+          "marks": []
+        }
+      ]
     },
     {
       "content_id": "morfo-08-visual-004",
@@ -204,8 +272,8 @@
         "D": "Correcta. El cráneo tiene 22 huesos: 8 craneales y 14 faciales."
       },
       "fuente": "Saladin · Anatomía y fisiología · 6.ª edición · cap. 8",
-      "paginas_pdf": "277",
-      "pagina_impresa": "249",
+      "paginas_pdf": "264",
+      "pagina_impresa": "236",
       "dificultad": "medio",
       "diapositivas_origen": [
         11,
@@ -231,11 +299,17 @@
         "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
         "sha256": "e00074c7105c10052637b1c2a82f2b8959cf7c4cb9a91c4abd058ce958e58148",
         "pdf_pages": [
-          277
+          264
         ],
-        "anchor": "8",
-        "evidence_page": 277,
-        "evidence_excerpt": "CAPÍTULO 8 El sistema óseo 249 La rama tiene una forma parecida a una “Y”. Su parte pos- terior, denominada apófi sis condilar, cuenta con el cóndilo mandibular (una protuberancia ovalada que se articula con la fosa mandibular del hueso temporal). La unión de este cóndilo con el hueso temporal forma un gozne (gínglimo) denominado articulación temporomandibular (por las siglas en inglés: TMJ). La parte anterior de la rama, la apófi sis coronoide, es el punto de inserción del músculo temporal, que jala la mandíbu- la hacia arriba cuando se mastica. El arco en forma de “U” entre las dos apófi sis es la muesca mandibular. Justo debajo de ésta, en la superfi cie medial de la rama, se encuentra el"
+        "anchor": "integrado por 22 huesos",
+        "evidence_page": 264,
+        "verified_anchors": [
+          {
+            "pdf_page": 264,
+            "anchor": "integrado por 22 huesos",
+            "printed_page": 236
+          }
+        ]
       },
       "opcion_a": "8",
       "opcion_b": "14",
@@ -244,7 +318,30 @@
       "study_image": {
         "src": "/assets/study/oseo/p265-5.jpeg",
         "alt": "Cráneo en vista anterior"
-      }
+      },
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 8 · El sistema óseo",
+          "page": 264,
+          "printed": 236,
+          "marks": [
+            [
+              0.7999,
+              0.8278,
+              0.1132,
+              0.0111
+            ],
+            [
+              0.4977,
+              0.8426,
+              0.0457,
+              0.0111
+            ]
+          ]
+        }
+      ]
     },
     {
       "content_id": "morfo-08-visual-005",
@@ -261,8 +358,8 @@
         "D": "Revisa. La escamosa une parietal y temporal."
       },
       "fuente": "Saladin · Anatomía y fisiología · 6.ª edición · cap. 8",
-      "paginas_pdf": "268",
-      "pagina_impresa": "240",
+      "paginas_pdf": "270",
+      "pagina_impresa": "242",
       "dificultad": "medio",
       "diapositivas_origen": [
         12
@@ -283,11 +380,17 @@
         "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
         "sha256": "e00074c7105c10052637b1c2a82f2b8959cf7c4cb9a91c4abd058ce958e58148",
         "pdf_pages": [
-          268
+          270
         ],
-        "anchor": "Coronal",
-        "evidence_page": 268,
-        "evidence_excerpt": "240 PARTE DOS Soporte y movimiento cavidad craneana, que contiene al encéfalo. Otras cavidades incluyen las órbitas (cuencas de los ojos), la cavidad nasal, la cavi- dad oral, las cavidades del oído medio e interno, y los senos para- nasales. Éstos reciben su nombre de los huesos en que se presentan (fi gura 8.8): frontal, esfenoidal, etmoidal y maxilar. Se conectan con la cavidad nasal, y están recubiertos por mucosas y llenos de aire. Aligeran la parte anterior del cráneo y actúan como cámaras que agregan resonancia a la voz. Este último efecto puede percibir- se por la manera en que la voz cambia cuando se padece un resfria- do y el moco obstruye el paso del sonido a los senos y de regres"
+        "anchor": "une el hueso frontal con los huesos parietales",
+        "evidence_page": 270,
+        "verified_anchors": [
+          {
+            "pdf_page": 270,
+            "anchor": "une el hueso frontal con los huesos parietales",
+            "printed_page": 242
+          }
+        ]
       },
       "opcion_a": "Coronal",
       "opcion_b": "Sagital",
@@ -296,7 +399,30 @@
       "study_image": {
         "src": "/assets/study/oseo/p268-2.jpeg",
         "alt": "Bóveda del cráneo vista desde arriba"
-      }
+      },
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 8 · El sistema óseo",
+          "page": 270,
+          "printed": 242,
+          "marks": [
+            [
+              0.388,
+              0.9048,
+              0.091,
+              0.0111
+            ],
+            [
+              0.0636,
+              0.9196,
+              0.2152,
+              0.0111
+            ]
+          ]
+        }
+      ]
     },
     {
       "content_id": "morfo-08-visual-006",
@@ -363,7 +489,30 @@
       "study_image": {
         "src": "/assets/study/oseo/p273-2.jpeg",
         "alt": "Hueso de la base craneal en dos vistas"
-      }
+      },
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 8 · El sistema óseo",
+          "page": 272,
+          "printed": 244,
+          "marks": [
+            [
+              0.7829,
+              0.6966,
+              0.028,
+              0.0111
+            ],
+            [
+              0.6668,
+              0.7114,
+              0.0288,
+              0.0111
+            ]
+          ]
+        }
+      ]
     },
     {
       "content_id": "morfo-08-visual-007",
@@ -420,7 +569,30 @@
       "study_image": {
         "src": "/assets/study/oseo/p273-3.jpeg",
         "alt": "Pieza ósea de la región nasal"
-      }
+      },
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 8 · El sistema óseo",
+          "page": 273,
+          "printed": 245,
+          "marks": [
+            [
+              0.3225,
+              0.6639,
+              0.0457,
+              0.0111
+            ],
+            [
+              0.4566,
+              0.6788,
+              0.0457,
+              0.0111
+            ]
+          ]
+        }
+      ]
     },
     {
       "content_id": "morfo-08-visual-008",
@@ -479,7 +651,30 @@
       "opcion_b": "Cigomático y lagrimal",
       "opcion_c": "Vómer y mandíbula",
       "opcion_d": "Maxilar y palatino",
-      "study_image": null
+      "study_image": null,
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 8 · El sistema óseo",
+          "page": 276,
+          "printed": 248,
+          "marks": [
+            [
+              0.0636,
+              0.1025,
+              0.0503,
+              0.0111
+            ],
+            [
+              0.14,
+              0.1471,
+              0.0503,
+              0.0111
+            ]
+          ]
+        }
+      ]
     },
     {
       "content_id": "morfo-08-visual-009",
@@ -520,15 +715,38 @@
         "pdf_pages": [
           278
         ],
-        "anchor": "7",
+        "anchor": "cantidades de vértebras cervicales, torácicas y lumbares",
         "evidence_page": 278,
-        "evidence_excerpt": "250 PARTE DOS Soporte y movimiento sonajes de grandes cabezas para darles un aspecto más conmo- vedor e inmaduro). Se considera que tanto en seres humanos como en otras especies animales, las cabezas grandes y redon- deadas de los individuos jóvenes promueven la supervivencia al estimular los instintos de protección por parte de los padres. Antes de proseguir Responda las siguientes preguntas para probar su comprensión de la sección anterior: 4. Mencione los nombres de los senos paranasales y establezca su posición. Mencione otras cuatro cavidades del cráneo. 5. Explique la diferencia entre un hueso craneal y uno facial. Ofrezca cuatro ejemplos de cada uno. 6. Dibuje un óvalo que represente "
+        "verified_anchors": [
+          {
+            "pdf_page": 278,
+            "anchor": "cantidades de vértebras cervicales, torácicas y lumbares",
+            "printed_page": 250
+          }
+        ]
       },
       "opcion_a": "7 cervicales, 12 torácicas y 5 lumbares",
       "opcion_b": "12 cervicales, 7 torácicas y 5 lumbares",
       "opcion_c": "7 cervicales, 5 torácicas y 12 lumbares",
       "opcion_d": "5 cervicales, 12 torácicas y 7 lumbares",
-      "study_image": null
+      "study_image": null,
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 8 · El sistema óseo",
+          "page": 278,
+          "printed": 250,
+          "marks": [
+            [
+              0.4977,
+              0.8578,
+              0.3682,
+              0.0111
+            ]
+          ]
+        }
+      ]
     },
     {
       "content_id": "morfo-08-visual-010",
@@ -585,7 +803,30 @@
       "study_image": {
         "src": "/assets/study/oseo/p281-1.jpeg",
         "alt": "Disco intervertebral en vista superior"
-      }
+      },
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 8 · El sistema óseo",
+          "page": 281,
+          "printed": 253,
+          "marks": [
+            [
+              0.6711,
+              0.1534,
+              0.0385,
+              0.0111
+            ],
+            [
+              0.8469,
+              0.1534,
+              0.0393,
+              0.0111
+            ]
+          ]
+        }
+      ]
     },
     {
       "content_id": "morfo-08-visual-011",
@@ -642,7 +883,24 @@
       "study_image": {
         "src": "/assets/study/oseo/p282-6.jpeg",
         "alt": "Unión de las dos primeras vértebras cervicales"
-      }
+      },
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 8 · El sistema óseo",
+          "page": 281,
+          "printed": 253,
+          "marks": [
+            [
+              0.6788,
+              0.7921,
+              0.0313,
+              0.0111
+            ]
+          ]
+        }
+      ]
     },
     {
       "content_id": "morfo-08-visual-012",
@@ -683,9 +941,15 @@
         "pdf_pages": [
           285
         ],
-        "anchor": "1–7",
+        "anchor": "Costillas flotantes",
         "evidence_page": 285,
-        "evidence_excerpt": "CAPÍTULO 8 El sistema óseo 257 Agujeros sacros anteriores Apófisis articular superior Apófisis transversa Líneas transversas Asta Hiato sacro Cresta sacra media Cóccix Cóccix Promontorio sacro Agujeros sacros posteriores Ala Conducto sacro Cresta sacra lateral Superficie auricular S1 S2 S3 S4 S5 Co1 Co2 Co3 Co4 a) Vista anterior b) Vista posterior Articulación esternoclavicular Articulación acromioclavicular Clavícula Escápula (omóplato) Muesca supraesternal Muesca clavicular Mango (manubrio) Ángulo Cuerpo Apófisis xifoides Cartílagos costales Margen costal Costillas verdaderas (1a. a 7a.) 1 2 3 4 5 6 7 8 9 10 11 12 T12 T1 L1 Costillas falsas (8a. a 12a.) Costillas flotantes (11a. y 12a.) Es"
+        "verified_anchors": [
+          {
+            "pdf_page": 285,
+            "anchor": "Costillas flotantes",
+            "printed_page": 257
+          }
+        ]
       },
       "opcion_a": "1 y 2",
       "opcion_b": "6 y 7",
@@ -694,7 +958,24 @@
       "study_image": {
         "src": "/assets/study/oseo/p285-1.jpeg",
         "alt": "Caja torácica en vista anterior"
-      }
+      },
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 8 · El sistema óseo",
+          "page": 285,
+          "printed": 257,
+          "marks": [
+            [
+              0.2558,
+              0.8549,
+              0.0927,
+              0.0092
+            ]
+          ]
+        }
+      ]
     },
     {
       "content_id": "morfo-08-visual-013",
@@ -756,7 +1037,30 @@
       "study_image": {
         "src": "/assets/study/oseo/p290-2.jpeg",
         "alt": "Hueso del brazo en dos vistas"
-      }
+      },
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 8 · El sistema óseo",
+          "page": 289,
+          "printed": 261,
+          "marks": [
+            [
+              0.2168,
+              0.764,
+              0.035,
+              0.0111
+            ],
+            [
+              0.1198,
+              0.7937,
+              0.0345,
+              0.0111
+            ]
+          ]
+        }
+      ]
     },
     {
       "content_id": "morfo-08-visual-014",
@@ -818,7 +1122,30 @@
       "study_image": {
         "src": "/assets/study/oseo/p290-1.jpeg",
         "alt": "Huesos del antebrazo en dos vistas"
-      }
+      },
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 8 · El sistema óseo",
+          "page": 290,
+          "printed": 262,
+          "marks": [
+            [
+              0.3422,
+              0.7882,
+              0.0361,
+              0.0111
+            ],
+            [
+              0.2818,
+              0.8031,
+              0.0345,
+              0.0111
+            ]
+          ]
+        }
+      ]
     },
     {
       "content_id": "morfo-08-visual-015",
@@ -885,7 +1212,30 @@
       "study_image": {
         "src": "/assets/study/oseo/p294-1.jpeg",
         "alt": "Hueso de la cintura pélvica"
-      }
+      },
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 8 · El sistema óseo",
+          "page": 294,
+          "printed": 266,
+          "marks": [
+            [
+              0.2337,
+              0.7412,
+              0.0345,
+              0.0111
+            ],
+            [
+              0.1031,
+              0.8006,
+              0.0353,
+              0.0111
+            ]
+          ]
+        }
+      ]
     },
     {
       "content_id": "morfo-08-visual-016",
@@ -931,9 +1281,15 @@
         "pdf_pages": [
           291
         ],
-        "anchor": "8",
+        "anchor": "dos falanges en el pulgar",
         "evidence_page": 291,
-        "evidence_excerpt": "CAPÍTULO 8 El sistema óseo 263 ósea donde se descansa el codo sobre la mesa). El lado anterior está formado por una apófi sis coronoides menos prominente. En sentido lateral, la cabeza del cúbito tiene una muesca radial menos notoria, que aloja la orilla de la cabeza del radio. En el extremo distal del cúbito se encuentra una apófi sis estiloides medial. Las protuberancias óseas que se pueden palpar a cada lado de la muñeca son las apófi sis estiloides del radio y el cúbito. El radio y el cúbito están unidos junto con sus diáfi sis por un ligamento, la membrana interósea (IM). que se encuentra adhe- rida en cada hueso a una cresta angular denominada margen interóseo. La mayor parte de las fi"
+        "verified_anchors": [
+          {
+            "pdf_page": 291,
+            "anchor": "dos falanges en el pulgar",
+            "printed_page": 263
+          }
+        ]
       },
       "opcion_a": "Tres",
       "opcion_b": "Cinco",
@@ -942,7 +1298,30 @@
       "study_image": {
         "src": "/assets/study/oseo/p292-2.jpeg",
         "alt": "Esqueleto de una mano"
-      }
+      },
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 8 · El sistema óseo",
+          "page": 291,
+          "printed": 263,
+          "marks": [
+            [
+              0.8548,
+              0.2812,
+              0.0855,
+              0.0111
+            ],
+            [
+              0.525,
+              0.2961,
+              0.083,
+              0.0111
+            ]
+          ]
+        }
+      ]
     },
     {
       "content_id": "morfo-08-visual-017",
@@ -988,9 +1367,15 @@
         "pdf_pages": [
           298
         ],
-        "anchor": "7",
+        "anchor": "siete tarsianos",
         "evidence_page": 298,
-        "evidence_excerpt": "270 PARTE DOS Soporte y movimiento El tobillo y el pie Los huesos tarsianos del tobillo se organizan en grupos proxi- males y distales, de manera parecida a los huesos carpianos de la muñeca (fi gura 8.40). Sin embargo, debido a la función que desempeñan en el soporte de peso del tobillo, sus formas y disposiciones son muy diferentes de las de los huesos carpia- nos, además de que están integrados por completo a la estruc- tura del pie. El hueso tarsiano más largo es el calcáneo,49 que forma el talón. Su extremo posterior es el punto de unión para el tendón calcáneo (de Aquiles) de los músculos de la panto- rrilla. El segundo hueso tarsiano más largo y el más superior es el astrágalo. Tiene "
+        "verified_anchors": [
+          {
+            "pdf_page": 298,
+            "anchor": "siete tarsianos",
+            "printed_page": 270
+          }
+        ]
       },
       "opcion_a": "Siete",
       "opcion_b": "Ocho",
@@ -999,7 +1384,24 @@
       "study_image": {
         "src": "/assets/study/oseo/p299-4.jpeg",
         "alt": "Esqueleto del pie en dos vistas"
-      }
+      },
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 8 · El sistema óseo",
+          "page": 298,
+          "printed": 270,
+          "marks": [
+            [
+              0.6933,
+              0.6381,
+              0.088,
+              0.0112
+            ]
+          ]
+        }
+      ]
     },
     {
       "content_id": "morfo-08-visual-018",
@@ -1058,7 +1460,30 @@
       "opcion_b": "Pelvis menor",
       "opcion_c": "Cintura escapular",
       "opcion_d": "Caja torácica",
-      "study_image": null
+      "study_image": null,
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 8 · El sistema óseo",
+          "page": 294,
+          "printed": 266,
+          "marks": [
+            [
+              0.2514,
+              0.1322,
+              0.0401,
+              0.0111
+            ],
+            [
+              0.1132,
+              0.2659,
+              0.0401,
+              0.0111
+            ]
+          ]
+        }
+      ]
     },
     {
       "content_id": "morfo-08-visual-019",
@@ -1117,7 +1542,30 @@
       "opcion_b": "Fémur",
       "opcion_c": "Tibia",
       "opcion_d": "Patela o rótula",
-      "study_image": null
+      "study_image": null,
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 8 · El sistema óseo",
+          "page": 297,
+          "printed": 269,
+          "marks": [
+            [
+              0.1168,
+              0.6994,
+              0.0381,
+              0.0149
+            ],
+            [
+              0.3034,
+              0.7221,
+              0.0297,
+              0.0111
+            ]
+          ]
+        }
+      ]
     },
     {
       "content_id": "morfo-08-visual-020",
@@ -1169,7 +1617,24 @@
       "study_image": {
         "src": "/assets/study/oseo/p300-1.jpeg",
         "alt": "Pie en una radiografía lateral"
-      }
+      },
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 8 · El sistema óseo",
+          "page": 300,
+          "printed": 272,
+          "marks": [
+            [
+              0.3,
+              0.2386,
+              0.0354,
+              0.0093
+            ]
+          ]
+        }
+      ]
     }
   ],
   "content_revision": 5,

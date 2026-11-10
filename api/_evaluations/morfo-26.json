@@ -28,7 +28,14 @@
           "section": "Nutrición y metabolismo · Metabolismo de los carbohidratos",
           "page": 1046,
           "printed": 1018,
-          "marks": []
+          "marks": [
+            [
+              0.5266,
+              0.7418,
+              0.2797,
+              0.0111
+            ]
+          ]
         }
       ],
       "source": {
@@ -44,6 +51,12 @@
         "pdfPages": [
           1046
         ]
+      },
+      "comentarios_opciones": {
+        "A": "La glucogenólisis rompe el glucógeno para movilizar la reserva de carbohidratos.",
+        "B": "La lipólisis descompone triglicéridos y libera glicerol y ácidos grasos.",
+        "C": "La glucogénesis incorpora glucosa al glucógeno para almacenarla.",
+        "D": "La gluconeogénesis sintetiza glucosa a partir de sustancias que no son carbohidratos."
       },
       "opcion_a": "Glucogenólisis",
       "opcion_b": "Lipólisis",
@@ -69,7 +82,14 @@
           "section": "Nutrición y metabolismo · Metabolismo de los carbohidratos",
           "page": 1046,
           "printed": 1018,
-          "marks": []
+          "marks": [
+            [
+              0.5266,
+              0.816,
+              0.3046,
+              0.0111
+            ]
+          ]
         }
       ],
       "source": {
@@ -85,6 +105,12 @@
         "pdfPages": [
           1046
         ]
+      },
+      "comentarios_opciones": {
+        "A": "La gluconeogénesis sintetiza glucosa a partir de sustancias que no son carbohidratos.",
+        "B": "La lipólisis descompone triglicéridos y libera glicerol y ácidos grasos.",
+        "C": "La glucogenólisis rompe el glucógeno para movilizar la reserva de carbohidratos.",
+        "D": "La glucogénesis incorpora glucosa al glucógeno para almacenarla."
       },
       "opcion_a": "Gluconeogénesis",
       "opcion_b": "Lipólisis",
@@ -110,7 +136,20 @@
           "section": "Nutrición y metabolismo · Ayuno",
           "page": 1047,
           "printed": 1019,
-          "marks": []
+          "marks": [
+            [
+              0.6562,
+              0.3493,
+              0.0165,
+              0.0136
+            ],
+            [
+              0.6991,
+              0.3498,
+              0.1313,
+              0.0129
+            ]
+          ]
         }
       ],
       "source": {
@@ -126,6 +165,12 @@
         "pdfPages": [
           1047
         ]
+      },
+      "comentarios_opciones": {
+        "A": "La lipólisis descompone triglicéridos y libera glicerol y ácidos grasos.",
+        "B": "La glucogénesis incorpora glucosa al glucógeno para almacenarla.",
+        "C": "La gluconeogénesis sintetiza glucosa a partir de sustancias que no son carbohidratos.",
+        "D": "La glucogenólisis rompe el glucógeno para movilizar la reserva de carbohidratos."
       },
       "opcion_a": "Lipólisis",
       "opcion_b": "Glucogénesis",
@@ -151,7 +196,14 @@
           "section": "Nutrición y metabolismo · Metabolismo de lípidos",
           "page": 1048,
           "printed": 1020,
-          "marks": []
+          "marks": [
+            [
+              0.198,
+              0.4762,
+              0.1912,
+              0.0111
+            ]
+          ]
         }
       ],
       "source": {
@@ -167,6 +219,12 @@
         "pdfPages": [
           1048
         ]
+      },
+      "comentarios_opciones": {
+        "A": "La glucogenólisis rompe el glucógeno para movilizar la reserva de carbohidratos.",
+        "B": "La lipólisis descompone triglicéridos y libera glicerol y ácidos grasos.",
+        "C": "La glucogénesis incorpora glucosa al glucógeno para almacenarla.",
+        "D": "La gluconeogénesis sintetiza glucosa a partir de sustancias que no son carbohidratos."
       },
       "opcion_a": "Glucogenólisis",
       "opcion_b": "Lipólisis",
@@ -192,7 +250,14 @@
           "section": "Nutrición y metabolismo · Nutrición",
           "page": 1032,
           "printed": 1004,
-          "marks": []
+          "marks": [
+            [
+              0.0925,
+              0.3946,
+              0.2116,
+              0.0111
+            ]
+          ]
         },
         {
           "slug": "morfofuncion",
@@ -200,7 +265,14 @@
           "section": "Nutrición y metabolismo · Nutrición",
           "page": 1034,
           "printed": 1006,
-          "marks": []
+          "marks": [
+            [
+              0.6819,
+              0.9344,
+              0.2098,
+              0.0111
+            ]
+          ]
         }
       ],
       "source": {
@@ -263,7 +335,20 @@
           "section": "Nutrición y metabolismo · Metabolismo de carbohidratos",
           "page": 1043,
           "printed": 1015,
-          "marks": []
+          "marks": [
+            [
+              0.8034,
+              0.7004,
+              0.137,
+              0.0111
+            ],
+            [
+              0.525,
+              0.7152,
+              0.0425,
+              0.0111
+            ]
+          ]
         },
         {
           "slug": "morfofuncion",
@@ -271,7 +356,14 @@
           "section": "Nutrición y metabolismo · Metabolismo de carbohidratos",
           "page": 1046,
           "printed": 1018,
-          "marks": []
+          "marks": [
+            [
+              0.0997,
+              0.4922,
+              0.202,
+              0.0111
+            ]
+          ]
         }
       ],
       "source": {
@@ -334,7 +426,14 @@
           "section": "Nutrición y metabolismo · Respiración aeróbica",
           "page": 1045,
           "printed": 1017,
-          "marks": []
+          "marks": [
+            [
+              0.1198,
+              0.7879,
+              0.2279,
+              0.0111
+            ]
+          ]
         },
         {
           "slug": "morfofuncion",
@@ -342,7 +441,14 @@
           "section": "Nutrición y metabolismo · Respiración aeróbica",
           "page": 1047,
           "printed": 1019,
-          "marks": []
+          "marks": [
+            [
+              0.1318,
+              0.7754,
+              0.1653,
+              0.0106
+            ]
+          ]
         }
       ],
       "source": {
@@ -405,7 +511,14 @@
           "section": "Nutrición y metabolismo · Metabolismo de proteínas / Estados metabólicos",
           "page": 1050,
           "printed": 1022,
-          "marks": []
+          "marks": [
+            [
+              0.3181,
+              0.4603,
+              0.1604,
+              0.0094
+            ]
+          ]
         },
         {
           "slug": "morfofuncion",
@@ -413,7 +526,20 @@
           "section": "Nutrición y metabolismo · Metabolismo de proteínas / Estados metabólicos",
           "page": 1052,
           "printed": 1024,
-          "marks": []
+          "marks": [
+            [
+              0.8867,
+              0.1916,
+              0.0265,
+              0.0111
+            ],
+            [
+              0.5266,
+              0.2064,
+              0.1436,
+              0.0111
+            ]
+          ]
         }
       ],
       "source": {

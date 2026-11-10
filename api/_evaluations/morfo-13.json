@@ -28,7 +28,20 @@
           "section": "Médula espinal, nervios raquídeos y reflejos somáticos · Reflejos",
           "page": 529,
           "printed": 501,
-          "marks": []
+          "marks": [
+            [
+              0.3158,
+              0.7077,
+              0.0569,
+              0.0111
+            ],
+            [
+              0.3762,
+              0.7077,
+              0.0305,
+              0.0111
+            ]
+          ]
         }
       ],
       "source": {
@@ -44,6 +57,12 @@
         "pdfPages": [
           529
         ]
+      },
+      "comentarios_opciones": {
+        "A": "El reflejo flexor aleja del estímulo la extremidad que lo recibió.",
+        "B": "La extensión cruzada actúa sobre la extremidad contraria. Esa pierna sostiene el cuerpo mientras se retira la otra.",
+        "C": "El órgano tendinoso detecta la tensión aplicada al tendón.",
+        "D": "El huso muscular informa sobre el alargamiento del músculo."
       },
       "opcion_a": "Reflejo flexor",
       "opcion_b": "Reflejo de extensión cruzada",
@@ -69,7 +88,14 @@
           "section": "Médula espinal, nervios raquídeos y reflejos somáticos · Reflejos",
           "page": 533,
           "printed": 505,
-          "marks": []
+          "marks": [
+            [
+              0.3278,
+              0.8723,
+              0.1331,
+              0.0111
+            ]
+          ]
         }
       ],
       "source": {
@@ -85,6 +111,12 @@
         "pdfPages": [
           533
         ]
+      },
+      "comentarios_opciones": {
+        "A": "El órgano tendinoso detecta la tensión aplicada al tendón.",
+        "B": "El huso muscular informa sobre el alargamiento del músculo.",
+        "C": "La extensión cruzada actúa sobre la extremidad contraria. Esa pierna sostiene el cuerpo mientras se retira la otra.",
+        "D": "El reflejo flexor aleja del estímulo la extremidad que lo recibió."
       },
       "opcion_a": "Órgano tendinoso de Golgi",
       "opcion_b": "Huso muscular",
@@ -110,7 +142,14 @@
           "section": "Médula espinal, nervios raquídeos y reflejos somáticos · Reflejos",
           "page": 532,
           "printed": 504,
-          "marks": []
+          "marks": [
+            [
+              0.7212,
+              0.7256,
+              0.1654,
+              0.0111
+            ]
+          ]
         }
       ],
       "source": {
@@ -126,6 +165,12 @@
         "pdfPages": [
           532
         ]
+      },
+      "comentarios_opciones": {
+        "A": "El huso muscular informa sobre el alargamiento del músculo.",
+        "B": "El órgano tendinoso detecta la tensión aplicada al tendón.",
+        "C": "El reflejo flexor aleja del estímulo la extremidad que lo recibió.",
+        "D": "La extensión cruzada actúa sobre la extremidad contraria. Esa pierna sostiene el cuerpo mientras se retira la otra."
       },
       "opcion_a": "Huso muscular",
       "opcion_b": "Órgano tendinoso de Golgi",
@@ -151,7 +196,14 @@
           "section": "Médula espinal, nervios raquídeos y reflejos somáticos · Reflejos",
           "page": 533,
           "printed": 505,
-          "marks": []
+          "marks": [
+            [
+              0.1688,
+              0.3253,
+              0.2715,
+              0.0111
+            ]
+          ]
         }
       ],
       "source": {
@@ -167,6 +219,12 @@
         "pdfPages": [
           533
         ]
+      },
+      "comentarios_opciones": {
+        "A": "La extensión cruzada actúa sobre la extremidad contraria. Esa pierna sostiene el cuerpo mientras se retira la otra.",
+        "B": "El órgano tendinoso detecta la tensión aplicada al tendón.",
+        "C": "El huso muscular informa sobre el alargamiento del músculo.",
+        "D": "El reflejo flexor aleja del estímulo la extremidad que lo recibió."
       },
       "opcion_a": "Reflejo de extensión cruzada",
       "opcion_b": "Órgano tendinoso de Golgi",
@@ -192,7 +250,14 @@
           "section": "Médula espinal, nervios raquídeos y reflejos somáticos · Anatomía de la médula / Meninges",
           "page": 508,
           "printed": 480,
-          "marks": []
+          "marks": [
+            [
+              0.1855,
+              0.8194,
+              0.097,
+              0.0111
+            ]
+          ]
         },
         {
           "slug": "morfofuncion",
@@ -200,7 +265,20 @@
           "section": "Médula espinal, nervios raquídeos y reflejos somáticos · Anatomía de la médula / Meninges",
           "page": 510,
           "printed": 482,
-          "marks": []
+          "marks": [
+            [
+              0.0636,
+              0.0491,
+              0.0261,
+              0.0105
+            ],
+            [
+              0.1406,
+              0.0491,
+              0.0805,
+              0.0105
+            ]
+          ]
         }
       ],
       "source": {
@@ -263,7 +341,14 @@
           "section": "Médula espinal, nervios raquídeos y reflejos somáticos · Meninges",
           "page": 509,
           "printed": 481,
-          "marks": []
+          "marks": [
+            [
+              0.1198,
+              0.9029,
+              0.2245,
+              0.0111
+            ]
+          ]
         },
         {
           "slug": "morfofuncion",
@@ -271,7 +356,20 @@
           "section": "Médula espinal, nervios raquídeos y reflejos somáticos · Meninges",
           "page": 510,
           "printed": 482,
-          "marks": []
+          "marks": [
+            [
+              0.0636,
+              0.0491,
+              0.0261,
+              0.0105
+            ],
+            [
+              0.1406,
+              0.0491,
+              0.0805,
+              0.0105
+            ]
+          ]
         }
       ],
       "source": {
@@ -334,7 +432,20 @@
           "section": "Médula espinal, nervios raquídeos y reflejos somáticos · Sustancia gris y blanca / Nervios raquídeos",
           "page": 511,
           "printed": 483,
-          "marks": []
+          "marks": [
+            [
+              0.4594,
+              0.0491,
+              0.0896,
+              0.0105
+            ],
+            [
+              0.5579,
+              0.0495,
+              0.1304,
+              0.01
+            ]
+          ]
         },
         {
           "slug": "morfofuncion",
@@ -342,7 +453,20 @@
           "section": "Médula espinal, nervios raquídeos y reflejos somáticos · Sustancia gris y blanca / Nervios raquídeos",
           "page": 518,
           "printed": 490,
-          "marks": []
+          "marks": [
+            [
+              0.4977,
+              0.8647,
+              0.1573,
+              0.0149
+            ],
+            [
+              0.4977,
+              0.8875,
+              0.1437,
+              0.0111
+            ]
+          ]
         }
       ],
       "source": {
@@ -405,7 +529,20 @@
           "section": "Médula espinal, nervios raquídeos y reflejos somáticos · Nervios raquídeos / Reflejos",
           "page": 518,
           "printed": 490,
-          "marks": []
+          "marks": [
+            [
+              0.4139,
+              0.4712,
+              0.1379,
+              0.0093
+            ],
+            [
+              0.1886,
+              0.3657,
+              0.0747,
+              0.0093
+            ]
+          ]
         },
         {
           "slug": "morfofuncion",
@@ -413,7 +550,20 @@
           "section": "Médula espinal, nervios raquídeos y reflejos somáticos · Nervios raquídeos / Reflejos",
           "page": 534,
           "printed": 506,
-          "marks": []
+          "marks": [
+            [
+              0.4977,
+              0.1035,
+              0.1761,
+              0.0149
+            ],
+            [
+              0.4977,
+              0.1241,
+              0.0776,
+              0.0106
+            ]
+          ]
         }
       ],
       "source": {

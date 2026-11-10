@@ -19,7 +19,7 @@
       "justificacion": "La ARN polimerasa I produce un precursor que dará lugar a los ARNr 28 S, 18 S y 5,8 S.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "356",
-      "pagina_impresa": "",
+      "pagina_impresa": "356",
       "dificultad": "medio",
       "lecturas_comentario": [
         {
@@ -27,8 +27,15 @@
           "label": "Calvo",
           "section": "El núcleo. Parte II: transcripción y maduración del ARN y estructura del nucléolo · ARN polimerasas",
           "page": 356,
-          "printed": null,
-          "marks": []
+          "printed": 356,
+          "marks": [
+            [
+              0.6752,
+              0.3306,
+              0.2535,
+              0.0197
+            ]
+          ]
         }
       ],
       "source": {
@@ -42,6 +49,12 @@
         "pdfPages": [
           356
         ]
+      },
+      "comentarios_opciones": {
+        "A": "La ARN polimerasa II produce el precursor del ARN mensajero que se utilizará para sintetizar proteínas.",
+        "B": "La ARN polimerasa III transcribe el ARNt y el ARNr 5 S.",
+        "C": "La ARN polimerasa I produce un precursor que dará lugar a los ARNr 28 S, 18 S y 5,8 S.",
+        "D": "La poliadenilato polimerasa añade la cola de poli(A) al extremo 3′ tras el corte, sin usar un molde."
       },
       "opcion_a": "ARN polimerasa II",
       "opcion_b": "ARN polimerasa III",
@@ -58,7 +71,7 @@
       "justificacion": "La ARN polimerasa II produce el precursor del ARN mensajero que se utilizará para sintetizar proteínas.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "356",
-      "pagina_impresa": "",
+      "pagina_impresa": "356",
       "dificultad": "medio",
       "lecturas_comentario": [
         {
@@ -66,8 +79,15 @@
           "label": "Calvo",
           "section": "El núcleo. Parte II: transcripción y maduración del ARN y estructura del nucléolo · ARN polimerasas",
           "page": 356,
-          "printed": null,
-          "marks": []
+          "printed": 356,
+          "marks": [
+            [
+              0.6752,
+              0.3306,
+              0.2535,
+              0.0197
+            ]
+          ]
         }
       ],
       "source": {
@@ -81,6 +101,12 @@
         "pdfPages": [
           356
         ]
+      },
+      "comentarios_opciones": {
+        "A": "La ARN polimerasa III transcribe el ARNt y el ARNr 5 S.",
+        "B": "La ARN polimerasa II produce el precursor del ARN mensajero que se utilizará para sintetizar proteínas.",
+        "C": "La ARN polimerasa I produce un precursor que dará lugar a los ARNr 28 S, 18 S y 5,8 S.",
+        "D": "La poliadenilato polimerasa añade la cola de poli(A) al extremo 3′ tras el corte, sin usar un molde."
       },
       "opcion_a": "ARN polimerasa III",
       "opcion_b": "ARN polimerasa II",
@@ -97,7 +123,7 @@
       "justificacion": "La ARN polimerasa III transcribe el ARNt y el ARNr 5 S.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "356",
-      "pagina_impresa": "",
+      "pagina_impresa": "356",
       "dificultad": "medio",
       "lecturas_comentario": [
         {
@@ -105,8 +131,15 @@
           "label": "Calvo",
           "section": "El núcleo. Parte II: transcripción y maduración del ARN y estructura del nucléolo · ARN polimerasas",
           "page": 356,
-          "printed": null,
-          "marks": []
+          "printed": 356,
+          "marks": [
+            [
+              0.6752,
+              0.3306,
+              0.2535,
+              0.0197
+            ]
+          ]
         }
       ],
       "source": {
@@ -120,6 +153,12 @@
         "pdfPages": [
           356
         ]
+      },
+      "comentarios_opciones": {
+        "A": "La ARN polimerasa III transcribe el ARNt y el ARNr 5 S.",
+        "B": "La ARN polimerasa II produce el precursor del ARN mensajero que se utilizará para sintetizar proteínas.",
+        "C": "La ARN polimerasa I produce un precursor que dará lugar a los ARNr 28 S, 18 S y 5,8 S.",
+        "D": "La poliadenilato polimerasa añade la cola de poli(A) al extremo 3′ tras el corte, sin usar un molde."
       },
       "opcion_a": "ARN polimerasa III",
       "opcion_b": "ARN polimerasa II",
@@ -136,7 +175,7 @@
       "justificacion": "La poliadenilato polimerasa añade la cola de poli(A) al extremo 3′ tras el corte, sin usar un molde.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "375",
-      "pagina_impresa": "",
+      "pagina_impresa": "375",
       "dificultad": "medio",
       "lecturas_comentario": [
         {
@@ -144,8 +183,21 @@
           "label": "Calvo",
           "section": "El núcleo. Parte II: transcripción y maduración del ARN y estructura del nucléolo · Cola poli(A)",
           "page": 375,
-          "printed": null,
-          "marks": []
+          "printed": 375,
+          "marks": [
+            [
+              0.4627,
+              0.5561,
+              0.1796,
+              0.0172
+            ],
+            [
+              0.0082,
+              0.6196,
+              0.3023,
+              0.0282
+            ]
+          ]
         }
       ],
       "source": {
@@ -159,6 +211,12 @@
         "pdfPages": [
           375
         ]
+      },
+      "comentarios_opciones": {
+        "A": "La ARN polimerasa III transcribe el ARNt y el ARNr 5 S.",
+        "B": "La ARN polimerasa II produce el precursor del ARN mensajero que se utilizará para sintetizar proteínas.",
+        "C": "La ARN polimerasa I produce un precursor que dará lugar a los ARNr 28 S, 18 S y 5,8 S.",
+        "D": "La poliadenilato polimerasa añade la cola de poli(A) al extremo 3′ tras el corte, sin usar un molde."
       },
       "opcion_a": "ARN polimerasa III",
       "opcion_b": "ARN polimerasa II",
@@ -175,7 +233,7 @@
       "justificacion": "1. Correcta. Aumenta la probabilidad de que se ensamble la maquinaria para iniciar la síntesis de ARN.\n2. Incorrecta. El cambio descrito se asocia al silenciamiento de p16.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "360, 362",
-      "pagina_impresa": "",
+      "pagina_impresa": "360, 362",
       "dificultad": "dificil",
       "lecturas_comentario": [
         {
@@ -183,16 +241,36 @@
           "label": "Calvo",
           "section": "El núcleo. Parte II: transcripción y maduración del ARN y estructura del nucléolo · Factores de transcripción / Control epigenético",
           "page": 360,
-          "printed": null,
-          "marks": []
+          "printed": 360,
+          "marks": [
+            [
+              0.5667,
+              0.3493,
+              0.2058,
+              0.0197
+            ]
+          ]
         },
         {
           "slug": "biologia-celular",
           "label": "Calvo",
           "section": "El núcleo. Parte II: transcripción y maduración del ARN y estructura del nucléolo · Factores de transcripción / Control epigenético",
           "page": 362,
-          "printed": null,
-          "marks": []
+          "printed": 362,
+          "marks": [
+            [
+              0.4954,
+              0.9076,
+              0.0328,
+              0.0197
+            ],
+            [
+              0.0271,
+              0.9346,
+              0.0047,
+              0.0197
+            ]
+          ]
         }
       ],
       "source": {
@@ -243,7 +321,7 @@
       "justificacion": "1. Incorrecta. El 5 S se transcribe por separado y fuera del nucléolo.\n2. Correcta. Las snoRNP intervienen en la maduración del precursor nucleolar.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "367, 376",
-      "pagina_impresa": "",
+      "pagina_impresa": "367, 376",
       "dificultad": "dificil",
       "lecturas_comentario": [
         {
@@ -251,16 +329,36 @@
           "label": "Calvo",
           "section": "El núcleo. Parte II: transcripción y maduración del ARN y estructura del nucléolo · ARNr 5 S / Maduración del ARNr",
           "page": 367,
-          "printed": null,
-          "marks": []
+          "printed": 367,
+          "marks": [
+            [
+              0.4954,
+              0.9076,
+              0.0328,
+              0.0197
+            ],
+            [
+              0.0271,
+              0.9346,
+              0.0047,
+              0.0197
+            ]
+          ]
         },
         {
           "slug": "biologia-celular",
           "label": "Calvo",
           "section": "El núcleo. Parte II: transcripción y maduración del ARN y estructura del nucléolo · ARNr 5 S / Maduración del ARNr",
           "page": 376,
-          "printed": null,
-          "marks": []
+          "printed": 376,
+          "marks": [
+            [
+              0.1899,
+              0.227,
+              0.2225,
+              0.0197
+            ]
+          ]
         }
       ],
       "source": {
@@ -311,7 +409,7 @@
       "justificacion": "1. Correcta. El corte y empalme elimina esas secuencias y liga exones.\n2. Correcta. El empalme alternativo permite generar más de un ARNm a partir del transcrito.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "370, 373",
-      "pagina_impresa": "",
+      "pagina_impresa": "370, 373",
       "dificultad": "dificil",
       "lecturas_comentario": [
         {
@@ -319,16 +417,42 @@
           "label": "Calvo",
           "section": "El núcleo. Parte II: transcripción y maduración del ARN y estructura del nucléolo · Splicing / Splicing alternativo",
           "page": 370,
-          "printed": null,
-          "marks": []
+          "printed": 370,
+          "marks": [
+            [
+              0.4954,
+              0.9076,
+              0.0328,
+              0.0197
+            ],
+            [
+              0.0271,
+              0.9346,
+              0.0047,
+              0.0197
+            ]
+          ]
         },
         {
           "slug": "biologia-celular",
           "label": "Calvo",
           "section": "El núcleo. Parte II: transcripción y maduración del ARN y estructura del nucléolo · Splicing / Splicing alternativo",
           "page": 373,
-          "printed": null,
-          "marks": []
+          "printed": 373,
+          "marks": [
+            [
+              0.4954,
+              0.9076,
+              0.0328,
+              0.0197
+            ],
+            [
+              0.0271,
+              0.9346,
+              0.0047,
+              0.0197
+            ]
+          ]
         }
       ],
       "source": {
@@ -379,7 +503,7 @@
       "justificacion": "1. Incorrecta. La caperuza contribuye a proteger el transcrito y aumentar su estabilidad.\n2. Incorrecta. Pueden reducir la expresión al bloquear la traducción o favorecer la degradación de la diana.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "374, 381",
-      "pagina_impresa": "",
+      "pagina_impresa": "374, 381",
       "dificultad": "dificil",
       "lecturas_comentario": [
         {
@@ -387,16 +511,30 @@
           "label": "Calvo",
           "section": "El núcleo. Parte II: transcripción y maduración del ARN y estructura del nucléolo · Caperuza 5′ / Micro-ARN",
           "page": 374,
-          "printed": null,
-          "marks": []
+          "printed": 374,
+          "marks": [
+            [
+              0.5284,
+              0.5846,
+              0.2343,
+              0.0197
+            ]
+          ]
         },
         {
           "slug": "biologia-celular",
           "label": "Calvo",
           "section": "El núcleo. Parte II: transcripción y maduración del ARN y estructura del nucléolo · Caperuza 5′ / Micro-ARN",
           "page": 381,
-          "printed": null,
-          "marks": []
+          "printed": 381,
+          "marks": [
+            [
+              0.117,
+              0.1,
+              0.3378,
+              0.0197
+            ]
+          ]
         }
       ],
       "source": {

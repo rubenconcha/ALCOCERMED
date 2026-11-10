@@ -14,12 +14,12 @@
       "materia": "BIOLOGIA CELULAR",
       "tema": "division celular y muerte programada",
       "numero_pregunta": 1,
-      "pregunta": "Empiezan a distinguirse cromosomas condensados, pero aún no se ha desorganizado por completo la envoltura nuclear.\n¿Qué opción corresponde al caso?",
+      "pregunta": "Los cromosomas comienzan a condensarse y la envoltura nuclear empieza a fragmentarse. Los cromosomas todavía permanecen dentro del núcleo. ¿En qué fase se encuentra la célula?",
       "respuesta_correcta": "C",
-      "justificacion": "Durante la profase, la cromatina empieza a condensarse en cromosomas más compactos.",
+      "justificacion": "En profase empieza la condensación y la envoltura nuclear se desorganiza parcialmente. En prometafase se completa esa desorganización y los cromosomas quedan expuestos al citoplasma.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "622",
-      "pagina_impresa": "",
+      "pagina_impresa": "622",
       "dificultad": "medio",
       "lecturas_comentario": [
         {
@@ -27,8 +27,15 @@
           "label": "Calvo",
           "section": "División celular y muerte programada · Profase",
           "page": 622,
-          "printed": null,
-          "marks": []
+          "printed": 622,
+          "marks": [
+            [
+              0.165,
+              0.8063,
+              0.3036,
+              0.0197
+            ]
+          ]
         }
       ],
       "source": {
@@ -42,6 +49,12 @@
         "pdfPages": [
           622
         ]
+      },
+      "comentarios_opciones": {
+        "A": "En metafase, los cromosomas se organizan en el plano ecuatorial del huso.",
+        "B": "En prometafase se desorganiza la envoltura nuclear, lo que permite que el huso alcance los cromosomas.",
+        "C": "En profase empieza la condensación y la envoltura nuclear se desorganiza parcialmente. En prometafase se completa esa desorganización y los cromosomas quedan expuestos al citoplasma.",
+        "D": "La anafase comienza con la separación de las cromátidas hermanas, que se desplazan hacia polos opuestos."
       },
       "opcion_a": "Metafase",
       "opcion_b": "Prometafase",
@@ -58,7 +71,7 @@
       "justificacion": "En prometafase se desorganiza la envoltura nuclear, lo que permite que el huso alcance los cromosomas.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "624",
-      "pagina_impresa": "",
+      "pagina_impresa": "624",
       "dificultad": "medio",
       "lecturas_comentario": [
         {
@@ -66,8 +79,21 @@
           "label": "Calvo",
           "section": "División celular y muerte programada · Prometafase",
           "page": 624,
-          "printed": null,
-          "marks": []
+          "printed": 624,
+          "marks": [
+            [
+              0.4954,
+              0.9076,
+              0.0328,
+              0.0197
+            ],
+            [
+              0.0271,
+              0.9346,
+              0.0047,
+              0.0197
+            ]
+          ]
         }
       ],
       "source": {
@@ -81,6 +107,12 @@
         "pdfPages": [
           624
         ]
+      },
+      "comentarios_opciones": {
+        "A": "En prometafase se desorganiza la envoltura nuclear, lo que permite que el huso alcance los cromosomas.",
+        "B": "La anafase comienza con la separación de las cromátidas hermanas, que se desplazan hacia polos opuestos.",
+        "C": "En profase empieza la condensación y la envoltura nuclear se desorganiza parcialmente. En prometafase se completa esa desorganización y los cromosomas quedan expuestos al citoplasma.",
+        "D": "En metafase, los cromosomas se organizan en el plano ecuatorial del huso."
       },
       "opcion_a": "Prometafase",
       "opcion_b": "Anafase",
@@ -97,7 +129,7 @@
       "justificacion": "En metafase, los cromosomas se organizan en el plano ecuatorial del huso.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "624",
-      "pagina_impresa": "",
+      "pagina_impresa": "624",
       "dificultad": "medio",
       "lecturas_comentario": [
         {
@@ -105,8 +137,15 @@
           "label": "Calvo",
           "section": "División celular y muerte programada · Metafase",
           "page": 624,
-          "printed": null,
-          "marks": []
+          "printed": 624,
+          "marks": [
+            [
+              0.5033,
+              0.777,
+              0.28,
+              0.0197
+            ]
+          ]
         }
       ],
       "source": {
@@ -120,6 +159,12 @@
         "pdfPages": [
           624
         ]
+      },
+      "comentarios_opciones": {
+        "A": "En prometafase se desorganiza la envoltura nuclear, lo que permite que el huso alcance los cromosomas.",
+        "B": "La anafase comienza con la separación de las cromátidas hermanas, que se desplazan hacia polos opuestos.",
+        "C": "En profase empieza la condensación y la envoltura nuclear se desorganiza parcialmente. En prometafase se completa esa desorganización y los cromosomas quedan expuestos al citoplasma.",
+        "D": "En metafase, los cromosomas se organizan en el plano ecuatorial del huso."
       },
       "opcion_a": "Prometafase",
       "opcion_b": "Anafase",
@@ -136,7 +181,7 @@
       "justificacion": "La anafase comienza con la separación de las cromátidas hermanas, que se desplazan hacia polos opuestos.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "625",
-      "pagina_impresa": "",
+      "pagina_impresa": "625",
       "dificultad": "medio",
       "lecturas_comentario": [
         {
@@ -144,8 +189,21 @@
           "label": "Calvo",
           "section": "División celular y muerte programada · Anafase",
           "page": 625,
-          "printed": null,
-          "marks": []
+          "printed": 625,
+          "marks": [
+            [
+              0.4755,
+              0.149,
+              0.2104,
+              0.0197
+            ],
+            [
+              0.5026,
+              0.5346,
+              0.2103,
+              0.0197
+            ]
+          ]
         }
       ],
       "source": {
@@ -159,6 +217,12 @@
         "pdfPages": [
           625
         ]
+      },
+      "comentarios_opciones": {
+        "A": "En profase empieza la condensación y la envoltura nuclear se desorganiza parcialmente. En prometafase se completa esa desorganización y los cromosomas quedan expuestos al citoplasma.",
+        "B": "La anafase comienza con la separación de las cromátidas hermanas, que se desplazan hacia polos opuestos.",
+        "C": "En metafase, los cromosomas se organizan en el plano ecuatorial del huso.",
+        "D": "En prometafase se desorganiza la envoltura nuclear, lo que permite que el huso alcance los cromosomas."
       },
       "opcion_a": "Profase",
       "opcion_b": "Anafase",
@@ -175,7 +239,7 @@
       "justificacion": "1. Incorrecta. Se forman durante el cigoteno de la profase I, cuando se aparean los homólogos.\n2. Correcta. Es una etapa de la primera profase meiótica asociada al intercambio de material.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "627",
-      "pagina_impresa": "",
+      "pagina_impresa": "627",
       "dificultad": "dificil",
       "lecturas_comentario": [
         {
@@ -183,8 +247,15 @@
           "label": "Calvo",
           "section": "División celular y muerte programada · Profase I",
           "page": 627,
-          "printed": null,
-          "marks": []
+          "printed": 627,
+          "marks": [
+            [
+              0.015,
+              0.4086,
+              0.2127,
+              0.0181
+            ]
+          ]
         }
       ],
       "source": {
@@ -234,7 +305,7 @@
       "justificacion": "1. Correcta. La duplicación previa del ADN sirve para ambas divisiones.\n2. Incorrecta. En la segunda división se separan las cromátidas hermanas. Los homólogos se separan en la primera.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "633, 634",
-      "pagina_impresa": "",
+      "pagina_impresa": "633, 634",
       "dificultad": "dificil",
       "lecturas_comentario": [
         {
@@ -242,16 +313,36 @@
           "label": "Calvo",
           "section": "División celular y muerte programada · Meiosis II",
           "page": 633,
-          "printed": null,
-          "marks": []
+          "printed": 633,
+          "marks": [
+            [
+              0.1971,
+              0.7803,
+              0.2045,
+              0.0197
+            ]
+          ]
         },
         {
           "slug": "biologia-celular",
           "label": "Calvo",
           "section": "División celular y muerte programada · Meiosis II",
           "page": 634,
-          "printed": null,
-          "marks": []
+          "printed": 634,
+          "marks": [
+            [
+              0.832,
+              0.1235,
+              0.1067,
+              0.0197
+            ],
+            [
+              0.0082,
+              0.147,
+              0.1558,
+              0.0197
+            ]
+          ]
         }
       ],
       "source": {
@@ -302,7 +393,7 @@
       "justificacion": "1. Correcta. La fragmentación empaqueta restos celulares y facilita su retirada.\n2. Correcta. El cambio desplaza el fosfolípido hacia la superficie externa de la membrana.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "638",
-      "pagina_impresa": "",
+      "pagina_impresa": "638",
       "dificultad": "dificil",
       "lecturas_comentario": [
         {
@@ -310,8 +401,27 @@
           "label": "Calvo",
           "section": "División celular y muerte programada · Apoptosis",
           "page": 638,
-          "printed": null,
-          "marks": []
+          "printed": 638,
+          "marks": [
+            [
+              0.4954,
+              0.9076,
+              0.0328,
+              0.0197
+            ],
+            [
+              0.0271,
+              0.9346,
+              0.0047,
+              0.0197
+            ],
+            [
+              0.852,
+              0.5108,
+              0.1102,
+              0.0137
+            ]
+          ]
         }
       ],
       "source": {
@@ -361,7 +471,7 @@
       "justificacion": "1. Incorrecta. Se inicia con receptores de muerte en la membrana. La salida de citocromo c se vincula a la vía intrínseca.\n2. Incorrecta. Se producen como procaspasas inactivas y necesitan activación.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "639, 644",
-      "pagina_impresa": "",
+      "pagina_impresa": "639, 644",
       "dificultad": "dificil",
       "lecturas_comentario": [
         {
@@ -369,16 +479,36 @@
           "label": "Calvo",
           "section": "División celular y muerte programada · Vía extrínseca / Caspasas",
           "page": 639,
-          "printed": null,
-          "marks": []
+          "printed": 639,
+          "marks": [
+            [
+              0.4974,
+              0.3051,
+              0.2845,
+              0.0197
+            ]
+          ]
         },
         {
           "slug": "biologia-celular",
           "label": "Calvo",
           "section": "División celular y muerte programada · Vía extrínseca / Caspasas",
           "page": 644,
-          "printed": null,
-          "marks": []
+          "printed": 644,
+          "marks": [
+            [
+              0.0082,
+              0.3217,
+              0.285,
+              0.021
+            ],
+            [
+              0.0082,
+              0.352,
+              0.0192,
+              0.0197
+            ]
+          ]
         }
       ],
       "source": {

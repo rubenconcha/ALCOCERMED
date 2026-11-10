@@ -19,7 +19,7 @@
       "justificacion": "El complejo I contiene la NADH deshidrogenasa y recibe electrones del NADH.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "472",
-      "pagina_impresa": "",
+      "pagina_impresa": "472",
       "dificultad": "medio",
       "lecturas_comentario": [
         {
@@ -27,8 +27,15 @@
           "label": "Calvo",
           "section": "Mitocondrias y peroxisomas. Bioenergética y metabolismo oxidativo · Cadena respiratoria",
           "page": 472,
-          "printed": null,
-          "marks": []
+          "printed": 472,
+          "marks": [
+            [
+              0.0271,
+              0.2558,
+              0.1696,
+              0.0197
+            ]
+          ]
         }
       ],
       "source": {
@@ -42,6 +49,12 @@
         "pdfPages": [
           472
         ]
+      },
+      "comentarios_opciones": {
+        "A": "El retorno de protones a la matriz aporta la energía que utiliza la ATP sintasa para formar ATP.",
+        "B": "El complejo I contiene la NADH deshidrogenasa y recibe electrones del NADH.",
+        "C": "El citocromo c lleva electrones del complejo III al complejo IV.",
+        "D": "La coenzima Q recibe electrones de los complejos I y II antes de transferirlos al complejo III."
       },
       "opcion_a": "ATP sintasa",
       "opcion_b": "Complejo I",
@@ -58,7 +71,7 @@
       "justificacion": "La coenzima Q recibe electrones de los complejos I y II antes de transferirlos al complejo III.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "472",
-      "pagina_impresa": "",
+      "pagina_impresa": "472",
       "dificultad": "medio",
       "lecturas_comentario": [
         {
@@ -66,8 +79,15 @@
           "label": "Calvo",
           "section": "Mitocondrias y peroxisomas. Bioenergética y metabolismo oxidativo · Cadena respiratoria",
           "page": 472,
-          "printed": null,
-          "marks": []
+          "printed": 472,
+          "marks": [
+            [
+              0.0271,
+              0.4748,
+              0.3378,
+              0.0197
+            ]
+          ]
         }
       ],
       "source": {
@@ -81,6 +101,12 @@
         "pdfPages": [
           472
         ]
+      },
+      "comentarios_opciones": {
+        "A": "El retorno de protones a la matriz aporta la energía que utiliza la ATP sintasa para formar ATP.",
+        "B": "La coenzima Q recibe electrones de los complejos I y II antes de transferirlos al complejo III.",
+        "C": "El complejo I contiene la NADH deshidrogenasa y recibe electrones del NADH.",
+        "D": "El citocromo c lleva electrones del complejo III al complejo IV."
       },
       "opcion_a": "ATP sintasa",
       "opcion_b": "Coenzima Q",
@@ -97,7 +123,7 @@
       "justificacion": "El citocromo c lleva electrones del complejo III al complejo IV.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "473",
-      "pagina_impresa": "",
+      "pagina_impresa": "473",
       "dificultad": "medio",
       "lecturas_comentario": [
         {
@@ -105,8 +131,21 @@
           "label": "Calvo",
           "section": "Mitocondrias y peroxisomas. Bioenergética y metabolismo oxidativo · Cadena respiratoria",
           "page": 473,
-          "printed": null,
-          "marks": []
+          "printed": 473,
+          "marks": [
+            [
+              0.7857,
+              0.2879,
+              0.1512,
+              0.0197
+            ],
+            [
+              0.0082,
+              0.3114,
+              0.0675,
+              0.0197
+            ]
+          ]
         }
       ],
       "source": {
@@ -120,6 +159,12 @@
         "pdfPages": [
           473
         ]
+      },
+      "comentarios_opciones": {
+        "A": "La coenzima Q recibe electrones de los complejos I y II antes de transferirlos al complejo III.",
+        "B": "El retorno de protones a la matriz aporta la energía que utiliza la ATP sintasa para formar ATP.",
+        "C": "El citocromo c lleva electrones del complejo III al complejo IV.",
+        "D": "El complejo I contiene la NADH deshidrogenasa y recibe electrones del NADH."
       },
       "opcion_a": "Coenzima Q",
       "opcion_b": "ATP sintasa",
@@ -136,7 +181,7 @@
       "justificacion": "El retorno de protones a la matriz aporta la energía que utiliza la ATP sintasa para formar ATP.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "475",
-      "pagina_impresa": "",
+      "pagina_impresa": "475",
       "dificultad": "medio",
       "lecturas_comentario": [
         {
@@ -144,8 +189,21 @@
           "label": "Calvo",
           "section": "Mitocondrias y peroxisomas. Bioenergética y metabolismo oxidativo · ATP sintasa",
           "page": 475,
-          "printed": null,
-          "marks": []
+          "printed": 475,
+          "marks": [
+            [
+              0.4954,
+              0.9076,
+              0.0328,
+              0.0197
+            ],
+            [
+              0.0271,
+              0.9346,
+              0.0047,
+              0.0197
+            ]
+          ]
         }
       ],
       "source": {
@@ -159,6 +217,12 @@
         "pdfPages": [
           475
         ]
+      },
+      "comentarios_opciones": {
+        "A": "El retorno de protones a la matriz aporta la energía que utiliza la ATP sintasa para formar ATP.",
+        "B": "El citocromo c lleva electrones del complejo III al complejo IV.",
+        "C": "El complejo I contiene la NADH deshidrogenasa y recibe electrones del NADH.",
+        "D": "La coenzima Q recibe electrones de los complejos I y II antes de transferirlos al complejo III."
       },
       "opcion_a": "ATP sintasa",
       "opcion_b": "Citocromo c",
@@ -175,7 +239,7 @@
       "justificacion": "1. Incorrecta. Son pliegues de la membrana interna.\n2. Correcta. TOM proporciona la vía de paso por la membrana mitocondrial externa.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "458, 464",
-      "pagina_impresa": "",
+      "pagina_impresa": "458, 464",
       "dificultad": "dificil",
       "lecturas_comentario": [
         {
@@ -183,16 +247,42 @@
           "label": "Calvo",
           "section": "Mitocondrias y peroxisomas. Bioenergética y metabolismo oxidativo · Estructura mitocondrial / Importación mitocondrial",
           "page": 458,
-          "printed": null,
-          "marks": []
+          "printed": 458,
+          "marks": [
+            [
+              0.7608,
+              0.2235,
+              0.2315,
+              0.0197
+            ],
+            [
+              0.0082,
+              0.247,
+              0.0294,
+              0.0197
+            ]
+          ]
         },
         {
           "slug": "biologia-celular",
           "label": "Calvo",
           "section": "Mitocondrias y peroxisomas. Bioenergética y metabolismo oxidativo · Estructura mitocondrial / Importación mitocondrial",
           "page": 464,
-          "printed": null,
-          "marks": []
+          "printed": 464,
+          "marks": [
+            [
+              0.8785,
+              0.5364,
+              0.0979,
+              0.0197
+            ],
+            [
+              0.0082,
+              0.5598,
+              0.2356,
+              0.0197
+            ]
+          ]
         }
       ],
       "source": {
@@ -243,7 +333,7 @@
       "justificacion": "1. Correcta. El citocromo c liberado interviene en la activación de la vía intrínseca.\n2. Incorrecta. La caspasa iniciadora de esta vía es la 9.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "465, 466",
-      "pagina_impresa": "",
+      "pagina_impresa": "465, 466",
       "dificultad": "dificil",
       "lecturas_comentario": [
         {
@@ -251,16 +341,30 @@
           "label": "Calvo",
           "section": "Mitocondrias y peroxisomas. Bioenergética y metabolismo oxidativo · Apoptosis",
           "page": 465,
-          "printed": null,
-          "marks": []
+          "printed": 465,
+          "marks": [
+            [
+              0.0271,
+              0.7656,
+              0.2865,
+              0.0197
+            ]
+          ]
         },
         {
           "slug": "biologia-celular",
           "label": "Calvo",
           "section": "Mitocondrias y peroxisomas. Bioenergética y metabolismo oxidativo · Apoptosis",
           "page": 466,
-          "printed": null,
-          "marks": []
+          "printed": 466,
+          "marks": [
+            [
+              0.3657,
+              0.8278,
+              0.2483,
+              0.0197
+            ]
+          ]
         }
       ],
       "source": {
@@ -311,7 +415,7 @@
       "justificacion": "1. Correcta. El bombeo de protones al espacio intermembrana crea esa diferencia.\n2. Correcta. F₀ forma el canal que aprovecha el gradiente a través de la membrana interna.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "474, 475",
-      "pagina_impresa": "",
+      "pagina_impresa": "474, 475",
       "dificultad": "dificil",
       "lecturas_comentario": [
         {
@@ -319,16 +423,36 @@
           "label": "Calvo",
           "section": "Mitocondrias y peroxisomas. Bioenergética y metabolismo oxidativo · Cadena respiratoria / ATP sintasa",
           "page": 474,
-          "printed": null,
-          "marks": []
+          "printed": 474,
+          "marks": [
+            [
+              0.0271,
+              0.8056,
+              0.3544,
+              0.0197
+            ]
+          ]
         },
         {
           "slug": "biologia-celular",
           "label": "Calvo",
           "section": "Mitocondrias y peroxisomas. Bioenergética y metabolismo oxidativo · Cadena respiratoria / ATP sintasa",
           "page": 475,
-          "printed": null,
-          "marks": []
+          "printed": 475,
+          "marks": [
+            [
+              0.901,
+              0.225,
+              0.0253,
+              0.0197
+            ],
+            [
+              0.0082,
+              0.2485,
+              0.1676,
+              0.0197
+            ]
+          ]
         }
       ],
       "source": {
@@ -379,7 +503,7 @@
       "justificacion": "1. Incorrecta. Convierte el superóxido en peróxido de hidrógeno. La catalasa puede degradar ese peróxido.\n2. Incorrecta. Implica que coexisten copias de ADN mitocondrial normal y mutado.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "478, 479",
-      "pagina_impresa": "",
+      "pagina_impresa": "478, 479",
       "dificultad": "dificil",
       "lecturas_comentario": [
         {
@@ -387,16 +511,42 @@
           "label": "Calvo",
           "section": "Mitocondrias y peroxisomas. Bioenergética y metabolismo oxidativo · Defensa antioxidante / Enfermedades mitocondriales",
           "page": 478,
-          "printed": null,
-          "marks": []
+          "printed": 478,
+          "marks": [
+            [
+              0.7781,
+              0.147,
+              0.2025,
+              0.0197
+            ],
+            [
+              0.0082,
+              0.1705,
+              0.0993,
+              0.0197
+            ]
+          ]
         },
         {
           "slug": "biologia-celular",
           "label": "Calvo",
           "section": "Mitocondrias y peroxisomas. Bioenergética y metabolismo oxidativo · Defensa antioxidante / Enfermedades mitocondriales",
           "page": 479,
-          "printed": null,
-          "marks": []
+          "printed": 479,
+          "marks": [
+            [
+              0.9177,
+              0.3409,
+              0.0714,
+              0.0197
+            ],
+            [
+              0.0082,
+              0.3644,
+              0.1816,
+              0.0197
+            ]
+          ]
         }
       ],
       "source": {

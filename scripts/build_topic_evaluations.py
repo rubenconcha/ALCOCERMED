@@ -3,8 +3,10 @@ import argparse
 import hashlib
 import json
 import re
+import sys
 import unicodedata
 from collections import defaultdict
+from contextlib import ExitStack
 from pathlib import Path
 
 import pymupdf
@@ -61,7 +63,7 @@ def reference(slug, label, section, page, printed=None, marks=None):
             'printed': printed, 'marks': marks or []}
 
 
-def from_medicine(entry, paper):
+def from_medicine(entry, paper, pdf, anchors, explanations, editor):
     source = entry['source']
     slug, label = BOOKS[paper['id'].split('-')[0]]
     section = f'{paper["title"]} · {source["section"]}'
@@ -69,10 +71,20 @@ def from_medicine(entry, paper):
     pages, printed = source['pdfPages'], source['printedPages']
     if not folios and len(printed) == len(pages):
         folios = dict(zip(pages, printed))
-    return {
-        **entry, 'id': 'evaluacion:' + entry['id'],
-        'references': [reference(slug, label, section, page, folios.get(page)) for page in pages],
-    }
+    locations = defaultdict(list)
+    for page, anchor in anchors:
+        if page not in pages:
+            raise ValueError(f'La referencia no corresponde a la pregunta {entry["id"]}')
+        locations[page].extend(verified_marks(pdf[page - 1], anchor))
+    references = [reference(slug, label, section, page,
+                            folios.get(page) or verified_printed(pdf[page - 1], page, slug),
+                            list(dict.fromkeys(tuple(mark) for mark in locations[page])))
+                  for page in pages]
+    prepared = {**entry, **editor.get(entry['id'], {}), 'id': 'evaluacion:' + entry['id'], 'references': references}
+    if entry['difficulty'] == 'intermedio':
+        prepared['comentarios_opciones'] = {letter: explanations[choice]
+                                          for letter, choice in zip('ABCD', entry['options'], strict=True)}
+    return prepared
 
 
 def from_verified_bank(entry, paper, document):
@@ -96,6 +108,97 @@ def marks(page, anchor):
         for r in page.search_for(anchor)[:2]
         if 0 <= r.x0 < r.x1 <= page.rect.width and 0 <= r.y0 < r.y1 <= page.rect.height
     ]
+
+
+def verified_printed(page, number, slug):
+    if slug not in ('morfofuncion', 'biologia-celular'):
+        return None
+    expected = number - 28 if slug == 'morfofuncion' else number
+    lines = [line.strip() for line in page.get_text().splitlines()[:8]]
+    return expected if str(expected) in lines else None
+
+
+def verified_marks(page, anchor):
+    if not anchor:
+        return []
+    if normalized(anchor) not in normalized(page.get_text()):
+        raise ValueError(f'Pasaje sin verificar en PDF {page.number + 1}: {anchor[:75]}')
+    if len(anchor) < 85 and not anchor.strip().isdigit():
+        hits = marks(page, anchor)
+        if hits:
+            return hits
+    words = anchor.split()
+    for index in (0, len(words) // 2, max(0, len(words) - 6)):
+        snippet = ' '.join(words[index:index + 5])
+        if len(snippet) >= 12 and (hits := marks(page, snippet)):
+            return hits
+    return []
+
+
+def official_books(refs, stack):
+    sources = read(STORE / 'source-cards.json')
+    manifest = {row['archivo']: row for row in read(refs / 'manifest.json')['archivos']}
+    pdfs, cards = {}, {}
+    for book in sources:
+        source = book['source']
+        path = refs / source['filename']
+        with path.open('rb') as pdf_file:
+            digest = hashlib.file_digest(pdf_file, 'sha256').hexdigest()
+        if digest != manifest[path.name]['sha256']:
+            raise ValueError(f'El PDF no coincide con el manifiesto: {path.name}')
+        pdf = stack.enter_context(pymupdf.open(path))
+        if len(pdf) != manifest[path.name]['paginas_pdf']:
+            raise ValueError(f'El número de páginas no coincide: {path.name}')
+        pdfs[source['id']] = pdf
+        cards.update({card['id']: card for chapter in book['chapters'] for card in chapter['cards']})
+    return pdfs, cards
+
+
+def source_locations(entry, cards, concepts, mini):
+    def anchor(card):
+        return '' if card.get('evidence_kind') == 'image_transcription' else card['evidence']
+
+    source = entry['source']
+    topic = source['topicId']
+    if entry['difficulty'] == 'intermedio':
+        index = int(entry['id'].rsplit('-', 1)[-1]) - 1
+        card_id, _, _, _, _, *override = concepts[topic][index]
+        card = cards[card_id]
+        if override:
+            page, _, quote = override[0].split(';', 2)
+            return [(int(page), quote if card.get('evidence_kind') != 'image_transcription' else '')]
+        return [(card['pdf_page'], anchor(card))]
+    if statements := source.get('statements'):
+        return [(row['pdfPage'], row.get('anchor') or anchor(cards[row['cardId']])) for row in statements]
+    if entry['id'] in mini:
+        evidence = mini[entry['id']]
+        return [(evidence['evidence_page'], evidence['anchor'])]
+    raise ValueError(f'No se encontró el pasaje de {entry["id"]}')
+
+
+def add_preserved_readings(paper, pdf, editor):
+    for row in paper['questions']:
+        source = row['source']
+        citation = editor.get(row['content_id'], {}).get('citation')
+        if citation:
+            page = citation['pdf_page']
+            printed = verified_printed(pdf[page - 1], page, 'morfofuncion')
+            source.update(pdf_pages=[page], evidence_page=page, anchor=citation['anchor'],
+                          verified_anchors=[{**citation, 'printed_page': printed}])
+            source.pop('evidence_excerpt', None)
+            row.update(paginas_pdf=str(page), pagina_impresa=str(printed or ''))
+        anchors = source.get('verified_anchors') or [{'pdf_page': source['evidence_page'], 'anchor': source['anchor']}]
+        by_page = defaultdict(list)
+        for locator in anchors:
+            number = locator['pdf_page']
+            by_page[number].extend(verified_marks(pdf[number - 1], locator['anchor']))
+        section = source.get('section') or paper['title']
+        row['lecturas_comentario'] = [
+            reference('morfofuncion', 'Saladin', f'Capítulo {paper["number"]} · {section}', page,
+                      verified_printed(pdf[page - 1], page, 'morfofuncion'), by_page[page])
+            for page in source['pdf_pages']
+        ]
+    return paper
 
 
 def sangre(refs):
@@ -142,6 +245,9 @@ def sangre(refs):
 
 
 def build(refs):
+    sys.path.insert(0, str(ROOT))
+    from tools.suficiencia.build_medicine import read_concepts
+
     original_catalog = read(CATALOG)
     original_audit = read(STORE / 'source-audit.json')
     medicine = defaultdict(list)
@@ -157,28 +263,45 @@ def build(refs):
     for row in read(ROOT / 'api/_mindmaps/banco-verificado.json'):
         verified[row['id'].split(':')[1]].append(row)
 
+    editor = read(STORE / 'editorial-revision.json')
+    concepts = read_concepts()
+    mini = {
+        f'medicina-oficial-biologia-01-{row["id"]}-umss': row['source']
+        for row in read(ROOT / 'api/_simulations/mini-foundations.json')['questions']
+        if row['materia'] == 'BIOLOGIA CELULAR'
+    }
     catalog, audit, output = [], [], []
     blood = sangre(refs)
-    for metadata in original_catalog['exams']:
-        topic = metadata['id']
-        if topic in PRESERVED_PAPERS:
-            catalog.append(metadata)
-            audit.extend(row for row in original_audit if row['paper'] == topic)
-            continue
-        if topic == 'morfo-18':
-            questions = blood
-        else:
-            questions = [from_medicine(row, metadata) for row in medicine[topic]]
-            questions.extend(from_verified_bank(row, metadata, documents[topic]) for row in verified[topic])
-        if len(questions) < 8 or len({normalized(row['text']) for row in questions}) != len(questions):
-            raise ValueError(f'Cobertura insuficiente o enunciado duplicado: {topic}')
-        rows = [arrange(metadata, i, row) for i, row in enumerate(questions, 1)]
-        revised = {**metadata, 'count': len(rows), 'duration': len(rows)}
-        catalog.append(revised)
-        output.append((STORE / f'{topic}.json', {**revised, 'questions': rows}))
-        for row in rows:
-            audit.append({'paper': topic, 'question': row['content_id'], 'authored_options': True,
-                          'pdf_pages': [ref['page'] for ref in row['lecturas_comentario']]})
+    with ExitStack() as stack:
+        pdfs, cards = official_books(refs, stack)
+        for metadata in original_catalog['exams']:
+            topic = metadata['id']
+            target = STORE / f'{topic}.json'
+            pdf = pdfs[topic.split('-')[0]]
+            if topic in PRESERVED_PAPERS:
+                catalog.append(metadata)
+                audit.extend(row for row in original_audit if row['paper'] == topic)
+                output.append((target, add_preserved_readings(read(target), pdf, editor)))
+                continue
+            if topic == 'morfo-18':
+                questions = blood
+            else:
+                explanations = {row['options'][row['correct']]: editor.get(row['id'], {}).get('explanation', row['explanation'])
+                                for row in medicine[topic] if row['difficulty'] == 'intermedio'}
+                questions = [
+                    from_medicine(row, metadata, pdf, source_locations(row, cards, concepts, mini), explanations, editor)
+                    for row in medicine[topic]
+                ]
+                questions.extend(from_verified_bank(row, metadata, documents[topic]) for row in verified[topic])
+            if len(questions) < 8 or len({normalized(row['text']) for row in questions}) != len(questions):
+                raise ValueError(f'Cobertura insuficiente o enunciado duplicado: {topic}')
+            rows = [arrange(metadata, i, row) for i, row in enumerate(questions, 1)]
+            revised = {**metadata, 'count': len(rows), 'duration': len(rows)}
+            catalog.append(revised)
+            output.append((target, {**revised, 'questions': rows}))
+            for row in rows:
+                audit.append({'paper': topic, 'question': row['content_id'], 'authored_options': True,
+                              'pdf_pages': [ref['page'] for ref in row['lecturas_comentario']]})
 
     for path, paper in output:
         write(path, paper)

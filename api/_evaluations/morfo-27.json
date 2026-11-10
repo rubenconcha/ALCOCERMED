@@ -28,7 +28,20 @@
           "section": "Aparato reproductor masculino · Testículo",
           "page": 1078,
           "printed": 1050,
-          "marks": []
+          "marks": [
+            [
+              0.0787,
+              0.5044,
+              0.016,
+              0.0112
+            ],
+            [
+              0.1021,
+              0.5044,
+              0.1251,
+              0.0112
+            ]
+          ]
         }
       ],
       "source": {
@@ -44,6 +57,12 @@
         "pdfPages": [
           1078
         ]
+      },
+      "comentarios_opciones": {
+        "A": "Las células de Sertoli protegen y nutren a las germinales dentro del epitelio seminífero.",
+        "B": "El epidídimo recibe espermatozoides procedentes del testículo. Allí maduran y se almacenan.",
+        "C": "La formación de espermatozoides ocurre en los túbulos seminíferos.",
+        "D": "Las células intersticiales de Leydig son la fuente de testosterona del testículo."
       },
       "opcion_a": "Células de Sertoli",
       "opcion_b": "Epidídimo",
@@ -69,7 +88,14 @@
           "section": "Aparato reproductor masculino · Testículo",
           "page": 1070,
           "printed": 1042,
-          "marks": []
+          "marks": [
+            [
+              0.4977,
+              0.7626,
+              0.2017,
+              0.0111
+            ]
+          ]
         }
       ],
       "source": {
@@ -85,6 +111,12 @@
         "pdfPages": [
           1070
         ]
+      },
+      "comentarios_opciones": {
+        "A": "Las células de Sertoli protegen y nutren a las germinales dentro del epitelio seminífero.",
+        "B": "Las células intersticiales de Leydig son la fuente de testosterona del testículo.",
+        "C": "El epidídimo recibe espermatozoides procedentes del testículo. Allí maduran y se almacenan.",
+        "D": "La formación de espermatozoides ocurre en los túbulos seminíferos."
       },
       "opcion_a": "Células de Sertoli",
       "opcion_b": "Células de Leydig",
@@ -110,7 +142,20 @@
           "section": "Aparato reproductor masculino · Testículo",
           "page": 1072,
           "printed": 1044,
-          "marks": []
+          "marks": [
+            [
+              0.0636,
+              0.0491,
+              0.0337,
+              0.0105
+            ],
+            [
+              0.1406,
+              0.0491,
+              0.0937,
+              0.0105
+            ]
+          ]
         }
       ],
       "source": {
@@ -126,6 +171,12 @@
         "pdfPages": [
           1072
         ]
+      },
+      "comentarios_opciones": {
+        "A": "El epidídimo recibe espermatozoides procedentes del testículo. Allí maduran y se almacenan.",
+        "B": "Las células intersticiales de Leydig son la fuente de testosterona del testículo.",
+        "C": "Las células de Sertoli protegen y nutren a las germinales dentro del epitelio seminífero.",
+        "D": "La formación de espermatozoides ocurre en los túbulos seminíferos."
       },
       "opcion_a": "Epidídimo",
       "opcion_b": "Células de Leydig",
@@ -151,7 +202,14 @@
           "section": "Aparato reproductor masculino · Conductos reproductores",
           "page": 1072,
           "printed": 1044,
-          "marks": []
+          "marks": [
+            [
+              0.6754,
+              0.532,
+              0.1961,
+              0.0111
+            ]
+          ]
         }
       ],
       "source": {
@@ -167,6 +225,12 @@
         "pdfPages": [
           1072
         ]
+      },
+      "comentarios_opciones": {
+        "A": "El epidídimo recibe espermatozoides procedentes del testículo. Allí maduran y se almacenan.",
+        "B": "Las células de Sertoli protegen y nutren a las germinales dentro del epitelio seminífero.",
+        "C": "Las células intersticiales de Leydig son la fuente de testosterona del testículo.",
+        "D": "La formación de espermatozoides ocurre en los túbulos seminíferos."
       },
       "opcion_a": "Epidídimo",
       "opcion_b": "Células de Sertoli",
@@ -192,7 +256,14 @@
           "section": "Aparato reproductor masculino · Testículo / Termorregulación testicular",
           "page": 1070,
           "printed": 1042,
-          "marks": []
+          "marks": [
+            [
+              0.5266,
+              0.822,
+              0.2113,
+              0.0111
+            ]
+          ]
         },
         {
           "slug": "morfofuncion",
@@ -200,7 +271,14 @@
           "section": "Aparato reproductor masculino · Testículo / Termorregulación testicular",
           "page": 1072,
           "printed": 1044,
-          "marks": []
+          "marks": [
+            [
+              0.0925,
+              0.2213,
+              0.1755,
+              0.0111
+            ]
+          ]
         }
       ],
       "source": {
@@ -263,7 +341,20 @@
           "section": "Aparato reproductor masculino · Espermatogénesis / Espermatozoide",
           "page": 1081,
           "printed": 1053,
-          "marks": []
+          "marks": [
+            [
+              0.1037,
+              0.3933,
+              0.0096,
+              0.0094
+            ],
+            [
+              0.1198,
+              0.3933,
+              0.0032,
+              0.0094
+            ]
+          ]
         },
         {
           "slug": "morfofuncion",
@@ -271,7 +362,20 @@
           "section": "Aparato reproductor masculino · Espermatogénesis / Espermatozoide",
           "page": 1082,
           "printed": 1054,
-          "marks": []
+          "marks": [
+            [
+              0.0636,
+              0.0491,
+              0.0337,
+              0.0105
+            ],
+            [
+              0.1406,
+              0.0491,
+              0.0937,
+              0.0105
+            ]
+          ]
         }
       ],
       "source": {
@@ -334,7 +438,20 @@
           "section": "Aparato reproductor masculino · Respuesta sexual",
           "page": 1085,
           "printed": 1057,
-          "marks": []
+          "marks": [
+            [
+              0.5875,
+              0.0491,
+              0.0896,
+              0.0105
+            ],
+            [
+              0.686,
+              0.0495,
+              0.173,
+              0.01
+            ]
+          ]
         }
       ],
       "source": {
@@ -395,7 +512,14 @@
           "section": "Aparato reproductor masculino · Regulación hormonal",
           "page": 1076,
           "printed": 1048,
-          "marks": []
+          "marks": [
+            [
+              0.6633,
+              0.9315,
+              0.2458,
+              0.0111
+            ]
+          ]
         },
         {
           "slug": "morfofuncion",
@@ -403,7 +527,20 @@
           "section": "Aparato reproductor masculino · Regulación hormonal",
           "page": 1077,
           "printed": 1049,
-          "marks": []
+          "marks": [
+            [
+              0.525,
+              0.1394,
+              0.0216,
+              0.0111
+            ],
+            [
+              0.5503,
+              0.1394,
+              0.0329,
+              0.0111
+            ]
+          ]
         }
       ],
       "source": {

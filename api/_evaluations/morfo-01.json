@@ -43,7 +43,30 @@
       "opcion_a": "Anatomía y fisiología",
       "opcion_b": "Fisiología y citología",
       "opcion_c": "Histología e histopatología",
-      "opcion_d": "Fisiopatología y anatomía"
+      "opcion_d": "Fisiopatología y anatomía",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 1 · Temas principales de anatomía y fisiología",
+          "page": 30,
+          "printed": 2,
+          "marks": [
+            [
+              0.2793,
+              0.4594,
+              0.0539,
+              0.0106
+            ],
+            [
+              0.8275,
+              0.2807,
+              0.0631,
+              0.0111
+            ]
+          ]
+        }
+      ]
     },
     {
       "content_id": "morfo-01-clase-002",
@@ -79,7 +102,24 @@
       "opcion_a": "Palpación, percusión e inspección",
       "opcion_b": "Inspección, palpación y auscultación",
       "opcion_c": "Auscultación, inspección y disección",
-      "opcion_d": "Percusión, auscultación y palpación"
+      "opcion_d": "Percusión, auscultación y palpación",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 1 · Temas principales de anatomía y fisiología",
+          "page": 30,
+          "printed": 2,
+          "marks": [
+            [
+              0.7075,
+              0.1322,
+              0.0674,
+              0.0111
+            ]
+          ]
+        }
+      ]
     },
     {
       "content_id": "morfo-01-clase-003",
@@ -115,7 +155,24 @@
       "opcion_a": "Citología exclusivamente",
       "opcion_b": "Anatomía macroscópica",
       "opcion_c": "Histopatología",
-      "opcion_d": "Neurofisiología"
+      "opcion_d": "Neurofisiología",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 1 · Temas principales de anatomía y fisiología",
+          "page": 31,
+          "printed": 3,
+          "marks": [
+            [
+              0.3691,
+              0.355,
+              0.093,
+              0.0111
+            ]
+          ]
+        }
+      ]
     },
     {
       "content_id": "morfo-01-clase-005",
@@ -156,7 +213,40 @@
       "opcion_a": "La ecografía usa rayos X y la RM sonido",
       "opcion_b": "Todas requieren cirugía para ver el interior",
       "opcion_c": "La RM usa el mismo mecanismo que la radiografía",
-      "opcion_d": "La ecografía usa sonido y la radiografía rayos X"
+      "opcion_d": "La ecografía usa sonido y la radiografía rayos X",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 1 · Temas principales de anatomía y fisiología",
+          "page": 31,
+          "printed": 3,
+          "marks": []
+        },
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 1 · Temas principales de anatomía y fisiología",
+          "page": 51,
+          "printed": 23,
+          "marks": [
+            [
+              0.1069,
+              0.3634,
+              0.1452,
+              0.0141
+            ]
+          ]
+        },
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 1 · Temas principales de anatomía y fisiología",
+          "page": 52,
+          "printed": 24,
+          "marks": []
+        }
+      ]
     },
     {
       "content_id": "morfo-01-clase-009",
@@ -193,7 +283,38 @@
       "opcion_a": "Vesalio: disección y atlas; Harvey: circulación",
       "opcion_b": "Harvey: atlas de Vesalio; Vesalio: circulación de Harvey",
       "opcion_c": "Vesalio: microscopio; Harvey: células del corcho",
-      "opcion_d": "Harvey: juramento hipocrático; Vesalio: medicina romana"
+      "opcion_d": "Harvey: juramento hipocrático; Vesalio: medicina romana",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 1 · Temas principales de anatomía y fisiología",
+          "page": 32,
+          "printed": 4,
+          "marks": [
+            [
+              0.5963,
+              0.9052,
+              0.0547,
+              0.0111
+            ],
+            [
+              0.4977,
+              0.92,
+              0.0558,
+              0.0111
+            ]
+          ]
+        },
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 1 · Temas principales de anatomía y fisiología",
+          "page": 33,
+          "printed": 5,
+          "marks": []
+        }
+      ]
     },
     {
       "content_id": "morfo-01-clase-012",
@@ -229,7 +350,30 @@
       "opcion_a": "Sustituir los datos por la autoridad del autor",
       "opcion_b": "Una predicción que puede ponerse a prueba",
       "opcion_c": "Aceptar la explicación sin buscar evidencia",
-      "opcion_d": "Descartar toda observación que no coincida"
+      "opcion_d": "Descartar toda observación que no coincida",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 1 · Temas principales de anatomía y fisiología",
+          "page": 36,
+          "printed": 8,
+          "marks": [
+            [
+              0.3415,
+              0.141,
+              0.0601,
+              0.0111
+            ],
+            [
+              0.1077,
+              0.1707,
+              0.0601,
+              0.0111
+            ]
+          ]
+        }
+      ]
     },
     {
       "content_id": "morfo-01-clase-013",
@@ -265,7 +409,30 @@
       "opcion_a": "Órgano, tejido, organismo, célula, sistema, molécula, átomo, organelo",
       "opcion_b": "Sistema, órgano, átomo, tejido, célula, organismo, molécula, organelo",
       "opcion_c": "Átomo, molécula, organelo, célula, tejido, órgano, sistema, organismo",
-      "opcion_d": "Célula, átomo, tejido, molécula, órgano, organismo, sistema, organelo"
+      "opcion_d": "Célula, átomo, tejido, molécula, órgano, organismo, sistema, organelo",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 1 · Temas principales de anatomía y fisiología",
+          "page": 41,
+          "printed": 13,
+          "marks": [
+            [
+              0.4148,
+              0.2875,
+              0.0633,
+              0.0111
+            ],
+            [
+              0.1623,
+              0.3024,
+              0.0633,
+              0.0111
+            ]
+          ]
+        }
+      ]
     },
     {
       "content_id": "morfo-01-clase-016",
@@ -302,7 +469,17 @@
       "opcion_a": "La piel, que por ello deja de ser un órgano",
       "opcion_b": "Una mitocondria, que constituye por sí sola un sistema",
       "opcion_c": "Un átomo, que forma a la vez dos tejidos completos",
-      "opcion_d": "El páncreas, en los sistemas endocrino y digestivo"
+      "opcion_d": "El páncreas, en los sistemas endocrino y digestivo",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 1 · Temas principales de anatomía y fisiología",
+          "page": 41,
+          "printed": 13,
+          "marks": []
+        }
+      ]
     },
     {
       "content_id": "morfo-01-clase-017",
@@ -339,7 +516,32 @@
       "opcion_a": "Estudio de componentes y estudio de propiedades del conjunto",
       "opcion_b": "Observación al microscopio y abandono de la evidencia",
       "opcion_c": "Enfermedad y ausencia de enfermedad",
-      "opcion_d": "Anatomía humana y anatomía sin órganos"
+      "opcion_d": "Anatomía humana y anatomía sin órganos",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 1 · Temas principales de anatomía y fisiología",
+          "page": 41,
+          "printed": 13,
+          "marks": []
+        },
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 1 · Temas principales de anatomía y fisiología",
+          "page": 42,
+          "printed": 14,
+          "marks": [
+            [
+              0.1114,
+              0.1322,
+              0.0537,
+              0.0111
+            ]
+          ]
+        }
+      ]
     },
     {
       "content_id": "morfo-01-clase-018",
@@ -376,7 +578,25 @@
       "opcion_a": "Anabolismo degrada moléculas; catabolismo las sintetiza",
       "opcion_b": "Catabolismo degrada moléculas; anabolismo las sintetiza",
       "opcion_c": "Ambos términos significan solo crecimiento corporal",
-      "opcion_d": "Metabolismo equivale exclusivamente a movimiento"
+      "opcion_d": "Metabolismo equivale exclusivamente a movimiento",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 1 · Temas principales de anatomía y fisiología",
+          "page": 43,
+          "printed": 15,
+          "marks": []
+        },
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 1 · Temas principales de anatomía y fisiología",
+          "page": 44,
+          "printed": 16,
+          "marks": []
+        }
+      ]
     },
     {
       "content_id": "morfo-01-clase-019",
@@ -412,7 +632,24 @@
       "opcion_a": "Solo aumento de tamaño",
       "opcion_b": "Evolución de una población en una generación",
       "opcion_c": "Diferenciación",
-      "opcion_d": "Transposición visceral"
+      "opcion_d": "Transposición visceral",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 1 · Temas principales de anatomía y fisiología",
+          "page": 44,
+          "printed": 16,
+          "marks": [
+            [
+              0.0925,
+              0.6074,
+              0.097,
+              0.0111
+            ]
+          ]
+        }
+      ]
     },
     {
       "content_id": "morfo-01-clase-020",
@@ -449,7 +686,38 @@
       "opcion_a": "Solo un riñón ubicado en la pelvis",
       "opcion_b": "Todo cambio del pulso después de ejercicio",
       "opcion_c": "Cualquier variante de una arteria renal",
-      "opcion_d": "Distribución de vísceras torácicas y abdominales en espejo"
+      "opcion_d": "Distribución de vísceras torácicas y abdominales en espejo",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 1 · Temas principales de anatomía y fisiología",
+          "page": 42,
+          "printed": 14,
+          "marks": [
+            [
+              0.5629,
+              0.2142,
+              0.0256,
+              0.0106
+            ],
+            [
+              0.8482,
+              0.2278,
+              0.0256,
+              0.0106
+            ]
+          ]
+        },
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 1 · Temas principales de anatomía y fisiología",
+          "page": 43,
+          "printed": 15,
+          "marks": []
+        }
+      ]
     },
     {
       "content_id": "morfo-01-clase-021",
@@ -486,7 +754,38 @@
       "opcion_a": "Estabilidad dinámica de condiciones internas dentro de límites",
       "opcion_b": "Ausencia absoluta de toda fluctuación",
       "opcion_c": "Una respuesta que siempre amplifica cualquier cambio",
-      "opcion_d": "Una característica exclusiva de un órgano aislado"
+      "opcion_d": "Una característica exclusiva de un órgano aislado",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 1 · Temas principales de anatomía y fisiología",
+          "page": 44,
+          "printed": 16,
+          "marks": []
+        },
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 1 · Temas principales de anatomía y fisiología",
+          "page": 45,
+          "printed": 17,
+          "marks": [
+            [
+              0.2,
+              0.5308,
+              0.1323,
+              0.0111
+            ],
+            [
+              0.1571,
+              0.9169,
+              0.1313,
+              0.0111
+            ]
+          ]
+        }
+      ]
     },
     {
       "content_id": "morfo-01-clase-023",
@@ -524,7 +823,38 @@
       "opcion_a": "Centro integrador ejecuta necesariamente la contracción muscular",
       "opcion_b": "Receptor detecta; centro integrador procesa; efector responde",
       "opcion_c": "Receptor y efector son nombres para el mismo papel",
-      "opcion_d": "Efector detecta siempre; receptor integra toda señal"
+      "opcion_d": "Efector detecta siempre; receptor integra toda señal",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 1 · Temas principales de anatomía y fisiología",
+          "page": 45,
+          "printed": 17,
+          "marks": []
+        },
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 1 · Temas principales de anatomía y fisiología",
+          "page": 46,
+          "printed": 18,
+          "marks": [
+            [
+              0.3593,
+              0.3995,
+              0.0545,
+              0.0111
+            ],
+            [
+              0.3133,
+              0.5926,
+              0.0545,
+              0.0111
+            ]
+          ]
+        }
+      ]
     },
     {
       "content_id": "morfo-01-clase-024",
@@ -562,7 +892,38 @@
       "opcion_a": "Ausencia de señal hormonal",
       "opcion_b": "Un cambio anatómico sin función fisiológica",
       "opcion_c": "Retroalimentación positiva",
-      "opcion_d": "Retroalimentación negativa por definición"
+      "opcion_d": "Retroalimentación negativa por definición",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 1 · Temas principales de anatomía y fisiología",
+          "page": 46,
+          "printed": 18,
+          "marks": [
+            [
+              0.5795,
+              0.9023,
+              0.0617,
+              0.0111
+            ],
+            [
+              0.7724,
+              0.9023,
+              0.0617,
+              0.0111
+            ]
+          ]
+        },
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 1 · Temas principales de anatomía y fisiología",
+          "page": 47,
+          "printed": 19,
+          "marks": []
+        }
+      ]
     },
     {
       "content_id": "morfo-01-clase-025",
@@ -600,7 +961,32 @@
       "opcion_a": "Anatómica: palmas atrás; supino: boca abajo; prono: boca arriba",
       "opcion_b": "Anatómica: cualquier postura; supino y prono son sinónimos",
       "opcion_c": "Supino: de pie; prono: sentado",
-      "opcion_d": "Anatómica: palmas al frente; supino: boca arriba; prono: boca abajo"
+      "opcion_d": "Anatómica: palmas al frente; supino: boca arriba; prono: boca abajo",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 1 · Temas principales de anatomía y fisiología",
+          "page": 57,
+          "printed": 29,
+          "marks": []
+        },
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 1 · Temas principales de anatomía y fisiología",
+          "page": 58,
+          "printed": 30,
+          "marks": [
+            [
+              0.363,
+              0.0877,
+              0.0457,
+              0.0111
+            ]
+          ]
+        }
+      ]
     },
     {
       "content_id": "morfo-01-clase-026",
@@ -638,7 +1024,46 @@
       "opcion_a": "Frontal o coronal",
       "opcion_b": "Transversal",
       "opcion_c": "Mediano por ser horizontal",
-      "opcion_d": "Sagital"
+      "opcion_d": "Sagital",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 1 · Temas principales de anatomía y fisiología",
+          "page": 57,
+          "printed": 29,
+          "marks": []
+        },
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 1 · Temas principales de anatomía y fisiología",
+          "page": 58,
+          "printed": 30,
+          "marks": [
+            [
+              0.1746,
+              0.2461,
+              0.0446,
+              0.0111
+            ],
+            [
+              0.1599,
+              0.3798,
+              0.0457,
+              0.0111
+            ]
+          ]
+        },
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 1 · Temas principales de anatomía y fisiología",
+          "page": 59,
+          "printed": 31,
+          "marks": []
+        }
+      ]
     },
     {
       "content_id": "morfo-01-clase-027",
@@ -675,7 +1100,38 @@
       "opcion_a": "Medial por esa única razón",
       "opcion_b": "Distal respecto del codo",
       "opcion_c": "Superficial por esa única razón",
-      "opcion_d": "Proximal respecto del codo"
+      "opcion_d": "Proximal respecto del codo",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 1 · Temas principales de anatomía y fisiología",
+          "page": 59,
+          "printed": 31,
+          "marks": [
+            [
+              0.333,
+              0.5909,
+              0.0601,
+              0.0111
+            ],
+            [
+              0.1102,
+              0.3015,
+              0.0447,
+              0.0094
+            ]
+          ]
+        },
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 1 · Temas principales de anatomía y fisiología",
+          "page": 60,
+          "printed": 32,
+          "marks": []
+        }
+      ]
     },
     {
       "content_id": "morfo-01-clase-029",
@@ -714,7 +1170,46 @@
       "opcion_a": "Torácica y abdominal están separadas por la línea media",
       "opcion_b": "Abdomen y pelvis están separados por una pared completa",
       "opcion_c": "Craneana: encéfalo; pericárdica: corazón; pleural: pulmón",
-      "opcion_d": "Craneana: riñón; pleural: encéfalo; pericárdica: vejiga"
+      "opcion_d": "Craneana: riñón; pleural: encéfalo; pericárdica: vejiga",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 1 · Temas principales de anatomía y fisiología",
+          "page": 62,
+          "printed": 34,
+          "marks": [
+            [
+              0.5715,
+              0.1474,
+              0.0861,
+              0.0173
+            ],
+            [
+              0.6903,
+              0.1992,
+              0.0537,
+              0.0111
+            ]
+          ]
+        },
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 1 · Temas principales de anatomía y fisiología",
+          "page": 63,
+          "printed": 35,
+          "marks": []
+        },
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 1 · Temas principales de anatomía y fisiología",
+          "page": 64,
+          "printed": 36,
+          "marks": []
+        }
+      ]
     },
     {
       "content_id": "morfo-01-clase-030",
@@ -753,7 +1248,46 @@
       "opcion_a": "Todos los órganos abdominales ocupan la cavidad peritoneal de igual manera",
       "opcion_b": "Los riñones son intraperitoneales por encontrarse en el abdomen",
       "opcion_c": "Parietal: superficie del pulmón; visceral: solo hueso",
-      "opcion_d": "Parietal: pared; visceral: órgano; riñones: retroperitoneales"
+      "opcion_d": "Parietal: pared; visceral: órgano; riñones: retroperitoneales",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 1 · Temas principales de anatomía y fisiología",
+          "page": 63,
+          "printed": 35,
+          "marks": []
+        },
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 1 · Temas principales de anatomía y fisiología",
+          "page": 64,
+          "printed": 36,
+          "marks": [
+            [
+              0.7131,
+              0.4864,
+              0.1018,
+              0.0111
+            ],
+            [
+              0.1148,
+              0.4148,
+              0.0876,
+              0.0106
+            ]
+          ]
+        },
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 1 · Temas principales de anatomía y fisiología",
+          "page": 65,
+          "printed": 37,
+          "marks": []
+        }
+      ]
     }
   ],
   "content_revision": 3,

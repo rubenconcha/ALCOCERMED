@@ -28,7 +28,14 @@
           "section": "Tejido muscular · Sarcómero",
           "page": 433,
           "printed": 405,
-          "marks": []
+          "marks": [
+            [
+              0.7106,
+              0.4739,
+              0.1751,
+              0.0111
+            ]
+          ]
         }
       ],
       "source": {
@@ -44,6 +51,12 @@
         "pdfPages": [
           433
         ]
+      },
+      "comentarios_opciones": {
+        "A": "En reposo, la tropomiosina cubre sitios de unión a la miosina en la actina.",
+        "B": "La actina es el componente principal del filamento delgado y contiene sitios a los que se une la miosina.",
+        "C": "El calcio se une a la troponina. El cambio de posición de la tropomiosina permite entonces exponer los sitios en la actina.",
+        "D": "La miosina forma los filamentos gruesos. Sus cabezas pueden unirse a la actina."
       },
       "opcion_a": "Tropomiosina",
       "opcion_b": "Actina",
@@ -69,7 +82,14 @@
           "section": "Tejido muscular · Sarcómero",
           "page": 434,
           "printed": 406,
-          "marks": []
+          "marks": [
+            [
+              0.6192,
+              0.3884,
+              0.121,
+              0.0111
+            ]
+          ]
         }
       ],
       "source": {
@@ -85,6 +105,12 @@
         "pdfPages": [
           434
         ]
+      },
+      "comentarios_opciones": {
+        "A": "En reposo, la tropomiosina cubre sitios de unión a la miosina en la actina.",
+        "B": "La actina es el componente principal del filamento delgado y contiene sitios a los que se une la miosina.",
+        "C": "El calcio se une a la troponina. El cambio de posición de la tropomiosina permite entonces exponer los sitios en la actina.",
+        "D": "La miosina forma los filamentos gruesos. Sus cabezas pueden unirse a la actina."
       },
       "opcion_a": "Tropomiosina",
       "opcion_b": "Actina",
@@ -110,7 +136,20 @@
           "section": "Tejido muscular · Contracción",
           "page": 435,
           "printed": 407,
-          "marks": []
+          "marks": [
+            [
+              0.6797,
+              0.6469,
+              0.1107,
+              0.0094
+            ],
+            [
+              0.1107,
+              0.6606,
+              0.0032,
+              0.0094
+            ]
+          ]
         }
       ],
       "source": {
@@ -126,6 +165,12 @@
         "pdfPages": [
           435
         ]
+      },
+      "comentarios_opciones": {
+        "A": "En reposo, la tropomiosina cubre sitios de unión a la miosina en la actina.",
+        "B": "La miosina forma los filamentos gruesos. Sus cabezas pueden unirse a la actina.",
+        "C": "La actina es el componente principal del filamento delgado y contiene sitios a los que se une la miosina.",
+        "D": "El calcio se une a la troponina. El cambio de posición de la tropomiosina permite entonces exponer los sitios en la actina."
       },
       "opcion_a": "Tropomiosina",
       "opcion_b": "Miosina",
@@ -151,7 +196,14 @@
           "section": "Tejido muscular · Acoplamiento de excitación y contracción",
           "page": 440,
           "printed": 412,
-          "marks": []
+          "marks": [
+            [
+              0.5266,
+              0.1619,
+              0.1972,
+              0.0111
+            ]
+          ]
         }
       ],
       "source": {
@@ -167,6 +219,12 @@
         "pdfPages": [
           440
         ]
+      },
+      "comentarios_opciones": {
+        "A": "El calcio se une a la troponina. El cambio de posición de la tropomiosina permite entonces exponer los sitios en la actina.",
+        "B": "En reposo, la tropomiosina cubre sitios de unión a la miosina en la actina.",
+        "C": "La actina es el componente principal del filamento delgado y contiene sitios a los que se une la miosina.",
+        "D": "La miosina forma los filamentos gruesos. Sus cabezas pueden unirse a la actina."
       },
       "opcion_a": "Troponina",
       "opcion_b": "Tropomiosina",
@@ -192,7 +250,26 @@
           "section": "Tejido muscular · Fibra muscular",
           "page": 432,
           "printed": 404,
-          "marks": []
+          "marks": [
+            [
+              0.545,
+              0.7104,
+              0.077,
+              0.0111
+            ],
+            [
+              0.4977,
+              0.7388,
+              0.1405,
+              0.0161
+            ],
+            [
+              0.0925,
+              0.755,
+              0.1892,
+              0.0111
+            ]
+          ]
         }
       ],
       "source": {
@@ -253,7 +330,26 @@
           "section": "Tejido muscular · Contracción",
           "page": 435,
           "printed": 407,
-          "marks": []
+          "marks": [
+            [
+              0.6797,
+              0.6469,
+              0.1107,
+              0.0094
+            ],
+            [
+              0.1107,
+              0.6606,
+              0.0032,
+              0.0094
+            ],
+            [
+              0.7449,
+              0.6743,
+              0.1268,
+              0.0094
+            ]
+          ]
         }
       ],
       "source": {
@@ -314,7 +410,20 @@
           "section": "Tejido muscular · Puentes cruzados",
           "page": 443,
           "printed": 415,
-          "marks": []
+          "marks": [
+            [
+              0.6747,
+              0.0491,
+              0.0896,
+              0.0105
+            ],
+            [
+              0.7732,
+              0.0495,
+              0.0892,
+              0.01
+            ]
+          ]
         },
         {
           "slug": "morfofuncion",
@@ -322,7 +431,20 @@
           "section": "Tejido muscular · Puentes cruzados",
           "page": 444,
           "printed": 416,
-          "marks": []
+          "marks": [
+            [
+              0.8866,
+              0.5679,
+              0.0265,
+              0.0111
+            ],
+            [
+              0.4977,
+              0.5828,
+              0.1542,
+              0.0111
+            ]
+          ]
         }
       ],
       "source": {
@@ -385,7 +507,14 @@
           "section": "Tejido muscular · Tipos de contracción",
           "page": 449,
           "printed": 421,
-          "marks": []
+          "marks": [
+            [
+              0.1353,
+              0.9177,
+              0.1865,
+              0.0111
+            ]
+          ]
         },
         {
           "slug": "morfofuncion",
@@ -393,7 +522,20 @@
           "section": "Tejido muscular · Tipos de contracción",
           "page": 450,
           "printed": 422,
-          "marks": []
+          "marks": [
+            [
+              0.0636,
+              0.0491,
+              0.0261,
+              0.0105
+            ],
+            [
+              0.1406,
+              0.0491,
+              0.0775,
+              0.0105
+            ]
+          ]
         }
       ],
       "source": {

@@ -1,0 +1,90 @@
+{
+  "medicina-oficial-morfo-02-intermedio-1": {
+    "text": "Un átomo neutro pierde un electrón. ¿Cómo se clasifica el ion que resulta?"
+  },
+  "medicina-oficial-morfo-02-intermedio-2": {
+    "text": "Un átomo neutro gana un electrón. ¿Cómo se clasifica el ion que resulta?"
+  },
+  "medicina-oficial-morfo-22-intermedio-4": {
+    "text": "En cada inspiración entran 500 mL de aire, de los cuales 150 mL permanecen en las vías de conducción. La frecuencia es de 12 respiraciones por minuto. ¿Qué magnitud se obtiene al multiplicar 350 mL por 12 respiraciones por minuto?"
+  },
+  "medicina-oficial-biologia-09-intermedio-1": {
+    "text": "Una quinasa añade un grupo fosfato a una proteína. ¿Cómo se llama esa modificación de la proteína?"
+  },
+  "medicina-oficial-biologia-09-intermedio-2": {
+    "text": "En un experimento se detecta la incorporación de un grupo acetilo a una proteína. ¿Qué modificación ocurrió?"
+  },
+  "medicina-oficial-biologia-09-intermedio-3": {
+    "text": "Una proteína citosólica queda asociada a la membrana tras incorporar un grupo lipídico. ¿Qué modificación le permitió anclarse?"
+  },
+  "medicina-oficial-biologia-09-intermedio-4": {
+    "text": "Se detecta una cadena de ubiquitinas unida a una proteína que será degradada en el proteasoma. ¿Qué modificación se observó?"
+  },
+  "medicina-oficial-biologia-15-intermedio-1": {
+    "text": "Los cromosomas comienzan a condensarse y la envoltura nuclear empieza a fragmentarse. Los cromosomas todavía permanecen dentro del núcleo. ¿En qué fase se encuentra la célula?",
+    "explanation": "En profase empieza la condensación y la envoltura nuclear se desorganiza parcialmente. En prometafase se completa esa desorganización y los cromosomas quedan expuestos al citoplasma."
+  },
+  "medicina-oficial-salud-03-intermedio-2": {
+    "text": "El equipo de salud aplica medidas para que el agua de consumo sea segura. ¿Qué función de salud pública corresponde a controlar directamente ese riesgo ambiental?"
+  },
+  "medicina-oficial-salud-11-intermedio-2": {
+    "text": "Antes de iniciar un estudio, el equipo entrega un documento que explica qué investigará, en qué se basa y cómo recogerá los datos. ¿Cómo se llama ese documento?"
+  },
+  "medicina-oficial-salud-11-intermedio-4": {
+    "text": "Tras analizar los datos, el equipo prepara un documento para comunicar los resultados, las conclusiones y las recomendaciones. ¿Cómo se llama ese documento?"
+  },
+  "medicina-oficial-salud-21-intermedio-1": {
+    "text": "Al usar la herramienta de estadística descriptiva de Excel, el rango seleccionado incluye el título «Edad» en la primera fila. ¿Qué casilla se marca para que Excel reconozca ese encabezado?"
+  },
+  "medicina-oficial-salud-21-intermedio-2": {
+    "text": "Después de seleccionar el rango numérico en la herramienta de estadística descriptiva de Excel, ¿qué casilla se marca para obtener juntas las medidas descriptivas?"
+  },
+  "morfo-08-visual-001": {
+    "citation": {
+      "pdf_page": 262,
+      "anchor": "huesos de las extremidades"
+    }
+  },
+  "morfo-08-visual-003": {
+    "citation": {
+      "pdf_page": 264,
+      "anchor": "Alvéolo"
+    }
+  },
+  "morfo-08-visual-004": {
+    "citation": {
+      "pdf_page": 264,
+      "anchor": "integrado por 22 huesos"
+    }
+  },
+  "morfo-08-visual-005": {
+    "citation": {
+      "pdf_page": 270,
+      "anchor": "une el hueso frontal con los huesos parietales"
+    }
+  },
+  "morfo-08-visual-009": {
+    "citation": {
+      "pdf_page": 278,
+      "anchor": "cantidades de vértebras cervicales, torácicas y lumbares"
+    }
+  },
+  "morfo-08-visual-012": {
+    "citation": {
+      "pdf_page": 285,
+      "anchor": "Costillas flotantes"
+    }
+  },
+  "morfo-08-visual-016": {
+    "citation": {
+      "pdf_page": 291,
+      "anchor": "dos falanges en el pulgar"
+    }
+  },
+  "morfo-08-visual-017": {
+    "citation": {
+      "pdf_page": 298,
+      "anchor": "siete tarsianos"
+    }
+  }
+}

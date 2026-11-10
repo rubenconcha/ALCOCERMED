@@ -19,7 +19,7 @@
       "justificacion": "Una molécula liposoluble puede cruzar directamente la bicapa a favor de su gradiente. Ese paso sin transportador es difusión simple.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "170",
-      "pagina_impresa": "",
+      "pagina_impresa": "170",
       "dificultad": "medio",
       "lecturas_comentario": [
         {
@@ -27,8 +27,21 @@
           "label": "Calvo",
           "section": "Microtransporte a través de la membrana plasmática · Difusión simple",
           "page": 170,
-          "printed": null,
-          "marks": []
+          "printed": 170,
+          "marks": [
+            [
+              0.8475,
+              0.153,
+              0.1363,
+              0.0198
+            ],
+            [
+              0.0082,
+              0.2903,
+              0.189,
+              0.0282
+            ]
+          ]
         }
       ],
       "source": {
@@ -42,6 +55,12 @@
         "pdfPages": [
           170
         ]
+      },
+      "comentarios_opciones": {
+        "A": "Al estar retenido el soluto, el flujo neto de agua va hacia la solución con mayor concentración de ese soluto.",
+        "B": "En la difusión facilitada, un canal o un transportador permite el paso a favor del gradiente.",
+        "C": "Una molécula liposoluble puede cruzar directamente la bicapa a favor de su gradiente. Ese paso sin transportador es difusión simple.",
+        "D": "El transporte activo requiere energía para mover una sustancia contra su gradiente."
       },
       "opcion_a": "Ósmosis",
       "opcion_b": "Difusión facilitada",
@@ -58,7 +77,7 @@
       "justificacion": "En la difusión facilitada, un canal o un transportador permite el paso a favor del gradiente.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "174",
-      "pagina_impresa": "",
+      "pagina_impresa": "174",
       "dificultad": "medio",
       "lecturas_comentario": [
         {
@@ -66,8 +85,21 @@
           "label": "Calvo",
           "section": "Microtransporte a través de la membrana plasmática · Difusión facilitada",
           "page": 174,
-          "printed": null,
-          "marks": []
+          "printed": 174,
+          "marks": [
+            [
+              0.0082,
+              0.3903,
+              0.2251,
+              0.0282
+            ],
+            [
+              0.0082,
+              0.427,
+              0.2098,
+              0.0197
+            ]
+          ]
         }
       ],
       "source": {
@@ -81,6 +113,12 @@
         "pdfPages": [
           174
         ]
+      },
+      "comentarios_opciones": {
+        "A": "Al estar retenido el soluto, el flujo neto de agua va hacia la solución con mayor concentración de ese soluto.",
+        "B": "En la difusión facilitada, un canal o un transportador permite el paso a favor del gradiente.",
+        "C": "Una molécula liposoluble puede cruzar directamente la bicapa a favor de su gradiente. Ese paso sin transportador es difusión simple.",
+        "D": "El transporte activo requiere energía para mover una sustancia contra su gradiente."
       },
       "opcion_a": "Ósmosis",
       "opcion_b": "Difusión facilitada",
@@ -97,7 +135,7 @@
       "justificacion": "Al estar retenido el soluto, el flujo neto de agua va hacia la solución con mayor concentración de ese soluto.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "173",
-      "pagina_impresa": "",
+      "pagina_impresa": "173",
       "dificultad": "medio",
       "lecturas_comentario": [
         {
@@ -105,8 +143,15 @@
           "label": "Calvo",
           "section": "Microtransporte a través de la membrana plasmática · Ósmosis",
           "page": 173,
-          "printed": null,
-          "marks": []
+          "printed": 173,
+          "marks": [
+            [
+              0.2879,
+              0.5129,
+              0.1444,
+              0.0181
+            ]
+          ]
         }
       ],
       "source": {
@@ -120,6 +165,12 @@
         "pdfPages": [
           173
         ]
+      },
+      "comentarios_opciones": {
+        "A": "En la difusión facilitada, un canal o un transportador permite el paso a favor del gradiente.",
+        "B": "El transporte activo requiere energía para mover una sustancia contra su gradiente.",
+        "C": "Al estar retenido el soluto, el flujo neto de agua va hacia la solución con mayor concentración de ese soluto.",
+        "D": "Una molécula liposoluble puede cruzar directamente la bicapa a favor de su gradiente. Ese paso sin transportador es difusión simple."
       },
       "opcion_a": "Difusión facilitada",
       "opcion_b": "Transporte activo",
@@ -136,7 +187,7 @@
       "justificacion": "El transporte activo requiere energía para mover una sustancia contra su gradiente.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "169",
-      "pagina_impresa": "",
+      "pagina_impresa": "169",
       "dificultad": "medio",
       "lecturas_comentario": [
         {
@@ -144,8 +195,15 @@
           "label": "Calvo",
           "section": "Microtransporte a través de la membrana plasmática · Tipos de transporte",
           "page": 169,
-          "printed": null,
-          "marks": []
+          "printed": 169,
+          "marks": [
+            [
+              0.0271,
+              0.4962,
+              0.2506,
+              0.0197
+            ]
+          ]
         }
       ],
       "source": {
@@ -159,6 +217,12 @@
         "pdfPages": [
           169
         ]
+      },
+      "comentarios_opciones": {
+        "A": "En la difusión facilitada, un canal o un transportador permite el paso a favor del gradiente.",
+        "B": "Al estar retenido el soluto, el flujo neto de agua va hacia la solución con mayor concentración de ese soluto.",
+        "C": "Una molécula liposoluble puede cruzar directamente la bicapa a favor de su gradiente. Ese paso sin transportador es difusión simple.",
+        "D": "El transporte activo requiere energía para mover una sustancia contra su gradiente."
       },
       "opcion_a": "Difusión facilitada",
       "opcion_b": "Ósmosis",
@@ -175,7 +239,7 @@
       "justificacion": "1. Correcta. La incorporación aumenta la permeabilidad apical al agua.\n2. Incorrecta. En la comparación del texto, un valor menor indica mayor afinidad.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "180, 182",
-      "pagina_impresa": "",
+      "pagina_impresa": "180, 182",
       "dificultad": "dificil",
       "lecturas_comentario": [
         {
@@ -183,16 +247,30 @@
           "label": "Calvo",
           "section": "Microtransporte a través de la membrana plasmática · Acuaporinas / Transportadores",
           "page": 180,
-          "printed": null,
-          "marks": []
+          "printed": 180,
+          "marks": [
+            [
+              0.186,
+              0.5462,
+              0.284,
+              0.0197
+            ]
+          ]
         },
         {
           "slug": "biologia-celular",
           "label": "Calvo",
           "section": "Microtransporte a través de la membrana plasmática · Acuaporinas / Transportadores",
           "page": 182,
-          "printed": null,
-          "marks": []
+          "printed": 182,
+          "marks": [
+            [
+              0.3709,
+              0.4179,
+              0.2949,
+              0.0197
+            ]
+          ]
         }
       ],
       "source": {
@@ -243,7 +321,7 @@
       "justificacion": "1. Incorrecta. Ese acoplamiento es antiporte. El simporte mueve los solutos en el mismo sentido.\n2. Correcta. El gradiente de sodio impulsa el transporte acoplado, sin que el cotransportador hidrolice el ATP directamente.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "183, 192",
-      "pagina_impresa": "",
+      "pagina_impresa": "183, 192",
       "dificultad": "dificil",
       "lecturas_comentario": [
         {
@@ -251,16 +329,30 @@
           "label": "Calvo",
           "section": "Microtransporte a través de la membrana plasmática · Cotransporte / Transporte activo secundario",
           "page": 183,
-          "printed": null,
-          "marks": []
+          "printed": 183,
+          "marks": [
+            [
+              0.0271,
+              0.6288,
+              0.257,
+              0.0198
+            ]
+          ]
         },
         {
           "slug": "biologia-celular",
           "label": "Calvo",
           "section": "Microtransporte a través de la membrana plasmática · Cotransporte / Transporte activo secundario",
           "page": 192,
-          "printed": null,
-          "marks": []
+          "printed": 192,
+          "marks": [
+            [
+              0.4784,
+              0.7066,
+              0.2424,
+              0.0197
+            ]
+          ]
         }
       ],
       "source": {
@@ -311,7 +403,7 @@
       "justificacion": "1. Correcta. La ATPasa retira calcio del citosol y lo acumula dentro del retículo.\n2. Correcta. Lo expulsa de la célula y con ello limita su concentración interna.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "189, 190",
-      "pagina_impresa": "",
+      "pagina_impresa": "189, 190",
       "dificultad": "dificil",
       "lecturas_comentario": [
         {
@@ -319,16 +411,30 @@
           "label": "Calvo",
           "section": "Microtransporte a través de la membrana plasmática · Bombas de calcio / Transportadores ABC",
           "page": 189,
-          "printed": null,
-          "marks": []
+          "printed": 189,
+          "marks": [
+            [
+              0.3699,
+              0.3735,
+              0.23,
+              0.0197
+            ]
+          ]
         },
         {
           "slug": "biologia-celular",
           "label": "Calvo",
           "section": "Microtransporte a través de la membrana plasmática · Bombas de calcio / Transportadores ABC",
           "page": 190,
-          "printed": null,
-          "marks": []
+          "printed": 190,
+          "marks": [
+            [
+              0.0271,
+              0.524,
+              0.2534,
+              0.0197
+            ]
+          ]
         }
       ],
       "source": {
@@ -379,7 +485,7 @@
       "justificacion": "1. Incorrecta. Tiene compuertas de activación e inactivación.\n2. Incorrecta. Durante ese período un estímulo de intensidad suficiente sí puede provocarlo.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "199, 204",
-      "pagina_impresa": "",
+      "pagina_impresa": "199, 204",
       "dificultad": "dificil",
       "lecturas_comentario": [
         {
@@ -387,16 +493,36 @@
           "label": "Calvo",
           "section": "Microtransporte a través de la membrana plasmática · Canales dependientes de voltaje / Períodos refractarios",
           "page": 199,
-          "printed": null,
-          "marks": []
+          "printed": 199,
+          "marks": [
+            [
+              0.8559,
+              0.5195,
+              0.1356,
+              0.0181
+            ],
+            [
+              0.1856,
+              0.5351,
+              0.0109,
+              0.0172
+            ]
+          ]
         },
         {
           "slug": "biologia-celular",
           "label": "Calvo",
           "section": "Microtransporte a través de la membrana plasmática · Canales dependientes de voltaje / Períodos refractarios",
           "page": 204,
-          "printed": null,
-          "marks": []
+          "printed": 204,
+          "marks": [
+            [
+              0.1065,
+              0.7333,
+              0.293,
+              0.0197
+            ]
+          ]
         }
       ],
       "source": {

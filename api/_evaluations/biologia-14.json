@@ -19,7 +19,7 @@
       "justificacion": "Wee1 fosforila Cdk1 en sitios inhibidores y reduce su actividad.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "594",
-      "pagina_impresa": "",
+      "pagina_impresa": "594",
       "dificultad": "medio",
       "lecturas_comentario": [
         {
@@ -27,8 +27,15 @@
           "label": "Calvo",
           "section": "Ciclo celular y destinos vitales de la célula · Regulación de Cdk",
           "page": 594,
-          "printed": null,
-          "marks": []
+          "printed": 594,
+          "marks": [
+            [
+              0.0807,
+              0.7922,
+              0.2241,
+              0.0197
+            ]
+          ]
         }
       ],
       "source": {
@@ -42,6 +49,12 @@
         "pdfPages": [
           594
         ]
+      },
+      "comentarios_opciones": {
+        "A": "Wee1 fosforila Cdk1 en sitios inhibidores y reduce su actividad.",
+        "B": "APC/C promueve la ubiquitinación de la segurina y su posterior degradación.",
+        "C": "Cdc25 retira la fosforilación inhibidora de Cdk1 y permite reactivar el complejo.",
+        "D": "Las proteínas Mad y Bub intervienen en la señal de un cinetocoro sin anclar. Esa señal retrasa la activación de APC/C-Cdc20."
       },
       "opcion_a": "Wee1",
       "opcion_b": "APC/C",
@@ -58,7 +71,7 @@
       "justificacion": "Cdc25 retira la fosforilación inhibidora de Cdk1 y permite reactivar el complejo.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "594",
-      "pagina_impresa": "",
+      "pagina_impresa": "594",
       "dificultad": "medio",
       "lecturas_comentario": [
         {
@@ -66,8 +79,15 @@
           "label": "Calvo",
           "section": "Ciclo celular y destinos vitales de la célula · Regulación de Cdk",
           "page": 594,
-          "printed": null,
-          "marks": []
+          "printed": 594,
+          "marks": [
+            [
+              0.1196,
+              0.8157,
+              0.2177,
+              0.0198
+            ]
+          ]
         }
       ],
       "source": {
@@ -81,6 +101,12 @@
         "pdfPages": [
           594
         ]
+      },
+      "comentarios_opciones": {
+        "A": "Las proteínas Mad y Bub intervienen en la señal de un cinetocoro sin anclar. Esa señal retrasa la activación de APC/C-Cdc20.",
+        "B": "Wee1 fosforila Cdk1 en sitios inhibidores y reduce su actividad.",
+        "C": "APC/C promueve la ubiquitinación de la segurina y su posterior degradación.",
+        "D": "Cdc25 retira la fosforilación inhibidora de Cdk1 y permite reactivar el complejo."
       },
       "opcion_a": "Proteínas Mad y Bub",
       "opcion_b": "Wee1",
@@ -97,7 +123,7 @@
       "justificacion": "APC/C promueve la ubiquitinación de la segurina y su posterior degradación.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "602",
-      "pagina_impresa": "",
+      "pagina_impresa": "602",
       "dificultad": "medio",
       "lecturas_comentario": [
         {
@@ -105,8 +131,15 @@
           "label": "Calvo",
           "section": "Ciclo celular y destinos vitales de la célula · Control de anafase",
           "page": 602,
-          "printed": null,
-          "marks": []
+          "printed": 602,
+          "marks": [
+            [
+              0.316,
+              0.2848,
+              0.1764,
+              0.0172
+            ]
+          ]
         }
       ],
       "source": {
@@ -120,6 +153,12 @@
         "pdfPages": [
           602
         ]
+      },
+      "comentarios_opciones": {
+        "A": "Cdc25 retira la fosforilación inhibidora de Cdk1 y permite reactivar el complejo.",
+        "B": "APC/C promueve la ubiquitinación de la segurina y su posterior degradación.",
+        "C": "Las proteínas Mad y Bub intervienen en la señal de un cinetocoro sin anclar. Esa señal retrasa la activación de APC/C-Cdc20.",
+        "D": "Wee1 fosforila Cdk1 en sitios inhibidores y reduce su actividad."
       },
       "opcion_a": "Cdc25",
       "opcion_b": "APC/C",
@@ -136,7 +175,7 @@
       "justificacion": "Las proteínas Mad y Bub intervienen en la señal de un cinetocoro sin anclar. Esa señal retrasa la activación de APC/C-Cdc20.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "603",
-      "pagina_impresa": "",
+      "pagina_impresa": "603",
       "dificultad": "medio",
       "lecturas_comentario": [
         {
@@ -144,8 +183,15 @@
           "label": "Calvo",
           "section": "Ciclo celular y destinos vitales de la célula · Control del huso",
           "page": 603,
-          "printed": null,
-          "marks": []
+          "printed": 603,
+          "marks": [
+            [
+              0.5039,
+              0.4914,
+              0.2218,
+              0.0197
+            ]
+          ]
         }
       ],
       "source": {
@@ -159,6 +205,12 @@
         "pdfPages": [
           603
         ]
+      },
+      "comentarios_opciones": {
+        "A": "Las proteínas Mad y Bub intervienen en la señal de un cinetocoro sin anclar. Esa señal retrasa la activación de APC/C-Cdc20.",
+        "B": "Wee1 fosforila Cdk1 en sitios inhibidores y reduce su actividad.",
+        "C": "APC/C promueve la ubiquitinación de la segurina y su posterior degradación.",
+        "D": "Cdc25 retira la fosforilación inhibidora de Cdk1 y permite reactivar el complejo."
       },
       "opcion_a": "Proteínas Mad y Bub",
       "opcion_b": "Wee1",
@@ -175,7 +227,7 @@
       "justificacion": "1. Correcta. La unión adecuada se comprueba antes de permitir la separación cromosómica.\n2. Incorrecta. El complejo que promueve la entrada en mitosis es Cdk1-ciclina B.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "590, 592",
-      "pagina_impresa": "",
+      "pagina_impresa": "590, 592",
       "dificultad": "dificil",
       "lecturas_comentario": [
         {
@@ -183,16 +235,30 @@
           "label": "Calvo",
           "section": "Ciclo celular y destinos vitales de la célula · Puntos de control / Control mitótico",
           "page": 590,
-          "printed": null,
-          "marks": []
+          "printed": 590,
+          "marks": [
+            [
+              0.0271,
+              0.8096,
+              0.1876,
+              0.0198
+            ]
+          ]
         },
         {
           "slug": "biologia-celular",
           "label": "Calvo",
           "section": "Ciclo celular y destinos vitales de la célula · Puntos de control / Control mitótico",
           "page": 592,
-          "printed": null,
-          "marks": []
+          "printed": 592,
+          "marks": [
+            [
+              0.0271,
+              0.0765,
+              0.3264,
+              0.0198
+            ]
+          ]
         }
       ],
       "source": {
@@ -243,7 +309,7 @@
       "justificacion": "1. Incorrecta. Cuando pRb está unida a E2F, esos genes permanecen reprimidos.\n2. Correcta. E2F liberado puede inducir genes necesarios para entrar en fase S.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "598",
-      "pagina_impresa": "",
+      "pagina_impresa": "598",
       "dificultad": "dificil",
       "lecturas_comentario": [
         {
@@ -251,8 +317,27 @@
           "label": "Calvo",
           "section": "Ciclo celular y destinos vitales de la célula · Rb y E2F",
           "page": 598,
-          "printed": null,
-          "marks": []
+          "printed": 598,
+          "marks": [
+            [
+              0.4954,
+              0.9076,
+              0.0328,
+              0.0197
+            ],
+            [
+              0.0271,
+              0.9346,
+              0.0047,
+              0.0197
+            ],
+            [
+              0.0209,
+              0.5569,
+              0.2862,
+              0.0181
+            ]
+          ]
         }
       ],
       "source": {
@@ -302,7 +387,7 @@
       "justificacion": "1. Correcta. Al perder su inhibidor, la separasa puede participar en liberar la cohesión entre cromátidas.\n2. Correcta. La respuesta permite frenar la proliferación y, según el daño, inducir muerte celular.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "601, 604",
-      "pagina_impresa": "",
+      "pagina_impresa": "601, 604",
       "dificultad": "dificil",
       "lecturas_comentario": [
         {
@@ -310,16 +395,30 @@
           "label": "Calvo",
           "section": "Ciclo celular y destinos vitales de la célula · Control de anafase / Daño del ADN",
           "page": 601,
-          "printed": null,
-          "marks": []
+          "printed": 601,
+          "marks": [
+            [
+              0.6745,
+              0.6308,
+              0.2198,
+              0.0197
+            ]
+          ]
         },
         {
           "slug": "biologia-celular",
           "label": "Calvo",
           "section": "Ciclo celular y destinos vitales de la célula · Control de anafase / Daño del ADN",
           "page": 604,
-          "printed": null,
-          "marks": []
+          "printed": 604,
+          "marks": [
+            [
+              0.0082,
+              0.4638,
+              0.2815,
+              0.0282
+            ]
+          ]
         }
       ],
       "source": {
@@ -370,7 +469,7 @@
       "justificacion": "1. Incorrecta. La pérdida persistente de capacidad de división caracteriza a la senescencia.\n2. Incorrecta. La quiescencia puede revertirse con estímulos adecuados. La senescencia es el estado persistente.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "607, 608",
-      "pagina_impresa": "",
+      "pagina_impresa": "607, 608",
       "dificultad": "dificil",
       "lecturas_comentario": [
         {
@@ -378,16 +477,36 @@
           "label": "Calvo",
           "section": "Ciclo celular y destinos vitales de la célula · Senescencia / Quiescencia y senescencia",
           "page": 607,
-          "printed": null,
-          "marks": []
+          "printed": 607,
+          "marks": [
+            [
+              0.2301,
+              0.7932,
+              0.1848,
+              0.0197
+            ]
+          ]
         },
         {
           "slug": "biologia-celular",
           "label": "Calvo",
           "section": "Ciclo celular y destinos vitales de la célula · Senescencia / Quiescencia y senescencia",
           "page": 608,
-          "printed": null,
-          "marks": []
+          "printed": 608,
+          "marks": [
+            [
+              0.4954,
+              0.9076,
+              0.0328,
+              0.0197
+            ],
+            [
+              0.0271,
+              0.9346,
+              0.0047,
+              0.0197
+            ]
+          ]
         }
       ],
       "source": {

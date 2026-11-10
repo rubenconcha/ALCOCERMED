@@ -28,7 +28,20 @@
           "section": "Estadística descriptiva · estadistica descriptiva",
           "page": 89,
           "printed": 14,
-          "marks": []
+          "marks": [
+            [
+              0.6827,
+              0.1927,
+              0.2032,
+              0.0192
+            ],
+            [
+              0.0909,
+              0.2157,
+              0.1977,
+              0.0192
+            ]
+          ]
         }
       ],
       "source": {
@@ -44,6 +57,12 @@
         "pdfPages": [
           89
         ]
+      },
+      "comentarios_opciones": {
+        "A": "La estadística inferencial usa la muestra para estimar o sacar conclusiones sobre la población.",
+        "B": "La población es todo el conjunto sobre el que interesa obtener información.",
+        "C": "La muestra es la parte de la población que se selecciona para el estudio.",
+        "D": "La estadística descriptiva organiza y resume el conjunto de datos disponible."
       },
       "opcion_a": "Estadística inferencial",
       "opcion_b": "Población",
@@ -69,7 +88,14 @@
           "section": "Estadística descriptiva · estadistica descriptiva",
           "page": 89,
           "printed": 14,
-          "marks": []
+          "marks": [
+            [
+              0.2405,
+              0.3885,
+              0.3488,
+              0.0192
+            ]
+          ]
         }
       ],
       "source": {
@@ -85,6 +111,12 @@
         "pdfPages": [
           89
         ]
+      },
+      "comentarios_opciones": {
+        "A": "La población es todo el conjunto sobre el que interesa obtener información.",
+        "B": "La muestra es la parte de la población que se selecciona para el estudio.",
+        "C": "La estadística descriptiva organiza y resume el conjunto de datos disponible.",
+        "D": "La estadística inferencial usa la muestra para estimar o sacar conclusiones sobre la población."
       },
       "opcion_a": "Población",
       "opcion_b": "Muestra",
@@ -110,7 +142,20 @@
           "section": "Estadística descriptiva · estadistica descriptiva",
           "page": 89,
           "printed": 14,
-          "marks": []
+          "marks": [
+            [
+              0.4783,
+              0.6867,
+              0.4076,
+              0.0192
+            ],
+            [
+              0.0909,
+              0.7097,
+              0.0844,
+              0.0192
+            ]
+          ]
         }
       ],
       "source": {
@@ -126,6 +171,12 @@
         "pdfPages": [
           89
         ]
+      },
+      "comentarios_opciones": {
+        "A": "La estadística inferencial usa la muestra para estimar o sacar conclusiones sobre la población.",
+        "B": "La muestra es la parte de la población que se selecciona para el estudio.",
+        "C": "La estadística descriptiva organiza y resume el conjunto de datos disponible.",
+        "D": "La población es todo el conjunto sobre el que interesa obtener información."
       },
       "opcion_a": "Estadística inferencial",
       "opcion_b": "Muestra",
@@ -151,7 +202,20 @@
           "section": "Estadística descriptiva · estadistica descriptiva",
           "page": 90,
           "printed": 15,
-          "marks": []
+          "marks": [
+            [
+              0.6254,
+              0.3769,
+              0.2908,
+              0.0192
+            ],
+            [
+              0.1212,
+              0.3999,
+              0.3697,
+              0.0192
+            ]
+          ]
         }
       ],
       "source": {
@@ -167,6 +231,12 @@
         "pdfPages": [
           90
         ]
+      },
+      "comentarios_opciones": {
+        "A": "La estadística inferencial usa la muestra para estimar o sacar conclusiones sobre la población.",
+        "B": "La población es todo el conjunto sobre el que interesa obtener información.",
+        "C": "La muestra es la parte de la población que se selecciona para el estudio.",
+        "D": "La estadística descriptiva organiza y resume el conjunto de datos disponible."
       },
       "opcion_a": "Estadística inferencial",
       "opcion_b": "Población",
@@ -192,7 +262,20 @@
           "section": "Estadística descriptiva · estadistica descriptiva",
           "page": 88,
           "printed": 13,
-          "marks": []
+          "marks": [
+            [
+              0.7353,
+              0.483,
+              0.181,
+              0.0192
+            ],
+            [
+              0.1212,
+              0.506,
+              0.0897,
+              0.0192
+            ]
+          ]
         },
         {
           "slug": "educacion-salud",
@@ -200,7 +283,20 @@
           "section": "Estadística descriptiva · estadistica descriptiva",
           "page": 89,
           "printed": 14,
-          "marks": []
+          "marks": [
+            [
+              0.7476,
+              0.1466,
+              0.1384,
+              0.0192
+            ],
+            [
+              0.0909,
+              0.1697,
+              0.2021,
+              0.0192
+            ]
+          ]
         }
       ],
       "source": {
@@ -263,7 +359,14 @@
           "section": "Estadística descriptiva · estadistica descriptiva",
           "page": 89,
           "printed": 14,
-          "marks": []
+          "marks": [
+            [
+              0.1379,
+              0.5313,
+              0.2815,
+              0.0191
+            ]
+          ]
         },
         {
           "slug": "educacion-salud",
@@ -271,7 +374,14 @@
           "section": "Estadística descriptiva · estadistica descriptiva",
           "page": 90,
           "printed": 15,
-          "marks": []
+          "marks": [
+            [
+              0.5301,
+              0.4689,
+              0.3789,
+              0.0192
+            ]
+          ]
         }
       ],
       "source": {
@@ -334,7 +444,20 @@
           "section": "Estadística descriptiva · estadistica descriptiva",
           "page": 90,
           "printed": 15,
-          "marks": []
+          "marks": [
+            [
+              0.476,
+              0.6704,
+              0.2238,
+              0.0192
+            ],
+            [
+              0.4483,
+              0.6934,
+              0.1806,
+              0.0192
+            ]
+          ]
         }
       ],
       "source": {
@@ -395,7 +518,26 @@
           "section": "Estadística descriptiva · estadistica descriptiva",
           "page": 90,
           "printed": 15,
-          "marks": []
+          "marks": [
+            [
+              0.3509,
+              0.8075,
+              0.463,
+              0.0192
+            ],
+            [
+              0.371,
+              0.8996,
+              0.4642,
+              0.0192
+            ],
+            [
+              0.5448,
+              0.5784,
+              0.3026,
+              0.0192
+            ]
+          ]
         }
       ],
       "source": {

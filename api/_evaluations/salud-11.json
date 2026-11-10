@@ -28,7 +28,20 @@
           "section": "Proceso de investigación · proceso de investigacion",
           "page": 41,
           "printed": 34,
-          "marks": []
+          "marks": [
+            [
+              0.9277,
+              0.7294,
+              0.0285,
+              0.0183
+            ],
+            [
+              0.1029,
+              0.7482,
+              0.2243,
+              0.0183
+            ]
+          ]
         }
       ],
       "source": {
@@ -45,6 +58,12 @@
           41
         ]
       },
+      "comentarios_opciones": {
+        "A": "La ejecución lleva a la práctica el diseño. Incluye recolectar, procesar e interpretar los datos.",
+        "B": "El protocolo es el documento en el que se explicitan decisiones tomadas durante la planificación.",
+        "C": "El informe final recoge los resultados del estudio y permite darlos a conocer.",
+        "D": "En la planificación se toman decisiones sobre qué investigar, con qué base teórica y cómo hacerlo."
+      },
       "opcion_a": "Ejecución",
       "opcion_b": "Protocolo",
       "opcion_c": "Informe final",
@@ -55,7 +74,7 @@
       "materia": "SALUD PUBLICA",
       "tema": "proceso de investigacion",
       "numero_pregunta": 2,
-      "pregunta": "Antes de iniciar el estudio, el equipo entrega un documento que detalla qué investigará, con qué base teórica y mediante qué procedimientos.\n¿Qué opción corresponde al caso?",
+      "pregunta": "Antes de iniciar un estudio, el equipo entrega un documento que explica qué investigará, en qué se basa y cómo recogerá los datos. ¿Cómo se llama ese documento?",
       "respuesta_correcta": "A",
       "justificacion": "El protocolo es el documento en el que se explicitan decisiones tomadas durante la planificación.",
       "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
@@ -69,7 +88,20 @@
           "section": "Proceso de investigación · proceso de investigacion",
           "page": 41,
           "printed": 34,
-          "marks": []
+          "marks": [
+            [
+              0.6613,
+              0.7952,
+              0.2947,
+              0.0183
+            ],
+            [
+              0.1017,
+              0.814,
+              0.0358,
+              0.0183
+            ]
+          ]
         }
       ],
       "source": {
@@ -85,6 +117,12 @@
         "pdfPages": [
           41
         ]
+      },
+      "comentarios_opciones": {
+        "A": "El protocolo es el documento en el que se explicitan decisiones tomadas durante la planificación.",
+        "B": "La ejecución lleva a la práctica el diseño. Incluye recolectar, procesar e interpretar los datos.",
+        "C": "En la planificación se toman decisiones sobre qué investigar, con qué base teórica y cómo hacerlo.",
+        "D": "El informe final recoge los resultados del estudio y permite darlos a conocer."
       },
       "opcion_a": "Protocolo",
       "opcion_b": "Ejecución",
@@ -110,7 +148,20 @@
           "section": "Proceso de investigación · proceso de investigacion",
           "page": 44,
           "printed": 37,
-          "marks": []
+          "marks": [
+            [
+              0.909,
+              0.1719,
+              0.0479,
+              0.016
+            ],
+            [
+              0.1098,
+              0.1886,
+              0.0495,
+              0.0172
+            ]
+          ]
         }
       ],
       "source": {
@@ -127,6 +178,12 @@
           44
         ]
       },
+      "comentarios_opciones": {
+        "A": "El protocolo es el documento en el que se explicitan decisiones tomadas durante la planificación.",
+        "B": "La ejecución lleva a la práctica el diseño. Incluye recolectar, procesar e interpretar los datos.",
+        "C": "El informe final recoge los resultados del estudio y permite darlos a conocer.",
+        "D": "En la planificación se toman decisiones sobre qué investigar, con qué base teórica y cómo hacerlo."
+      },
       "opcion_a": "Protocolo",
       "opcion_b": "Ejecución",
       "opcion_c": "Informe final",
@@ -137,7 +194,7 @@
       "materia": "SALUD PUBLICA",
       "tema": "proceso de investigacion",
       "numero_pregunta": 4,
-      "pregunta": "Con el análisis concluido, el equipo prepara el documento con resultados, conclusiones y recomendaciones para darlos a conocer.\n¿Qué opción corresponde al caso?",
+      "pregunta": "Tras analizar los datos, el equipo prepara un documento para comunicar los resultados, las conclusiones y las recomendaciones. ¿Cómo se llama ese documento?",
       "respuesta_correcta": "A",
       "justificacion": "El informe final recoge los resultados del estudio y permite darlos a conocer.",
       "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
@@ -151,7 +208,14 @@
           "section": "Proceso de investigación · proceso de investigacion",
           "page": 44,
           "printed": 37,
-          "marks": []
+          "marks": [
+            [
+              0.6493,
+              0.613,
+              0.3046,
+              0.016
+            ]
+          ]
         }
       ],
       "source": {
@@ -167,6 +231,12 @@
         "pdfPages": [
           44
         ]
+      },
+      "comentarios_opciones": {
+        "A": "El informe final recoge los resultados del estudio y permite darlos a conocer.",
+        "B": "En la planificación se toman decisiones sobre qué investigar, con qué base teórica y cómo hacerlo.",
+        "C": "La ejecución lleva a la práctica el diseño. Incluye recolectar, procesar e interpretar los datos.",
+        "D": "El protocolo es el documento en el que se explicitan decisiones tomadas durante la planificación."
       },
       "opcion_a": "Informe final",
       "opcion_b": "Planificación",
@@ -192,7 +262,26 @@
           "section": "Proceso de investigación · proceso de investigacion",
           "page": 41,
           "printed": 34,
-          "marks": []
+          "marks": [
+            [
+              0.3659,
+              0.3759,
+              0.2509,
+              0.0183
+            ],
+            [
+              0.8451,
+              0.4788,
+              0.1105,
+              0.0183
+            ],
+            [
+              0.1064,
+              0.4979,
+              0.1098,
+              0.0183
+            ]
+          ]
         }
       ],
       "source": {
@@ -253,7 +342,14 @@
           "section": "Proceso de investigación · proceso de investigacion",
           "page": 41,
           "printed": 34,
-          "marks": []
+          "marks": [
+            [
+              0.4671,
+              0.7294,
+              0.326,
+              0.0183
+            ]
+          ]
         },
         {
           "slug": "educacion-salud",
@@ -261,7 +357,14 @@
           "section": "Proceso de investigación · proceso de investigacion",
           "page": 43,
           "printed": 36,
-          "marks": []
+          "marks": [
+            [
+              0.1515,
+              0.0959,
+              0.334,
+              0.0157
+            ]
+          ]
         }
       ],
       "source": {
@@ -324,7 +427,32 @@
           "section": "Proceso de investigación · proceso de investigacion",
           "page": 43,
           "printed": 36,
-          "marks": []
+          "marks": [
+            [
+              0.3523,
+              0.1733,
+              0.1895,
+              0.016
+            ],
+            [
+              0.1168,
+              0.1989,
+              0.0141,
+              0.0157
+            ],
+            [
+              0.4236,
+              0.2335,
+              0.0828,
+              0.0157
+            ],
+            [
+              0.5057,
+              0.2315,
+              0.0198,
+              0.0182
+            ]
+          ]
         }
       ],
       "source": {
@@ -385,7 +513,20 @@
           "section": "Proceso de investigación · proceso de investigacion",
           "page": 45,
           "printed": 38,
-          "marks": []
+          "marks": [
+            [
+              0.1019,
+              0.0873,
+              0.5535,
+              0.0227
+            ],
+            [
+              0.5319,
+              0.3674,
+              0.2942,
+              0.0194
+            ]
+          ]
         }
       ],
       "source": {

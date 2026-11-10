@@ -19,7 +19,7 @@
       "justificacion": "COPII recubre las vesículas que llevan carga del retículo endoplasmático al Golgi.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "443",
-      "pagina_impresa": "",
+      "pagina_impresa": "443",
       "dificultad": "medio",
       "lecturas_comentario": [
         {
@@ -27,8 +27,21 @@
           "label": "Calvo",
           "section": "Sistema de endomembranas celulares: retículo endoplasmático, aparato de Golgi y lisosomas · Tráfico vesicular",
           "page": 443,
-          "printed": null,
-          "marks": []
+          "printed": 443,
+          "marks": [
+            [
+              0.5294,
+              0.3905,
+              0.1274,
+              0.0131
+            ],
+            [
+              0.6565,
+              0.3874,
+              0.0045,
+              0.0172
+            ]
+          ]
         }
       ],
       "source": {
@@ -42,6 +55,12 @@
         "pdfPages": [
           443
         ]
+      },
+      "comentarios_opciones": {
+        "A": "COPI interviene en el transporte de retorno del Golgi hacia el retículo endoplasmático.",
+        "B": "COPII recubre las vesículas que llevan carga del retículo endoplasmático al Golgi.",
+        "C": "La manosa-6-fosfato funciona como señal de destino para hidrolasas ácidas dirigidas al lisosoma.",
+        "D": "KDEL es una señal carboxiloterminal que permite recuperar proteínas solubles residentes del retículo."
       },
       "opcion_a": "COPI",
       "opcion_b": "COPII",
@@ -58,7 +77,7 @@
       "justificacion": "COPI interviene en el transporte de retorno del Golgi hacia el retículo endoplasmático.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "443",
-      "pagina_impresa": "",
+      "pagina_impresa": "443",
       "dificultad": "medio",
       "lecturas_comentario": [
         {
@@ -66,8 +85,21 @@
           "label": "Calvo",
           "section": "Sistema de endomembranas celulares: retículo endoplasmático, aparato de Golgi y lisosomas · Tráfico vesicular",
           "page": 443,
-          "printed": null,
-          "marks": []
+          "printed": 443,
+          "marks": [
+            [
+              0.8053,
+              0.5162,
+              0.1495,
+              0.0197
+            ],
+            [
+              0.0458,
+              0.5396,
+              0.16,
+              0.0197
+            ]
+          ]
         }
       ],
       "source": {
@@ -81,6 +113,12 @@
         "pdfPages": [
           443
         ]
+      },
+      "comentarios_opciones": {
+        "A": "COPI interviene en el transporte de retorno del Golgi hacia el retículo endoplasmático.",
+        "B": "COPII recubre las vesículas que llevan carga del retículo endoplasmático al Golgi.",
+        "C": "KDEL es una señal carboxiloterminal que permite recuperar proteínas solubles residentes del retículo.",
+        "D": "La manosa-6-fosfato funciona como señal de destino para hidrolasas ácidas dirigidas al lisosoma."
       },
       "opcion_a": "COPI",
       "opcion_b": "COPII",
@@ -97,7 +135,7 @@
       "justificacion": "KDEL es una señal carboxiloterminal que permite recuperar proteínas solubles residentes del retículo.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "443",
-      "pagina_impresa": "",
+      "pagina_impresa": "443",
       "dificultad": "medio",
       "lecturas_comentario": [
         {
@@ -105,8 +143,15 @@
           "label": "Calvo",
           "section": "Sistema de endomembranas celulares: retículo endoplasmático, aparato de Golgi y lisosomas · Retención en el RER",
           "page": 443,
-          "printed": null,
-          "marks": []
+          "printed": 443,
+          "marks": [
+            [
+              0.0271,
+              0.5942,
+              0.1714,
+              0.0198
+            ]
+          ]
         }
       ],
       "source": {
@@ -120,6 +165,12 @@
         "pdfPages": [
           443
         ]
+      },
+      "comentarios_opciones": {
+        "A": "COPI interviene en el transporte de retorno del Golgi hacia el retículo endoplasmático.",
+        "B": "COPII recubre las vesículas que llevan carga del retículo endoplasmático al Golgi.",
+        "C": "La manosa-6-fosfato funciona como señal de destino para hidrolasas ácidas dirigidas al lisosoma.",
+        "D": "KDEL es una señal carboxiloterminal que permite recuperar proteínas solubles residentes del retículo."
       },
       "opcion_a": "COPI",
       "opcion_b": "COPII",
@@ -136,7 +187,7 @@
       "justificacion": "La manosa-6-fosfato funciona como señal de destino para hidrolasas ácidas dirigidas al lisosoma.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "440",
-      "pagina_impresa": "",
+      "pagina_impresa": "440",
       "dificultad": "medio",
       "lecturas_comentario": [
         {
@@ -144,8 +195,15 @@
           "label": "Calvo",
           "section": "Sistema de endomembranas celulares: retículo endoplasmático, aparato de Golgi y lisosomas · Destino lisosómico",
           "page": 440,
-          "printed": null,
-          "marks": []
+          "printed": 440,
+          "marks": [
+            [
+              0.7004,
+              0.1235,
+              0.2147,
+              0.0197
+            ]
+          ]
         }
       ],
       "source": {
@@ -159,6 +217,12 @@
         "pdfPages": [
           440
         ]
+      },
+      "comentarios_opciones": {
+        "A": "COPI interviene en el transporte de retorno del Golgi hacia el retículo endoplasmático.",
+        "B": "COPII recubre las vesículas que llevan carga del retículo endoplasmático al Golgi.",
+        "C": "KDEL es una señal carboxiloterminal que permite recuperar proteínas solubles residentes del retículo.",
+        "D": "La manosa-6-fosfato funciona como señal de destino para hidrolasas ácidas dirigidas al lisosoma."
       },
       "opcion_a": "COPI",
       "opcion_b": "COPII",
@@ -175,7 +239,7 @@
       "justificacion": "1. Correcta. La partícula reconoce el péptido señal y ayuda a acercar el ribosoma al retículo.\n2. Incorrecta. El receptor del oligosacárido es la asparagina de esa secuencia.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "426, 429",
-      "pagina_impresa": "",
+      "pagina_impresa": "426, 429",
       "dificultad": "dificil",
       "lecturas_comentario": [
         {
@@ -183,16 +247,36 @@
           "label": "Calvo",
           "section": "Sistema de endomembranas celulares: retículo endoplasmático, aparato de Golgi y lisosomas · Importación al RER / N-glucosilación",
           "page": 426,
-          "printed": null,
-          "marks": []
+          "printed": 426,
+          "marks": [
+            [
+              0.7297,
+              0.2015,
+              0.2332,
+              0.0197
+            ],
+            [
+              0.0082,
+              0.225,
+              0.0535,
+              0.0197
+            ]
+          ]
         },
         {
           "slug": "biologia-celular",
           "label": "Calvo",
           "section": "Sistema de endomembranas celulares: retículo endoplasmático, aparato de Golgi y lisosomas · Importación al RER / N-glucosilación",
           "page": 429,
-          "printed": null,
-          "marks": []
+          "printed": 429,
+          "marks": [
+            [
+              0.0951,
+              0.1705,
+              0.151,
+              0.0197
+            ]
+          ]
         }
       ],
       "source": {
@@ -243,7 +327,7 @@
       "justificacion": "1. Incorrecta. Un ambiente oxidante favorece la formación de los enlaces disulfuro.\n2. Correcta. Forman parte del control de calidad previo a la salida del retículo.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "429",
-      "pagina_impresa": "",
+      "pagina_impresa": "429",
       "dificultad": "dificil",
       "lecturas_comentario": [
         {
@@ -251,8 +335,33 @@
           "label": "Calvo",
           "section": "Sistema de endomembranas celulares: retículo endoplasmático, aparato de Golgi y lisosomas · Plegamiento en el RER",
           "page": 429,
-          "printed": null,
-          "marks": []
+          "printed": 429,
+          "marks": [
+            [
+              0.0271,
+              0.6892,
+              0.2936,
+              0.0198
+            ],
+            [
+              0.4599,
+              0.7596,
+              0.2878,
+              0.0197
+            ],
+            [
+              0.8588,
+              0.5249,
+              0.0388,
+              0.0131
+            ],
+            [
+              0.8974,
+              0.5217,
+              0.0045,
+              0.0172
+            ]
+          ]
         }
       ],
       "source": {
@@ -302,7 +411,7 @@
       "justificacion": "1. Correcta. La entrada y la salida se organizan en caras distintas.\n2. Correcta. En esta región se clasifican cargas que se enviarán a destinos distintos.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "437, 440",
-      "pagina_impresa": "",
+      "pagina_impresa": "437, 440",
       "dificultad": "dificil",
       "lecturas_comentario": [
         {
@@ -310,16 +419,36 @@
           "label": "Calvo",
           "section": "Sistema de endomembranas celulares: retículo endoplasmático, aparato de Golgi y lisosomas · Aparato de Golgi / Destino lisosómico",
           "page": 437,
-          "printed": null,
-          "marks": []
+          "printed": 437,
+          "marks": [
+            [
+              0.0255,
+              0.6599,
+              0.2836,
+              0.0181
+            ]
+          ]
         },
         {
           "slug": "biologia-celular",
           "label": "Calvo",
           "section": "Sistema de endomembranas celulares: retículo endoplasmático, aparato de Golgi y lisosomas · Aparato de Golgi / Destino lisosómico",
           "page": 440,
-          "printed": null,
-          "marks": []
+          "printed": 440,
+          "marks": [
+            [
+              0.4954,
+              0.9076,
+              0.0328,
+              0.0197
+            ],
+            [
+              0.0271,
+              0.9346,
+              0.0047,
+              0.0197
+            ]
+          ]
         }
       ],
       "source": {
@@ -370,7 +499,7 @@
       "justificacion": "1. Incorrecta. El lisosoma mantiene un pH ácido, de alrededor de 5.\n2. Incorrecta. Es la digestión de los propios gránulos secretores dentro del sistema lisosómico.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "445, 447",
-      "pagina_impresa": "",
+      "pagina_impresa": "445, 447",
       "dificultad": "dificil",
       "lecturas_comentario": [
         {
@@ -378,16 +507,42 @@
           "label": "Calvo",
           "section": "Sistema de endomembranas celulares: retículo endoplasmático, aparato de Golgi y lisosomas · Lisosomas / Autofagia",
           "page": 445,
-          "printed": null,
-          "marks": []
+          "printed": 445,
+          "marks": [
+            [
+              0.9654,
+              0.4604,
+              0.026,
+              0.0197
+            ],
+            [
+              0.0082,
+              0.4839,
+              0.2384,
+              0.0197
+            ]
+          ]
         },
         {
           "slug": "biologia-celular",
           "label": "Calvo",
           "section": "Sistema de endomembranas celulares: retículo endoplasmático, aparato de Golgi y lisosomas · Lisosomas / Autofagia",
           "page": 447,
-          "printed": null,
-          "marks": []
+          "printed": 447,
+          "marks": [
+            [
+              0.8206,
+              0.7911,
+              0.1662,
+              0.0197
+            ],
+            [
+              0.0082,
+              0.8146,
+              0.1199,
+              0.0197
+            ]
+          ]
         }
       ],
       "source": {

@@ -28,7 +28,14 @@
           "section": "Desarrollo humano y envejecimiento · Circulación fetal",
           "page": 1142,
           "printed": 1114,
-          "marks": []
+          "marks": [
+            [
+              0.1857,
+              0.7975,
+              0.1719,
+              0.0111
+            ]
+          ]
         }
       ],
       "source": {
@@ -44,6 +51,12 @@
         "pdfPages": [
           1142
         ]
+      },
+      "comentarios_opciones": {
+        "A": "Las arterias umbilicales llevan sangre del feto hacia la placenta.",
+        "B": "La vena umbilical transporta hacia el feto la sangre oxigenada en la placenta.",
+        "C": "El conducto arterioso desvía sangre del tronco pulmonar hacia la aorta.",
+        "D": "El agujero oval permite un paso directo de sangre de la aurícula derecha a la izquierda."
       },
       "opcion_a": "Arterias umbilicales",
       "opcion_b": "Vena umbilical",
@@ -69,7 +82,14 @@
           "section": "Desarrollo humano y envejecimiento · Circulación fetal",
           "page": 1142,
           "printed": 1114,
-          "marks": []
+          "marks": [
+            [
+              0.2091,
+              0.1174,
+              0.1389,
+              0.0111
+            ]
+          ]
         }
       ],
       "source": {
@@ -85,6 +105,12 @@
         "pdfPages": [
           1142
         ]
+      },
+      "comentarios_opciones": {
+        "A": "El conducto arterioso desvía sangre del tronco pulmonar hacia la aorta.",
+        "B": "El agujero oval permite un paso directo de sangre de la aurícula derecha a la izquierda.",
+        "C": "La vena umbilical transporta hacia el feto la sangre oxigenada en la placenta.",
+        "D": "Las arterias umbilicales llevan sangre del feto hacia la placenta."
       },
       "opcion_a": "Conducto arterioso",
       "opcion_b": "Agujero oval",
@@ -110,7 +136,14 @@
           "section": "Desarrollo humano y envejecimiento · Circulación fetal",
           "page": 1142,
           "printed": 1114,
-          "marks": []
+          "marks": [
+            [
+              0.6565,
+              0.6185,
+              0.2526,
+              0.0111
+            ]
+          ]
         }
       ],
       "source": {
@@ -126,6 +159,12 @@
         "pdfPages": [
           1142
         ]
+      },
+      "comentarios_opciones": {
+        "A": "El agujero oval permite un paso directo de sangre de la aurícula derecha a la izquierda.",
+        "B": "El conducto arterioso desvía sangre del tronco pulmonar hacia la aorta.",
+        "C": "Las arterias umbilicales llevan sangre del feto hacia la placenta.",
+        "D": "La vena umbilical transporta hacia el feto la sangre oxigenada en la placenta."
       },
       "opcion_a": "Agujero oval",
       "opcion_b": "Conducto arterioso",
@@ -151,7 +190,20 @@
           "section": "Desarrollo humano y envejecimiento · Circulación fetal",
           "page": 1143,
           "printed": 1115,
-          "marks": []
+          "marks": [
+            [
+              0.5588,
+              0.0491,
+              0.0896,
+              0.0105
+            ],
+            [
+              0.6573,
+              0.0495,
+              0.1144,
+              0.01
+            ]
+          ]
         }
       ],
       "source": {
@@ -167,6 +219,12 @@
         "pdfPages": [
           1143
         ]
+      },
+      "comentarios_opciones": {
+        "A": "La vena umbilical transporta hacia el feto la sangre oxigenada en la placenta.",
+        "B": "El agujero oval permite un paso directo de sangre de la aurícula derecha a la izquierda.",
+        "C": "Las arterias umbilicales llevan sangre del feto hacia la placenta.",
+        "D": "El conducto arterioso desvía sangre del tronco pulmonar hacia la aorta."
       },
       "opcion_a": "Vena umbilical",
       "opcion_b": "Agujero oval",
@@ -192,7 +250,20 @@
           "section": "Desarrollo humano y envejecimiento · Fecundación",
           "page": 1132,
           "printed": 1104,
-          "marks": []
+          "marks": [
+            [
+              0.8867,
+              0.1321,
+              0.0265,
+              0.0111
+            ],
+            [
+              0.4977,
+              0.147,
+              0.2057,
+              0.0111
+            ]
+          ]
         },
         {
           "slug": "morfofuncion",
@@ -200,7 +271,14 @@
           "section": "Desarrollo humano y envejecimiento · Fecundación",
           "page": 1133,
           "printed": 1105,
-          "marks": []
+          "marks": [
+            [
+              0.1198,
+              0.1619,
+              0.2478,
+              0.0111
+            ]
+          ]
         }
       ],
       "source": {
@@ -263,7 +341,26 @@
           "section": "Desarrollo humano y envejecimiento · Desarrollo temprano",
           "page": 1134,
           "printed": 1106,
-          "marks": []
+          "marks": [
+            [
+              0.6728,
+              0.1262,
+              0.1238,
+              0.0111
+            ],
+            [
+              0.862,
+              0.3267,
+              0.0511,
+              0.0111
+            ],
+            [
+              0.4977,
+              0.3416,
+              0.1108,
+              0.0111
+            ]
+          ]
         }
       ],
       "source": {
@@ -324,7 +421,20 @@
           "section": "Desarrollo humano y envejecimiento · Desarrollo temprano / Implantación",
           "page": 1135,
           "printed": 1107,
-          "marks": []
+          "marks": [
+            [
+              0.5588,
+              0.0491,
+              0.0896,
+              0.0105
+            ],
+            [
+              0.6573,
+              0.0495,
+              0.1144,
+              0.01
+            ]
+          ]
         }
       ],
       "source": {
@@ -385,7 +495,32 @@
           "section": "Desarrollo humano y envejecimiento · Capas germinales",
           "page": 1137,
           "printed": 1109,
-          "marks": []
+          "marks": [
+            [
+              0.5588,
+              0.0491,
+              0.0896,
+              0.0105
+            ],
+            [
+              0.6573,
+              0.0495,
+              0.1144,
+              0.01
+            ],
+            [
+              0.205,
+              0.4753,
+              0.0377,
+              0.0111
+            ],
+            [
+              0.2484,
+              0.4753,
+              0.0249,
+              0.0111
+            ]
+          ]
         }
       ],
       "source": {

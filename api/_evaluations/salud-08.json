@@ -45,6 +45,12 @@
           9
         ]
       },
+      "comentarios_opciones": {
+        "A": "La figura identifica la educación de calidad e inclusiva con el ODS 4.",
+        "B": "En la figura, la disponibilidad de agua y el saneamiento corresponden al ODS 6.",
+        "C": "El ODS 13 se dedica a enfrentar el cambio climático y sus efectos.",
+        "D": "La figura asocia el ODS 2 con terminar con el hambre."
+      },
       "opcion_a": "ODS 4",
       "opcion_b": "ODS 6",
       "opcion_c": "ODS 13",
@@ -85,6 +91,12 @@
         "pdfPages": [
           9
         ]
+      },
+      "comentarios_opciones": {
+        "A": "La figura asocia el ODS 2 con terminar con el hambre.",
+        "B": "El ODS 13 se dedica a enfrentar el cambio climático y sus efectos.",
+        "C": "La figura identifica la educación de calidad e inclusiva con el ODS 4.",
+        "D": "En la figura, la disponibilidad de agua y el saneamiento corresponden al ODS 6."
       },
       "opcion_a": "ODS 2",
       "opcion_b": "ODS 13",
@@ -127,6 +139,12 @@
           9
         ]
       },
+      "comentarios_opciones": {
+        "A": "La figura identifica la educación de calidad e inclusiva con el ODS 4.",
+        "B": "La figura asocia el ODS 2 con terminar con el hambre.",
+        "C": "El ODS 13 se dedica a enfrentar el cambio climático y sus efectos.",
+        "D": "En la figura, la disponibilidad de agua y el saneamiento corresponden al ODS 6."
+      },
       "opcion_a": "ODS 4",
       "opcion_b": "ODS 2",
       "opcion_c": "ODS 13",
@@ -168,6 +186,12 @@
           9
         ]
       },
+      "comentarios_opciones": {
+        "A": "La figura identifica la educación de calidad e inclusiva con el ODS 4.",
+        "B": "La figura asocia el ODS 2 con terminar con el hambre.",
+        "C": "En la figura, la disponibilidad de agua y el saneamiento corresponden al ODS 6.",
+        "D": "El ODS 13 se dedica a enfrentar el cambio climático y sus efectos."
+      },
       "opcion_a": "ODS 4",
       "opcion_b": "ODS 2",
       "opcion_c": "ODS 6",
@@ -192,7 +216,26 @@
           "section": "ODS y cobertura sanitaria · ods y cobertura sanitaria",
           "page": 8,
           "printed": 7,
-          "marks": []
+          "marks": [
+            [
+              0.7236,
+              0.1141,
+              0.0277,
+              0.0168
+            ],
+            [
+              0.7578,
+              0.1141,
+              0.0487,
+              0.0168
+            ],
+            [
+              0.1389,
+              0.1539,
+              0.1853,
+              0.0168
+            ]
+          ]
         }
       ],
       "source": {
@@ -253,7 +296,26 @@
           "section": "ODS y cobertura sanitaria · ods y cobertura sanitaria",
           "page": 7,
           "printed": 6,
-          "marks": []
+          "marks": [
+            [
+              0.664,
+              0.4674,
+              0.2421,
+              0.0168
+            ],
+            [
+              0.832,
+              0.3629,
+              0.0793,
+              0.0168
+            ],
+            [
+              0.1389,
+              0.3891,
+              0.1435,
+              0.0168
+            ]
+          ]
         }
       ],
       "source": {
@@ -314,7 +376,32 @@
           "section": "ODS y cobertura sanitaria · ods y cobertura sanitaria",
           "page": 7,
           "printed": 6,
-          "marks": []
+          "marks": [
+            [
+              0.1683,
+              0.6514,
+              0.0075,
+              0.0154
+            ],
+            [
+              0.1758,
+              0.6526,
+              0.0045,
+              0.0141
+            ],
+            [
+              0.3558,
+              0.572,
+              0.3186,
+              0.0168
+            ],
+            [
+              0.1683,
+              0.5991,
+              0.0075,
+              0.0154
+            ]
+          ]
         }
       ],
       "source": {
@@ -375,7 +462,26 @@
           "section": "ODS y cobertura sanitaria · ods y cobertura sanitaria",
           "page": 7,
           "printed": 6,
-          "marks": []
+          "marks": [
+            [
+              0.5873,
+              0.5983,
+              0.2866,
+              0.0168
+            ],
+            [
+              0.7698,
+              0.6766,
+              0.1276,
+              0.0168
+            ],
+            [
+              0.1978,
+              0.7028,
+              0.1557,
+              0.0168
+            ]
+          ]
         }
       ],
       "source": {

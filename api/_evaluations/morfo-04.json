@@ -28,7 +28,20 @@
           "section": "Genética y función celular · Expresión genética",
           "page": 150,
           "printed": 122,
-          "marks": []
+          "marks": [
+            [
+              0.0636,
+              0.0491,
+              0.0261,
+              0.0105
+            ],
+            [
+              0.1406,
+              0.0491,
+              0.0803,
+              0.0105
+            ]
+          ]
         }
       ],
       "source": {
@@ -44,6 +57,12 @@
         "pdfPages": [
           150
         ]
+      },
+      "comentarios_opciones": {
+        "A": "El empalme alternativo combina distintos exones de un mismo transcrito. Así un gen puede dar lugar a productos distintos.",
+        "B": "En la traducción, el ribosoma utiliza el mensaje del ARNm para ordenar los aminoácidos del polipéptido.",
+        "C": "Cada doble hélice hija conserva una hebra del ADN inicial y recibe una recién sintetizada.",
+        "D": "En la transcripción, el ADN sirve de molde para producir una molécula de ARN."
       },
       "opcion_a": "Empalme alternativo del ARN",
       "opcion_b": "Traducción",
@@ -69,7 +88,20 @@
           "section": "Genética y función celular · Traducción",
           "page": 150,
           "printed": 122,
-          "marks": []
+          "marks": [
+            [
+              0.0636,
+              0.0491,
+              0.0261,
+              0.0105
+            ],
+            [
+              0.1406,
+              0.0491,
+              0.0803,
+              0.0105
+            ]
+          ]
         }
       ],
       "source": {
@@ -85,6 +117,12 @@
         "pdfPages": [
           150
         ]
+      },
+      "comentarios_opciones": {
+        "A": "En la transcripción, el ADN sirve de molde para producir una molécula de ARN.",
+        "B": "El empalme alternativo combina distintos exones de un mismo transcrito. Así un gen puede dar lugar a productos distintos.",
+        "C": "Cada doble hélice hija conserva una hebra del ADN inicial y recibe una recién sintetizada.",
+        "D": "En la traducción, el ribosoma utiliza el mensaje del ARNm para ordenar los aminoácidos del polipéptido."
       },
       "opcion_a": "Transcripción",
       "opcion_b": "Empalme alternativo del ARN",
@@ -110,7 +148,20 @@
           "section": "Genética y función celular · Procesamiento del ARN",
           "page": 151,
           "printed": 123,
-          "marks": []
+          "marks": [
+            [
+              0.6248,
+              0.0491,
+              0.0821,
+              0.0105
+            ],
+            [
+              0.7157,
+              0.0495,
+              0.1034,
+              0.01
+            ]
+          ]
         }
       ],
       "source": {
@@ -126,6 +177,12 @@
         "pdfPages": [
           151
         ]
+      },
+      "comentarios_opciones": {
+        "A": "En la transcripción, el ADN sirve de molde para producir una molécula de ARN.",
+        "B": "El empalme alternativo combina distintos exones de un mismo transcrito. Así un gen puede dar lugar a productos distintos.",
+        "C": "En la traducción, el ribosoma utiliza el mensaje del ARNm para ordenar los aminoácidos del polipéptido.",
+        "D": "Cada doble hélice hija conserva una hebra del ADN inicial y recibe una recién sintetizada."
       },
       "opcion_a": "Transcripción",
       "opcion_b": "Empalme alternativo del ARN",
@@ -151,7 +208,20 @@
           "section": "Genética y función celular · Replicación",
           "page": 158,
           "printed": 130,
-          "marks": []
+          "marks": [
+            [
+              0.0636,
+              0.0491,
+              0.0261,
+              0.0105
+            ],
+            [
+              0.1406,
+              0.0491,
+              0.0803,
+              0.0105
+            ]
+          ]
         }
       ],
       "source": {
@@ -167,6 +237,12 @@
         "pdfPages": [
           158
         ]
+      },
+      "comentarios_opciones": {
+        "A": "Cada doble hélice hija conserva una hebra del ADN inicial y recibe una recién sintetizada.",
+        "B": "El empalme alternativo combina distintos exones de un mismo transcrito. Así un gen puede dar lugar a productos distintos.",
+        "C": "En la transcripción, el ADN sirve de molde para producir una molécula de ARN.",
+        "D": "En la traducción, el ribosoma utiliza el mensaje del ARNm para ordenar los aminoácidos del polipéptido."
       },
       "opcion_a": "Replicación semiconservadora",
       "opcion_b": "Empalme alternativo del ARN",
@@ -192,7 +268,20 @@
           "section": "Genética y función celular · Procesamiento del ARN / Traducción",
           "page": 150,
           "printed": 122,
-          "marks": []
+          "marks": [
+            [
+              0.0636,
+              0.0491,
+              0.0261,
+              0.0105
+            ],
+            [
+              0.1406,
+              0.0491,
+              0.0803,
+              0.0105
+            ]
+          ]
         },
         {
           "slug": "morfofuncion",
@@ -200,7 +289,20 @@
           "section": "Genética y función celular · Procesamiento del ARN / Traducción",
           "page": 151,
           "printed": 123,
-          "marks": []
+          "marks": [
+            [
+              0.6248,
+              0.0491,
+              0.0821,
+              0.0105
+            ],
+            [
+              0.7157,
+              0.0495,
+              0.1034,
+              0.01
+            ]
+          ]
         }
       ],
       "source": {
@@ -263,7 +365,20 @@
           "section": "Genética y función celular · Ciclo celular / Mitosis",
           "page": 159,
           "printed": 131,
-          "marks": []
+          "marks": [
+            [
+              0.6248,
+              0.0491,
+              0.0821,
+              0.0105
+            ],
+            [
+              0.7157,
+              0.0495,
+              0.1034,
+              0.01
+            ]
+          ]
         },
         {
           "slug": "morfofuncion",
@@ -271,7 +386,20 @@
           "section": "Genética y función celular · Ciclo celular / Mitosis",
           "page": 160,
           "printed": 132,
-          "marks": []
+          "marks": [
+            [
+              0.0636,
+              0.0491,
+              0.0261,
+              0.0105
+            ],
+            [
+              0.1406,
+              0.0491,
+              0.0803,
+              0.0105
+            ]
+          ]
         }
       ],
       "source": {
@@ -334,7 +462,20 @@
           "section": "Genética y función celular · Herencia",
           "page": 164,
           "printed": 136,
-          "marks": []
+          "marks": [
+            [
+              0.0636,
+              0.0491,
+              0.0261,
+              0.0105
+            ],
+            [
+              0.1406,
+              0.0491,
+              0.0803,
+              0.0105
+            ]
+          ]
         }
       ],
       "source": {
@@ -395,7 +536,20 @@
           "section": "Genética y función celular · Cromosomas / Traducción",
           "page": 153,
           "printed": 125,
-          "marks": []
+          "marks": [
+            [
+              0.6248,
+              0.0491,
+              0.0821,
+              0.0105
+            ],
+            [
+              0.7157,
+              0.0495,
+              0.1034,
+              0.01
+            ]
+          ]
         },
         {
           "slug": "morfofuncion",
@@ -403,7 +557,20 @@
           "section": "Genética y función celular · Cromosomas / Traducción",
           "page": 162,
           "printed": 134,
-          "marks": []
+          "marks": [
+            [
+              0.0636,
+              0.0491,
+              0.0261,
+              0.0105
+            ],
+            [
+              0.1406,
+              0.0491,
+              0.0803,
+              0.0105
+            ]
+          ]
         }
       ],
       "source": {

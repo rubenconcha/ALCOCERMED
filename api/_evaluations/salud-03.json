@@ -28,7 +28,14 @@
           "section": "Funciones de salud pública · funciones de salud publica",
           "page": 5,
           "printed": 4,
-          "marks": []
+          "marks": [
+            [
+              0.3424,
+              0.1461,
+              0.2712,
+              0.0168
+            ]
+          ]
         }
       ],
       "source": {
@@ -45,6 +52,12 @@
           5
         ]
       },
+      "comentarios_opciones": {
+        "A": "La participación comunitaria incorpora a la población en la identificación de problemas y las decisiones para afrontarlos.",
+        "B": "La protección de la salud abarca el control de riesgos ambientales y la inocuidad de recursos como el agua.",
+        "C": "La vacunación es un ejemplo de prevención cuyo fin es reducir casos nuevos.",
+        "D": "El seguimiento de los registros permite detectar cambios y reconocer a tiempo riesgos o brotes."
+      },
       "opcion_a": "Participación comunitaria y gobernanza",
       "opcion_b": "Protección de la salud",
       "opcion_c": "Prevención de enfermedades",
@@ -55,7 +68,7 @@
       "materia": "SALUD PUBLICA",
       "tema": "funciones de salud publica",
       "numero_pregunta": 2,
-      "pregunta": "Se interviene sobre la seguridad del agua de consumo. El objetivo inmediato es controlar la exposición ambiental, no contar casos.\n¿Qué opción corresponde al caso?",
+      "pregunta": "El equipo de salud aplica medidas para que el agua de consumo sea segura. ¿Qué función de salud pública corresponde a controlar directamente ese riesgo ambiental?",
       "respuesta_correcta": "A",
       "justificacion": "La protección de la salud abarca el control de riesgos ambientales y la inocuidad de recursos como el agua.",
       "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
@@ -69,7 +82,14 @@
           "section": "Funciones de salud pública · funciones de salud publica",
           "page": 5,
           "printed": 4,
-          "marks": []
+          "marks": [
+            [
+              0.1968,
+              0.1984,
+              0.2449,
+              0.0168
+            ]
+          ]
         }
       ],
       "source": {
@@ -85,6 +105,12 @@
         "pdfPages": [
           5
         ]
+      },
+      "comentarios_opciones": {
+        "A": "La protección de la salud abarca el control de riesgos ambientales y la inocuidad de recursos como el agua.",
+        "B": "El seguimiento de los registros permite detectar cambios y reconocer a tiempo riesgos o brotes.",
+        "C": "La participación comunitaria incorpora a la población en la identificación de problemas y las decisiones para afrontarlos.",
+        "D": "La vacunación es un ejemplo de prevención cuyo fin es reducir casos nuevos."
       },
       "opcion_a": "Protección de la salud",
       "opcion_b": "Vigilancia y monitoreo",
@@ -110,7 +136,14 @@
           "section": "Funciones de salud pública · funciones de salud publica",
           "page": 5,
           "printed": 4,
-          "marks": []
+          "marks": [
+            [
+              0.2618,
+              0.2507,
+              0.2875,
+              0.0168
+            ]
+          ]
         }
       ],
       "source": {
@@ -126,6 +159,12 @@
         "pdfPages": [
           5
         ]
+      },
+      "comentarios_opciones": {
+        "A": "La protección de la salud abarca el control de riesgos ambientales y la inocuidad de recursos como el agua.",
+        "B": "La vacunación es un ejemplo de prevención cuyo fin es reducir casos nuevos.",
+        "C": "El seguimiento de los registros permite detectar cambios y reconocer a tiempo riesgos o brotes.",
+        "D": "La participación comunitaria incorpora a la población en la identificación de problemas y las decisiones para afrontarlos."
       },
       "opcion_a": "Protección de la salud",
       "opcion_b": "Prevención de enfermedades",
@@ -151,7 +190,14 @@
           "section": "Funciones de salud pública · funciones de salud publica",
           "page": 5,
           "printed": 4,
-          "marks": []
+          "marks": [
+            [
+              0.6187,
+              0.3553,
+              0.2543,
+              0.0168
+            ]
+          ]
         }
       ],
       "source": {
@@ -167,6 +213,12 @@
         "pdfPages": [
           5
         ]
+      },
+      "comentarios_opciones": {
+        "A": "El seguimiento de los registros permite detectar cambios y reconocer a tiempo riesgos o brotes.",
+        "B": "La vacunación es un ejemplo de prevención cuyo fin es reducir casos nuevos.",
+        "C": "La protección de la salud abarca el control de riesgos ambientales y la inocuidad de recursos como el agua.",
+        "D": "La participación comunitaria incorpora a la población en la identificación de problemas y las decisiones para afrontarlos."
       },
       "opcion_a": "Vigilancia y monitoreo",
       "opcion_b": "Prevención de enfermedades",
@@ -192,7 +244,20 @@
           "section": "Funciones de salud pública · funciones de salud publica",
           "page": 12,
           "printed": 11,
-          "marks": []
+          "marks": [
+            [
+              0.5535,
+              0.669,
+              0.2383,
+              0.0168
+            ],
+            [
+              0.3606,
+              0.7213,
+              0.2823,
+              0.0168
+            ]
+          ]
         }
       ],
       "source": {
@@ -253,7 +318,32 @@
           "section": "Funciones de salud pública · funciones de salud publica",
           "page": 13,
           "printed": 12,
-          "marks": []
+          "marks": [
+            [
+              0.2797,
+              0.0772,
+              0.0994,
+              0.014
+            ],
+            [
+              0.1968,
+              0.9072,
+              0.5476,
+              0.0139
+            ],
+            [
+              0.1389,
+              0.1984,
+              0.0628,
+              0.0168
+            ],
+            [
+              0.2069,
+              0.1984,
+              0.0192,
+              0.0168
+            ]
+          ]
         }
       ],
       "source": {
@@ -314,7 +404,14 @@
           "section": "Funciones de salud pública · funciones de salud publica",
           "page": 12,
           "printed": 11,
-          "marks": []
+          "marks": [
+            [
+              0.1438,
+              0.2507,
+              0.2208,
+              0.0168
+            ]
+          ]
         },
         {
           "slug": "educacion-salud",
@@ -322,7 +419,14 @@
           "section": "Funciones de salud pública · funciones de salud publica",
           "page": 13,
           "printed": 12,
-          "marks": []
+          "marks": [
+            [
+              0.2911,
+              0.3553,
+              0.223,
+              0.0168
+            ]
+          ]
         }
       ],
       "source": {
@@ -385,7 +489,20 @@
           "section": "Funciones de salud pública · funciones de salud publica",
           "page": 13,
           "printed": 12,
-          "marks": []
+          "marks": [
+            [
+              0.8167,
+              0.7028,
+              0.0878,
+              0.0168
+            ],
+            [
+              0.2262,
+              0.7289,
+              0.0841,
+              0.0168
+            ]
+          ]
         },
         {
           "slug": "educacion-salud",
@@ -393,7 +510,14 @@
           "section": "Funciones de salud pública · funciones de salud publica",
           "page": 14,
           "printed": 13,
-          "marks": []
+          "marks": [
+            [
+              0.4948,
+              0.4272,
+              0.1982,
+              0.0168
+            ]
+          ]
         }
       ],
       "source": {

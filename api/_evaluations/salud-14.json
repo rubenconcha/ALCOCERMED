@@ -28,7 +28,14 @@
           "section": "Variables y medición · variables y medicion",
           "page": 93,
           "printed": 18,
-          "marks": []
+          "marks": [
+            [
+              0.4125,
+              0.3024,
+              0.3588,
+              0.0192
+            ]
+          ]
         }
       ],
       "source": {
@@ -44,6 +51,12 @@
         "pdfPages": [
           93
         ]
+      },
+      "comentarios_opciones": {
+        "A": "Los códigos de una escala nominal sirven para distinguir categorías. Su orden numérico carece de significado.",
+        "B": "Con un cero absoluto, la escala de razón admite comparaciones como el doble o la mitad.",
+        "C": "En la escala ordinal las categorías se pueden ordenar. Las distancias entre categorías no están definidas.",
+        "D": "La escala de intervalo permite comparar diferencias. Su cero es un punto de referencia convencional."
       },
       "opcion_a": "Escala nominal",
       "opcion_b": "Escala de razón",
@@ -69,7 +82,20 @@
           "section": "Variables y medición · variables y medicion",
           "page": 93,
           "printed": 18,
-          "marks": []
+          "marks": [
+            [
+              0.6439,
+              0.6193,
+              0.2349,
+              0.0192
+            ],
+            [
+              0.0909,
+              0.6423,
+              0.0757,
+              0.0192
+            ]
+          ]
         }
       ],
       "source": {
@@ -85,6 +111,12 @@
         "pdfPages": [
           93
         ]
+      },
+      "comentarios_opciones": {
+        "A": "Los códigos de una escala nominal sirven para distinguir categorías. Su orden numérico carece de significado.",
+        "B": "La escala de intervalo permite comparar diferencias. Su cero es un punto de referencia convencional.",
+        "C": "En la escala ordinal las categorías se pueden ordenar. Las distancias entre categorías no están definidas.",
+        "D": "Con un cero absoluto, la escala de razón admite comparaciones como el doble o la mitad."
       },
       "opcion_a": "Escala nominal",
       "opcion_b": "Escala de intervalo",
@@ -110,7 +142,14 @@
           "section": "Variables y medición · variables y medicion",
           "page": 94,
           "printed": 19,
-          "marks": []
+          "marks": [
+            [
+              0.3912,
+              0.2615,
+              0.2744,
+              0.0192
+            ]
+          ]
         }
       ],
       "source": {
@@ -126,6 +165,12 @@
         "pdfPages": [
           94
         ]
+      },
+      "comentarios_opciones": {
+        "A": "Con un cero absoluto, la escala de razón admite comparaciones como el doble o la mitad.",
+        "B": "La escala de intervalo permite comparar diferencias. Su cero es un punto de referencia convencional.",
+        "C": "En la escala ordinal las categorías se pueden ordenar. Las distancias entre categorías no están definidas.",
+        "D": "Los códigos de una escala nominal sirven para distinguir categorías. Su orden numérico carece de significado."
       },
       "opcion_a": "Escala de razón",
       "opcion_b": "Escala de intervalo",
@@ -151,7 +196,14 @@
           "section": "Variables y medición · variables y medicion",
           "page": 94,
           "printed": 19,
-          "marks": []
+          "marks": [
+            [
+              0.2338,
+              0.5497,
+              0.3014,
+              0.0192
+            ]
+          ]
         }
       ],
       "source": {
@@ -167,6 +219,12 @@
         "pdfPages": [
           94
         ]
+      },
+      "comentarios_opciones": {
+        "A": "Los códigos de una escala nominal sirven para distinguir categorías. Su orden numérico carece de significado.",
+        "B": "Con un cero absoluto, la escala de razón admite comparaciones como el doble o la mitad.",
+        "C": "La escala de intervalo permite comparar diferencias. Su cero es un punto de referencia convencional.",
+        "D": "En la escala ordinal las categorías se pueden ordenar. Las distancias entre categorías no están definidas."
       },
       "opcion_a": "Escala nominal",
       "opcion_b": "Escala de razón",
@@ -192,7 +250,26 @@
           "section": "Variables y medición · variables y medicion",
           "page": 72,
           "printed": 65,
-          "marks": []
+          "marks": [
+            [
+              0.691,
+              0.1514,
+              0.2655,
+              0.0168
+            ],
+            [
+              0.1154,
+              0.3567,
+              0.4629,
+              0.0168
+            ],
+            [
+              0.1484,
+              0.3812,
+              0.0089,
+              0.0194
+            ]
+          ]
         }
       ],
       "source": {
@@ -253,7 +330,32 @@
           "section": "Variables y medición · variables y medicion",
           "page": 72,
           "printed": 65,
-          "marks": []
+          "marks": [
+            [
+              0.1651,
+              0.4269,
+              0.0317,
+              0.0194
+            ],
+            [
+              0.1974,
+              0.429,
+              0.2416,
+              0.0168
+            ],
+            [
+              0.7206,
+              0.4748,
+              0.2401,
+              0.0168
+            ],
+            [
+              0.1143,
+              0.4932,
+              0.0491,
+              0.0168
+            ]
+          ]
         }
       ],
       "source": {
@@ -314,7 +416,14 @@
           "section": "Variables y medición · variables y medicion",
           "page": 73,
           "printed": 66,
-          "marks": []
+          "marks": [
+            [
+              0.6039,
+              0.693,
+              0.2551,
+              0.0182
+            ]
+          ]
         },
         {
           "slug": "educacion-salud",
@@ -322,7 +431,20 @@
           "section": "Variables y medición · variables y medicion",
           "page": 92,
           "printed": 17,
-          "marks": []
+          "marks": [
+            [
+              0.1212,
+              0.3939,
+              0.2481,
+              0.0192
+            ],
+            [
+              0.1212,
+              0.4343,
+              0.1448,
+              0.0192
+            ]
+          ]
         }
       ],
       "source": {
@@ -385,7 +507,14 @@
           "section": "Variables y medición · variables y medicion",
           "page": 91,
           "printed": 16,
-          "marks": []
+          "marks": [
+            [
+              0.2812,
+              0.619,
+              0.4881,
+              0.0192
+            ]
+          ]
         },
         {
           "slug": "educacion-salud",
@@ -393,7 +522,20 @@
           "section": "Variables y medición · variables y medicion",
           "page": 94,
           "printed": 19,
-          "marks": []
+          "marks": [
+            [
+              0.6769,
+              0.5727,
+              0.2393,
+              0.0192
+            ],
+            [
+              0.1212,
+              0.5957,
+              0.2538,
+              0.0192
+            ]
+          ]
         }
       ],
       "source": {

@@ -28,7 +28,20 @@
           "section": "Factor de riesgo y salud comunitaria · factor de riesgo y salud comunitaria",
           "page": 21,
           "printed": 20,
-          "marks": []
+          "marks": [
+            [
+              0.3823,
+              0.5181,
+              0.1631,
+              0.0154
+            ],
+            [
+              0.2984,
+              0.542,
+              0.1261,
+              0.0154
+            ]
+          ]
         }
       ],
       "source": {
@@ -44,6 +57,12 @@
         "pdfPages": [
           21
         ]
+      },
+      "comentarios_opciones": {
+        "A": "La edad, el sexo y la herencia se clasifican como factores de riesgo no modificables.",
+        "B": "La restauración reúne acciones orientadas a recuperar la salud o la función tras una enfermedad.",
+        "C": "Un factor modificable es susceptible de cambio. El material incluye el tabaquismo en este grupo.",
+        "D": "El fomento de la salud fortalece prácticas que sostienen el bienestar, como la higiene y el autocuidado."
       },
       "opcion_a": "Factor de riesgo no modificable",
       "opcion_b": "Restauración de la salud",
@@ -69,7 +88,20 @@
           "section": "Factor de riesgo y salud comunitaria · factor de riesgo y salud comunitaria",
           "page": 21,
           "printed": 20,
-          "marks": []
+          "marks": [
+            [
+              0.1481,
+              0.4577,
+              0.1277,
+              0.0154
+            ],
+            [
+              0.2984,
+              0.4455,
+              0.1536,
+              0.0154
+            ]
+          ]
         }
       ],
       "source": {
@@ -85,6 +117,12 @@
         "pdfPages": [
           21
         ]
+      },
+      "comentarios_opciones": {
+        "A": "La edad, el sexo y la herencia se clasifican como factores de riesgo no modificables.",
+        "B": "La restauración reúne acciones orientadas a recuperar la salud o la función tras una enfermedad.",
+        "C": "Un factor modificable es susceptible de cambio. El material incluye el tabaquismo en este grupo.",
+        "D": "El fomento de la salud fortalece prácticas que sostienen el bienestar, como la higiene y el autocuidado."
       },
       "opcion_a": "Factor de riesgo no modificable",
       "opcion_b": "Restauración de la salud",
@@ -110,7 +148,14 @@
           "section": "Factor de riesgo y salud comunitaria · factor de riesgo y salud comunitaria",
           "page": 22,
           "printed": 21,
-          "marks": []
+          "marks": [
+            [
+              0.1389,
+              0.4424,
+              0.2755,
+              0.0168
+            ]
+          ]
         }
       ],
       "source": {
@@ -126,6 +171,12 @@
         "pdfPages": [
           22
         ]
+      },
+      "comentarios_opciones": {
+        "A": "La restauración reúne acciones orientadas a recuperar la salud o la función tras una enfermedad.",
+        "B": "La edad, el sexo y la herencia se clasifican como factores de riesgo no modificables.",
+        "C": "Un factor modificable es susceptible de cambio. El material incluye el tabaquismo en este grupo.",
+        "D": "El fomento de la salud fortalece prácticas que sostienen el bienestar, como la higiene y el autocuidado."
       },
       "opcion_a": "Restauración de la salud",
       "opcion_b": "Factor de riesgo no modificable",
@@ -151,7 +202,20 @@
           "section": "Factor de riesgo y salud comunitaria · factor de riesgo y salud comunitaria",
           "page": 22,
           "printed": 21,
-          "marks": []
+          "marks": [
+            [
+              0.1389,
+              0.6406,
+              0.2748,
+              0.0154
+            ],
+            [
+              0.1389,
+              0.6644,
+              0.0732,
+              0.0168
+            ]
+          ]
         }
       ],
       "source": {
@@ -167,6 +231,12 @@
         "pdfPages": [
           22
         ]
+      },
+      "comentarios_opciones": {
+        "A": "Un factor modificable es susceptible de cambio. El material incluye el tabaquismo en este grupo.",
+        "B": "La edad, el sexo y la herencia se clasifican como factores de riesgo no modificables.",
+        "C": "La restauración reúne acciones orientadas a recuperar la salud o la función tras una enfermedad.",
+        "D": "El fomento de la salud fortalece prácticas que sostienen el bienestar, como la higiene y el autocuidado."
       },
       "opcion_a": "Factor de riesgo modificable",
       "opcion_b": "Factor de riesgo no modificable",
@@ -192,7 +262,26 @@
           "section": "Factor de riesgo y salud comunitaria · factor de riesgo y salud comunitaria",
           "page": 21,
           "printed": 20,
-          "marks": []
+          "marks": [
+            [
+              0.3168,
+              0.2638,
+              0.3016,
+              0.0168
+            ],
+            [
+              0.5423,
+              0.542,
+              0.0642,
+              0.0154
+            ],
+            [
+              0.2984,
+              0.566,
+              0.0994,
+              0.0154
+            ]
+          ]
         }
       ],
       "source": {
@@ -253,7 +342,20 @@
           "section": "Factor de riesgo y salud comunitaria · factor de riesgo y salud comunitaria",
           "page": 21,
           "printed": 20,
-          "marks": []
+          "marks": [
+            [
+              0.3801,
+              0.641,
+              0.0333,
+              0.0168
+            ],
+            [
+              0.4193,
+              0.641,
+              0.0865,
+              0.0168
+            ]
+          ]
         },
         {
           "slug": "educacion-salud",
@@ -261,7 +363,14 @@
           "section": "Factor de riesgo y salud comunitaria · factor de riesgo y salud comunitaria",
           "page": 22,
           "printed": 21,
-          "marks": []
+          "marks": [
+            [
+              0.3025,
+              0.1418,
+              0.2063,
+              0.0168
+            ]
+          ]
         }
       ],
       "source": {
@@ -324,7 +433,26 @@
           "section": "Factor de riesgo y salud comunitaria · factor de riesgo y salud comunitaria",
           "page": 22,
           "printed": 21,
-          "marks": []
+          "marks": [
+            [
+              0.1978,
+              0.2462,
+              0.0143,
+              0.0169
+            ],
+            [
+              0.2269,
+              0.2464,
+              0.0647,
+              0.0168
+            ],
+            [
+              0.562,
+              0.2638,
+              0.3173,
+              0.0168
+            ]
+          ]
         }
       ],
       "source": {
@@ -385,7 +513,26 @@
           "section": "Factor de riesgo y salud comunitaria · factor de riesgo y salud comunitaria",
           "page": 22,
           "printed": 21,
-          "marks": []
+          "marks": [
+            [
+              0.168,
+              0.5304,
+              0.0075,
+              0.0154
+            ],
+            [
+              0.1755,
+              0.5316,
+              0.0045,
+              0.0141
+            ],
+            [
+              0.3648,
+              0.743,
+              0.2538,
+              0.0168
+            ]
+          ]
         }
       ],
       "source": {

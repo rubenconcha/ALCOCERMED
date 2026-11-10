@@ -19,7 +19,7 @@
       "justificacion": "La capacidad totipotente abarca los tejidos del organismo y también los extraembrionarios.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "740",
-      "pagina_impresa": "",
+      "pagina_impresa": "740",
       "dificultad": "medio",
       "lecturas_comentario": [
         {
@@ -27,8 +27,15 @@
           "label": "Calvo",
           "section": "Las células madre y sus aplicaciones terapéuticas · Potencia",
           "page": 740,
-          "printed": null,
-          "marks": []
+          "printed": 740,
+          "marks": [
+            [
+              0.0271,
+              0.2561,
+              0.2029,
+              0.0197
+            ]
+          ]
         }
       ],
       "source": {
@@ -42,6 +49,12 @@
         "pdfPages": [
           740
         ]
+      },
+      "comentarios_opciones": {
+        "A": "Una célula pluripotente origina derivados de las tres capas embrionarias. El texto distingue ese potencial de la capacidad de formar placenta.",
+        "B": "Las células iPS resultan de reprogramar células somáticas ya diferenciadas para recuperar la pluripotencia.",
+        "C": "El libro incluye los destinos óseo, cartilaginoso y adiposo entre las posibilidades de las células madre mesenquimales.",
+        "D": "La capacidad totipotente abarca los tejidos del organismo y también los extraembrionarios."
       },
       "opcion_a": "Pluripotencia",
       "opcion_b": "Células pluripotentes inducidas (iPS)",
@@ -58,7 +71,7 @@
       "justificacion": "Una célula pluripotente origina derivados de las tres capas embrionarias. El texto distingue ese potencial de la capacidad de formar placenta.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "740",
-      "pagina_impresa": "",
+      "pagina_impresa": "740",
       "dificultad": "medio",
       "lecturas_comentario": [
         {
@@ -66,8 +79,15 @@
           "label": "Calvo",
           "section": "Las células madre y sus aplicaciones terapéuticas · Potencia",
           "page": 740,
-          "printed": null,
-          "marks": []
+          "printed": 740,
+          "marks": [
+            [
+              0.0082,
+              0.3031,
+              0.3048,
+              0.0197
+            ]
+          ]
         }
       ],
       "source": {
@@ -81,6 +101,12 @@
         "pdfPages": [
           740
         ]
+      },
+      "comentarios_opciones": {
+        "A": "El libro incluye los destinos óseo, cartilaginoso y adiposo entre las posibilidades de las células madre mesenquimales.",
+        "B": "Las células iPS resultan de reprogramar células somáticas ya diferenciadas para recuperar la pluripotencia.",
+        "C": "La capacidad totipotente abarca los tejidos del organismo y también los extraembrionarios.",
+        "D": "Una célula pluripotente origina derivados de las tres capas embrionarias. El texto distingue ese potencial de la capacidad de formar placenta."
       },
       "opcion_a": "Células madre mesenquimales",
       "opcion_b": "Células pluripotentes inducidas (iPS)",
@@ -97,7 +123,7 @@
       "justificacion": "Las células iPS resultan de reprogramar células somáticas ya diferenciadas para recuperar la pluripotencia.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "745",
-      "pagina_impresa": "",
+      "pagina_impresa": "745",
       "dificultad": "medio",
       "lecturas_comentario": [
         {
@@ -105,8 +131,15 @@
           "label": "Calvo",
           "section": "Las células madre y sus aplicaciones terapéuticas · Células iPS",
           "page": 745,
-          "printed": null,
-          "marks": []
+          "printed": 745,
+          "marks": [
+            [
+              0.1382,
+              0.1,
+              0.3391,
+              0.0197
+            ]
+          ]
         }
       ],
       "source": {
@@ -120,6 +153,12 @@
         "pdfPages": [
           745
         ]
+      },
+      "comentarios_opciones": {
+        "A": "Una célula pluripotente origina derivados de las tres capas embrionarias. El texto distingue ese potencial de la capacidad de formar placenta.",
+        "B": "La capacidad totipotente abarca los tejidos del organismo y también los extraembrionarios.",
+        "C": "Las células iPS resultan de reprogramar células somáticas ya diferenciadas para recuperar la pluripotencia.",
+        "D": "El libro incluye los destinos óseo, cartilaginoso y adiposo entre las posibilidades de las células madre mesenquimales."
       },
       "opcion_a": "Pluripotencia",
       "opcion_b": "Totipotencia",
@@ -136,7 +175,7 @@
       "justificacion": "El libro incluye los destinos óseo, cartilaginoso y adiposo entre las posibilidades de las células madre mesenquimales.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "746",
-      "pagina_impresa": "",
+      "pagina_impresa": "746",
       "dificultad": "medio",
       "lecturas_comentario": [
         {
@@ -144,8 +183,15 @@
           "label": "Calvo",
           "section": "Las células madre y sus aplicaciones terapéuticas · Células mesenquimales",
           "page": 746,
-          "printed": null,
-          "marks": []
+          "printed": 746,
+          "marks": [
+            [
+              0.0843,
+              0.2015,
+              0.2618,
+              0.0197
+            ]
+          ]
         }
       ],
       "source": {
@@ -159,6 +205,12 @@
         "pdfPages": [
           746
         ]
+      },
+      "comentarios_opciones": {
+        "A": "El libro incluye los destinos óseo, cartilaginoso y adiposo entre las posibilidades de las células madre mesenquimales.",
+        "B": "Una célula pluripotente origina derivados de las tres capas embrionarias. El texto distingue ese potencial de la capacidad de formar placenta.",
+        "C": "Las células iPS resultan de reprogramar células somáticas ya diferenciadas para recuperar la pluripotencia.",
+        "D": "La capacidad totipotente abarca los tejidos del organismo y también los extraembrionarios."
       },
       "opcion_a": "Células madre mesenquimales",
       "opcion_b": "Pluripotencia",
@@ -175,7 +227,7 @@
       "justificacion": "1. Correcta. Una mantiene la población original y la otra permite generar células especializadas.\n2. Incorrecta. Se obtienen de la masa celular interna.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "739, 740",
-      "pagina_impresa": "",
+      "pagina_impresa": "739, 740",
       "dificultad": "dificil",
       "lecturas_comentario": [
         {
@@ -183,16 +235,42 @@
           "label": "Calvo",
           "section": "Las células madre y sus aplicaciones terapéuticas · Definición / Origen embrionario",
           "page": 739,
-          "printed": null,
-          "marks": []
+          "printed": 739,
+          "marks": [
+            [
+              0.8135,
+              0.7081,
+              0.1204,
+              0.0197
+            ],
+            [
+              0.0082,
+              0.7316,
+              0.2477,
+              0.0197
+            ]
+          ]
         },
         {
           "slug": "biologia-celular",
           "label": "Calvo",
           "section": "Las células madre y sus aplicaciones terapéuticas · Definición / Origen embrionario",
           "page": 740,
-          "printed": null,
-          "marks": []
+          "printed": 740,
+          "marks": [
+            [
+              0.4954,
+              0.9076,
+              0.0328,
+              0.0197
+            ],
+            [
+              0.0271,
+              0.9346,
+              0.0047,
+              0.0197
+            ]
+          ]
         }
       ],
       "source": {
@@ -243,7 +321,7 @@
       "justificacion": "1. Incorrecta. La pluripotencia abarca células de ectodermo, mesodermo y endodermo.\n2. Correcta. Ese riesgo es una limitación del empleo de células sin diferenciar.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "740, 744",
-      "pagina_impresa": "",
+      "pagina_impresa": "740, 744",
       "dificultad": "dificil",
       "lecturas_comentario": [
         {
@@ -251,16 +329,30 @@
           "label": "Calvo",
           "section": "Las células madre y sus aplicaciones terapéuticas · Potencia / Riesgo tumoral",
           "page": 740,
-          "printed": null,
-          "marks": []
+          "printed": 740,
+          "marks": [
+            [
+              0.0082,
+              0.3031,
+              0.3048,
+              0.0197
+            ]
+          ]
         },
         {
           "slug": "biologia-celular",
           "label": "Calvo",
           "section": "Las células madre y sus aplicaciones terapéuticas · Potencia / Riesgo tumoral",
           "page": 744,
-          "printed": null,
-          "marks": []
+          "printed": 744,
+          "marks": [
+            [
+              0.2591,
+              0.4914,
+              0.1785,
+              0.0197
+            ]
+          ]
         }
       ],
       "source": {
@@ -311,7 +403,7 @@
       "justificacion": "1. Correcta. El material nuclear y las mitocondrias tienen orígenes diferentes en ese procedimiento.\n2. Correcta. Pueden generar células relevantes para modelar el trastorno en el laboratorio.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "744, 745",
-      "pagina_impresa": "",
+      "pagina_impresa": "744, 745",
       "dificultad": "dificil",
       "lecturas_comentario": [
         {
@@ -319,16 +411,30 @@
           "label": "Calvo",
           "section": "Las células madre y sus aplicaciones terapéuticas · Transferencia nuclear / Modelos de enfermedad",
           "page": 744,
-          "printed": null,
-          "marks": []
+          "printed": 744,
+          "marks": [
+            [
+              0.2602,
+              0.7573,
+              0.2192,
+              0.0197
+            ]
+          ]
         },
         {
           "slug": "biologia-celular",
           "label": "Calvo",
           "section": "Las células madre y sus aplicaciones terapéuticas · Transferencia nuclear / Modelos de enfermedad",
           "page": 745,
-          "printed": null,
-          "marks": []
+          "printed": 745,
+          "marks": [
+            [
+              0.6199,
+              0.178,
+              0.2986,
+              0.0197
+            ]
+          ]
         }
       ],
       "source": {
@@ -379,7 +485,7 @@
       "justificacion": "1. Incorrecta. También pueden actuar mediante señales paracrinas y efectos inmunomoduladores.\n2. Incorrecta. Es alogénico. Autólogo se reserva para material del propio paciente.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "746, 752",
-      "pagina_impresa": "",
+      "pagina_impresa": "746, 752",
       "dificultad": "dificil",
       "lecturas_comentario": [
         {
@@ -387,16 +493,30 @@
           "label": "Calvo",
           "section": "Las células madre y sus aplicaciones terapéuticas · Células mesenquimales / Soportes biológicos",
           "page": 746,
-          "printed": null,
-          "marks": []
+          "printed": 746,
+          "marks": [
+            [
+              0.7255,
+              0.225,
+              0.2464,
+              0.0197
+            ]
+          ]
         },
         {
           "slug": "biologia-celular",
           "label": "Calvo",
           "section": "Las células madre y sus aplicaciones terapéuticas · Células mesenquimales / Soportes biológicos",
           "page": 752,
-          "printed": null,
-          "marks": []
+          "printed": 752,
+          "marks": [
+            [
+              0.0611,
+              0.0765,
+              0.2719,
+              0.0197
+            ]
+          ]
         }
       ],
       "source": {

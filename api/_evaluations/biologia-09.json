@@ -14,12 +14,12 @@
       "materia": "BIOLOGIA CELULAR",
       "tema": "sintesis y modificacion de proteinas",
       "numero_pregunta": 1,
-      "pregunta": "Una quinasa actúa sobre una proteína; se registra el grupo que esta incorpora, antes de que actúe la fosfatasa.\n¿Qué opción corresponde al caso?",
+      "pregunta": "Una quinasa añade un grupo fosfato a una proteína. ¿Cómo se llama esa modificación de la proteína?",
       "respuesta_correcta": "C",
       "justificacion": "Una quinasa incorpora un grupo fosfato a la proteína. Una fosfatasa puede retirarlo.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "407",
-      "pagina_impresa": "",
+      "pagina_impresa": "407",
       "dificultad": "medio",
       "lecturas_comentario": [
         {
@@ -27,8 +27,21 @@
           "label": "Calvo",
           "section": "Síntesis y modificación de proteínas · Modificaciones postraduccionales",
           "page": 407,
-          "printed": null,
-          "marks": []
+          "printed": 407,
+          "marks": [
+            [
+              0.0082,
+              0.3911,
+              0.3774,
+              0.0282
+            ],
+            [
+              0.0082,
+              0.4221,
+              0.3619,
+              0.0282
+            ]
+          ]
         }
       ],
       "source": {
@@ -43,6 +56,12 @@
           407
         ]
       },
+      "comentarios_opciones": {
+        "A": "Al recibir un grupo lipídico, una proteína puede quedar asociada a la membrana.",
+        "B": "En la acetilación, el grupo añadido a la proteína es un acetilo.",
+        "C": "Una quinasa incorpora un grupo fosfato a la proteína. Una fosfatasa puede retirarlo.",
+        "D": "Una cadena de ubiquitinas puede dirigir la proteína marcada hacia el proteasoma."
+      },
       "opcion_a": "Acilación lipídica",
       "opcion_b": "Acetilación",
       "opcion_c": "Fosforilación",
@@ -53,12 +72,12 @@
       "materia": "BIOLOGIA CELULAR",
       "tema": "sintesis y modificacion de proteinas",
       "numero_pregunta": 2,
-      "pregunta": "Un experimento registra la incorporación de un acetilo y debe distinguirla de una adición de fosfato o de una marca de degradación.\n¿Qué opción corresponde al caso?",
+      "pregunta": "En un experimento se detecta la incorporación de un grupo acetilo a una proteína. ¿Qué modificación ocurrió?",
       "respuesta_correcta": "D",
       "justificacion": "En la acetilación, el grupo añadido a la proteína es un acetilo.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "408",
-      "pagina_impresa": "",
+      "pagina_impresa": "408",
       "dificultad": "medio",
       "lecturas_comentario": [
         {
@@ -66,8 +85,15 @@
           "label": "Calvo",
           "section": "Síntesis y modificación de proteínas · Modificaciones postraduccionales",
           "page": 408,
-          "printed": null,
-          "marks": []
+          "printed": 408,
+          "marks": [
+            [
+              0.2078,
+              0.424,
+              0.2418,
+              0.0172
+            ]
+          ]
         }
       ],
       "source": {
@@ -82,6 +108,12 @@
           408
         ]
       },
+      "comentarios_opciones": {
+        "A": "Una cadena de ubiquitinas puede dirigir la proteína marcada hacia el proteasoma.",
+        "B": "Una quinasa incorpora un grupo fosfato a la proteína. Una fosfatasa puede retirarlo.",
+        "C": "Al recibir un grupo lipídico, una proteína puede quedar asociada a la membrana.",
+        "D": "En la acetilación, el grupo añadido a la proteína es un acetilo."
+      },
       "opcion_a": "Poliubiquitinación",
       "opcion_b": "Fosforilación",
       "opcion_c": "Acilación lipídica",
@@ -92,12 +124,12 @@
       "materia": "BIOLOGIA CELULAR",
       "tema": "sintesis y modificacion de proteinas",
       "numero_pregunta": 3,
-      "pregunta": "Una proteína citosólica se asocia a membrana después de recibir un grupo lipídico. Se clasifica el cambio que aportó ese anclaje.\n¿Qué opción corresponde al caso?",
+      "pregunta": "Una proteína citosólica queda asociada a la membrana tras incorporar un grupo lipídico. ¿Qué modificación le permitió anclarse?",
       "respuesta_correcta": "D",
       "justificacion": "Al recibir un grupo lipídico, una proteína puede quedar asociada a la membrana.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "409",
-      "pagina_impresa": "",
+      "pagina_impresa": "409",
       "dificultad": "medio",
       "lecturas_comentario": [
         {
@@ -105,8 +137,21 @@
           "label": "Calvo",
           "section": "Síntesis y modificación de proteínas · Modificaciones postraduccionales",
           "page": 409,
-          "printed": null,
-          "marks": []
+          "printed": 409,
+          "marks": [
+            [
+              0.4954,
+              0.9076,
+              0.0328,
+              0.0197
+            ],
+            [
+              0.0271,
+              0.9346,
+              0.0047,
+              0.0197
+            ]
+          ]
         }
       ],
       "source": {
@@ -121,6 +166,12 @@
           409
         ]
       },
+      "comentarios_opciones": {
+        "A": "En la acetilación, el grupo añadido a la proteína es un acetilo.",
+        "B": "Una quinasa incorpora un grupo fosfato a la proteína. Una fosfatasa puede retirarlo.",
+        "C": "Una cadena de ubiquitinas puede dirigir la proteína marcada hacia el proteasoma.",
+        "D": "Al recibir un grupo lipídico, una proteína puede quedar asociada a la membrana."
+      },
       "opcion_a": "Acetilación",
       "opcion_b": "Fosforilación",
       "opcion_c": "Poliubiquitinación",
@@ -131,12 +182,12 @@
       "materia": "BIOLOGIA CELULAR",
       "tema": "sintesis y modificacion de proteinas",
       "numero_pregunta": 4,
-      "pregunta": "Se sigue una proteína destinada al proteasoma y se detecta una cadena de ubiquitinas añadida a ella.\n¿Qué opción corresponde al caso?",
+      "pregunta": "Se detecta una cadena de ubiquitinas unida a una proteína que será degradada en el proteasoma. ¿Qué modificación se observó?",
       "respuesta_correcta": "D",
       "justificacion": "Una cadena de ubiquitinas puede dirigir la proteína marcada hacia el proteasoma.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "414",
-      "pagina_impresa": "",
+      "pagina_impresa": "414",
       "dificultad": "medio",
       "lecturas_comentario": [
         {
@@ -144,8 +195,15 @@
           "label": "Calvo",
           "section": "Síntesis y modificación de proteínas · Degradación proteica",
           "page": 414,
-          "printed": null,
-          "marks": []
+          "printed": 414,
+          "marks": [
+            [
+              0.6212,
+              0.4331,
+              0.2516,
+              0.0172
+            ]
+          ]
         }
       ],
       "source": {
@@ -159,6 +217,12 @@
         "pdfPages": [
           414
         ]
+      },
+      "comentarios_opciones": {
+        "A": "Al recibir un grupo lipídico, una proteína puede quedar asociada a la membrana.",
+        "B": "Una quinasa incorpora un grupo fosfato a la proteína. Una fosfatasa puede retirarlo.",
+        "C": "En la acetilación, el grupo añadido a la proteína es un acetilo.",
+        "D": "Una cadena de ubiquitinas puede dirigir la proteína marcada hacia el proteasoma."
       },
       "opcion_a": "Acilación lipídica",
       "opcion_b": "Fosforilación",
@@ -175,7 +239,7 @@
       "justificacion": "1. Incorrecta. El sitio A recibe el aminoacil-ARNt entrante. La salida ocurre por el sitio E.\n2. Correcta. Se incorpora en P antes de que el siguiente aminoacil-ARNt llegue a A.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "395",
-      "pagina_impresa": "",
+      "pagina_impresa": "395",
       "dificultad": "dificil",
       "lecturas_comentario": [
         {
@@ -183,8 +247,27 @@
           "label": "Calvo",
           "section": "Síntesis y modificación de proteínas · Sitios ribosómicos / Iniciación",
           "page": 395,
-          "printed": null,
-          "marks": []
+          "printed": 395,
+          "marks": [
+            [
+              0.0271,
+              0.1311,
+              0.362,
+              0.0197
+            ],
+            [
+              0.7964,
+              0.4849,
+              0.1439,
+              0.0197
+            ],
+            [
+              0.0082,
+              0.5084,
+              0.1466,
+              0.0197
+            ]
+          ]
         }
       ],
       "source": {
@@ -234,7 +317,7 @@
       "justificacion": "1. Correcta. El centro peptidil-transferasa del ribosoma cataliza la unión de aminoácidos.\n2. Incorrecta. Es un factor de liberación. Favorece que la proteína recién sintetizada se separe del ARNt.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "397, 399",
-      "pagina_impresa": "",
+      "pagina_impresa": "397, 399",
       "dificultad": "dificil",
       "lecturas_comentario": [
         {
@@ -242,16 +325,42 @@
           "label": "Calvo",
           "section": "Síntesis y modificación de proteínas · Elongación / Terminación",
           "page": 397,
-          "printed": null,
-          "marks": []
+          "printed": 397,
+          "marks": [
+            [
+              0.8866,
+              0.1781,
+              0.0917,
+              0.0197
+            ],
+            [
+              0.0082,
+              0.2015,
+              0.1124,
+              0.0197
+            ]
+          ]
         },
         {
           "slug": "biologia-celular",
           "label": "Calvo",
           "section": "Síntesis y modificación de proteínas · Elongación / Terminación",
           "page": 399,
-          "printed": null,
-          "marks": []
+          "printed": 399,
+          "marks": [
+            [
+              0.4954,
+              0.9076,
+              0.0328,
+              0.0197
+            ],
+            [
+              0.0271,
+              0.9346,
+              0.0047,
+              0.0197
+            ]
+          ]
         }
       ],
       "source": {
@@ -302,7 +411,7 @@
       "justificacion": "1. Correcta. El plegamiento reduce el contacto de esas regiones con el agua.\n2. Correcta. El complejo TRiC/CCT aporta un entorno que favorece su plegamiento.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "402, 404",
-      "pagina_impresa": "",
+      "pagina_impresa": "402, 404",
       "dificultad": "dificil",
       "lecturas_comentario": [
         {
@@ -310,16 +419,36 @@
           "label": "Calvo",
           "section": "Síntesis y modificación de proteínas · Plegamiento",
           "page": 402,
-          "printed": null,
-          "marks": []
+          "printed": 402,
+          "marks": [
+            [
+              0.6765,
+              0.7922,
+              0.2643,
+              0.0197
+            ]
+          ]
         },
         {
           "slug": "biologia-celular",
           "label": "Calvo",
           "section": "Síntesis y modificación de proteínas · Plegamiento",
           "page": 404,
-          "printed": null,
-          "marks": []
+          "printed": 404,
+          "marks": [
+            [
+              0.4954,
+              0.9076,
+              0.0328,
+              0.0197
+            ],
+            [
+              0.0271,
+              0.9346,
+              0.0047,
+              0.0197
+            ]
+          ]
         }
       ],
       "source": {
@@ -370,7 +499,7 @@
       "justificacion": "1. Incorrecta. Muchas proteínas sin señal de clasificación permanecen en el citosol.\n2. Incorrecta. Los cortes de maduración convierten un precursor en un producto funcional.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "405, 410",
-      "pagina_impresa": "",
+      "pagina_impresa": "405, 410",
       "dificultad": "dificil",
       "lecturas_comentario": [
         {
@@ -378,16 +507,36 @@
           "label": "Calvo",
           "section": "Síntesis y modificación de proteínas · Destino proteico / Procesamiento proteico",
           "page": 405,
-          "printed": null,
-          "marks": []
+          "printed": 405,
+          "marks": [
+            [
+              0.3615,
+              0.5685,
+              0.2317,
+              0.0197
+            ]
+          ]
         },
         {
           "slug": "biologia-celular",
           "label": "Calvo",
           "section": "Síntesis y modificación de proteínas · Destino proteico / Procesamiento proteico",
           "page": 410,
-          "printed": null,
-          "marks": []
+          "printed": 410,
+          "marks": [
+            [
+              0.8363,
+              0.3679,
+              0.1266,
+              0.0197
+            ],
+            [
+              0.0082,
+              0.3914,
+              0.1659,
+              0.0197
+            ]
+          ]
         }
       ],
       "source": {

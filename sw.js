@@ -1,8 +1,8 @@
-const CACHE_NAME = 'alcocermed-main-v186-evaluaciones';
+const CACHE_NAME = 'alcocermed-main-v187-revision-temas';
 const APP_SHELL = [
-    './student-results.js?v=6',
+    './student-results.js?v=7',
     './student-results.css?v=1',
-    './question-review.js?v=12',
+    './question-review.js?v=13',
     './suficiencia-core.js?v=12',
     './suficiencia.js?v=17',
     './suficiencia.css?v=9',
@@ -45,12 +45,12 @@ const APP_SHELL = [
     './flashcard-approved.css?v=6',
     './assets/fonts/outfit-900.woff2',
     './flashcard-workspace.js?v=20261109-foco',
-    './script.js?v=20261109-apertura',
+    './script.js?v=20261110-temas',
     './campus-login.js?v=2',
     './campus-catalogs.js?v=2',
-    './campus-exam-engine.js?v=1',
-    './topic-evaluations.js?v=20261110-revision',
-    './topic-evaluations.css?v=5',
+    './campus-exam-engine.js?v=2',
+    './topic-evaluations.js?v=20261110-revision2',
+    './topic-evaluations.css?v=6',
     './recuperar.html',
     './password-recovery.js?v=1',
     './password-recovery-redirect.js?v=1',

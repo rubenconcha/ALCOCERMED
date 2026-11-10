@@ -28,7 +28,20 @@
           "section": "Muestreo · muestreo",
           "page": 98,
           "printed": 23,
-          "marks": []
+          "marks": [
+            [
+              0.5661,
+              0.7407,
+              0.3501,
+              0.0192
+            ],
+            [
+              0.1212,
+              0.7637,
+              0.0658,
+              0.0192
+            ]
+          ]
         }
       ],
       "source": {
@@ -44,6 +57,12 @@
         "pdfPages": [
           98
         ]
+      },
+      "comentarios_opciones": {
+        "A": "El muestreo aleatorio simple realiza un sorteo entre unidades individuales de la población.",
+        "B": "Tras elegir el punto de inicio al azar, el muestreo sistemático avanza con un intervalo fijo.",
+        "C": "En el muestreo por conglomerados, la selección inicial se realiza entre grupos, como las escuelas.",
+        "D": "En el muestreo estratificado se toman unidades de cada estrato para que todos los grupos estén representados."
       },
       "opcion_a": "Muestreo aleatorio simple",
       "opcion_b": "Muestreo sistemático",
@@ -69,7 +88,14 @@
           "section": "Muestreo · muestreo",
           "page": 99,
           "printed": 24,
-          "marks": []
+          "marks": [
+            [
+              0.4509,
+              0.2673,
+              0.2923,
+              0.0175
+            ]
+          ]
         }
       ],
       "source": {
@@ -85,6 +111,12 @@
         "pdfPages": [
           99
         ]
+      },
+      "comentarios_opciones": {
+        "A": "En el muestreo por conglomerados, la selección inicial se realiza entre grupos, como las escuelas.",
+        "B": "Tras elegir el punto de inicio al azar, el muestreo sistemático avanza con un intervalo fijo.",
+        "C": "El muestreo aleatorio simple realiza un sorteo entre unidades individuales de la población.",
+        "D": "En el muestreo estratificado se toman unidades de cada estrato para que todos los grupos estén representados."
       },
       "opcion_a": "Muestreo por conglomerados",
       "opcion_b": "Muestreo sistemático",
@@ -110,7 +142,14 @@
           "section": "Muestreo · muestreo",
           "page": 99,
           "printed": 24,
-          "marks": []
+          "marks": [
+            [
+              0.209,
+              0.8299,
+              0.4906,
+              0.0192
+            ]
+          ]
         }
       ],
       "source": {
@@ -126,6 +165,12 @@
         "pdfPages": [
           99
         ]
+      },
+      "comentarios_opciones": {
+        "A": "El muestreo aleatorio simple realiza un sorteo entre unidades individuales de la población.",
+        "B": "En el muestreo estratificado se toman unidades de cada estrato para que todos los grupos estén representados.",
+        "C": "Tras elegir el punto de inicio al azar, el muestreo sistemático avanza con un intervalo fijo.",
+        "D": "En el muestreo por conglomerados, la selección inicial se realiza entre grupos, como las escuelas."
       },
       "opcion_a": "Muestreo aleatorio simple",
       "opcion_b": "Muestreo estratificado",
@@ -151,7 +196,20 @@
           "section": "Muestreo · muestreo",
           "page": 101,
           "printed": 26,
-          "marks": []
+          "marks": [
+            [
+              0.8363,
+              0.3151,
+              0.0496,
+              0.0192
+            ],
+            [
+              0.0909,
+              0.3381,
+              0.3153,
+              0.0192
+            ]
+          ]
         }
       ],
       "source": {
@@ -167,6 +225,12 @@
         "pdfPages": [
           101
         ]
+      },
+      "comentarios_opciones": {
+        "A": "Tras elegir el punto de inicio al azar, el muestreo sistemático avanza con un intervalo fijo.",
+        "B": "El muestreo aleatorio simple realiza un sorteo entre unidades individuales de la población.",
+        "C": "En el muestreo por conglomerados, la selección inicial se realiza entre grupos, como las escuelas.",
+        "D": "En el muestreo estratificado se toman unidades de cada estrato para que todos los grupos estén representados."
       },
       "opcion_a": "Muestreo sistemático",
       "opcion_b": "Muestreo aleatorio simple",
@@ -192,7 +256,32 @@
           "section": "Muestreo · muestreo",
           "page": 99,
           "printed": 24,
-          "marks": []
+          "marks": [
+            [
+              0.6101,
+              0.3102,
+              0.2146,
+              0.0175
+            ],
+            [
+              0.1515,
+              0.3317,
+              0.0251,
+              0.0175
+            ],
+            [
+              0.6455,
+              0.3317,
+              0.1792,
+              0.0175
+            ],
+            [
+              0.1515,
+              0.3532,
+              0.1183,
+              0.0175
+            ]
+          ]
         }
       ],
       "source": {
@@ -253,7 +342,14 @@
           "section": "Muestreo · muestreo",
           "page": 99,
           "printed": 24,
-          "marks": []
+          "marks": [
+            [
+              0.4036,
+              0.3746,
+              0.1692,
+              0.0175
+            ]
+          ]
         },
         {
           "slug": "educacion-salud",
@@ -261,7 +357,20 @@
           "section": "Muestreo · muestreo",
           "page": 100,
           "printed": 25,
-          "marks": []
+          "marks": [
+            [
+              0.5693,
+              0.1925,
+              0.1458,
+              0.0192
+            ],
+            [
+              0.1212,
+              0.2329,
+              0.1159,
+              0.0191
+            ]
+          ]
         }
       ],
       "source": {
@@ -324,7 +433,20 @@
           "section": "Muestreo · muestreo",
           "page": 102,
           "printed": 27,
-          "marks": []
+          "marks": [
+            [
+              0.6361,
+              0.6295,
+              0.2801,
+              0.0192
+            ],
+            [
+              0.1212,
+              0.6525,
+              0.0128,
+              0.0192
+            ]
+          ]
         },
         {
           "slug": "educacion-salud",
@@ -332,7 +454,20 @@
           "section": "Muestreo · muestreo",
           "page": 103,
           "printed": 28,
-          "marks": []
+          "marks": [
+            [
+              0.5079,
+              0.965,
+              0.0534,
+              0.0139
+            ],
+            [
+              0.0701,
+              0.9655,
+              0.0208,
+              0.014
+            ]
+          ]
         }
       ],
       "source": {
@@ -395,7 +530,20 @@
           "section": "Muestreo · muestreo",
           "page": 104,
           "printed": 29,
-          "marks": []
+          "marks": [
+            [
+              0.4883,
+              0.1925,
+              0.3897,
+              0.0192
+            ],
+            [
+              0.1212,
+              0.6825,
+              0.2809,
+              0.0192
+            ]
+          ]
         }
       ],
       "source": {

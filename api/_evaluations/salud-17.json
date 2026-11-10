@@ -28,7 +28,20 @@
           "section": "Frecuencias y gráficos · frecuencias y graficos",
           "page": 120,
           "printed": 45,
-          "marks": []
+          "marks": [
+            [
+              0.9092,
+              0.9661,
+              0.0208,
+              0.014
+            ],
+            [
+              0.1682,
+              0.173,
+              0.2785,
+              0.0191
+            ]
+          ]
         }
       ],
       "source": {
@@ -44,6 +57,12 @@
         "pdfPages": [
           120
         ]
+      },
+      "comentarios_opciones": {
+        "A": "La frecuencia relativa divide el conteo de una categoría entre el total. Multiplicar el cociente por 100 da el porcentaje.",
+        "B": "La frecuencia absoluta acumulada suma los conteos desde el inicio hasta el intervalo elegido.",
+        "C": "La frecuencia relativa acumulada suma proporciones o porcentajes hasta la categoría indicada.",
+        "D": "La frecuencia absoluta es el número de observaciones que pertenecen a una categoría o intervalo."
       },
       "opcion_a": "Frecuencia relativa",
       "opcion_b": "Frecuencia absoluta acumulada",
@@ -69,7 +88,20 @@
           "section": "Frecuencias y gráficos · frecuencias y graficos",
           "page": 120,
           "printed": 45,
-          "marks": []
+          "marks": [
+            [
+              0.8264,
+              0.6776,
+              0.0827,
+              0.021
+            ],
+            [
+              0.1212,
+              0.7052,
+              0.2457,
+              0.021
+            ]
+          ]
         }
       ],
       "source": {
@@ -85,6 +117,12 @@
         "pdfPages": [
           120
         ]
+      },
+      "comentarios_opciones": {
+        "A": "La frecuencia relativa acumulada suma proporciones o porcentajes hasta la categoría indicada.",
+        "B": "La frecuencia absoluta es el número de observaciones que pertenecen a una categoría o intervalo.",
+        "C": "La frecuencia relativa divide el conteo de una categoría entre el total. Multiplicar el cociente por 100 da el porcentaje.",
+        "D": "La frecuencia absoluta acumulada suma los conteos desde el inicio hasta el intervalo elegido."
       },
       "opcion_a": "Frecuencia relativa acumulada",
       "opcion_b": "Frecuencia absoluta",
@@ -110,7 +148,20 @@
           "section": "Frecuencias y gráficos · frecuencias y graficos",
           "page": 121,
           "printed": 46,
-          "marks": []
+          "marks": [
+            [
+              0.4237,
+              0.5111,
+              0.1284,
+              0.0191
+            ],
+            [
+              0.0909,
+              0.5515,
+              0.3886,
+              0.0192
+            ]
+          ]
         }
       ],
       "source": {
@@ -126,6 +177,12 @@
         "pdfPages": [
           121
         ]
+      },
+      "comentarios_opciones": {
+        "A": "La frecuencia relativa divide el conteo de una categoría entre el total. Multiplicar el cociente por 100 da el porcentaje.",
+        "B": "La frecuencia absoluta acumulada suma los conteos desde el inicio hasta el intervalo elegido.",
+        "C": "La frecuencia relativa acumulada suma proporciones o porcentajes hasta la categoría indicada.",
+        "D": "La frecuencia absoluta es el número de observaciones que pertenecen a una categoría o intervalo."
       },
       "opcion_a": "Frecuencia relativa",
       "opcion_b": "Frecuencia absoluta acumulada",
@@ -151,7 +208,20 @@
           "section": "Frecuencias y gráficos · frecuencias y graficos",
           "page": 122,
           "printed": 47,
-          "marks": []
+          "marks": [
+            [
+              0.4439,
+              0.1063,
+              0.1284,
+              0.0191
+            ],
+            [
+              0.1212,
+              0.1466,
+              0.3772,
+              0.0192
+            ]
+          ]
         }
       ],
       "source": {
@@ -167,6 +237,12 @@
         "pdfPages": [
           122
         ]
+      },
+      "comentarios_opciones": {
+        "A": "La frecuencia absoluta es el número de observaciones que pertenecen a una categoría o intervalo.",
+        "B": "La frecuencia relativa acumulada suma proporciones o porcentajes hasta la categoría indicada.",
+        "C": "La frecuencia relativa divide el conteo de una categoría entre el total. Multiplicar el cociente por 100 da el porcentaje.",
+        "D": "La frecuencia absoluta acumulada suma los conteos desde el inicio hasta el intervalo elegido."
       },
       "opcion_a": "Frecuencia absoluta",
       "opcion_b": "Frecuencia relativa acumulada",
@@ -192,7 +268,14 @@
           "section": "Frecuencias y gráficos · frecuencias y graficos",
           "page": 113,
           "printed": 38,
-          "marks": []
+          "marks": [
+            [
+              0.1989,
+              0.3699,
+              0.3198,
+              0.0192
+            ]
+          ]
         },
         {
           "slug": "educacion-salud",
@@ -200,7 +283,20 @@
           "section": "Frecuencias y gráficos · frecuencias y graficos",
           "page": 114,
           "printed": 39,
-          "marks": []
+          "marks": [
+            [
+              0.6794,
+              0.9659,
+              0.2071,
+              0.0139
+            ],
+            [
+              0.9092,
+              0.9661,
+              0.0208,
+              0.014
+            ]
+          ]
         }
       ],
       "source": {
@@ -263,7 +359,20 @@
           "section": "Frecuencias y gráficos · frecuencias y graficos",
           "page": 121,
           "printed": 46,
-          "marks": []
+          "marks": [
+            [
+              0.571,
+              0.1551,
+              0.1809,
+              0.0157
+            ],
+            [
+              0.2396,
+              0.1926,
+              0.0104,
+              0.014
+            ]
+          ]
         },
         {
           "slug": "educacion-salud",
@@ -271,7 +380,14 @@
           "section": "Frecuencias y gráficos · frecuencias y graficos",
           "page": 123,
           "printed": 48,
-          "marks": []
+          "marks": [
+            [
+              0.1333,
+              0.3032,
+              0.465,
+              0.0192
+            ]
+          ]
         }
       ],
       "source": {
@@ -334,7 +450,20 @@
           "section": "Frecuencias y gráficos · frecuencias y graficos",
           "page": 129,
           "printed": 54,
-          "marks": []
+          "marks": [
+            [
+              0.7225,
+              0.7937,
+              0.1634,
+              0.0192
+            ],
+            [
+              0.0909,
+              0.8167,
+              0.0901,
+              0.0192
+            ]
+          ]
         },
         {
           "slug": "educacion-salud",
@@ -342,7 +471,20 @@
           "section": "Frecuencias y gráficos · frecuencias y graficos",
           "page": 131,
           "printed": 56,
-          "marks": []
+          "marks": [
+            [
+              0.8108,
+              0.1291,
+              0.0751,
+              0.0192
+            ],
+            [
+              0.0909,
+              0.1521,
+              0.1545,
+              0.0192
+            ]
+          ]
         }
       ],
       "source": {
@@ -405,7 +547,14 @@
           "section": "Frecuencias y gráficos · frecuencias y graficos",
           "page": 141,
           "printed": 66,
-          "marks": []
+          "marks": [
+            [
+              0.4249,
+              0.3121,
+              0.3144,
+              0.0192
+            ]
+          ]
         },
         {
           "slug": "educacion-salud",
@@ -413,7 +562,20 @@
           "section": "Frecuencias y gráficos · frecuencias y graficos",
           "page": 142,
           "printed": 67,
-          "marks": []
+          "marks": [
+            [
+              0.659,
+              0.1697,
+              0.2572,
+              0.0192
+            ],
+            [
+              0.1212,
+              0.1927,
+              0.1029,
+              0.0192
+            ]
+          ]
         }
       ],
       "source": {

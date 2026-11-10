@@ -28,7 +28,20 @@
           "section": "Atención primaria de salud · atencion primaria de salud",
           "page": 17,
           "printed": 16,
-          "marks": []
+          "marks": [
+            [
+              0.1683,
+              0.3126,
+              0.0121,
+              0.0141
+            ],
+            [
+              0.1978,
+              0.3106,
+              0.1137,
+              0.0168
+            ]
+          ]
         }
       ],
       "source": {
@@ -44,6 +57,12 @@
         "pdfPages": [
           17
         ]
+      },
+      "comentarios_opciones": {
+        "A": "La integralidad reúne promoción, prevención, tratamiento y rehabilitación en la atención.",
+        "B": "La coordinación conecta acciones de equipos y niveles para dar continuidad a la atención.",
+        "C": "La longitudinalidad se reconoce por el seguimiento sostenido por el mismo profesional o equipo.",
+        "D": "La accesibilidad busca reducir obstáculos al ingreso, como las barreras geográficas, económicas y culturales."
       },
       "opcion_a": "Integralidad",
       "opcion_b": "Coordinación",
@@ -69,7 +88,20 @@
           "section": "Atención primaria de salud · atencion primaria de salud",
           "page": 17,
           "printed": 16,
-          "marks": []
+          "marks": [
+            [
+              0.8784,
+              0.3368,
+              0.0333,
+              0.0168
+            ],
+            [
+              0.1978,
+              0.3629,
+              0.2034,
+              0.0168
+            ]
+          ]
         }
       ],
       "source": {
@@ -85,6 +117,12 @@
         "pdfPages": [
           17
         ]
+      },
+      "comentarios_opciones": {
+        "A": "La coordinación conecta acciones de equipos y niveles para dar continuidad a la atención.",
+        "B": "La accesibilidad busca reducir obstáculos al ingreso, como las barreras geográficas, económicas y culturales.",
+        "C": "La integralidad reúne promoción, prevención, tratamiento y rehabilitación en la atención.",
+        "D": "La longitudinalidad se reconoce por el seguimiento sostenido por el mismo profesional o equipo."
       },
       "opcion_a": "Coordinación",
       "opcion_b": "Accesibilidad",
@@ -110,7 +148,14 @@
           "section": "Atención primaria de salud · atencion primaria de salud",
           "page": 17,
           "printed": 16,
-          "marks": []
+          "marks": [
+            [
+              0.3875,
+              0.4674,
+              0.2124,
+              0.0168
+            ]
+          ]
         }
       ],
       "source": {
@@ -126,6 +171,12 @@
         "pdfPages": [
           17
         ]
+      },
+      "comentarios_opciones": {
+        "A": "La integralidad reúne promoción, prevención, tratamiento y rehabilitación en la atención.",
+        "B": "La coordinación conecta acciones de equipos y niveles para dar continuidad a la atención.",
+        "C": "La longitudinalidad se reconoce por el seguimiento sostenido por el mismo profesional o equipo.",
+        "D": "La accesibilidad busca reducir obstáculos al ingreso, como las barreras geográficas, económicas y culturales."
       },
       "opcion_a": "Integralidad",
       "opcion_b": "Coordinación",
@@ -151,7 +202,20 @@
           "section": "Atención primaria de salud · atencion primaria de salud",
           "page": 17,
           "printed": 16,
-          "marks": []
+          "marks": [
+            [
+              0.5245,
+              0.5197,
+              0.0365,
+              0.0168
+            ],
+            [
+              0.5656,
+              0.5197,
+              0.0855,
+              0.0168
+            ]
+          ]
         }
       ],
       "source": {
@@ -167,6 +231,12 @@
         "pdfPages": [
           17
         ]
+      },
+      "comentarios_opciones": {
+        "A": "La coordinación conecta acciones de equipos y niveles para dar continuidad a la atención.",
+        "B": "La integralidad reúne promoción, prevención, tratamiento y rehabilitación en la atención.",
+        "C": "La accesibilidad busca reducir obstáculos al ingreso, como las barreras geográficas, económicas y culturales.",
+        "D": "La longitudinalidad se reconoce por el seguimiento sostenido por el mismo profesional o equipo."
       },
       "opcion_a": "Coordinación",
       "opcion_b": "Integralidad",
@@ -192,7 +262,20 @@
           "section": "Atención primaria de salud · atencion primaria de salud",
           "page": 16,
           "printed": 15,
-          "marks": []
+          "marks": [
+            [
+              0.6024,
+              0.695,
+              0.2068,
+              0.0168
+            ],
+            [
+              0.7019,
+              0.7473,
+              0.2047,
+              0.0168
+            ]
+          ]
         }
       ],
       "source": {
@@ -253,7 +336,32 @@
           "section": "Atención primaria de salud · atencion primaria de salud",
           "page": 17,
           "printed": 16,
-          "marks": []
+          "marks": [
+            [
+              0.3306,
+              0.0772,
+              0.0484,
+              0.014
+            ],
+            [
+              0.1968,
+              0.9072,
+              0.6056,
+              0.0139
+            ],
+            [
+              0.2702,
+              0.2323,
+              0.2058,
+              0.0168
+            ],
+            [
+              0.1389,
+              0.2583,
+              0.0285,
+              0.0168
+            ]
+          ]
         }
       ],
       "source": {
@@ -314,7 +422,14 @@
           "section": "Atención primaria de salud · atencion primaria de salud",
           "page": 17,
           "printed": 16,
-          "marks": []
+          "marks": [
+            [
+              0.5356,
+              0.7703,
+              0.2115,
+              0.0168
+            ]
+          ]
         },
         {
           "slug": "educacion-salud",
@@ -322,7 +437,14 @@
           "section": "Atención primaria de salud · atencion primaria de salud",
           "page": 18,
           "printed": 17,
-          "marks": []
+          "marks": [
+            [
+              0.5828,
+              0.9072,
+              0.2751,
+              0.0139
+            ]
+          ]
         }
       ],
       "source": {
@@ -385,7 +507,20 @@
           "section": "Atención primaria de salud · atencion primaria de salud",
           "page": 18,
           "printed": 17,
-          "marks": []
+          "marks": [
+            [
+              0.1978,
+              0.1984,
+              0.4103,
+              0.0168
+            ],
+            [
+              0.5213,
+              0.3368,
+              0.191,
+              0.0168
+            ]
+          ]
         }
       ],
       "source": {

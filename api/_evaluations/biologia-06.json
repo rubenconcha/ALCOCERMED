@@ -19,7 +19,7 @@
       "justificacion": "La zónula adherente forma un cinturón de adhesión asociado a filamentos de actina.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "262",
-      "pagina_impresa": "",
+      "pagina_impresa": "262",
       "dificultad": "medio",
       "lecturas_comentario": [
         {
@@ -27,8 +27,15 @@
           "label": "Calvo",
           "section": "Especializaciones de la membrana plasmática e interacción de la célula con su entorno · Uniones adherentes",
           "page": 262,
-          "printed": null,
-          "marks": []
+          "printed": 262,
+          "marks": [
+            [
+              0.2601,
+              0.5813,
+              0.3468,
+              0.0197
+            ]
+          ]
         }
       ],
       "source": {
@@ -42,6 +49,12 @@
         "pdfPages": [
           262
         ]
+      },
+      "comentarios_opciones": {
+        "A": "La zónula adherente forma un cinturón de adhesión asociado a filamentos de actina.",
+        "B": "Las uniones comunicantes forman canales que permiten intercambiar iones y pequeñas moléculas.",
+        "C": "El desmosoma conecta las células en un contacto puntiforme unido a filamentos intermedios.",
+        "D": "La unión ocluyente limita la difusión a través del espacio entre células vecinas."
       },
       "opcion_a": "Zónula adherente",
       "opcion_b": "Unión comunicante (gap)",
@@ -58,7 +71,7 @@
       "justificacion": "El desmosoma conecta las células en un contacto puntiforme unido a filamentos intermedios.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "263",
-      "pagina_impresa": "",
+      "pagina_impresa": "263",
       "dificultad": "medio",
       "lecturas_comentario": [
         {
@@ -66,8 +79,21 @@
           "label": "Calvo",
           "section": "Especializaciones de la membrana plasmática e interacción de la célula con su entorno · Desmosomas",
           "page": 263,
-          "printed": null,
-          "marks": []
+          "printed": 263,
+          "marks": [
+            [
+              0.8644,
+              0.6083,
+              0.0639,
+              0.0197
+            ],
+            [
+              0.0082,
+              0.6318,
+              0.2067,
+              0.0197
+            ]
+          ]
         }
       ],
       "source": {
@@ -81,6 +107,12 @@
         "pdfPages": [
           263
         ]
+      },
+      "comentarios_opciones": {
+        "A": "La zónula adherente forma un cinturón de adhesión asociado a filamentos de actina.",
+        "B": "El desmosoma conecta las células en un contacto puntiforme unido a filamentos intermedios.",
+        "C": "Las uniones comunicantes forman canales que permiten intercambiar iones y pequeñas moléculas.",
+        "D": "La unión ocluyente limita la difusión a través del espacio entre células vecinas."
       },
       "opcion_a": "Zónula adherente",
       "opcion_b": "Desmosoma",
@@ -97,7 +129,7 @@
       "justificacion": "La unión ocluyente limita la difusión a través del espacio entre células vecinas.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "270",
-      "pagina_impresa": "",
+      "pagina_impresa": "270",
       "dificultad": "medio",
       "lecturas_comentario": [
         {
@@ -105,8 +137,15 @@
           "label": "Calvo",
           "section": "Especializaciones de la membrana plasmática e interacción de la célula con su entorno · Uniones estrechas",
           "page": 270,
-          "printed": null,
-          "marks": []
+          "printed": 270,
+          "marks": [
+            [
+              0.2755,
+              0.3634,
+              0.2316,
+              0.0181
+            ]
+          ]
         }
       ],
       "source": {
@@ -120,6 +159,12 @@
         "pdfPages": [
           270
         ]
+      },
+      "comentarios_opciones": {
+        "A": "La zónula adherente forma un cinturón de adhesión asociado a filamentos de actina.",
+        "B": "La unión ocluyente limita la difusión a través del espacio entre células vecinas.",
+        "C": "El desmosoma conecta las células en un contacto puntiforme unido a filamentos intermedios.",
+        "D": "Las uniones comunicantes forman canales que permiten intercambiar iones y pequeñas moléculas."
       },
       "opcion_a": "Zónula adherente",
       "opcion_b": "Unión ocluyente",
@@ -136,7 +181,7 @@
       "justificacion": "Las uniones comunicantes forman canales que permiten intercambiar iones y pequeñas moléculas.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "271",
-      "pagina_impresa": "",
+      "pagina_impresa": "271",
       "dificultad": "medio",
       "lecturas_comentario": [
         {
@@ -144,8 +189,15 @@
           "label": "Calvo",
           "section": "Especializaciones de la membrana plasmática e interacción de la célula con su entorno · Uniones comunicantes",
           "page": 271,
-          "printed": null,
-          "marks": []
+          "printed": 271,
+          "marks": [
+            [
+              0.6529,
+              0.7745,
+              0.2359,
+              0.0197
+            ]
+          ]
         }
       ],
       "source": {
@@ -159,6 +211,12 @@
         "pdfPages": [
           271
         ]
+      },
+      "comentarios_opciones": {
+        "A": "La zónula adherente forma un cinturón de adhesión asociado a filamentos de actina.",
+        "B": "La unión ocluyente limita la difusión a través del espacio entre células vecinas.",
+        "C": "El desmosoma conecta las células en un contacto puntiforme unido a filamentos intermedios.",
+        "D": "Las uniones comunicantes forman canales que permiten intercambiar iones y pequeñas moléculas."
       },
       "opcion_a": "Zónula adherente",
       "opcion_b": "Unión ocluyente",
@@ -175,7 +233,7 @@
       "justificacion": "1. Correcta. Fijan las células epiteliales a la lámina basal y favorecen la estabilidad del tejido.\n2. Incorrecta. El desmosoma es una unión puntual. No rodea por completo la célula.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "263, 266",
-      "pagina_impresa": "",
+      "pagina_impresa": "263, 266",
       "dificultad": "dificil",
       "lecturas_comentario": [
         {
@@ -183,16 +241,36 @@
           "label": "Calvo",
           "section": "Especializaciones de la membrana plasmática e interacción de la célula con su entorno · Hemidesmosomas / Desmosomas",
           "page": 263,
-          "printed": null,
-          "marks": []
+          "printed": 263,
+          "marks": [
+            [
+              0.2729,
+              0.4144,
+              0.2728,
+              0.0172
+            ]
+          ]
         },
         {
           "slug": "biologia-celular",
           "label": "Calvo",
           "section": "Especializaciones de la membrana plasmática e interacción de la célula con su entorno · Hemidesmosomas / Desmosomas",
           "page": 266,
-          "printed": null,
-          "marks": []
+          "printed": 266,
+          "marks": [
+            [
+              0.8461,
+              0.4293,
+              0.1113,
+              0.0197
+            ],
+            [
+              0.0082,
+              0.4528,
+              0.1173,
+              0.0197
+            ]
+          ]
         }
       ],
       "source": {
@@ -243,7 +321,7 @@
       "justificacion": "1. Incorrecta. El canal se organiza mediante conexones, formados por conexinas.\n2. Correcta. Forma parte de uniones estrechas que regulan el paso selectivo entre células.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "270, 271",
-      "pagina_impresa": "",
+      "pagina_impresa": "270, 271",
       "dificultad": "dificil",
       "lecturas_comentario": [
         {
@@ -251,16 +329,36 @@
           "label": "Calvo",
           "section": "Especializaciones de la membrana plasmática e interacción de la célula con su entorno · Uniones comunicantes / Uniones estrechas",
           "page": 270,
-          "printed": null,
-          "marks": []
+          "printed": 270,
+          "marks": [
+            [
+              0.8301,
+              0.7791,
+              0.1365,
+              0.0197
+            ],
+            [
+              0.0082,
+              0.8025,
+              0.0958,
+              0.0197
+            ]
+          ]
         },
         {
           "slug": "biologia-celular",
           "label": "Calvo",
           "section": "Especializaciones de la membrana plasmática e interacción de la célula con su entorno · Uniones comunicantes / Uniones estrechas",
           "page": 271,
-          "printed": null,
-          "marks": []
+          "printed": 271,
+          "marks": [
+            [
+              0.3212,
+              0.6157,
+              0.2418,
+              0.0181
+            ]
+          ]
         }
       ],
       "source": {
@@ -311,7 +409,7 @@
       "justificacion": "1. Correcta. El colágeno IV es uno de sus componentes característicos.\n2. Correcta. La entactina o nidógeno contribuye a conectar esas redes de la matriz.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "273, 274",
-      "pagina_impresa": "",
+      "pagina_impresa": "273, 274",
       "dificultad": "dificil",
       "lecturas_comentario": [
         {
@@ -319,16 +417,36 @@
           "label": "Calvo",
           "section": "Especializaciones de la membrana plasmática e interacción de la célula con su entorno · Membrana basal",
           "page": 273,
-          "printed": null,
-          "marks": []
+          "printed": 273,
+          "marks": [
+            [
+              0.1007,
+              0.2705,
+              0.2542,
+              0.0197
+            ]
+          ]
         },
         {
           "slug": "biologia-celular",
           "label": "Calvo",
           "section": "Especializaciones de la membrana plasmática e interacción de la célula con su entorno · Membrana basal",
           "page": 274,
-          "printed": null,
-          "marks": []
+          "printed": 274,
+          "marks": [
+            [
+              0.8582,
+              0.3424,
+              0.1361,
+              0.0197
+            ],
+            [
+              0.0082,
+              0.3659,
+              0.094,
+              0.0197
+            ]
+          ]
         }
       ],
       "source": {
@@ -379,7 +497,7 @@
       "justificacion": "1. Incorrecta. Los propéptidos terminales se eliminan para formar tropocolágeno.\n2. Incorrecta. El hialuronato es el glucosaminoglucano no sulfatado.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "278, 282",
-      "pagina_impresa": "",
+      "pagina_impresa": "278, 282",
       "dificultad": "dificil",
       "lecturas_comentario": [
         {
@@ -387,16 +505,30 @@
           "label": "Calvo",
           "section": "Especializaciones de la membrana plasmática e interacción de la célula con su entorno · Colágeno / Glucosaminoglucanos",
           "page": 278,
-          "printed": null,
-          "marks": []
+          "printed": 278,
+          "marks": [
+            [
+              0.0275,
+              0.7788,
+              0.3571,
+              0.0197
+            ]
+          ]
         },
         {
           "slug": "biologia-celular",
           "label": "Calvo",
           "section": "Especializaciones de la membrana plasmática e interacción de la célula con su entorno · Colágeno / Glucosaminoglucanos",
           "page": 282,
-          "printed": null,
-          "marks": []
+          "printed": 282,
+          "marks": [
+            [
+              0.0834,
+              0.7217,
+              0.2695,
+              0.0197
+            ]
+          ]
         }
       ],
       "source": {

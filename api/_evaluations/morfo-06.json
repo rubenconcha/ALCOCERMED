@@ -28,7 +28,20 @@
           "section": "El sistema tegumentario · Epidermis",
           "page": 211,
           "printed": 183,
-          "marks": []
+          "marks": [
+            [
+              0.6342,
+              0.0491,
+              0.0821,
+              0.0105
+            ],
+            [
+              0.7251,
+              0.0495,
+              0.1339,
+              0.01
+            ]
+          ]
         }
       ],
       "source": {
@@ -44,6 +57,12 @@
         "pdfPages": [
           211
         ]
+      },
+      "comentarios_opciones": {
+        "A": "Los melanocitos producen melanina y la transfieren a los queratinocitos.",
+        "B": "Las células táctiles se asocian a terminaciones sensitivas y participan en la percepción del contacto.",
+        "C": "Las células dendríticas epidérmicas intervienen en la vigilancia inmunitaria de la piel.",
+        "D": "Los queratinocitos son la población más numerosa de la epidermis y elaboran queratina."
       },
       "opcion_a": "Melanocitos",
       "opcion_b": "Células táctiles",
@@ -69,7 +88,20 @@
           "section": "El sistema tegumentario · Epidermis",
           "page": 215,
           "printed": 187,
-          "marks": []
+          "marks": [
+            [
+              0.6342,
+              0.0491,
+              0.0821,
+              0.0105
+            ],
+            [
+              0.7251,
+              0.0495,
+              0.1339,
+              0.01
+            ]
+          ]
         }
       ],
       "source": {
@@ -85,6 +117,12 @@
         "pdfPages": [
           215
         ]
+      },
+      "comentarios_opciones": {
+        "A": "Las células táctiles se asocian a terminaciones sensitivas y participan en la percepción del contacto.",
+        "B": "Las células dendríticas epidérmicas intervienen en la vigilancia inmunitaria de la piel.",
+        "C": "Los melanocitos producen melanina y la transfieren a los queratinocitos.",
+        "D": "Los queratinocitos son la población más numerosa de la epidermis y elaboran queratina."
       },
       "opcion_a": "Células táctiles",
       "opcion_b": "Células dendríticas epidérmicas",
@@ -110,7 +148,20 @@
           "section": "El sistema tegumentario · Epidermis",
           "page": 212,
           "printed": 184,
-          "marks": []
+          "marks": [
+            [
+              0.0636,
+              0.0491,
+              0.0261,
+              0.0105
+            ],
+            [
+              0.1406,
+              0.0491,
+              0.0775,
+              0.0105
+            ]
+          ]
         }
       ],
       "source": {
@@ -126,6 +177,12 @@
         "pdfPages": [
           212
         ]
+      },
+      "comentarios_opciones": {
+        "A": "Los melanocitos producen melanina y la transfieren a los queratinocitos.",
+        "B": "Las células dendríticas epidérmicas intervienen en la vigilancia inmunitaria de la piel.",
+        "C": "Las células táctiles se asocian a terminaciones sensitivas y participan en la percepción del contacto.",
+        "D": "Los queratinocitos son la población más numerosa de la epidermis y elaboran queratina."
       },
       "opcion_a": "Melanocitos",
       "opcion_b": "Células dendríticas epidérmicas",
@@ -151,7 +208,20 @@
           "section": "El sistema tegumentario · Epidermis",
           "page": 212,
           "printed": 184,
-          "marks": []
+          "marks": [
+            [
+              0.0636,
+              0.0491,
+              0.0261,
+              0.0105
+            ],
+            [
+              0.1406,
+              0.0491,
+              0.0775,
+              0.0105
+            ]
+          ]
         }
       ],
       "source": {
@@ -167,6 +237,12 @@
         "pdfPages": [
           212
         ]
+      },
+      "comentarios_opciones": {
+        "A": "Los melanocitos producen melanina y la transfieren a los queratinocitos.",
+        "B": "Las células dendríticas epidérmicas intervienen en la vigilancia inmunitaria de la piel.",
+        "C": "Las células táctiles se asocian a terminaciones sensitivas y participan en la percepción del contacto.",
+        "D": "Los queratinocitos son la población más numerosa de la epidermis y elaboran queratina."
       },
       "opcion_a": "Melanocitos",
       "opcion_b": "Células dendríticas epidérmicas",
@@ -192,7 +268,20 @@
           "section": "El sistema tegumentario · Capas de la piel / Dermis",
           "page": 214,
           "printed": 186,
-          "marks": []
+          "marks": [
+            [
+              0.0636,
+              0.0491,
+              0.0261,
+              0.0105
+            ],
+            [
+              0.1406,
+              0.0491,
+              0.0775,
+              0.0105
+            ]
+          ]
         }
       ],
       "source": {
@@ -253,7 +342,20 @@
           "section": "El sistema tegumentario · Epidermis",
           "page": 211,
           "printed": 183,
-          "marks": []
+          "marks": [
+            [
+              0.6342,
+              0.0491,
+              0.0821,
+              0.0105
+            ],
+            [
+              0.7251,
+              0.0495,
+              0.1339,
+              0.01
+            ]
+          ]
         },
         {
           "slug": "morfofuncion",
@@ -261,7 +363,20 @@
           "section": "El sistema tegumentario · Epidermis",
           "page": 212,
           "printed": 184,
-          "marks": []
+          "marks": [
+            [
+              0.0636,
+              0.0491,
+              0.0261,
+              0.0105
+            ],
+            [
+              0.1406,
+              0.0491,
+              0.0775,
+              0.0105
+            ]
+          ]
         }
       ],
       "source": {
@@ -324,7 +439,20 @@
           "section": "El sistema tegumentario · Pelo / Glándulas cutáneas",
           "page": 219,
           "printed": 191,
-          "marks": []
+          "marks": [
+            [
+              0.6342,
+              0.0491,
+              0.0821,
+              0.0105
+            ],
+            [
+              0.7251,
+              0.0495,
+              0.1339,
+              0.01
+            ]
+          ]
         },
         {
           "slug": "morfofuncion",
@@ -332,7 +460,20 @@
           "section": "El sistema tegumentario · Pelo / Glándulas cutáneas",
           "page": 224,
           "printed": 196,
-          "marks": []
+          "marks": [
+            [
+              0.0636,
+              0.0491,
+              0.0261,
+              0.0105
+            ],
+            [
+              0.1406,
+              0.0491,
+              0.0775,
+              0.0105
+            ]
+          ]
         }
       ],
       "source": {
@@ -395,7 +536,20 @@
           "section": "El sistema tegumentario · Quemaduras",
           "page": 227,
           "printed": 199,
-          "marks": []
+          "marks": [
+            [
+              0.6342,
+              0.0491,
+              0.0821,
+              0.0105
+            ],
+            [
+              0.7251,
+              0.0495,
+              0.1339,
+              0.01
+            ]
+          ]
         }
       ],
       "source": {

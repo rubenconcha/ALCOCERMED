@@ -28,7 +28,14 @@
           "section": "Educación en salud · educacion en salud",
           "page": 6,
           "printed": 5,
-          "marks": []
+          "marks": [
+            [
+              0.1978,
+              0.1724,
+              0.1406,
+              0.0168
+            ]
+          ]
         }
       ],
       "source": {
@@ -44,6 +51,12 @@
         "pdfPages": [
           6
         ]
+      },
+      "comentarios_opciones": {
+        "A": "El empoderamiento facilita que las personas usen información para decidir sobre su salud.",
+        "B": "La comunicación es bidireccional cuando la población también aporta y recibe respuesta en el intercambio.",
+        "C": "Ajustar el material al contexto social y cultural hace que la educación se vincule a la realidad del grupo.",
+        "D": "La educación para la salud desarrolla habilidades para que las personas puedan llevar a la práctica conductas saludables."
       },
       "opcion_a": "Toma de decisiones informadas",
       "opcion_b": "Comunicación bidireccional",
@@ -69,7 +82,14 @@
           "section": "Educación en salud · educacion en salud",
           "page": 16,
           "printed": 15,
-          "marks": []
+          "marks": [
+            [
+              0.2058,
+              0.5066,
+              0.1485,
+              0.0168
+            ]
+          ]
         }
       ],
       "source": {
@@ -85,6 +105,12 @@
         "pdfPages": [
           16
         ]
+      },
+      "comentarios_opciones": {
+        "A": "La educación para la salud desarrolla habilidades para que las personas puedan llevar a la práctica conductas saludables.",
+        "B": "La comunicación es bidireccional cuando la población también aporta y recibe respuesta en el intercambio.",
+        "C": "El empoderamiento facilita que las personas usen información para decidir sobre su salud.",
+        "D": "Ajustar el material al contexto social y cultural hace que la educación se vincule a la realidad del grupo."
       },
       "opcion_a": "Desarrollo de habilidades",
       "opcion_b": "Comunicación bidireccional",
@@ -110,7 +136,20 @@
           "section": "Educación en salud · educacion en salud",
           "page": 16,
           "printed": 15,
-          "marks": []
+          "marks": [
+            [
+              0.7447,
+              0.5066,
+              0.1664,
+              0.0168
+            ],
+            [
+              0.1389,
+              0.5326,
+              0.1025,
+              0.0168
+            ]
+          ]
         }
       ],
       "source": {
@@ -126,6 +165,12 @@
         "pdfPages": [
           16
         ]
+      },
+      "comentarios_opciones": {
+        "A": "La educación para la salud desarrolla habilidades para que las personas puedan llevar a la práctica conductas saludables.",
+        "B": "La comunicación es bidireccional cuando la población también aporta y recibe respuesta en el intercambio.",
+        "C": "El empoderamiento facilita que las personas usen información para decidir sobre su salud.",
+        "D": "Ajustar el material al contexto social y cultural hace que la educación se vincule a la realidad del grupo."
       },
       "opcion_a": "Desarrollo de habilidades",
       "opcion_b": "Comunicación bidireccional",
@@ -151,7 +196,14 @@
           "section": "Educación en salud · educacion en salud",
           "page": 16,
           "printed": 15,
-          "marks": []
+          "marks": [
+            [
+              0.6647,
+              0.5849,
+              0.1756,
+              0.0168
+            ]
+          ]
         }
       ],
       "source": {
@@ -167,6 +219,12 @@
         "pdfPages": [
           16
         ]
+      },
+      "comentarios_opciones": {
+        "A": "Ajustar el material al contexto social y cultural hace que la educación se vincule a la realidad del grupo.",
+        "B": "El empoderamiento facilita que las personas usen información para decidir sobre su salud.",
+        "C": "La educación para la salud desarrolla habilidades para que las personas puedan llevar a la práctica conductas saludables.",
+        "D": "La comunicación es bidireccional cuando la población también aporta y recibe respuesta en el intercambio."
       },
       "opcion_a": "Adaptación al contexto sociocultural",
       "opcion_b": "Toma de decisiones informadas",
@@ -192,7 +250,20 @@
           "section": "Educación en salud · educacion en salud",
           "page": 2,
           "printed": 1,
-          "marks": []
+          "marks": [
+            [
+              0.7289,
+              0.4093,
+              0.1781,
+              0.0168
+            ],
+            [
+              0.438,
+              0.4093,
+              0.165,
+              0.0168
+            ]
+          ]
         }
       ],
       "source": {
@@ -253,7 +324,26 @@
           "section": "Educación en salud · educacion en salud",
           "page": 2,
           "printed": 1,
-          "marks": []
+          "marks": [
+            [
+              0.688,
+              0.4616,
+              0.1644,
+              0.0168
+            ],
+            [
+              0.6987,
+              0.4876,
+              0.2124,
+              0.0168
+            ],
+            [
+              0.1389,
+              0.5139,
+              0.0503,
+              0.0168
+            ]
+          ]
         }
       ],
       "source": {
@@ -314,7 +404,20 @@
           "section": "Educación en salud · educacion en salud",
           "page": 2,
           "printed": 1,
-          "marks": []
+          "marks": [
+            [
+              0.5857,
+              0.5662,
+              0.112,
+              0.0168
+            ],
+            [
+              0.7019,
+              0.5662,
+              0.0464,
+              0.0168
+            ]
+          ]
         },
         {
           "slug": "educacion-salud",
@@ -322,7 +425,14 @@
           "section": "Educación en salud · educacion en salud",
           "page": 6,
           "printed": 5,
-          "marks": []
+          "marks": [
+            [
+              0.4673,
+              0.277,
+              0.3578,
+              0.0168
+            ]
+          ]
         }
       ],
       "source": {
@@ -385,7 +495,14 @@
           "section": "Educación en salud · educacion en salud",
           "page": 6,
           "printed": 5,
-          "marks": []
+          "marks": [
+            [
+              0.3898,
+              0.2247,
+              0.2623,
+              0.0168
+            ]
+          ]
         },
         {
           "slug": "educacion-salud",
@@ -393,7 +510,14 @@
           "section": "Educación en salud · educacion en salud",
           "page": 16,
           "printed": 15,
-          "marks": []
+          "marks": [
+            [
+              0.1703,
+              0.4543,
+              0.2687,
+              0.0168
+            ]
+          ]
         }
       ],
       "source": {

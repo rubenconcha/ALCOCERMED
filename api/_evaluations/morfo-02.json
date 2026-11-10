@@ -14,7 +14,7 @@
       "materia": "MORFOFUNCION",
       "tema": "la quimica de la vida",
       "numero_pregunta": 1,
-      "pregunta": "Una partícula que era neutra pierde un electrón. Hay que clasificar el ion resultante.\n¿Qué opción corresponde al caso?",
+      "pregunta": "Un átomo neutro pierde un electrón. ¿Cómo se clasifica el ion que resulta?",
       "respuesta_correcta": "D",
       "justificacion": "La pérdida de un electrón deja exceso de carga positiva en una partícula inicialmente neutra.",
       "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
@@ -28,7 +28,20 @@
           "section": "La química de la vida · Iones",
           "page": 75,
           "printed": 47,
-          "marks": []
+          "marks": [
+            [
+              0.6513,
+              0.0491,
+              0.0821,
+              0.0105
+            ],
+            [
+              0.7422,
+              0.0495,
+              0.0773,
+              0.01
+            ]
+          ]
         }
       ],
       "source": {
@@ -45,6 +58,12 @@
           75
         ]
       },
+      "comentarios_opciones": {
+        "A": "Lo que define al radical libre es el electrón desapareado en su capa externa.",
+        "B": "Ganar un electrón deja a la partícula inicialmente neutra con carga neta negativa.",
+        "C": "Al disociarse en agua, el electrólito aporta iones que permiten el paso de corriente.",
+        "D": "La pérdida de un electrón deja exceso de carga positiva en una partícula inicialmente neutra."
+      },
       "opcion_a": "Radical libre",
       "opcion_b": "Anión",
       "opcion_c": "Electrólito",
@@ -55,7 +74,7 @@
       "materia": "MORFOFUNCION",
       "tema": "la quimica de la vida",
       "numero_pregunta": 2,
-      "pregunta": "Un átomo neutro incorpora un electrón. Hay que nombrar la especie cargada, no la sustancia que la contiene.\n¿Qué opción corresponde al caso?",
+      "pregunta": "Un átomo neutro gana un electrón. ¿Cómo se clasifica el ion que resulta?",
       "respuesta_correcta": "C",
       "justificacion": "Ganar un electrón deja a la partícula inicialmente neutra con carga neta negativa.",
       "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
@@ -69,7 +88,20 @@
           "section": "La química de la vida · Iones",
           "page": 74,
           "printed": 46,
-          "marks": []
+          "marks": [
+            [
+              0.0636,
+              0.0491,
+              0.0186,
+              0.0105
+            ],
+            [
+              0.1406,
+              0.0491,
+              0.0803,
+              0.0105
+            ]
+          ]
         }
       ],
       "source": {
@@ -85,6 +117,12 @@
         "pdfPages": [
           74
         ]
+      },
+      "comentarios_opciones": {
+        "A": "La pérdida de un electrón deja exceso de carga positiva en una partícula inicialmente neutra.",
+        "B": "Al disociarse en agua, el electrólito aporta iones que permiten el paso de corriente.",
+        "C": "Ganar un electrón deja a la partícula inicialmente neutra con carga neta negativa.",
+        "D": "Lo que define al radical libre es el electrón desapareado en su capa externa."
       },
       "opcion_a": "Catión",
       "opcion_b": "Electrólito",
@@ -110,7 +148,20 @@
           "section": "La química de la vida · Radicales libres",
           "page": 75,
           "printed": 47,
-          "marks": []
+          "marks": [
+            [
+              0.6513,
+              0.0491,
+              0.0821,
+              0.0105
+            ],
+            [
+              0.7422,
+              0.0495,
+              0.0773,
+              0.01
+            ]
+          ]
         }
       ],
       "source": {
@@ -126,6 +177,12 @@
         "pdfPages": [
           75
         ]
+      },
+      "comentarios_opciones": {
+        "A": "La pérdida de un electrón deja exceso de carga positiva en una partícula inicialmente neutra.",
+        "B": "Ganar un electrón deja a la partícula inicialmente neutra con carga neta negativa.",
+        "C": "Lo que define al radical libre es el electrón desapareado en su capa externa.",
+        "D": "Al disociarse en agua, el electrólito aporta iones que permiten el paso de corriente."
       },
       "opcion_a": "Catión",
       "opcion_b": "Anión",
@@ -151,7 +208,20 @@
           "section": "La química de la vida · Iones",
           "page": 75,
           "printed": 47,
-          "marks": []
+          "marks": [
+            [
+              0.6513,
+              0.0491,
+              0.0821,
+              0.0105
+            ],
+            [
+              0.7422,
+              0.0495,
+              0.0773,
+              0.01
+            ]
+          ]
         }
       ],
       "source": {
@@ -167,6 +237,12 @@
         "pdfPages": [
           75
         ]
+      },
+      "comentarios_opciones": {
+        "A": "Lo que define al radical libre es el electrón desapareado en su capa externa.",
+        "B": "La pérdida de un electrón deja exceso de carga positiva en una partícula inicialmente neutra.",
+        "C": "Ganar un electrón deja a la partícula inicialmente neutra con carga neta negativa.",
+        "D": "Al disociarse en agua, el electrólito aporta iones que permiten el paso de corriente."
       },
       "opcion_a": "Radical libre",
       "opcion_b": "Catión",
@@ -192,7 +268,20 @@
           "section": "La química de la vida · Átomos",
           "page": 71,
           "printed": 43,
-          "marks": []
+          "marks": [
+            [
+              0.6513,
+              0.0491,
+              0.0821,
+              0.0105
+            ],
+            [
+              0.7422,
+              0.0495,
+              0.0773,
+              0.01
+            ]
+          ]
         },
         {
           "slug": "morfofuncion",
@@ -200,7 +289,20 @@
           "section": "La química de la vida · Átomos",
           "page": 73,
           "printed": 45,
-          "marks": []
+          "marks": [
+            [
+              0.6513,
+              0.0491,
+              0.0821,
+              0.0105
+            ],
+            [
+              0.7422,
+              0.0495,
+              0.0773,
+              0.01
+            ]
+          ]
         }
       ],
       "source": {
@@ -263,7 +365,20 @@
           "section": "La química de la vida · Ácidos y bases",
           "page": 82,
           "printed": 54,
-          "marks": []
+          "marks": [
+            [
+              0.0636,
+              0.0491,
+              0.0186,
+              0.0105
+            ],
+            [
+              0.1406,
+              0.0491,
+              0.0803,
+              0.0105
+            ]
+          ]
         },
         {
           "slug": "morfofuncion",
@@ -271,7 +386,20 @@
           "section": "La química de la vida · Ácidos y bases",
           "page": 83,
           "printed": 55,
-          "marks": []
+          "marks": [
+            [
+              0.6513,
+              0.0491,
+              0.0821,
+              0.0105
+            ],
+            [
+              0.7422,
+              0.0495,
+              0.0773,
+              0.01
+            ]
+          ]
         }
       ],
       "source": {
@@ -334,7 +462,20 @@
           "section": "La química de la vida · Reacciones",
           "page": 87,
           "printed": 59,
-          "marks": []
+          "marks": [
+            [
+              0.6513,
+              0.0491,
+              0.0821,
+              0.0105
+            ],
+            [
+              0.7422,
+              0.0495,
+              0.0773,
+              0.01
+            ]
+          ]
         },
         {
           "slug": "morfofuncion",
@@ -342,7 +483,20 @@
           "section": "La química de la vida · Reacciones",
           "page": 88,
           "printed": 60,
-          "marks": []
+          "marks": [
+            [
+              0.0636,
+              0.0491,
+              0.0186,
+              0.0105
+            ],
+            [
+              0.1406,
+              0.0491,
+              0.0803,
+              0.0105
+            ]
+          ]
         }
       ],
       "source": {
@@ -405,7 +559,20 @@
           "section": "La química de la vida · Enzimas / Lípidos",
           "page": 90,
           "printed": 62,
-          "marks": []
+          "marks": [
+            [
+              0.0636,
+              0.0491,
+              0.0186,
+              0.0105
+            ],
+            [
+              0.1406,
+              0.0491,
+              0.0803,
+              0.0105
+            ]
+          ]
         },
         {
           "slug": "morfofuncion",
@@ -413,7 +580,20 @@
           "section": "La química de la vida · Enzimas / Lípidos",
           "page": 98,
           "printed": 70,
-          "marks": []
+          "marks": [
+            [
+              0.0636,
+              0.0491,
+              0.0186,
+              0.0105
+            ],
+            [
+              0.1406,
+              0.0491,
+              0.0803,
+              0.0105
+            ]
+          ]
         }
       ],
       "source": {

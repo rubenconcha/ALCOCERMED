@@ -19,7 +19,7 @@
       "justificacion": "En la vía de CPH de clase I, el proteasoma aporta péptidos derivados de proteínas intracelulares.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "717",
-      "pagina_impresa": "",
+      "pagina_impresa": "717",
       "dificultad": "medio",
       "lecturas_comentario": [
         {
@@ -27,8 +27,15 @@
           "label": "Calvo",
           "section": "Bases celulares de la respuesta inmunitaria · Presentación de clase I",
           "page": 717,
-          "printed": null,
-          "marks": []
+          "printed": 717,
+          "marks": [
+            [
+              0.2651,
+              0.3914,
+              0.183,
+              0.0197
+            ]
+          ]
         }
       ],
       "source": {
@@ -42,6 +49,12 @@
         "pdfPages": [
           717
         ]
+      },
+      "comentarios_opciones": {
+        "A": "En la vía de CPH de clase I, el proteasoma aporta péptidos derivados de proteínas intracelulares.",
+        "B": "En la vía de CPH de clase II se procesan y presentan típicamente péptidos de proteínas que se incorporaron desde el exterior.",
+        "C": "Una señal de coinhibición reduce la activación del linfocito T y contribuye a mantener la tolerancia.",
+        "D": "La coestimulación aporta una señal adicional que favorece la activación del linfocito T tras reconocer el antígeno."
       },
       "opcion_a": "Presentación por CPH de clase I",
       "opcion_b": "Presentación por CPH de clase II",
@@ -58,7 +71,7 @@
       "justificacion": "En la vía de CPH de clase II se procesan y presentan típicamente péptidos de proteínas que se incorporaron desde el exterior.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "718",
-      "pagina_impresa": "",
+      "pagina_impresa": "718",
       "dificultad": "medio",
       "lecturas_comentario": [
         {
@@ -66,8 +79,21 @@
           "label": "Calvo",
           "section": "Bases celulares de la respuesta inmunitaria · Presentación de clase II",
           "page": 718,
-          "printed": null,
-          "marks": []
+          "printed": 718,
+          "marks": [
+            [
+              0.4954,
+              0.9076,
+              0.0328,
+              0.0197
+            ],
+            [
+              0.0271,
+              0.9346,
+              0.0047,
+              0.0197
+            ]
+          ]
         }
       ],
       "source": {
@@ -81,6 +107,12 @@
         "pdfPages": [
           718
         ]
+      },
+      "comentarios_opciones": {
+        "A": "En la vía de CPH de clase I, el proteasoma aporta péptidos derivados de proteínas intracelulares.",
+        "B": "Una señal de coinhibición reduce la activación del linfocito T y contribuye a mantener la tolerancia.",
+        "C": "La coestimulación aporta una señal adicional que favorece la activación del linfocito T tras reconocer el antígeno.",
+        "D": "En la vía de CPH de clase II se procesan y presentan típicamente péptidos de proteínas que se incorporaron desde el exterior."
       },
       "opcion_a": "Presentación por CPH de clase I",
       "opcion_b": "Coinhibición del linfocito T",
@@ -97,7 +129,7 @@
       "justificacion": "La coestimulación aporta una señal adicional que favorece la activación del linfocito T tras reconocer el antígeno.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "714",
-      "pagina_impresa": "",
+      "pagina_impresa": "714",
       "dificultad": "medio",
       "lecturas_comentario": [
         {
@@ -105,8 +137,15 @@
           "label": "Calvo",
           "section": "Bases celulares de la respuesta inmunitaria · Coestimulación",
           "page": 714,
-          "printed": null,
-          "marks": []
+          "printed": 714,
+          "marks": [
+            [
+              0.1183,
+              0.6285,
+              0.2513,
+              0.0197
+            ]
+          ]
         }
       ],
       "source": {
@@ -120,6 +159,12 @@
         "pdfPages": [
           714
         ]
+      },
+      "comentarios_opciones": {
+        "A": "Una señal de coinhibición reduce la activación del linfocito T y contribuye a mantener la tolerancia.",
+        "B": "La coestimulación aporta una señal adicional que favorece la activación del linfocito T tras reconocer el antígeno.",
+        "C": "En la vía de CPH de clase I, el proteasoma aporta péptidos derivados de proteínas intracelulares.",
+        "D": "En la vía de CPH de clase II se procesan y presentan típicamente péptidos de proteínas que se incorporaron desde el exterior."
       },
       "opcion_a": "Coinhibición del linfocito T",
       "opcion_b": "Coestimulación del linfocito T",
@@ -136,7 +181,7 @@
       "justificacion": "Una señal de coinhibición reduce la activación del linfocito T y contribuye a mantener la tolerancia.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "714",
-      "pagina_impresa": "",
+      "pagina_impresa": "714",
       "dificultad": "medio",
       "lecturas_comentario": [
         {
@@ -144,8 +189,15 @@
           "label": "Calvo",
           "section": "Bases celulares de la respuesta inmunitaria · Coinhibición",
           "page": 714,
-          "printed": null,
-          "marks": []
+          "printed": 714,
+          "marks": [
+            [
+              0.7144,
+              0.652,
+              0.2088,
+              0.0197
+            ]
+          ]
         }
       ],
       "source": {
@@ -159,6 +211,12 @@
         "pdfPages": [
           714
         ]
+      },
+      "comentarios_opciones": {
+        "A": "En la vía de CPH de clase I, el proteasoma aporta péptidos derivados de proteínas intracelulares.",
+        "B": "La coestimulación aporta una señal adicional que favorece la activación del linfocito T tras reconocer el antígeno.",
+        "C": "En la vía de CPH de clase II se procesan y presentan típicamente péptidos de proteínas que se incorporaron desde el exterior.",
+        "D": "Una señal de coinhibición reduce la activación del linfocito T y contribuye a mantener la tolerancia."
       },
       "opcion_a": "Presentación por CPH de clase I",
       "opcion_b": "Coestimulación del linfocito T",
@@ -175,7 +233,7 @@
       "justificacion": "1. Incorrecta. El sitio de unión al antígeno se forma con regiones variables aminoterminales.\n2. Correcta. Cada inmunoglobulina tiene dos cadenas ligeras del mismo tipo.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "706, 707",
-      "pagina_impresa": "",
+      "pagina_impresa": "706, 707",
       "dificultad": "dificil",
       "lecturas_comentario": [
         {
@@ -183,16 +241,36 @@
           "label": "Calvo",
           "section": "Bases celulares de la respuesta inmunitaria · Anticuerpos",
           "page": 706,
-          "printed": null,
-          "marks": []
+          "printed": 706,
+          "marks": [
+            [
+              0.4954,
+              0.9076,
+              0.0328,
+              0.0197
+            ],
+            [
+              0.0271,
+              0.9346,
+              0.0047,
+              0.0197
+            ]
+          ]
         },
         {
           "slug": "biologia-celular",
           "label": "Calvo",
           "section": "Bases celulares de la respuesta inmunitaria · Anticuerpos",
           "page": 707,
-          "printed": null,
-          "marks": []
+          "printed": 707,
+          "marks": [
+            [
+              0.0271,
+              0.3659,
+              0.2986,
+              0.0197
+            ]
+          ]
         }
       ],
       "source": {
@@ -243,7 +321,7 @@
       "justificacion": "1. Correcta. La unidad reconocida es el complejo de péptido y CPH.\n2. Incorrecta. CD4 interactúa con clase II y CD8 con clase I.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "713, 714",
-      "pagina_impresa": "",
+      "pagina_impresa": "713, 714",
       "dificultad": "dificil",
       "lecturas_comentario": [
         {
@@ -251,16 +329,36 @@
           "label": "Calvo",
           "section": "Bases celulares de la respuesta inmunitaria · Receptor T / Correceptores T",
           "page": 713,
-          "printed": null,
-          "marks": []
+          "printed": 713,
+          "marks": [
+            [
+              0.4954,
+              0.9076,
+              0.0328,
+              0.0197
+            ],
+            [
+              0.0271,
+              0.9346,
+              0.0047,
+              0.0197
+            ]
+          ]
         },
         {
           "slug": "biologia-celular",
           "label": "Calvo",
           "section": "Bases celulares de la respuesta inmunitaria · Receptor T / Correceptores T",
           "page": 714,
-          "printed": null,
-          "marks": []
+          "printed": 714,
+          "marks": [
+            [
+              0.5317,
+              0.196,
+              0.2672,
+              0.0197
+            ]
+          ]
         }
       ],
       "source": {
@@ -311,7 +409,7 @@
       "justificacion": "1. Correcta. Evita la ocupación prematura del sitio destinado al péptido.\n2. Correcta. Esta interacción limita su activación.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "718, 720",
-      "pagina_impresa": "",
+      "pagina_impresa": "718, 720",
       "dificultad": "dificil",
       "lecturas_comentario": [
         {
@@ -319,16 +417,30 @@
           "label": "Calvo",
           "section": "Bases celulares de la respuesta inmunitaria · Presentación de clase II / Activación T",
           "page": 718,
-          "printed": null,
-          "marks": []
+          "printed": 718,
+          "marks": [
+            [
+              0.2134,
+              0.3912,
+              0.3568,
+              0.0197
+            ]
+          ]
         },
         {
           "slug": "biologia-celular",
           "label": "Calvo",
           "section": "Bases celulares de la respuesta inmunitaria · Presentación de clase II / Activación T",
           "page": 720,
-          "printed": null,
-          "marks": []
+          "printed": 720,
+          "marks": [
+            [
+              0.0082,
+              0.7846,
+              0.2078,
+              0.0197
+            ]
+          ]
         }
       ],
       "source": {
@@ -379,7 +491,7 @@
       "justificacion": "1. Incorrecta. La citotoxicidad descrita emplea perforinas y granzimas.\n2. Incorrecta. El reconocimiento del CPH I normal aporta una señal inhibitoria a la NK.",
       "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "727",
-      "pagina_impresa": "",
+      "pagina_impresa": "727",
       "dificultad": "dificil",
       "lecturas_comentario": [
         {
@@ -387,8 +499,21 @@
           "label": "Calvo",
           "section": "Bases celulares de la respuesta inmunitaria · Citotoxicidad / Células NK",
           "page": 727,
-          "printed": null,
-          "marks": []
+          "printed": 727,
+          "marks": [
+            [
+              0.0271,
+              0.477,
+              0.2714,
+              0.0197
+            ],
+            [
+              0.4661,
+              0.7195,
+              0.2163,
+              0.0197
+            ]
+          ]
         }
       ],
       "source": {

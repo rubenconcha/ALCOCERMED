@@ -14,7 +14,7 @@
       "materia": "SALUD PUBLICA",
       "tema": "analisis de datos en excel y spss",
       "numero_pregunta": 1,
-      "pregunta": "En la herramienta de estadística descriptiva de Excel del texto, el rango seleccionado incluye el título «Edad» en la primera fila.\n¿Qué opción corresponde al caso?",
+      "pregunta": "Al usar la herramienta de estadística descriptiva de Excel, el rango seleccionado incluye el título «Edad» en la primera fila. ¿Qué casilla se marca para que Excel reconozca ese encabezado?",
       "respuesta_correcta": "B",
       "justificacion": "La opción de rótulos indica que la primera fila del rango contiene el nombre de la variable.",
       "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
@@ -28,7 +28,14 @@
           "section": "Análisis de datos en Excel y SPSS · analisis de datos en excel y spss",
           "page": 195,
           "printed": 120,
-          "marks": []
+          "marks": [
+            [
+              0.1333,
+              0.7287,
+              0.3726,
+              0.0192
+            ]
+          ]
         }
       ],
       "source": {
@@ -45,6 +52,12 @@
           195
         ]
       },
+      "comentarios_opciones": {
+        "A": "El campo Perdidos permite señalar códigos que el programa tratará como datos ausentes.",
+        "B": "La opción de rótulos indica que la primera fila del rango contiene el nombre de la variable.",
+        "C": "Seleccionar Resumen de estadísticas solicita la salida con las medidas descriptivas.",
+        "D": "En el campo Valores se vincula cada código con una etiqueta que describe su significado."
+      },
       "opcion_a": "Perdidos",
       "opcion_b": "Rótulos en la primera fila",
       "opcion_c": "Resumen de estadísticas",
@@ -55,7 +68,7 @@
       "materia": "SALUD PUBLICA",
       "tema": "analisis de datos en excel y spss",
       "numero_pregunta": 2,
-      "pregunta": "Tras seleccionar el rango numérico en el Excel del texto, una estudiante quiere obtener en conjunto las medidas descriptivas.\n¿Qué opción corresponde al caso?",
+      "pregunta": "Después de seleccionar el rango numérico en la herramienta de estadística descriptiva de Excel, ¿qué casilla se marca para obtener juntas las medidas descriptivas?",
       "respuesta_correcta": "C",
       "justificacion": "Seleccionar Resumen de estadísticas solicita la salida con las medidas descriptivas.",
       "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
@@ -69,7 +82,14 @@
           "section": "Análisis de datos en Excel y SPSS · analisis de datos en excel y spss",
           "page": 195,
           "printed": 120,
-          "marks": []
+          "marks": [
+            [
+              0.1333,
+              0.8407,
+              0.3307,
+              0.0192
+            ]
+          ]
         }
       ],
       "source": {
@@ -85,6 +105,12 @@
         "pdfPages": [
           195
         ]
+      },
+      "comentarios_opciones": {
+        "A": "En el campo Valores se vincula cada código con una etiqueta que describe su significado.",
+        "B": "El campo Perdidos permite señalar códigos que el programa tratará como datos ausentes.",
+        "C": "Seleccionar Resumen de estadísticas solicita la salida con las medidas descriptivas.",
+        "D": "La opción de rótulos indica que la primera fila del rango contiene el nombre de la variable."
       },
       "opcion_a": "Valores",
       "opcion_b": "Perdidos",
@@ -110,7 +136,14 @@
           "section": "Análisis de datos en Excel y SPSS · analisis de datos en excel y spss",
           "page": 205,
           "printed": 130,
-          "marks": []
+          "marks": [
+            [
+              0.6499,
+              0.5317,
+              0.2289,
+              0.0192
+            ]
+          ]
         }
       ],
       "source": {
@@ -126,6 +159,12 @@
         "pdfPages": [
           205
         ]
+      },
+      "comentarios_opciones": {
+        "A": "Seleccionar Resumen de estadísticas solicita la salida con las medidas descriptivas.",
+        "B": "La opción de rótulos indica que la primera fila del rango contiene el nombre de la variable.",
+        "C": "En el campo Valores se vincula cada código con una etiqueta que describe su significado.",
+        "D": "El campo Perdidos permite señalar códigos que el programa tratará como datos ausentes."
       },
       "opcion_a": "Resumen de estadísticas",
       "opcion_b": "Rótulos en la primera fila",
@@ -151,7 +190,14 @@
           "section": "Análisis de datos en Excel y SPSS · analisis de datos en excel y spss",
           "page": 205,
           "printed": 130,
-          "marks": []
+          "marks": [
+            [
+              0.5011,
+              0.7506,
+              0.3778,
+              0.0192
+            ]
+          ]
         }
       ],
       "source": {
@@ -167,6 +213,12 @@
         "pdfPages": [
           205
         ]
+      },
+      "comentarios_opciones": {
+        "A": "Seleccionar Resumen de estadísticas solicita la salida con las medidas descriptivas.",
+        "B": "La opción de rótulos indica que la primera fila del rango contiene el nombre de la variable.",
+        "C": "En el campo Valores se vincula cada código con una etiqueta que describe su significado.",
+        "D": "El campo Perdidos permite señalar códigos que el programa tratará como datos ausentes."
       },
       "opcion_a": "Resumen de estadísticas",
       "opcion_b": "Rótulos en la primera fila",
@@ -192,7 +244,20 @@
           "section": "Análisis de datos en Excel y SPSS · analisis de datos en excel y spss",
           "page": 194,
           "printed": 119,
-          "marks": []
+          "marks": [
+            [
+              0.3175,
+              0.3428,
+              0.0781,
+              0.0192
+            ],
+            [
+              0.4031,
+              0.3428,
+              0.0369,
+              0.0192
+            ]
+          ]
         },
         {
           "slug": "educacion-salud",
@@ -200,7 +265,20 @@
           "section": "Análisis de datos en Excel y SPSS · analisis de datos en excel y spss",
           "page": 195,
           "printed": 120,
-          "marks": []
+          "marks": [
+            [
+              0.4494,
+              0.0995,
+              0.0273,
+              0.0192
+            ],
+            [
+              0.4815,
+              0.0995,
+              0.0946,
+              0.0192
+            ]
+          ]
         }
       ],
       "source": {
@@ -263,7 +341,14 @@
           "section": "Análisis de datos en Excel y SPSS · analisis de datos en excel y spss",
           "page": 195,
           "printed": 120,
-          "marks": []
+          "marks": [
+            [
+              0.2367,
+              0.8192,
+              0.3424,
+              0.0192
+            ]
+          ]
         },
         {
           "slug": "educacion-salud",
@@ -271,7 +356,20 @@
           "section": "Análisis de datos en Excel y SPSS · analisis de datos en excel y spss",
           "page": 198,
           "printed": 123,
-          "marks": []
+          "marks": [
+            [
+              0.8816,
+              0.7092,
+              0.0347,
+              0.0192
+            ],
+            [
+              0.1636,
+              0.7306,
+              0.1969,
+              0.0192
+            ]
+          ]
         }
       ],
       "source": {
@@ -334,7 +432,20 @@
           "section": "Análisis de datos en Excel y SPSS · analisis de datos en excel y spss",
           "page": 202,
           "printed": 127,
-          "marks": []
+          "marks": [
+            [
+              0.8212,
+              0.4189,
+              0.095,
+              0.0192
+            ],
+            [
+              0.1212,
+              0.4419,
+              0.2018,
+              0.0192
+            ]
+          ]
         },
         {
           "slug": "educacion-salud",
@@ -342,7 +453,20 @@
           "section": "Análisis de datos en Excel y SPSS · analisis de datos en excel y spss",
           "page": 214,
           "printed": 139,
-          "marks": []
+          "marks": [
+            [
+              0.6949,
+              0.9659,
+              0.1916,
+              0.0139
+            ],
+            [
+              0.9092,
+              0.9661,
+              0.0312,
+              0.014
+            ]
+          ]
         }
       ],
       "source": {
@@ -405,7 +529,14 @@
           "section": "Análisis de datos en Excel y SPSS · analisis de datos en excel y spss",
           "page": 206,
           "printed": 131,
-          "marks": []
+          "marks": [
+            [
+              0.2242,
+              0.1666,
+              0.3343,
+              0.0192
+            ]
+          ]
         },
         {
           "slug": "educacion-salud",
@@ -413,7 +544,20 @@
           "section": "Análisis de datos en Excel y SPSS · analisis de datos en excel y spss",
           "page": 224,
           "printed": 149,
-          "marks": []
+          "marks": [
+            [
+              0.6949,
+              0.9659,
+              0.1916,
+              0.0139
+            ],
+            [
+              0.9092,
+              0.9661,
+              0.0312,
+              0.014
+            ]
+          ]
         }
       ],
       "source": {
