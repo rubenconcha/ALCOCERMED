@@ -5,502 +5,486 @@
   "topic": "desarrollo humano y envejecimiento",
   "title": "Desarrollo humano y envejecimiento",
   "number": 29,
-  "count": 29,
-  "duration": 29,
+  "count": 9,
+  "duration": 9,
   "source": "Saladin · Anatomía y fisiología",
   "questions": [
     {
-      "content_id": "morfo-29-002",
+      "content_id": "evaluacion:medicina-oficial-morfo-29-intermedio-1",
       "materia": "MORFOFUNCION",
       "tema": "desarrollo humano y envejecimiento",
       "numero_pregunta": 1,
-      "pregunta": "¿Qué es la capacitación espermática?",
+      "pregunta": "Se sigue el retorno placentario con sangre oxigenada hacia el feto. Se pide el vaso del cordón por el que llega.\n¿Qué opción corresponde al caso?",
       "respuesta_correcta": "B",
-      "justificacion": "Cambios que permiten al espermatozoide adquirir capacidad fecundante.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "1132",
-      "pagina_impresa": "1104",
+      "justificacion": "La vena umbilical transporta hacia el feto la sangre oxigenada en la placenta.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "1142",
+      "pagina_impresa": "1114",
       "dificultad": "medio",
-      "opcion_a": "La primera célula diploide formada por la unión de los gametos.",
-      "opcion_b": "Cambios que permiten al espermatozoide adquirir capacidad fecundante.",
-      "opcion_c": "Un agente que puede causar malformaciones durante el desarrollo prenatal.",
-      "opcion_d": "Una serie de divisiones mitóticas sin aumento importante del tamaño total."
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Desarrollo humano y envejecimiento · Circulación fetal",
+          "page": 1142,
+          "printed": 1114,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-29",
+        "chapterNumber": 29,
+        "chapter": "Desarrollo humano y envejecimiento",
+        "section": "Circulación fetal",
+        "printedPages": [
+          1114
+        ],
+        "pdfPages": [
+          1142
+        ]
+      },
+      "opcion_a": "Arterias umbilicales",
+      "opcion_b": "Vena umbilical",
+      "opcion_c": "Conducto arterioso",
+      "opcion_d": "Agujero oval"
     },
     {
-      "content_id": "morfo-29-003",
+      "content_id": "evaluacion:medicina-oficial-morfo-29-intermedio-2",
       "materia": "MORFOFUNCION",
       "tema": "desarrollo humano y envejecimiento",
       "numero_pregunta": 2,
-      "pregunta": "¿Qué reacción libera enzimas del acrosoma para penetrar las cubiertas del ovocito?",
-      "respuesta_correcta": "A",
-      "justificacion": "La reacción acrosómica.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "1132",
-      "pagina_impresa": "1104",
+      "pregunta": "El trazador sale del feto y alcanza la placenta a través del cordón. Se identifican los vasos de ese trayecto de ida.\n¿Qué opción corresponde al caso?",
+      "respuesta_correcta": "D",
+      "justificacion": "Las arterias umbilicales llevan sangre del feto hacia la placenta.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "1142",
+      "pagina_impresa": "1114",
       "dificultad": "medio",
-      "opcion_a": "La reacción acrosómica.",
-      "opcion_b": "La gastrulación.",
-      "opcion_c": "Dos arterias y una vena.",
-      "opcion_d": "El conducto arterioso."
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Desarrollo humano y envejecimiento · Circulación fetal",
+          "page": 1142,
+          "printed": 1114,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-29",
+        "chapterNumber": 29,
+        "chapter": "Desarrollo humano y envejecimiento",
+        "section": "Circulación fetal",
+        "printedPages": [
+          1114
+        ],
+        "pdfPages": [
+          1142
+        ]
+      },
+      "opcion_a": "Conducto arterioso",
+      "opcion_b": "Agujero oval",
+      "opcion_c": "Vena umbilical",
+      "opcion_d": "Arterias umbilicales"
     },
     {
-      "content_id": "morfo-29-001",
+      "content_id": "evaluacion:medicina-oficial-morfo-29-intermedio-3",
       "materia": "MORFOFUNCION",
       "tema": "desarrollo humano y envejecimiento",
       "numero_pregunta": 3,
-      "pregunta": "¿Qué es un cigoto?",
-      "respuesta_correcta": "D",
-      "justificacion": "La primera célula diploide formada por la unión de los gametos.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "1133",
-      "pagina_impresa": "1105",
+      "pregunta": "Se estudia un paso directo de una aurícula a la otra, sin salir por el tronco pulmonar.\n¿Qué opción corresponde al caso?",
+      "respuesta_correcta": "A",
+      "justificacion": "El agujero oval permite un paso directo de sangre de la aurícula derecha a la izquierda.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "1142",
+      "pagina_impresa": "1114",
       "dificultad": "medio",
-      "opcion_a": "El deterioro gradual de la función asociado al envejecimiento.",
-      "opcion_b": "La fijación e incorporación del blastocisto al endometrio.",
-      "opcion_c": "Una serie de divisiones mitóticas sin aumento importante del tamaño total.",
-      "opcion_d": "La primera célula diploide formada por la unión de los gametos."
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Desarrollo humano y envejecimiento · Circulación fetal",
+          "page": 1142,
+          "printed": 1114,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-29",
+        "chapterNumber": 29,
+        "chapter": "Desarrollo humano y envejecimiento",
+        "section": "Circulación fetal",
+        "printedPages": [
+          1114
+        ],
+        "pdfPages": [
+          1142
+        ]
+      },
+      "opcion_a": "Agujero oval",
+      "opcion_b": "Conducto arterioso",
+      "opcion_c": "Arterias umbilicales",
+      "opcion_d": "Vena umbilical"
     },
     {
-      "content_id": "morfo-29-004",
+      "content_id": "evaluacion:medicina-oficial-morfo-29-intermedio-4",
       "materia": "MORFOFUNCION",
       "tema": "desarrollo humano y envejecimiento",
       "numero_pregunta": 4,
-      "pregunta": "¿Qué evita la reacción cortical del ovocito?",
-      "respuesta_correcta": "C",
-      "justificacion": "La entrada de espermatozoides adicionales o polispermia.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "1133",
-      "pagina_impresa": "1105",
+      "pregunta": "La sangre pasa directamente del tronco pulmonar a la aorta. Se busca la comunicación entre esos dos vasos, no entre aurículas.\n¿Qué opción corresponde al caso?",
+      "respuesta_correcta": "D",
+      "justificacion": "El conducto arterioso desvía sangre del tronco pulmonar hacia la aorta.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "1143",
+      "pagina_impresa": "1115",
       "dificultad": "medio",
-      "opcion_a": "Un componente fetal y otro materno.",
-      "opcion_b": "La reacción acrosómica.",
-      "opcion_c": "La entrada de espermatozoides adicionales o polispermia.",
-      "opcion_d": "La masa celular interna o embrioblasto."
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Desarrollo humano y envejecimiento · Circulación fetal",
+          "page": 1143,
+          "printed": 1115,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-29",
+        "chapterNumber": 29,
+        "chapter": "Desarrollo humano y envejecimiento",
+        "section": "Circulación fetal",
+        "printedPages": [
+          1115
+        ],
+        "pdfPages": [
+          1143
+        ]
+      },
+      "opcion_a": "Vena umbilical",
+      "opcion_b": "Agujero oval",
+      "opcion_c": "Arterias umbilicales",
+      "opcion_d": "Conducto arterioso"
     },
     {
-      "content_id": "morfo-29-005",
+      "content_id": "evaluacion:medicina-oficial-morfo-29-ampliacion-01-umss",
       "materia": "MORFOFUNCION",
       "tema": "desarrollo humano y envejecimiento",
       "numero_pregunta": 5,
-      "pregunta": "¿Qué es la segmentación del cigoto?",
-      "respuesta_correcta": "A",
-      "justificacion": "Una serie de divisiones mitóticas sin aumento importante del tamaño total.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "1134",
-      "pagina_impresa": "1106",
-      "dificultad": "medio",
-      "opcion_a": "Una serie de divisiones mitóticas sin aumento importante del tamaño total.",
-      "opcion_b": "La primera célula diploide formada por la unión de los gametos.",
-      "opcion_c": "Cambios que permiten al espermatozoide adquirir capacidad fecundante.",
-      "opcion_d": "Un agente que puede causar malformaciones durante el desarrollo prenatal."
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. La reacción acrosómica es el mecanismo del ovocito que impide la entrada de espermatozoides adicionales.\n2. La reacción cortical contribuye a impedir la entrada de espermatozoides adicionales.",
+      "respuesta_correcta": "B",
+      "justificacion": "1. Incorrecta. La reacción acrosómica libera enzimas del espermatozoide. El bloqueo de la polispermia se vincula a la reacción cortical del ovocito.\n2. Correcta. La modificación de las cubiertas del ovocito reduce la posibilidad de polispermia.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "1132, 1133",
+      "pagina_impresa": "1104, 1105",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Desarrollo humano y envejecimiento · Fecundación",
+          "page": 1132,
+          "printed": 1104,
+          "marks": []
+        },
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Desarrollo humano y envejecimiento · Fecundación",
+          "page": 1133,
+          "printed": 1105,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-29",
+        "chapterNumber": 29,
+        "chapter": "Desarrollo humano y envejecimiento",
+        "section": "Fecundación",
+        "printedPages": [
+          1104,
+          1105
+        ],
+        "pdfPages": [
+          1132,
+          1133
+        ],
+        "statements": [
+          {
+            "pdfPage": 1132,
+            "printedPage": 1104,
+            "section": "Fecundación",
+            "cardId": "morfo-29-003"
+          },
+          {
+            "pdfPage": 1133,
+            "printedPage": 1105,
+            "section": "Fecundación",
+            "cardId": "morfo-29-004"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. La reacción acrosómica libera enzimas del espermatozoide. El bloqueo de la polispermia se vincula a la reacción cortical del ovocito. 2. Correcta. La modificación de las cubiertas del ovocito reduce la posibilidad de polispermia.",
+        "B": "Solo la afirmación 2 es correcta.",
+        "C": "1. Incorrecta. La reacción acrosómica libera enzimas del espermatozoide. El bloqueo de la polispermia se vincula a la reacción cortical del ovocito.",
+        "D": "2. Correcta. La modificación de las cubiertas del ovocito reduce la posibilidad de polispermia."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "morfo-29-006",
+      "content_id": "evaluacion:medicina-oficial-morfo-29-ampliacion-02-umss",
       "materia": "MORFOFUNCION",
       "tema": "desarrollo humano y envejecimiento",
       "numero_pregunta": 6,
-      "pregunta": "¿Cómo se llaman las células formadas durante la segmentación?",
-      "respuesta_correcta": "C",
-      "justificacion": "Blastómeros.",
-      "fuente": "Saladin · Anatomía y fisiología",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. En la segmentación temprana, aumenta el número de células sin un aumento importante del tamaño total.\n2. La mórula se identifica por una gran cavidad interna rodeada de células.",
+      "respuesta_correcta": "A",
+      "justificacion": "1. Correcta. Las divisiones reparten el material inicial en blastómeros más pequeños.\n2. Incorrecta. La mórula es una masa sólida. La cavidad aparece en el blastocisto.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
       "paginas_pdf": "1134",
       "pagina_impresa": "1106",
-      "dificultad": "medio",
-      "opcion_a": "El endodermo.",
-      "opcion_b": "El mesodermo.",
-      "opcion_c": "Blastómeros.",
-      "opcion_d": "El ectodermo."
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Desarrollo humano y envejecimiento · Desarrollo temprano",
+          "page": 1134,
+          "printed": 1106,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-29",
+        "chapterNumber": 29,
+        "chapter": "Desarrollo humano y envejecimiento",
+        "section": "Desarrollo temprano",
+        "printedPages": [
+          1106
+        ],
+        "pdfPages": [
+          1134
+        ],
+        "statements": [
+          {
+            "pdfPage": 1134,
+            "printedPage": 1106,
+            "section": "Desarrollo temprano",
+            "cardId": "morfo-29-005"
+          },
+          {
+            "pdfPage": 1134,
+            "printedPage": 1106,
+            "section": "Desarrollo temprano",
+            "cardId": "morfo-29-007"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "Solo la afirmación 1 es correcta.",
+        "B": "1. Correcta. Las divisiones reparten el material inicial en blastómeros más pequeños. 2. Incorrecta. La mórula es una masa sólida. La cavidad aparece en el blastocisto.",
+        "C": "2. Incorrecta. La mórula es una masa sólida. La cavidad aparece en el blastocisto.",
+        "D": "1. Correcta. Las divisiones reparten el material inicial en blastómeros más pequeños."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "morfo-29-007",
+      "content_id": "evaluacion:medicina-oficial-morfo-29-ampliacion-03-umss",
       "materia": "MORFOFUNCION",
       "tema": "desarrollo humano y envejecimiento",
       "numero_pregunta": 7,
-      "pregunta": "¿Qué es la mórula?",
-      "respuesta_correcta": "B",
-      "justificacion": "Una masa sólida de blastómeros.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "1134",
-      "pagina_impresa": "1106",
-      "dificultad": "medio",
-      "opcion_a": "El deterioro gradual de la función asociado al envejecimiento.",
-      "opcion_b": "Una masa sólida de blastómeros.",
-      "opcion_c": "La fijación e incorporación del blastocisto al endometrio.",
-      "opcion_d": "La primera célula diploide formada por la unión de los gametos."
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. La masa celular interna del blastocisto contribuye principalmente a formar el embrión.\n2. La capa externa del blastocisto participa en la formación de la placenta.",
+      "respuesta_correcta": "C",
+      "justificacion": "1. Correcta. El embrioblasto ocupa el interior del blastocisto y aporta las células del embrión.\n2. Correcta. El trofoblasto contribuye a las estructuras placentarias fetales.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "1135",
+      "pagina_impresa": "1107",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Desarrollo humano y envejecimiento · Desarrollo temprano / Implantación",
+          "page": 1135,
+          "printed": 1107,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-29",
+        "chapterNumber": 29,
+        "chapter": "Desarrollo humano y envejecimiento",
+        "section": "Desarrollo temprano / Implantación",
+        "printedPages": [
+          1107
+        ],
+        "pdfPages": [
+          1135
+        ],
+        "statements": [
+          {
+            "pdfPage": 1135,
+            "printedPage": 1107,
+            "section": "Desarrollo temprano",
+            "cardId": "morfo-29-009"
+          },
+          {
+            "pdfPage": 1135,
+            "printedPage": 1107,
+            "section": "Implantación",
+            "cardId": "morfo-29-010"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "2. Correcta. El trofoblasto contribuye a las estructuras placentarias fetales.",
+        "B": "1. Correcta. El embrioblasto ocupa el interior del blastocisto y aporta las células del embrión.",
+        "C": "Ambas afirmaciones son correctas.",
+        "D": "1. Correcta. El embrioblasto ocupa el interior del blastocisto y aporta las células del embrión. 2. Correcta. El trofoblasto contribuye a las estructuras placentarias fetales."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "morfo-29-009",
+      "content_id": "evaluacion:medicina-oficial-morfo-29-ampliacion-04-umss",
       "materia": "MORFOFUNCION",
       "tema": "desarrollo humano y envejecimiento",
       "numero_pregunta": 8,
-      "pregunta": "¿Qué parte del blastocisto forma principalmente el embrión?",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. El sistema nervioso se origina principalmente del endodermo, igual que la epidermis.\n2. Gran parte del revestimiento del tubo digestivo se origina del mesodermo.",
       "respuesta_correcta": "D",
-      "justificacion": "La masa celular interna o embrioblasto.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "1135",
-      "pagina_impresa": "1107",
-      "dificultad": "medio",
-      "opcion_a": "La entrada de espermatozoides adicionales o polispermia.",
-      "opcion_b": "Las arterias umbilicales.",
-      "opcion_c": "Un componente fetal y otro materno.",
-      "opcion_d": "La masa celular interna o embrioblasto."
+      "justificacion": "1. Incorrecta. Tanto el sistema nervioso como la epidermis se originan del ectodermo.\n2. Incorrecta. Gran parte de ese epitelio procede del endodermo.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "1137",
+      "pagina_impresa": "1109",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Desarrollo humano y envejecimiento · Capas germinales",
+          "page": 1137,
+          "printed": 1109,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-29",
+        "chapterNumber": 29,
+        "chapter": "Desarrollo humano y envejecimiento",
+        "section": "Capas germinales",
+        "printedPages": [
+          1109
+        ],
+        "pdfPages": [
+          1137
+        ],
+        "statements": [
+          {
+            "pdfPage": 1137,
+            "printedPage": 1109,
+            "section": "Capas germinales",
+            "cardId": "morfo-29-013"
+          },
+          {
+            "pdfPage": 1137,
+            "printedPage": 1109,
+            "section": "Capas germinales",
+            "cardId": "morfo-29-015"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. Tanto el sistema nervioso como la epidermis se originan del ectodermo.",
+        "B": "2. Incorrecta. Gran parte de ese epitelio procede del endodermo.",
+        "C": "1. Incorrecta. Tanto el sistema nervioso como la epidermis se originan del ectodermo. 2. Incorrecta. Gran parte de ese epitelio procede del endodermo.",
+        "D": "Ninguna afirmación es correcta."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "morfo-29-010",
+      "content_id": "evaluacion:banco-verificado:morfo-29:fecundacion",
       "materia": "MORFOFUNCION",
       "tema": "desarrollo humano y envejecimiento",
       "numero_pregunta": 9,
-      "pregunta": "¿Qué capa externa del blastocisto contribuye a formar la placenta?",
-      "respuesta_correcta": "C",
-      "justificacion": "El trofoblasto.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "1135",
-      "pagina_impresa": "1107",
-      "dificultad": "medio",
-      "opcion_a": "La vena umbilical.",
-      "opcion_b": "El endodermo.",
-      "opcion_c": "El trofoblasto.",
-      "opcion_d": "El ectodermo."
-    },
-    {
-      "content_id": "morfo-29-008",
-      "materia": "MORFOFUNCION",
-      "tema": "desarrollo humano y envejecimiento",
-      "numero_pregunta": 10,
-      "pregunta": "¿Qué estructura sigue a la mórula y contiene una cavidad?",
-      "respuesta_correcta": "A",
-      "justificacion": "El blastocisto.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "1136",
-      "pagina_impresa": "1108",
-      "dificultad": "medio",
-      "opcion_a": "El blastocisto.",
-      "opcion_b": "El tubo neural.",
-      "opcion_c": "El trofoblasto.",
-      "opcion_d": "Dos arterias y una vena."
-    },
-    {
-      "content_id": "morfo-29-011",
-      "materia": "MORFOFUNCION",
-      "tema": "desarrollo humano y envejecimiento",
-      "numero_pregunta": 11,
-      "pregunta": "¿Qué es la implantación?",
+      "pregunta": "Después de que entra el primer espermatozoide, ¿qué mecanismo del ovocito limita la entrada de otros?",
       "respuesta_correcta": "B",
-      "justificacion": "La fijación e incorporación del blastocisto al endometrio.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "1136",
-      "pagina_impresa": "1108",
-      "dificultad": "medio",
-      "opcion_a": "Cambios que permiten al espermatozoide adquirir capacidad fecundante.",
-      "opcion_b": "La fijación e incorporación del blastocisto al endometrio.",
-      "opcion_c": "El deterioro gradual de la función asociado al envejecimiento.",
-      "opcion_d": "La primera célula diploide formada por la unión de los gametos."
-    },
-    {
-      "content_id": "morfo-29-012",
-      "materia": "MORFOFUNCION",
-      "tema": "desarrollo humano y envejecimiento",
-      "numero_pregunta": 12,
-      "pregunta": "¿Qué proceso establece ectodermo, mesodermo y endodermo?",
-      "respuesta_correcta": "A",
-      "justificacion": "La gastrulación.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "1136",
-      "pagina_impresa": "1108",
-      "dificultad": "medio",
-      "opcion_a": "La gastrulación.",
-      "opcion_b": "El tubo neural.",
-      "opcion_c": "El trofoblasto.",
-      "opcion_d": "El blastocisto."
-    },
-    {
-      "content_id": "morfo-29-013",
-      "materia": "MORFOFUNCION",
-      "tema": "desarrollo humano y envejecimiento",
-      "numero_pregunta": 13,
-      "pregunta": "¿Qué capa germinal origina el sistema nervioso y la epidermis?",
-      "respuesta_correcta": "A",
-      "justificacion": "El ectodermo.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "1137",
-      "pagina_impresa": "1109",
-      "dificultad": "medio",
-      "opcion_a": "El ectodermo.",
-      "opcion_b": "El trofoblasto.",
-      "opcion_c": "Blastómeros.",
-      "opcion_d": "El tubo neural."
-    },
-    {
-      "content_id": "morfo-29-014",
-      "materia": "MORFOFUNCION",
-      "tema": "desarrollo humano y envejecimiento",
-      "numero_pregunta": 14,
-      "pregunta": "¿Qué capa germinal origina músculos, huesos y gran parte del tejido conjuntivo?",
-      "respuesta_correcta": "C",
-      "justificacion": "El mesodermo.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "1137",
-      "pagina_impresa": "1109",
-      "dificultad": "medio",
-      "opcion_a": "El trofoblasto.",
-      "opcion_b": "El tubo neural.",
-      "opcion_c": "El mesodermo.",
-      "opcion_d": "Blastómeros."
-    },
-    {
-      "content_id": "morfo-29-015",
-      "materia": "MORFOFUNCION",
-      "tema": "desarrollo humano y envejecimiento",
-      "numero_pregunta": 15,
-      "pregunta": "¿Qué capa germinal origina gran parte del epitelio digestivo y respiratorio?",
-      "respuesta_correcta": "C",
-      "justificacion": "El endodermo.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "1137",
-      "pagina_impresa": "1109",
-      "dificultad": "medio",
-      "opcion_a": "Blastómeros.",
-      "opcion_b": "El tubo neural.",
-      "opcion_c": "El endodermo.",
-      "opcion_d": "El trofoblasto."
-    },
-    {
-      "content_id": "morfo-29-016",
-      "materia": "MORFOFUNCION",
-      "tema": "desarrollo humano y envejecimiento",
-      "numero_pregunta": 16,
-      "pregunta": "¿Qué estructura embrionaria origina el encéfalo y la médula espinal?",
-      "respuesta_correcta": "D",
-      "justificacion": "El tubo neural.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "1137",
-      "pagina_impresa": "1109",
-      "dificultad": "medio",
-      "opcion_a": "El endodermo.",
-      "opcion_b": "El blastocisto.",
-      "opcion_c": "El mesodermo.",
-      "opcion_d": "El tubo neural."
-    },
-    {
-      "content_id": "morfo-29-017",
-      "materia": "MORFOFUNCION",
-      "tema": "desarrollo humano y envejecimiento",
-      "numero_pregunta": 17,
-      "pregunta": "¿Qué membrana fetal contiene el líquido que rodea al embrión y al feto?",
-      "respuesta_correcta": "D",
-      "justificacion": "El amnios.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "1139",
-      "pagina_impresa": "1111",
-      "dificultad": "medio",
-      "opcion_a": "La vena umbilical.",
-      "opcion_b": "Blastómeros.",
-      "opcion_c": "El blastocisto.",
-      "opcion_d": "El amnios."
-    },
-    {
-      "content_id": "morfo-29-018",
-      "materia": "MORFOFUNCION",
-      "tema": "desarrollo humano y envejecimiento",
-      "numero_pregunta": 18,
-      "pregunta": "¿Qué membrana fetal forma vellosidades que participan en la placenta?",
-      "respuesta_correcta": "A",
-      "justificacion": "El corion.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "1139",
-      "pagina_impresa": "1111",
-      "dificultad": "medio",
-      "opcion_a": "El corion.",
-      "opcion_b": "El trofoblasto.",
-      "opcion_c": "El amnios.",
-      "opcion_d": "La vena umbilical."
-    },
-    {
-      "content_id": "morfo-29-019",
-      "materia": "MORFOFUNCION",
-      "tema": "desarrollo humano y envejecimiento",
-      "numero_pregunta": 19,
-      "pregunta": "¿Qué dos componentes forman la placenta?",
-      "respuesta_correcta": "D",
-      "justificacion": "Un componente fetal y otro materno.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "1141",
-      "pagina_impresa": "1113",
-      "dificultad": "medio",
-      "opcion_a": "La entrada de espermatozoides adicionales o polispermia.",
-      "opcion_b": "Las arterias umbilicales.",
-      "opcion_c": "La masa celular interna o embrioblasto.",
-      "opcion_d": "Un componente fetal y otro materno."
-    },
-    {
-      "content_id": "morfo-29-021",
-      "materia": "MORFOFUNCION",
-      "tema": "desarrollo humano y envejecimiento",
-      "numero_pregunta": 20,
-      "pregunta": "¿Cuántos vasos contiene normalmente el cordón umbilical?",
-      "respuesta_correcta": "A",
-      "justificacion": "Dos arterias y una vena.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "1142",
-      "pagina_impresa": "1114",
-      "dificultad": "medio",
-      "opcion_a": "Dos arterias y una vena.",
-      "opcion_b": "El blastocisto.",
-      "opcion_c": "El conducto arterioso.",
-      "opcion_d": "La reacción acrosómica."
-    },
-    {
-      "content_id": "morfo-29-022",
-      "materia": "MORFOFUNCION",
-      "tema": "desarrollo humano y envejecimiento",
-      "numero_pregunta": 21,
-      "pregunta": "¿Qué vaso lleva sangre oxigenada desde la placenta al feto?",
-      "respuesta_correcta": "B",
-      "justificacion": "La vena umbilical.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "1142",
-      "pagina_impresa": "1114",
-      "dificultad": "medio",
-      "opcion_a": "Las arterias umbilicales.",
-      "opcion_b": "La vena umbilical.",
-      "opcion_c": "El trofoblasto.",
-      "opcion_d": "El corion."
-    },
-    {
-      "content_id": "morfo-29-023",
-      "materia": "MORFOFUNCION",
-      "tema": "desarrollo humano y envejecimiento",
-      "numero_pregunta": 22,
-      "pregunta": "¿Qué vasos llevan sangre del feto hacia la placenta?",
-      "respuesta_correcta": "D",
-      "justificacion": "Las arterias umbilicales.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "1142",
-      "pagina_impresa": "1114",
-      "dificultad": "medio",
-      "opcion_a": "El trofoblasto.",
-      "opcion_b": "El conducto arterioso.",
+      "justificacion": "La descarga de los gránulos corticales modifica las cubiertas del ovocito y contribuye a bloquear la polispermia. La reacción acrosómica sucede en el espermatozoide.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "1132, 1133",
+      "pagina_impresa": "1104, 1105",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 29 · Fecundación",
+          "page": 1132,
+          "printed": 1104,
+          "marks": [
+            [
+              0.5272,
+              0.2746,
+              0.1393,
+              0.0111
+            ],
+            [
+              0.3206,
+              0.7265,
+              0.1236,
+              0.0093
+            ]
+          ]
+        },
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 29 · Fecundación",
+          "page": 1133,
+          "printed": 1105,
+          "marks": [
+            [
+              0.1829,
+              0.3699,
+              0.1142,
+              0.0111
+            ]
+          ]
+        }
+      ],
+      "source": {
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-29"
+      },
+      "opcion_a": "La segmentación del cigoto.",
+      "opcion_b": "La reacción cortical.",
       "opcion_c": "La reacción acrosómica.",
-      "opcion_d": "Las arterias umbilicales."
-    },
-    {
-      "content_id": "morfo-29-024",
-      "materia": "MORFOFUNCION",
-      "tema": "desarrollo humano y envejecimiento",
-      "numero_pregunta": 23,
-      "pregunta": "¿Qué comunicación permite el paso de sangre entre las aurículas fetales?",
-      "respuesta_correcta": "D",
-      "justificacion": "El agujero oval.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "1142",
-      "pagina_impresa": "1114",
-      "dificultad": "medio",
-      "opcion_a": "La acuaporina.",
-      "opcion_b": "La enartrosis.",
-      "opcion_c": "El conducto venoso.",
-      "opcion_d": "El agujero oval."
-    },
-    {
-      "content_id": "morfo-29-027",
-      "materia": "MORFOFUNCION",
-      "tema": "desarrollo humano y envejecimiento",
-      "numero_pregunta": 24,
-      "pregunta": "¿Cuándo comienza el período fetal?",
-      "respuesta_correcta": "D",
-      "justificacion": "Al inicio de la novena semana.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "1142",
-      "pagina_impresa": "1114",
-      "dificultad": "medio",
-      "opcion_a": "A temperatura constante, al aumentar el volumen disminuye la presión.",
-      "opcion_b": "Al alcanzar el umbral se genera completo; por debajo del umbral no se genera.",
-      "opcion_c": "Desde el sistema nervioso central hacia los efectores.",
-      "opcion_d": "Al inicio de la novena semana."
-    },
-    {
-      "content_id": "morfo-29-025",
-      "materia": "MORFOFUNCION",
-      "tema": "desarrollo humano y envejecimiento",
-      "numero_pregunta": 25,
-      "pregunta": "¿Qué conducto fetal comunica el tronco pulmonar con la aorta?",
-      "respuesta_correcta": "D",
-      "justificacion": "El conducto arterioso.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "1143",
-      "pagina_impresa": "1115",
-      "dificultad": "medio",
-      "opcion_a": "La reacción acrosómica.",
-      "opcion_b": "Dos arterias y una vena.",
-      "opcion_c": "El corion.",
-      "opcion_d": "El conducto arterioso."
-    },
-    {
-      "content_id": "morfo-29-026",
-      "materia": "MORFOFUNCION",
-      "tema": "desarrollo humano y envejecimiento",
-      "numero_pregunta": 26,
-      "pregunta": "¿Qué conducto fetal permite evitar gran parte del hígado?",
-      "respuesta_correcta": "B",
-      "justificacion": "El conducto venoso.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "1143",
-      "pagina_impresa": "1115",
-      "dificultad": "medio",
-      "opcion_a": "El agujero oval.",
-      "opcion_b": "El conducto venoso.",
-      "opcion_c": "La acuaporina.",
-      "opcion_d": "La oposición del pulgar."
-    },
-    {
-      "content_id": "morfo-29-029",
-      "materia": "MORFOFUNCION",
-      "tema": "desarrollo humano y envejecimiento",
-      "numero_pregunta": 27,
-      "pregunta": "¿Qué es un teratógeno?",
-      "respuesta_correcta": "D",
-      "justificacion": "Un agente que puede causar malformaciones durante el desarrollo prenatal.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "1148",
-      "pagina_impresa": "1120",
-      "dificultad": "medio",
-      "opcion_a": "Una serie de divisiones mitóticas sin aumento importante del tamaño total.",
-      "opcion_b": "Cambios que permiten al espermatozoide adquirir capacidad fecundante.",
-      "opcion_c": "La primera célula diploide formada por la unión de los gametos.",
-      "opcion_d": "Un agente que puede causar malformaciones durante el desarrollo prenatal."
-    },
-    {
-      "content_id": "morfo-29-030",
-      "materia": "MORFOFUNCION",
-      "tema": "desarrollo humano y envejecimiento",
-      "numero_pregunta": 28,
-      "pregunta": "¿Qué es la senescencia?",
-      "respuesta_correcta": "B",
-      "justificacion": "El deterioro gradual de la función asociado al envejecimiento.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "1152",
-      "pagina_impresa": "1124",
-      "dificultad": "medio",
-      "opcion_a": "La fijación e incorporación del blastocisto al endometrio.",
-      "opcion_b": "El deterioro gradual de la función asociado al envejecimiento.",
-      "opcion_c": "La primera célula diploide formada por la unión de los gametos.",
-      "opcion_d": "Cambios que permiten al espermatozoide adquirir capacidad fecundante."
-    },
-    {
-      "content_id": "morfo-29-028",
-      "materia": "MORFOFUNCION",
-      "tema": "desarrollo humano y envejecimiento",
-      "numero_pregunta": 29,
-      "pregunta": "¿Qué diferencia a los gemelos monocigóticos de los dicigóticos?",
-      "respuesta_correcta": "A",
-      "justificacion": "Monocigóticos: provienen de un cigoto. Dicigóticos: de dos ovocitos fecundados.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "1158",
-      "pagina_impresa": "1130",
-      "dificultad": "medio",
-      "opcion_a": "Monocigóticos: provienen de un cigoto. Dicigóticos: de dos ovocitos fecundados.",
-      "opcion_b": "Pronación: palma hacia atrás o abajo. Supinación: palma hacia delante o arriba.",
-      "opcion_c": "Hipertrofia: aumenta el tamaño celular. Hiperplasia: aumenta el número de células.",
-      "opcion_d": "El homocigoto tiene dos alelos iguales; el heterocigoto tiene dos diferentes."
+      "opcion_d": "La capacitación espermática."
     }
   ]
 }

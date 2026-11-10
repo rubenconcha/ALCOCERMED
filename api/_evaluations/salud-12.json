@@ -5,332 +5,480 @@
   "topic": "problema y objetivos de investigacion",
   "title": "Problema y objetivos de investigación",
   "number": 12,
-  "count": 19,
-  "duration": 19,
+  "count": 9,
+  "duration": 9,
   "source": "Educación en Salud e Investigación · Curso Básico 2025-2026",
   "questions": [
     {
-      "content_id": "salud-12-001",
+      "content_id": "evaluacion:medicina-oficial-salud-12-intermedio-1",
       "materia": "SALUD PUBLICA",
       "tema": "problema y objetivos de investigacion",
       "numero_pregunta": 1,
-      "pregunta": "¿Qué diferencia al objeto material del objeto formal de una investigación?",
+      "pregunta": "La idea inicial se reduce a investigar un problema en un solo municipio, en estudiantes de un curso y durante un semestre. Se identifica la decisión que acota el problema.\n¿Qué opción corresponde al caso?",
       "respuesta_correcta": "B",
-      "justificacion": "Material: descripción del problema. Formal: su abordaje teórico.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "51",
-      "pagina_impresa": "44",
+      "justificacion": "Delimitar el problema concreta el alcance y centra la investigación en una parte de la realidad.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+      "paginas_pdf": "55",
+      "pagina_impresa": "48",
       "dificultad": "medio",
-      "opcion_a": "Que los elementos estudiados puedan comprobarse y verificarse.",
-      "opcion_b": "Material: descripción del problema. Formal: su abordaje teórico.",
-      "opcion_c": "Afinar, concretar y estructurar formalmente la idea de investigación.",
-      "opcion_d": "Lo que se logrará y los límites y magnitud del estudio."
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Problema y objetivos de investigación · problema y objetivos de investigacion",
+          "page": 55,
+          "printed": 48,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-12",
+        "chapterNumber": 12,
+        "chapter": "Problema y objetivos de investigación",
+        "section": "problema y objetivos de investigacion",
+        "printedPages": [
+          48
+        ],
+        "pdfPages": [
+          55
+        ]
+      },
+      "opcion_a": "Viabilidad",
+      "opcion_b": "Delimitación del problema",
+      "opcion_c": "Objetivos de investigación",
+      "opcion_d": "Justificación del estudio"
     },
     {
-      "content_id": "salud-12-002",
+      "content_id": "evaluacion:medicina-oficial-salud-12-intermedio-2",
       "materia": "SALUD PUBLICA",
       "tema": "problema y objetivos de investigacion",
       "numero_pregunta": 2,
-      "pregunta": "¿Qué significa plantear el problema de investigación?",
-      "respuesta_correcta": "A",
-      "justificacion": "Afinar, concretar y estructurar formalmente la idea de investigación.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "51",
-      "pagina_impresa": "44",
+      "pregunta": "Antes de aprobar el diseño se comprueba si el presupuesto, el personal y el tiempo disponibles alcanzan para completar el estudio.\n¿Qué opción corresponde al caso?",
+      "respuesta_correcta": "C",
+      "justificacion": "Evaluar la viabilidad supone comprobar si hay tiempo, personal, equipo y recursos económicos para realizar el estudio.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+      "paginas_pdf": "53",
+      "pagina_impresa": "46",
       "dificultad": "medio",
-      "opcion_a": "Afinar, concretar y estructurar formalmente la idea de investigación.",
-      "opcion_b": "Cuando hay vacíos de conocimiento o dificultades que requieren una respuesta científica.",
-      "opcion_c": "Concretar su alcance teórico-conceptual y centrarlo en una parte de la realidad.",
-      "opcion_d": "Que los elementos estudiados puedan comprobarse y verificarse."
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Problema y objetivos de investigación · problema y objetivos de investigacion",
+          "page": 53,
+          "printed": 46,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-12",
+        "chapterNumber": 12,
+        "chapter": "Problema y objetivos de investigación",
+        "section": "problema y objetivos de investigacion",
+        "printedPages": [
+          46
+        ],
+        "pdfPages": [
+          53
+        ]
+      },
+      "opcion_a": "Objetivos de investigación",
+      "opcion_b": "Justificación del estudio",
+      "opcion_c": "Viabilidad",
+      "opcion_d": "Delimitación del problema"
     },
     {
-      "content_id": "salud-12-003",
+      "content_id": "evaluacion:medicina-oficial-salud-12-intermedio-3",
       "materia": "SALUD PUBLICA",
       "tema": "problema y objetivos de investigacion",
       "numero_pregunta": 3,
-      "pregunta": "¿Cuándo existe un problema que demanda investigación?",
-      "respuesta_correcta": "D",
-      "justificacion": "Cuando hay vacíos de conocimiento o dificultades que requieren una respuesta científica.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "51",
-      "pagina_impresa": "44",
+      "pregunta": "El equipo escribe «estimar la frecuencia del problema en la población seleccionada». Se pide identificar el componente al que pertenece esa meta.\n¿Qué opción corresponde al caso?",
+      "respuesta_correcta": "B",
+      "justificacion": "Los objetivos expresan lo que se espera lograr y precisan el alcance del estudio.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+      "paginas_pdf": "56",
+      "pagina_impresa": "49",
       "dificultad": "medio",
-      "opcion_a": "Afinar, concretar y estructurar formalmente la idea de investigación.",
-      "opcion_b": "Profundizar el conocimiento, la comprensión e interpretación de situaciones y fenómenos sociales.",
-      "opcion_c": "Concretar su alcance teórico-conceptual y centrarlo en una parte de la realidad.",
-      "opcion_d": "Cuando hay vacíos de conocimiento o dificultades que requieren una respuesta científica."
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Problema y objetivos de investigación · problema y objetivos de investigacion",
+          "page": 56,
+          "printed": 49,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-12",
+        "chapterNumber": 12,
+        "chapter": "Problema y objetivos de investigación",
+        "section": "problema y objetivos de investigacion",
+        "printedPages": [
+          49
+        ],
+        "pdfPages": [
+          56
+        ]
+      },
+      "opcion_a": "Delimitación del problema",
+      "opcion_b": "Objetivos de investigación",
+      "opcion_c": "Justificación del estudio",
+      "opcion_d": "Viabilidad"
     },
     {
-      "content_id": "salud-12-004",
+      "content_id": "evaluacion:medicina-oficial-salud-12-intermedio-4",
       "materia": "SALUD PUBLICA",
       "tema": "problema y objetivos de investigacion",
       "numero_pregunta": 4,
-      "pregunta": "¿Qué límites debe fijar la construcción del objeto de estudio?",
-      "respuesta_correcta": "B",
-      "justificacion": "Límites temporales y espaciales.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "52",
-      "pagina_impresa": "45",
-      "dificultad": "medio",
-      "opcion_a": "Una pregunta.",
-      "opcion_b": "Límites temporales y espaciales.",
-      "opcion_c": "La relación entre variables.",
-      "opcion_d": "Personal, tiempo, equipo y dinero."
-    },
-    {
-      "content_id": "salud-12-005",
-      "materia": "SALUD PUBLICA",
-      "tema": "problema y objetivos de investigacion",
-      "numero_pregunta": 5,
-      "pregunta": "¿Qué tres aspectos del investigador influyen en su percepción del problema?",
-      "respuesta_correcta": "A",
-      "justificacion": "Posición del actor, sistema de valores y experiencia.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "52",
-      "pagina_impresa": "45",
-      "dificultad": "medio",
-      "opcion_a": "Posición del actor, sistema de valores y experiencia.",
-      "opcion_b": "Afinar, concretar y estructurar formalmente la idea de investigación.",
-      "opcion_c": "Que los elementos estudiados puedan comprobarse y verificarse.",
-      "opcion_d": "Lo que se logrará y los límites y magnitud del estudio."
-    },
-    {
-      "content_id": "salud-12-006",
-      "materia": "SALUD PUBLICA",
-      "tema": "problema y objetivos de investigacion",
-      "numero_pregunta": 6,
-      "pregunta": "¿Qué recursos deben evaluarse al seleccionar un problema de investigación?",
-      "respuesta_correcta": "B",
-      "justificacion": "Personal, tiempo, equipo y dinero.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "53",
-      "pagina_impresa": "46",
-      "dificultad": "medio",
-      "opcion_a": "Límites temporales y espaciales.",
-      "opcion_b": "Personal, tiempo, equipo y dinero.",
-      "opcion_c": "Una pregunta.",
-      "opcion_d": "La relación entre variables."
-    },
-    {
-      "content_id": "salud-12-007",
-      "materia": "SALUD PUBLICA",
-      "tema": "problema y objetivos de investigacion",
-      "numero_pregunta": 7,
-      "pregunta": "¿Qué implica la viabilidad política del proyecto?",
+      "pregunta": "El equipo explica por qué el estudio es pertinente, qué conocimiento aportaría y quién podría aprovechar sus resultados.\n¿Qué opción corresponde al caso?",
       "respuesta_correcta": "C",
-      "justificacion": "Que las autoridades estén dispuestas a apoyarlo.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "53",
-      "pagina_impresa": "46",
-      "dificultad": "medio",
-      "opcion_a": "La relación entre variables.",
-      "opcion_b": "Límites temporales y espaciales.",
-      "opcion_c": "Que las autoridades estén dispuestas a apoyarlo.",
-      "opcion_d": "Objetivos, preguntas de investigación y justificación."
-    },
-    {
-      "content_id": "salud-12-008",
-      "materia": "SALUD PUBLICA",
-      "tema": "problema y objetivos de investigacion",
-      "numero_pregunta": 8,
-      "pregunta": "¿Qué aceptación requieren los sujetos del estudio?",
-      "respuesta_correcta": "B",
-      "justificacion": "Aceptar la investigación y sus procedimientos mediante consentimiento informado.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "53",
-      "pagina_impresa": "46",
-      "dificultad": "medio",
-      "opcion_a": "Concretar su alcance teórico-conceptual y centrarlo en una parte de la realidad.",
-      "opcion_b": "Aceptar la investigación y sus procedimientos mediante consentimiento informado.",
-      "opcion_c": "Debe ser adecuada para responderlo y estar bajo dominio del investigador.",
-      "opcion_d": "Cuando hay vacíos de conocimiento o dificultades que requieren una respuesta científica."
-    },
-    {
-      "content_id": "salud-12-009",
-      "materia": "SALUD PUBLICA",
-      "tema": "problema y objetivos de investigacion",
-      "numero_pregunta": 9,
-      "pregunta": "¿Qué relación debe tener la metodología con el problema seleccionado?",
-      "respuesta_correcta": "C",
-      "justificacion": "Debe ser adecuada para responderlo y estar bajo dominio del investigador.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "53",
-      "pagina_impresa": "46",
-      "dificultad": "medio",
-      "opcion_a": "Que los elementos estudiados puedan comprobarse y verificarse.",
-      "opcion_b": "Concretar su alcance teórico-conceptual y centrarlo en una parte de la realidad.",
-      "opcion_c": "Debe ser adecuada para responderlo y estar bajo dominio del investigador.",
-      "opcion_d": "Afinar, concretar y estructurar formalmente la idea de investigación."
-    },
-    {
-      "content_id": "salud-12-010",
-      "materia": "SALUD PUBLICA",
-      "tema": "problema y objetivos de investigacion",
-      "numero_pregunta": 10,
-      "pregunta": "¿Qué relación debe expresar el problema según los criterios de formulación?",
-      "respuesta_correcta": "D",
-      "justificacion": "La relación entre variables.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "54",
-      "pagina_impresa": "47",
-      "dificultad": "medio",
-      "opcion_a": "Límites temporales y espaciales.",
-      "opcion_b": "Una pregunta.",
-      "opcion_c": "Personal, tiempo, equipo y dinero.",
-      "opcion_d": "La relación entre variables."
-    },
-    {
-      "content_id": "salud-12-011",
-      "materia": "SALUD PUBLICA",
-      "tema": "problema y objetivos de investigacion",
-      "numero_pregunta": 11,
-      "pregunta": "¿Qué forma de enunciado recomienda el texto para formular el problema?",
-      "respuesta_correcta": "B",
-      "justificacion": "Una pregunta.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "54",
-      "pagina_impresa": "47",
-      "dificultad": "medio",
-      "opcion_a": "Personal, tiempo, equipo y dinero.",
-      "opcion_b": "Una pregunta.",
-      "opcion_c": "La relación entre variables.",
-      "opcion_d": "Límites temporales y espaciales."
-    },
-    {
-      "content_id": "salud-12-012",
-      "materia": "SALUD PUBLICA",
-      "tema": "problema y objetivos de investigacion",
-      "numero_pregunta": 12,
-      "pregunta": "¿Qué significa que un problema posibilite la prueba empírica?",
-      "respuesta_correcta": "D",
-      "justificacion": "Que los elementos estudiados puedan comprobarse y verificarse.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "55",
-      "pagina_impresa": "48",
-      "dificultad": "medio",
-      "opcion_a": "Concretar su alcance teórico-conceptual y centrarlo en una parte de la realidad.",
-      "opcion_b": "Posición del actor, sistema de valores y experiencia.",
-      "opcion_c": "Afinar, concretar y estructurar formalmente la idea de investigación.",
-      "opcion_d": "Que los elementos estudiados puedan comprobarse y verificarse."
-    },
-    {
-      "content_id": "salud-12-013",
-      "materia": "SALUD PUBLICA",
-      "tema": "problema y objetivos de investigacion",
-      "numero_pregunta": 13,
-      "pregunta": "¿Qué debe especificarse sobre la población al formular el problema?",
-      "respuesta_correcta": "C",
-      "justificacion": "En quiénes se realizará el estudio.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "55",
-      "pagina_impresa": "48",
-      "dificultad": "medio",
-      "opcion_a": "Sobre los determinantes de la salud.",
-      "opcion_b": "Por qué conviene realizarla, sus beneficios y la utilidad de los resultados.",
-      "opcion_c": "En quiénes se realizará el estudio.",
-      "opcion_d": "A las comunidades más pobres y vulnerables."
-    },
-    {
-      "content_id": "salud-12-014",
-      "materia": "SALUD PUBLICA",
-      "tema": "problema y objetivos de investigacion",
-      "numero_pregunta": 14,
-      "pregunta": "¿Qué significa delimitar un problema de investigación?",
-      "respuesta_correcta": "A",
-      "justificacion": "Concretar su alcance teórico-conceptual y centrarlo en una parte de la realidad.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "55",
-      "pagina_impresa": "48",
-      "dificultad": "medio",
-      "opcion_a": "Concretar su alcance teórico-conceptual y centrarlo en una parte de la realidad.",
-      "opcion_b": "Cuando hay vacíos de conocimiento o dificultades que requieren una respuesta científica.",
-      "opcion_c": "Afinar, concretar y estructurar formalmente la idea de investigación.",
-      "opcion_d": "Que los elementos estudiados puedan comprobarse y verificarse."
-    },
-    {
-      "content_id": "salud-12-015",
-      "materia": "SALUD PUBLICA",
-      "tema": "problema y objetivos de investigacion",
-      "numero_pregunta": 15,
-      "pregunta": "¿Qué tres elementos siguen a la delimitación y definición del problema?",
-      "respuesta_correcta": "C",
-      "justificacion": "Objetivos, preguntas de investigación y justificación.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "56",
-      "pagina_impresa": "49",
-      "dificultad": "medio",
-      "opcion_a": "La relación entre variables.",
-      "opcion_b": "Personal, tiempo, equipo y dinero.",
-      "opcion_c": "Objetivos, preguntas de investigación y justificación.",
-      "opcion_d": "Que las autoridades estén dispuestas a apoyarlo."
-    },
-    {
-      "content_id": "salud-12-016",
-      "materia": "SALUD PUBLICA",
-      "tema": "problema y objetivos de investigacion",
-      "numero_pregunta": 16,
-      "pregunta": "¿Qué resumen los objetivos de investigación?",
-      "respuesta_correcta": "B",
-      "justificacion": "Lo que se logrará y los límites y magnitud del estudio.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "56",
-      "pagina_impresa": "49",
-      "dificultad": "medio",
-      "opcion_a": "Posición del actor, sistema de valores y experiencia.",
-      "opcion_b": "Lo que se logrará y los límites y magnitud del estudio.",
-      "opcion_c": "Afinar, concretar y estructurar formalmente la idea de investigación.",
-      "opcion_d": "Material: descripción del problema. Formal: su abordaje teórico."
-    },
-    {
-      "content_id": "salud-12-017",
-      "materia": "SALUD PUBLICA",
-      "tema": "problema y objetivos de investigacion",
-      "numero_pregunta": 17,
-      "pregunta": "¿Qué características deben tener los objetivos de los estudios cuantitativos?",
-      "respuesta_correcta": "C",
-      "justificacion": "Ser cuantificables y observables.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "57",
-      "pagina_impresa": "50",
-      "dificultad": "medio",
-      "opcion_a": "Aumenta; la relación es directa.",
-      "opcion_b": "Es poco útil para poblaciones muy grandes.",
-      "opcion_c": "Ser cuantificables y observables.",
-      "opcion_d": "Regular."
-    },
-    {
-      "content_id": "salud-12-018",
-      "materia": "SALUD PUBLICA",
-      "tema": "problema y objetivos de investigacion",
-      "numero_pregunta": 18,
-      "pregunta": "¿Qué buscan los objetivos de investigación cualitativa?",
-      "respuesta_correcta": "C",
-      "justificacion": "Profundizar el conocimiento, la comprensión e interpretación de situaciones y fenómenos sociales.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "57",
-      "pagina_impresa": "50",
-      "dificultad": "medio",
-      "opcion_a": "Lo que se logrará y los límites y magnitud del estudio.",
-      "opcion_b": "Cuando hay vacíos de conocimiento o dificultades que requieren una respuesta científica.",
-      "opcion_c": "Profundizar el conocimiento, la comprensión e interpretación de situaciones y fenómenos sociales.",
-      "opcion_d": "Concretar su alcance teórico-conceptual y centrarlo en una parte de la realidad."
-    },
-    {
-      "content_id": "salud-12-020",
-      "materia": "SALUD PUBLICA",
-      "tema": "problema y objetivos de investigacion",
-      "numero_pregunta": 19,
-      "pregunta": "¿Qué debe explicar la justificación de una investigación?",
-      "respuesta_correcta": "D",
-      "justificacion": "Por qué conviene realizarla, sus beneficios y la utilidad de los resultados.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
+      "justificacion": "La justificación explica la conveniencia del estudio, sus beneficios y la utilidad esperada de los resultados.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
       "paginas_pdf": "59",
       "pagina_impresa": "52",
       "dificultad": "medio",
-      "opcion_a": "Durante la recolección de datos o en otras etapas de la investigación.",
-      "opcion_b": "En quiénes se realizará el estudio.",
-      "opcion_c": "A personas o grupos en riesgo o con predisposición a patologías concretas.",
-      "opcion_d": "Por qué conviene realizarla, sus beneficios y la utilidad de los resultados."
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Problema y objetivos de investigación · problema y objetivos de investigacion",
+          "page": 59,
+          "printed": 52,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-12",
+        "chapterNumber": 12,
+        "chapter": "Problema y objetivos de investigación",
+        "section": "problema y objetivos de investigacion",
+        "printedPages": [
+          52
+        ],
+        "pdfPages": [
+          59
+        ]
+      },
+      "opcion_a": "Objetivos de investigación",
+      "opcion_b": "Delimitación del problema",
+      "opcion_c": "Justificación del estudio",
+      "opcion_d": "Viabilidad"
+    },
+    {
+      "content_id": "evaluacion:medicina-oficial-salud-12-ampliacion-01-umss",
+      "materia": "SALUD PUBLICA",
+      "tema": "problema y objetivos de investigacion",
+      "numero_pregunta": 5,
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. El objeto formal es la descripción del problema y el objeto material es la perspectiva teórica desde la cual se examina.\n2. Precisar en qué lugar y período se investigará ayuda a delimitar el objeto de estudio.",
+      "respuesta_correcta": "B",
+      "justificacion": "1. Incorrecta. La descripción es el objeto material. El enfoque con el que se estudia es el formal.\n2. Correcta. Los límites espaciales y temporales acotan el problema.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+      "paginas_pdf": "51, 52",
+      "pagina_impresa": "44, 45",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Problema y objetivos de investigación · problema y objetivos de investigacion",
+          "page": 51,
+          "printed": 44,
+          "marks": []
+        },
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Problema y objetivos de investigación · problema y objetivos de investigacion",
+          "page": 52,
+          "printed": 45,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-12",
+        "chapterNumber": 12,
+        "chapter": "Problema y objetivos de investigación",
+        "section": "problema y objetivos de investigacion",
+        "printedPages": [
+          44,
+          45
+        ],
+        "pdfPages": [
+          51,
+          52
+        ],
+        "statements": [
+          {
+            "pdfPage": 51,
+            "printedPage": 44,
+            "section": "problema y objetivos de investigacion",
+            "cardId": "salud-12-001"
+          },
+          {
+            "pdfPage": 52,
+            "printedPage": 45,
+            "section": "problema y objetivos de investigacion",
+            "cardId": "salud-12-004"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. La descripción es el objeto material. El enfoque con el que se estudia es el formal. 2. Correcta. Los límites espaciales y temporales acotan el problema.",
+        "B": "Solo la afirmación 2 es correcta.",
+        "C": "1. Incorrecta. La descripción es el objeto material. El enfoque con el que se estudia es el formal.",
+        "D": "2. Correcta. Los límites espaciales y temporales acotan el problema."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
+    },
+    {
+      "content_id": "evaluacion:medicina-oficial-salud-12-ampliacion-02-umss",
+      "materia": "SALUD PUBLICA",
+      "tema": "problema y objetivos de investigacion",
+      "numero_pregunta": 6,
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. La disposición de las autoridades a apoyar el proyecto forma parte de su viabilidad política.\n2. Si las autoridades apoyan el estudio, el consentimiento informado de los sujetos deja de ser un criterio.",
+      "respuesta_correcta": "A",
+      "justificacion": "1. Correcta. El apoyo institucional contribuye a que el proyecto pueda ejecutarse.\n2. Incorrecta. La aprobación de autoridades y la aceptación informada de los sujetos son cuestiones diferentes.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+      "paginas_pdf": "53",
+      "pagina_impresa": "46",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Problema y objetivos de investigación · problema y objetivos de investigacion",
+          "page": 53,
+          "printed": 46,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-12",
+        "chapterNumber": 12,
+        "chapter": "Problema y objetivos de investigación",
+        "section": "problema y objetivos de investigacion",
+        "printedPages": [
+          46
+        ],
+        "pdfPages": [
+          53
+        ],
+        "statements": [
+          {
+            "pdfPage": 53,
+            "printedPage": 46,
+            "section": "problema y objetivos de investigacion",
+            "cardId": "salud-12-007"
+          },
+          {
+            "pdfPage": 53,
+            "printedPage": 46,
+            "section": "problema y objetivos de investigacion",
+            "cardId": "salud-12-008"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "Solo la afirmación 1 es correcta.",
+        "B": "1. Correcta. El apoyo institucional contribuye a que el proyecto pueda ejecutarse. 2. Incorrecta. La aprobación de autoridades y la aceptación informada de los sujetos son cuestiones diferentes.",
+        "C": "2. Incorrecta. La aprobación de autoridades y la aceptación informada de los sujetos son cuestiones diferentes.",
+        "D": "1. Correcta. El apoyo institucional contribuye a que el proyecto pueda ejecutarse."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
+    },
+    {
+      "content_id": "evaluacion:medicina-oficial-salud-12-ampliacion-03-umss",
+      "materia": "SALUD PUBLICA",
+      "tema": "problema y objetivos de investigacion",
+      "numero_pregunta": 7,
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Una formulación que permite observar y verificar sus elementos cumple el criterio de prueba empírica.\n2. Precisar quiénes serán estudiados forma parte de formular un problema investigable.",
+      "respuesta_correcta": "C",
+      "justificacion": "1. Correcta. La pregunta debe poder contrastarse con información del estudio.\n2. Correcta. Delimitar la población concreta a la que se refiere el problema ayuda a responderlo.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+      "paginas_pdf": "55",
+      "pagina_impresa": "48",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Problema y objetivos de investigación · problema y objetivos de investigacion",
+          "page": 55,
+          "printed": 48,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-12",
+        "chapterNumber": 12,
+        "chapter": "Problema y objetivos de investigación",
+        "section": "problema y objetivos de investigacion",
+        "printedPages": [
+          48
+        ],
+        "pdfPages": [
+          55
+        ],
+        "statements": [
+          {
+            "pdfPage": 55,
+            "printedPage": 48,
+            "section": "problema y objetivos de investigacion",
+            "cardId": "salud-12-012"
+          },
+          {
+            "pdfPage": 55,
+            "printedPage": 48,
+            "section": "problema y objetivos de investigacion",
+            "cardId": "salud-12-013"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "2. Correcta. Delimitar la población concreta a la que se refiere el problema ayuda a responderlo.",
+        "B": "1. Correcta. La pregunta debe poder contrastarse con información del estudio.",
+        "C": "Ambas afirmaciones son correctas.",
+        "D": "1. Correcta. La pregunta debe poder contrastarse con información del estudio. 2. Correcta. Delimitar la población concreta a la que se refiere el problema ayuda a responderlo."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
+    },
+    {
+      "content_id": "evaluacion:medicina-oficial-salud-12-ampliacion-04-umss",
+      "materia": "SALUD PUBLICA",
+      "tema": "problema y objetivos de investigacion",
+      "numero_pregunta": 8,
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. En un estudio cuantitativo se recomienda usar objetivos que no permitan observación ni cuantificación.\n2. En el enfoque cualitativo, cualquier modificación de las preguntas durante el estudio invalida el diseño por definición.",
+      "respuesta_correcta": "D",
+      "justificacion": "1. Incorrecta. Los objetivos cuantitativos deben poder observarse y cuantificarse.\n2. Incorrecta. Las preguntas pueden afinarse conforme se desarrolla la investigación.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+      "paginas_pdf": "57",
+      "pagina_impresa": "50",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Problema y objetivos de investigación · problema y objetivos de investigacion",
+          "page": 57,
+          "printed": 50,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-12",
+        "chapterNumber": 12,
+        "chapter": "Problema y objetivos de investigación",
+        "section": "problema y objetivos de investigacion",
+        "printedPages": [
+          50
+        ],
+        "pdfPages": [
+          57
+        ],
+        "statements": [
+          {
+            "pdfPage": 57,
+            "printedPage": 50,
+            "section": "problema y objetivos de investigacion",
+            "cardId": "salud-12-017"
+          },
+          {
+            "pdfPage": 57,
+            "printedPage": 50,
+            "section": "problema y objetivos de investigacion",
+            "cardId": "salud-12-019"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. Los objetivos cuantitativos deben poder observarse y cuantificarse.",
+        "B": "2. Incorrecta. Las preguntas pueden afinarse conforme se desarrolla la investigación.",
+        "C": "1. Incorrecta. Los objetivos cuantitativos deben poder observarse y cuantificarse. 2. Incorrecta. Las preguntas pueden afinarse conforme se desarrolla la investigación.",
+        "D": "Ninguna afirmación es correcta."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
+    },
+    {
+      "content_id": "evaluacion:banco-verificado:salud-12:planteamiento",
+      "materia": "SALUD PUBLICA",
+      "tema": "problema y objetivos de investigacion",
+      "numero_pregunta": 9,
+      "pregunta": "Una idea de investigación ya nombra a la población y al lugar, pero todavía no dice en qué periodo se estudiará el fenómeno. ¿Qué aspecto falta para delimitar el objeto de estudio?",
+      "respuesta_correcta": "B",
+      "justificacion": "El compendio pide delimitar el objeto en tiempo y espacio. El lugar y la población ya se indicaron. Falta precisar el periodo.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+      "paginas_pdf": "51, 52",
+      "pagina_impresa": "44, 45",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "Educación en Salud",
+          "section": "El problema y el objeto de estudio",
+          "page": 51,
+          "printed": 44,
+          "marks": [
+            [
+              0.2369,
+              0.6277,
+              0.1876,
+              0.0179
+            ]
+          ]
+        },
+        {
+          "slug": "educacion-salud",
+          "label": "Educación en Salud",
+          "section": "El problema y el objeto de estudio",
+          "page": 52,
+          "printed": 45,
+          "marks": [
+            [
+              0.1505,
+              0.35,
+              0.0955,
+              0.0168
+            ]
+          ]
+        }
+      ],
+      "source": {
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-12"
+      },
+      "opcion_a": "La descripción inicial del fenómeno.",
+      "opcion_b": "El límite temporal.",
+      "opcion_c": "El límite espacial.",
+      "opcion_d": "La identificación de la población."
     }
   ]
 }

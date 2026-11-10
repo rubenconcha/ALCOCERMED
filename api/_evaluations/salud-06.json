@@ -5,230 +5,480 @@
   "topic": "atencion primaria de salud",
   "title": "Atención primaria de salud",
   "number": 6,
-  "count": 13,
-  "duration": 13,
+  "count": 9,
+  "duration": 9,
   "source": "Educación en Salud e Investigación · Curso Básico 2025-2026",
   "questions": [
     {
-      "content_id": "salud-06-002",
+      "content_id": "evaluacion:medicina-oficial-salud-06-intermedio-1",
       "materia": "SALUD PUBLICA",
       "tema": "atencion primaria de salud",
       "numero_pregunta": 1,
-      "pregunta": "¿En qué métodos y tecnologías debe basarse la APS?",
-      "respuesta_correcta": "C",
-      "justificacion": "Prácticos, científicamente fundados y socialmente aceptables.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "16",
-      "pagina_impresa": "15",
+      "pregunta": "El centro reorganiza el ingreso para que personas de zonas alejadas puedan llegar y usar los servicios. El problema es poder entrar al sistema.\n¿Qué opción corresponde al caso?",
+      "respuesta_correcta": "D",
+      "justificacion": "La accesibilidad busca reducir obstáculos al ingreso, como las barreras geográficas, económicas y culturales.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+      "paginas_pdf": "17",
+      "pagina_impresa": "16",
       "dificultad": "medio",
-      "opcion_a": "Organizacionales, geográficas, económicas, culturales y emocionales.",
-      "opcion_b": "Promoción, prevención, tratamiento y rehabilitación.",
-      "opcion_c": "Prácticos, científicamente fundados y socialmente aceptables.",
-      "opcion_d": "Los recursos físicos, humanos y organizativos disponibles."
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Atención primaria de salud · atencion primaria de salud",
+          "page": 17,
+          "printed": 16,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-06",
+        "chapterNumber": 6,
+        "chapter": "Atención primaria de salud",
+        "section": "atencion primaria de salud",
+        "printedPages": [
+          16
+        ],
+        "pdfPages": [
+          17
+        ]
+      },
+      "opcion_a": "Integralidad",
+      "opcion_b": "Coordinación",
+      "opcion_c": "Longitudinalidad",
+      "opcion_d": "Accesibilidad"
     },
     {
-      "content_id": "salud-06-004",
+      "content_id": "evaluacion:medicina-oficial-salud-06-intermedio-2",
       "materia": "SALUD PUBLICA",
       "tema": "atencion primaria de salud",
       "numero_pregunta": 2,
-      "pregunta": "¿Qué nivel de contacto representa la APS con el sistema de salud?",
-      "respuesta_correcta": "D",
-      "justificacion": "El primer nivel de contacto de individuos, familias y comunidad.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
+      "pregunta": "El centro y un hospital comparten el plan tras una derivación para que las acciones de ambos niveles se complementen.\n¿Qué opción corresponde al caso?",
+      "respuesta_correcta": "A",
+      "justificacion": "La coordinación conecta acciones de equipos y niveles para dar continuidad a la atención.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
       "paginas_pdf": "17",
       "pagina_impresa": "16",
       "dificultad": "medio",
-      "opcion_a": "Seguimiento de una persona o familia a lo largo del tiempo por el mismo profesional o equipo.",
-      "opcion_b": "Las actividades, procedimientos y prácticas que realiza el equipo de salud.",
-      "opcion_c": "Los efectos medibles: salud poblacional, satisfacción, equidad, eficiencia e impacto.",
-      "opcion_d": "El primer nivel de contacto de individuos, familias y comunidad."
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Atención primaria de salud · atencion primaria de salud",
+          "page": 17,
+          "printed": 16,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-06",
+        "chapterNumber": 6,
+        "chapter": "Atención primaria de salud",
+        "section": "atencion primaria de salud",
+        "printedPages": [
+          16
+        ],
+        "pdfPages": [
+          17
+        ]
+      },
+      "opcion_a": "Coordinación",
+      "opcion_b": "Accesibilidad",
+      "opcion_c": "Integralidad",
+      "opcion_d": "Longitudinalidad"
     },
     {
-      "content_id": "salud-06-005",
+      "content_id": "evaluacion:medicina-oficial-salud-06-intermedio-3",
       "materia": "SALUD PUBLICA",
       "tema": "atencion primaria de salud",
       "numero_pregunta": 3,
-      "pregunta": "¿Cuáles son las cuatro características básicas de la atención primaria?",
-      "respuesta_correcta": "B",
-      "justificacion": "Accesibilidad, coordinación, integralidad y longitudinalidad.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
+      "pregunta": "Una red evalúa si ofrece un conjunto que incluye desde la promoción hasta la rehabilitación, en lugar de limitarse a tratar episodios.\n¿Qué opción corresponde al caso?",
+      "respuesta_correcta": "A",
+      "justificacion": "La integralidad reúne promoción, prevención, tratamiento y rehabilitación en la atención.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
       "paginas_pdf": "17",
       "pagina_impresa": "16",
       "dificultad": "medio",
-      "opcion_a": "Probabilístico y no probabilístico.",
-      "opcion_b": "Accesibilidad, coordinación, integralidad y longitudinalidad.",
-      "opcion_c": "Mesocúrtica, leptocúrtica y platicúrtica.",
-      "opcion_d": "Media aritmética, mediana y moda."
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Atención primaria de salud · atencion primaria de salud",
+          "page": 17,
+          "printed": 16,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-06",
+        "chapterNumber": 6,
+        "chapter": "Atención primaria de salud",
+        "section": "atencion primaria de salud",
+        "printedPages": [
+          16
+        ],
+        "pdfPages": [
+          17
+        ]
+      },
+      "opcion_a": "Integralidad",
+      "opcion_b": "Coordinación",
+      "opcion_c": "Longitudinalidad",
+      "opcion_d": "Accesibilidad"
     },
     {
-      "content_id": "salud-06-006",
+      "content_id": "evaluacion:medicina-oficial-salud-06-intermedio-4",
       "materia": "SALUD PUBLICA",
       "tema": "atencion primaria de salud",
       "numero_pregunta": 4,
-      "pregunta": "¿Qué barreras debe superar la accesibilidad en APS?",
-      "respuesta_correcta": "C",
-      "justificacion": "Organizacionales, geográficas, económicas, culturales y emocionales.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
+      "pregunta": "Una familia consulta durante varios años con su equipo habitual. La característica evaluada es la continuidad de esa relación.\n¿Qué opción corresponde al caso?",
+      "respuesta_correcta": "D",
+      "justificacion": "La longitudinalidad se reconoce por el seguimiento sostenido por el mismo profesional o equipo.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
       "paginas_pdf": "17",
       "pagina_impresa": "16",
       "dificultad": "medio",
-      "opcion_a": "Los recursos físicos, humanos y organizativos disponibles.",
-      "opcion_b": "Prácticos, científicamente fundados y socialmente aceptables.",
-      "opcion_c": "Organizacionales, geográficas, económicas, culturales y emocionales.",
-      "opcion_d": "Promoción, prevención, tratamiento y rehabilitación."
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Atención primaria de salud · atencion primaria de salud",
+          "page": 17,
+          "printed": 16,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-06",
+        "chapterNumber": 6,
+        "chapter": "Atención primaria de salud",
+        "section": "atencion primaria de salud",
+        "printedPages": [
+          16
+        ],
+        "pdfPages": [
+          17
+        ]
+      },
+      "opcion_a": "Coordinación",
+      "opcion_b": "Integralidad",
+      "opcion_c": "Accesibilidad",
+      "opcion_d": "Longitudinalidad"
     },
     {
-      "content_id": "salud-06-007",
+      "content_id": "evaluacion:medicina-oficial-salud-06-ampliacion-01-umss",
       "materia": "SALUD PUBLICA",
       "tema": "atencion primaria de salud",
       "numero_pregunta": 5,
-      "pregunta": "¿Qué significa coordinación en APS?",
-      "respuesta_correcta": "C",
-      "justificacion": "Integrar acciones entre niveles de atención y dentro del equipo, asegurando continuidad asistencial.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "17",
-      "pagina_impresa": "16",
-      "dificultad": "medio",
-      "opcion_a": "Los efectos medibles: salud poblacional, satisfacción, equidad, eficiencia e impacto.",
-      "opcion_b": "Cómo la enfermedad depende de problemas sociales, los causa o agrava, y cómo contribuir a resolverlos.",
-      "opcion_c": "Integrar acciones entre niveles de atención y dentro del equipo, asegurando continuidad asistencial.",
-      "opcion_d": "Seguimiento de una persona o familia a lo largo del tiempo por el mismo profesional o equipo."
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Alma-Ata define la APS por aplicar la tecnología más compleja, aunque la comunidad no la considere aceptable.\n2. El costo de la APS debe poder ser asumido por la comunidad y el país.",
+      "respuesta_correcta": "B",
+      "justificacion": "1. Incorrecta. Los métodos deben ser prácticos, científicamente fundados y socialmente aceptables.\n2. Correcta. La definición incluye la viabilidad económica en su contexto.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+      "paginas_pdf": "16",
+      "pagina_impresa": "15",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Atención primaria de salud · atencion primaria de salud",
+          "page": 16,
+          "printed": 15,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-06",
+        "chapterNumber": 6,
+        "chapter": "Atención primaria de salud",
+        "section": "atencion primaria de salud",
+        "printedPages": [
+          15
+        ],
+        "pdfPages": [
+          16
+        ],
+        "statements": [
+          {
+            "pdfPage": 16,
+            "printedPage": 15,
+            "section": "atencion primaria de salud",
+            "cardId": "salud-06-002"
+          },
+          {
+            "pdfPage": 16,
+            "printedPage": 15,
+            "section": "atencion primaria de salud",
+            "cardId": "salud-06-003"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. Los métodos deben ser prácticos, científicamente fundados y socialmente aceptables. 2. Correcta. La definición incluye la viabilidad económica en su contexto.",
+        "B": "Solo la afirmación 2 es correcta.",
+        "C": "1. Incorrecta. Los métodos deben ser prácticos, científicamente fundados y socialmente aceptables.",
+        "D": "2. Correcta. La definición incluye la viabilidad económica en su contexto."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "salud-06-008",
+      "content_id": "evaluacion:medicina-oficial-salud-06-ampliacion-02-umss",
       "materia": "SALUD PUBLICA",
       "tema": "atencion primaria de salud",
       "numero_pregunta": 6,
-      "pregunta": "¿Qué abarca la integralidad en APS?",
-      "respuesta_correcta": "B",
-      "justificacion": "Promoción, prevención, tratamiento y rehabilitación.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. La APS proporciona un primer punto de contacto para personas, familias y comunidades.\n2. La integralidad y la continuidad en el tiempo quedan fuera de las características básicas de la APS.",
+      "respuesta_correcta": "A",
+      "justificacion": "1. Correcta. Acerca el sistema de salud a la población en su vida cotidiana.\n2. Incorrecta. Integralidad y longitudinalidad figuran junto a accesibilidad y coordinación.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
       "paginas_pdf": "17",
       "pagina_impresa": "16",
-      "dificultad": "medio",
-      "opcion_a": "Los recursos físicos, humanos y organizativos disponibles.",
-      "opcion_b": "Promoción, prevención, tratamiento y rehabilitación.",
-      "opcion_c": "Avedis Donabedian.",
-      "opcion_d": "Prácticos, científicamente fundados y socialmente aceptables."
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Atención primaria de salud · atencion primaria de salud",
+          "page": 17,
+          "printed": 16,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-06",
+        "chapterNumber": 6,
+        "chapter": "Atención primaria de salud",
+        "section": "atencion primaria de salud",
+        "printedPages": [
+          16
+        ],
+        "pdfPages": [
+          17
+        ],
+        "statements": [
+          {
+            "pdfPage": 17,
+            "printedPage": 16,
+            "section": "atencion primaria de salud",
+            "cardId": "salud-06-004"
+          },
+          {
+            "pdfPage": 17,
+            "printedPage": 16,
+            "section": "atencion primaria de salud",
+            "cardId": "salud-06-005"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "Solo la afirmación 1 es correcta.",
+        "B": "1. Correcta. Acerca el sistema de salud a la población en su vida cotidiana. 2. Incorrecta. Integralidad y longitudinalidad figuran junto a accesibilidad y coordinación.",
+        "C": "2. Incorrecta. Integralidad y longitudinalidad figuran junto a accesibilidad y coordinación.",
+        "D": "1. Correcta. Acerca el sistema de salud a la población en su vida cotidiana."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "salud-06-009",
+      "content_id": "evaluacion:medicina-oficial-salud-06-ampliacion-03-umss",
       "materia": "SALUD PUBLICA",
       "tema": "atencion primaria de salud",
       "numero_pregunta": 7,
-      "pregunta": "¿Qué proporción de necesidades de salud puede resolver la atención primaria según el texto?",
-      "respuesta_correcta": "A",
-      "justificacion": "Alrededor del 80–90 %.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "17",
-      "pagina_impresa": "16",
-      "dificultad": "medio",
-      "opcion_a": "Alrededor del 80–90 %.",
-      "opcion_b": "La posición (n + 1)/2.",
-      "opcion_c": "20 %.",
-      "opcion_d": "Excluye 50 e incluye 55."
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Contar personal disponible y revisar la infraestructura son mediciones de estructura.\n2. Examinar si el equipo realiza los procedimientos acordados evalúa el proceso.",
+      "respuesta_correcta": "C",
+      "justificacion": "1. Correcta. La estructura examina con qué recursos humanos, físicos y organizativos se cuenta.\n2. Correcta. El proceso se refiere a las acciones que efectivamente se llevan a cabo.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+      "paginas_pdf": "17, 18",
+      "pagina_impresa": "16, 17",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Atención primaria de salud · atencion primaria de salud",
+          "page": 17,
+          "printed": 16,
+          "marks": []
+        },
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Atención primaria de salud · atencion primaria de salud",
+          "page": 18,
+          "printed": 17,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-06",
+        "chapterNumber": 6,
+        "chapter": "Atención primaria de salud",
+        "section": "atencion primaria de salud",
+        "printedPages": [
+          16,
+          17
+        ],
+        "pdfPages": [
+          17,
+          18
+        ],
+        "statements": [
+          {
+            "pdfPage": 17,
+            "printedPage": 16,
+            "section": "atencion primaria de salud",
+            "cardId": "salud-06-011"
+          },
+          {
+            "pdfPage": 18,
+            "printedPage": 17,
+            "section": "atencion primaria de salud",
+            "cardId": "salud-06-012"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "2. Correcta. El proceso se refiere a las acciones que efectivamente se llevan a cabo.",
+        "B": "1. Correcta. La estructura examina con qué recursos humanos, físicos y organizativos se cuenta.",
+        "C": "Ambas afirmaciones son correctas.",
+        "D": "1. Correcta. La estructura examina con qué recursos humanos, físicos y organizativos se cuenta. 2. Correcta. El proceso se refiere a las acciones que efectivamente se llevan a cabo."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "salud-06-010",
+      "content_id": "evaluacion:medicina-oficial-salud-06-ampliacion-04-umss",
       "materia": "SALUD PUBLICA",
       "tema": "atencion primaria de salud",
       "numero_pregunta": 8,
-      "pregunta": "¿Qué significa longitudinalidad en APS?",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. En el modelo de Donabedian, la satisfacción de los usuarios se clasifica como estructura.\n2. La medicina social estudia la enfermedad sin considerar cómo las condiciones sociales pueden causarla o agravarla.",
       "respuesta_correcta": "D",
-      "justificacion": "Seguimiento de una persona o familia a lo largo del tiempo por el mismo profesional o equipo.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "17",
-      "pagina_impresa": "16",
-      "dificultad": "medio",
-      "opcion_a": "Los efectos medibles: salud poblacional, satisfacción, equidad, eficiencia e impacto.",
-      "opcion_b": "Las actividades, procedimientos y prácticas que realiza el equipo de salud.",
-      "opcion_c": "Integrar acciones entre niveles de atención y dentro del equipo, asegurando continuidad asistencial.",
-      "opcion_d": "Seguimiento de una persona o familia a lo largo del tiempo por el mismo profesional o equipo."
+      "justificacion": "1. Incorrecta. La satisfacción se valora como un resultado de la atención.\n2. Incorrecta. Su análisis relaciona enfermedad y problemas sociales y considera cómo contribuir a resolverlos.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+      "paginas_pdf": "18",
+      "pagina_impresa": "17",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Atención primaria de salud · atencion primaria de salud",
+          "page": 18,
+          "printed": 17,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-06",
+        "chapterNumber": 6,
+        "chapter": "Atención primaria de salud",
+        "section": "atencion primaria de salud",
+        "printedPages": [
+          17
+        ],
+        "pdfPages": [
+          18
+        ],
+        "statements": [
+          {
+            "pdfPage": 18,
+            "printedPage": 17,
+            "section": "atencion primaria de salud",
+            "cardId": "salud-06-013"
+          },
+          {
+            "pdfPage": 18,
+            "printedPage": 17,
+            "section": "atencion primaria de salud",
+            "cardId": "salud-06-015"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. La satisfacción se valora como un resultado de la atención.",
+        "B": "2. Incorrecta. Su análisis relaciona enfermedad y problemas sociales y considera cómo contribuir a resolverlos.",
+        "C": "1. Incorrecta. La satisfacción se valora como un resultado de la atención. 2. Incorrecta. Su análisis relaciona enfermedad y problemas sociales y considera cómo contribuir a resolverlos.",
+        "D": "Ninguna afirmación es correcta."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "salud-06-011",
+      "content_id": "evaluacion:banco-verificado:salud-06:aps",
       "materia": "SALUD PUBLICA",
       "tema": "atencion primaria de salud",
       "numero_pregunta": 9,
-      "pregunta": "¿Qué evalúa la estructura en APS?",
-      "respuesta_correcta": "D",
-      "justificacion": "Los recursos físicos, humanos y organizativos disponibles.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "17",
-      "pagina_impresa": "16",
-      "dificultad": "medio",
-      "opcion_a": "Promoción, prevención, tratamiento y rehabilitación.",
-      "opcion_b": "Prácticos, científicamente fundados y socialmente aceptables.",
-      "opcion_c": "Organizacionales, geográficas, económicas, culturales y emocionales.",
-      "opcion_d": "Los recursos físicos, humanos y organizativos disponibles."
-    },
-    {
-      "content_id": "salud-06-012",
-      "materia": "SALUD PUBLICA",
-      "tema": "atencion primaria de salud",
-      "numero_pregunta": 10,
-      "pregunta": "¿Qué evalúa el proceso en APS?",
-      "respuesta_correcta": "C",
-      "justificacion": "Las actividades, procedimientos y prácticas que realiza el equipo de salud.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "18",
-      "pagina_impresa": "17",
-      "dificultad": "medio",
-      "opcion_a": "El primer nivel de contacto de individuos, familias y comunidad.",
-      "opcion_b": "Seguimiento de una persona o familia a lo largo del tiempo por el mismo profesional o equipo.",
-      "opcion_c": "Las actividades, procedimientos y prácticas que realiza el equipo de salud.",
-      "opcion_d": "Los efectos medibles: salud poblacional, satisfacción, equidad, eficiencia e impacto."
-    },
-    {
-      "content_id": "salud-06-013",
-      "materia": "SALUD PUBLICA",
-      "tema": "atencion primaria de salud",
-      "numero_pregunta": 11,
-      "pregunta": "¿Qué evalúa el resultado en APS?",
-      "respuesta_correcta": "C",
-      "justificacion": "Los efectos medibles: salud poblacional, satisfacción, equidad, eficiencia e impacto.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "18",
-      "pagina_impresa": "17",
-      "dificultad": "medio",
-      "opcion_a": "Las actividades, procedimientos y prácticas que realiza el equipo de salud.",
-      "opcion_b": "Seguimiento de una persona o familia a lo largo del tiempo por el mismo profesional o equipo.",
-      "opcion_c": "Los efectos medibles: salud poblacional, satisfacción, equidad, eficiencia e impacto.",
-      "opcion_d": "Integrar acciones entre niveles de atención y dentro del equipo, asegurando continuidad asistencial."
-    },
-    {
-      "content_id": "salud-06-014",
-      "materia": "SALUD PUBLICA",
-      "tema": "atencion primaria de salud",
-      "numero_pregunta": 12,
-      "pregunta": "¿A quién corresponde el modelo de estructura, proceso y resultado?",
-      "respuesta_correcta": "D",
-      "justificacion": "Avedis Donabedian.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "18",
-      "pagina_impresa": "17",
-      "dificultad": "medio",
-      "opcion_a": "Prácticos, científicamente fundados y socialmente aceptables.",
-      "opcion_b": "Los recursos físicos, humanos y organizativos disponibles.",
-      "opcion_c": "Promoción, prevención, tratamiento y rehabilitación.",
-      "opcion_d": "Avedis Donabedian."
-    },
-    {
-      "content_id": "salud-06-015",
-      "materia": "SALUD PUBLICA",
-      "tema": "atencion primaria de salud",
-      "numero_pregunta": 13,
-      "pregunta": "¿Qué estudia la medicina social?",
-      "respuesta_correcta": "D",
-      "justificacion": "Cómo la enfermedad depende de problemas sociales, los causa o agrava, y cómo contribuir a resolverlos.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "18",
-      "pagina_impresa": "17",
-      "dificultad": "medio",
-      "opcion_a": "Seguimiento de una persona o familia a lo largo del tiempo por el mismo profesional o equipo.",
-      "opcion_b": "Los efectos medibles: salud poblacional, satisfacción, equidad, eficiencia e impacto.",
-      "opcion_c": "Integrar acciones entre niveles de atención y dentro del equipo, asegurando continuidad asistencial.",
-      "opcion_d": "Cómo la enfermedad depende de problemas sociales, los causa o agrava, y cómo contribuir a resolverlos."
+      "pregunta": "Se propone una tecnología de atención primaria que cuenta con respaldo científico, pero la comunidad no la considera aceptable. ¿Qué dimensión de Alma-Ata falta cumplir en este caso?",
+      "respuesta_correcta": "B",
+      "justificacion": "Alma-Ata exige métodos prácticos, científicamente fundados y socialmente aceptables. La evidencia científica satisface uno de los criterios, pero no establece por sí sola la aceptación comunitaria.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+      "paginas_pdf": "16, 17",
+      "pagina_impresa": "15, 16",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "Educación en Salud",
+          "section": "Atención Primaria de Salud",
+          "page": 16,
+          "printed": 15,
+          "marks": [
+            [
+              0.3629,
+              0.7473,
+              0.1825,
+              0.0168
+            ]
+          ]
+        },
+        {
+          "slug": "educacion-salud",
+          "label": "Educación en Salud",
+          "section": "Atención Primaria de Salud",
+          "page": 17,
+          "printed": 16,
+          "marks": [
+            [
+              0.6893,
+              0.1201,
+              0.194,
+              0.0168
+            ]
+          ]
+        }
+      ],
+      "source": {
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-06"
+      },
+      "opcion_a": "La integración de la atención en el sistema sanitario.",
+      "opcion_b": "La aceptabilidad social de la tecnología.",
+      "opcion_c": "El fundamento científico de la tecnología.",
+      "opcion_d": "El primer nivel de contacto con el sistema."
     }
   ]
 }

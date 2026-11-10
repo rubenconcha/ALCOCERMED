@@ -1,175 +1,193 @@
-"""Build topic papers only from PDF-grounded prompts and answers.
-
-All alternatives also come from the supplied bibliography. No numeric
-fabrications, Internet sources or legacy unreferenced question bank are used.
-Run --verify-pdfs to check every textual evidence against the actual PDFs.
-The two image-only health infographics (PDF 9 and 25) were visually checked.
-"""
+"""Build topic exams from editorially written alternatives and their official readings."""
 import argparse
 import hashlib
 import json
 import re
 import unicodedata
-from collections import defaultdict, Counter
-from functools import lru_cache
+from collections import defaultdict
 from pathlib import Path
+
+import pymupdf
 
 ROOT = Path(__file__).resolve().parents[1]
 STORE = ROOT / 'api/_evaluations'
-SUBJECTS = {'morfo': 'MORFOFUNCION', 'biologia': 'BIOLOGIA CELULAR', 'salud': 'SALUD PUBLICA'}
-LABELS = {'morfo': 'Morfofunción', 'biologia': 'Biología celular', 'salud': 'Educación en Salud e Investigación'}
-HEALTH_TITLES = ['Educación en salud','Concepto de salud y determinantes','Funciones de salud pública','Niveles de prevención','Promoción de la salud','Atención primaria de salud','Factor de riesgo y salud comunitaria','ODS y cobertura sanitaria','Salud en Bolivia y modelo SAFCI','Epidemiología social','Proceso de investigación','Problema y objetivos de investigación','Marco teórico e hipótesis','Variables y medición','Estadística descriptiva','Muestreo','Frecuencias y gráficos','Medidas de tendencia central','Medidas de posición','Dispersión y forma de los datos','Análisis de datos en Excel y SPSS']
-STOP = set('el la los las un una unos unas de del al y o que en con por para se su sus es son como mas a lo le las esta este estas estos una'.split())
+CATALOG = ROOT / 'content/topic-evaluations/catalog.json'
+PRESERVED_PAPERS = {'morfo-01', 'morfo-08', 'morfo-09'}
+BOOKS = {
+    'morfo': ('morfofuncion', 'Saladin'),
+    'biologia': ('biologia-celular', 'Calvo'),
+    'salud': ('educacion-salud', 'UMSS'),
+}
+SALADIN = 'Kenneth S. Saladin · Anatomía y fisiología. La unidad entre forma y función · 6.ª edición'
 
-@lru_cache(maxsize=50000)
-def norm(text):
-    return re.sub(r'[^a-z0-9]+', ' ', unicodedata.normalize('NFKD', text.lower()).encode('ascii', 'ignore').decode()).strip()
 
-@lru_cache(maxsize=50000)
-def compact(text):
-    return norm(text).replace(' ', '')
+def read(path):
+    return json.loads(path.read_text(encoding='utf-8-sig'))
 
-@lru_cache(maxsize=50000)
-def words(text):
-    return {word[:-1] if word.endswith('s') and len(word)>4 else word for word in norm(text).split() if word not in STOP}
 
-def similar(a, b):
-    a, b = norm(a), norm(b)
-    if a == b or a in b or b in a:
-        return True
-    wa, wb = words(a), words(b)
-    return bool(wa and wb) and len(wa & wb) / min(len(wa), len(wb)) >= .50
+def write(path, content):
+    path.write_text(json.dumps(content, ensure_ascii=False, indent=2) + '\n', encoding='utf-8', newline='\n')
 
-def tie(value):
-    return int(hashlib.sha256(value.encode()).hexdigest()[:12], 16)
 
-def answer_kind(card):
-    q, a = norm(card['question']), norm(card['answer'])
-    if q.startswith(('quien ', 'quienes ')):
-        return 'person'
-    if re.search(r'\b(ano|fecha)\b', q) and re.search(r'\b\d{4}\b', a):
-        return 'year' if len(a.split()) <= 2 else 'dated-event'
-    if re.search(r'\d', a) and len(a.split()) < 12:
-        return 'numeric'
-    if q.startswith(('donde ', 'en que ', 'hacia donde ', 'a donde ')) and a.startswith(('en ', 'entre ', 'desde ', 'hacia ', 'a ')):
-        return 'location'
-    if q.startswith(('que es ', 'que son ', 'como se define ', 'como define ')):
-        return 'definition'
-    if q.startswith(('para que ', 'por que ')) or re.search(r'\b(funcion|finalidad|objetivo|permite|sirve)\b', q):
-        return 'function'
-    if q.startswith(('cuales ',)) or ' y ' in a and ',' in a:
-        return 'list'
-    if a.startswith(('a ', 'al ', 'en ', 'entre ', 'desde ', 'hacia ', 'sobre ', 'por ', 'durante ')):
-        return 'preposition'
-    if a.split()[0] in {'aumenta','aumentan','disminuye','disminuyen','permite','permiten','son','es','se','ser','mantener','reducir','evitar','producir','formar','regular','transportar','estimular','inhibir','adquirir','proporcionar','tomar'}:
-        return 'action'
-    if a in {'uno','una','dos','tres','cuatro','cinco','seis','siete','ocho','nueve','diez'}:
-        return 'numeric'
-    return 'name' if len(a.split()) <= 7 else 'description'
+def normalized(text):
+    return re.sub(r'[^a-z0-9]', '', unicodedata.normalize('NFKD', text.casefold()))
 
-def choose_options(card, pool):
-    # Close paraphrases and alternatives stated in the supporting passage are
-    # excluded rather than treated as false answers.
-    answer = card['answer']
-    candidates = []
-    for candidate in pool:
-        # These neighboring learning outcomes can both answer a broad health
-        # education prompt; never use one as a distractor for the other.
-        if card['id'].startswith('salud-01-') and candidate['id'].startswith('salud-01-'):
+
+def arrange(paper, number, entry):
+    prompt, options, correct = entry['text'], entry['options'], entry['correct']
+    if not prompt.strip() or not entry['explanation'].strip():
+        raise ValueError(f'Enunciado o comentario vacío: {entry["id"]}')
+    if not 4 <= len(options) <= 5 or len({normalized(o) for o in options}) != len(options) or not 0 <= correct < len(options):
+        raise ValueError(f'Opciones inválidas: {entry["id"]}')
+    source = entry['source']
+    references = entry['references']
+    row = {
+        'content_id': entry['id'], 'materia': paper['subject'], 'tema': paper['topic'],
+        'numero_pregunta': number, 'pregunta': prompt, 'respuesta_correcta': 'ABCDE'[correct],
+        'justificacion': entry['explanation'], 'fuente': source['document'],
+        'paginas_pdf': ', '.join(str(r['page']) for r in references),
+        'pagina_impresa': ', '.join(str(r['printed']) for r in references if r.get('printed') is not None),
+        'dificultad': {'intermedio': 'medio'}.get(entry['difficulty'], entry['difficulty']),
+        'lecturas_comentario': references, 'source': source,
+    }
+    if entry.get('comentarios_opciones'):
+        row['comentarios_opciones'] = entry['comentarios_opciones']
+    row.update({f'opcion_{letter}': option for letter, option in zip('abcde', options)})
+    return row
+
+
+def reference(slug, label, section, page, printed=None, marks=None):
+    return {'slug': slug, 'label': label, 'section': section, 'page': page,
+            'printed': printed, 'marks': marks or []}
+
+
+def from_medicine(entry, paper):
+    source = entry['source']
+    slug, label = BOOKS[paper['id'].split('-')[0]]
+    section = f'{paper["title"]} · {source["section"]}'
+    folios = {s['pdfPage']: s['printedPage'] for s in source.get('statements', [])}
+    pages, printed = source['pdfPages'], source['printedPages']
+    if not folios and len(printed) == len(pages):
+        folios = dict(zip(pages, printed))
+    return {
+        **entry, 'id': 'evaluacion:' + entry['id'],
+        'references': [reference(slug, label, section, page, folios.get(page)) for page in pages],
+    }
+
+
+def from_verified_bank(entry, paper, document):
+    # The editorial bank puts the key first. Rotate it before displaying it.
+    options = [entry['answer'], *entry['distractors']]
+    shift = int(hashlib.sha256(entry['id'].encode()).hexdigest(), 16) % len(options)
+    choices = options[shift:] + options[:shift]
+    return {
+        'id': 'evaluacion:' + entry['id'],
+        'text': entry['prompt'], 'options': choices, 'correct': choices.index(entry['answer']),
+        'difficulty': 'dificil', 'explanation': entry['explanation'],
+        'source': {'document': document, 'topicId': paper['id']},
+        'references': entry['references'],
+    }
+
+
+def marks(page, anchor):
+    return [
+        [round(n, 4) for n in (r.x0 / page.rect.width, r.y0 / page.rect.height,
+                               r.width / page.rect.width, r.height / page.rect.height)]
+        for r in page.search_for(anchor)[:2]
+        if 0 <= r.x0 < r.x1 <= page.rect.width and 0 <= r.y0 < r.y1 <= page.rect.height
+    ]
+
+
+def sangre(refs):
+    manifest = next(row for row in read(refs / 'manifest.json')['archivos'] if row['archivo'].startswith('morfo'))
+    path = refs / manifest['archivo']
+    with path.open('rb') as pdf:
+        digest = hashlib.file_digest(pdf, 'sha256').hexdigest()
+    if digest != manifest['sha256']:
+        raise ValueError('El PDF de Saladin no coincide con el manifiesto')
+    rows = []
+    with pymupdf.open(path) as pdf:
+        for line in (STORE / 'sangre-revision.txt').read_text(encoding='utf-8-sig').splitlines():
+            if not line.strip() or line.startswith('#'):
+                continue
+            code, digital, section, anchor, prompt, *fields = [part.strip() for part in line.split('|')]
+            number = int(digital)
+            pairs = list(zip(fields[::2], fields[1::2], strict=True))
+            if len(pairs) != 4 or not all(fields):
+                raise ValueError(f'Faltan opciones o explicaciones en Sangre: {code}')
+            page = pdf[number - 1]
+            printed = number - 28
+            highlighted = marks(page, anchor)
+            if not highlighted or str(printed) not in [item.strip() for item in page.get_text().splitlines()[:8]]:
+                raise ValueError(f'Referencia de Sangre sin verificar: {code}, PDF {number}: {anchor}')
+            answer, explanation = pairs[0]
+            # Rotate with a fixed sequence, so the keys are balanced across the paper.
+            shift = (3 * len(rows) + 2) % 4
+            ordered = pairs[shift:] + pairs[:shift]
+            options = [option for option, _ in ordered]
+            rows.append({
+                'id': 'morfo-18-' + code, 'text': prompt, 'options': options, 'correct': options.index(answer),
+                'explanation': explanation, 'difficulty': 'intermedio',
+                'comentarios_opciones': {letter: reason for letter, (_, reason) in zip('ABCD', ordered, strict=True)},
+                'source': {
+                    'document': SALADIN, 'topicId': 'morfo-18', 'chapterNumber': 18,
+                    'file': manifest['archivo'], 'sha256': digest, 'pdf_pages': [number],
+                    'section': section, 'verified_anchors': [{'pdf_page': number, 'printed_page': printed, 'anchor': anchor}],
+                },
+                'references': [reference('morfofuncion', 'Saladin', f'Capítulo 18 · {section}', number, printed, highlighted)],
+            })
+    if len(rows) != 30 or len({row['id'] for row in rows}) != 30:
+        raise ValueError('Sangre requiere treinta preguntas diferentes')
+    return rows
+
+
+def build(refs):
+    original_catalog = read(CATALOG)
+    original_audit = read(STORE / 'source-audit.json')
+    medicine = defaultdict(list)
+    verified = defaultdict(list)
+    documents = {}
+    for row in read(ROOT / 'api/_sufficiency/medicina-oficial.json')['questions']:
+        topic = row['source']['topicId']
+        documents[topic] = row['source']['document']
+        if row['difficulty'] == 'intermedio':
+            medicine[topic].append(row)
+    for row in read(ROOT / 'api/_sufficiency/medicina-preguntas-por-tema.json'):
+        medicine[row['source']['topicId']].append(row)
+    for row in read(ROOT / 'api/_mindmaps/banco-verificado.json'):
+        verified[row['id'].split(':')[1]].append(row)
+
+    catalog, audit, output = [], [], []
+    blood = sangre(refs)
+    for metadata in original_catalog['exams']:
+        topic = metadata['id']
+        if topic in PRESERVED_PAPERS:
+            catalog.append(metadata)
+            audit.extend(row for row in original_audit if row['paper'] == topic)
             continue
-        if card['id'].startswith('salud-04-') and candidate['id'].startswith('salud-04-') and ('cuaternaria' in card['question'] and 'cuaternaria' in candidate['question']):
-            continue
-        if answer_kind(card) != answer_kind(candidate):
-            continue
-        if candidate['id'] == card['id'] or similar(answer, candidate['answer']):
-            continue
-        if compact(candidate['answer']) in compact(card['evidence']):
-            continue
-        if norm(candidate['answer']).startswith(('si ', 'no ')):
-            continue
-        qa, qb = words(card['question']), words(candidate['question'])
-        overlap = len(qa & qb) / max(1, len(qa | qb))
-        if overlap > .78:
-            continue
-        same_shape = (len(answer.split()) <= 5) == (len(candidate['answer'].split()) <= 5)
-        score = (4 if card['topic'] == candidate['topic'] else 0) + (2 if same_shape else 0) + overlap
-        score -= abs(len(answer) - len(candidate['answer'])) / max(100, len(answer))
-        candidates.append((-score, tie(card['id'] + candidate['id']), candidate))
-    options = [card]
-    for _, _, candidate in sorted(candidates, key=lambda item: item[:2]):
-        if any(similar(candidate['answer'], other['answer']) for other in options):
-            continue
-        options.append(candidate)
-        if len(options) == 4:
-            return options
-    return None
+        if topic == 'morfo-18':
+            questions = blood
+        else:
+            questions = [from_medicine(row, metadata) for row in medicine[topic]]
+            questions.extend(from_verified_bank(row, metadata, documents[topic]) for row in verified[topic])
+        if len(questions) < 8 or len({normalized(row['text']) for row in questions}) != len(questions):
+            raise ValueError(f'Cobertura insuficiente o enunciado duplicado: {topic}')
+        rows = [arrange(metadata, i, row) for i, row in enumerate(questions, 1)]
+        revised = {**metadata, 'count': len(rows), 'duration': len(rows)}
+        catalog.append(revised)
+        output.append((STORE / f'{topic}.json', {**revised, 'questions': rows}))
+        for row in rows:
+            audit.append({'paper': topic, 'question': row['content_id'], 'authored_options': True,
+                          'pdf_pages': [ref['page'] for ref in row['lecturas_comentario']]})
 
-def build(verify=False, pdf_dir=Path.home()/'Downloads'):
-    sources = json.loads((STORE/'source-cards.json').read_text(encoding='utf8'))
-    catalog, audit = [], []
-    for source in sources:
-        info = source['source']; key = info['id']
-        pages = []
-        if verify:
-            import pymupdf
-            doc = pymupdf.open(pdf_dir/info['filename'])
-            pages = [compact(page.get_text()) for page in doc]
-        groups, pool, seen = {}, [], set()
-        for chapter in source['chapters']:
-            topic = chapter['topic']
-            group = groups.setdefault(topic, {'number': len(groups)+1, 'title': chapter['title'] if key!='salud' else HEALTH_TITLES[min(len(groups),20)], 'cards': []})
-            for original in chapter['cards']:
-                card = dict(original, topic=topic)
-                if verify:
-                    image = card.get('evidence_kind') == 'image_transcription' and key == 'salud' and card['pdf_page'] in [9,25]
-                    assert image or compact(card['evidence']) in pages[card['pdf_page']-1], card['id']
-                # Do not turn yes/no prompts into four unrelated options.
-                if norm(card['answer']).startswith(('si ', 'no ')) or len(card['answer']) > 330:
-                    continue
-                signature = (topic, norm(card['question']))
-                if signature in seen:
-                    continue
-                seen.add(signature); pool.append(card); group['cards'].append(card)
-        for topic, group in groups.items():
-            identifier = key + '-' + str(group['number']).zfill(2)
-            # Round-robin sections spreads coverage across the chapter instead
-            # of simply taking the first thirty cards.
-            sections = defaultdict(list)
-            for card in group['cards']:
-                sections[card.get('section') or str(card['pdf_page'])].append(card)
-            selected=[]
-            while any(sections.values()) and len(selected)<30:
-                for section in sections.values():
-                    if section and len(selected)<30:
-                        card = section.pop(0)
-                        options = choose_options(card,pool)
-                        if options:
-                            selected.append(dict(card, options=options))
-            selected.sort(key=lambda c: (c['pdf_page'], c['id']))
-            assert len(selected)>=7, (topic,len(selected))
-            questions=[]
-            for number, card in enumerate(selected,1):
-                options=card['options']
-                options.sort(key=lambda c:tie(card['id']+'|'+c['id']))
-                correct=next(i for i,c in enumerate(options) if c['id']==card['id'])
-                row={'content_id':card['id'],'materia':SUBJECTS[key],'tema':topic,'numero_pregunta':number,
-                     'pregunta':card['question'],'respuesta_correcta':'ABCD'[correct],
-                     'justificacion':card['answer'],'fuente':info['title'],'paginas_pdf':str(card['pdf_page']),
-                     'pagina_impresa':str(card.get('page','')),'dificultad':'medio'}
-                for index,option in enumerate(options): row['opcion_'+'abcd'[index]]=option['answer']
-                questions.append(row)
-                audit.append({'paper':identifier,'question':card['id'],'pdf':info['filename'],'pdf_page':card['pdf_page'],
-                              'evidence_kind':card.get('evidence_kind','pdf_text'),'evidence_sha256':hashlib.sha256(card['evidence'].encode()).hexdigest(),
-                              'option_source_ids':[o['id'] for o in options]})
-            paper={'id':identifier,'subject':SUBJECTS[key],'subjectLabel':LABELS[key],'topic':topic,'title':group['title'],
-                   'number':group['number'],'count':len(questions),'duration':len(questions),'source':info['title'],'questions':questions}
-            (STORE/(identifier+'.json')).write_text(json.dumps(paper,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
-            catalog.append({k:v for k,v in paper.items() if k!='questions'})
-    target=ROOT/'content/topic-evaluations';target.mkdir(parents=True,exist_ok=True)
-    (target/'catalog.json').write_text(json.dumps({'version':1,'exams':catalog},ensure_ascii=False,indent=2)+'\n',encoding='utf8')
-    (STORE/'source-audit.json').write_text(json.dumps(audit,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
-    print(json.dumps({'evaluations':len(catalog),'questions':len(audit),'subjects':dict(Counter(e['subject'] for e in catalog)),'min':min(e['count'] for e in catalog),'max':max(e['count'] for e in catalog)},ensure_ascii=False))
+    for path, paper in output:
+        write(path, paper)
+    write(CATALOG, {**original_catalog, 'exams': catalog})
+    write(STORE / 'source-audit.json', audit)
+    print(f'{len(catalog)} evaluaciones de Medicina, {len(audit)} preguntas')
 
-if __name__=='__main__':
-    parser=argparse.ArgumentParser();parser.add_argument('--verify-pdfs',action='store_true');parser.add_argument('--pdf-dir',type=Path,default=Path.home()/'Downloads')
-    args=parser.parse_args();build(args.verify_pdfs,args.pdf_dir)
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--refs', type=Path, required=True)
+    build(parser.parse_args().refs)

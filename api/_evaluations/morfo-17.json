@@ -5,485 +5,485 @@
   "topic": "sistema endocrino",
   "title": "Sistema endocrino",
   "number": 17,
-  "count": 28,
-  "duration": 28,
+  "count": 9,
+  "duration": 9,
   "source": "Saladin · Anatomía y fisiología",
   "questions": [
     {
-      "content_id": "morfo-17-003",
+      "content_id": "evaluacion:medicina-oficial-morfo-17-intermedio-1",
       "materia": "MORFOFUNCION",
       "tema": "sistema endocrino",
       "numero_pregunta": 1,
-      "pregunta": "¿Qué son las hormonas paracrinas?",
-      "respuesta_correcta": "D",
-      "justificacion": "Señales químicas que actúan sobre células cercanas.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "662",
-      "pagina_impresa": "634",
+      "pregunta": "Se traza una señal que sale de la hipófisis y tiene por blanco a la tiroides. No se pide identificar la hormona que la tiroides libera.\n¿Qué opción corresponde al caso?",
+      "respuesta_correcta": "A",
+      "justificacion": "La adenohipófisis libera tirotropina para estimular la glándula tiroides.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "665",
+      "pagina_impresa": "637",
       "dificultad": "medio",
-      "opcion_a": "La acumulación excesiva de líquido en los tejidos.",
-      "opcion_b": "Interrupciones entre segmentos de mielina del axón.",
-      "opcion_c": "La media luna blanca y opaca de su extremo proximal.",
-      "opcion_d": "Señales químicas que actúan sobre células cercanas."
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Sistema endocrino · Adenohipófisis",
+          "page": 665,
+          "printed": 637,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-17",
+        "chapterNumber": 17,
+        "chapter": "Sistema endocrino",
+        "section": "Adenohipófisis",
+        "printedPages": [
+          637
+        ],
+        "pdfPages": [
+          665
+        ]
+      },
+      "opcion_a": "Tirotropina (TSH)",
+      "opcion_b": "Corticotropina (ACTH)",
+      "opcion_c": "Oxitocina",
+      "opcion_d": "Prolactina"
     },
     {
-      "content_id": "morfo-17-001",
+      "content_id": "evaluacion:medicina-oficial-morfo-17-intermedio-2",
       "materia": "MORFOFUNCION",
       "tema": "sistema endocrino",
       "numero_pregunta": 2,
-      "pregunta": "¿Qué diferencia una glándula endocrina de una exocrina?",
-      "respuesta_correcta": "C",
-      "justificacion": "La endocrina libera hormonas al medio interno; la exocrina utiliza conductos.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "664",
-      "pagina_impresa": "636",
+      "pregunta": "En un eje hormonal la glándula diana es la corteza suprarrenal; se busca la señal que llega a ella desde la hipófisis.\n¿Qué opción corresponde al caso?",
+      "respuesta_correcta": "B",
+      "justificacion": "La corticotropina procede de la adenohipófisis y actúa sobre la corteza suprarrenal.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "669",
+      "pagina_impresa": "641",
       "dificultad": "medio",
-      "opcion_a": "Dentro de la célula, en el citoplasma o el núcleo.",
-      "opcion_b": "El factor de crecimiento similar a insulina, IGF.",
-      "opcion_c": "La endocrina libera hormonas al medio interno; la exocrina utiliza conductos.",
-      "opcion_d": "El homocigoto tiene dos alelos iguales; el heterocigoto tiene dos diferentes."
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Sistema endocrino · Hormonas de la adenohipófisis",
+          "page": 669,
+          "printed": 641,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-17",
+        "chapterNumber": 17,
+        "chapter": "Sistema endocrino",
+        "section": "Hormonas de la adenohipófisis",
+        "printedPages": [
+          641
+        ],
+        "pdfPages": [
+          669
+        ]
+      },
+      "opcion_a": "Tirotropina (TSH)",
+      "opcion_b": "Corticotropina (ACTH)",
+      "opcion_c": "Prolactina",
+      "opcion_d": "Oxitocina"
     },
     {
-      "content_id": "morfo-17-009",
+      "content_id": "evaluacion:medicina-oficial-morfo-17-intermedio-3",
       "materia": "MORFOFUNCION",
       "tema": "sistema endocrino",
       "numero_pregunta": 3,
-      "pregunta": "¿Qué efecto renal tiene la hormona antidiurética?",
-      "respuesta_correcta": "A",
-      "justificacion": "Aumenta la reabsorción de agua y disminuye su pérdida en la orina.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "664",
-      "pagina_impresa": "636",
+      "pregunta": "Se distinguen la síntesis de leche y su salida. La variable observada es cuánto se produce, antes de la eyección.\n¿Qué opción corresponde al caso?",
+      "respuesta_correcta": "C",
+      "justificacion": "La prolactina estimula la síntesis de leche. Su eyección depende de la oxitocina.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "669",
+      "pagina_impresa": "641",
       "dificultad": "medio",
-      "opcion_a": "Aumenta la reabsorción de agua y disminuye su pérdida en la orina.",
-      "opcion_b": "Permite que los ventrículos terminen de llenarse antes de contraerse.",
-      "opcion_c": "Disminuye la tensión superficial y ayuda a evitar el colapso alveolar.",
-      "opcion_d": "Aumenta la reabsorción de sodio y la secreción de potasio."
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Sistema endocrino · Adenohipófisis",
+          "page": 669,
+          "printed": 641,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-17",
+        "chapterNumber": 17,
+        "chapter": "Sistema endocrino",
+        "section": "Adenohipófisis",
+        "printedPages": [
+          641
+        ],
+        "pdfPages": [
+          669
+        ]
+      },
+      "opcion_a": "Oxitocina",
+      "opcion_b": "Corticotropina (ACTH)",
+      "opcion_c": "Prolactina",
+      "opcion_d": "Tirotropina (TSH)"
     },
     {
-      "content_id": "morfo-17-002",
+      "content_id": "evaluacion:medicina-oficial-morfo-17-intermedio-4",
       "materia": "MORFOFUNCION",
       "tema": "sistema endocrino",
       "numero_pregunta": 4,
-      "pregunta": "¿Qué permite a una célula responder a una hormona?",
-      "respuesta_correcta": "B",
-      "justificacion": "La presencia de receptores específicos para ella.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "665",
-      "pagina_impresa": "637",
-      "dificultad": "medio",
-      "opcion_a": "Percibir la profundidad y las relaciones tridimensionales.",
-      "opcion_b": "La presencia de receptores específicos para ella.",
-      "opcion_c": "Producir distintas proteínas a partir de un mismo gen.",
-      "opcion_d": "Conducen información sensitiva hacia el encéfalo."
-    },
-    {
-      "content_id": "morfo-17-008",
-      "materia": "MORFOFUNCION",
-      "tema": "sistema endocrino",
-      "numero_pregunta": 5,
-      "pregunta": "¿Qué dos hormonas sintetiza el hipotálamo y libera la neurohipófisis?",
-      "respuesta_correcta": "D",
-      "justificacion": "Oxitocina y hormona antidiurética.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "665",
-      "pagina_impresa": "637",
-      "dificultad": "medio",
-      "opcion_a": "Las células parafoliculares o C.",
-      "opcion_b": "La TSH o tirotropina.",
-      "opcion_c": "La ACTH o corticotropina.",
-      "opcion_d": "Oxitocina y hormona antidiurética."
-    },
-    {
-      "content_id": "morfo-17-012",
-      "materia": "MORFOFUNCION",
-      "tema": "sistema endocrino",
-      "numero_pregunta": 6,
-      "pregunta": "¿Qué hormona hipofisaria estimula la tiroides?",
+      "pregunta": "La leche ya está producida. Se pide la señal que promueve su salida y que también actúa sobre la contracción uterina.\n¿Qué opción corresponde al caso?",
       "respuesta_correcta": "A",
-      "justificacion": "La TSH o tirotropina.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "665",
-      "pagina_impresa": "637",
-      "dificultad": "medio",
-      "opcion_a": "La TSH o tirotropina.",
-      "opcion_b": "La ACTH o corticotropina.",
-      "opcion_c": "La hormona paratiroidea.",
-      "opcion_d": "El colesterol."
-    },
-    {
-      "content_id": "morfo-17-013",
-      "materia": "MORFOFUNCION",
-      "tema": "sistema endocrino",
-      "numero_pregunta": 7,
-      "pregunta": "¿Qué hormona hipofisaria estimula la corteza suprarrenal?",
-      "respuesta_correcta": "D",
-      "justificacion": "La ACTH o corticotropina.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "665",
-      "pagina_impresa": "637",
-      "dificultad": "medio",
-      "opcion_a": "La TSH o tirotropina.",
-      "opcion_b": "Cortisol.",
-      "opcion_c": "La hormona paratiroidea.",
-      "opcion_d": "La ACTH o corticotropina."
-    },
-    {
-      "content_id": "morfo-17-016",
-      "materia": "MORFOFUNCION",
-      "tema": "sistema endocrino",
-      "numero_pregunta": 8,
-      "pregunta": "¿Qué elemento necesita la síntesis de hormonas tiroideas?",
-      "respuesta_correcta": "A",
-      "justificacion": "Yodo.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "665",
-      "pagina_impresa": "637",
-      "dificultad": "medio",
-      "opcion_a": "Yodo.",
-      "opcion_b": "El colesterol.",
-      "opcion_c": "Aldosterona.",
-      "opcion_d": "La TSH o tirotropina."
-    },
-    {
-      "content_id": "morfo-17-018",
-      "materia": "MORFOFUNCION",
-      "tema": "sistema endocrino",
-      "numero_pregunta": 9,
-      "pregunta": "¿Qué hormona secretan las paratiroides?",
-      "respuesta_correcta": "C",
-      "justificacion": "La hormona paratiroidea.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "665",
-      "pagina_impresa": "637",
-      "dificultad": "medio",
-      "opcion_a": "La ACTH o corticotropina.",
-      "opcion_b": "Las células alfa.",
-      "opcion_c": "La hormona paratiroidea.",
-      "opcion_d": "La TSH o tirotropina."
-    },
-    {
-      "content_id": "morfo-17-011",
-      "materia": "MORFOFUNCION",
-      "tema": "sistema endocrino",
-      "numero_pregunta": 10,
-      "pregunta": "¿Qué hormona hipofisaria estimula la producción de leche?",
-      "respuesta_correcta": "C",
-      "justificacion": "La prolactina.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "669",
-      "pagina_impresa": "641",
-      "dificultad": "medio",
-      "opcion_a": "El colesterol.",
-      "opcion_b": "La TSH o tirotropina.",
-      "opcion_c": "La prolactina.",
-      "opcion_d": "La ACTH o corticotropina."
-    },
-    {
-      "content_id": "morfo-17-022",
-      "materia": "MORFOFUNCION",
-      "tema": "sistema endocrino",
-      "numero_pregunta": 11,
-      "pregunta": "¿Qué glucocorticoide principal secreta la corteza suprarrenal?",
-      "respuesta_correcta": "B",
-      "justificacion": "Cortisol.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "669",
-      "pagina_impresa": "641",
-      "dificultad": "medio",
-      "opcion_a": "La ACTH o corticotropina.",
-      "opcion_b": "Cortisol.",
-      "opcion_c": "La glándula pineal.",
-      "opcion_d": "Aldosterona."
-    },
-    {
-      "content_id": "morfo-17-010",
-      "materia": "MORFOFUNCION",
-      "tema": "sistema endocrino",
-      "numero_pregunta": 12,
-      "pregunta": "¿Qué dos respuestas principales produce la oxitocina?",
-      "respuesta_correcta": "B",
-      "justificacion": "Contracción uterina y eyección de leche.",
-      "fuente": "Saladin · Anatomía y fisiología",
+      "justificacion": "La oxitocina participa en la salida de leche y en la contracción del útero.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
       "paginas_pdf": "671",
       "pagina_impresa": "643",
       "dificultad": "medio",
-      "opcion_a": "Oxitocina y hormona antidiurética.",
-      "opcion_b": "Contracción uterina y eyección de leche.",
-      "opcion_c": "Las células parafoliculares o C.",
-      "opcion_d": "La ACTH o corticotropina."
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Sistema endocrino · Neurohipófisis",
+          "page": 671,
+          "printed": 643,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-17",
+        "chapterNumber": 17,
+        "chapter": "Sistema endocrino",
+        "section": "Neurohipófisis",
+        "printedPages": [
+          643
+        ],
+        "pdfPages": [
+          671
+        ]
+      },
+      "opcion_a": "Oxitocina",
+      "opcion_b": "Prolactina",
+      "opcion_c": "Tirotropina (TSH)",
+      "opcion_d": "Corticotropina (ACTH)"
     },
     {
-      "content_id": "morfo-17-014",
+      "content_id": "evaluacion:medicina-oficial-morfo-17-ampliacion-01-umss",
       "materia": "MORFOFUNCION",
       "tema": "sistema endocrino",
-      "numero_pregunta": 13,
-      "pregunta": "¿Qué factor media gran parte del crecimiento estimulado por GH?",
-      "respuesta_correcta": "C",
-      "justificacion": "El factor de crecimiento similar a insulina, IGF.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "672",
-      "pagina_impresa": "644",
-      "dificultad": "medio",
-      "opcion_a": "La endocrina libera hormonas al medio interno; la exocrina utiliza conductos.",
-      "opcion_b": "Presión diastólica + un tercio de la presión de pulso.",
-      "opcion_c": "El factor de crecimiento similar a insulina, IGF.",
-      "opcion_d": "Dentro de la célula, en el citoplasma o el núcleo."
+      "numero_pregunta": 5,
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Un receptor de una hormona esteroidea puede encontrarse en el núcleo o en el citoplasma de la célula diana.\n2. Muchas hormonas peptídicas inician su acción uniéndose directamente a receptores intracelulares.",
+      "respuesta_correcta": "A",
+      "justificacion": "1. Correcta. Estos receptores se localizan dentro de la célula y pueden influir en la expresión de genes.\n2. Incorrecta. Por lo general, reconocen receptores en la membrana plasmática.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "688, 694",
+      "pagina_impresa": "660, 666",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Sistema endocrino · Mecanismos hormonales",
+          "page": 688,
+          "printed": 660,
+          "marks": []
+        },
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Sistema endocrino · Mecanismos hormonales",
+          "page": 694,
+          "printed": 666,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-17",
+        "chapterNumber": 17,
+        "chapter": "Sistema endocrino",
+        "section": "Mecanismos hormonales",
+        "printedPages": [
+          660,
+          666
+        ],
+        "pdfPages": [
+          688,
+          694
+        ],
+        "statements": [
+          {
+            "pdfPage": 688,
+            "printedPage": 660,
+            "section": "Mecanismos hormonales",
+            "cardId": "morfo-17-005"
+          },
+          {
+            "pdfPage": 694,
+            "printedPage": 666,
+            "section": "Mecanismos hormonales",
+            "cardId": "morfo-17-006"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "Solo la afirmación 1 es correcta.",
+        "B": "1. Correcta. Estos receptores se localizan dentro de la célula y pueden influir en la expresión de genes. 2. Incorrecta. Por lo general, reconocen receptores en la membrana plasmática.",
+        "C": "2. Incorrecta. Por lo general, reconocen receptores en la membrana plasmática.",
+        "D": "1. Correcta. Estos receptores se localizan dentro de la célula y pueden influir en la expresión de genes."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "morfo-17-028",
+      "content_id": "evaluacion:medicina-oficial-morfo-17-ampliacion-02-umss",
       "materia": "MORFOFUNCION",
       "tema": "sistema endocrino",
-      "numero_pregunta": 14,
-      "pregunta": "¿Qué glándula secreta melatonina?",
-      "respuesta_correcta": "D",
-      "justificacion": "La glándula pineal.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "673",
-      "pagina_impresa": "645",
-      "dificultad": "medio",
-      "opcion_a": "Cortisol.",
-      "opcion_b": "La TSH o tirotropina.",
-      "opcion_c": "Aldosterona.",
-      "opcion_d": "La glándula pineal."
-    },
-    {
-      "content_id": "morfo-17-017",
-      "materia": "MORFOFUNCION",
-      "tema": "sistema endocrino",
-      "numero_pregunta": 15,
-      "pregunta": "¿Qué células tiroideas producen calcitonina?",
-      "respuesta_correcta": "D",
-      "justificacion": "Las células parafoliculares o C.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "675",
-      "pagina_impresa": "647",
-      "dificultad": "medio",
-      "opcion_a": "La ACTH o corticotropina.",
-      "opcion_b": "Oxitocina y hormona antidiurética.",
-      "opcion_c": "La TSH o tirotropina.",
-      "opcion_d": "Las células parafoliculares o C."
-    },
-    {
-      "content_id": "morfo-17-004",
-      "materia": "MORFOFUNCION",
-      "tema": "sistema endocrino",
-      "numero_pregunta": 16,
-      "pregunta": "¿Qué molécula origina las hormonas esteroideas?",
+      "numero_pregunta": 6,
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. La neurohipófisis sintetiza oxitocina y hormona antidiurética antes de liberarlas.\n2. Al favorecer la reabsorción renal de agua, la hormona antidiurética reduce la cantidad que se pierde en orina.",
       "respuesta_correcta": "B",
-      "justificacion": "El colesterol.",
-      "fuente": "Saladin · Anatomía y fisiología",
+      "justificacion": "1. Incorrecta. Las hormonas se sintetizan en el hipotálamo y llegan a la neurohipófisis para su liberación.\n2. Correcta. El efecto aumenta la recuperación de agua desde el filtrado.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "669, 670",
+      "pagina_impresa": "641, 642",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Sistema endocrino · 17.2 Hormonas de la neurohipófisis",
+          "page": 669,
+          "printed": 641,
+          "marks": []
+        },
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Sistema endocrino · 17.2 Hormonas de la neurohipófisis",
+          "page": 670,
+          "printed": 642,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-17",
+        "chapterNumber": 17,
+        "chapter": "Sistema endocrino",
+        "section": "17.2 Hormonas de la neurohipófisis",
+        "printedPages": [
+          641,
+          642
+        ],
+        "pdfPages": [
+          669,
+          670
+        ],
+        "statements": [
+          {
+            "pdfPage": 669,
+            "printedPage": 641,
+            "section": "17.2 Hormonas de la neurohipófisis",
+            "anchor": "Se almacenan en la neurohipófisis y se liberan de allí"
+          },
+          {
+            "pdfPage": 670,
+            "printedPage": 642,
+            "section": "17.2 Hormonas de la neurohipófisis",
+            "anchor": "Aumenta la retención de agua en los riñones"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. Las hormonas se sintetizan en el hipotálamo y llegan a la neurohipófisis para su liberación. 2. Correcta. El efecto aumenta la recuperación de agua desde el filtrado.",
+        "B": "Solo la afirmación 2 es correcta.",
+        "C": "1. Incorrecta. Las hormonas se sintetizan en el hipotálamo y llegan a la neurohipófisis para su liberación.",
+        "D": "2. Correcta. El efecto aumenta la recuperación de agua desde el filtrado."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
+    },
+    {
+      "content_id": "evaluacion:medicina-oficial-morfo-17-ampliacion-03-umss",
+      "materia": "MORFOFUNCION",
+      "tema": "sistema endocrino",
+      "numero_pregunta": 7,
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Las células parafoliculares tiroideas son la fuente de calcitonina.\n2. La parathormona contribuye a elevar la concentración sanguínea de calcio.",
+      "respuesta_correcta": "C",
+      "justificacion": "1. Correcta. Estas células también se denominan células C.\n2. Correcta. El efecto neto de la PTH es aumentar el calcio circulante.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "675, 681",
+      "pagina_impresa": "647, 653",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Sistema endocrino · Tiroides / Paratiroides",
+          "page": 675,
+          "printed": 647,
+          "marks": []
+        },
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Sistema endocrino · Tiroides / Paratiroides",
+          "page": 681,
+          "printed": 653,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-17",
+        "chapterNumber": 17,
+        "chapter": "Sistema endocrino",
+        "section": "Tiroides / Paratiroides",
+        "printedPages": [
+          647,
+          653
+        ],
+        "pdfPages": [
+          675,
+          681
+        ],
+        "statements": [
+          {
+            "pdfPage": 675,
+            "printedPage": 647,
+            "section": "Tiroides",
+            "cardId": "morfo-17-017"
+          },
+          {
+            "pdfPage": 681,
+            "printedPage": 653,
+            "section": "Paratiroides",
+            "cardId": "morfo-17-019"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "2. Correcta. El efecto neto de la PTH es aumentar el calcio circulante.",
+        "B": "1. Correcta. Estas células también se denominan células C.",
+        "C": "Ambas afirmaciones son correctas.",
+        "D": "1. Correcta. Estas células también se denominan células C. 2. Correcta. El efecto neto de la PTH es aumentar el calcio circulante."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
+    },
+    {
+      "content_id": "evaluacion:medicina-oficial-morfo-17-ampliacion-04-umss",
+      "materia": "MORFOFUNCION",
+      "tema": "sistema endocrino",
+      "numero_pregunta": 8,
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. La fuente principal de aldosterona es la zona reticular, la más interna de la corteza suprarrenal.\n2. En el riñón, la aldosterona aumenta la pérdida de sodio y reduce la secreción de potasio.",
+      "respuesta_correcta": "D",
+      "justificacion": "1. Incorrecta. La aldosterona procede sobre todo de la zona glomerulosa, la capa externa.\n2. Incorrecta. El efecto descrito es mayor reabsorción de sodio y mayor secreción de potasio.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
       "paginas_pdf": "677",
       "pagina_impresa": "649",
-      "dificultad": "medio",
-      "opcion_a": "La prolactina.",
-      "opcion_b": "El colesterol.",
-      "opcion_c": "Aldosterona.",
-      "opcion_d": "La TSH o tirotropina."
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Sistema endocrino · Suprarrenales",
+          "page": 677,
+          "printed": 649,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-17",
+        "chapterNumber": 17,
+        "chapter": "Sistema endocrino",
+        "section": "Suprarrenales",
+        "printedPages": [
+          649
+        ],
+        "pdfPages": [
+          677
+        ],
+        "statements": [
+          {
+            "pdfPage": 677,
+            "printedPage": 649,
+            "section": "Suprarrenales",
+            "cardId": "morfo-17-021"
+          },
+          {
+            "pdfPage": 677,
+            "printedPage": 649,
+            "section": "Suprarrenales",
+            "cardId": "morfo-17-023"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. La aldosterona procede sobre todo de la zona glomerulosa, la capa externa.",
+        "B": "2. Incorrecta. El efecto descrito es mayor reabsorción de sodio y mayor secreción de potasio.",
+        "C": "1. Incorrecta. La aldosterona procede sobre todo de la zona glomerulosa, la capa externa. 2. Incorrecta. El efecto descrito es mayor reabsorción de sodio y mayor secreción de potasio.",
+        "D": "Ninguna afirmación es correcta."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "morfo-17-020",
+      "content_id": "evaluacion:banco-verificado:morfo-17:secrecion",
       "materia": "MORFOFUNCION",
       "tema": "sistema endocrino",
-      "numero_pregunta": 17,
-      "pregunta": "¿Cuáles son las capas de la corteza suprarrenal de externa a interna?",
+      "numero_pregunta": 9,
+      "pregunta": "Una hormona circulante llega en concentración comparable a dos tejidos. Solo uno responde. ¿Qué diferencia explica de forma más directa esa selectividad?",
       "respuesta_correcta": "D",
-      "justificacion": "Zona glomerulosa → fasciculada → reticular.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "677",
-      "pagina_impresa": "649",
-      "dificultad": "medio",
-      "opcion_a": "Mucosa → submucosa → muscular externa → serosa.",
-      "opcion_b": "Dulce, salado, ácido, amargo y umami.",
-      "opcion_c": "Fase folicular → ovulación → fase lútea.",
-      "opcion_d": "Zona glomerulosa → fasciculada → reticular."
-    },
-    {
-      "content_id": "morfo-17-021",
-      "materia": "MORFOFUNCION",
-      "tema": "sistema endocrino",
-      "numero_pregunta": 18,
-      "pregunta": "¿Qué hormona principal secreta la zona glomerulosa?",
-      "respuesta_correcta": "D",
-      "justificacion": "Aldosterona.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "677",
-      "pagina_impresa": "649",
-      "dificultad": "medio",
-      "opcion_a": "El colesterol.",
-      "opcion_b": "La prolactina.",
-      "opcion_c": "La glándula pineal.",
-      "opcion_d": "Aldosterona."
-    },
-    {
-      "content_id": "morfo-17-023",
-      "materia": "MORFOFUNCION",
-      "tema": "sistema endocrino",
-      "numero_pregunta": 19,
-      "pregunta": "¿Qué efecto renal principal tiene la aldosterona?",
-      "respuesta_correcta": "C",
-      "justificacion": "Aumenta la reabsorción de sodio y la secreción de potasio.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "677",
-      "pagina_impresa": "649",
-      "dificultad": "medio",
-      "opcion_a": "Permite que los ventrículos terminen de llenarse antes de contraerse.",
-      "opcion_b": "Se opone al cambio y acerca la variable a su valor normal.",
-      "opcion_c": "Aumenta la reabsorción de sodio y la secreción de potasio.",
-      "opcion_d": "Aumenta la reabsorción de agua y disminuye su pérdida en la orina."
-    },
-    {
-      "content_id": "morfo-17-024",
-      "materia": "MORFOFUNCION",
-      "tema": "sistema endocrino",
-      "numero_pregunta": 20,
-      "pregunta": "¿Qué células pancreáticas secretan insulina?",
-      "respuesta_correcta": "C",
-      "justificacion": "Las células beta.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "678",
-      "pagina_impresa": "650",
-      "dificultad": "medio",
-      "opcion_a": "La hormona paratiroidea.",
-      "opcion_b": "La glándula pineal.",
-      "opcion_c": "Las células beta.",
-      "opcion_d": "La disminuye."
-    },
-    {
-      "content_id": "morfo-17-025",
-      "materia": "MORFOFUNCION",
-      "tema": "sistema endocrino",
-      "numero_pregunta": 21,
-      "pregunta": "¿Qué células pancreáticas secretan glucagón?",
-      "respuesta_correcta": "B",
-      "justificacion": "Las células alfa.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "678",
-      "pagina_impresa": "650",
-      "dificultad": "medio",
-      "opcion_a": "La glándula pineal.",
-      "opcion_b": "Las células alfa.",
-      "opcion_c": "La hormona paratiroidea.",
-      "opcion_d": "La aumenta."
-    },
-    {
-      "content_id": "morfo-17-015",
-      "materia": "MORFOFUNCION",
-      "tema": "sistema endocrino",
-      "numero_pregunta": 22,
-      "pregunta": "¿Qué hormonas tiroideas elevan el metabolismo basal?",
-      "respuesta_correcta": "C",
-      "justificacion": "Tiroxina (T₄) y triyodotironina (T₃).",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "681",
-      "pagina_impresa": "653",
-      "dificultad": "medio",
-      "opcion_a": "Un pH superior a 7,45.",
-      "opcion_b": "46, organizados en 23 pares.",
-      "opcion_c": "Tiroxina (T₄) y triyodotironina (T₃).",
-      "opcion_d": "Aproximadamente 9 kcal."
-    },
-    {
-      "content_id": "morfo-17-019",
-      "materia": "MORFOFUNCION",
-      "tema": "sistema endocrino",
-      "numero_pregunta": 23,
-      "pregunta": "¿Qué efecto tiene la PTH sobre el calcio sanguíneo?",
-      "respuesta_correcta": "B",
-      "justificacion": "Lo aumenta.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "681",
-      "pagina_impresa": "653",
-      "dificultad": "medio",
-      "opcion_a": "La disminuye.",
-      "opcion_b": "Lo aumenta.",
-      "opcion_c": "AMP cíclico.",
-      "opcion_d": "La prolactina."
-    },
-    {
-      "content_id": "morfo-17-027",
-      "materia": "MORFOFUNCION",
-      "tema": "sistema endocrino",
-      "numero_pregunta": 24,
-      "pregunta": "¿Qué efecto tiene el glucagón sobre la glucemia?",
-      "respuesta_correcta": "B",
-      "justificacion": "La aumenta.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "681",
-      "pagina_impresa": "653",
-      "dificultad": "medio",
-      "opcion_a": "Las células alfa.",
-      "opcion_b": "La aumenta.",
-      "opcion_c": "AMP cíclico.",
-      "opcion_d": "La disminuye."
-    },
-    {
-      "content_id": "morfo-17-005",
-      "materia": "MORFOFUNCION",
-      "tema": "sistema endocrino",
-      "numero_pregunta": 25,
-      "pregunta": "¿Dónde se encuentran los receptores de las hormonas esteroideas?",
-      "respuesta_correcta": "C",
-      "justificacion": "Dentro de la célula, en el citoplasma o el núcleo.",
-      "fuente": "Saladin · Anatomía y fisiología",
+      "justificacion": "La sangre distribuye la hormona. La respuesta específica depende de que la célula diana tenga receptores capaces de fijar esa hormona.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
       "paginas_pdf": "688",
       "pagina_impresa": "660",
-      "dificultad": "medio",
-      "opcion_a": "El factor de crecimiento similar a insulina, IGF.",
-      "opcion_b": "Como continuación del tallo encefálico en el agujero magno.",
-      "opcion_c": "Dentro de la célula, en el citoplasma o el núcleo.",
-      "opcion_d": "La endocrina libera hormonas al medio interno; la exocrina utiliza conductos."
-    },
-    {
-      "content_id": "morfo-17-007",
-      "materia": "MORFOFUNCION",
-      "tema": "sistema endocrino",
-      "numero_pregunta": 26,
-      "pregunta": "¿Qué segundo mensajero produce la adenilato ciclasa?",
-      "respuesta_correcta": "B",
-      "justificacion": "AMP cíclico.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "690",
-      "pagina_impresa": "662",
-      "dificultad": "medio",
-      "opcion_a": "La disminuye.",
-      "opcion_b": "AMP cíclico.",
-      "opcion_c": "Lo aumenta.",
-      "opcion_d": "Aldosterona."
-    },
-    {
-      "content_id": "morfo-17-006",
-      "materia": "MORFOFUNCION",
-      "tema": "sistema endocrino",
-      "numero_pregunta": 27,
-      "pregunta": "¿Dónde se encuentran los receptores de muchas hormonas peptídicas?",
-      "respuesta_correcta": "C",
-      "justificacion": "En la membrana plasmática.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "694",
-      "pagina_impresa": "666",
-      "dificultad": "medio",
-      "opcion_a": "En los túbulos seminíferos.",
-      "opcion_b": "En la matriz mitocondrial.",
-      "opcion_c": "En la membrana plasmática.",
-      "opcion_d": "En la laringe."
-    },
-    {
-      "content_id": "morfo-17-026",
-      "materia": "MORFOFUNCION",
-      "tema": "sistema endocrino",
-      "numero_pregunta": 28,
-      "pregunta": "¿Qué efecto tiene la insulina sobre la glucemia?",
-      "respuesta_correcta": "B",
-      "justificacion": "La disminuye.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "699",
-      "pagina_impresa": "671",
-      "dificultad": "medio",
-      "opcion_a": "Las células beta.",
-      "opcion_b": "La disminuye.",
-      "opcion_c": "La aumenta.",
-      "opcion_d": "Aldosterona."
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 17 · Glándulas endocrinas y exocrinas",
+          "page": 688,
+          "printed": 660,
+          "marks": [
+            [
+              0.7217,
+              0.3823,
+              0.1874,
+              0.0111
+            ]
+          ]
+        }
+      ],
+      "source": {
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-17"
+      },
+      "opcion_a": "El tejido que responde expresa receptores para una hormona distinta.",
+      "opcion_b": "El tejido que responde carece de receptores para la hormona circulante.",
+      "opcion_c": "La respuesta se decide por el número total de receptores, aunque sean para otras señales.",
+      "opcion_d": "El tejido que responde expresa receptores que fijan la hormona."
     }
   ]
 }

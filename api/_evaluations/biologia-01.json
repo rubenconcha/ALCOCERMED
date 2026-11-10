@@ -5,485 +5,1456 @@
   "topic": "introduccion a la biologia celular",
   "title": "Introducción a la biología de las células",
   "number": 1,
-  "count": 28,
-  "duration": 28,
+  "count": 26,
+  "duration": 26,
   "source": "Biología celular biomédica",
   "questions": [
     {
-      "content_id": "bio-01-002",
+      "content_id": "evaluacion:medicina-oficial-biologia-01-intermedio-1",
       "materia": "BIOLOGIA CELULAR",
       "tema": "introduccion a la biologia celular",
       "numero_pregunta": 1,
-      "pregunta": "¿Qué añade Virchow a la teoría celular?",
-      "respuesta_correcta": "B",
-      "justificacion": "Todas las células provienen de otra célula.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "35",
-      "pagina_impresa": "35",
+      "pregunta": "Se aísla ADN circular que es mucho más pequeño que el cromosoma principal. La muestra no corresponde a una prolongación de superficie ni a la pared.\n¿Qué opción corresponde al caso?",
+      "respuesta_correcta": "C",
+      "justificacion": "El plásmido es ADN extracromosómico, de menor tamaño que el cromosoma bacteriano.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+      "paginas_pdf": "43",
+      "pagina_impresa": "",
       "dificultad": "medio",
-      "opcion_a": "Un núcleo que contiene el material genético.",
-      "opcion_b": "Todas las células provienen de otra célula.",
-      "opcion_c": "Cápside; sus unidades son los capsómeros.",
-      "opcion_d": "Convertirse en ARN de polaridad positiva."
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Introducción a la biología de las células · Bacterias",
+          "page": 43,
+          "printed": null,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-01",
+        "chapterNumber": 1,
+        "chapter": "Introducción a la biología de las células",
+        "section": "Bacterias",
+        "printedPages": [],
+        "pdfPages": [
+          43
+        ]
+      },
+      "opcion_a": "Pili",
+      "opcion_b": "Peptidoglucano",
+      "opcion_c": "Plásmido",
+      "opcion_d": "Endospora"
     },
     {
-      "content_id": "bio-01-003",
+      "content_id": "evaluacion:medicina-oficial-biologia-01-intermedio-2",
       "materia": "BIOLOGIA CELULAR",
       "tema": "introduccion a la biologia celular",
       "numero_pregunta": 2,
-      "pregunta": "¿Qué estructura distingue a las células eucariotas?",
-      "respuesta_correcta": "C",
-      "justificacion": "Un núcleo que contiene el material genético.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "37",
-      "pagina_impresa": "37",
+      "pregunta": "Se identifica el material estructural de la pared que estabiliza la forma de la bacteria, no un elemento de ADN ni una cubierta de resistencia.\n¿Qué opción corresponde al caso?",
+      "respuesta_correcta": "A",
+      "justificacion": "El peptidoglucano forma parte de la pared bacteriana. La pregunta se refiere a ese material de la pared.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+      "paginas_pdf": "43",
+      "pagina_impresa": "",
       "dificultad": "medio",
-      "opcion_a": "Convertirse en ARN de polaridad positiva.",
-      "opcion_b": "Todas las células provienen de otra célula.",
-      "opcion_c": "Un núcleo que contiene el material genético.",
-      "opcion_d": "Cápside; sus unidades son los capsómeros."
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Introducción a la biología de las células · Pared bacteriana",
+          "page": 43,
+          "printed": null,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-01",
+        "chapterNumber": 1,
+        "chapter": "Introducción a la biología de las células",
+        "section": "Pared bacteriana",
+        "printedPages": [],
+        "pdfPages": [
+          43
+        ]
+      },
+      "opcion_a": "Peptidoglucano",
+      "opcion_b": "Endospora",
+      "opcion_c": "Pili",
+      "opcion_d": "Plásmido"
     },
     {
-      "content_id": "bio-01-004",
+      "content_id": "evaluacion:medicina-oficial-biologia-01-intermedio-3",
       "materia": "BIOLOGIA CELULAR",
       "tema": "introduccion a la biologia celular",
       "numero_pregunta": 3,
-      "pregunta": "¿Cómo son los cromosomas del núcleo eucariota?",
-      "respuesta_correcta": "C",
-      "justificacion": "Múltiples y lineales.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "37",
-      "pagina_impresa": "37",
+      "pregunta": "Dos bacterias establecen contacto para transferir material genético. Se pregunta por las prolongaciones especializadas que median el contacto.\n¿Qué opción corresponde al caso?",
+      "respuesta_correcta": "B",
+      "justificacion": "Los pili sexuales participan en la transferencia de material genético entre bacterias durante la conjugación.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+      "paginas_pdf": "43",
+      "pagina_impresa": "",
       "dificultad": "medio",
-      "opcion_a": "El lipopolisacárido.",
-      "opcion_b": "El peptidoglucano.",
-      "opcion_c": "Múltiples y lineales.",
-      "opcion_d": "Eucariota unicelular."
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Introducción a la biología de las células · Bacterias",
+          "page": 43,
+          "printed": null,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-01",
+        "chapterNumber": 1,
+        "chapter": "Introducción a la biología de las células",
+        "section": "Bacterias",
+        "printedPages": [],
+        "pdfPages": [
+          43
+        ]
+      },
+      "opcion_a": "Plásmido",
+      "opcion_b": "Pili",
+      "opcion_c": "Endospora",
+      "opcion_d": "Peptidoglucano"
     },
     {
-      "content_id": "bio-01-005",
+      "content_id": "evaluacion:medicina-oficial-biologia-01-intermedio-4",
       "materia": "BIOLOGIA CELULAR",
       "tema": "introduccion a la biologia celular",
       "numero_pregunta": 4,
-      "pregunta": "¿Qué tamaño tienen los ribosomas citoplasmáticos eucariotas?",
-      "respuesta_correcta": "A",
-      "justificacion": "80 S.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "37",
-      "pagina_impresa": "37",
+      "pregunta": "Al empeorar el ambiente, la bacteria produce una forma resistente que puede germinar si vuelven las condiciones favorables.\n¿Qué opción corresponde al caso?",
+      "respuesta_correcta": "D",
+      "justificacion": "La endospora permite que ciertas bacterias sobrevivan en condiciones ambientales adversas.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+      "paginas_pdf": "43",
+      "pagina_impresa": "",
       "dificultad": "medio",
-      "opcion_a": "80 S.",
-      "opcion_b": "E6: p53. E7: proteína del retinoblastoma.",
-      "opcion_c": "CD4; después se une a un correceptor.",
-      "opcion_d": "7 nm."
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Introducción a la biología de las células · Bacterias",
+          "page": 43,
+          "printed": null,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-01",
+        "chapterNumber": 1,
+        "chapter": "Introducción a la biología de las células",
+        "section": "Bacterias",
+        "printedPages": [],
+        "pdfPages": [
+          43
+        ]
+      },
+      "opcion_a": "Plásmido",
+      "opcion_b": "Peptidoglucano",
+      "opcion_c": "Pili",
+      "opcion_d": "Endospora"
     },
     {
-      "content_id": "bio-01-006",
+      "content_id": "evaluacion:medicina-oficial-biologia-01-mini-bio-01-01-umss",
       "materia": "BIOLOGIA CELULAR",
       "tema": "introduccion a la biologia celular",
       "numero_pregunta": 5,
-      "pregunta": "¿Qué orgánulo realiza la fotosíntesis en las células vegetales?",
-      "respuesta_correcta": "D",
-      "justificacion": "El cloroplasto.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "37",
-      "pagina_impresa": "37",
-      "dificultad": "medio",
-      "opcion_a": "La integrasa.",
-      "opcion_b": "Anopheles.",
-      "opcion_c": "El peptidoglucano.",
-      "opcion_d": "El cloroplasto."
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Virchow postuló que las células proceden de otras células.\n2. La teoría celular reconoce a la célula como unidad estructural y funcional de los seres vivos.",
+      "respuesta_correcta": "C",
+      "justificacion": "1. Correcta. Su contribución completó la teoría celular al establecer el origen celular a partir de una célula previa.\n2. Correcta. La teoría presenta a las células como unidades estructurales, funcionales y reproductivas.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+      "paginas_pdf": "35",
+      "pagina_impresa": "",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Introducción a la biología de las células · Introducción: teoría celular",
+          "page": 35,
+          "printed": null,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-01",
+        "chapterNumber": 1,
+        "chapter": "Introducción a la biología de las células",
+        "section": "Introducción: teoría celular",
+        "pdfPages": [
+          35
+        ],
+        "printedPages": []
+      },
+      "comentarios_opciones": {
+        "A": "2. Correcta. La teoría presenta a las células como unidades estructurales, funcionales y reproductivas.",
+        "B": "1. Correcta. Su contribución completó la teoría celular al establecer el origen celular a partir de una célula previa.",
+        "C": "Ambas afirmaciones son correctas.",
+        "D": "1. Correcta. Su contribución completó la teoría celular al establecer el origen celular a partir de una célula previa. 2. Correcta. La teoría presenta a las células como unidades estructurales, funcionales y reproductivas."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "bio-01-007",
+      "content_id": "evaluacion:medicina-oficial-biologia-01-mini-bio-01-02-umss",
       "materia": "BIOLOGIA CELULAR",
       "tema": "introduccion a la biologia celular",
       "numero_pregunta": 6,
-      "pregunta": "¿Qué organización celular tienen los protozoos?",
-      "respuesta_correcta": "A",
-      "justificacion": "Eucariota unicelular.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "38",
-      "pagina_impresa": "38",
-      "dificultad": "medio",
-      "opcion_a": "Eucariota unicelular.",
-      "opcion_b": "Múltiples y lineales.",
-      "opcion_c": "El peptidoglucano.",
-      "opcion_d": "El lipopolisacárido."
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Hooke acuñó el término célula a partir de observaciones con microscopía electrónica.\n2. La centrifugación diferencial precedió a la observación de las celdillas del corcho.",
+      "respuesta_correcta": "D",
+      "justificacion": "1. Incorrecta. Hooke observó láminas de corcho con el microscopio de su época. La microscopía electrónica apareció después.\n2. Incorrecta. El desarrollo de técnicas de fraccionamiento celular es posterior a las observaciones de Hooke.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+      "paginas_pdf": "35",
+      "pagina_impresa": "",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Introducción a la biología de las células · Introducción: historia del estudio celular",
+          "page": 35,
+          "printed": null,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-01",
+        "chapterNumber": 1,
+        "chapter": "Introducción a la biología de las células",
+        "section": "Introducción: historia del estudio celular",
+        "pdfPages": [
+          35
+        ],
+        "printedPages": []
+      },
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. Hooke observó láminas de corcho con el microscopio de su época. La microscopía electrónica apareció después.",
+        "B": "2. Incorrecta. El desarrollo de técnicas de fraccionamiento celular es posterior a las observaciones de Hooke.",
+        "C": "1. Incorrecta. Hooke observó láminas de corcho con el microscopio de su época. La microscopía electrónica apareció después. 2. Incorrecta. El desarrollo de técnicas de fraccionamiento celular es posterior a las observaciones de Hooke.",
+        "D": "Ninguna afirmación es correcta."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "bio-01-008",
+      "content_id": "evaluacion:medicina-oficial-biologia-01-mini-bio-01-03-umss",
       "materia": "BIOLOGIA CELULAR",
       "tema": "introduccion a la biologia celular",
       "numero_pregunta": 7,
-      "pregunta": "¿Qué mosquito transmite Plasmodium al humano?",
-      "respuesta_correcta": "C",
-      "justificacion": "Anopheles.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "38",
-      "pagina_impresa": "38",
-      "dificultad": "medio",
-      "opcion_a": "Hifas.",
-      "opcion_b": "La integrasa.",
-      "opcion_c": "Anopheles.",
-      "opcion_d": "Micosis."
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. La envoltura nuclear delimita el compartimento que contiene el genoma eucariota.\n2. En células animales, el peptidoglucano forma una pared externa a la membrana.",
+      "respuesta_correcta": "A",
+      "justificacion": "1. Correcta. La presencia del núcleo diferencia la localización del material genético respecto del modelo procariota.\n2. Incorrecta. La tabla atribuye peptidoglucano a la pared bacteriana. Las células animales carecen de pared celular.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+      "paginas_pdf": "37, 41",
+      "pagina_impresa": "",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Introducción a la biología de las células · Organización de las células eucariotas",
+          "page": 37,
+          "printed": null,
+          "marks": []
+        },
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Introducción a la biología de las células · Organización de las células eucariotas",
+          "page": 41,
+          "printed": null,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-01",
+        "chapterNumber": 1,
+        "chapter": "Introducción a la biología de las células",
+        "section": "Organización de las células eucariotas",
+        "pdfPages": [
+          37,
+          41
+        ],
+        "printedPages": []
+      },
+      "comentarios_opciones": {
+        "A": "Solo la afirmación 1 es correcta.",
+        "B": "1. Correcta. La presencia del núcleo diferencia la localización del material genético respecto del modelo procariota. 2. Incorrecta. La tabla atribuye peptidoglucano a la pared bacteriana. Las células animales carecen de pared celular.",
+        "C": "2. Incorrecta. La tabla atribuye peptidoglucano a la pared bacteriana. Las células animales carecen de pared celular.",
+        "D": "1. Correcta. La presencia del núcleo diferencia la localización del material genético respecto del modelo procariota."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "bio-01-009",
+      "content_id": "evaluacion:medicina-oficial-biologia-01-mini-bio-01-04-umss",
       "materia": "BIOLOGIA CELULAR",
       "tema": "introduccion a la biologia celular",
       "numero_pregunta": 8,
-      "pregunta": "¿En qué órgano se instalan primero los esporozoítos de Plasmodium?",
-      "respuesta_correcta": "C",
-      "justificacion": "En el hígado.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "38",
-      "pagina_impresa": "38",
-      "dificultad": "medio",
-      "opcion_a": "En paquiteno.",
-      "opcion_b": "En la matriz.",
-      "opcion_c": "En el hígado.",
-      "opcion_d": "En la fase S."
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Los cromosomas del núcleo eucariota forman un único anillo libre en el citoplasma.\n2. Los plásmidos descritos son moléculas extracromosómicas de ADN bacteriano.",
+      "respuesta_correcta": "B",
+      "justificacion": "1. Incorrecta. En el núcleo eucariota hay múltiples cromosomas lineales.\n2. Correcta. El texto distingue los plásmidos del cromosoma bacteriano.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+      "paginas_pdf": "37, 43, 46",
+      "pagina_impresa": "",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Introducción a la biología de las células · Organización de las células eucariotas",
+          "page": 37,
+          "printed": null,
+          "marks": []
+        },
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Introducción a la biología de las células · Organización de las células eucariotas",
+          "page": 43,
+          "printed": null,
+          "marks": []
+        },
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Introducción a la biología de las células · Organización de las células eucariotas",
+          "page": 46,
+          "printed": null,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-01",
+        "chapterNumber": 1,
+        "chapter": "Introducción a la biología de las células",
+        "section": "Organización de las células eucariotas",
+        "pdfPages": [
+          37,
+          43,
+          46
+        ],
+        "printedPages": []
+      },
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. En el núcleo eucariota hay múltiples cromosomas lineales. 2. Correcta. El texto distingue los plásmidos del cromosoma bacteriano.",
+        "B": "Solo la afirmación 2 es correcta.",
+        "C": "1. Incorrecta. En el núcleo eucariota hay múltiples cromosomas lineales.",
+        "D": "2. Correcta. El texto distingue los plásmidos del cromosoma bacteriano."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "bio-01-010",
+      "content_id": "evaluacion:medicina-oficial-biologia-01-mini-bio-01-05-umss",
       "materia": "BIOLOGIA CELULAR",
       "tema": "introduccion a la biologia celular",
       "numero_pregunta": 9,
-      "pregunta": "¿Cómo se llaman los filamentos de los hongos pluricelulares?",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. El ribosoma del citoplasma de una célula animal es de 80 S.\n2. La tabla asigna 70 S a los ribosomas procariotas.",
       "respuesta_correcta": "C",
-      "justificacion": "Hifas.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "39",
-      "pagina_impresa": "39",
-      "dificultad": "medio",
-      "opcion_a": "Micosis.",
-      "opcion_b": "Anopheles.",
-      "opcion_c": "Hifas.",
-      "opcion_d": "La integrasa."
+      "justificacion": "1. Correcta. La descripción y la tabla señalan el valor de 80 S para los ribosomas citoplasmáticos eucariotas.\n2. Correcta. La tabla distingue 70 S en el modelo procariota y 80 S en el citoplasma eucariota.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+      "paginas_pdf": "37, 41",
+      "pagina_impresa": "",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Introducción a la biología de las células · Organización de las células eucariotas",
+          "page": 37,
+          "printed": null,
+          "marks": []
+        },
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Introducción a la biología de las células · Organización de las células eucariotas",
+          "page": 41,
+          "printed": null,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-01",
+        "chapterNumber": 1,
+        "chapter": "Introducción a la biología de las células",
+        "section": "Organización de las células eucariotas",
+        "pdfPages": [
+          37,
+          41
+        ],
+        "printedPages": []
+      },
+      "comentarios_opciones": {
+        "A": "2. Correcta. La tabla distingue 70 S en el modelo procariota y 80 S en el citoplasma eucariota.",
+        "B": "1. Correcta. La descripción y la tabla señalan el valor de 80 S para los ribosomas citoplasmáticos eucariotas.",
+        "C": "Ambas afirmaciones son correctas.",
+        "D": "1. Correcta. La descripción y la tabla señalan el valor de 80 S para los ribosomas citoplasmáticos eucariotas. 2. Correcta. La tabla distingue 70 S en el modelo procariota y 80 S en el citoplasma eucariota."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "bio-01-011",
+      "content_id": "evaluacion:medicina-oficial-biologia-01-mini-bio-01-06-umss",
       "materia": "BIOLOGIA CELULAR",
       "tema": "introduccion a la biologia celular",
       "numero_pregunta": 10,
-      "pregunta": "¿Cómo se denominan las enfermedades producidas por hongos?",
-      "respuesta_correcta": "A",
-      "justificacion": "Micosis.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "39",
-      "pagina_impresa": "39",
-      "dificultad": "medio",
-      "opcion_a": "Micosis.",
-      "opcion_b": "Hifas.",
-      "opcion_c": "La integrasa.",
-      "opcion_d": "Anopheles."
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. La pared de la célula vegetal fotosintética se compone de quitina.\n2. Los cloroplastos forman la cubierta externa de la célula vegetal.",
+      "respuesta_correcta": "D",
+      "justificacion": "1. Incorrecta. Calvo describe una pared de celulosa en plantas y menciona quitina en la pared fúngica.\n2. Incorrecta. Los cloroplastos son orgánulos que realizan la fotosíntesis. La celulosa forma la pared de las células vegetales descritas.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+      "paginas_pdf": "37, 39, 41, 46",
+      "pagina_impresa": "",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Introducción a la biología de las células · Organización de las células vegetales",
+          "page": 37,
+          "printed": null,
+          "marks": []
+        },
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Introducción a la biología de las células · Organización de las células vegetales",
+          "page": 39,
+          "printed": null,
+          "marks": []
+        },
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Introducción a la biología de las células · Organización de las células vegetales",
+          "page": 41,
+          "printed": null,
+          "marks": []
+        },
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Introducción a la biología de las células · Organización de las células vegetales",
+          "page": 46,
+          "printed": null,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-01",
+        "chapterNumber": 1,
+        "chapter": "Introducción a la biología de las células",
+        "section": "Organización de las células vegetales",
+        "pdfPages": [
+          37,
+          39,
+          41,
+          46
+        ],
+        "printedPages": []
+      },
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. Calvo describe una pared de celulosa en plantas y menciona quitina en la pared fúngica.",
+        "B": "2. Incorrecta. Los cloroplastos son orgánulos que realizan la fotosíntesis. La celulosa forma la pared de las células vegetales descritas.",
+        "C": "1. Incorrecta. Calvo describe una pared de celulosa en plantas y menciona quitina en la pared fúngica. 2. Incorrecta. Los cloroplastos son orgánulos que realizan la fotosíntesis. La celulosa forma la pared de las células vegetales descritas.",
+        "D": "Ninguna afirmación es correcta."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "bio-01-013",
+      "content_id": "evaluacion:medicina-oficial-biologia-01-mini-bio-01-07-umss",
       "materia": "BIOLOGIA CELULAR",
       "tema": "introduccion a la biologia celular",
       "numero_pregunta": 11,
-      "pregunta": "¿Cuáles son los dos dominios de organismos procariotas?",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Los protozoos son organismos unicelulares con organización eucariota.\n2. Los protozoos se definen como proteínas infecciosas capaces de alterar el plegamiento de otras proteínas.",
       "respuesta_correcta": "A",
-      "justificacion": "Bacterias y archaea.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "41",
-      "pagina_impresa": "41",
-      "dificultad": "medio",
-      "opcion_a": "Bacterias y archaea.",
-      "opcion_b": "UAA, UAG y UGA.",
-      "opcion_c": "Hélice α y lámina β.",
-      "opcion_d": "Interfase y división celular."
+      "justificacion": "1. Correcta. El capítulo clasifica a los protozoos por su organización celular eucariota.\n2. Incorrecta. Esa descripción corresponde a los priones. Los protozoos son organismos celulares.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+      "paginas_pdf": "38, 51, 52",
+      "pagina_impresa": "",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Introducción a la biología de las células · Protozoos",
+          "page": 38,
+          "printed": null,
+          "marks": []
+        },
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Introducción a la biología de las células · Protozoos",
+          "page": 51,
+          "printed": null,
+          "marks": []
+        },
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Introducción a la biología de las células · Protozoos",
+          "page": 52,
+          "printed": null,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-01",
+        "chapterNumber": 1,
+        "chapter": "Introducción a la biología de las células",
+        "section": "Protozoos",
+        "pdfPages": [
+          38,
+          51,
+          52
+        ],
+        "printedPages": []
+      },
+      "comentarios_opciones": {
+        "A": "Solo la afirmación 1 es correcta.",
+        "B": "1. Correcta. El capítulo clasifica a los protozoos por su organización celular eucariota. 2. Incorrecta. Esa descripción corresponde a los priones. Los protozoos son organismos celulares.",
+        "C": "2. Incorrecta. Esa descripción corresponde a los priones. Los protozoos son organismos celulares.",
+        "D": "1. Correcta. El capítulo clasifica a los protozoos por su organización celular eucariota."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "bio-01-014",
+      "content_id": "evaluacion:medicina-oficial-biologia-01-mini-bio-01-08-umss",
       "materia": "BIOLOGIA CELULAR",
       "tema": "introduccion a la biologia celular",
       "numero_pregunta": 12,
-      "pregunta": "¿Qué son los plásmidos bacterianos?",
-      "respuesta_correcta": "A",
-      "justificacion": "Moléculas circulares de ADN extracromosómico, menores que el cromosoma.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "43",
-      "pagina_impresa": "43",
-      "dificultad": "medio",
-      "opcion_a": "Moléculas circulares de ADN extracromosómico, menores que el cromosoma.",
-      "opcion_b": "La distancia mínima entre dos puntos que permite distinguirlos por separado.",
-      "opcion_c": "Genes que se expresan rutinariamente para funciones celulares básicas.",
-      "opcion_d": "Fragmentos celulares rodeados de membrana que después son fagocitados."
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Tras la inoculación al ser humano, los esporozoítos invaden primero los eritrocitos.\n2. Los merozoítos liberados después de la fase hepática invaden eritrocitos.",
+      "respuesta_correcta": "B",
+      "justificacion": "1. Incorrecta. Los esporozoítos se instalan primero en el hígado.\n2. Correcta. El ciclo descrito separa la etapa hepática de la invasión posterior de eritrocitos.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+      "paginas_pdf": "38",
+      "pagina_impresa": "",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Introducción a la biología de las células · Protozoos: Plasmodium",
+          "page": 38,
+          "printed": null,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-01",
+        "chapterNumber": 1,
+        "chapter": "Introducción a la biología de las células",
+        "section": "Protozoos: Plasmodium",
+        "pdfPages": [
+          38
+        ],
+        "printedPages": []
+      },
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. Los esporozoítos se instalan primero en el hígado. 2. Correcta. El ciclo descrito separa la etapa hepática de la invasión posterior de eritrocitos.",
+        "B": "Solo la afirmación 2 es correcta.",
+        "C": "1. Incorrecta. Los esporozoítos se instalan primero en el hígado.",
+        "D": "2. Correcta. El ciclo descrito separa la etapa hepática de la invasión posterior de eritrocitos."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "bio-01-015",
+      "content_id": "evaluacion:medicina-oficial-biologia-01-mini-bio-01-09-umss",
       "materia": "BIOLOGIA CELULAR",
       "tema": "introduccion a la biologia celular",
       "numero_pregunta": 13,
-      "pregunta": "¿Qué tamaño tienen los ribosomas bacterianos?",
-      "respuesta_correcta": "B",
-      "justificacion": "70 S.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "43",
-      "pagina_impresa": "43",
-      "dificultad": "medio",
-      "opcion_a": "CD4; después se une a un correceptor.",
-      "opcion_b": "70 S.",
-      "opcion_c": "7 nm.",
-      "opcion_d": "E6: p53. E7: proteína del retinoblastoma."
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Las células fúngicas alargadas pueden formar filamentos llamados hifas.\n2. El crecimiento de las hifas puede originar un micelio.",
+      "respuesta_correcta": "C",
+      "justificacion": "1. Correcta. Las hifas se forman por la disposición lineal de células alargadas.\n2. Correcta. Los micelios resultan del crecimiento de esos filamentos.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+      "paginas_pdf": "39, 43, 46",
+      "pagina_impresa": "",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Introducción a la biología de las células · Hongos",
+          "page": 39,
+          "printed": null,
+          "marks": []
+        },
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Introducción a la biología de las células · Hongos",
+          "page": 43,
+          "printed": null,
+          "marks": []
+        },
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Introducción a la biología de las células · Hongos",
+          "page": 46,
+          "printed": null,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-01",
+        "chapterNumber": 1,
+        "chapter": "Introducción a la biología de las células",
+        "section": "Hongos",
+        "pdfPages": [
+          39,
+          43,
+          46
+        ],
+        "printedPages": []
+      },
+      "comentarios_opciones": {
+        "A": "2. Correcta. Los micelios resultan del crecimiento de esos filamentos.",
+        "B": "1. Correcta. Las hifas se forman por la disposición lineal de células alargadas.",
+        "C": "Ambas afirmaciones son correctas.",
+        "D": "1. Correcta. Las hifas se forman por la disposición lineal de células alargadas. 2. Correcta. Los micelios resultan del crecimiento de esos filamentos."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "bio-01-016",
+      "content_id": "evaluacion:medicina-oficial-biologia-01-mini-bio-01-10-umss",
       "materia": "BIOLOGIA CELULAR",
       "tema": "introduccion a la biologia celular",
       "numero_pregunta": 14,
-      "pregunta": "¿Qué componente proporciona rigidez a la pared bacteriana?",
-      "respuesta_correcta": "B",
-      "justificacion": "El peptidoglucano.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "43",
-      "pagina_impresa": "43",
-      "dificultad": "medio",
-      "opcion_a": "El lipopolisacárido.",
-      "opcion_b": "El peptidoglucano.",
-      "opcion_c": "Múltiples y lineales.",
-      "opcion_d": "Eucariota unicelular."
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. La pared fúngica descrita está constituida por unidades proteicas llamadas capsómeros.\n2. Glucanos y mananos son componentes que el texto excluye de la pared fúngica.",
+      "respuesta_correcta": "D",
+      "justificacion": "1. Incorrecta. Los capsómeros forman cápsides víricas. La pared fúngica contiene polisacáridos.\n2. Incorrecta. El capítulo incluye glucanos y mananos entre las estructuras de la pared.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+      "paginas_pdf": "39, 46",
+      "pagina_impresa": "",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Introducción a la biología de las células · Hongos: organización y pared",
+          "page": 39,
+          "printed": null,
+          "marks": []
+        },
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Introducción a la biología de las células · Hongos: organización y pared",
+          "page": 46,
+          "printed": null,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-01",
+        "chapterNumber": 1,
+        "chapter": "Introducción a la biología de las células",
+        "section": "Hongos: organización y pared",
+        "pdfPages": [
+          39,
+          46
+        ],
+        "printedPages": []
+      },
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. Los capsómeros forman cápsides víricas. La pared fúngica contiene polisacáridos.",
+        "B": "2. Incorrecta. El capítulo incluye glucanos y mananos entre las estructuras de la pared.",
+        "C": "1. Incorrecta. Los capsómeros forman cápsides víricas. La pared fúngica contiene polisacáridos. 2. Incorrecta. El capítulo incluye glucanos y mananos entre las estructuras de la pared.",
+        "D": "Ninguna afirmación es correcta."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "bio-01-017",
+      "content_id": "evaluacion:medicina-oficial-biologia-01-mini-bio-01-11-umss",
       "materia": "BIOLOGIA CELULAR",
       "tema": "introduccion a la biologia celular",
       "numero_pregunta": 15,
-      "pregunta": "¿Cómo cambia el peptidoglucano entre bacterias grampositivas y gramnegativas?",
-      "respuesta_correcta": "D",
-      "justificacion": "Grampositivas: capa gruesa. Gramnegativas: capa fina.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "43",
-      "pagina_impresa": "43",
-      "dificultad": "medio",
-      "opcion_a": "Convertirse en ARN de polaridad positiva.",
-      "opcion_b": "Todas las células provienen de otra célula.",
-      "opcion_c": "Un núcleo que contiene el material genético.",
-      "opcion_d": "Grampositivas: capa gruesa. Gramnegativas: capa fina."
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Las bacterias y las archaea son los dos dominios procariotas que distingue el texto.\n2. El capítulo coloca a hongos y protozoos en dominios procariotas distintos.",
+      "respuesta_correcta": "A",
+      "justificacion": "1. Correcta. La clasificación del capítulo divide los procariotas en esos dos grandes grupos.\n2. Incorrecta. Ambos presentan organización eucariota.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+      "paginas_pdf": "37, 39, 41, 52",
+      "pagina_impresa": "",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Introducción a la biología de las células · Organización de las células procariotas",
+          "page": 37,
+          "printed": null,
+          "marks": []
+        },
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Introducción a la biología de las células · Organización de las células procariotas",
+          "page": 39,
+          "printed": null,
+          "marks": []
+        },
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Introducción a la biología de las células · Organización de las células procariotas",
+          "page": 41,
+          "printed": null,
+          "marks": []
+        },
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Introducción a la biología de las células · Organización de las células procariotas",
+          "page": 52,
+          "printed": null,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-01",
+        "chapterNumber": 1,
+        "chapter": "Introducción a la biología de las células",
+        "section": "Organización de las células procariotas",
+        "pdfPages": [
+          37,
+          39,
+          41,
+          52
+        ],
+        "printedPages": []
+      },
+      "comentarios_opciones": {
+        "A": "Solo la afirmación 1 es correcta.",
+        "B": "1. Correcta. La clasificación del capítulo divide los procariotas en esos dos grandes grupos. 2. Incorrecta. Ambos presentan organización eucariota.",
+        "C": "2. Incorrecta. Ambos presentan organización eucariota.",
+        "D": "1. Correcta. La clasificación del capítulo divide los procariotas en esos dos grandes grupos."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "bio-01-018",
+      "content_id": "evaluacion:medicina-oficial-biologia-01-mini-bio-01-12-umss",
       "materia": "BIOLOGIA CELULAR",
       "tema": "introduccion a la biologia celular",
       "numero_pregunta": 16,
-      "pregunta": "¿Qué componente de las bacterias gramnegativas se conoce como endotoxina?",
-      "respuesta_correcta": "D",
-      "justificacion": "El lipopolisacárido.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "43",
-      "pagina_impresa": "43",
-      "dificultad": "medio",
-      "opcion_a": "Eucariota unicelular.",
-      "opcion_b": "Múltiples y lineales.",
-      "opcion_c": "El peptidoglucano.",
-      "opcion_d": "El lipopolisacárido."
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. El plásmido y el cromosoma bacteriano constituyen la misma molécula de ADN.\n2. Un plásmido puede contener genes que favorezcan la supervivencia bacteriana.",
+      "respuesta_correcta": "B",
+      "justificacion": "1. Incorrecta. El plásmido es una molécula extracromosómica, de menor tamaño que el cromosoma.\n2. Correcta. El texto presenta la resistencia a antibióticos como un ejemplo de ventaja que pueden aportar algunos genes plasmídicos.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+      "paginas_pdf": "39, 43, 46, 52",
+      "pagina_impresa": "",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Introducción a la biología de las células · Bacterias: material genético",
+          "page": 39,
+          "printed": null,
+          "marks": []
+        },
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Introducción a la biología de las células · Bacterias: material genético",
+          "page": 43,
+          "printed": null,
+          "marks": []
+        },
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Introducción a la biología de las células · Bacterias: material genético",
+          "page": 46,
+          "printed": null,
+          "marks": []
+        },
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Introducción a la biología de las células · Bacterias: material genético",
+          "page": 52,
+          "printed": null,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-01",
+        "chapterNumber": 1,
+        "chapter": "Introducción a la biología de las células",
+        "section": "Bacterias: material genético",
+        "pdfPages": [
+          39,
+          43,
+          46,
+          52
+        ],
+        "printedPages": []
+      },
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. El plásmido es una molécula extracromosómica, de menor tamaño que el cromosoma. 2. Correcta. El texto presenta la resistencia a antibióticos como un ejemplo de ventaja que pueden aportar algunos genes plasmídicos.",
+        "B": "Solo la afirmación 2 es correcta.",
+        "C": "1. Incorrecta. El plásmido es una molécula extracromosómica, de menor tamaño que el cromosoma.",
+        "D": "2. Correcta. El texto presenta la resistencia a antibióticos como un ejemplo de ventaja que pueden aportar algunos genes plasmídicos."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "bio-01-019",
+      "content_id": "evaluacion:medicina-oficial-biologia-01-mini-bio-01-13-umss",
       "materia": "BIOLOGIA CELULAR",
       "tema": "introduccion a la biologia celular",
       "numero_pregunta": 17,
-      "pregunta": "¿Qué función cumplen los pili bacterianos?",
-      "respuesta_correcta": "B",
-      "justificacion": "Transferir material genético durante la conjugación.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "43",
-      "pagina_impresa": "43",
-      "dificultad": "medio",
-      "opcion_a": "La endospora.",
-      "opcion_b": "Transferir material genético durante la conjugación.",
-      "opcion_c": "Permitir la salida del ARNt tras transferir la cadena.",
-      "opcion_d": "Necesitan enzimas y sustratos de la célula huésped para replicarse."
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. La capa de peptidoglucano de una grampositiva es más gruesa que la de una gramnegativa.\n2. Las bacterias gramnegativas poseen una membrana externa que contiene lipopolisacáridos.",
+      "respuesta_correcta": "C",
+      "justificacion": "1. Correcta. La diferencia de grosor de esa capa distingue las dos paredes.\n2. Correcta. La membrana externa recubre por fuera la capa fina de peptidoglucano.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+      "paginas_pdf": "41, 42, 43",
+      "pagina_impresa": "",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Introducción a la biología de las células · Bacterias: pared celular",
+          "page": 41,
+          "printed": null,
+          "marks": []
+        },
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Introducción a la biología de las células · Bacterias: pared celular",
+          "page": 42,
+          "printed": null,
+          "marks": []
+        },
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Introducción a la biología de las células · Bacterias: pared celular",
+          "page": 43,
+          "printed": null,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-01",
+        "chapterNumber": 1,
+        "chapter": "Introducción a la biología de las células",
+        "section": "Bacterias: pared celular",
+        "pdfPages": [
+          41,
+          42,
+          43
+        ],
+        "printedPages": []
+      },
+      "comentarios_opciones": {
+        "A": "2. Correcta. La membrana externa recubre por fuera la capa fina de peptidoglucano.",
+        "B": "1. Correcta. La diferencia de grosor de esa capa distingue las dos paredes.",
+        "C": "Ambas afirmaciones son correctas.",
+        "D": "1. Correcta. La diferencia de grosor de esa capa distingue las dos paredes. 2. Correcta. La membrana externa recubre por fuera la capa fina de peptidoglucano."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "bio-01-020",
+      "content_id": "evaluacion:medicina-oficial-biologia-01-mini-bio-01-14-umss",
       "materia": "BIOLOGIA CELULAR",
       "tema": "introduccion a la biologia celular",
       "numero_pregunta": 18,
-      "pregunta": "¿Qué estructura permite a ciertas bacterias resistir condiciones adversas?",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. La función de los pili sexuales consiste en formar la cápside de los virus que infectan bacterias.\n2. En la conjugación se forman hifas para transferir ADN de una bacteria a otra.",
       "respuesta_correcta": "D",
-      "justificacion": "La endospora.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "43",
-      "pagina_impresa": "43",
-      "dificultad": "medio",
-      "opcion_a": "Necesitan enzimas y sustratos de la célula huésped para replicarse.",
-      "opcion_b": "Transferir material genético durante la conjugación.",
-      "opcion_c": "Colágeno IV.",
-      "opcion_d": "La endospora."
+      "justificacion": "1. Incorrecta. Los pili participan en la conjugación bacteriana. Los capsómeros componen la cápside de un virus.\n2. Incorrecta. Las hifas son filamentos de hongos. El texto asocia la transferencia de material genético bacteriano a los pili.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+      "paginas_pdf": "39, 41, 43, 46",
+      "pagina_impresa": "",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Introducción a la biología de las células · Bacterias: conjugación",
+          "page": 39,
+          "printed": null,
+          "marks": []
+        },
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Introducción a la biología de las células · Bacterias: conjugación",
+          "page": 41,
+          "printed": null,
+          "marks": []
+        },
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Introducción a la biología de las células · Bacterias: conjugación",
+          "page": 43,
+          "printed": null,
+          "marks": []
+        },
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Introducción a la biología de las células · Bacterias: conjugación",
+          "page": 46,
+          "printed": null,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-01",
+        "chapterNumber": 1,
+        "chapter": "Introducción a la biología de las células",
+        "section": "Bacterias: conjugación",
+        "pdfPages": [
+          39,
+          41,
+          43,
+          46
+        ],
+        "printedPages": []
+      },
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. Los pili participan en la conjugación bacteriana. Los capsómeros componen la cápside de un virus.",
+        "B": "2. Incorrecta. Las hifas son filamentos de hongos. El texto asocia la transferencia de material genético bacteriano a los pili.",
+        "C": "1. Incorrecta. Los pili participan en la conjugación bacteriana. Los capsómeros componen la cápside de un virus. 2. Incorrecta. Las hifas son filamentos de hongos. El texto asocia la transferencia de material genético bacteriano a los pili.",
+        "D": "Ninguna afirmación es correcta."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "bio-01-021",
+      "content_id": "evaluacion:medicina-oficial-biologia-01-mini-bio-01-15-umss",
       "materia": "BIOLOGIA CELULAR",
       "tema": "introduccion a la biologia celular",
       "numero_pregunta": 19,
-      "pregunta": "¿Por qué los virus son parásitos intracelulares obligados?",
-      "respuesta_correcta": "B",
-      "justificacion": "Necesitan enzimas y sustratos de la célula huésped para replicarse.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "46",
-      "pagina_impresa": "46",
-      "dificultad": "medio",
-      "opcion_a": "Distintas proteínas a partir de diferentes combinaciones de exones.",
-      "opcion_b": "Necesitan enzimas y sustratos de la célula huésped para replicarse.",
-      "opcion_c": "Transferir material genético durante la conjugación.",
-      "opcion_d": "La endospora."
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Algunas bacterias forman endosporas resistentes en condiciones adversas.\n2. La endospora queda imposibilitada de germinar si reaparecen condiciones favorables.",
+      "respuesta_correcta": "A",
+      "justificacion": "1. Correcta. La endospora es una forma resistente de ciertas bacterias.\n2. Incorrecta. El texto indica que las endosporas pueden germinar al recuperar condiciones apropiadas.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+      "paginas_pdf": "37, 39, 43, 46",
+      "pagina_impresa": "",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Introducción a la biología de las células · Bacterias: endosporas",
+          "page": 37,
+          "printed": null,
+          "marks": []
+        },
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Introducción a la biología de las células · Bacterias: endosporas",
+          "page": 39,
+          "printed": null,
+          "marks": []
+        },
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Introducción a la biología de las células · Bacterias: endosporas",
+          "page": 43,
+          "printed": null,
+          "marks": []
+        },
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Introducción a la biología de las células · Bacterias: endosporas",
+          "page": 46,
+          "printed": null,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-01",
+        "chapterNumber": 1,
+        "chapter": "Introducción a la biología de las células",
+        "section": "Bacterias: endosporas",
+        "pdfPages": [
+          37,
+          39,
+          43,
+          46
+        ],
+        "printedPages": []
+      },
+      "comentarios_opciones": {
+        "A": "Solo la afirmación 1 es correcta.",
+        "B": "1. Correcta. La endospora es una forma resistente de ciertas bacterias. 2. Incorrecta. El texto indica que las endosporas pueden germinar al recuperar condiciones apropiadas.",
+        "C": "2. Incorrecta. El texto indica que las endosporas pueden germinar al recuperar condiciones apropiadas.",
+        "D": "1. Correcta. La endospora es una forma resistente de ciertas bacterias."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "bio-01-022",
+      "content_id": "evaluacion:medicina-oficial-biologia-01-mini-bio-01-16-umss",
       "materia": "BIOLOGIA CELULAR",
       "tema": "introduccion a la biologia celular",
       "numero_pregunta": 20,
-      "pregunta": "¿Cómo se llama la cubierta proteica de un virus?",
-      "respuesta_correcta": "C",
-      "justificacion": "Cápside; sus unidades son los capsómeros.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "46",
-      "pagina_impresa": "46",
-      "dificultad": "medio",
-      "opcion_a": "Un núcleo que contiene el material genético.",
-      "opcion_b": "Convertirse en ARN de polaridad positiva.",
-      "opcion_c": "Cápside; sus unidades son los capsómeros.",
-      "opcion_d": "Todas las células provienen de otra célula."
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Los virus realizan una replicación completa de forma autónoma fuera de una célula.\n2. La replicación vírica puede aprovechar enzimas y sustratos del huésped.",
+      "respuesta_correcta": "B",
+      "justificacion": "1. Incorrecta. Un virus depende de los recursos de una célula huésped para replicarse.\n2. Correcta. La dependencia de esos recursos explica el carácter intracelular obligado de los virus.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+      "paginas_pdf": "41, 46",
+      "pagina_impresa": "",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Introducción a la biología de las células · Virus: estructura y replicación",
+          "page": 41,
+          "printed": null,
+          "marks": []
+        },
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Introducción a la biología de las células · Virus: estructura y replicación",
+          "page": 46,
+          "printed": null,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-01",
+        "chapterNumber": 1,
+        "chapter": "Introducción a la biología de las células",
+        "section": "Virus: estructura y replicación",
+        "pdfPages": [
+          41,
+          46
+        ],
+        "printedPages": []
+      },
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. Un virus depende de los recursos de una célula huésped para replicarse. 2. Correcta. La dependencia de esos recursos explica el carácter intracelular obligado de los virus.",
+        "B": "Solo la afirmación 2 es correcta.",
+        "C": "1. Incorrecta. Un virus depende de los recursos de una célula huésped para replicarse.",
+        "D": "2. Correcta. La dependencia de esos recursos explica el carácter intracelular obligado de los virus."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "bio-01-023",
+      "content_id": "evaluacion:medicina-oficial-biologia-01-mini-bio-01-17-umss",
       "materia": "BIOLOGIA CELULAR",
       "tema": "introduccion a la biologia celular",
       "numero_pregunta": 21,
-      "pregunta": "¿Qué debe ocurrir con un ARN vírico de polaridad negativa antes de traducirse?",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Los capsómeros constituyen la cubierta denominada cápside.\n2. Algunos virus poseen una envoltura lipídica por fuera de la cápside.",
       "respuesta_correcta": "C",
-      "justificacion": "Convertirse en ARN de polaridad positiva.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "46",
-      "pagina_impresa": "46",
-      "dificultad": "medio",
-      "opcion_a": "Todas las células provienen de otra célula.",
-      "opcion_b": "Cápside; sus unidades son los capsómeros.",
-      "opcion_c": "Convertirse en ARN de polaridad positiva.",
-      "opcion_d": "Un núcleo que contiene el material genético."
+      "justificacion": "1. Correcta. Estas unidades de naturaleza principalmente proteica forman la cubierta que rodea el genoma.\n2. Correcta. La envoltura se describe como una cubierta adicional presente en algunos virus.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+      "paginas_pdf": "37, 43, 46",
+      "pagina_impresa": "",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Introducción a la biología de las células · Virus: estructura",
+          "page": 37,
+          "printed": null,
+          "marks": []
+        },
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Introducción a la biología de las células · Virus: estructura",
+          "page": 43,
+          "printed": null,
+          "marks": []
+        },
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Introducción a la biología de las células · Virus: estructura",
+          "page": 46,
+          "printed": null,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-01",
+        "chapterNumber": 1,
+        "chapter": "Introducción a la biología de las células",
+        "section": "Virus: estructura",
+        "pdfPages": [
+          37,
+          43,
+          46
+        ],
+        "printedPages": []
+      },
+      "comentarios_opciones": {
+        "A": "2. Correcta. La envoltura se describe como una cubierta adicional presente en algunos virus.",
+        "B": "1. Correcta. Estas unidades de naturaleza principalmente proteica forman la cubierta que rodea el genoma.",
+        "C": "Ambas afirmaciones son correctas.",
+        "D": "1. Correcta. Estas unidades de naturaleza principalmente proteica forman la cubierta que rodea el genoma. 2. Correcta. La envoltura se describe como una cubierta adicional presente en algunos virus."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "bio-01-024",
+      "content_id": "evaluacion:medicina-oficial-biologia-01-mini-bio-01-18-umss",
       "materia": "BIOLOGIA CELULAR",
       "tema": "introduccion a la biologia celular",
       "numero_pregunta": 22,
-      "pregunta": "¿Qué reacción realiza la transcriptasa inversa?",
-      "respuesta_correcta": "A",
-      "justificacion": "Sintetiza ADN a partir de ARN.",
-      "fuente": "Biología celular biomédica",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. La transcriptasa inversa sintetiza ARN al tomar ADN como molde.\n2. La transcriptasa inversa sintetiza ADN sin utilizar un ácido nucleico como molde.",
+      "respuesta_correcta": "D",
+      "justificacion": "1. Incorrecta. En la reacción descrita, el molde es ARN y el producto es ADN.\n2. Incorrecta. La síntesis utiliza una cadena de ARN como molde.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "47",
-      "pagina_impresa": "47",
-      "dificultad": "medio",
-      "opcion_a": "Sintetiza ADN a partir de ARN.",
-      "opcion_b": "Todas las células provienen de otra célula.",
-      "opcion_c": "Convertirse en ARN de polaridad positiva.",
-      "opcion_d": "Cápside; sus unidades son los capsómeros."
+      "pagina_impresa": "",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Introducción a la biología de las células · Virus: transcriptasa inversa",
+          "page": 47,
+          "printed": null,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-01",
+        "chapterNumber": 1,
+        "chapter": "Introducción a la biología de las células",
+        "section": "Virus: transcriptasa inversa",
+        "pdfPages": [
+          47
+        ],
+        "printedPages": []
+      },
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. En la reacción descrita, el molde es ARN y el producto es ADN.",
+        "B": "2. Incorrecta. La síntesis utiliza una cadena de ARN como molde.",
+        "C": "1. Incorrecta. En la reacción descrita, el molde es ARN y el producto es ADN. 2. Incorrecta. La síntesis utiliza una cadena de ARN como molde.",
+        "D": "Ninguna afirmación es correcta."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "bio-01-025",
+      "content_id": "evaluacion:medicina-oficial-biologia-01-mini-bio-01-19-umss",
       "materia": "BIOLOGIA CELULAR",
       "tema": "introduccion a la biologia celular",
       "numero_pregunta": 23,
-      "pregunta": "¿Qué proteínas celulares inactivan E6 y E7 del HPV, respectivamente?",
-      "respuesta_correcta": "B",
-      "justificacion": "E6: p53. E7: proteína del retinoblastoma.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "48",
-      "pagina_impresa": "48",
-      "dificultad": "medio",
-      "opcion_a": "ABCD1, que codifica el transportador ALDP.",
-      "opcion_b": "E6: p53. E7: proteína del retinoblastoma.",
-      "opcion_c": "80 S.",
-      "opcion_d": "CD4; después se une a un correceptor."
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Un viroide contiene ARN circular de cadena simple sin cápside.\n2. Un viroide se propaga induciendo que proteínas PrP normales adopten un plegamiento patógeno.",
+      "respuesta_correcta": "A",
+      "justificacion": "1. Correcta. Los viroides descritos son moléculas de ARN que carecen de cubierta proteica.\n2. Incorrecta. El cambio conformacional de PrP describe la propagación de priones.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+      "paginas_pdf": "51, 52",
+      "pagina_impresa": "",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Introducción a la biología de las células · Organización de agentes subcelulares: viroides",
+          "page": 51,
+          "printed": null,
+          "marks": []
+        },
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Introducción a la biología de las células · Organización de agentes subcelulares: viroides",
+          "page": 52,
+          "printed": null,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-01",
+        "chapterNumber": 1,
+        "chapter": "Introducción a la biología de las células",
+        "section": "Organización de agentes subcelulares: viroides",
+        "pdfPages": [
+          51,
+          52
+        ],
+        "printedPages": []
+      },
+      "comentarios_opciones": {
+        "A": "Solo la afirmación 1 es correcta.",
+        "B": "1. Correcta. Los viroides descritos son moléculas de ARN que carecen de cubierta proteica. 2. Incorrecta. El cambio conformacional de PrP describe la propagación de priones.",
+        "C": "2. Incorrecta. El cambio conformacional de PrP describe la propagación de priones.",
+        "D": "1. Correcta. Los viroides descritos son moléculas de ARN que carecen de cubierta proteica."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "bio-01-026",
+      "content_id": "evaluacion:medicina-oficial-biologia-01-mini-bio-01-20-umss",
       "materia": "BIOLOGIA CELULAR",
       "tema": "introduccion a la biologia celular",
       "numero_pregunta": 24,
-      "pregunta": "¿Qué funciones cumplen hemaglutinina y neuraminidasa en el virus de la gripe?",
-      "respuesta_correcta": "D",
-      "justificacion": "Hemaglutinina: adhesión a la célula. Neuraminidasa: salida de la progenie vírica.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "49",
-      "pagina_impresa": "49",
-      "dificultad": "medio",
-      "opcion_a": "Induce un cambio de su conformación a PrPSc.",
-      "opcion_b": "ARN circular monocatenario, sin cubierta proteica ni envoltura.",
-      "opcion_c": "Que una misma citoquina puede producir efectos diferentes según el tipo celular.",
-      "opcion_d": "Hemaglutinina: adhesión a la célula. Neuraminidasa: salida de la progenie vírica."
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. La PrP patógena se propaga mediante la división de una célula por fisión binaria.\n2. La PrP patógena puede inducir el plegamiento anormal de una PrP inicialmente normal.",
+      "respuesta_correcta": "B",
+      "justificacion": "1. Incorrecta. La propagación descrita consiste en un cambio de conformación de proteínas PrP normales.\n2. Correcta. La PrP alterada actúa sobre una PrP normal y promueve su conversión a la forma patógena.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+      "paginas_pdf": "41, 43, 46, 52",
+      "pagina_impresa": "",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Introducción a la biología de las células · Organización de agentes subcelulares: priones",
+          "page": 41,
+          "printed": null,
+          "marks": []
+        },
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Introducción a la biología de las células · Organización de agentes subcelulares: priones",
+          "page": 43,
+          "printed": null,
+          "marks": []
+        },
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Introducción a la biología de las células · Organización de agentes subcelulares: priones",
+          "page": 46,
+          "printed": null,
+          "marks": []
+        },
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Introducción a la biología de las células · Organización de agentes subcelulares: priones",
+          "page": 52,
+          "printed": null,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-01",
+        "chapterNumber": 1,
+        "chapter": "Introducción a la biología de las células",
+        "section": "Organización de agentes subcelulares: priones",
+        "pdfPages": [
+          41,
+          43,
+          46,
+          52
+        ],
+        "printedPages": []
+      },
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. La propagación descrita consiste en un cambio de conformación de proteínas PrP normales. 2. Correcta. La PrP alterada actúa sobre una PrP normal y promueve su conversión a la forma patógena.",
+        "B": "Solo la afirmación 2 es correcta.",
+        "C": "1. Incorrecta. La propagación descrita consiste en un cambio de conformación de proteínas PrP normales.",
+        "D": "2. Correcta. La PrP alterada actúa sobre una PrP normal y promueve su conversión a la forma patógena."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "bio-01-027",
+      "content_id": "evaluacion:banco-verificado:biologia-01:capsula",
       "materia": "BIOLOGIA CELULAR",
       "tema": "introduccion a la biologia celular",
       "numero_pregunta": 25,
-      "pregunta": "¿Qué receptor celular reconoce la gp120 del VIH?",
+      "pregunta": "Una bacteria pierde la cubierta polisacarídica externa que describe Calvo, pero conserva su pared. ¿Qué cambio se espera por la pérdida de esa cubierta?",
       "respuesta_correcta": "B",
-      "justificacion": "CD4; después se une a un correceptor.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "50",
-      "pagina_impresa": "50",
-      "dificultad": "medio",
-      "opcion_a": "80 S.",
-      "opcion_b": "CD4; después se une a un correceptor.",
-      "opcion_c": "PD-1, PD-L1 y CTLA-4, entre otras.",
-      "opcion_d": "E6: p53. E7: proteína del retinoblastoma."
+      "justificacion": "La cápsula facilita la adhesión y protege frente a la fagocitosis. Ambas funciones pueden disminuir si se pierde esa estructura, presente en algunas bacterias grampositivas y gramnegativas.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+      "paginas_pdf": "43",
+      "pagina_impresa": "43",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Capítulo 1 · Bacterias · Glucocáliz",
+          "page": 43,
+          "printed": 43,
+          "marks": [
+            [
+              0.5501,
+              0.4128,
+              0.084,
+              0.0197
+            ],
+            [
+              0.4553,
+              0.4363,
+              0.3211,
+              0.0197
+            ]
+          ]
+        }
+      ],
+      "source": {
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-01"
+      },
+      "opcion_a": "Mayor adherencia y mayor protección frente a la fagocitosis.",
+      "opcion_b": "Menor adherencia y menor protección frente a la fagocitosis.",
+      "opcion_c": "Menor adherencia y mayor protección frente a la fagocitosis.",
+      "opcion_d": "Mayor adherencia y menor protección frente a la fagocitosis."
     },
     {
-      "content_id": "bio-01-028",
+      "content_id": "evaluacion:banco-verificado:biologia-01:procariotas",
       "materia": "BIOLOGIA CELULAR",
       "tema": "introduccion a la biologia celular",
       "numero_pregunta": 26,
-      "pregunta": "¿Qué enzima del VIH integra su ADN en el genoma de la célula?",
-      "respuesta_correcta": "A",
-      "justificacion": "La integrasa.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "51",
-      "pagina_impresa": "51",
-      "dificultad": "medio",
-      "opcion_a": "La integrasa.",
-      "opcion_b": "El peptidoglucano.",
-      "opcion_c": "Anopheles.",
-      "opcion_d": "El cloroplasto."
-    },
-    {
-      "content_id": "bio-01-029",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "introduccion a la biologia celular",
-      "numero_pregunta": 27,
-      "pregunta": "¿De qué está formado un viroide?",
+      "pregunta": "En un microorganismo se identifica un cromosoma de ADN circular de doble cadena sin histonas asociadas. ¿Qué hallazgo sería coherente con la organización bacteriana que describe Calvo?",
       "respuesta_correcta": "B",
-      "justificacion": "ARN circular monocatenario, sin cubierta proteica ni envoltura.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "51",
-      "pagina_impresa": "51",
-      "dificultad": "medio",
-      "opcion_a": "Hemaglutinina: adhesión a la célula. Neuraminidasa: salida de la progenie vírica.",
-      "opcion_b": "ARN circular monocatenario, sin cubierta proteica ni envoltura.",
-      "opcion_c": "Induce un cambio de su conformación a PrPSc.",
-      "opcion_d": "Continuo; ocurre en prácticamente todas las células eucariotas."
-    },
-    {
-      "content_id": "bio-01-030",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "introduccion a la biologia celular",
-      "numero_pregunta": 28,
-      "pregunta": "¿Cómo convierte un prion una proteína PrP normal en patógena?",
-      "respuesta_correcta": "D",
-      "justificacion": "Induce un cambio de su conformación a PrPSc.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "52",
-      "pagina_impresa": "52",
-      "dificultad": "medio",
-      "opcion_a": "Hemaglutinina: adhesión a la célula. Neuraminidasa: salida de la progenie vírica.",
-      "opcion_b": "ARN circular monocatenario, sin cubierta proteica ni envoltura.",
-      "opcion_c": "La transición entre las fases gel y líquida.",
-      "opcion_d": "Induce un cambio de su conformación a PrPSc."
+      "justificacion": "El cromosoma bacteriano típico es circular y no está unido a histonas. En el mismo apartado, Calvo describe ribosomas de 70 S y la ausencia de una membrana nuclear.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+      "paginas_pdf": "43",
+      "pagina_impresa": "43",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Capítulo 1 · Organización celular de las bacterias",
+          "page": 43,
+          "printed": 43,
+          "marks": [
+            [
+              0.9351,
+              0.1,
+              0.0495,
+              0.0197
+            ],
+            [
+              0.0082,
+              0.1235,
+              0.0634,
+              0.0197
+            ],
+            [
+              0.317,
+              0.2409,
+              0.0332,
+              0.0197
+            ]
+          ]
+        }
+      ],
+      "source": {
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-01"
+      },
+      "opcion_a": "Una membrana nuclear que separa el cromosoma de los ribosomas.",
+      "opcion_b": "Ribosomas de 70 S para la traducción.",
+      "opcion_c": "Ribosomas de 80 S para la traducción.",
+      "opcion_d": "Cromosomas lineales adicionales empaquetados en nucleosomas."
     }
   ]
 }

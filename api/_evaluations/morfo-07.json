@@ -5,519 +5,502 @@
   "topic": "tejido oseo",
   "title": "Tejido óseo",
   "number": 7,
-  "count": 30,
-  "duration": 30,
+  "count": 9,
+  "duration": 9,
   "source": "Saladin · Anatomía y fisiología",
   "questions": [
     {
-      "content_id": "morfo-07-016",
+      "content_id": "evaluacion:medicina-oficial-morfo-07-intermedio-1",
       "materia": "MORFOFUNCION",
       "tema": "tejido oseo",
       "numero_pregunta": 1,
-      "pregunta": "¿Qué tipo de médula produce células sanguíneas?",
-      "respuesta_correcta": "D",
-      "justificacion": "La médula ósea roja.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "235",
-      "pagina_impresa": "207",
+      "pregunta": "En una superficie de hueso se observa que un grupo celular deposita nueva matriz en vez de retirarla.\n¿Qué opción corresponde al caso?",
+      "respuesta_correcta": "C",
+      "justificacion": "Los osteoblastos depositan matriz ósea. Pueden convertirse en osteocitos cuando quedan rodeados por ella.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "237",
+      "pagina_impresa": "209",
       "dificultad": "medio",
-      "opcion_a": "Los osteoclastos.",
-      "opcion_b": "La hormona paratiroidea.",
-      "opcion_c": "Los osteoblastos.",
-      "opcion_d": "La médula ósea roja."
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Tejido óseo · Células óseas",
+          "page": 237,
+          "printed": 209,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-07",
+        "chapterNumber": 7,
+        "chapter": "Tejido óseo",
+        "section": "Células óseas",
+        "printedPages": [
+          209
+        ],
+        "pdfPages": [
+          237
+        ]
+      },
+      "opcion_a": "Osteocitos",
+      "opcion_b": "Células osteoprogenitoras",
+      "opcion_c": "Osteoblastos",
+      "opcion_d": "Osteoclastos"
     },
     {
-      "content_id": "morfo-07-008",
+      "content_id": "evaluacion:medicina-oficial-morfo-07-intermedio-2",
       "materia": "MORFOFUNCION",
       "tema": "tejido oseo",
       "numero_pregunta": 2,
-      "pregunta": "¿Cómo se llama el cuerpo de un hueso largo?",
-      "respuesta_correcta": "C",
-      "justificacion": "Diáfisis.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "236",
-      "pagina_impresa": "208",
+      "pregunta": "Se marca una célula madura dentro de una laguna, cuya actividad se relaciona con el mantenimiento de la matriz ya formada.\n¿Qué opción corresponde al caso?",
+      "respuesta_correcta": "D",
+      "justificacion": "Los osteocitos son células óseas maduras alojadas en lagunas dentro de la matriz.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "238",
+      "pagina_impresa": "210",
       "dificultad": "medio",
-      "opcion_a": "Raquitismo.",
-      "opcion_b": "Los osteoclastos.",
-      "opcion_c": "Diáfisis.",
-      "opcion_d": "La osteona."
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Tejido óseo · Células óseas",
+          "page": 238,
+          "printed": 210,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-07",
+        "chapterNumber": 7,
+        "chapter": "Tejido óseo",
+        "section": "Células óseas",
+        "printedPages": [
+          210
+        ],
+        "pdfPages": [
+          238
+        ]
+      },
+      "opcion_a": "Células osteoprogenitoras",
+      "opcion_b": "Osteoblastos",
+      "opcion_c": "Osteoclastos",
+      "opcion_d": "Osteocitos"
     },
     {
-      "content_id": "morfo-07-009",
+      "content_id": "evaluacion:medicina-oficial-morfo-07-intermedio-3",
       "materia": "MORFOFUNCION",
       "tema": "tejido oseo",
       "numero_pregunta": 3,
-      "pregunta": "¿Cómo se llaman los extremos de un hueso largo?",
-      "respuesta_correcta": "C",
-      "justificacion": "Epífisis.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "236",
-      "pagina_impresa": "208",
+      "pregunta": "En un corte, una zona pierde matriz porque unas células especializadas la degradan durante la remodelación.\n¿Qué opción corresponde al caso?",
+      "respuesta_correcta": "A",
+      "justificacion": "Los osteoclastos resorben matriz ósea durante la remodelación.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "238",
+      "pagina_impresa": "210",
       "dificultad": "medio",
-      "opcion_a": "Las trabéculas.",
-      "opcion_b": "La osteona.",
-      "opcion_c": "Epífisis.",
-      "opcion_d": "Los osteoclastos."
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Tejido óseo · Células óseas",
+          "page": 238,
+          "printed": 210,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-07",
+        "chapterNumber": 7,
+        "chapter": "Tejido óseo",
+        "section": "Células óseas",
+        "printedPages": [
+          210
+        ],
+        "pdfPages": [
+          238
+        ]
+      },
+      "opcion_a": "Osteoclastos",
+      "opcion_b": "Osteoblastos",
+      "opcion_c": "Células osteoprogenitoras",
+      "opcion_d": "Osteocitos"
     },
     {
-      "content_id": "morfo-07-010",
+      "content_id": "evaluacion:medicina-oficial-morfo-07-intermedio-4",
       "materia": "MORFOFUNCION",
       "tema": "tejido oseo",
       "numero_pregunta": 4,
-      "pregunta": "¿Qué membrana recubre la superficie externa del hueso, salvo el cartílago articular?",
-      "respuesta_correcta": "A",
-      "justificacion": "El periostio.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "236",
-      "pagina_impresa": "208",
+      "pregunta": "Se sigue una población precursora que todavía no deposita hueso, pero de la que se originan células formadoras de matriz.\n¿Qué opción corresponde al caso?",
+      "respuesta_correcta": "D",
+      "justificacion": "Las células osteoprogenitoras se diferencian en osteoblastos, que luego pueden depositar matriz.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "237",
+      "pagina_impresa": "209",
       "dificultad": "medio",
-      "opcion_a": "El periostio.",
-      "opcion_b": "Las trabéculas.",
-      "opcion_c": "Los osteoclastos.",
-      "opcion_d": "La osteona."
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Tejido óseo · Células óseas",
+          "page": 237,
+          "printed": 209,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-07",
+        "chapterNumber": 7,
+        "chapter": "Tejido óseo",
+        "section": "Células óseas",
+        "printedPages": [
+          209
+        ],
+        "pdfPages": [
+          237
+        ]
+      },
+      "opcion_a": "Osteoclastos",
+      "opcion_b": "Osteocitos",
+      "opcion_c": "Osteoblastos",
+      "opcion_d": "Células osteoprogenitoras"
     },
     {
-      "content_id": "morfo-07-020",
+      "content_id": "evaluacion:medicina-oficial-morfo-07-ampliacion-01-umss",
       "materia": "MORFOFUNCION",
       "tema": "tejido oseo",
       "numero_pregunta": 5,
-      "pregunta": "¿Dónde ocurre el crecimiento longitudinal de los huesos largos?",
-      "respuesta_correcta": "D",
-      "justificacion": "En la placa epifisaria.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "236",
-      "pagina_impresa": "208",
-      "dificultad": "medio",
-      "opcion_a": "En la matriz mitocondrial.",
-      "opcion_b": "En la médula ósea roja.",
-      "opcion_c": "En el citosol.",
-      "opcion_d": "En la placa epifisaria."
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Quitar las sales minerales de una matriz ósea reduce una fuente importante de su resistencia a la compresión.\n2. Las fibras de colágeno explican la resistencia mineral del hueso y aportan poco a la resistencia frente a la tracción.",
+      "respuesta_correcta": "A",
+      "justificacion": "1. Correcta. La fase mineral proporciona rigidez y ayuda al hueso a resistir compresión.\n2. Incorrecta. Las fibras colágenas ayudan a resistir la tracción. La parte mineral aporta principalmente rigidez y resistencia a compresión.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "239",
+      "pagina_impresa": "211",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Tejido óseo · Matriz ósea",
+          "page": 239,
+          "printed": 211,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-07",
+        "chapterNumber": 7,
+        "chapter": "Tejido óseo",
+        "section": "Matriz ósea",
+        "printedPages": [
+          211
+        ],
+        "pdfPages": [
+          239
+        ],
+        "statements": [
+          {
+            "pdfPage": 239,
+            "printedPage": 211,
+            "section": "Matriz ósea",
+            "cardId": "morfo-07-006"
+          },
+          {
+            "pdfPage": 239,
+            "printedPage": 211,
+            "section": "Matriz ósea",
+            "cardId": "morfo-07-007"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "Solo la afirmación 1 es correcta.",
+        "B": "1. Correcta. La fase mineral proporciona rigidez y ayuda al hueso a resistir compresión. 2. Incorrecta. Las fibras colágenas ayudan a resistir la tracción. La parte mineral aporta principalmente rigidez y resistencia a compresión.",
+        "C": "2. Incorrecta. Las fibras colágenas ayudan a resistir la tracción. La parte mineral aporta principalmente rigidez y resistencia a compresión.",
+        "D": "1. Correcta. La fase mineral proporciona rigidez y ayuda al hueso a resistir compresión."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "morfo-07-001",
+      "content_id": "evaluacion:medicina-oficial-morfo-07-ampliacion-02-umss",
       "materia": "MORFOFUNCION",
       "tema": "tejido oseo",
       "numero_pregunta": 6,
-      "pregunta": "¿Qué células forman nueva matriz ósea?",
-      "respuesta_correcta": "A",
-      "justificacion": "Los osteoblastos.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "237",
-      "pagina_impresa": "209",
-      "dificultad": "medio",
-      "opcion_a": "Los osteoblastos.",
-      "opcion_b": "El colágeno.",
-      "opcion_c": "Los osteoclastos.",
-      "opcion_d": "La hidroxiapatita."
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. El endostio recubre la superficie externa del hueso y continúa sobre el cartílago articular.\n2. Los canalículos permiten la comunicación entre lagunas donde se alojan los osteocitos.",
+      "respuesta_correcta": "B",
+      "justificacion": "1. Incorrecta. El endostio reviste superficies internas, entre ellas la cavidad medular.\n2. Correcta. Los conductos delgados conectan las lagunas en la matriz ósea.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "236, 237",
+      "pagina_impresa": "208, 209",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Tejido óseo · Anatomía del hueso / Histología ósea",
+          "page": 236,
+          "printed": 208,
+          "marks": []
+        },
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Tejido óseo · Anatomía del hueso / Histología ósea",
+          "page": 237,
+          "printed": 209,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-07",
+        "chapterNumber": 7,
+        "chapter": "Tejido óseo",
+        "section": "Anatomía del hueso / Histología ósea",
+        "printedPages": [
+          208,
+          209
+        ],
+        "pdfPages": [
+          236,
+          237
+        ],
+        "statements": [
+          {
+            "pdfPage": 236,
+            "printedPage": 208,
+            "section": "Anatomía del hueso",
+            "cardId": "morfo-07-011"
+          },
+          {
+            "pdfPage": 237,
+            "printedPage": 209,
+            "section": "Histología ósea",
+            "cardId": "morfo-07-014"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. El endostio reviste superficies internas, entre ellas la cavidad medular. 2. Correcta. Los conductos delgados conectan las lagunas en la matriz ósea.",
+        "B": "Solo la afirmación 2 es correcta.",
+        "C": "1. Incorrecta. El endostio reviste superficies internas, entre ellas la cavidad medular.",
+        "D": "2. Correcta. Los conductos delgados conectan las lagunas en la matriz ósea."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "morfo-07-014",
+      "content_id": "evaluacion:medicina-oficial-morfo-07-ampliacion-03-umss",
       "materia": "MORFOFUNCION",
       "tema": "tejido oseo",
       "numero_pregunta": 7,
-      "pregunta": "¿Qué comunican los canalículos óseos?",
-      "respuesta_correcta": "B",
-      "justificacion": "Las lagunas que alojan a los osteocitos.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "237",
-      "pagina_impresa": "209",
-      "dificultad": "medio",
-      "opcion_a": "Reserva → proliferación → hipertrofia → calcificación → depósito óseo.",
-      "opcion_b": "Las lagunas que alojan a los osteocitos.",
-      "opcion_c": "La osificación intramembranosa.",
-      "opcion_d": "Las células osteogénicas u osteoprogenitoras."
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Que primero exista un molde de cartílago y que luego sea sustituido por tejido óseo identifica la osificación endocondral.\n2. El aumento del grosor por depósito de matriz en la superficie corresponde a crecimiento aposicional.",
+      "respuesta_correcta": "C",
+      "justificacion": "1. Correcta. El proceso endocondral depende de un molde cartilaginoso previo.\n2. Correcta. En la aposición se agregan capas en la superficie. El alargamiento del hueso se asocia a la placa epifisaria.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "242, 247",
+      "pagina_impresa": "214, 219",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Tejido óseo · 7.3 Osificación endocondral / Crecimiento óseo",
+          "page": 242,
+          "printed": 214,
+          "marks": []
+        },
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Tejido óseo · 7.3 Osificación endocondral / Crecimiento óseo",
+          "page": 247,
+          "printed": 219,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-07",
+        "chapterNumber": 7,
+        "chapter": "Tejido óseo",
+        "section": "7.3 Osificación endocondral / Crecimiento óseo",
+        "printedPages": [
+          214,
+          219
+        ],
+        "pdfPages": [
+          242,
+          247
+        ],
+        "statements": [
+          {
+            "pdfPage": 242,
+            "printedPage": 214,
+            "section": "7.3 Osificación endocondral",
+            "anchor": "modelo de cartílago hialino reemplazado por tejido óseo"
+          },
+          {
+            "pdfPage": 247,
+            "printedPage": 219,
+            "section": "Crecimiento óseo",
+            "cardId": "morfo-07-021"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "2. Correcta. En la aposición se agregan capas en la superficie. El alargamiento del hueso se asocia a la placa epifisaria.",
+        "B": "1. Correcta. El proceso endocondral depende de un molde cartilaginoso previo.",
+        "C": "Ambas afirmaciones son correctas.",
+        "D": "1. Correcta. El proceso endocondral depende de un molde cartilaginoso previo. 2. Correcta. En la aposición se agregan capas en la superficie. El alargamiento del hueso se asocia a la placa epifisaria."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "morfo-07-002",
+      "content_id": "evaluacion:medicina-oficial-morfo-07-ampliacion-04-umss",
       "materia": "MORFOFUNCION",
       "tema": "tejido oseo",
       "numero_pregunta": 8,
-      "pregunta": "¿Qué células mantienen la matriz ósea madura?",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. El callo blando de una fractura está constituido ya por hueso de reemplazo producido por osteoblastos.\n2. El callo duro se forma por la resorción de matriz a cargo de los osteoclastos, antes de que haya depósito de hueso.",
       "respuesta_correcta": "D",
-      "justificacion": "Los osteocitos.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "238",
-      "pagina_impresa": "210",
-      "dificultad": "medio",
-      "opcion_a": "Grasa.",
-      "opcion_b": "La médula ósea roja.",
-      "opcion_c": "La hidroxiapatita.",
-      "opcion_d": "Los osteocitos."
+      "justificacion": "1. Incorrecta. En el callo blando predominan el colágeno y el fibrocartílago.\n2. Incorrecta. Los osteoblastos forman el tejido óseo del callo duro. La resorción participa en la remodelación posterior.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "254",
+      "pagina_impresa": "226",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Tejido óseo · Reparación de fracturas",
+          "page": 254,
+          "printed": 226,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-07",
+        "chapterNumber": 7,
+        "chapter": "Tejido óseo",
+        "section": "Reparación de fracturas",
+        "printedPages": [
+          226
+        ],
+        "pdfPages": [
+          254
+        ],
+        "statements": [
+          {
+            "pdfPage": 254,
+            "printedPage": 226,
+            "section": "Reparación de fracturas",
+            "cardId": "morfo-07-035"
+          },
+          {
+            "pdfPage": 254,
+            "printedPage": 226,
+            "section": "Reparación de fracturas",
+            "cardId": "morfo-07-036"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. En el callo blando predominan el colágeno y el fibrocartílago.",
+        "B": "2. Incorrecta. Los osteoblastos forman el tejido óseo del callo duro. La resorción participa en la remodelación posterior.",
+        "C": "1. Incorrecta. En el callo blando predominan el colágeno y el fibrocartílago. 2. Incorrecta. Los osteoblastos forman el tejido óseo del callo duro. La resorción participa en la remodelación posterior.",
+        "D": "Ninguna afirmación es correcta."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "morfo-07-003",
+      "content_id": "evaluacion:banco-verificado:morfo-07:celulas-oseas",
       "materia": "MORFOFUNCION",
       "tema": "tejido oseo",
       "numero_pregunta": 9,
-      "pregunta": "¿Qué células reabsorben hueso?",
+      "pregunta": "Una célula que depositaba matriz queda alojada en una laguna de la matriz madura. ¿Cómo se identifica en esa nueva localización?",
       "respuesta_correcta": "D",
-      "justificacion": "Los osteoclastos.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "238",
-      "pagina_impresa": "210",
-      "dificultad": "medio",
-      "opcion_a": "Sus sales minerales.",
-      "opcion_b": "Las trabéculas.",
-      "opcion_c": "La médula ósea roja.",
-      "opcion_d": "Los osteoclastos."
-    },
-    {
-      "content_id": "morfo-07-005",
-      "materia": "MORFOFUNCION",
-      "tema": "tejido oseo",
-      "numero_pregunta": 10,
-      "pregunta": "¿Cuál es la principal proteína de la matriz ósea?",
-      "respuesta_correcta": "D",
-      "justificacion": "El colágeno.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "238",
-      "pagina_impresa": "210",
-      "dificultad": "medio",
-      "opcion_a": "La hidroxiapatita.",
-      "opcion_b": "Grasa.",
-      "opcion_c": "El endostio.",
-      "opcion_d": "El colágeno."
-    },
-    {
-      "content_id": "morfo-07-004",
-      "materia": "MORFOFUNCION",
-      "tema": "tejido oseo",
-      "numero_pregunta": 11,
-      "pregunta": "¿Cuál es el principal mineral de la matriz ósea?",
-      "respuesta_correcta": "A",
-      "justificacion": "La hidroxiapatita.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "239",
-      "pagina_impresa": "211",
-      "dificultad": "medio",
-      "opcion_a": "La hidroxiapatita.",
-      "opcion_b": "Los osteoclastos.",
-      "opcion_c": "Los osteocitos.",
-      "opcion_d": "Grasa."
-    },
-    {
-      "content_id": "morfo-07-006",
-      "materia": "MORFOFUNCION",
-      "tema": "tejido oseo",
-      "numero_pregunta": 12,
-      "pregunta": "¿Qué componente da resistencia a la compresión al hueso?",
-      "respuesta_correcta": "A",
-      "justificacion": "Sus sales minerales.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "239",
-      "pagina_impresa": "211",
-      "dificultad": "medio",
-      "opcion_a": "Sus sales minerales.",
-      "opcion_b": "Las trabéculas.",
-      "opcion_c": "El crecimiento aposicional.",
-      "opcion_d": "Los osteoclastos."
-    },
-    {
-      "content_id": "morfo-07-012",
-      "materia": "MORFOFUNCION",
-      "tema": "tejido oseo",
-      "numero_pregunta": 13,
-      "pregunta": "¿Qué unidad estructural predomina en el hueso compacto?",
-      "respuesta_correcta": "D",
-      "justificacion": "La osteona.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "239",
-      "pagina_impresa": "211",
-      "dificultad": "medio",
-      "opcion_a": "Epífisis.",
-      "opcion_b": "Los osteoclastos.",
-      "opcion_c": "Diáfisis.",
-      "opcion_d": "La osteona."
-    },
-    {
-      "content_id": "morfo-07-013",
-      "materia": "MORFOFUNCION",
-      "tema": "tejido oseo",
-      "numero_pregunta": 14,
-      "pregunta": "¿Qué contienen los conductos centrales de las osteonas?",
-      "respuesta_correcta": "A",
-      "justificacion": "Vasos sanguíneos y nervios.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "241",
-      "pagina_impresa": "213",
-      "dificultad": "medio",
-      "opcion_a": "Vasos sanguíneos y nervios.",
-      "opcion_b": "Colágeno y fibrocartílago.",
-      "opcion_c": "El crecimiento aposicional.",
-      "opcion_d": "La osificación endocondral."
-    },
-    {
-      "content_id": "morfo-07-017",
-      "materia": "MORFOFUNCION",
-      "tema": "tejido oseo",
-      "numero_pregunta": 15,
-      "pregunta": "¿Qué almacena principalmente la médula ósea amarilla?",
-      "respuesta_correcta": "B",
-      "justificacion": "Grasa.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "241",
-      "pagina_impresa": "213",
-      "dificultad": "medio",
-      "opcion_a": "El colágeno.",
-      "opcion_b": "Grasa.",
-      "opcion_c": "Los osteoblastos.",
-      "opcion_d": "La hidroxiapatita."
-    },
-    {
-      "content_id": "morfo-07-018",
-      "materia": "MORFOFUNCION",
-      "tema": "tejido oseo",
-      "numero_pregunta": 16,
-      "pregunta": "¿Qué tipo de osificación forma hueso directamente a partir de mesénquima?",
-      "respuesta_correcta": "A",
-      "justificacion": "La osificación intramembranosa.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "242",
-      "pagina_impresa": "214",
-      "dificultad": "medio",
-      "opcion_a": "La osificación intramembranosa.",
-      "opcion_b": "Las fibras de colágeno.",
-      "opcion_c": "Dos capas de hueso compacto.",
-      "opcion_d": "El crecimiento aposicional."
-    },
-    {
-      "content_id": "morfo-07-019",
-      "materia": "MORFOFUNCION",
-      "tema": "tejido oseo",
-      "numero_pregunta": 17,
-      "pregunta": "¿Qué tipo de osificación sustituye un molde de cartílago?",
-      "respuesta_correcta": "C",
-      "justificacion": "La osificación endocondral.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "243",
-      "pagina_impresa": "215",
-      "dificultad": "medio",
-      "opcion_a": "Vasos sanguíneos y nervios.",
-      "opcion_b": "El crecimiento aposicional.",
-      "opcion_c": "La osificación endocondral.",
-      "opcion_d": "La médula ósea roja."
-    },
-    {
-      "content_id": "morfo-07-029",
-      "materia": "MORFOFUNCION",
-      "tema": "tejido oseo",
-      "numero_pregunta": 18,
-      "pregunta": "¿Cuál es el orden de zonas de la placa de crecimiento desde la epífisis hacia la diáfisis?",
-      "respuesta_correcta": "A",
-      "justificacion": "Reserva → proliferación → hipertrofia → calcificación → depósito óseo.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "246",
-      "pagina_impresa": "218",
-      "dificultad": "medio",
-      "opcion_a": "Reserva → proliferación → hipertrofia → calcificación → depósito óseo.",
-      "opcion_b": "Las lagunas que alojan a los osteocitos.",
-      "opcion_c": "Las células osteogénicas u osteoprogenitoras.",
-      "opcion_d": "El crecimiento aposicional."
-    },
-    {
-      "content_id": "morfo-07-021",
-      "materia": "MORFOFUNCION",
-      "tema": "tejido oseo",
-      "numero_pregunta": 19,
-      "pregunta": "¿Qué crecimiento aumenta el grosor de un hueso?",
-      "respuesta_correcta": "D",
-      "justificacion": "El crecimiento aposicional.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "247",
-      "pagina_impresa": "219",
-      "dificultad": "medio",
-      "opcion_a": "La hormona paratiroidea.",
-      "opcion_b": "Las fibras de colágeno.",
-      "opcion_c": "Dos capas de hueso compacto.",
-      "opcion_d": "El crecimiento aposicional."
-    },
-    {
-      "content_id": "morfo-07-023",
-      "materia": "MORFOFUNCION",
-      "tema": "tejido oseo",
-      "numero_pregunta": 20,
-      "pregunta": "¿Qué forma activa de vitamina D favorece la absorción intestinal de calcio?",
-      "respuesta_correcta": "C",
-      "justificacion": "El calcitriol.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "250",
-      "pagina_impresa": "222",
-      "dificultad": "medio",
-      "opcion_a": "La calcitonina.",
-      "opcion_b": "La osteocalcina.",
-      "opcion_c": "El calcitriol.",
-      "opcion_d": "Las trabéculas."
-    },
-    {
-      "content_id": "morfo-07-022",
-      "materia": "MORFOFUNCION",
-      "tema": "tejido oseo",
-      "numero_pregunta": 21,
-      "pregunta": "¿Qué hormona aumenta la concentración sanguínea de calcio?",
-      "respuesta_correcta": "C",
-      "justificacion": "La hormona paratiroidea.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "251",
-      "pagina_impresa": "223",
-      "dificultad": "medio",
-      "opcion_a": "El crecimiento aposicional.",
-      "opcion_b": "La osteocalcina.",
-      "opcion_c": "La hormona paratiroidea.",
-      "opcion_d": "La médula ósea roja."
-    },
-    {
-      "content_id": "morfo-07-025",
-      "materia": "MORFOFUNCION",
-      "tema": "tejido oseo",
-      "numero_pregunta": 22,
-      "pregunta": "¿Qué es la osteomalacia?",
-      "respuesta_correcta": "A",
-      "justificacion": "El reblandecimiento de huesos adultos por mineralización insuficiente.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "251",
-      "pagina_impresa": "223",
-      "dificultad": "medio",
-      "opcion_a": "El reblandecimiento de huesos adultos por mineralización insuficiente.",
-      "opcion_b": "El reemplazo de células dañadas o muertas por células del mismo tipo.",
-      "opcion_c": "La pérdida de masa ósea que aumenta la fragilidad del hueso.",
-      "opcion_d": "La inflamación de hueso y médula ósea por infección bacteriana."
-    },
-    {
-      "content_id": "morfo-07-030",
-      "materia": "MORFOFUNCION",
-      "tema": "tejido oseo",
-      "numero_pregunta": 23,
-      "pregunta": "¿Qué hormona reduce la actividad de los osteoclastos cuando aumenta el calcio sanguíneo?",
-      "respuesta_correcta": "D",
-      "justificacion": "La calcitonina.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "251",
-      "pagina_impresa": "223",
-      "dificultad": "medio",
-      "opcion_a": "Los osteocitos.",
-      "opcion_b": "La hormona paratiroidea.",
-      "opcion_c": "La osteocalcina.",
-      "opcion_d": "La calcitonina."
-    },
-    {
-      "content_id": "morfo-07-031",
-      "materia": "MORFOFUNCION",
-      "tema": "tejido oseo",
-      "numero_pregunta": 24,
-      "pregunta": "¿Cómo se llama el reblandecimiento óseo por falta de calcitriol en niños?",
-      "respuesta_correcta": "C",
-      "justificacion": "Raquitismo.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "251",
-      "pagina_impresa": "223",
-      "dificultad": "medio",
-      "opcion_a": "El endostio.",
-      "opcion_b": "Diáfisis.",
-      "opcion_c": "Raquitismo.",
-      "opcion_d": "La osteona."
-    },
-    {
-      "content_id": "morfo-07-032",
-      "materia": "MORFOFUNCION",
-      "tema": "tejido oseo",
-      "numero_pregunta": 25,
-      "pregunta": "¿Qué caracteriza a una fractura conminuta?",
-      "respuesta_correcta": "D",
-      "justificacion": "El hueso se rompe en tres o más fragmentos.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "253",
-      "pagina_impresa": "225",
-      "dificultad": "medio",
-      "opcion_a": "Hematoma y tejido de granulación → callo blando → callo duro → remodelación ósea.",
-      "opcion_b": "La cerrada realinea sin cirugía; la abierta expone quirúrgicamente el hueso.",
-      "opcion_c": "Tiene un electrón desapareado en su capa externa.",
-      "opcion_d": "El hueso se rompe en tres o más fragmentos."
-    },
-    {
-      "content_id": "morfo-07-033",
-      "materia": "MORFOFUNCION",
-      "tema": "tejido oseo",
-      "numero_pregunta": 26,
-      "pregunta": "¿Qué caracteriza a una fractura en tallo verde?",
-      "respuesta_correcta": "A",
-      "justificacion": "El hueso se rompe parcialmente de un lado y se dobla del opuesto.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "253",
-      "pagina_impresa": "225",
-      "dificultad": "medio",
-      "opcion_a": "El hueso se rompe parcialmente de un lado y se dobla del opuesto.",
-      "opcion_b": "Hematoma y tejido de granulación → callo blando → callo duro → remodelación ósea.",
-      "opcion_c": "La cerrada realinea sin cirugía; la abierta expone quirúrgicamente el hueso.",
-      "opcion_d": "Parece tener varias capas, pero todas sus células contactan la membrana basal."
-    },
-    {
-      "content_id": "morfo-07-034",
-      "materia": "MORFOFUNCION",
-      "tema": "tejido oseo",
-      "numero_pregunta": 27,
-      "pregunta": "¿Cuál es el orden de reparación de una fractura?",
-      "respuesta_correcta": "D",
-      "justificacion": "Hematoma y tejido de granulación → callo blando → callo duro → remodelación ósea.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "254",
-      "pagina_impresa": "226",
-      "dificultad": "medio",
-      "opcion_a": "Túbulo contorneado proximal → asa de la nefrona → túbulo contorneado distal.",
-      "opcion_b": "El hueso se rompe parcialmente de un lado y se dobla del opuesto.",
-      "opcion_c": "La cerrada realinea sin cirugía; la abierta expone quirúrgicamente el hueso.",
-      "opcion_d": "Hematoma y tejido de granulación → callo blando → callo duro → remodelación ósea."
-    },
-    {
-      "content_id": "morfo-07-035",
-      "materia": "MORFOFUNCION",
-      "tema": "tejido oseo",
-      "numero_pregunta": 28,
-      "pregunta": "¿Qué tejidos forman el callo blando de una fractura?",
-      "respuesta_correcta": "B",
-      "justificacion": "Colágeno y fibrocartílago.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "254",
-      "pagina_impresa": "226",
-      "dificultad": "medio",
-      "opcion_a": "Dos capas de hueso compacto.",
-      "opcion_b": "Colágeno y fibrocartílago.",
-      "opcion_c": "Vasos sanguíneos y nervios.",
-      "opcion_d": "Las trabéculas."
-    },
-    {
-      "content_id": "morfo-07-037",
-      "materia": "MORFOFUNCION",
-      "tema": "tejido oseo",
-      "numero_pregunta": 29,
-      "pregunta": "¿Qué diferencia a la reducción cerrada de la abierta en una fractura?",
-      "respuesta_correcta": "D",
-      "justificacion": "La cerrada realinea sin cirugía; la abierta expone quirúrgicamente el hueso.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "255",
-      "pagina_impresa": "227",
-      "dificultad": "medio",
-      "opcion_a": "El homocigoto tiene dos alelos iguales; el heterocigoto tiene dos diferentes.",
-      "opcion_b": "El hueso se rompe parcialmente de un lado y se dobla del opuesto.",
-      "opcion_c": "Hematoma y tejido de granulación → callo blando → callo duro → remodelación ósea.",
-      "opcion_d": "La cerrada realinea sin cirugía; la abierta expone quirúrgicamente el hueso."
-    },
-    {
-      "content_id": "morfo-07-024",
-      "materia": "MORFOFUNCION",
-      "tema": "tejido oseo",
-      "numero_pregunta": 30,
-      "pregunta": "¿Qué es la osteoporosis?",
-      "respuesta_correcta": "D",
-      "justificacion": "La pérdida de masa ósea que aumenta la fragilidad del hueso.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "256",
-      "pagina_impresa": "228",
-      "dificultad": "medio",
-      "opcion_a": "El reblandecimiento de huesos adultos por mineralización insuficiente.",
-      "opcion_b": "La inflamación de hueso y médula ósea por infección bacteriana.",
-      "opcion_c": "La degradación de triglicéridos en glicerol y ácidos grasos.",
-      "opcion_d": "La pérdida de masa ósea que aumenta la fragilidad del hueso."
+      "justificacion": "El osteoblasto deposita matriz. La célula ósea madura que queda incluida en una laguna se denomina osteocito.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "237, 238",
+      "pagina_impresa": "209, 210",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 7 · Células del tejido óseo",
+          "page": 237,
+          "printed": 209,
+          "marks": [
+            [
+              0.6518,
+              0.4405,
+              0.0788,
+              0.0111
+            ],
+            [
+              0.5829,
+              0.4702,
+              0.0795,
+              0.0111
+            ]
+          ]
+        },
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 7 · Células del tejido óseo",
+          "page": 238,
+          "printed": 210,
+          "marks": [
+            [
+              0.1619,
+              0.5743,
+              0.0657,
+              0.0111
+            ],
+            [
+              0.1468,
+              0.6486,
+              0.0633,
+              0.0111
+            ]
+          ]
+        }
+      ],
+      "source": {
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-07"
+      },
+      "opcion_a": "Osteoblasto de superficie.",
+      "opcion_b": "Osteoclasto.",
+      "opcion_c": "Célula osteógena.",
+      "opcion_d": "Osteocito."
     }
   ]
 }

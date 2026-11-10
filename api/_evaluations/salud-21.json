@@ -5,519 +5,513 @@
   "topic": "analisis de datos en excel y spss",
   "title": "Análisis de datos en Excel y SPSS",
   "number": 21,
-  "count": 30,
-  "duration": 30,
+  "count": 9,
+  "duration": 9,
   "source": "Educación en Salud e Investigación · Curso Básico 2025-2026",
   "questions": [
     {
-      "content_id": "salud-26-001",
+      "content_id": "evaluacion:medicina-oficial-salud-21-intermedio-1",
       "materia": "SALUD PUBLICA",
       "tema": "analisis de datos en excel y spss",
       "numero_pregunta": 1,
-      "pregunta": "¿En qué pestaña ubica el texto la herramienta «Análisis de datos» de Excel?",
-      "respuesta_correcta": "C",
-      "justificacion": "Datos.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "192",
-      "pagina_impresa": "117",
+      "pregunta": "En la herramienta de estadística descriptiva de Excel del texto, el rango seleccionado incluye el título «Edad» en la primera fila.\n¿Qué opción corresponde al caso?",
+      "respuesta_correcta": "B",
+      "justificacion": "La opción de rótulos indica que la primera fila del rango contiene el nombre de la variable.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+      "paginas_pdf": "195",
+      "pagina_impresa": "120",
       "dificultad": "medio",
-      "opcion_a": "Valores numéricos.",
-      "opcion_b": "Herramientas para análisis.",
-      "opcion_c": "Datos.",
-      "opcion_d": "Resumen de estadísticas."
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Análisis de datos en Excel y SPSS · analisis de datos en excel y spss",
+          "page": 195,
+          "printed": 120,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-21",
+        "chapterNumber": 21,
+        "chapter": "Análisis de datos en Excel y SPSS",
+        "section": "analisis de datos en excel y spss",
+        "printedPages": [
+          120
+        ],
+        "pdfPages": [
+          195
+        ]
+      },
+      "opcion_a": "Perdidos",
+      "opcion_b": "Rótulos en la primera fila",
+      "opcion_c": "Resumen de estadísticas",
+      "opcion_d": "Valores"
     },
     {
-      "content_id": "salud-26-002",
+      "content_id": "evaluacion:medicina-oficial-salud-21-intermedio-2",
       "materia": "SALUD PUBLICA",
       "tema": "analisis de datos en excel y spss",
       "numero_pregunta": 2,
-      "pregunta": "¿Qué menú permite acceder a los complementos de Excel en la ruta del texto?",
-      "respuesta_correcta": "B",
-      "justificacion": "Archivo → Opciones → Complementos.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "193",
-      "pagina_impresa": "118",
+      "pregunta": "Tras seleccionar el rango numérico en el Excel del texto, una estudiante quiere obtener en conjunto las medidas descriptivas.\n¿Qué opción corresponde al caso?",
+      "respuesta_correcta": "C",
+      "justificacion": "Seleccionar Resumen de estadísticas solicita la salida con las medidas descriptivas.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+      "paginas_pdf": "195",
+      "pagina_impresa": "120",
       "dificultad": "medio",
-      "opcion_a": "Una variable de salida o dependiente.",
-      "opcion_b": "Archivo → Opciones → Complementos.",
-      "opcion_c": "Dividir los datos en muestras separadas.",
-      "opcion_d": "Estadísticos, dentro del cuadro de Frecuencias."
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Análisis de datos en Excel y SPSS · analisis de datos en excel y spss",
+          "page": 195,
+          "printed": 120,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-21",
+        "chapterNumber": 21,
+        "chapter": "Análisis de datos en Excel y SPSS",
+        "section": "analisis de datos en excel y spss",
+        "printedPages": [
+          120
+        ],
+        "pdfPages": [
+          195
+        ]
+      },
+      "opcion_a": "Valores",
+      "opcion_b": "Perdidos",
+      "opcion_c": "Resumen de estadísticas",
+      "opcion_d": "Rótulos en la primera fila"
     },
     {
-      "content_id": "salud-26-003",
+      "content_id": "evaluacion:medicina-oficial-salud-21-intermedio-3",
       "materia": "SALUD PUBLICA",
       "tema": "analisis de datos en excel y spss",
       "numero_pregunta": 3,
-      "pregunta": "¿Qué complemento se activa para habilitar «Análisis de datos»?",
-      "respuesta_correcta": "A",
-      "justificacion": "Herramientas para análisis.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "194",
-      "pagina_impresa": "119",
+      "pregunta": "En la Vista de variables de SPSS se quiere que el código 1 tenga la etiqueta «Sí» y el código 2, la etiqueta «No».\n¿Qué opción corresponde al caso?",
+      "respuesta_correcta": "C",
+      "justificacion": "En el campo Valores se vincula cada código con una etiqueta que describe su significado.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+      "paginas_pdf": "205",
+      "pagina_impresa": "130",
       "dificultad": "medio",
-      "opcion_a": "Herramientas para análisis.",
-      "opcion_b": "Rótulos en la primera fila.",
-      "opcion_c": "Estadística descriptiva.",
-      "opcion_d": "Definir las variables."
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Análisis de datos en Excel y SPSS · analisis de datos en excel y spss",
+          "page": 205,
+          "printed": 130,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-21",
+        "chapterNumber": 21,
+        "chapter": "Análisis de datos en Excel y SPSS",
+        "section": "analisis de datos en excel y spss",
+        "printedPages": [
+          130
+        ],
+        "pdfPages": [
+          205
+        ]
+      },
+      "opcion_a": "Resumen de estadísticas",
+      "opcion_b": "Rótulos en la primera fila",
+      "opcion_c": "Valores",
+      "opcion_d": "Perdidos"
     },
     {
-      "content_id": "salud-26-004",
+      "content_id": "evaluacion:medicina-oficial-salud-21-intermedio-4",
       "materia": "SALUD PUBLICA",
       "tema": "analisis de datos en excel y spss",
       "numero_pregunta": 4,
-      "pregunta": "¿Qué opción se selecciona dentro de «Análisis de datos» para obtener resúmenes estadísticos?",
+      "pregunta": "En la Vista de variables de SPSS se quiere declarar 99 como código de «sin respuesta» para que se trate como dato ausente.\n¿Qué opción corresponde al caso?",
       "respuesta_correcta": "D",
-      "justificacion": "Estadística descriptiva.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "195",
-      "pagina_impresa": "120",
+      "justificacion": "El campo Perdidos permite señalar códigos que el programa tratará como datos ausentes.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+      "paginas_pdf": "205",
+      "pagina_impresa": "130",
       "dificultad": "medio",
-      "opcion_a": "Herramientas para análisis.",
-      "opcion_b": "Rótulos en la primera fila.",
-      "opcion_c": "Definir las variables.",
-      "opcion_d": "Estadística descriptiva."
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Análisis de datos en Excel y SPSS · analisis de datos en excel y spss",
+          "page": 205,
+          "printed": 130,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-21",
+        "chapterNumber": 21,
+        "chapter": "Análisis de datos en Excel y SPSS",
+        "section": "analisis de datos en excel y spss",
+        "printedPages": [
+          130
+        ],
+        "pdfPages": [
+          205
+        ]
+      },
+      "opcion_a": "Resumen de estadísticas",
+      "opcion_b": "Rótulos en la primera fila",
+      "opcion_c": "Valores",
+      "opcion_d": "Perdidos"
     },
     {
-      "content_id": "salud-26-005",
+      "content_id": "evaluacion:medicina-oficial-salud-21-ampliacion-01-umss",
       "materia": "SALUD PUBLICA",
       "tema": "analisis de datos en excel y spss",
       "numero_pregunta": 5,
-      "pregunta": "¿Qué tipo de datos requiere la herramienta de estadística descriptiva de Excel descrita?",
-      "respuesta_correcta": "D",
-      "justificacion": "Valores numéricos.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "195",
-      "pagina_impresa": "120",
-      "dificultad": "medio",
-      "opcion_a": "El número de datos analizados.",
-      "opcion_b": "Resumen de estadísticas.",
-      "opcion_c": "Definir las variables.",
-      "opcion_d": "Valores numéricos."
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. En la ruta de Excel del compendio, activar Herramientas para análisis habilita el comando Análisis de datos.\n2. El procedimiento de estadística descriptiva del ejemplo calcula una media directamente sobre etiquetas de texto.",
+      "respuesta_correcta": "A",
+      "justificacion": "1. Correcta. Es el complemento que el texto utiliza antes de abrir el cuadro de análisis.\n2. Incorrecta. La herramienta descrita requiere valores numéricos para esos cálculos.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+      "paginas_pdf": "194, 195",
+      "pagina_impresa": "119, 120",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Análisis de datos en Excel y SPSS · analisis de datos en excel y spss",
+          "page": 194,
+          "printed": 119,
+          "marks": []
+        },
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Análisis de datos en Excel y SPSS · analisis de datos en excel y spss",
+          "page": 195,
+          "printed": 120,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-21",
+        "chapterNumber": 21,
+        "chapter": "Análisis de datos en Excel y SPSS",
+        "section": "analisis de datos en excel y spss",
+        "printedPages": [
+          119,
+          120
+        ],
+        "pdfPages": [
+          194,
+          195
+        ],
+        "statements": [
+          {
+            "pdfPage": 194,
+            "printedPage": 119,
+            "section": "analisis de datos en excel y spss",
+            "cardId": "salud-26-003"
+          },
+          {
+            "pdfPage": 195,
+            "printedPage": 120,
+            "section": "analisis de datos en excel y spss",
+            "cardId": "salud-26-005"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "Solo la afirmación 1 es correcta.",
+        "B": "1. Correcta. Es el complemento que el texto utiliza antes de abrir el cuadro de análisis. 2. Incorrecta. La herramienta descrita requiere valores numéricos para esos cálculos.",
+        "C": "2. Incorrecta. La herramienta descrita requiere valores numéricos para esos cálculos.",
+        "D": "1. Correcta. Es el complemento que el texto utiliza antes de abrir el cuadro de análisis."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "salud-26-006",
+      "content_id": "evaluacion:medicina-oficial-salud-21-ampliacion-02-umss",
       "materia": "SALUD PUBLICA",
       "tema": "analisis de datos en excel y spss",
       "numero_pregunta": 6,
-      "pregunta": "¿Qué se selecciona en «Rango de entrada» de Excel?",
-      "respuesta_correcta": "A",
-      "justificacion": "La columna de datos numéricos con su título.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "195",
-      "pagina_impresa": "120",
-      "dificultad": "medio",
-      "opcion_a": "La columna de datos numéricos con su título.",
-      "opcion_b": "La suma de los valores del conjunto de datos.",
-      "opcion_c": "Que hay varios valores con frecuencia máxima; la salida muestra el menor.",
-      "opcion_d": "Mínimo: dato de menor valor. Máximo: dato de mayor valor."
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. El resumen descriptivo de Excel debe sobrescribir obligatoriamente el rango de datos de origen.\n2. El rótulo «Cuenta» de la salida descriptiva indica cuántos datos entraron en el análisis.",
+      "respuesta_correcta": "B",
+      "justificacion": "1. Incorrecta. La salida puede dirigirse a un rango elegido, una hoja nueva o un libro nuevo.\n2. Correcta. Se refiere al número de observaciones contabilizadas.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+      "paginas_pdf": "195, 198",
+      "pagina_impresa": "120, 123",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Análisis de datos en Excel y SPSS · analisis de datos en excel y spss",
+          "page": 195,
+          "printed": 120,
+          "marks": []
+        },
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Análisis de datos en Excel y SPSS · analisis de datos en excel y spss",
+          "page": 198,
+          "printed": 123,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-21",
+        "chapterNumber": 21,
+        "chapter": "Análisis de datos en Excel y SPSS",
+        "section": "analisis de datos en excel y spss",
+        "printedPages": [
+          120,
+          123
+        ],
+        "pdfPages": [
+          195,
+          198
+        ],
+        "statements": [
+          {
+            "pdfPage": 195,
+            "printedPage": 120,
+            "section": "analisis de datos en excel y spss",
+            "cardId": "salud-26-008"
+          },
+          {
+            "pdfPage": 198,
+            "printedPage": 123,
+            "section": "analisis de datos en excel y spss",
+            "cardId": "salud-26-010"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. La salida puede dirigirse a un rango elegido, una hoja nueva o un libro nuevo. 2. Correcta. Se refiere al número de observaciones contabilizadas.",
+        "B": "Solo la afirmación 2 es correcta.",
+        "C": "1. Incorrecta. La salida puede dirigirse a un rango elegido, una hoja nueva o un libro nuevo.",
+        "D": "2. Correcta. Se refiere al número de observaciones contabilizadas."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "salud-26-007",
+      "content_id": "evaluacion:medicina-oficial-salud-21-ampliacion-03-umss",
       "materia": "SALUD PUBLICA",
       "tema": "analisis de datos en excel y spss",
       "numero_pregunta": 7,
-      "pregunta": "¿Qué opción se marca si la columna tiene título en su primera fila?",
-      "respuesta_correcta": "B",
-      "justificacion": "Rótulos en la primera fila.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "195",
-      "pagina_impresa": "120",
-      "dificultad": "medio",
-      "opcion_a": "Herramientas para análisis.",
-      "opcion_b": "Rótulos en la primera fila.",
-      "opcion_c": "El número de datos analizados.",
-      "opcion_d": "Estadística descriptiva."
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. En SPSS se pueden definir variables en una vista e ingresar los registros en otra.\n2. En el cuadro Frecuencias de SPSS, la opción Estadísticos permite solicitar varianza y cuartiles.",
+      "respuesta_correcta": "C",
+      "justificacion": "1. Correcta. La vista de variables establece sus propiedades. La vista de datos recibe los registros.\n2. Correcta. El texto reúne en ese cuadro distintas medidas descriptivas que se eligen antes de ejecutar.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+      "paginas_pdf": "202, 214",
+      "pagina_impresa": "127, 139",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Análisis de datos en Excel y SPSS · analisis de datos en excel y spss",
+          "page": 202,
+          "printed": 127,
+          "marks": []
+        },
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Análisis de datos en Excel y SPSS · analisis de datos en excel y spss",
+          "page": 214,
+          "printed": 139,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-21",
+        "chapterNumber": 21,
+        "chapter": "Análisis de datos en Excel y SPSS",
+        "section": "analisis de datos en excel y spss",
+        "printedPages": [
+          127,
+          139
+        ],
+        "pdfPages": [
+          202,
+          214
+        ],
+        "statements": [
+          {
+            "pdfPage": 202,
+            "printedPage": 127,
+            "section": "analisis de datos en excel y spss",
+            "cardId": "salud-27-001"
+          },
+          {
+            "pdfPage": 214,
+            "printedPage": 139,
+            "section": "analisis de datos en excel y spss",
+            "cardId": "salud-27-019"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "2. Correcta. El texto reúne en ese cuadro distintas medidas descriptivas que se eligen antes de ejecutar.",
+        "B": "1. Correcta. La vista de variables establece sus propiedades. La vista de datos recibe los registros.",
+        "C": "Ambas afirmaciones son correctas.",
+        "D": "1. Correcta. La vista de variables establece sus propiedades. La vista de datos recibe los registros. 2. Correcta. El texto reúne en ese cuadro distintas medidas descriptivas que se eligen antes de ejecutar."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "salud-26-008",
+      "content_id": "evaluacion:medicina-oficial-salud-21-ampliacion-04-umss",
       "materia": "SALUD PUBLICA",
       "tema": "analisis de datos en excel y spss",
       "numero_pregunta": 8,
-      "pregunta": "¿Dónde pueden colocarse los resultados de estadística descriptiva en Excel?",
-      "respuesta_correcta": "B",
-      "justificacion": "En un rango de salida, una hoja nueva o un libro nuevo.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "195",
-      "pagina_impresa": "120",
-      "dificultad": "medio",
-      "opcion_a": "Hacia la promoción de la salud y la atención primaria.",
-      "opcion_b": "En un rango de salida, una hoja nueva o un libro nuevo.",
-      "opcion_c": "En las desviaciones de los datos respecto a la media.",
-      "opcion_d": "En unidades de la variable elevadas al cuadrado."
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Una variable con categorías que tienen un orden intrínseco debe clasificarse como nominal en SPSS.\n2. Si el resultado de SPSS avisa que existen varias modas, el valor mostrado es necesariamente el de mayor magnitud.",
+      "respuesta_correcta": "D",
+      "justificacion": "1. Incorrecta. El nivel que reconoce ese orden es ordinal.\n2. Incorrecta. En el ejemplo, la salida muestra el menor de los valores que comparten la frecuencia máxima.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+      "paginas_pdf": "206, 224",
+      "pagina_impresa": "131, 149",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Análisis de datos en Excel y SPSS · analisis de datos en excel y spss",
+          "page": 206,
+          "printed": 131,
+          "marks": []
+        },
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Análisis de datos en Excel y SPSS · analisis de datos en excel y spss",
+          "page": 224,
+          "printed": 149,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-21",
+        "chapterNumber": 21,
+        "chapter": "Análisis de datos en Excel y SPSS",
+        "section": "analisis de datos en excel y spss",
+        "printedPages": [
+          131,
+          149
+        ],
+        "pdfPages": [
+          206,
+          224
+        ],
+        "statements": [
+          {
+            "pdfPage": 206,
+            "printedPage": 131,
+            "section": "analisis de datos en excel y spss",
+            "cardId": "salud-27-008"
+          },
+          {
+            "pdfPage": 224,
+            "printedPage": 149,
+            "section": "analisis de datos en excel y spss",
+            "cardId": "salud-27-022"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. El nivel que reconoce ese orden es ordinal.",
+        "B": "2. Incorrecta. En el ejemplo, la salida muestra el menor de los valores que comparten la frecuencia máxima.",
+        "C": "1. Incorrecta. El nivel que reconoce ese orden es ordinal. 2. Incorrecta. En el ejemplo, la salida muestra el menor de los valores que comparten la frecuencia máxima.",
+        "D": "Ninguna afirmación es correcta."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "salud-26-009",
+      "content_id": "evaluacion:banco-verificado:salud-21:excel",
       "materia": "SALUD PUBLICA",
       "tema": "analisis de datos en excel y spss",
       "numero_pregunta": 9,
-      "pregunta": "¿Qué casilla produce el resumen numérico en la herramienta de Excel?",
+      "pregunta": "El rango de entrada de Estadística descriptiva incluye el título y todos los datos de una columna. ¿Qué opción permite reconocer el título como encabezado?",
       "respuesta_correcta": "B",
-      "justificacion": "Resumen de estadísticas.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
+      "justificacion": "El compendio indica seleccionar la columna junto con su título y marcar «Rótulos en la primera fila». Agrupar por columnas define la orientación de los datos, mientras que el rango de salida define dónde aparecerán los resultados.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
       "paginas_pdf": "195",
       "pagina_impresa": "120",
-      "dificultad": "medio",
-      "opcion_a": "El número de datos analizados.",
-      "opcion_b": "Resumen de estadísticas.",
-      "opcion_c": "Definir las variables.",
-      "opcion_d": "Valores numéricos."
-    },
-    {
-      "content_id": "salud-26-010",
-      "materia": "SALUD PUBLICA",
-      "tema": "analisis de datos en excel y spss",
-      "numero_pregunta": 10,
-      "pregunta": "¿Qué significa «Cuenta» en la salida descriptiva de Excel?",
-      "respuesta_correcta": "A",
-      "justificacion": "El número de datos analizados.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "198",
-      "pagina_impresa": "123",
-      "dificultad": "medio",
-      "opcion_a": "El número de datos analizados.",
-      "opcion_b": "Valores numéricos.",
-      "opcion_c": "Resumen de estadísticas.",
-      "opcion_d": "Categorías sin orden intrínseco."
-    },
-    {
-      "content_id": "salud-26-011",
-      "materia": "SALUD PUBLICA",
-      "tema": "analisis de datos en excel y spss",
-      "numero_pregunta": 11,
-      "pregunta": "¿Qué significa «Suma» en la salida descriptiva de Excel?",
-      "respuesta_correcta": "B",
-      "justificacion": "La suma de los valores del conjunto de datos.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "198",
-      "pagina_impresa": "123",
-      "dificultad": "medio",
-      "opcion_a": "Mínimo: dato de menor valor. Máximo: dato de mayor valor.",
-      "opcion_b": "La suma de los valores del conjunto de datos.",
-      "opcion_c": "Que hay varios valores con frecuencia máxima; la salida muestra el menor.",
-      "opcion_d": "La columna de datos numéricos con su título."
-    },
-    {
-      "content_id": "salud-26-012",
-      "materia": "SALUD PUBLICA",
-      "tema": "analisis de datos en excel y spss",
-      "numero_pregunta": 12,
-      "pregunta": "¿Qué diferencia existe entre «Mínimo» y «Máximo» en Excel?",
-      "respuesta_correcta": "B",
-      "justificacion": "Mínimo: dato de menor valor. Máximo: dato de mayor valor.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "198",
-      "pagina_impresa": "123",
-      "dificultad": "medio",
-      "opcion_a": "La suma de los valores del conjunto de datos.",
-      "opcion_b": "Mínimo: dato de menor valor. Máximo: dato de mayor valor.",
-      "opcion_c": "Que hay varios valores con frecuencia máxima; la salida muestra el menor.",
-      "opcion_d": "La columna de datos numéricos con su título."
-    },
-    {
-      "content_id": "salud-27-001",
-      "materia": "SALUD PUBLICA",
-      "tema": "analisis de datos en excel y spss",
-      "numero_pregunta": 13,
-      "pregunta": "¿Qué dos vistas utiliza SPSS para definir variables e ingresar datos?",
-      "respuesta_correcta": "C",
-      "justificacion": "Vista de variables y Vista de datos.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "202",
-      "pagina_impresa": "127",
-      "dificultad": "medio",
-      "opcion_a": "Formato → Organizar resultados según variables.",
-      "opcion_b": "Analizar → Estadísticos descriptivos → Frecuencias.",
-      "opcion_c": "Vista de variables y Vista de datos.",
-      "opcion_d": "Los códigos definidos para esas etiquetas."
-    },
-    {
-      "content_id": "salud-27-002",
-      "materia": "SALUD PUBLICA",
-      "tema": "analisis de datos en excel y spss",
-      "numero_pregunta": 14,
-      "pregunta": "¿Qué debe hacerse antes de ingresar los datos en SPSS?",
-      "respuesta_correcta": "D",
-      "justificacion": "Definir las variables.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "203",
-      "pagina_impresa": "128",
-      "dificultad": "medio",
-      "opcion_a": "Estadística descriptiva.",
-      "opcion_b": "Asimetría y curtosis.",
-      "opcion_c": "Herramientas para análisis.",
-      "opcion_d": "Definir las variables."
-    },
-    {
-      "content_id": "salud-27-003",
-      "materia": "SALUD PUBLICA",
-      "tema": "analisis de datos en excel y spss",
-      "numero_pregunta": 15,
-      "pregunta": "¿Qué define el campo «Tipo» de una variable en SPSS?",
-      "respuesta_correcta": "A",
-      "justificacion": "El formato del dato: numérico, cadena, fecha o moneda, entre otros.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "205",
-      "pagina_impresa": "130",
-      "dificultad": "medio",
-      "opcion_a": "El formato del dato: numérico, cadena, fecha o moneda, entre otros.",
-      "opcion_b": "La suma de los valores del conjunto de datos.",
-      "opcion_c": "Mínimo: dato de menor valor. Máximo: dato de mayor valor.",
-      "opcion_d": "Que hay varios valores con frecuencia máxima; la salida muestra el menor."
-    },
-    {
-      "content_id": "salud-27-004",
-      "materia": "SALUD PUBLICA",
-      "tema": "analisis de datos en excel y spss",
-      "numero_pregunta": 16,
-      "pregunta": "¿Para qué sirve «Etiqueta» en SPSS?",
-      "respuesta_correcta": "B",
-      "justificacion": "Para definir el nombre descriptivo que aparecerá en los resultados.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "205",
-      "pagina_impresa": "130",
-      "dificultad": "medio",
-      "opcion_a": "Para asignar etiquetas a los códigos o valores de las variables.",
-      "opcion_b": "Para definir el nombre descriptivo que aparecerá en los resultados.",
-      "opcion_c": "Para identificar datos definidos como ausentes y excluirlos de la mayoría de cálculos.",
-      "opcion_d": "Visualizar el significado de los códigos registrados."
-    },
-    {
-      "content_id": "salud-27-005",
-      "materia": "SALUD PUBLICA",
-      "tema": "analisis de datos en excel y spss",
-      "numero_pregunta": 17,
-      "pregunta": "¿Para qué sirve «Valores» en SPSS?",
-      "respuesta_correcta": "B",
-      "justificacion": "Para asignar etiquetas a los códigos o valores de las variables.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "205",
-      "pagina_impresa": "130",
-      "dificultad": "medio",
-      "opcion_a": "Para definir el nombre descriptivo que aparecerá en los resultados.",
-      "opcion_b": "Para asignar etiquetas a los códigos o valores de las variables.",
-      "opcion_c": "Para identificar datos definidos como ausentes y excluirlos de la mayoría de cálculos.",
-      "opcion_d": "Visualizar el significado de los códigos registrados."
-    },
-    {
-      "content_id": "salud-27-006",
-      "materia": "SALUD PUBLICA",
-      "tema": "analisis de datos en excel y spss",
-      "numero_pregunta": 18,
-      "pregunta": "¿Para qué sirve «Perdidos» en SPSS?",
-      "respuesta_correcta": "C",
-      "justificacion": "Para identificar datos definidos como ausentes y excluirlos de la mayoría de cálculos.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "205",
-      "pagina_impresa": "130",
-      "dificultad": "medio",
-      "opcion_a": "Para asignar etiquetas a los códigos o valores de las variables.",
-      "opcion_b": "Para conservar el orden correcto y evitar el orden alfabético de las etiquetas.",
-      "opcion_c": "Para identificar datos definidos como ausentes y excluirlos de la mayoría de cálculos.",
-      "opcion_d": "Para definir el nombre descriptivo que aparecerá en los resultados."
-    },
-    {
-      "content_id": "salud-27-007",
-      "materia": "SALUD PUBLICA",
-      "tema": "analisis de datos en excel y spss",
-      "numero_pregunta": 19,
-      "pregunta": "¿Cuáles son los tres niveles de medida ofrecidos por SPSS en el texto?",
-      "respuesta_correcta": "D",
-      "justificacion": "Escala, ordinal y nominal.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "206",
-      "pagina_impresa": "131",
-      "dificultad": "medio",
-      "opcion_a": "Media aritmética, mediana y moda.",
-      "opcion_b": "Mesocúrtica, leptocúrtica y platicúrtica.",
-      "opcion_c": "Descriptiva e inferencial.",
-      "opcion_d": "Escala, ordinal y nominal."
-    },
-    {
-      "content_id": "salud-27-008",
-      "materia": "SALUD PUBLICA",
-      "tema": "analisis de datos en excel y spss",
-      "numero_pregunta": 20,
-      "pregunta": "¿Qué caracteriza a una variable ordinal en SPSS?",
-      "respuesta_correcta": "D",
-      "justificacion": "Categorías con orden intrínseco.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "206",
-      "pagina_impresa": "131",
-      "dificultad": "medio",
-      "opcion_a": "Vista de datos.",
-      "opcion_b": "Asimetría y curtosis.",
-      "opcion_c": "Una variable predictora o independiente.",
-      "opcion_d": "Categorías con orden intrínseco."
-    },
-    {
-      "content_id": "salud-27-009",
-      "materia": "SALUD PUBLICA",
-      "tema": "analisis de datos en excel y spss",
-      "numero_pregunta": 21,
-      "pregunta": "¿Qué caracteriza a una variable nominal en SPSS?",
-      "respuesta_correcta": "B",
-      "justificacion": "Categorías sin orden intrínseco.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "206",
-      "pagina_impresa": "131",
-      "dificultad": "medio",
-      "opcion_a": "Asimetría y curtosis.",
-      "opcion_b": "Categorías sin orden intrínseco.",
-      "opcion_c": "Vista de datos.",
-      "opcion_d": "Una variable predictora o independiente."
-    },
-    {
-      "content_id": "salud-27-010",
-      "materia": "SALUD PUBLICA",
-      "tema": "analisis de datos en excel y spss",
-      "numero_pregunta": 22,
-      "pregunta": "¿Por qué conviene codificar numéricamente categorías ordinales en SPSS?",
-      "respuesta_correcta": "D",
-      "justificacion": "Para conservar el orden correcto y evitar el orden alfabético de las etiquetas.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "206",
-      "pagina_impresa": "131",
-      "dificultad": "medio",
-      "opcion_a": "Para asignar etiquetas a los códigos o valores de las variables.",
-      "opcion_b": "Para definir el nombre descriptivo que aparecerá en los resultados.",
-      "opcion_c": "Para identificar datos definidos como ausentes y excluirlos de la mayoría de cálculos.",
-      "opcion_d": "Para conservar el orden correcto y evitar el orden alfabético de las etiquetas."
-    },
-    {
-      "content_id": "salud-27-011",
-      "materia": "SALUD PUBLICA",
-      "tema": "analisis de datos en excel y spss",
-      "numero_pregunta": 23,
-      "pregunta": "¿Qué representa el rol «Entrada» en SPSS?",
-      "respuesta_correcta": "D",
-      "justificacion": "Una variable predictora o independiente.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "206",
-      "pagina_impresa": "131",
-      "dificultad": "medio",
-      "opcion_a": "El número de datos analizados.",
-      "opcion_b": "Categorías con orden intrínseco.",
-      "opcion_c": "Asimetría y curtosis.",
-      "opcion_d": "Una variable predictora o independiente."
-    },
-    {
-      "content_id": "salud-27-012",
-      "materia": "SALUD PUBLICA",
-      "tema": "analisis de datos en excel y spss",
-      "numero_pregunta": 24,
-      "pregunta": "¿Qué representa el rol «Objetivo» en SPSS?",
-      "respuesta_correcta": "D",
-      "justificacion": "Una variable de salida o dependiente.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "206",
-      "pagina_impresa": "131",
-      "dificultad": "medio",
-      "opcion_a": "Para asignar etiquetas a los códigos o valores de las variables.",
-      "opcion_b": "Estadísticos, dentro del cuadro de Frecuencias.",
-      "opcion_c": "Visualizar el significado de los códigos registrados.",
-      "opcion_d": "Una variable de salida o dependiente."
-    },
-    {
-      "content_id": "salud-27-013",
-      "materia": "SALUD PUBLICA",
-      "tema": "analisis de datos en excel y spss",
-      "numero_pregunta": 25,
-      "pregunta": "¿Qué permite el rol «Partición» en SPSS?",
-      "respuesta_correcta": "B",
-      "justificacion": "Dividir los datos en muestras separadas.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "206",
-      "pagina_impresa": "131",
-      "dificultad": "medio",
-      "opcion_a": "Una variable de salida o dependiente.",
-      "opcion_b": "Dividir los datos en muestras separadas.",
-      "opcion_c": "Visualizar el significado de los códigos registrados.",
-      "opcion_d": "Estadísticos, dentro del cuadro de Frecuencias."
-    },
-    {
-      "content_id": "salud-27-014",
-      "materia": "SALUD PUBLICA",
-      "tema": "analisis de datos en excel y spss",
-      "numero_pregunta": 26,
-      "pregunta": "¿En qué vista se ingresan los registros de cada variable en SPSS?",
-      "respuesta_correcta": "D",
-      "justificacion": "Vista de datos.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "210",
-      "pagina_impresa": "135",
-      "dificultad": "medio",
-      "opcion_a": "Categorías sin orden intrínseco.",
-      "opcion_b": "Analizar.",
-      "opcion_c": "Asimetría y curtosis.",
-      "opcion_d": "Vista de datos."
-    },
-    {
-      "content_id": "salud-27-015",
-      "materia": "SALUD PUBLICA",
-      "tema": "analisis de datos en excel y spss",
-      "numero_pregunta": 27,
-      "pregunta": "¿Qué se ingresa cuando una variable de SPSS tiene etiquetas de valor?",
-      "respuesta_correcta": "C",
-      "justificacion": "Los códigos definidos para esas etiquetas.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "210",
-      "pagina_impresa": "135",
-      "dificultad": "medio",
-      "opcion_a": "Formato → Organizar resultados según variables.",
-      "opcion_b": "Vista de variables y Vista de datos.",
-      "opcion_c": "Los códigos definidos para esas etiquetas.",
-      "opcion_d": "Analizar → Estadísticos descriptivos → Frecuencias."
-    },
-    {
-      "content_id": "salud-27-016",
-      "materia": "SALUD PUBLICA",
-      "tema": "analisis de datos en excel y spss",
-      "numero_pregunta": 28,
-      "pregunta": "¿Qué permite el botón «Etiquetas de valor» en SPSS?",
-      "respuesta_correcta": "A",
-      "justificacion": "Visualizar el significado de los códigos registrados.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "211",
-      "pagina_impresa": "136",
-      "dificultad": "medio",
-      "opcion_a": "Visualizar el significado de los códigos registrados.",
-      "opcion_b": "Dividir los datos en muestras separadas.",
-      "opcion_c": "Para asignar etiquetas a los códigos o valores de las variables.",
-      "opcion_d": "Para definir el nombre descriptivo que aparecerá en los resultados."
-    },
-    {
-      "content_id": "salud-27-017",
-      "materia": "SALUD PUBLICA",
-      "tema": "analisis de datos en excel y spss",
-      "numero_pregunta": 29,
-      "pregunta": "¿Qué menú agrupa los procedimientos estadísticos de SPSS?",
-      "respuesta_correcta": "C",
-      "justificacion": "Analizar.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "212",
-      "pagina_impresa": "137",
-      "dificultad": "medio",
-      "opcion_a": "Asimetría y curtosis.",
-      "opcion_b": "Vista de datos.",
-      "opcion_c": "Analizar.",
-      "opcion_d": "Definir las variables."
-    },
-    {
-      "content_id": "salud-27-018",
-      "materia": "SALUD PUBLICA",
-      "tema": "analisis de datos en excel y spss",
-      "numero_pregunta": 30,
-      "pregunta": "¿Qué ruta usa el texto para obtener las tablas de frecuencias en SPSS?",
-      "respuesta_correcta": "A",
-      "justificacion": "Analizar → Estadísticos descriptivos → Frecuencias.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "213",
-      "pagina_impresa": "138",
-      "dificultad": "medio",
-      "opcion_a": "Analizar → Estadísticos descriptivos → Frecuencias.",
-      "opcion_b": "Vista de variables y Vista de datos.",
-      "opcion_c": "Formato → Organizar resultados según variables.",
-      "opcion_d": "Los códigos definidos para esas etiquetas."
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "Educación en Salud",
+          "section": "Estadística descriptiva en Excel",
+          "page": 195,
+          "printed": 120,
+          "marks": [
+            [
+              0.2796,
+              0.7891,
+              0.291,
+              0.0192
+            ],
+            [
+              0.2566,
+              0.965,
+              0.1464,
+              0.0139
+            ],
+            [
+              0.1955,
+              0.1732,
+              0.2667,
+              0.0191
+            ],
+            [
+              0.6262,
+              0.7073,
+              0.2065,
+              0.0192
+            ]
+          ]
+        }
+      ],
+      "source": {
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-21"
+      },
+      "opcion_a": "Rango de salida.",
+      "opcion_b": "Rótulos en la primera fila.",
+      "opcion_c": "Agrupar por columnas.",
+      "opcion_d": "Resumen de estadísticas."
     }
   ]
 }

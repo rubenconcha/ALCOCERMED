@@ -5,519 +5,522 @@
   "topic": "dispersion y forma de los datos",
   "title": "Dispersión y forma de los datos",
   "number": 20,
-  "count": 30,
-  "duration": 30,
+  "count": 9,
+  "duration": 9,
   "source": "Educación en Salud e Investigación · Curso Básico 2025-2026",
   "questions": [
     {
-      "content_id": "salud-24-001",
+      "content_id": "evaluacion:medicina-oficial-salud-20-intermedio-1",
       "materia": "SALUD PUBLICA",
       "tema": "dispersion y forma de los datos",
       "numero_pregunta": 1,
-      "pregunta": "¿Qué cinco medidas de dispersión desarrolla el texto?",
-      "respuesta_correcta": "B",
-      "justificacion": "Rango, rango intercuartil, varianza, desviación estándar y coeficiente de variación.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
+      "pregunta": "El mayor tiempo registrado fue 22 minutos y el menor fue 8. Se calcula 22 − 8 para expresar la amplitud entre los extremos.\n¿Qué opción corresponde al caso?",
+      "respuesta_correcta": "A",
+      "justificacion": "El rango resta el mínimo al máximo y resume la distancia entre los extremos.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
       "paginas_pdf": "172",
       "pagina_impresa": "97",
       "dificultad": "medio",
-      "opcion_a": "Como la raíz cuadrada positiva de la varianza.",
-      "opcion_b": "Rango, rango intercuartil, varianza, desviación estándar y coeficiente de variación.",
-      "opcion_c": "Como porcentaje de la desviación estándar respecto a la media: CV = s/media × 100.",
-      "opcion_d": "Aproximadamente 68 %, 95 % y 99,7 % dentro de 1, 2 y 3 desviaciones estándar de la media."
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Dispersión y forma de los datos · dispersion y forma de los datos",
+          "page": 172,
+          "printed": 97,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-20",
+        "chapterNumber": 20,
+        "chapter": "Dispersión y forma de los datos",
+        "section": "dispersion y forma de los datos",
+        "printedPages": [
+          97
+        ],
+        "pdfPages": [
+          172
+        ]
+      },
+      "opcion_a": "Rango total",
+      "opcion_b": "Desviación estándar",
+      "opcion_c": "Coeficiente de variación",
+      "opcion_d": "Rango intercuartil"
     },
     {
-      "content_id": "salud-24-002",
+      "content_id": "evaluacion:medicina-oficial-salud-20-intermedio-2",
       "materia": "SALUD PUBLICA",
       "tema": "dispersion y forma de los datos",
       "numero_pregunta": 2,
-      "pregunta": "¿Qué limitación tiene el rango como medida de dispersión?",
-      "respuesta_correcta": "A",
-      "justificacion": "Solo considera los valores extremos.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "172",
-      "pagina_impresa": "97",
+      "pregunta": "Una estudiante calcula 18 − 10 a partir de Q₃ = 18 y Q₁ = 10. Quiere describir la amplitud del tramo central de los datos.\n¿Qué opción corresponde al caso?",
+      "respuesta_correcta": "B",
+      "justificacion": "El rango intercuartil resta Q₁ a Q₃ y mide la amplitud de la mitad central.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+      "paginas_pdf": "173",
+      "pagina_impresa": "98",
       "dificultad": "medio",
-      "opcion_a": "Solo considera los valores extremos.",
-      "opcion_b": "Cuartiles y mediana.",
-      "opcion_c": "Respecto a la media aritmética.",
-      "opcion_d": "El mínimo y el máximo."
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Dispersión y forma de los datos · dispersion y forma de los datos",
+          "page": 173,
+          "printed": 98,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-20",
+        "chapterNumber": 20,
+        "chapter": "Dispersión y forma de los datos",
+        "section": "dispersion y forma de los datos",
+        "printedPages": [
+          98
+        ],
+        "pdfPages": [
+          173
+        ]
+      },
+      "opcion_a": "Coeficiente de variación",
+      "opcion_b": "Rango intercuartil",
+      "opcion_c": "Desviación estándar",
+      "opcion_d": "Rango total"
     },
     {
-      "content_id": "salud-24-003",
+      "content_id": "evaluacion:medicina-oficial-salud-20-intermedio-3",
       "materia": "SALUD PUBLICA",
       "tema": "dispersion y forma de los datos",
       "numero_pregunta": 3,
-      "pregunta": "¿Cómo se calcula el rango?",
+      "pregunta": "La varianza de unos tiempos es 9 minutos cuadrados. Se calcula su raíz para expresar esa dispersión en minutos.\n¿Qué opción corresponde al caso?",
       "respuesta_correcta": "C",
-      "justificacion": "Máximo − mínimo.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "172",
-      "pagina_impresa": "97",
+      "justificacion": "La desviación estándar es la raíz cuadrada de la varianza y se expresa en las unidades originales.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+      "paginas_pdf": "177",
+      "pagina_impresa": "102",
       "dificultad": "medio",
-      "opcion_a": "Poco precisa.",
-      "opcion_b": "Sesgo a la derecha.",
-      "opcion_c": "Máximo − mínimo.",
-      "opcion_d": "Solo considera los valores extremos."
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Dispersión y forma de los datos · dispersion y forma de los datos",
+          "page": 177,
+          "printed": 102,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-20",
+        "chapterNumber": 20,
+        "chapter": "Dispersión y forma de los datos",
+        "section": "dispersion y forma de los datos",
+        "printedPages": [
+          102
+        ],
+        "pdfPages": [
+          177
+        ]
+      },
+      "opcion_a": "Rango total",
+      "opcion_b": "Rango intercuartil",
+      "opcion_c": "Desviación estándar",
+      "opcion_d": "Coeficiente de variación"
     },
     {
-      "content_id": "salud-24-004",
+      "content_id": "evaluacion:medicina-oficial-salud-20-intermedio-4",
       "materia": "SALUD PUBLICA",
       "tema": "dispersion y forma de los datos",
       "numero_pregunta": 4,
-      "pregunta": "¿Qué valores deben acompañar la interpretación del rango?",
-      "respuesta_correcta": "B",
-      "justificacion": "El mínimo y el máximo.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "172",
-      "pagina_impresa": "97",
+      "pregunta": "Se divide una desviación estándar de 3 unidades entre una media de 12 de las mismas unidades y se multiplica por 100.\n¿Qué opción corresponde al caso?",
+      "respuesta_correcta": "C",
+      "justificacion": "El coeficiente de variación divide la desviación estándar entre la media y expresa esa relación como porcentaje.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+      "paginas_pdf": "179",
+      "pagina_impresa": "104",
       "dificultad": "medio",
-      "opcion_a": "Sesgo a la izquierda.",
-      "opcion_b": "El mínimo y el máximo.",
-      "opcion_c": "Media, mediana y moda.",
-      "opcion_d": "Solo considera los valores extremos."
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Dispersión y forma de los datos · dispersion y forma de los datos",
+          "page": 179,
+          "printed": 104,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-20",
+        "chapterNumber": 20,
+        "chapter": "Dispersión y forma de los datos",
+        "section": "dispersion y forma de los datos",
+        "printedPages": [
+          104
+        ],
+        "pdfPages": [
+          179
+        ]
+      },
+      "opcion_a": "Rango intercuartil",
+      "opcion_b": "Rango total",
+      "opcion_c": "Coeficiente de variación",
+      "opcion_d": "Desviación estándar"
     },
     {
-      "content_id": "salud-24-005",
+      "content_id": "evaluacion:medicina-oficial-salud-20-ampliacion-01-umss",
       "materia": "SALUD PUBLICA",
       "tema": "dispersion y forma de los datos",
       "numero_pregunta": 5,
-      "pregunta": "¿Cómo se calcula el rango intercuartil?",
-      "respuesta_correcta": "A",
-      "justificacion": "RIC = Q₃ − Q₁.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "173",
-      "pagina_impresa": "98",
-      "dificultad": "medio",
-      "opcion_a": "RIC = Q₃ − Q₁.",
-      "opcion_b": "El 50 % central.",
-      "opcion_c": "n − 1.",
-      "opcion_d": "s²."
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. El rango considera la distancia de todos los valores respecto a la media.\n2. El rango intercuartil mide la amplitud del 50 % central del conjunto.",
+      "respuesta_correcta": "B",
+      "justificacion": "1. Incorrecta. Solo usa el máximo y el mínimo.\n2. Correcta. Es la diferencia entre Q₃ y Q₁.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+      "paginas_pdf": "172, 173",
+      "pagina_impresa": "97, 98",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Dispersión y forma de los datos · dispersion y forma de los datos",
+          "page": 172,
+          "printed": 97,
+          "marks": []
+        },
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Dispersión y forma de los datos · dispersion y forma de los datos",
+          "page": 173,
+          "printed": 98,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-20",
+        "chapterNumber": 20,
+        "chapter": "Dispersión y forma de los datos",
+        "section": "dispersion y forma de los datos",
+        "printedPages": [
+          97,
+          98
+        ],
+        "pdfPages": [
+          172,
+          173
+        ],
+        "statements": [
+          {
+            "pdfPage": 172,
+            "printedPage": 97,
+            "section": "dispersion y forma de los datos",
+            "cardId": "salud-24-002"
+          },
+          {
+            "pdfPage": 173,
+            "printedPage": 98,
+            "section": "dispersion y forma de los datos",
+            "cardId": "salud-24-006"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. Solo usa el máximo y el mínimo. 2. Correcta. Es la diferencia entre Q₃ y Q₁.",
+        "B": "Solo la afirmación 2 es correcta.",
+        "C": "1. Incorrecta. Solo usa el máximo y el mínimo.",
+        "D": "2. Correcta. Es la diferencia entre Q₃ y Q₁."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "salud-24-006",
+      "content_id": "evaluacion:medicina-oficial-salud-20-ampliacion-02-umss",
       "materia": "SALUD PUBLICA",
       "tema": "dispersion y forma de los datos",
       "numero_pregunta": 6,
-      "pregunta": "¿Qué parte de los datos resume el rango intercuartil?",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Elevar al cuadrado las desviaciones respecto a la media evita que las positivas y negativas se anulen.\n2. Si la variable se mide en centímetros, la varianza se expresa en centímetros.",
       "respuesta_correcta": "A",
-      "justificacion": "El 50 % central.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "173",
-      "pagina_impresa": "98",
-      "dificultad": "medio",
-      "opcion_a": "El 50 % central.",
-      "opcion_b": "s².",
-      "opcion_c": "n − 1.",
-      "opcion_d": "Tres: Q₁, Q₂ y Q₃."
+      "justificacion": "1. Correcta. La varianza combina las desviaciones cuadráticas.\n2. Incorrecta. Se expresa en centímetros cuadrados. La desviación estándar recupera las unidades originales.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+      "paginas_pdf": "173, 174",
+      "pagina_impresa": "98, 99",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Dispersión y forma de los datos · dispersion y forma de los datos",
+          "page": 173,
+          "printed": 98,
+          "marks": []
+        },
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Dispersión y forma de los datos · dispersion y forma de los datos",
+          "page": 174,
+          "printed": 99,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-20",
+        "chapterNumber": 20,
+        "chapter": "Dispersión y forma de los datos",
+        "section": "dispersion y forma de los datos",
+        "printedPages": [
+          98,
+          99
+        ],
+        "pdfPages": [
+          173,
+          174
+        ],
+        "statements": [
+          {
+            "pdfPage": 173,
+            "printedPage": 98,
+            "section": "dispersion y forma de los datos",
+            "cardId": "salud-24-009"
+          },
+          {
+            "pdfPage": 174,
+            "printedPage": 99,
+            "section": "dispersion y forma de los datos",
+            "cardId": "salud-24-010"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "Solo la afirmación 1 es correcta.",
+        "B": "1. Correcta. La varianza combina las desviaciones cuadráticas. 2. Incorrecta. Se expresa en centímetros cuadrados. La desviación estándar recupera las unidades originales.",
+        "C": "2. Incorrecta. Se expresa en centímetros cuadrados. La desviación estándar recupera las unidades originales.",
+        "D": "1. Correcta. La varianza combina las desviaciones cuadráticas."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "salud-24-007",
+      "content_id": "evaluacion:medicina-oficial-salud-20-ampliacion-03-umss",
       "materia": "SALUD PUBLICA",
       "tema": "dispersion y forma de los datos",
       "numero_pregunta": 7,
-      "pregunta": "¿Qué ventaja tiene el rango intercuartil frente al rango total?",
-      "respuesta_correcta": "B",
-      "justificacion": "Reduce la influencia de valores extremos.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "173",
-      "pagina_impresa": "98",
-      "dificultad": "medio",
-      "opcion_a": "Precisa, según los criterios citados del DANE.",
-      "opcion_b": "Reduce la influencia de valores extremos.",
-      "opcion_c": "Cero o valores positivos; nunca negativos.",
-      "opcion_d": "La desviación estándar y la media aritmética."
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Para una muestra de seis valores, el denominador de la varianza muestral del texto es cinco.\n2. En una distribución aproximadamente normal, cerca del 95 % de los datos queda a dos desviaciones estándar o menos de la media.",
+      "respuesta_correcta": "C",
+      "justificacion": "1. Correcta. El denominador es n − 1.\n2. Correcta. Es la segunda banda de la regla empírica para ese tipo de distribución.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+      "paginas_pdf": "174, 178",
+      "pagina_impresa": "99, 103",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Dispersión y forma de los datos · dispersion y forma de los datos",
+          "page": 174,
+          "printed": 99,
+          "marks": []
+        },
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Dispersión y forma de los datos · dispersion y forma de los datos",
+          "page": 178,
+          "printed": 103,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-20",
+        "chapterNumber": 20,
+        "chapter": "Dispersión y forma de los datos",
+        "section": "dispersion y forma de los datos",
+        "printedPages": [
+          99,
+          103
+        ],
+        "pdfPages": [
+          174,
+          178
+        ],
+        "statements": [
+          {
+            "pdfPage": 174,
+            "printedPage": 99,
+            "section": "dispersion y forma de los datos",
+            "cardId": "salud-24-011"
+          },
+          {
+            "pdfPage": 178,
+            "printedPage": 103,
+            "section": "dispersion y forma de los datos",
+            "cardId": "salud-24-016"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "2. Correcta. Es la segunda banda de la regla empírica para ese tipo de distribución.",
+        "B": "1. Correcta. El denominador es n − 1.",
+        "C": "Ambas afirmaciones son correctas.",
+        "D": "1. Correcta. El denominador es n − 1. 2. Correcta. Es la segunda banda de la regla empírica para ese tipo de distribución."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "salud-24-008",
+      "content_id": "evaluacion:medicina-oficial-salud-20-ampliacion-04-umss",
       "materia": "SALUD PUBLICA",
       "tema": "dispersion y forma de los datos",
       "numero_pregunta": 8,
-      "pregunta": "¿En qué diferencias se basa la varianza?",
-      "respuesta_correcta": "B",
-      "justificacion": "En las diferencias entre cada dato y la media aritmética.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "173",
-      "pagina_impresa": "98",
-      "dificultad": "medio",
-      "opcion_a": "En un rango de salida, una hoja nueva o un libro nuevo.",
-      "opcion_b": "En las diferencias entre cada dato y la media aritmética.",
-      "opcion_c": "En unidades de la variable elevadas al cuadrado.",
-      "opcion_d": "Hacia la promoción de la salud y la atención primaria."
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Un coeficiente de asimetría positivo indica que la cola se extiende hacia la izquierda.\n2. En la clasificación del texto, una distribución leptocúrtica tiene exceso de curtosis negativo.",
+      "respuesta_correcta": "D",
+      "justificacion": "1. Incorrecta. La asimetría positiva indica sesgo a la derecha.\n2. Incorrecta. El exceso es positivo en la leptocúrtica y negativo en la platicúrtica.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+      "paginas_pdf": "186, 188",
+      "pagina_impresa": "111, 113",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Dispersión y forma de los datos · dispersion y forma de los datos",
+          "page": 186,
+          "printed": 111,
+          "marks": []
+        },
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Dispersión y forma de los datos · dispersion y forma de los datos",
+          "page": 188,
+          "printed": 113,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-20",
+        "chapterNumber": 20,
+        "chapter": "Dispersión y forma de los datos",
+        "section": "dispersion y forma de los datos",
+        "printedPages": [
+          111,
+          113
+        ],
+        "pdfPages": [
+          186,
+          188
+        ],
+        "statements": [
+          {
+            "pdfPage": 186,
+            "printedPage": 111,
+            "section": "dispersion y forma de los datos",
+            "cardId": "salud-25-002"
+          },
+          {
+            "pdfPage": 188,
+            "printedPage": 113,
+            "section": "dispersion y forma de los datos",
+            "cardId": "salud-25-011"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. La asimetría positiva indica sesgo a la derecha.",
+        "B": "2. Incorrecta. El exceso es positivo en la leptocúrtica y negativo en la platicúrtica.",
+        "C": "1. Incorrecta. La asimetría positiva indica sesgo a la derecha. 2. Incorrecta. El exceso es positivo en la leptocúrtica y negativo en la platicúrtica.",
+        "D": "Ninguna afirmación es correcta."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "salud-24-009",
+      "content_id": "evaluacion:banco-verificado:salud-20:dispersion",
       "materia": "SALUD PUBLICA",
       "tema": "dispersion y forma de los datos",
       "numero_pregunta": 9,
-      "pregunta": "¿Por qué se elevan al cuadrado las desviaciones al calcular la varianza?",
-      "respuesta_correcta": "C",
-      "justificacion": "Para evitar que se compensen las desviaciones positivas y negativas.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "173",
-      "pagina_impresa": "98",
-      "dificultad": "medio",
-      "opcion_a": "Para definir el nombre descriptivo que aparecerá en los resultados.",
-      "opcion_b": "El coeficiente de variación.",
-      "opcion_c": "Para evitar que se compensen las desviaciones positivas y negativas.",
-      "opcion_d": "Fijar objetivos numéricos nacionales y monitorear el progreso global."
-    },
-    {
-      "content_id": "salud-24-010",
-      "materia": "SALUD PUBLICA",
-      "tema": "dispersion y forma de los datos",
-      "numero_pregunta": 10,
-      "pregunta": "¿En qué unidades se expresa la varianza?",
-      "respuesta_correcta": "B",
-      "justificacion": "En unidades de la variable elevadas al cuadrado.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "174",
-      "pagina_impresa": "99",
-      "dificultad": "medio",
-      "opcion_a": "En un rango de salida, una hoja nueva o un libro nuevo.",
-      "opcion_b": "En unidades de la variable elevadas al cuadrado.",
-      "opcion_c": "En las diferencias entre cada dato y la media aritmética.",
-      "opcion_d": "Hacia la promoción de la salud y la atención primaria."
-    },
-    {
-      "content_id": "salud-24-011",
-      "materia": "SALUD PUBLICA",
-      "tema": "dispersion y forma de los datos",
-      "numero_pregunta": 11,
-      "pregunta": "¿Qué denominador utiliza la varianza muestral?",
-      "respuesta_correcta": "C",
-      "justificacion": "n − 1.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "174",
-      "pagina_impresa": "99",
-      "dificultad": "medio",
-      "opcion_a": "El 50 % central.",
-      "opcion_b": "s².",
-      "opcion_c": "n − 1.",
-      "opcion_d": "RIC = Q₃ − Q₁."
-    },
-    {
-      "content_id": "salud-24-012",
-      "materia": "SALUD PUBLICA",
-      "tema": "dispersion y forma de los datos",
-      "numero_pregunta": 12,
-      "pregunta": "¿Qué símbolo representa la varianza de la muestra?",
+      "pregunta": "El valor máximo de un conjunto aumenta en 10 unidades, mientras el mínimo, Q1 y Q3 se mantienen. ¿Qué ocurre con las dos medidas de dispersión?",
       "respuesta_correcta": "A",
-      "justificacion": "s².",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "174",
-      "pagina_impresa": "99",
-      "dificultad": "medio",
-      "opcion_a": "s².",
-      "opcion_b": "RIC = Q₃ − Q₁.",
-      "opcion_c": "El 50 % central.",
-      "opcion_d": "n − 1."
-    },
-    {
-      "content_id": "salud-24-013",
-      "materia": "SALUD PUBLICA",
-      "tema": "dispersion y forma de los datos",
-      "numero_pregunta": 13,
-      "pregunta": "¿Cómo se calcula la desviación estándar?",
-      "respuesta_correcta": "B",
-      "justificacion": "Como la raíz cuadrada positiva de la varianza.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "177",
-      "pagina_impresa": "102",
-      "dificultad": "medio",
-      "opcion_a": "La diferencia entre media y moda con la desviación estándar.",
-      "opcion_b": "Como la raíz cuadrada positiva de la varianza.",
-      "opcion_c": "Rango, rango intercuartil, varianza, desviación estándar y coeficiente de variación.",
-      "opcion_d": "Aproximadamente 68 %, 95 % y 99,7 % dentro de 1, 2 y 3 desviaciones estándar de la media."
-    },
-    {
-      "content_id": "salud-24-014",
-      "materia": "SALUD PUBLICA",
-      "tema": "dispersion y forma de los datos",
-      "numero_pregunta": 14,
-      "pregunta": "¿Qué símbolos representan la desviación estándar muestral y poblacional?",
-      "respuesta_correcta": "C",
-      "justificacion": "Muestral: s. Poblacional: σ.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "177",
-      "pagina_impresa": "102",
-      "dificultad": "medio",
-      "opcion_a": "Respecto a la media aritmética.",
-      "opcion_b": "Mayor sesgo, según su signo.",
-      "opcion_c": "Muestral: s. Poblacional: σ.",
-      "opcion_d": "Simetría de la distribución."
-    },
-    {
-      "content_id": "salud-24-015",
-      "materia": "SALUD PUBLICA",
-      "tema": "dispersion y forma de los datos",
-      "numero_pregunta": 15,
-      "pregunta": "¿Respecto a qué medida central se interpreta la desviación estándar?",
-      "respuesta_correcta": "A",
-      "justificacion": "Respecto a la media aritmética.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "177",
-      "pagina_impresa": "102",
-      "dificultad": "medio",
-      "opcion_a": "Respecto a la media aritmética.",
-      "opcion_b": "Solo considera los valores extremos.",
-      "opcion_c": "Media, mediana y moda.",
-      "opcion_d": "Muestral: s. Poblacional: σ."
-    },
-    {
-      "content_id": "salud-24-016",
-      "materia": "SALUD PUBLICA",
-      "tema": "dispersion y forma de los datos",
-      "numero_pregunta": 16,
-      "pregunta": "¿Qué porcentajes resume la regla empírica para una distribución aproximadamente normal?",
-      "respuesta_correcta": "D",
-      "justificacion": "Aproximadamente 68 %, 95 % y 99,7 % dentro de 1, 2 y 3 desviaciones estándar de la media.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "178",
-      "pagina_impresa": "103",
-      "dificultad": "medio",
-      "opcion_a": "Como porcentaje de la desviación estándar respecto a la media: CV = s/media × 100.",
-      "opcion_b": "Como la raíz cuadrada positiva de la varianza.",
-      "opcion_c": "Rango, rango intercuartil, varianza, desviación estándar y coeficiente de variación.",
-      "opcion_d": "Aproximadamente 68 %, 95 % y 99,7 % dentro de 1, 2 y 3 desviaciones estándar de la media."
-    },
-    {
-      "content_id": "salud-24-017",
-      "materia": "SALUD PUBLICA",
-      "tema": "dispersion y forma de los datos",
-      "numero_pregunta": 17,
-      "pregunta": "¿Qué valores pueden tomar el rango, el RIC, la varianza y la desviación estándar?",
-      "respuesta_correcta": "A",
-      "justificacion": "Cero o valores positivos; nunca negativos.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "179",
-      "pagina_impresa": "104",
-      "dificultad": "medio",
-      "opcion_a": "Cero o valores positivos; nunca negativos.",
-      "opcion_b": "Reduce la influencia de valores extremos.",
-      "opcion_c": "Precisa, según los criterios citados del DANE.",
-      "opcion_d": "La desviación estándar y la media aritmética."
-    },
-    {
-      "content_id": "salud-24-018",
-      "materia": "SALUD PUBLICA",
-      "tema": "dispersion y forma de los datos",
-      "numero_pregunta": 18,
-      "pregunta": "¿Cómo cambia la dispersión cuando aumentan sus medidas?",
-      "respuesta_correcta": "D",
-      "justificacion": "Aumenta; la relación es directa.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "179",
-      "pagina_impresa": "104",
-      "dificultad": "medio",
-      "opcion_a": "Es poco útil para poblaciones muy grandes.",
-      "opcion_b": "Regular.",
-      "opcion_c": "Ser cuantificables y observables.",
-      "opcion_d": "Aumenta; la relación es directa."
-    },
-    {
-      "content_id": "salud-24-019",
-      "materia": "SALUD PUBLICA",
-      "tema": "dispersion y forma de los datos",
-      "numero_pregunta": 19,
-      "pregunta": "¿Qué relaciona el coeficiente de variación?",
-      "respuesta_correcta": "D",
-      "justificacion": "La desviación estándar y la media aritmética.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "179",
-      "pagina_impresa": "104",
-      "dificultad": "medio",
-      "opcion_a": "Cero o valores positivos; nunca negativos.",
-      "opcion_b": "Reduce la influencia de valores extremos.",
-      "opcion_c": "Precisa, según los criterios citados del DANE.",
-      "opcion_d": "La desviación estándar y la media aritmética."
-    },
-    {
-      "content_id": "salud-24-020",
-      "materia": "SALUD PUBLICA",
-      "tema": "dispersion y forma de los datos",
-      "numero_pregunta": 20,
-      "pregunta": "¿Cómo se expresa el coeficiente de variación?",
-      "respuesta_correcta": "A",
-      "justificacion": "Como porcentaje de la desviación estándar respecto a la media: CV = s/media × 100.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "179",
-      "pagina_impresa": "104",
-      "dificultad": "medio",
-      "opcion_a": "Como porcentaje de la desviación estándar respecto a la media: CV = s/media × 100.",
-      "opcion_b": "Rango, rango intercuartil, varianza, desviación estándar y coeficiente de variación.",
-      "opcion_c": "Como la raíz cuadrada positiva de la varianza.",
-      "opcion_d": "Aproximadamente 68 %, 95 % y 99,7 % dentro de 1, 2 y 3 desviaciones estándar de la media."
-    },
-    {
-      "content_id": "salud-24-022",
-      "materia": "SALUD PUBLICA",
-      "tema": "dispersion y forma de los datos",
-      "numero_pregunta": 21,
-      "pregunta": "¿Cómo clasifica el material una estimación con CV ≤ 7 %?",
-      "respuesta_correcta": "C",
-      "justificacion": "Precisa, según los criterios citados del DANE.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "179",
-      "pagina_impresa": "104",
-      "dificultad": "medio",
-      "opcion_a": "Reduce la influencia de valores extremos.",
-      "opcion_b": "La desviación estándar y la media aritmética.",
-      "opcion_c": "Precisa, según los criterios citados del DANE.",
-      "opcion_d": "Cero o valores positivos; nunca negativos."
-    },
-    {
-      "content_id": "salud-24-023",
-      "materia": "SALUD PUBLICA",
-      "tema": "dispersion y forma de los datos",
-      "numero_pregunta": 22,
-      "pregunta": "¿Qué precisión atribuye el texto a CV entre 8 % y 14 %?",
-      "respuesta_correcta": "C",
-      "justificacion": "Aceptable.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "179",
-      "pagina_impresa": "104",
-      "dificultad": "medio",
-      "opcion_a": "Media, mediana y moda.",
-      "opcion_b": "Negativo.",
-      "opcion_c": "Aceptable.",
-      "opcion_d": "Positivo."
-    },
-    {
-      "content_id": "salud-24-024",
-      "materia": "SALUD PUBLICA",
-      "tema": "dispersion y forma de los datos",
-      "numero_pregunta": 23,
-      "pregunta": "¿Qué precisión atribuye el texto a CV entre 15 % y 20 %?",
-      "respuesta_correcta": "A",
-      "justificacion": "Regular.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "179",
-      "pagina_impresa": "104",
-      "dificultad": "medio",
-      "opcion_a": "Regular.",
-      "opcion_b": "Es poco útil para poblaciones muy grandes.",
-      "opcion_c": "Ser representativa.",
-      "opcion_d": "Aumenta; la relación es directa."
-    },
-    {
-      "content_id": "salud-24-025",
-      "materia": "SALUD PUBLICA",
-      "tema": "dispersion y forma de los datos",
-      "numero_pregunta": 24,
-      "pregunta": "¿Qué precisión atribuye el texto a CV mayor del 20 %?",
-      "respuesta_correcta": "A",
-      "justificacion": "Poco precisa.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "179",
-      "pagina_impresa": "104",
-      "dificultad": "medio",
-      "opcion_a": "Poco precisa.",
-      "opcion_b": "Negativo.",
-      "opcion_c": "Máximo − mínimo.",
-      "opcion_d": "Media, mediana y moda."
-    },
-    {
-      "content_id": "salud-24-021",
-      "materia": "SALUD PUBLICA",
-      "tema": "dispersion y forma de los datos",
-      "numero_pregunta": 25,
-      "pregunta": "¿Qué medida permite comparar dispersión relativa entre muestras con unidades diferentes?",
-      "respuesta_correcta": "B",
-      "justificacion": "El coeficiente de variación.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "180",
-      "pagina_impresa": "105",
-      "dificultad": "medio",
-      "opcion_a": "Archivo → Opciones → Complementos.",
-      "opcion_b": "El coeficiente de variación.",
-      "opcion_c": "Para evitar que se compensen las desviaciones positivas y negativas.",
-      "opcion_d": "La escala de razón."
-    },
-    {
-      "content_id": "salud-25-001",
-      "materia": "SALUD PUBLICA",
-      "tema": "dispersion y forma de los datos",
-      "numero_pregunta": 26,
-      "pregunta": "¿Qué tres medidas centrales compara el texto para describir el sesgo?",
-      "respuesta_correcta": "D",
-      "justificacion": "Media, mediana y moda.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "184",
-      "pagina_impresa": "109",
-      "dificultad": "medio",
-      "opcion_a": "Respecto a la media aritmética.",
-      "opcion_b": "Poco precisa.",
-      "opcion_c": "El mínimo y el máximo.",
-      "opcion_d": "Media, mediana y moda."
-    },
-    {
-      "content_id": "salud-25-002",
-      "materia": "SALUD PUBLICA",
-      "tema": "dispersion y forma de los datos",
-      "numero_pregunta": 27,
-      "pregunta": "¿Qué indica un coeficiente de asimetría positivo?",
-      "respuesta_correcta": "D",
-      "justificacion": "Sesgo a la derecha.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "186",
-      "pagina_impresa": "111",
-      "dificultad": "medio",
-      "opcion_a": "Máximo − mínimo.",
-      "opcion_b": "Cuartiles y mediana.",
-      "opcion_c": "Simetría de la distribución.",
-      "opcion_d": "Sesgo a la derecha."
-    },
-    {
-      "content_id": "salud-25-003",
-      "materia": "SALUD PUBLICA",
-      "tema": "dispersion y forma de los datos",
-      "numero_pregunta": 28,
-      "pregunta": "¿Qué indica un coeficiente de asimetría negativo?",
-      "respuesta_correcta": "A",
-      "justificacion": "Sesgo a la izquierda.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "186",
-      "pagina_impresa": "111",
-      "dificultad": "medio",
-      "opcion_a": "Sesgo a la izquierda.",
-      "opcion_b": "Cuartiles y mediana.",
-      "opcion_c": "Simetría de la distribución.",
-      "opcion_d": "El mínimo y el máximo."
-    },
-    {
-      "content_id": "salud-25-004",
-      "materia": "SALUD PUBLICA",
-      "tema": "dispersion y forma de los datos",
-      "numero_pregunta": 29,
-      "pregunta": "¿Qué indica un coeficiente de asimetría igual a cero?",
-      "respuesta_correcta": "D",
-      "justificacion": "Simetría de la distribución.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "186",
-      "pagina_impresa": "111",
-      "dificultad": "medio",
-      "opcion_a": "Cuartiles y mediana.",
-      "opcion_b": "Sesgo a la izquierda.",
-      "opcion_c": "Muestral: s. Poblacional: σ.",
-      "opcion_d": "Simetría de la distribución."
-    },
-    {
-      "content_id": "salud-25-005",
-      "materia": "SALUD PUBLICA",
-      "tema": "dispersion y forma de los datos",
-      "numero_pregunta": 30,
-      "pregunta": "¿Qué implica que la asimetría de Fisher se aleje más de cero?",
-      "respuesta_correcta": "B",
-      "justificacion": "Mayor sesgo, según su signo.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "186",
-      "pagina_impresa": "111",
-      "dificultad": "medio",
-      "opcion_a": "Respecto a la media aritmética.",
-      "opcion_b": "Mayor sesgo, según su signo.",
-      "opcion_c": "Muestral: s. Poblacional: σ.",
-      "opcion_d": "Simetría de la distribución."
+      "justificacion": "El rango depende del máximo y del mínimo. El intercuartílico depende de Q3 menos Q1. Solo cambia el primero porque solo se modificó el máximo.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+      "paginas_pdf": "172, 173",
+      "pagina_impresa": "97, 98",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "Educación en Salud",
+          "section": "Rango y rango intercuartílico",
+          "page": 172,
+          "printed": 97,
+          "marks": [
+            [
+              0.8273,
+              0.4643,
+              0.0889,
+              0.0192
+            ],
+            [
+              0.1212,
+              0.4873,
+              0.1059,
+              0.0192
+            ]
+          ]
+        },
+        {
+          "slug": "educacion-salud",
+          "label": "Educación en Salud",
+          "section": "Rango y rango intercuartílico",
+          "page": 173,
+          "printed": 98,
+          "marks": [
+            [
+              0.2622,
+              0.1063,
+              0.1327,
+              0.0191
+            ],
+            [
+              0.1905,
+              0.1466,
+              0.1279,
+              0.0192
+            ]
+          ]
+        }
+      ],
+      "source": {
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-20"
+      },
+      "opcion_a": "El rango aumenta en 10 y el rango intercuartílico se conserva.",
+      "opcion_b": "El rango se conserva y el rango intercuartílico aumenta en 10.",
+      "opcion_c": "El rango y el rango intercuartílico aumentan en 10.",
+      "opcion_d": "El rango y el rango intercuartílico se conservan."
     }
   ]
 }

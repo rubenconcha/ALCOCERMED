@@ -1,28 +1,81 @@
 const {test}=require('node:test');const assert=require('node:assert/strict');const fs=require('node:fs');
 const catalog=require('../content/topic-evaluations/catalog.json');
 const sufficiency=require('../api/_evaluations/suficiencia.cjs');
-const sources=require('../api/_evaluations/source-cards.json');
 const audit=require('../api/_evaluations/source-audit.json');
-const cards=new Map(sources.flatMap(s=>s.chapters.flatMap(c=>c.cards.map(q=>[q.id,{...q,subject:s.source.id}]))));
-test('68 temas completos con respuestas y alternativas trazables a la bibliografía',()=>{
- assert.equal(catalog.exams.length,68);assert.deepEqual(['morfo','biologia','salud'].map(p=>catalog.exams.filter(e=>e.id.startsWith(p)).length),[29,18,21]);
- const unique=new Set();
- for(const exam of catalog.exams){const paper=require('../api/_evaluations/'+exam.id+'.json');assert.equal(paper.count,paper.questions.length);assert.equal(exam.count,paper.count);assert.ok(paper.count>=7);assert.equal(paper.duration,paper.count);
- for(const q of paper.questions){assert.ok(!unique.has(q.content_id));unique.add(q.content_id);
-  if (exam.id === 'morfo-09') {
-   assert.equal(paper.content_revision, 1);
-   assert.equal(q.dificultad, 'dificil');
-   assert.equal(q.source.sha256, paper.review.source_sha256);
-   assert.ok(q.source.verified_anchors.every(ref => ref.pdf_page - ref.printed_page === 28 && ref.anchor));
-   const entry = audit.find(a => a.paper === exam.id && a.question === q.content_id);
-   assert.equal(entry?.authored_options, true);
-   assert.equal(new Set(Array.from('abcd', letter => q['opcion_' + letter])).size, 4);
-   assert.deepEqual(Object.keys(q.comentarios_opciones), ['A','B','C','D']);
-   continue;
-  }
-  if(['morfo-01','morfo-08'].includes(exam.id)){assert.equal(paper.content_revision,exam.id==='morfo-08'?5:3);assert.equal(q.source.sha256,'e00074c7105c10052637b1c2a82f2b8959cf7c4cb9a91c4abd058ce958e58148');assert.ok(q.source.evidence_excerpt.length>100);assert.equal(Object.keys(q.comentarios_opciones).length,4);assert.ok(q.source.pdf_pages.every(n=>(exam.id==='morfo-08'?n>=262&&n<=302:n>=30&&n<=65)));continue;}const source=cards.get(q.content_id);assert.ok(source);assert.equal(q.pregunta,source.question);assert.equal(q['opcion_'+q.respuesta_correcta.toLowerCase()],source.answer);assert.equal(q.paginas_pdf,String(source.pdf_page));const entry=audit.find(a=>a.paper===exam.id&&a.question===q.content_id);assert.ok(entry);const options='abcd'.split('').map(k=>q['opcion_'+k]);assert.equal(new Set(options).size,4);entry.option_source_ids.forEach((id,i)=>{assert.equal(cards.get(id).answer,options[i]);assert.equal(cards.get(id).subject,source.subject)});}
+const publishedOptions=q=>Array.from('abcde', letter=>q['opcion_'+letter]).filter(Boolean);
+const reviewed=new Set(['morfo-01','morfo-08','morfo-09']);
+const authored=new Map([
+ ...require('../api/_sufficiency/medicina-oficial.json').questions,
+ ...require('../api/_sufficiency/medicina-preguntas-por-tema.json'),
+ ...require('../api/_mindmaps/banco-verificado.json'),
+].map(q=>['evaluacion:'+q.id,q]));
+
+test('los 68 temas de Medicina tienen alternativas redactadas para sus enunciados y referencias oficiales',()=>{
+ assert.equal(catalog.exams.length,68);
+ assert.deepEqual(['morfo','biologia','salud'].map(p=>catalog.exams.filter(e=>e.id.startsWith(p)).length),[29,18,21]);
+ const evidence=new Map(audit.map(row=>[row.question,row]));
+ assert.equal(evidence.size,audit.length);
+ for(const exam of catalog.exams){
+  const paper=require('../api/_evaluations/'+exam.id+'.json');
+  assert.equal(paper.count,paper.questions.length);
+  assert.equal(exam.count,paper.count);
+  assert.ok(paper.count>=8,exam.id);
+  assert.equal(paper.duration,paper.count);
+  const prompts=new Set();
+  paper.questions.forEach((q,i)=>{
+   const entry=evidence.get(q.content_id);
+   assert.equal(entry?.paper,exam.id,q.content_id);
+   evidence.delete(q.content_id);
+   assert.equal(q.numero_pregunta,i+1);
+   assert.equal(q.tema,exam.topic);
+   assert.equal(q.materia,exam.subject);
+   const options=publishedOptions(q);
+   assert.ok(options.length>=4 && options.length<=5);
+   assert.equal(new Set(options).size,options.length);
+   assert.ok(options['ABCDE'.indexOf(q.respuesta_correcta)]);
+   assert.ok(q.justificacion?.trim());
+   assert.ok(!prompts.has(q.pregunta));
+   prompts.add(q.pregunta);
+   if(reviewed.has(exam.id)){
+    assert.equal(Object.keys(q.comentarios_opciones).length,options.length);
+    assert.ok(q.source.sha256 && q.source.pdf_pages.length);
+    return;
+   }
+   assert.equal(entry.authored_options,true);
+   assert.equal(entry.option_source_ids,undefined);
+   assert.equal(q.source.topicId,exam.id);
+   assert.deepEqual(entry.pdf_pages,q.lecturas_comentario.map(ref=>ref.page));
+   assert.ok(q.lecturas_comentario.every(ref=>Number.isInteger(ref.page)&&ref.section&&ref.slug));
+   if(exam.id==='morfo-18')return;
+   const original=authored.get(q.content_id);
+   assert.ok(original,q.content_id);
+   assert.equal(q.pregunta,original.text||original.prompt);
+   if(original.options)assert.deepEqual(options,original.options);
+   else assert.deepEqual(new Set(options),new Set([original.answer,...original.distractors]));
+   assert.equal(options['ABCDE'.indexOf(q.respuesta_correcta)],original.answer||original.options[original.correct]);
+  });
  }
- assert.equal(unique.size,audit.length);
+ assert.equal(evidence.size,0);
+});
+test('Sangre conserva treinta preguntas con opciones comparables, comentarios y páginas destacadas',()=>{
+ const paper=require('../api/_evaluations/morfo-18.json');
+ assert.equal(paper.count,30);
+ assert.equal(paper.duration,30);
+ const first=paper.questions[0];
+ assert.match(first.pregunta,/dos componentes principales de la sangre/);
+ assert.deepEqual(new Set(publishedOptions(first)),new Set([
+  'Plasma y elementos formes.','Plasma y eritrocitos.',
+  'Plasma y proteínas plasmáticas.','Suero y elementos formes.',
+ ]));
+ assert.equal(first['opcion_'+first.respuesta_correcta.toLowerCase()],'Plasma y elementos formes.');
+ for(const q of paper.questions){
+  assert.equal(q.source.sha256,'e00074c7105c10052637b1c2a82f2b8959cf7c4cb9a91c4abd058ce958e58148');
+  assert.ok(q.source.verified_anchors.every(ref=>ref.pdf_page-ref.printed_page===28 && ref.anchor));
+  assert.deepEqual(Object.keys(q.comentarios_opciones),['A','B','C','D']);
+  assert.ok(Object.values(q.comentarios_opciones).every(reason=>reason.trim()));
+  assert.equal(new Set(Object.values(q.comentarios_opciones)).size,4);
+  assert.ok(q.lecturas_comentario.every(ref=>ref.page>=708 && ref.page<=738 && ref.marks.length));
+ }
 });
 test('Articulaciones evalúa la clasificación con cuatro alternativas comparables', () => {
  const { questions } = require('../api/_evaluations/morfo-09.json');

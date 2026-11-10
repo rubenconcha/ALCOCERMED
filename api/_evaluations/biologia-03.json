@@ -5,502 +5,496 @@
   "topic": "estructura de la membrana plasmatica",
   "title": "Estructura de la membrana plasmática",
   "number": 3,
-  "count": 29,
-  "duration": 29,
+  "count": 9,
+  "duration": 9,
   "source": "Biología celular biomédica",
   "questions": [
     {
-      "content_id": "bio-03-001",
+      "content_id": "evaluacion:medicina-oficial-biologia-03-intermedio-1",
       "materia": "BIOLOGIA CELULAR",
       "tema": "estructura de la membrana plasmatica",
       "numero_pregunta": 1,
-      "pregunta": "¿Qué constituye el armazón básico de la membrana?",
-      "respuesta_correcta": "B",
-      "justificacion": "La bicapa lipídica.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "128",
-      "pagina_impresa": "128",
+      "pregunta": "En un sistema sin células, lípidos dispersos en medio acuoso forman una vesícula cerrada de bicapa que contiene agua.\n¿Qué opción corresponde al caso?",
+      "respuesta_correcta": "A",
+      "justificacion": "Un liposoma es una vesícula cerrada rodeada por una bicapa lipídica.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+      "paginas_pdf": "131",
+      "pagina_impresa": "",
       "dificultad": "medio",
-      "opcion_a": "Las translocasas.",
-      "opcion_b": "La bicapa lipídica.",
-      "opcion_c": "La cardiolipina.",
-      "opcion_d": "Fosfatidilserina."
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Estructura de la membrana plasmática · Liposomas",
+          "page": 131,
+          "printed": null,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-03",
+        "chapterNumber": 3,
+        "chapter": "Estructura de la membrana plasmática",
+        "section": "Liposomas",
+        "printedPages": [],
+        "pdfPages": [
+          131
+        ]
+      },
+      "opcion_a": "Liposoma",
+      "opcion_b": "Balsa lipídica",
+      "opcion_c": "Glucocáliz",
+      "opcion_d": "Translocasa"
     },
     {
-      "content_id": "bio-03-002",
+      "content_id": "evaluacion:medicina-oficial-biologia-03-intermedio-2",
       "materia": "BIOLOGIA CELULAR",
       "tema": "estructura de la membrana plasmatica",
       "numero_pregunta": 2,
-      "pregunta": "¿Qué componentes ejecutan la mayoría de las funciones de membrana?",
-      "respuesta_correcta": "C",
-      "justificacion": "Las proteínas.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "128",
-      "pagina_impresa": "128",
+      "pregunta": "Se marca un lípido en una hoja. Al inhibir cierta proteína se reduce su transferencia hacia la hoja opuesta, no su difusión lateral.\n¿Qué opción corresponde al caso?",
+      "respuesta_correcta": "A",
+      "justificacion": "Las translocasas facilitan el paso de lípidos entre las dos hojas de la bicapa.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+      "paginas_pdf": "141",
+      "pagina_impresa": "",
       "dificultad": "medio",
-      "opcion_a": "La disminuyen.",
-      "opcion_b": "La cardiolipina.",
-      "opcion_c": "Las proteínas.",
-      "opcion_d": "La espectrina."
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Estructura de la membrana plasmática · Asimetría",
+          "page": 141,
+          "printed": null,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-03",
+        "chapterNumber": 3,
+        "chapter": "Estructura de la membrana plasmática",
+        "section": "Asimetría",
+        "printedPages": [],
+        "pdfPages": [
+          141
+        ]
+      },
+      "opcion_a": "Translocasa",
+      "opcion_b": "Glucocáliz",
+      "opcion_c": "Liposoma",
+      "opcion_d": "Balsa lipídica"
     },
     {
-      "content_id": "bio-03-003",
+      "content_id": "evaluacion:medicina-oficial-biologia-03-intermedio-3",
       "materia": "BIOLOGIA CELULAR",
       "tema": "estructura de la membrana plasmatica",
       "numero_pregunta": 3,
-      "pregunta": "¿Hacia qué lado se orientan los glúcidos de membrana?",
-      "respuesta_correcta": "B",
-      "justificacion": "Hacia el exterior celular.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "128",
-      "pagina_impresa": "128",
+      "pregunta": "En una membrana intacta se observa un sector temporal enriquecido en lípidos y en ciertas proteínas de señal. No se separa como vesícula.\n¿Qué opción corresponde al caso?",
+      "respuesta_correcta": "A",
+      "justificacion": "Una balsa lipídica es un dominio transitorio de la membrana que puede reunir lípidos y proteínas de señalización.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+      "paginas_pdf": "143",
+      "pagina_impresa": "",
       "dificultad": "medio",
-      "opcion_a": "Entre cromosomas homólogos.",
-      "opcion_b": "Hacia el exterior celular.",
-      "opcion_c": "En general, de forma inversa.",
-      "opcion_d": "A filamentos intermedios."
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Estructura de la membrana plasmática · Balsas lipídicas",
+          "page": 143,
+          "printed": null,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-03",
+        "chapterNumber": 3,
+        "chapter": "Estructura de la membrana plasmática",
+        "section": "Balsas lipídicas",
+        "printedPages": [],
+        "pdfPages": [
+          143
+        ]
+      },
+      "opcion_a": "Balsa lipídica",
+      "opcion_b": "Translocasa",
+      "opcion_c": "Liposoma",
+      "opcion_d": "Glucocáliz"
     },
     {
-      "content_id": "bio-03-004",
+      "content_id": "evaluacion:medicina-oficial-biologia-03-intermedio-4",
       "materia": "BIOLOGIA CELULAR",
       "tema": "estructura de la membrana plasmatica",
       "numero_pregunta": 4,
-      "pregunta": "¿Qué significa que un lípido de membrana sea anfipático?",
-      "respuesta_correcta": "D",
-      "justificacion": "Tiene una cabeza polar hidrófila y una región apolar hidrófoba.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "129",
-      "pagina_impresa": "129",
+      "pregunta": "Un marcador de azúcares se une a residuos expuestos hacia fuera. Se pide identificar la cubierta externa que se está marcando.\n¿Qué opción corresponde al caso?",
+      "respuesta_correcta": "A",
+      "justificacion": "El glucocáliz es la cubierta de glúcidos que se proyecta hacia el exterior celular.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+      "paginas_pdf": "156",
+      "pagina_impresa": "",
       "dificultad": "medio",
-      "opcion_a": "La longitud de las cadenas hidrocarbonadas de sus ácidos grasos.",
-      "opcion_b": "La transición entre las fases gel y líquida.",
-      "opcion_c": "Con soluciones de alta o baja fuerza iónica o pH extremo.",
-      "opcion_d": "Tiene una cabeza polar hidrófila y una región apolar hidrófoba."
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Estructura de la membrana plasmática · Glucocáliz",
+          "page": 156,
+          "printed": null,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-03",
+        "chapterNumber": 3,
+        "chapter": "Estructura de la membrana plasmática",
+        "section": "Glucocáliz",
+        "printedPages": [],
+        "pdfPages": [
+          156
+        ]
+      },
+      "opcion_a": "Glucocáliz",
+      "opcion_b": "Balsa lipídica",
+      "opcion_c": "Liposoma",
+      "opcion_d": "Translocasa"
     },
     {
-      "content_id": "bio-03-005",
+      "content_id": "evaluacion:medicina-oficial-biologia-03-ampliacion-01-umss",
       "materia": "BIOLOGIA CELULAR",
       "tema": "estructura de la membrana plasmatica",
       "numero_pregunta": 5,
-      "pregunta": "¿Qué regiones lipídicas se enfrentan en el interior de la bicapa?",
-      "respuesta_correcta": "A",
-      "justificacion": "Las regiones hidrófobas.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "130",
-      "pagina_impresa": "130",
-      "dificultad": "medio",
-      "opcion_a": "Las regiones hidrófobas.",
-      "opcion_b": "El ácido fosfatídico.",
-      "opcion_c": "Liposomas.",
-      "opcion_d": "Cloruro y bicarbonato."
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. A igualdad de las otras condiciones, acortar las cadenas y añadir dobles enlaces cis eleva la temperatura de fusión de la membrana.\n2. Los esteroles pueden reducir el paso a través de la bicapa de ciertos solutos polares.",
+      "respuesta_correcta": "B",
+      "justificacion": "1. Incorrecta. Las cadenas cortas y los dobles enlaces cis favorecen la fluidez a temperaturas menores.\n2. Correcta. Al intercalarse entre lípidos, disminuyen la permeabilidad a esos solutos.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+      "paginas_pdf": "137, 138",
+      "pagina_impresa": "",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Estructura de la membrana plasmática · Fluidez / Colesterol",
+          "page": 137,
+          "printed": null,
+          "marks": []
+        },
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Estructura de la membrana plasmática · Fluidez / Colesterol",
+          "page": 138,
+          "printed": null,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-03",
+        "chapterNumber": 3,
+        "chapter": "Estructura de la membrana plasmática",
+        "section": "Fluidez / Colesterol",
+        "printedPages": [],
+        "pdfPages": [
+          137,
+          138
+        ],
+        "statements": [
+          {
+            "pdfPage": 137,
+            "printedPage": null,
+            "section": "Fluidez",
+            "cardId": "bio-03-015"
+          },
+          {
+            "pdfPage": 138,
+            "printedPage": null,
+            "section": "Colesterol",
+            "cardId": "bio-03-016"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. Las cadenas cortas y los dobles enlaces cis favorecen la fluidez a temperaturas menores. 2. Correcta. Al intercalarse entre lípidos, disminuyen la permeabilidad a esos solutos.",
+        "B": "Solo la afirmación 2 es correcta.",
+        "C": "1. Incorrecta. Las cadenas cortas y los dobles enlaces cis favorecen la fluidez a temperaturas menores.",
+        "D": "2. Correcta. Al intercalarse entre lípidos, disminuyen la permeabilidad a esos solutos."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "bio-03-006",
+      "content_id": "evaluacion:medicina-oficial-biologia-03-ampliacion-02-umss",
       "materia": "BIOLOGIA CELULAR",
       "tema": "estructura de la membrana plasmatica",
       "numero_pregunta": 6,
-      "pregunta": "¿Qué propiedad permite a una bicapa reparar espontáneamente una discontinuidad?",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. La cardiolipina caracteriza, entre otras, a la membrana interna mitocondrial.\n2. En el retículo liso, los glicerofosfolípidos se sintetizan inicialmente en la cara orientada a la luz del retículo.",
       "respuesta_correcta": "A",
-      "justificacion": "El autosellado.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "130",
-      "pagina_impresa": "130",
-      "dificultad": "medio",
-      "opcion_a": "El autosellado.",
-      "opcion_b": "El complejo TOM.",
-      "opcion_c": "Fosfatidilserina.",
-      "opcion_d": "La transcitosis."
+      "justificacion": "1. Correcta. Este fosfolípido también se encuentra en membranas bacterianas.\n2. Incorrecta. La síntesis tiene lugar en la hemimembrana que mira al citoplasma.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+      "paginas_pdf": "133, 141",
+      "pagina_impresa": "",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Estructura de la membrana plasmática · Fosfolípidos / Síntesis lipídica",
+          "page": 133,
+          "printed": null,
+          "marks": []
+        },
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Estructura de la membrana plasmática · Fosfolípidos / Síntesis lipídica",
+          "page": 141,
+          "printed": null,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-03",
+        "chapterNumber": 3,
+        "chapter": "Estructura de la membrana plasmática",
+        "section": "Fosfolípidos / Síntesis lipídica",
+        "printedPages": [],
+        "pdfPages": [
+          133,
+          141
+        ],
+        "statements": [
+          {
+            "pdfPage": 133,
+            "printedPage": null,
+            "section": "Fosfolípidos",
+            "cardId": "bio-03-011"
+          },
+          {
+            "pdfPage": 141,
+            "printedPage": null,
+            "section": "Síntesis lipídica",
+            "cardId": "bio-03-017"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "Solo la afirmación 1 es correcta.",
+        "B": "1. Correcta. Este fosfolípido también se encuentra en membranas bacterianas. 2. Incorrecta. La síntesis tiene lugar en la hemimembrana que mira al citoplasma.",
+        "C": "2. Incorrecta. La síntesis tiene lugar en la hemimembrana que mira al citoplasma.",
+        "D": "1. Correcta. Este fosfolípido también se encuentra en membranas bacterianas."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "bio-03-007",
+      "content_id": "evaluacion:medicina-oficial-biologia-03-ampliacion-03-umss",
       "materia": "BIOLOGIA CELULAR",
       "tema": "estructura de la membrana plasmatica",
       "numero_pregunta": 7,
-      "pregunta": "¿Cómo se llaman las vesículas de bicapa lipídica producidas in vitro?",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Durante la activación plaquetaria, la fosfatidilserina puede pasar a quedar expuesta en la superficie externa.\n2. Una porina puede delimitar su canal con una estructura de barril β.",
       "respuesta_correcta": "C",
-      "justificacion": "Liposomas.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "131",
-      "pagina_impresa": "131",
-      "dificultad": "medio",
-      "opcion_a": "Un barril β.",
-      "opcion_b": "Lecitina.",
-      "opcion_c": "Liposomas.",
-      "opcion_d": "Las regiones hidrófobas."
+      "justificacion": "1. Correcta. La exposición refleja un cambio en la asimetría entre ambas caras de la membrana.\n2. Correcta. Las láminas β se organizan formando el barril transmembrana.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+      "paginas_pdf": "142, 147",
+      "pagina_impresa": "",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Estructura de la membrana plasmática · Asimetría / Proteínas de membrana",
+          "page": 142,
+          "printed": null,
+          "marks": []
+        },
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Estructura de la membrana plasmática · Asimetría / Proteínas de membrana",
+          "page": 147,
+          "printed": null,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-03",
+        "chapterNumber": 3,
+        "chapter": "Estructura de la membrana plasmática",
+        "section": "Asimetría / Proteínas de membrana",
+        "printedPages": [],
+        "pdfPages": [
+          142,
+          147
+        ],
+        "statements": [
+          {
+            "pdfPage": 142,
+            "printedPage": null,
+            "section": "Asimetría",
+            "cardId": "bio-03-019"
+          },
+          {
+            "pdfPage": 147,
+            "printedPage": null,
+            "section": "Proteínas de membrana",
+            "cardId": "bio-03-023"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "2. Correcta. Las láminas β se organizan formando el barril transmembrana.",
+        "B": "1. Correcta. La exposición refleja un cambio en la asimetría entre ambas caras de la membrana.",
+        "C": "Ambas afirmaciones son correctas.",
+        "D": "1. Correcta. La exposición refleja un cambio en la asimetría entre ambas caras de la membrana. 2. Correcta. Las láminas β se organizan formando el barril transmembrana."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "bio-03-008",
+      "content_id": "evaluacion:medicina-oficial-biologia-03-ampliacion-04-umss",
       "materia": "BIOLOGIA CELULAR",
       "tema": "estructura de la membrana plasmatica",
       "numero_pregunta": 8,
-      "pregunta": "¿Qué determina principalmente el grosor de la bicapa lipídica?",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Las proteínas integrales suelen separarse intactas de una membrana usando solo un cambio de fuerza iónica que conserva la bicapa.\n2. En el eritrocito, la banda 3 se une a la espectrina a través de disacaridasas del glucocáliz.",
       "respuesta_correcta": "D",
-      "justificacion": "La longitud de las cadenas hidrocarbonadas de sus ácidos grasos.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "132",
-      "pagina_impresa": "132",
-      "dificultad": "medio",
-      "opcion_a": "Tiene una cabeza polar hidrófila y una región apolar hidrófoba.",
-      "opcion_b": "Con soluciones de alta o baja fuerza iónica o pH extremo.",
-      "opcion_c": "Cerebrósidos: un monosacárido. Gangliósidos: oligosacáridos con ácido siálico.",
-      "opcion_d": "La longitud de las cadenas hidrocarbonadas de sus ácidos grasos."
+      "justificacion": "1. Incorrecta. Para extraer proteínas integrales se requiere disgregar la bicapa, por ejemplo con detergentes.\n2. Incorrecta. La anquirina enlaza la banda 3 con la espectrina del citoesqueleto.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+      "paginas_pdf": "146, 152",
+      "pagina_impresa": "",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Estructura de la membrana plasmática · Proteínas de membrana / Membrana eritrocitaria",
+          "page": 146,
+          "printed": null,
+          "marks": []
+        },
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Estructura de la membrana plasmática · Proteínas de membrana / Membrana eritrocitaria",
+          "page": 152,
+          "printed": null,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-03",
+        "chapterNumber": 3,
+        "chapter": "Estructura de la membrana plasmática",
+        "section": "Proteínas de membrana / Membrana eritrocitaria",
+        "printedPages": [],
+        "pdfPages": [
+          146,
+          152
+        ],
+        "statements": [
+          {
+            "pdfPage": 146,
+            "printedPage": null,
+            "section": "Proteínas de membrana",
+            "cardId": "bio-03-021"
+          },
+          {
+            "pdfPage": 152,
+            "printedPage": null,
+            "section": "Membrana eritrocitaria",
+            "cardId": "bio-03-026"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. Para extraer proteínas integrales se requiere disgregar la bicapa, por ejemplo con detergentes.",
+        "B": "2. Incorrecta. La anquirina enlaza la banda 3 con la espectrina del citoesqueleto.",
+        "C": "1. Incorrecta. Para extraer proteínas integrales se requiere disgregar la bicapa, por ejemplo con detergentes. 2. Incorrecta. La anquirina enlaza la banda 3 con la espectrina del citoesqueleto.",
+        "D": "Ninguna afirmación es correcta."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "bio-03-009",
+      "content_id": "evaluacion:banco-verificado:biologia-03:bicapa",
       "materia": "BIOLOGIA CELULAR",
       "tema": "estructura de la membrana plasmatica",
       "numero_pregunta": 9,
-      "pregunta": "¿Qué precursor origina los glicerofosfolípidos?",
-      "respuesta_correcta": "B",
-      "justificacion": "El ácido fosfatídico.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "133",
-      "pagina_impresa": "133",
-      "dificultad": "medio",
-      "opcion_a": "Cloruro y bicarbonato.",
-      "opcion_b": "El ácido fosfatídico.",
-      "opcion_c": "Las regiones hidrófobas.",
-      "opcion_d": "La bicapa lipídica."
-    },
-    {
-      "content_id": "bio-03-010",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "estructura de la membrana plasmatica",
-      "numero_pregunta": 10,
-      "pregunta": "¿Qué otro nombre recibe la fosfatidilcolina?",
-      "respuesta_correcta": "A",
-      "justificacion": "Lecitina.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "133",
-      "pagina_impresa": "133",
-      "dificultad": "medio",
-      "opcion_a": "Lecitina.",
-      "opcion_b": "Liposomas.",
-      "opcion_c": "Un barril β.",
-      "opcion_d": "La anquirina."
-    },
-    {
-      "content_id": "bio-03-011",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "estructura de la membrana plasmatica",
-      "numero_pregunta": 11,
-      "pregunta": "¿Qué fosfolípido caracteriza a la membrana mitocondrial interna y a la bacteriana?",
-      "respuesta_correcta": "B",
-      "justificacion": "La cardiolipina.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "133",
-      "pagina_impresa": "133",
-      "dificultad": "medio",
-      "opcion_a": "La bicapa lipídica.",
-      "opcion_b": "La cardiolipina.",
-      "opcion_c": "Las translocasas.",
-      "opcion_d": "Las proteínas."
-    },
-    {
-      "content_id": "bio-03-012",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "estructura de la membrana plasmatica",
-      "numero_pregunta": 12,
-      "pregunta": "¿Qué distingue la cabeza polar de los cerebrósidos de la de los gangliósidos?",
-      "respuesta_correcta": "C",
-      "justificacion": "Cerebrósidos: un monosacárido. Gangliósidos: oligosacáridos con ácido siálico.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "134",
-      "pagina_impresa": "134",
-      "dificultad": "medio",
-      "opcion_a": "Con soluciones de alta o baja fuerza iónica o pH extremo.",
-      "opcion_b": "La longitud de las cadenas hidrocarbonadas de sus ácidos grasos.",
-      "opcion_c": "Cerebrósidos: un monosacárido. Gangliósidos: oligosacáridos con ácido siálico.",
-      "opcion_d": "Tiene una cabeza polar hidrófila y una región apolar hidrófoba."
-    },
-    {
-      "content_id": "bio-03-013",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "estructura de la membrana plasmatica",
-      "numero_pregunta": 13,
-      "pregunta": "¿Qué carga aportan las unidades de ácido siálico a los gangliósidos?",
+      "pregunta": "Se añade a un medio acuoso un lípido con una región polar y otra apolar. En una bicapa, ¿qué orientación reduce el contacto de la región apolar con el agua?",
       "respuesta_correcta": "D",
-      "justificacion": "Carga neta negativa a pH fisiológico.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "134",
-      "pagina_impresa": "134",
-      "dificultad": "medio",
-      "opcion_a": "Procedimientos que destruyan la bicapa, como detergentes.",
-      "opcion_b": "Cadenas cortas y dobles enlaces cis.",
-      "opcion_c": "Disacaridasas y oligopeptidasas.",
-      "opcion_d": "Carga neta negativa a pH fisiológico."
-    },
-    {
-      "content_id": "bio-03-014",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "estructura de la membrana plasmatica",
-      "numero_pregunta": 14,
-      "pregunta": "¿Qué ocurre con la fluidez de la membrana cuando baja la temperatura?",
-      "respuesta_correcta": "B",
-      "justificacion": "Disminuye.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "136",
-      "pagina_impresa": "136",
-      "dificultad": "medio",
-      "opcion_a": "Son eliminadas.",
-      "opcion_b": "Disminuye.",
-      "opcion_c": "Permiten agua y excluyen protones.",
-      "opcion_d": "Son eliminados por selección negativa."
-    },
-    {
-      "content_id": "bio-03-015",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "estructura de la membrana plasmatica",
-      "numero_pregunta": 15,
-      "pregunta": "¿Qué características de los ácidos grasos reducen la temperatura de fusión de una membrana?",
-      "respuesta_correcta": "C",
-      "justificacion": "Cadenas cortas y dobles enlaces cis.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "137",
-      "pagina_impresa": "137",
-      "dificultad": "medio",
-      "opcion_a": "Carga neta negativa a pH fisiológico.",
-      "opcion_b": "Procedimientos que destruyan la bicapa, como detergentes.",
-      "opcion_c": "Cadenas cortas y dobles enlaces cis.",
-      "opcion_d": "Disacaridasas y oligopeptidasas."
-    },
-    {
-      "content_id": "bio-03-016",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "estructura de la membrana plasmatica",
-      "numero_pregunta": 16,
-      "pregunta": "¿Qué efecto tienen los esteroles sobre la permeabilidad a solutos polares?",
-      "respuesta_correcta": "C",
-      "justificacion": "La disminuyen.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "138",
-      "pagina_impresa": "138",
-      "dificultad": "medio",
-      "opcion_a": "La espectrina.",
-      "opcion_b": "La anquirina.",
-      "opcion_c": "La disminuyen.",
-      "opcion_d": "Las proteínas."
-    },
-    {
-      "content_id": "bio-03-017",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "estructura de la membrana plasmatica",
-      "numero_pregunta": 17,
-      "pregunta": "¿En qué cara del retículo endoplasmático liso se sintetizan los glicerofosfolípidos?",
-      "respuesta_correcta": "D",
-      "justificacion": "En la hemimembrana citoplasmática o P.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "141",
-      "pagina_impresa": "141",
-      "dificultad": "medio",
-      "opcion_a": "Desde la cara cis hacia la trans.",
-      "opcion_b": "En células con elevada síntesis proteica.",
-      "opcion_c": "Hacia el interior, lejos del agua.",
-      "opcion_d": "En la hemimembrana citoplasmática o P."
-    },
-    {
-      "content_id": "bio-03-018",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "estructura de la membrana plasmatica",
-      "numero_pregunta": 18,
-      "pregunta": "¿Qué proteínas catalizan el movimiento flip-flop de los lípidos?",
-      "respuesta_correcta": "A",
-      "justificacion": "Las translocasas.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "141",
-      "pagina_impresa": "141",
-      "dificultad": "medio",
-      "opcion_a": "Las translocasas.",
-      "opcion_b": "La anquirina.",
-      "opcion_c": "La espectrina.",
-      "opcion_d": "Cloruro y bicarbonato."
-    },
-    {
-      "content_id": "bio-03-019",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "estructura de la membrana plasmatica",
-      "numero_pregunta": 19,
-      "pregunta": "¿Qué fosfolípido se expone al exterior durante la activación plaquetaria?",
-      "respuesta_correcta": "C",
-      "justificacion": "Fosfatidilserina.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "142",
-      "pagina_impresa": "142",
-      "dificultad": "medio",
-      "opcion_a": "La cardiolipina.",
-      "opcion_b": "Las translocasas.",
-      "opcion_c": "Fosfatidilserina.",
-      "opcion_d": "La bicapa lipídica."
-    },
-    {
-      "content_id": "bio-03-020",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "estructura de la membrana plasmatica",
-      "numero_pregunta": 20,
-      "pregunta": "¿Qué son las balsas lipídicas?",
-      "respuesta_correcta": "C",
-      "justificacion": "Microdominios transitorios que concentran lípidos y retienen proteínas de señalización.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "143",
-      "pagina_impresa": "143",
-      "dificultad": "medio",
-      "opcion_a": "La capacidad de no responder contra antígenos propios o sin señales de peligro.",
-      "opcion_b": "Regiones cortas del axón sin aislamiento de mielina entre segmentos sucesivos.",
-      "opcion_c": "Microdominios transitorios que concentran lípidos y retienen proteínas de señalización.",
-      "opcion_d": "La cubierta de residuos de azúcar de la superficie celular."
-    },
-    {
-      "content_id": "bio-03-021",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "estructura de la membrana plasmatica",
-      "numero_pregunta": 21,
-      "pregunta": "¿Qué se necesita para extraer las proteínas integrales de membrana?",
-      "respuesta_correcta": "D",
-      "justificacion": "Procedimientos que destruyan la bicapa, como detergentes.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "146",
-      "pagina_impresa": "146",
-      "dificultad": "medio",
-      "opcion_a": "Carga neta negativa a pH fisiológico.",
-      "opcion_b": "Cadenas cortas y dobles enlaces cis.",
-      "opcion_c": "Disacaridasas y oligopeptidasas.",
-      "opcion_d": "Procedimientos que destruyan la bicapa, como detergentes."
-    },
-    {
-      "content_id": "bio-03-022",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "estructura de la membrana plasmatica",
-      "numero_pregunta": 22,
-      "pregunta": "¿Cómo pueden extraerse las proteínas extrínsecas?",
-      "respuesta_correcta": "A",
-      "justificacion": "Con soluciones de alta o baja fuerza iónica o pH extremo.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "146",
-      "pagina_impresa": "146",
-      "dificultad": "medio",
-      "opcion_a": "Con soluciones de alta o baja fuerza iónica o pH extremo.",
-      "opcion_b": "La transición entre las fases gel y líquida.",
-      "opcion_c": "Tiene una cabeza polar hidrófila y una región apolar hidrófoba.",
-      "opcion_d": "La longitud de las cadenas hidrocarbonadas de sus ácidos grasos."
-    },
-    {
-      "content_id": "bio-03-023",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "estructura de la membrana plasmatica",
-      "numero_pregunta": 23,
-      "pregunta": "¿Qué estructura transmembrana forma el canal de las porinas?",
-      "respuesta_correcta": "D",
-      "justificacion": "Un barril β.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "147",
-      "pagina_impresa": "147",
-      "dificultad": "medio",
-      "opcion_a": "La espectrina.",
-      "opcion_b": "La disminuyen.",
-      "opcion_c": "La anquirina.",
-      "opcion_d": "Un barril β."
-    },
-    {
-      "content_id": "bio-03-024",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "estructura de la membrana plasmatica",
-      "numero_pregunta": 24,
-      "pregunta": "¿Qué iones intercambia la proteína banda 3 del eritrocito?",
-      "respuesta_correcta": "A",
-      "justificacion": "Cloruro y bicarbonato.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "150",
-      "pagina_impresa": "150",
-      "dificultad": "medio",
-      "opcion_a": "Cloruro y bicarbonato.",
-      "opcion_b": "Las translocasas.",
-      "opcion_c": "La espectrina.",
-      "opcion_d": "La anquirina."
-    },
-    {
-      "content_id": "bio-03-025",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "estructura de la membrana plasmatica",
-      "numero_pregunta": 25,
-      "pregunta": "¿Cuál es la proteína periférica más abundante del eritrocito?",
-      "respuesta_correcta": "C",
-      "justificacion": "La espectrina.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "151",
-      "pagina_impresa": "151",
-      "dificultad": "medio",
-      "opcion_a": "La disminuyen.",
-      "opcion_b": "Cloruro y bicarbonato.",
-      "opcion_c": "La espectrina.",
-      "opcion_d": "Las translocasas."
-    },
-    {
-      "content_id": "bio-03-026",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "estructura de la membrana plasmatica",
-      "numero_pregunta": 26,
-      "pregunta": "¿Qué proteína conecta la espectrina con la banda 3?",
-      "respuesta_correcta": "B",
-      "justificacion": "La anquirina.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "152",
-      "pagina_impresa": "152",
-      "dificultad": "medio",
-      "opcion_a": "Un barril β.",
-      "opcion_b": "La anquirina.",
-      "opcion_c": "Cloruro y bicarbonato.",
-      "opcion_d": "Las translocasas."
-    },
-    {
-      "content_id": "bio-03-028",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "estructura de la membrana plasmatica",
-      "numero_pregunta": 27,
-      "pregunta": "¿Qué es el glucocáliz?",
-      "respuesta_correcta": "B",
-      "justificacion": "La cubierta de residuos de azúcar de la superficie celular.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "156",
-      "pagina_impresa": "156",
-      "dificultad": "medio",
-      "opcion_a": "Microdominios transitorios que concentran lípidos y retienen proteínas de señalización.",
-      "opcion_b": "La cubierta de residuos de azúcar de la superficie celular.",
-      "opcion_c": "Un aumento del número de copias que eleva su dosis génica.",
-      "opcion_d": "Un par de cromosomas homólogos formado por cuatro cromátidas."
-    },
-    {
-      "content_id": "bio-03-029",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "estructura de la membrana plasmatica",
-      "numero_pregunta": 28,
-      "pregunta": "¿Qué enzimas digestivas contiene el glucocáliz del enterocito?",
-      "respuesta_correcta": "C",
-      "justificacion": "Disacaridasas y oligopeptidasas.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "157",
-      "pagina_impresa": "157",
-      "dificultad": "medio",
-      "opcion_a": "Las regiones hidrófobas.",
-      "opcion_b": "El ácido fosfatídico.",
-      "opcion_c": "Disacaridasas y oligopeptidasas.",
-      "opcion_d": "Cloruro y bicarbonato."
-    },
-    {
-      "content_id": "bio-03-030",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "estructura de la membrana plasmatica",
-      "numero_pregunta": 29,
-      "pregunta": "¿Qué indica la temperatura de fusión de una membrana?",
-      "respuesta_correcta": "B",
-      "justificacion": "La transición entre las fases gel y líquida.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "159",
-      "pagina_impresa": "159",
-      "dificultad": "medio",
-      "opcion_a": "Tiene una cabeza polar hidrófila y una región apolar hidrófoba.",
-      "opcion_b": "La transición entre las fases gel y líquida.",
-      "opcion_c": "Con soluciones de alta o baja fuerza iónica o pH extremo.",
-      "opcion_d": "La longitud de las cadenas hidrocarbonadas de sus ácidos grasos."
+      "justificacion": "La región polar hidrófila queda orientada hacia el medio acuoso. Las regiones apolares hidrófobas se agrupan en el interior de la bicapa.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+      "paginas_pdf": "129, 130",
+      "pagina_impresa": "129, 130",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Capítulo 3 · Composición y orientación de los lípidos de membrana",
+          "page": 129,
+          "printed": 129,
+          "marks": [
+            [
+              0.1121,
+              0.4604,
+              0.091,
+              0.0197
+            ]
+          ]
+        },
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Capítulo 3 · Composición y orientación de los lípidos de membrana",
+          "page": 130,
+          "printed": 130,
+          "marks": [
+            [
+              0.0082,
+              0.5864,
+              0.0901,
+              0.0197
+            ],
+            [
+              0.0546,
+              0.6333,
+              0.0897,
+              0.0197
+            ]
+          ]
+        }
+      ],
+      "source": {
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-03"
+      },
+      "opcion_a": "Las regiones polares quedan enfrentadas en el interior y las apolares expuestas al agua.",
+      "opcion_b": "Ambas regiones de cada molécula se orientan al agua del mismo lado.",
+      "opcion_c": "Las regiones polares y apolares se alternan en ambas superficies acuosas.",
+      "opcion_d": "Las regiones apolares quedan enfrentadas en el interior y las polares expuestas al agua."
     }
   ]
 }

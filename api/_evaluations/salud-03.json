@@ -5,247 +5,487 @@
   "topic": "funciones de salud publica",
   "title": "Funciones de salud pública",
   "number": 3,
-  "count": 14,
-  "duration": 14,
+  "count": 9,
+  "duration": 9,
   "source": "Educación en Salud e Investigación · Curso Básico 2025-2026",
   "questions": [
     {
-      "content_id": "salud-03-001",
+      "content_id": "evaluacion:medicina-oficial-salud-03-intermedio-1",
       "materia": "SALUD PUBLICA",
       "tema": "funciones de salud publica",
       "numero_pregunta": 1,
-      "pregunta": "¿Cuáles son los tres objetivos principales de la salud pública?",
+      "pregunta": "Un equipo compara los registros semanales de casos para identificar a tiempo un aumento anormal.\n¿Qué opción corresponde al caso?",
       "respuesta_correcta": "D",
-      "justificacion": "Prevenir enfermedades, prolongar la vida y promover el bienestar colectivo.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "4",
-      "pagina_impresa": "3",
+      "justificacion": "El seguimiento de los registros permite detectar cambios y reconocer a tiempo riesgos o brotes.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+      "paginas_pdf": "5",
+      "pagina_impresa": "4",
       "dificultad": "medio",
-      "opcion_a": "Biomédica, clínica y en salud pública.",
-      "opcion_b": "Revisión de literatura y adopción de una teoría o desarrollo de una perspectiva teórica.",
-      "opcion_c": "Planificación → ejecución → informe final.",
-      "opcion_d": "Prevenir enfermedades, prolongar la vida y promover el bienestar colectivo."
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Funciones de salud pública · funciones de salud publica",
+          "page": 5,
+          "printed": 4,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-03",
+        "chapterNumber": 3,
+        "chapter": "Funciones de salud pública",
+        "section": "funciones de salud publica",
+        "printedPages": [
+          4
+        ],
+        "pdfPages": [
+          5
+        ]
+      },
+      "opcion_a": "Participación comunitaria y gobernanza",
+      "opcion_b": "Protección de la salud",
+      "opcion_c": "Prevención de enfermedades",
+      "opcion_d": "Vigilancia y monitoreo"
     },
     {
-      "content_id": "salud-03-002",
+      "content_id": "evaluacion:medicina-oficial-salud-03-intermedio-2",
       "materia": "SALUD PUBLICA",
       "tema": "funciones de salud publica",
       "numero_pregunta": 2,
-      "pregunta": "¿Para qué sirve la vigilancia y monitoreo en salud pública?",
-      "respuesta_correcta": "B",
-      "justificacion": "Recolectar y analizar datos para detectar riesgos y brotes.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
+      "pregunta": "Se interviene sobre la seguridad del agua de consumo. El objetivo inmediato es controlar la exposición ambiental, no contar casos.\n¿Qué opción corresponde al caso?",
+      "respuesta_correcta": "A",
+      "justificacion": "La protección de la salud abarca el control de riesgos ambientales y la inocuidad de recursos como el agua.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
       "paginas_pdf": "5",
       "pagina_impresa": "4",
       "dificultad": "medio",
-      "opcion_a": "Para asignar etiquetas a los códigos o valores de las variables.",
-      "opcion_b": "Recolectar y analizar datos para detectar riesgos y brotes.",
-      "opcion_c": "Recolección → recopilación → análisis → diseminación.",
-      "opcion_d": "Para definir el nombre descriptivo que aparecerá en los resultados."
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Funciones de salud pública · funciones de salud publica",
+          "page": 5,
+          "printed": 4,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-03",
+        "chapterNumber": 3,
+        "chapter": "Funciones de salud pública",
+        "section": "funciones de salud publica",
+        "printedPages": [
+          4
+        ],
+        "pdfPages": [
+          5
+        ]
+      },
+      "opcion_a": "Protección de la salud",
+      "opcion_b": "Vigilancia y monitoreo",
+      "opcion_c": "Participación comunitaria y gobernanza",
+      "opcion_d": "Prevención de enfermedades"
     },
     {
-      "content_id": "salud-03-003",
+      "content_id": "evaluacion:medicina-oficial-salud-03-intermedio-3",
       "materia": "SALUD PUBLICA",
       "tema": "funciones de salud publica",
       "numero_pregunta": 3,
-      "pregunta": "¿Qué controla la protección de la salud?",
-      "respuesta_correcta": "A",
-      "justificacion": "Riesgos ambientales e inocuidad de alimentos, agua y aire.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
+      "pregunta": "Una campaña ofrece vacunación a población susceptible con el fin de reducir la aparición de casos nuevos.\n¿Qué opción corresponde al caso?",
+      "respuesta_correcta": "B",
+      "justificacion": "La vacunación es un ejemplo de prevención cuyo fin es reducir casos nuevos.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
       "paginas_pdf": "5",
       "pagina_impresa": "4",
       "dificultad": "medio",
-      "opcion_a": "Riesgos ambientales e inocuidad de alimentos, agua y aire.",
-      "opcion_b": "Involucrar a la población en identificar problemas y tomar decisiones.",
-      "opcion_c": "Acceso de toda la población a servicios adecuados y costo-efectivos.",
-      "opcion_d": "El conocimiento científico, con participación comunitaria y evaluación de resultados."
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Funciones de salud pública · funciones de salud publica",
+          "page": 5,
+          "printed": 4,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-03",
+        "chapterNumber": 3,
+        "chapter": "Funciones de salud pública",
+        "section": "funciones de salud publica",
+        "printedPages": [
+          4
+        ],
+        "pdfPages": [
+          5
+        ]
+      },
+      "opcion_a": "Protección de la salud",
+      "opcion_b": "Prevención de enfermedades",
+      "opcion_c": "Vigilancia y monitoreo",
+      "opcion_d": "Participación comunitaria y gobernanza"
     },
     {
-      "content_id": "salud-03-004",
+      "content_id": "evaluacion:medicina-oficial-salud-03-intermedio-4",
       "materia": "SALUD PUBLICA",
       "tema": "funciones de salud publica",
       "numero_pregunta": 4,
-      "pregunta": "¿Qué función esencial busca reducir la incidencia mediante vacunación y control de vectores?",
-      "respuesta_correcta": "C",
-      "justificacion": "Prevención de enfermedades.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
+      "pregunta": "Los vecinos y las autoridades deciden juntos qué problema priorizar y cómo organizar la respuesta local.\n¿Qué opción corresponde al caso?",
+      "respuesta_correcta": "D",
+      "justificacion": "La participación comunitaria incorpora a la población en la identificación de problemas y las decisiones para afrontarlos.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
       "paginas_pdf": "5",
       "pagina_impresa": "4",
       "dificultad": "medio",
-      "opcion_a": "Recolección → recopilación → análisis → diseminación.",
-      "opcion_b": "El coeficiente de variación.",
-      "opcion_c": "Prevención de enfermedades.",
-      "opcion_d": "Recolectar y analizar datos para detectar riesgos y brotes."
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Funciones de salud pública · funciones de salud publica",
+          "page": 5,
+          "printed": 4,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-03",
+        "chapterNumber": 3,
+        "chapter": "Funciones de salud pública",
+        "section": "funciones de salud publica",
+        "printedPages": [
+          4
+        ],
+        "pdfPages": [
+          5
+        ]
+      },
+      "opcion_a": "Vigilancia y monitoreo",
+      "opcion_b": "Prevención de enfermedades",
+      "opcion_c": "Protección de la salud",
+      "opcion_d": "Participación comunitaria y gobernanza"
     },
     {
-      "content_id": "salud-03-005",
+      "content_id": "evaluacion:medicina-oficial-salud-03-ampliacion-01-umss",
       "materia": "SALUD PUBLICA",
       "tema": "funciones de salud publica",
       "numero_pregunta": 5,
-      "pregunta": "¿Qué busca la participación comunitaria y gobernanza?",
-      "respuesta_correcta": "B",
-      "justificacion": "Involucrar a la población en identificar problemas y tomar decisiones.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "5",
-      "pagina_impresa": "4",
-      "dificultad": "medio",
-      "opcion_a": "Riesgos ambientales e inocuidad de alimentos, agua y aire.",
-      "opcion_b": "Involucrar a la población en identificar problemas y tomar decisiones.",
-      "opcion_c": "El conocimiento científico, con participación comunitaria y evaluación de resultados.",
-      "opcion_d": "Acceso de toda la población a servicios adecuados y costo-efectivos."
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Comparar el estado de salud de comunidades para detectar grupos en riesgo ayuda a fijar prioridades de salud pública.\n2. La vigilancia queda concluida al recoger datos, aunque estos no se analicen ni se comuniquen.",
+      "respuesta_correcta": "A",
+      "justificacion": "1. Correcta. Corresponde a evaluar y monitorizar la salud poblacional.\n2. Incorrecta. La secuencia incluye recolección, recopilación, análisis y difusión de los resultados.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+      "paginas_pdf": "12",
+      "pagina_impresa": "11",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Funciones de salud pública · funciones de salud publica",
+          "page": 12,
+          "printed": 11,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-03",
+        "chapterNumber": 3,
+        "chapter": "Funciones de salud pública",
+        "section": "funciones de salud publica",
+        "printedPages": [
+          11
+        ],
+        "pdfPages": [
+          12
+        ],
+        "statements": [
+          {
+            "pdfPage": 12,
+            "printedPage": 11,
+            "section": "funciones de salud publica",
+            "cardId": "salud-03-006"
+          },
+          {
+            "pdfPage": 12,
+            "printedPage": 11,
+            "section": "funciones de salud publica",
+            "cardId": "salud-03-007"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "Solo la afirmación 1 es correcta.",
+        "B": "1. Correcta. Corresponde a evaluar y monitorizar la salud poblacional. 2. Incorrecta. La secuencia incluye recolección, recopilación, análisis y difusión de los resultados.",
+        "C": "2. Incorrecta. La secuencia incluye recolección, recopilación, análisis y difusión de los resultados.",
+        "D": "1. Correcta. Corresponde a evaluar y monitorizar la salud poblacional."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "salud-03-006",
+      "content_id": "evaluacion:medicina-oficial-salud-03-ampliacion-02-umss",
       "materia": "SALUD PUBLICA",
       "tema": "funciones de salud publica",
       "numero_pregunta": 6,
-      "pregunta": "¿Qué busca conocer la misión de evaluar y monitorizar la salud?",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. En la formulación de programas y políticas, el compendio ubica la participación comunitaria exclusivamente después de decidir las medidas.\n2. Formular una política pública de salud requiere conocimiento científico y valorar sus resultados.",
       "respuesta_correcta": "B",
-      "justificacion": "El estado de salud de comunidades y poblaciones en riesgo, para identificar problemas y prioridades.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "12",
-      "pagina_impresa": "11",
-      "dificultad": "medio",
-      "opcion_a": "Acceso de toda la población a servicios adecuados y costo-efectivos.",
-      "opcion_b": "El estado de salud de comunidades y poblaciones en riesgo, para identificar problemas y prioridades.",
-      "opcion_c": "Salud pública: campo de acción. Política pública: guía las decisiones y recursos para ejecutarlo.",
-      "opcion_d": "El conocimiento científico, con participación comunitaria y evaluación de resultados."
+      "justificacion": "1. Incorrecta. La formulación puede hacerse con la comunidad y las autoridades.\n2. Correcta. El texto integra evidencia, participación comunitaria y evaluación.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+      "paginas_pdf": "13",
+      "pagina_impresa": "12",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Funciones de salud pública · funciones de salud publica",
+          "page": 13,
+          "printed": 12,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-03",
+        "chapterNumber": 3,
+        "chapter": "Funciones de salud pública",
+        "section": "funciones de salud publica",
+        "printedPages": [
+          12
+        ],
+        "pdfPages": [
+          13
+        ],
+        "statements": [
+          {
+            "pdfPage": 13,
+            "printedPage": 12,
+            "section": "funciones de salud publica",
+            "cardId": "salud-03-008"
+          },
+          {
+            "pdfPage": 13,
+            "printedPage": 12,
+            "section": "funciones de salud publica",
+            "cardId": "salud-03-009"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. La formulación puede hacerse con la comunidad y las autoridades. 2. Correcta. El texto integra evidencia, participación comunitaria y evaluación.",
+        "B": "Solo la afirmación 2 es correcta.",
+        "C": "1. Incorrecta. La formulación puede hacerse con la comunidad y las autoridades.",
+        "D": "2. Correcta. El texto integra evidencia, participación comunitaria y evaluación."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "salud-03-007",
+      "content_id": "evaluacion:medicina-oficial-salud-03-ampliacion-03-umss",
       "materia": "SALUD PUBLICA",
       "tema": "funciones de salud publica",
       "numero_pregunta": 7,
-      "pregunta": "¿Qué secuencia de información permite evaluar y monitorizar la salud?",
-      "respuesta_correcta": "A",
-      "justificacion": "Recolección → recopilación → análisis → diseminación.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "12",
-      "pagina_impresa": "11",
-      "dificultad": "medio",
-      "opcion_a": "Recolección → recopilación → análisis → diseminación.",
-      "opcion_b": "Recolectar y analizar datos para detectar riesgos y brotes.",
-      "opcion_c": "Tomar decisiones informadas sobre la salud.",
-      "opcion_d": "Prevención de enfermedades."
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Garantizar el acceso poblacional a servicios adecuados y costo-efectivos forma parte de las misiones de salud pública.\n2. En la formulación de Winslow, organizar los servicios y sanear el ambiente son partes de un esfuerzo colectivo.",
+      "respuesta_correcta": "C",
+      "justificacion": "1. Correcta. La garantía de acceso es una función junto con evaluar la salud y desarrollar políticas.\n2. Correcta. La definición reúne esas acciones con otras medidas de prevención, educación y protección.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+      "paginas_pdf": "12, 13",
+      "pagina_impresa": "11, 12",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Funciones de salud pública · funciones de salud publica",
+          "page": 12,
+          "printed": 11,
+          "marks": []
+        },
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Funciones de salud pública · funciones de salud publica",
+          "page": 13,
+          "printed": 12,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-03",
+        "chapterNumber": 3,
+        "chapter": "Funciones de salud pública",
+        "section": "funciones de salud publica",
+        "printedPages": [
+          11,
+          12
+        ],
+        "pdfPages": [
+          12,
+          13
+        ],
+        "statements": [
+          {
+            "pdfPage": 13,
+            "printedPage": 12,
+            "section": "funciones de salud publica",
+            "cardId": "salud-03-010"
+          },
+          {
+            "pdfPage": 12,
+            "printedPage": 11,
+            "section": "funciones de salud publica",
+            "cardId": "salud-03-014"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "2. Correcta. La definición reúne esas acciones con otras medidas de prevención, educación y protección.",
+        "B": "1. Correcta. La garantía de acceso es una función junto con evaluar la salud y desarrollar políticas.",
+        "C": "Ambas afirmaciones son correctas.",
+        "D": "1. Correcta. La garantía de acceso es una función junto con evaluar la salud y desarrollar políticas. 2. Correcta. La definición reúne esas acciones con otras medidas de prevención, educación y protección."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "salud-03-014",
+      "content_id": "evaluacion:medicina-oficial-salud-03-ampliacion-04-umss",
       "materia": "SALUD PUBLICA",
       "tema": "funciones de salud publica",
       "numero_pregunta": 8,
-      "pregunta": "¿Qué cinco acciones enumera Winslow para el esfuerzo organizado de la comunidad?",
-      "respuesta_correcta": "A",
-      "justificacion": "Saneamiento, control de transmisibles, educación sanitaria, organización de servicios y mecanismos sociales para un nivel de vida adecuado.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "12",
-      "pagina_impresa": "11",
-      "dificultad": "medio",
-      "opcion_a": "Saneamiento, control de transmisibles, educación sanitaria, organización de servicios y mecanismos sociales para un nivel de vida adecuado.",
-      "opcion_b": "El conocimiento científico, con participación comunitaria y evaluación de resultados.",
-      "opcion_c": "Salud pública: campo de acción. Política pública: guía las decisiones y recursos para ejecutarlo.",
-      "opcion_d": "El estado de salud de comunidades y poblaciones en riesgo, para identificar problemas y prioridades."
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. La salud pública se restringe a redactar normas y delega todo el trabajo técnico y operativo a la política pública.\n2. La política pública de salud equivale por completo al conjunto de acciones técnicas del campo de la salud pública.",
+      "respuesta_correcta": "D",
+      "justificacion": "1. Incorrecta. Como campo de acción, la salud pública tiene un componente científico, técnico y operativo.\n2. Incorrecta. Las políticas orientan decisiones y recursos. El campo incluye las acciones que los llevan a la práctica.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+      "paginas_pdf": "13, 14",
+      "pagina_impresa": "12, 13",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Funciones de salud pública · funciones de salud publica",
+          "page": 13,
+          "printed": 12,
+          "marks": []
+        },
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Funciones de salud pública · funciones de salud publica",
+          "page": 14,
+          "printed": 13,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-03",
+        "chapterNumber": 3,
+        "chapter": "Funciones de salud pública",
+        "section": "funciones de salud publica",
+        "printedPages": [
+          12,
+          13
+        ],
+        "pdfPages": [
+          13,
+          14
+        ],
+        "statements": [
+          {
+            "pdfPage": 13,
+            "printedPage": 12,
+            "section": "funciones de salud publica",
+            "cardId": "salud-03-011"
+          },
+          {
+            "pdfPage": 14,
+            "printedPage": 13,
+            "section": "funciones de salud publica",
+            "cardId": "salud-03-013"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. Como campo de acción, la salud pública tiene un componente científico, técnico y operativo.",
+        "B": "2. Incorrecta. Las políticas orientan decisiones y recursos. El campo incluye las acciones que los llevan a la práctica.",
+        "C": "1. Incorrecta. Como campo de acción, la salud pública tiene un componente científico, técnico y operativo. 2. Incorrecta. Las políticas orientan decisiones y recursos. El campo incluye las acciones que los llevan a la práctica.",
+        "D": "Ninguna afirmación es correcta."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "salud-03-008",
+      "content_id": "evaluacion:banco-verificado:salud-03:funciones",
       "materia": "SALUD PUBLICA",
       "tema": "funciones de salud publica",
       "numero_pregunta": 9,
-      "pregunta": "¿Con quiénes se formulan programas y políticas públicas de salud?",
-      "respuesta_correcta": "D",
-      "justificacion": "Con la comunidad y las autoridades.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "13",
-      "pagina_impresa": "12",
-      "dificultad": "medio",
-      "opcion_a": "Normativo, político y estratégico.",
-      "opcion_b": "Escuelas, lugares de trabajo y familia.",
-      "opcion_c": "Científico, técnico y operativo.",
-      "opcion_d": "Con la comunidad y las autoridades."
-    },
-    {
-      "content_id": "salud-03-009",
-      "materia": "SALUD PUBLICA",
-      "tema": "funciones de salud publica",
-      "numero_pregunta": 10,
-      "pregunta": "¿Qué debe orientar las decisiones al formular políticas de salud?",
+      "pregunta": "Un equipo analiza datos para detectar un aumento de casos. Antes de elegir medidas, invita a los vecinos a identificar problemas y decidir prioridades. ¿Qué función añade al pasar a esa segunda etapa?",
       "respuesta_correcta": "A",
-      "justificacion": "El conocimiento científico, con participación comunitaria y evaluación de resultados.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "13",
-      "pagina_impresa": "12",
-      "dificultad": "medio",
-      "opcion_a": "El conocimiento científico, con participación comunitaria y evaluación de resultados.",
-      "opcion_b": "El estado de salud de comunidades y poblaciones en riesgo, para identificar problemas y prioridades.",
-      "opcion_c": "Salud pública: campo de acción. Política pública: guía las decisiones y recursos para ejecutarlo.",
-      "opcion_d": "Acceso de toda la población a servicios adecuados y costo-efectivos."
-    },
-    {
-      "content_id": "salud-03-010",
-      "materia": "SALUD PUBLICA",
-      "tema": "funciones de salud publica",
-      "numero_pregunta": 11,
-      "pregunta": "¿Qué acceso busca garantizar la misión de servicios en salud pública?",
-      "respuesta_correcta": "A",
-      "justificacion": "Acceso de toda la población a servicios adecuados y costo-efectivos.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "13",
-      "pagina_impresa": "12",
-      "dificultad": "medio",
-      "opcion_a": "Acceso de toda la población a servicios adecuados y costo-efectivos.",
-      "opcion_b": "El estado de salud de comunidades y poblaciones en riesgo, para identificar problemas y prioridades.",
-      "opcion_c": "Riesgos ambientales e inocuidad de alimentos, agua y aire.",
-      "opcion_d": "Involucrar a la población en identificar problemas y tomar decisiones."
-    },
-    {
-      "content_id": "salud-03-011",
-      "materia": "SALUD PUBLICA",
-      "tema": "funciones de salud publica",
-      "numero_pregunta": 12,
-      "pregunta": "¿Qué enfoque tiene la salud pública frente a la política pública de salud?",
-      "respuesta_correcta": "B",
-      "justificacion": "Científico, técnico y operativo.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "13",
-      "pagina_impresa": "12",
-      "dificultad": "medio",
-      "opcion_a": "Con la comunidad y las autoridades.",
-      "opcion_b": "Científico, técnico y operativo.",
-      "opcion_c": "El enfoque biopsicosocial.",
-      "opcion_d": "Indicadores globales comparables."
-    },
-    {
-      "content_id": "salud-03-012",
-      "materia": "SALUD PUBLICA",
-      "tema": "funciones de salud publica",
-      "numero_pregunta": 13,
-      "pregunta": "¿Qué enfoque tiene la política pública de salud?",
-      "respuesta_correcta": "C",
-      "justificacion": "Normativo, político y estratégico.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "14",
-      "pagina_impresa": "13",
-      "dificultad": "medio",
-      "opcion_a": "El enfoque biopsicosocial.",
-      "opcion_b": "Con la comunidad y las autoridades.",
-      "opcion_c": "Normativo, político y estratégico.",
-      "opcion_d": "Indicadores globales comparables."
-    },
-    {
-      "content_id": "salud-03-013",
-      "materia": "SALUD PUBLICA",
-      "tema": "funciones de salud publica",
-      "numero_pregunta": 14,
-      "pregunta": "¿Qué distingue la salud pública de la política pública de salud?",
-      "respuesta_correcta": "C",
-      "justificacion": "Salud pública: campo de acción. Política pública: guía las decisiones y recursos para ejecutarlo.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "14",
-      "pagina_impresa": "13",
-      "dificultad": "medio",
-      "opcion_a": "Acceso de toda la población a servicios adecuados y costo-efectivos.",
-      "opcion_b": "El conocimiento científico, con participación comunitaria y evaluación de resultados.",
-      "opcion_c": "Salud pública: campo de acción. Política pública: guía las decisiones y recursos para ejecutarlo.",
-      "opcion_d": "El estado de salud de comunidades y poblaciones en riesgo, para identificar problemas y prioridades."
+      "justificacion": "Analizar la evolución de casos corresponde a vigilancia. Involucrar a los vecinos antes de decidir las medidas incorpora la función de participación comunitaria.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+      "paginas_pdf": "5",
+      "pagina_impresa": "4",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "Educación en Salud",
+          "section": "Funciones de la salud pública",
+          "page": 5,
+          "printed": 4,
+          "marks": [
+            [
+              0.1978,
+              0.1724,
+              0.0852,
+              0.0168
+            ],
+            [
+              0.1978,
+              0.4075,
+              0.2197,
+              0.0168
+            ],
+            [
+              0.6186,
+              0.6483,
+              0.2038,
+              0.0168
+            ]
+          ]
+        }
+      ],
+      "source": {
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-03"
+      },
+      "opcion_a": "Participación comunitaria en la identificación y la toma de decisiones.",
+      "opcion_b": "Vigilancia de casos mediante la recolección continua de datos.",
+      "opcion_c": "Detección precoz de una enfermedad mediante tamizaje.",
+      "opcion_d": "Evaluación posterior de los resultados de una intervención."
     }
   ]
 }

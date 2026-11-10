@@ -5,502 +5,481 @@
   "topic": "transcripcion y maduracion del arn",
   "title": "El núcleo. Parte II: transcripción y maduración del ARN y estructura del nucléolo",
   "number": 8,
-  "count": 29,
-  "duration": 29,
+  "count": 9,
+  "duration": 9,
   "source": "Biología celular biomédica",
   "questions": [
     {
-      "content_id": "bio-08-001",
+      "content_id": "evaluacion:medicina-oficial-biologia-08-intermedio-1",
       "materia": "BIOLOGIA CELULAR",
       "tema": "transcripcion y maduracion del arn",
       "numero_pregunta": 1,
-      "pregunta": "¿Qué hebra del ADN usa la ARN polimerasa?",
-      "respuesta_correcta": "D",
-      "justificacion": "La hebra molde.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "354",
-      "pagina_impresa": "354",
+      "pregunta": "Un ensayo en el nucléolo mide el transcrito precursor de varios ARNr, pero no el ARNr 5 S. Se identifica la polimerasa que lo genera.\n¿Qué opción corresponde al caso?",
+      "respuesta_correcta": "C",
+      "justificacion": "La ARN polimerasa I produce un precursor que dará lugar a los ARNr 28 S, 18 S y 5,8 S.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+      "paginas_pdf": "356",
+      "pagina_impresa": "",
       "dificultad": "medio",
-      "opcion_a": "La fibrilarina.",
-      "opcion_b": "Exones.",
-      "opcion_c": "ARN mensajero.",
-      "opcion_d": "La hebra molde."
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "El núcleo. Parte II: transcripción y maduración del ARN y estructura del nucléolo · ARN polimerasas",
+          "page": 356,
+          "printed": null,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-08",
+        "chapterNumber": 8,
+        "chapter": "El núcleo. Parte II: transcripción y maduración del ARN y estructura del nucléolo",
+        "section": "ARN polimerasas",
+        "printedPages": [],
+        "pdfPages": [
+          356
+        ]
+      },
+      "opcion_a": "ARN polimerasa II",
+      "opcion_b": "ARN polimerasa III",
+      "opcion_c": "ARN polimerasa I",
+      "opcion_d": "Poliadenilato polimerasa"
     },
     {
-      "content_id": "bio-08-002",
+      "content_id": "evaluacion:medicina-oficial-biologia-08-intermedio-2",
       "materia": "BIOLOGIA CELULAR",
       "tema": "transcripcion y maduracion del arn",
       "numero_pregunta": 2,
-      "pregunta": "¿Qué otro nombre recibe la hebra molde del ADN?",
-      "respuesta_correcta": "D",
-      "justificacion": "Hebra no codificante o antisentido.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "355",
-      "pagina_impresa": "355",
+      "pregunta": "Se sigue la producción de un transcrito que será procesado para dar el mensajero de una proteína. Se pregunta por la enzima de transcripción.\n¿Qué opción corresponde al caso?",
+      "respuesta_correcta": "B",
+      "justificacion": "La ARN polimerasa II produce el precursor del ARN mensajero que se utilizará para sintetizar proteínas.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+      "paginas_pdf": "356",
+      "pagina_impresa": "",
       "dificultad": "medio",
-      "opcion_a": "Iniciación → elongación → terminación.",
-      "opcion_b": "La ARN polimerasa.",
-      "opcion_c": "Impide su transcripción.",
-      "opcion_d": "Hebra no codificante o antisentido."
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "El núcleo. Parte II: transcripción y maduración del ARN y estructura del nucléolo · ARN polimerasas",
+          "page": 356,
+          "printed": null,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-08",
+        "chapterNumber": 8,
+        "chapter": "El núcleo. Parte II: transcripción y maduración del ARN y estructura del nucléolo",
+        "section": "ARN polimerasas",
+        "printedPages": [],
+        "pdfPages": [
+          356
+        ]
+      },
+      "opcion_a": "ARN polimerasa III",
+      "opcion_b": "ARN polimerasa II",
+      "opcion_c": "ARN polimerasa I",
+      "opcion_d": "Poliadenilato polimerasa"
     },
     {
-      "content_id": "bio-08-003",
+      "content_id": "evaluacion:medicina-oficial-biologia-08-intermedio-3",
       "materia": "BIOLOGIA CELULAR",
       "tema": "transcripcion y maduracion del arn",
       "numero_pregunta": 3,
-      "pregunta": "¿Cuál es el tipo de ARN más abundante?",
-      "respuesta_correcta": "B",
-      "justificacion": "El ARN ribosómico.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "355",
-      "pagina_impresa": "355",
+      "pregunta": "Se alteran de forma conjunta la síntesis de ARN de transferencia y la del ARNr 5 S, sin seleccionar el precursor ribosómico mayor.\n¿Qué opción corresponde al caso?",
+      "respuesta_correcta": "A",
+      "justificacion": "La ARN polimerasa III transcribe el ARNt y el ARNr 5 S.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+      "paginas_pdf": "356",
+      "pagina_impresa": "",
       "dificultad": "medio",
-      "opcion_a": "El ciclo celular.",
-      "opcion_b": "El ARN ribosómico.",
-      "opcion_c": "Exones.",
-      "opcion_d": "La hebra molde."
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "El núcleo. Parte II: transcripción y maduración del ARN y estructura del nucléolo · ARN polimerasas",
+          "page": 356,
+          "printed": null,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-08",
+        "chapterNumber": 8,
+        "chapter": "El núcleo. Parte II: transcripción y maduración del ARN y estructura del nucléolo",
+        "section": "ARN polimerasas",
+        "printedPages": [],
+        "pdfPages": [
+          356
+        ]
+      },
+      "opcion_a": "ARN polimerasa III",
+      "opcion_b": "ARN polimerasa II",
+      "opcion_c": "ARN polimerasa I",
+      "opcion_d": "Poliadenilato polimerasa"
     },
     {
-      "content_id": "bio-08-004",
+      "content_id": "evaluacion:medicina-oficial-biologia-08-intermedio-4",
       "materia": "BIOLOGIA CELULAR",
       "tema": "transcripcion y maduracion del arn",
       "numero_pregunta": 4,
-      "pregunta": "¿Qué enzima sintetiza el ARN?",
+      "pregunta": "El extremo 3′ del pre-ARNm ya fue cortado. Ahora se añade la cola de poli(A) sin utilizar un molde.\n¿Qué opción corresponde al caso?",
       "respuesta_correcta": "D",
-      "justificacion": "La ARN polimerasa.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "355",
-      "pagina_impresa": "355",
+      "justificacion": "La poliadenilato polimerasa añade la cola de poli(A) al extremo 3′ tras el corte, sin usar un molde.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+      "paginas_pdf": "375",
+      "pagina_impresa": "",
       "dificultad": "medio",
-      "opcion_a": "Exones.",
-      "opcion_b": "La hebra molde.",
-      "opcion_c": "La fibrilarina.",
-      "opcion_d": "La ARN polimerasa."
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "El núcleo. Parte II: transcripción y maduración del ARN y estructura del nucléolo · Cola poli(A)",
+          "page": 375,
+          "printed": null,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-08",
+        "chapterNumber": 8,
+        "chapter": "El núcleo. Parte II: transcripción y maduración del ARN y estructura del nucléolo",
+        "section": "Cola poli(A)",
+        "printedPages": [],
+        "pdfPages": [
+          375
+        ]
+      },
+      "opcion_a": "ARN polimerasa III",
+      "opcion_b": "ARN polimerasa II",
+      "opcion_c": "ARN polimerasa I",
+      "opcion_d": "Poliadenilato polimerasa"
     },
     {
-      "content_id": "bio-08-005",
+      "content_id": "evaluacion:medicina-oficial-biologia-08-ampliacion-01-umss",
       "materia": "BIOLOGIA CELULAR",
       "tema": "transcripcion y maduracion del arn",
       "numero_pregunta": 5,
-      "pregunta": "¿Qué ARN ribosómicos sintetiza la ARN polimerasa I?",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Si un factor facilita reclutar la ARN polimerasa al promotor, puede actuar como activador de la transcripción.\n2. La hipermetilación del promotor de p16 facilita su transcripción al dejarlo más accesible.",
       "respuesta_correcta": "A",
-      "justificacion": "28 S, 18 S y 5,8 S.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "356",
-      "pagina_impresa": "356",
-      "dificultad": "medio",
-      "opcion_a": "28 S, 18 S y 5,8 S.",
-      "opcion_b": "ARN de transferencia y ARNr 5 S.",
-      "opcion_c": "CD40L del T con CD40 del B.",
-      "opcion_d": "Saca 3 Na+ e introduce 2 K+."
+      "justificacion": "1. Correcta. Aumenta la probabilidad de que se ensamble la maquinaria para iniciar la síntesis de ARN.\n2. Incorrecta. El cambio descrito se asocia al silenciamiento de p16.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+      "paginas_pdf": "360, 362",
+      "pagina_impresa": "",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "El núcleo. Parte II: transcripción y maduración del ARN y estructura del nucléolo · Factores de transcripción / Control epigenético",
+          "page": 360,
+          "printed": null,
+          "marks": []
+        },
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "El núcleo. Parte II: transcripción y maduración del ARN y estructura del nucléolo · Factores de transcripción / Control epigenético",
+          "page": 362,
+          "printed": null,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-08",
+        "chapterNumber": 8,
+        "chapter": "El núcleo. Parte II: transcripción y maduración del ARN y estructura del nucléolo",
+        "section": "Factores de transcripción / Control epigenético",
+        "printedPages": [],
+        "pdfPages": [
+          360,
+          362
+        ],
+        "statements": [
+          {
+            "pdfPage": 360,
+            "printedPage": null,
+            "section": "Factores de transcripción",
+            "cardId": "bio-08-013"
+          },
+          {
+            "pdfPage": 362,
+            "printedPage": null,
+            "section": "Control epigenético",
+            "cardId": "bio-08-015"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "Solo la afirmación 1 es correcta.",
+        "B": "1. Correcta. Aumenta la probabilidad de que se ensamble la maquinaria para iniciar la síntesis de ARN. 2. Incorrecta. El cambio descrito se asocia al silenciamiento de p16.",
+        "C": "2. Incorrecta. El cambio descrito se asocia al silenciamiento de p16.",
+        "D": "1. Correcta. Aumenta la probabilidad de que se ensamble la maquinaria para iniciar la síntesis de ARN."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "bio-08-006",
+      "content_id": "evaluacion:medicina-oficial-biologia-08-ampliacion-02-umss",
       "materia": "BIOLOGIA CELULAR",
       "tema": "transcripcion y maduracion del arn",
       "numero_pregunta": 6,
-      "pregunta": "¿Qué ARN sintetiza la ARN polimerasa II?",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. El ARNr 5 S se obtiene por escisión del precursor 45 S en el nucléolo.\n2. Ribonucleoproteínas nucleolares pequeñas participan en procesar el precursor ribosómico 45 S.",
       "respuesta_correcta": "B",
-      "justificacion": "ARN mensajero.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "356",
-      "pagina_impresa": "356",
-      "dificultad": "medio",
-      "opcion_a": "El espliceosoma.",
-      "opcion_b": "ARN mensajero.",
-      "opcion_c": "La fibrilarina.",
-      "opcion_d": "Exones."
+      "justificacion": "1. Incorrecta. El 5 S se transcribe por separado y fuera del nucléolo.\n2. Correcta. Las snoRNP intervienen en la maduración del precursor nucleolar.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+      "paginas_pdf": "367, 376",
+      "pagina_impresa": "",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "El núcleo. Parte II: transcripción y maduración del ARN y estructura del nucléolo · ARNr 5 S / Maduración del ARNr",
+          "page": 367,
+          "printed": null,
+          "marks": []
+        },
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "El núcleo. Parte II: transcripción y maduración del ARN y estructura del nucléolo · ARNr 5 S / Maduración del ARNr",
+          "page": 376,
+          "printed": null,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-08",
+        "chapterNumber": 8,
+        "chapter": "El núcleo. Parte II: transcripción y maduración del ARN y estructura del nucléolo",
+        "section": "ARNr 5 S / Maduración del ARNr",
+        "printedPages": [],
+        "pdfPages": [
+          367,
+          376
+        ],
+        "statements": [
+          {
+            "pdfPage": 367,
+            "printedPage": null,
+            "section": "ARNr 5 S",
+            "cardId": "bio-08-018"
+          },
+          {
+            "pdfPage": 376,
+            "printedPage": null,
+            "section": "Maduración del ARNr",
+            "cardId": "bio-08-026"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. El 5 S se transcribe por separado y fuera del nucléolo. 2. Correcta. Las snoRNP intervienen en la maduración del precursor nucleolar.",
+        "B": "Solo la afirmación 2 es correcta.",
+        "C": "1. Incorrecta. El 5 S se transcribe por separado y fuera del nucléolo.",
+        "D": "2. Correcta. Las snoRNP intervienen en la maduración del precursor nucleolar."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "bio-08-007",
+      "content_id": "evaluacion:medicina-oficial-biologia-08-ampliacion-03-umss",
       "materia": "BIOLOGIA CELULAR",
       "tema": "transcripcion y maduracion del arn",
       "numero_pregunta": 7,
-      "pregunta": "¿Qué ARN sintetiza la ARN polimerasa III?",
-      "respuesta_correcta": "A",
-      "justificacion": "ARN de transferencia y ARNr 5 S.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "356",
-      "pagina_impresa": "356",
-      "dificultad": "medio",
-      "opcion_a": "ARN de transferencia y ARNr 5 S.",
-      "opcion_b": "PD-1, PD-L1 y CTLA-4, entre otras.",
-      "opcion_c": "Dos copias de H2A, H2B, H3 y H4.",
-      "opcion_d": "Al extremo 3′, terminado en CCA."
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. En la maduración de muchos transcritos nucleares, el espliceosoma retira intrones.\n2. Si se seleccionan combinaciones diferentes de exones, un mismo gen puede originar productos proteicos distintos.",
+      "respuesta_correcta": "C",
+      "justificacion": "1. Correcta. El corte y empalme elimina esas secuencias y liga exones.\n2. Correcta. El empalme alternativo permite generar más de un ARNm a partir del transcrito.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+      "paginas_pdf": "370, 373",
+      "pagina_impresa": "",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "El núcleo. Parte II: transcripción y maduración del ARN y estructura del nucléolo · Splicing / Splicing alternativo",
+          "page": 370,
+          "printed": null,
+          "marks": []
+        },
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "El núcleo. Parte II: transcripción y maduración del ARN y estructura del nucléolo · Splicing / Splicing alternativo",
+          "page": 373,
+          "printed": null,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-08",
+        "chapterNumber": 8,
+        "chapter": "El núcleo. Parte II: transcripción y maduración del ARN y estructura del nucléolo",
+        "section": "Splicing / Splicing alternativo",
+        "printedPages": [],
+        "pdfPages": [
+          370,
+          373
+        ],
+        "statements": [
+          {
+            "pdfPage": 370,
+            "printedPage": null,
+            "section": "Splicing",
+            "cardId": "bio-08-022"
+          },
+          {
+            "pdfPage": 373,
+            "printedPage": null,
+            "section": "Splicing alternativo",
+            "cardId": "bio-08-023"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "2. Correcta. El empalme alternativo permite generar más de un ARNm a partir del transcrito.",
+        "B": "1. Correcta. El corte y empalme elimina esas secuencias y liga exones.",
+        "C": "Ambas afirmaciones son correctas.",
+        "D": "1. Correcta. El corte y empalme elimina esas secuencias y liga exones. 2. Correcta. El empalme alternativo permite generar más de un ARNm a partir del transcrito."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "bio-08-008",
+      "content_id": "evaluacion:medicina-oficial-biologia-08-ampliacion-04-umss",
       "materia": "BIOLOGIA CELULAR",
       "tema": "transcripcion y maduracion del arn",
       "numero_pregunta": 8,
-      "pregunta": "¿Cuál es el orden de las fases de transcripción?",
-      "respuesta_correcta": "C",
-      "justificacion": "Iniciación → elongación → terminación.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "356",
-      "pagina_impresa": "356",
-      "dificultad": "medio",
-      "opcion_a": "Hebra no codificante o antisentido.",
-      "opcion_b": "Impide su transcripción.",
-      "opcion_c": "Iniciación → elongación → terminación.",
-      "opcion_d": "El ARN ribosómico."
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. La caperuza 5′ acelera la degradación del ARNm al facilitar el acceso de ARNasas.\n2. Los micro-ARN elevan habitualmente la expresión de sus dianas porque estabilizan el ARNm y estimulan la traducción.",
+      "respuesta_correcta": "D",
+      "justificacion": "1. Incorrecta. La caperuza contribuye a proteger el transcrito y aumentar su estabilidad.\n2. Incorrecta. Pueden reducir la expresión al bloquear la traducción o favorecer la degradación de la diana.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+      "paginas_pdf": "374, 381",
+      "pagina_impresa": "",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "El núcleo. Parte II: transcripción y maduración del ARN y estructura del nucléolo · Caperuza 5′ / Micro-ARN",
+          "page": 374,
+          "printed": null,
+          "marks": []
+        },
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "El núcleo. Parte II: transcripción y maduración del ARN y estructura del nucléolo · Caperuza 5′ / Micro-ARN",
+          "page": 381,
+          "printed": null,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-08",
+        "chapterNumber": 8,
+        "chapter": "El núcleo. Parte II: transcripción y maduración del ARN y estructura del nucléolo",
+        "section": "Caperuza 5′ / Micro-ARN",
+        "printedPages": [],
+        "pdfPages": [
+          374,
+          381
+        ],
+        "statements": [
+          {
+            "pdfPage": 374,
+            "printedPage": null,
+            "section": "Caperuza 5′",
+            "cardId": "bio-08-024"
+          },
+          {
+            "pdfPage": 381,
+            "printedPage": null,
+            "section": "Micro-ARN",
+            "cardId": "bio-08-030"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. La caperuza contribuye a proteger el transcrito y aumentar su estabilidad.",
+        "B": "2. Incorrecta. Pueden reducir la expresión al bloquear la traducción o favorecer la degradación de la diana.",
+        "C": "1. Incorrecta. La caperuza contribuye a proteger el transcrito y aumentar su estabilidad. 2. Incorrecta. Pueden reducir la expresión al bloquear la traducción o favorecer la degradación de la diana.",
+        "D": "Ninguna afirmación es correcta."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "bio-08-009",
+      "content_id": "evaluacion:banco-verificado:biologia-08:polimerasas",
       "materia": "BIOLOGIA CELULAR",
       "tema": "transcripcion y maduracion del arn",
       "numero_pregunta": 9,
-      "pregunta": "¿A qué región se une la ARN polimerasa para iniciar la transcripción?",
-      "respuesta_correcta": "C",
-      "justificacion": "Al promotor.",
-      "fuente": "Biología celular biomédica",
+      "pregunta": "Se inhibe de forma selectiva la ARN polimerasa III. ¿Qué conjunto de transcritos resulta afectado directamente según la tabla de Calvo?",
+      "respuesta_correcta": "A",
+      "justificacion": "La tabla atribuye a la ARN polimerasa III los ARNt y el ARNr 5 S. La polimerasa II transcribe los precursores de los ARNm y la I sintetiza el precursor de otros ARNr.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
       "paginas_pdf": "356",
       "pagina_impresa": "356",
-      "dificultad": "medio",
-      "opcion_a": "A filamentos intermedios.",
-      "opcion_b": "Al cinetocoro.",
-      "opcion_c": "Al promotor.",
-      "opcion_d": "Hacia el exterior celular."
-    },
-    {
-      "content_id": "bio-08-010",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "transcripcion y maduracion del arn",
-      "numero_pregunta": 10,
-      "pregunta": "¿Por qué la ARN polimerasa tiene mayor tasa de error que la replicación?",
-      "respuesta_correcta": "D",
-      "justificacion": "Porque carece de actividad correctora.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "357",
-      "pagina_impresa": "357",
-      "dificultad": "medio",
-      "opcion_a": "Aumentar la superficie de absorción.",
-      "opcion_b": "Distintas proteínas a partir de diferentes combinaciones de exones.",
-      "opcion_c": "Favorecer la agregación plaquetaria.",
-      "opcion_d": "Porque carece de actividad correctora."
-    },
-    {
-      "content_id": "bio-08-011",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "transcripcion y maduracion del arn",
-      "numero_pregunta": 11,
-      "pregunta": "¿Qué son los genes housekeeping?",
-      "respuesta_correcta": "A",
-      "justificacion": "Genes que se expresan rutinariamente para funciones celulares básicas.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "358",
-      "pagina_impresa": "358",
-      "dificultad": "medio",
-      "opcion_a": "Genes que se expresan rutinariamente para funciones celulares básicas.",
-      "opcion_b": "Moléculas circulares de ADN extracromosómico, menores que el cromosoma.",
-      "opcion_c": "Fragmentos celulares rodeados de membrana que después son fagocitados.",
-      "opcion_d": "La distancia mínima entre dos puntos que permite distinguirlos por separado."
-    },
-    {
-      "content_id": "bio-08-012",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "transcripcion y maduracion del arn",
-      "numero_pregunta": 12,
-      "pregunta": "¿Qué efecto tienen las histona-desacetilasas sobre la cromatina?",
-      "respuesta_correcta": "C",
-      "justificacion": "Favorecen su compactación y la represión transcripcional.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "359",
-      "pagina_impresa": "359",
-      "dificultad": "medio",
-      "opcion_a": "La aumenta al protegerlo frente a ARNasas.",
-      "opcion_b": "Las snoRNP o ribonucleoproteínas nucleolares pequeñas.",
-      "opcion_c": "Favorecen su compactación y la represión transcripcional.",
-      "opcion_d": "La poliadenilato polimerasa, sin necesitar molde."
-    },
-    {
-      "content_id": "bio-08-013",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "transcripcion y maduracion del arn",
-      "numero_pregunta": 13,
-      "pregunta": "¿Cuándo actúa un factor de transcripción como activador?",
-      "respuesta_correcta": "B",
-      "justificacion": "Cuando facilita el reclutamiento de la ARN polimerasa.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "360",
-      "pagina_impresa": "360",
-      "dificultad": "medio",
-      "opcion_a": "El cigoto y los blastómeros de sus primeras divisiones.",
-      "opcion_b": "Cuando facilita el reclutamiento de la ARN polimerasa.",
-      "opcion_c": "Que distintas citoquinas pueden causar el mismo efecto.",
-      "opcion_d": "Lo libera para transcribir genes de entrada en fase S."
-    },
-    {
-      "content_id": "bio-08-014",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "transcripcion y maduracion del arn",
-      "numero_pregunta": 14,
-      "pregunta": "¿Qué proceso celular inhiben varios genes regulados por p53?",
-      "respuesta_correcta": "C",
-      "justificacion": "El ciclo celular.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "361",
-      "pagina_impresa": "361",
-      "dificultad": "medio",
-      "opcion_a": "La fibrilarina.",
-      "opcion_b": "El ARN ribosómico.",
-      "opcion_c": "El ciclo celular.",
-      "opcion_d": "El espliceosoma."
-    },
-    {
-      "content_id": "bio-08-015",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "transcripcion y maduracion del arn",
-      "numero_pregunta": 15,
-      "pregunta": "¿Qué efecto tiene la hipermetilación del promotor de p16?",
-      "respuesta_correcta": "D",
-      "justificacion": "Impide su transcripción.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "362",
-      "pagina_impresa": "362",
-      "dificultad": "medio",
-      "opcion_a": "El espliceosoma.",
-      "opcion_b": "La hebra molde.",
-      "opcion_c": "El ARN ribosómico.",
-      "opcion_d": "Impide su transcripción."
-    },
-    {
-      "content_id": "bio-08-016",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "transcripcion y maduracion del arn",
-      "numero_pregunta": 16,
-      "pregunta": "¿Qué proceso bloquea la α-amanitina?",
-      "respuesta_correcta": "A",
-      "justificacion": "La transcripción de ARNm en eucariotas.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "363",
-      "pagina_impresa": "363",
-      "dificultad": "medio",
-      "opcion_a": "La transcripción de ARNm en eucariotas.",
-      "opcion_b": "ARN primario, transcrito primario o pre-ARN.",
-      "opcion_c": "La aumenta al protegerlo frente a ARNasas.",
-      "opcion_d": "El splicing, corte y empalme o ayuste."
-    },
-    {
-      "content_id": "bio-08-017",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "transcripcion y maduracion del arn",
-      "numero_pregunta": 17,
-      "pregunta": "¿Qué ARN se produce principalmente en el nucléolo?",
-      "respuesta_correcta": "C",
-      "justificacion": "ARN ribosómico.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "364",
-      "pagina_impresa": "364",
-      "dificultad": "medio",
-      "opcion_a": "La fibrilarina.",
-      "opcion_b": "La hebra molde.",
-      "opcion_c": "ARN ribosómico.",
-      "opcion_d": "Exones."
-    },
-    {
-      "content_id": "bio-08-019",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "transcripcion y maduracion del arn",
-      "numero_pregunta": 18,
-      "pregunta": "¿Qué otro nombre recibe el ARN recién transcrito?",
-      "respuesta_correcta": "C",
-      "justificacion": "ARN primario, transcrito primario o pre-ARN.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "368",
-      "pagina_impresa": "368",
-      "dificultad": "medio",
-      "opcion_a": "Inducen su degradación o bloquean su traducción.",
-      "opcion_b": "La aumenta al protegerlo frente a ARNasas.",
-      "opcion_c": "ARN primario, transcrito primario o pre-ARN.",
-      "opcion_d": "La poliadenilato polimerasa, sin necesitar molde."
-    },
-    {
-      "content_id": "bio-08-020",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "transcripcion y maduracion del arn",
-      "numero_pregunta": 19,
-      "pregunta": "¿Qué proceso elimina intrones y une exones del pre-ARNm?",
-      "respuesta_correcta": "A",
-      "justificacion": "El splicing, corte y empalme o ayuste.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "368",
-      "pagina_impresa": "368",
-      "dificultad": "medio",
-      "opcion_a": "El splicing, corte y empalme o ayuste.",
-      "opcion_b": "La transcripción de ARNm en eucariotas.",
-      "opcion_c": "La aumenta al protegerlo frente a ARNasas.",
-      "opcion_d": "Inducen su degradación o bloquean su traducción."
-    },
-    {
-      "content_id": "bio-08-021",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "transcripcion y maduracion del arn",
-      "numero_pregunta": 20,
-      "pregunta": "¿Cómo se llaman los segmentos que permanecen en el ARN maduro?",
-      "respuesta_correcta": "B",
-      "justificacion": "Exones.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "369",
-      "pagina_impresa": "369",
-      "dificultad": "medio",
-      "opcion_a": "La hebra molde.",
-      "opcion_b": "Exones.",
-      "opcion_c": "ARN mensajero.",
-      "opcion_d": "CCA."
-    },
-    {
-      "content_id": "bio-08-022",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "transcripcion y maduracion del arn",
-      "numero_pregunta": 21,
-      "pregunta": "¿Qué complejo elimina los intrones del ARNm nuclear?",
-      "respuesta_correcta": "D",
-      "justificacion": "El espliceosoma.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "370",
-      "pagina_impresa": "370",
-      "dificultad": "medio",
-      "opcion_a": "La ARNasa P.",
-      "opcion_b": "ARN ribosómico.",
-      "opcion_c": "La hebra molde.",
-      "opcion_d": "El espliceosoma."
-    },
-    {
-      "content_id": "bio-08-023",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "transcripcion y maduracion del arn",
-      "numero_pregunta": 22,
-      "pregunta": "¿Qué permite obtener el splicing alternativo de un mismo gen?",
-      "respuesta_correcta": "D",
-      "justificacion": "Distintas proteínas a partir de diferentes combinaciones de exones.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "373",
-      "pagina_impresa": "373",
-      "dificultad": "medio",
-      "opcion_a": "Amplificar exponencialmente un segmento específico de ADN.",
-      "opcion_b": "Una secuencia específica de ácidos nucleicos en un tejido.",
-      "opcion_c": "Porque carece de actividad correctora.",
-      "opcion_d": "Distintas proteínas a partir de diferentes combinaciones de exones."
-    },
-    {
-      "content_id": "bio-08-024",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "transcripcion y maduracion del arn",
-      "numero_pregunta": 23,
-      "pregunta": "¿Qué efecto tiene la caperuza 5′ sobre la estabilidad del ARNm?",
-      "respuesta_correcta": "D",
-      "justificacion": "La aumenta al protegerlo frente a ARNasas.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "374",
-      "pagina_impresa": "374",
-      "dificultad": "medio",
-      "opcion_a": "Inducen su degradación o bloquean su traducción.",
-      "opcion_b": "Favorecen su compactación y la represión transcripcional.",
-      "opcion_c": "El splicing, corte y empalme o ayuste.",
-      "opcion_d": "La aumenta al protegerlo frente a ARNasas."
-    },
-    {
-      "content_id": "bio-08-025",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "transcripcion y maduracion del arn",
-      "numero_pregunta": 24,
-      "pregunta": "¿Qué enzima añade adeninas a la cola poli(A)?",
-      "respuesta_correcta": "C",
-      "justificacion": "La poliadenilato polimerasa, sin necesitar molde.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "375",
-      "pagina_impresa": "375",
-      "dificultad": "medio",
-      "opcion_a": "Las snoRNP o ribonucleoproteínas nucleolares pequeñas.",
-      "opcion_b": "Inducen su degradación o bloquean su traducción.",
-      "opcion_c": "La poliadenilato polimerasa, sin necesitar molde.",
-      "opcion_d": "ARN primario, transcrito primario o pre-ARN."
-    },
-    {
-      "content_id": "bio-08-026",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "transcripcion y maduracion del arn",
-      "numero_pregunta": 25,
-      "pregunta": "¿Qué ribonucleoproteínas procesan el precursor ARNr 45 S?",
-      "respuesta_correcta": "C",
-      "justificacion": "Las snoRNP o ribonucleoproteínas nucleolares pequeñas.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "376",
-      "pagina_impresa": "376",
-      "dificultad": "medio",
-      "opcion_a": "Favorecen su compactación y la represión transcripcional.",
-      "opcion_b": "Inducen su degradación o bloquean su traducción.",
-      "opcion_c": "Las snoRNP o ribonucleoproteínas nucleolares pequeñas.",
-      "opcion_d": "La poliadenilato polimerasa, sin necesitar molde."
-    },
-    {
-      "content_id": "bio-08-027",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "transcripcion y maduracion del arn",
-      "numero_pregunta": 26,
-      "pregunta": "¿Qué enzima cataliza la metilación de ribosas del ARNr?",
-      "respuesta_correcta": "D",
-      "justificacion": "La fibrilarina.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "376",
-      "pagina_impresa": "376",
-      "dificultad": "medio",
-      "opcion_a": "La hebra molde.",
-      "opcion_b": "La ARN polimerasa.",
-      "opcion_c": "El espliceosoma.",
-      "opcion_d": "La fibrilarina."
-    },
-    {
-      "content_id": "bio-08-028",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "transcripcion y maduracion del arn",
-      "numero_pregunta": 27,
-      "pregunta": "¿Qué trinucleótido se añade al extremo 3′ del ARNt?",
-      "respuesta_correcta": "A",
-      "justificacion": "CCA.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "378",
-      "pagina_impresa": "378",
-      "dificultad": "medio",
-      "opcion_a": "CCA.",
-      "opcion_b": "ARN mensajero.",
-      "opcion_c": "La ARNasa P.",
-      "opcion_d": "Exones."
-    },
-    {
-      "content_id": "bio-08-029",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "transcripcion y maduracion del arn",
-      "numero_pregunta": 28,
-      "pregunta": "¿Qué ribozima elimina secuencias del extremo 5′ del pre-ARNt?",
-      "respuesta_correcta": "B",
-      "justificacion": "La ARNasa P.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "378",
-      "pagina_impresa": "378",
-      "dificultad": "medio",
-      "opcion_a": "CCA.",
-      "opcion_b": "La ARNasa P.",
-      "opcion_c": "ARN mensajero.",
-      "opcion_d": "El espliceosoma."
-    },
-    {
-      "content_id": "bio-08-030",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "transcripcion y maduracion del arn",
-      "numero_pregunta": 29,
-      "pregunta": "¿Cómo reducen los micro-ARN la expresión de su ARNm diana?",
-      "respuesta_correcta": "C",
-      "justificacion": "Inducen su degradación o bloquean su traducción.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "381",
-      "pagina_impresa": "381",
-      "dificultad": "medio",
-      "opcion_a": "La poliadenilato polimerasa, sin necesitar molde.",
-      "opcion_b": "ARN primario, transcrito primario o pre-ARN.",
-      "opcion_c": "Inducen su degradación o bloquean su traducción.",
-      "opcion_d": "La aumenta al protegerlo frente a ARNasas."
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Capítulo 8 · Tipos de ARN polimerasa",
+          "page": 356,
+          "printed": 356,
+          "marks": [
+            [
+              0.15,
+              0.5534,
+              0.0309,
+              0.0102
+            ],
+            [
+              0.15,
+              0.585,
+              0.0254,
+              0.0102
+            ]
+          ]
+        }
+      ],
+      "source": {
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-08"
+      },
+      "opcion_a": "Los ARNt y el ARNr 5 S.",
+      "opcion_b": "Los precursores de los ARNm y el ARNr 5 S.",
+      "opcion_c": "Los ARNr 28 S, 18 S y 5,8 S.",
+      "opcion_d": "Los precursores de los ARNm y los ARNt."
     }
   ]
 }

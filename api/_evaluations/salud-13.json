@@ -5,383 +5,516 @@
   "topic": "marco teorico e hipotesis",
   "title": "Marco teórico e hipótesis",
   "number": 13,
-  "count": 22,
-  "duration": 22,
+  "count": 9,
+  "duration": 9,
   "source": "Educación en Salud e Investigación · Curso Básico 2025-2026",
   "questions": [
     {
-      "content_id": "salud-13-001",
+      "content_id": "evaluacion:medicina-oficial-salud-13-intermedio-1",
       "materia": "SALUD PUBLICA",
       "tema": "marco teorico e hipotesis",
       "numero_pregunta": 1,
-      "pregunta": "¿Cuáles son las dos etapas de elaboración del marco teórico-conceptual?",
-      "respuesta_correcta": "D",
-      "justificacion": "Revisión de literatura y adopción de una teoría o desarrollo de una perspectiva teórica.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "61",
-      "pagina_impresa": "54",
+      "pregunta": "El equipo descompone una variable compleja de acceso en aspectos geográfico y económico. Se pide nombrar cada uno de esos aspectos.\n¿Qué opción corresponde al caso?",
+      "respuesta_correcta": "B",
+      "justificacion": "Una dimensión es un aspecto de la variable que se separa para poder operacionalizarla.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+      "paginas_pdf": "66",
+      "pagina_impresa": "59",
       "dificultad": "medio",
-      "opcion_a": "Prevenir enfermedades, prolongar la vida y promover el bienestar colectivo.",
-      "opcion_b": "Nominal, ordinal, de intervalo y de razón.",
-      "opcion_c": "Políticas saludables, entornos favorables, acción comunitaria, habilidades personales y reorientación de servicios.",
-      "opcion_d": "Revisión de literatura y adopción de una teoría o desarrollo de una perspectiva teórica."
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Marco teórico e hipótesis · marco teorico e hipotesis",
+          "page": 66,
+          "printed": 59,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-13",
+        "chapterNumber": 13,
+        "chapter": "Marco teórico e hipótesis",
+        "section": "marco teorico e hipotesis",
+        "printedPages": [
+          59
+        ],
+        "pdfPages": [
+          66
+        ]
+      },
+      "opcion_a": "Hipótesis nula",
+      "opcion_b": "Dimensión",
+      "opcion_c": "Hipótesis alterna",
+      "opcion_d": "Indicador"
     },
     {
-      "content_id": "salud-13-002",
+      "content_id": "evaluacion:medicina-oficial-salud-13-intermedio-2",
       "materia": "SALUD PUBLICA",
       "tema": "marco teorico e hipotesis",
       "numero_pregunta": 2,
-      "pregunta": "¿Qué tipo de marco suele construirse en investigaciones descriptivas?",
+      "pregunta": "Para representar un aspecto geográfico del acceso, el equipo registra los minutos de viaje hasta el servicio. Se pregunta por la función de esa medida.\n¿Qué opción corresponde al caso?",
       "respuesta_correcta": "A",
-      "justificacion": "Marco conceptual.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "61",
-      "pagina_impresa": "54",
+      "justificacion": "El indicador convierte un aspecto de la variable en algo observable o medible.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+      "paginas_pdf": "66",
+      "pagina_impresa": "59",
       "dificultad": "medio",
-      "opcion_a": "Marco conceptual.",
-      "opcion_b": "Afirmativa.",
-      "opcion_c": "Las relaciones entre variables y las hipótesis.",
-      "opcion_d": "Clara, lógica y verosímil."
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Marco teórico e hipótesis · marco teorico e hipotesis",
+          "page": 66,
+          "printed": 59,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-13",
+        "chapterNumber": 13,
+        "chapter": "Marco teórico e hipótesis",
+        "section": "marco teorico e hipotesis",
+        "printedPages": [
+          59
+        ],
+        "pdfPages": [
+          66
+        ]
+      },
+      "opcion_a": "Indicador",
+      "opcion_b": "Dimensión",
+      "opcion_c": "Hipótesis alterna",
+      "opcion_d": "Hipótesis nula"
     },
     {
-      "content_id": "salud-13-003",
+      "content_id": "evaluacion:medicina-oficial-salud-13-intermedio-3",
       "materia": "SALUD PUBLICA",
       "tema": "marco teorico e hipotesis",
       "numero_pregunta": 3,
-      "pregunta": "¿Qué tipo de marco corresponde a investigaciones explicativas y predictivas?",
-      "respuesta_correcta": "B",
-      "justificacion": "Marco teórico.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "62",
-      "pagina_impresa": "55",
+      "pregunta": "Antes del análisis, se formula una hipótesis que postula igualdad entre las proporciones de dos grupos.\n¿Qué opción corresponde al caso?",
+      "respuesta_correcta": "A",
+      "justificacion": "La hipótesis nula plantea ausencia de una diferencia entre las proporciones o valores que se comparan.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+      "paginas_pdf": "71",
+      "pagina_impresa": "64",
       "dificultad": "medio",
-      "opcion_a": "Las relaciones entre variables y las hipótesis.",
-      "opcion_b": "Marco teórico.",
-      "opcion_c": "Clara, lógica y verosímil.",
-      "opcion_d": "Afirmativa."
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Marco teórico e hipótesis · marco teorico e hipotesis",
+          "page": 71,
+          "printed": 64,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-13",
+        "chapterNumber": 13,
+        "chapter": "Marco teórico e hipótesis",
+        "section": "marco teorico e hipotesis",
+        "printedPages": [
+          64
+        ],
+        "pdfPages": [
+          71
+        ]
+      },
+      "opcion_a": "Hipótesis nula",
+      "opcion_b": "Hipótesis alterna",
+      "opcion_c": "Indicador",
+      "opcion_d": "Dimensión"
     },
     {
-      "content_id": "salud-13-004",
+      "content_id": "evaluacion:medicina-oficial-salud-13-intermedio-4",
       "materia": "SALUD PUBLICA",
       "tema": "marco teorico e hipotesis",
       "numero_pregunta": 4,
-      "pregunta": "¿Qué diferencia a conceptos teóricos y empíricos?",
-      "respuesta_correcta": "D",
-      "justificacion": "Teóricos: no observables directamente. Empíricos: observables y medibles directamente.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "62",
-      "pagina_impresa": "55",
+      "pregunta": "Ante una hipótesis inicial de igualdad, se formula que las proporciones de los grupos son distintas. Se pide identificar ese segundo enunciado.\n¿Qué opción corresponde al caso?",
+      "respuesta_correcta": "B",
+      "justificacion": "La hipótesis alterna plantea que existe una diferencia frente a la igualdad postulada en la hipótesis nula.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+      "paginas_pdf": "71",
+      "pagina_impresa": "64",
       "dificultad": "medio",
-      "opcion_a": "Categorías, conceptos, variables, dimensiones, indicadores, índice y fuentes.",
-      "opcion_b": "Que una variable influye o produce un cambio en otra, sin establecer causalidad.",
-      "opcion_c": "De la observación de hechos, fenómenos, tendencias o asociaciones específicas.",
-      "opcion_d": "Teóricos: no observables directamente. Empíricos: observables y medibles directamente."
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Marco teórico e hipótesis · marco teorico e hipotesis",
+          "page": 71,
+          "printed": 64,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-13",
+        "chapterNumber": 13,
+        "chapter": "Marco teórico e hipótesis",
+        "section": "marco teorico e hipotesis",
+        "printedPages": [
+          64
+        ],
+        "pdfPages": [
+          71
+        ]
+      },
+      "opcion_a": "Hipótesis nula",
+      "opcion_b": "Hipótesis alterna",
+      "opcion_c": "Dimensión",
+      "opcion_d": "Indicador"
     },
     {
-      "content_id": "salud-13-005",
+      "content_id": "evaluacion:medicina-oficial-salud-13-ampliacion-01-umss",
       "materia": "SALUD PUBLICA",
       "tema": "marco teorico e hipotesis",
       "numero_pregunta": 5,
-      "pregunta": "¿Qué marco tienen todos los estudios, aunque no lo expliciten?",
-      "respuesta_correcta": "C",
-      "justificacion": "Un marco de referencia.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "63",
-      "pagina_impresa": "56",
-      "dificultad": "medio",
-      "opcion_a": "Afirmativa.",
-      "opcion_b": "Clara, lógica y verosímil.",
-      "opcion_c": "Un marco de referencia.",
-      "opcion_d": "Las relaciones entre variables y las hipótesis."
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. La revisión de literatura aporta información para adoptar una teoría o desarrollar una perspectiva propia.\n2. Los conceptos teóricos son los que se observan y miden directamente, a diferencia de los empíricos.",
+      "respuesta_correcta": "A",
+      "justificacion": "1. Correcta. El compendio reconoce ambas tareas en la elaboración del marco.\n2. Incorrecta. Los conceptos empíricos se vinculan a observaciones directas. Los teóricos requieren una formulación que permita relacionarlos con datos.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+      "paginas_pdf": "61, 62",
+      "pagina_impresa": "54, 55",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Marco teórico e hipótesis · marco teorico e hipotesis",
+          "page": 61,
+          "printed": 54,
+          "marks": []
+        },
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Marco teórico e hipótesis · marco teorico e hipotesis",
+          "page": 62,
+          "printed": 55,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-13",
+        "chapterNumber": 13,
+        "chapter": "Marco teórico e hipótesis",
+        "section": "marco teorico e hipotesis",
+        "printedPages": [
+          54,
+          55
+        ],
+        "pdfPages": [
+          61,
+          62
+        ],
+        "statements": [
+          {
+            "pdfPage": 61,
+            "printedPage": 54,
+            "section": "marco teorico e hipotesis",
+            "cardId": "salud-13-001"
+          },
+          {
+            "pdfPage": 62,
+            "printedPage": 55,
+            "section": "marco teorico e hipotesis",
+            "cardId": "salud-13-004"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "Solo la afirmación 1 es correcta.",
+        "B": "1. Correcta. El compendio reconoce ambas tareas en la elaboración del marco. 2. Incorrecta. Los conceptos empíricos se vinculan a observaciones directas. Los teóricos requieren una formulación que permita relacionarlos con datos.",
+        "C": "2. Incorrecta. Los conceptos empíricos se vinculan a observaciones directas. Los teóricos requieren una formulación que permita relacionarlos con datos.",
+        "D": "1. Correcta. El compendio reconoce ambas tareas en la elaboración del marco."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "salud-13-006",
+      "content_id": "evaluacion:medicina-oficial-salud-13-ampliacion-02-umss",
       "materia": "SALUD PUBLICA",
       "tema": "marco teorico e hipotesis",
       "numero_pregunta": 6,
-      "pregunta": "¿Qué se identifica después de seleccionar las variables principales al construir un marco?",
-      "respuesta_correcta": "C",
-      "justificacion": "Las relaciones entre variables y las hipótesis.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "64",
-      "pagina_impresa": "57",
-      "dificultad": "medio",
-      "opcion_a": "Un marco de referencia.",
-      "opcion_b": "Ausencia de diferencia entre los valores comparados.",
-      "opcion_c": "Las relaciones entre variables y las hipótesis.",
-      "opcion_d": "Clara, lógica y verosímil."
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. En investigación cualitativa, el modelo teórico debe quedar completo antes de iniciar el contacto con el fenómeno.\n2. Al operacionalizar un marco, se pueden especificar variables, dimensiones e indicadores.",
+      "respuesta_correcta": "B",
+      "justificacion": "1. Incorrecta. El modelo puede construirse y precisarse a medida que avanza la investigación.\n2. Correcta. Estos elementos ayudan a traducir los conceptos en aspectos que el estudio puede examinar.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+      "paginas_pdf": "64, 66",
+      "pagina_impresa": "57, 59",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Marco teórico e hipótesis · marco teorico e hipotesis",
+          "page": 64,
+          "printed": 57,
+          "marks": []
+        },
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Marco teórico e hipótesis · marco teorico e hipotesis",
+          "page": 66,
+          "printed": 59,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-13",
+        "chapterNumber": 13,
+        "chapter": "Marco teórico e hipótesis",
+        "section": "marco teorico e hipotesis",
+        "printedPages": [
+          57,
+          59
+        ],
+        "pdfPages": [
+          64,
+          66
+        ],
+        "statements": [
+          {
+            "pdfPage": 64,
+            "printedPage": 57,
+            "section": "marco teorico e hipotesis",
+            "cardId": "salud-13-007"
+          },
+          {
+            "pdfPage": 66,
+            "printedPage": 59,
+            "section": "marco teorico e hipotesis",
+            "cardId": "salud-13-008"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. El modelo puede construirse y precisarse a medida que avanza la investigación. 2. Correcta. Estos elementos ayudan a traducir los conceptos en aspectos que el estudio puede examinar.",
+        "B": "Solo la afirmación 2 es correcta.",
+        "C": "1. Incorrecta. El modelo puede construirse y precisarse a medida que avanza la investigación.",
+        "D": "2. Correcta. Estos elementos ayudan a traducir los conceptos en aspectos que el estudio puede examinar."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "salud-13-008",
+      "content_id": "evaluacion:medicina-oficial-salud-13-ampliacion-03-umss",
       "materia": "SALUD PUBLICA",
       "tema": "marco teorico e hipotesis",
       "numero_pregunta": 7,
-      "pregunta": "¿Qué siete elementos se especifican para operacionalizar el marco conceptual o teórico?",
-      "respuesta_correcta": "D",
-      "justificacion": "Categorías, conceptos, variables, dimensiones, indicadores, índice y fuentes.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "66",
-      "pagina_impresa": "59",
-      "dificultad": "medio",
-      "opcion_a": "De la observación de hechos, fenómenos, tendencias o asociaciones específicas.",
-      "opcion_b": "Teóricos: no observables directamente. Empíricos: observables y medibles directamente.",
-      "opcion_c": "Unidades de observación, variables y relación entre las variables.",
-      "opcion_d": "Categorías, conceptos, variables, dimensiones, indicadores, índice y fuentes."
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Una hipótesis de covariación puede plantear que dos variables cambian en correspondencia sin afirmar por ello una causa.\n2. Sostener una relación causal requiere que la causa propuesta ocurra antes del efecto.",
+      "respuesta_correcta": "C",
+      "justificacion": "1. Correcta. La asociación se refiere al patrón conjunto entre variables.\n2. Correcta. La precedencia temporal es una condición de la hipótesis causal.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+      "paginas_pdf": "68, 69",
+      "pagina_impresa": "61, 62",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Marco teórico e hipótesis · marco teorico e hipotesis",
+          "page": 68,
+          "printed": 61,
+          "marks": []
+        },
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Marco teórico e hipótesis · marco teorico e hipotesis",
+          "page": 69,
+          "printed": 62,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-13",
+        "chapterNumber": 13,
+        "chapter": "Marco teórico e hipótesis",
+        "section": "marco teorico e hipotesis",
+        "printedPages": [
+          61,
+          62
+        ],
+        "pdfPages": [
+          68,
+          69
+        ],
+        "statements": [
+          {
+            "pdfPage": 68,
+            "printedPage": 61,
+            "section": "marco teorico e hipotesis",
+            "cardId": "salud-13-014"
+          },
+          {
+            "pdfPage": 69,
+            "printedPage": 62,
+            "section": "marco teorico e hipotesis",
+            "cardId": "salud-13-016"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "2. Correcta. La precedencia temporal es una condición de la hipótesis causal.",
+        "B": "1. Correcta. La asociación se refiere al patrón conjunto entre variables.",
+        "C": "Ambas afirmaciones son correctas.",
+        "D": "1. Correcta. La asociación se refiere al patrón conjunto entre variables. 2. Correcta. La precedencia temporal es una condición de la hipótesis causal."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "salud-13-009",
+      "content_id": "evaluacion:medicina-oficial-salud-13-ampliacion-04-umss",
       "materia": "SALUD PUBLICA",
       "tema": "marco teorico e hipotesis",
       "numero_pregunta": 8,
-      "pregunta": "¿Qué son las dimensiones de una variable?",
-      "respuesta_correcta": "C",
-      "justificacion": "Perspectivas en las que se desglosa el concepto para operacionalizarlo y medirlo.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "66",
-      "pagina_impresa": "59",
-      "dificultad": "medio",
-      "opcion_a": "Condiciones medibles de sus dimensiones.",
-      "opcion_b": "Una cualidad, propiedad o característica que puede tomar distintos valores.",
-      "opcion_c": "Perspectivas en las que se desglosa el concepto para operacionalizarlo y medirlo.",
-      "opcion_d": "Un enunciado o solución probable que debe confirmarse con los hechos."
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Una hipótesis que surge de observar hechos particulares se denomina deductiva por partir de la observación.\n2. No rechazar la hipótesis nula demuestra que es verdadera para toda la población.",
+      "respuesta_correcta": "D",
+      "justificacion": "1. Incorrecta. Avanzar desde observaciones particulares hacia una propuesta general es inducción.\n2. Incorrecta. Solo indica que los datos del estudio no aportan evidencia suficiente para rechazarla.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+      "paginas_pdf": "69, 71",
+      "pagina_impresa": "62, 64",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Marco teórico e hipótesis · marco teorico e hipotesis",
+          "page": 69,
+          "printed": 62,
+          "marks": []
+        },
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Marco teórico e hipótesis · marco teorico e hipotesis",
+          "page": 71,
+          "printed": 64,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-13",
+        "chapterNumber": 13,
+        "chapter": "Marco teórico e hipótesis",
+        "section": "marco teorico e hipotesis",
+        "printedPages": [
+          62,
+          64
+        ],
+        "pdfPages": [
+          69,
+          71
+        ],
+        "statements": [
+          {
+            "pdfPage": 69,
+            "printedPage": 62,
+            "section": "marco teorico e hipotesis",
+            "cardId": "salud-13-018"
+          },
+          {
+            "pdfPage": 71,
+            "printedPage": 64,
+            "section": "marco teorico e hipotesis",
+            "cardId": "salud-13-023"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. Avanzar desde observaciones particulares hacia una propuesta general es inducción.",
+        "B": "2. Incorrecta. Solo indica que los datos del estudio no aportan evidencia suficiente para rechazarla.",
+        "C": "1. Incorrecta. Avanzar desde observaciones particulares hacia una propuesta general es inducción. 2. Incorrecta. Solo indica que los datos del estudio no aportan evidencia suficiente para rechazarla.",
+        "D": "Ninguna afirmación es correcta."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "salud-13-010",
+      "content_id": "evaluacion:banco-verificado:salud-13:marco",
       "materia": "SALUD PUBLICA",
       "tema": "marco teorico e hipotesis",
       "numero_pregunta": 9,
-      "pregunta": "¿Qué son los indicadores de una variable?",
-      "respuesta_correcta": "C",
-      "justificacion": "Condiciones medibles de sus dimensiones.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "66",
-      "pagina_impresa": "59",
-      "dificultad": "medio",
-      "opcion_a": "Como ausencia de enfermedad.",
-      "opcion_b": "Perspectivas en las que se desglosa el concepto para operacionalizarlo y medirlo.",
-      "opcion_c": "Condiciones medibles de sus dimensiones.",
-      "opcion_d": "Un enunciado o solución probable que debe confirmarse con los hechos."
-    },
-    {
-      "content_id": "salud-13-011",
-      "materia": "SALUD PUBLICA",
-      "tema": "marco teorico e hipotesis",
-      "numero_pregunta": 10,
-      "pregunta": "¿Qué es una hipótesis?",
-      "respuesta_correcta": "B",
-      "justificacion": "Un enunciado o solución probable que debe confirmarse con los hechos.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "66",
-      "pagina_impresa": "59",
-      "dificultad": "medio",
-      "opcion_a": "Condiciones medibles de sus dimensiones.",
-      "opcion_b": "Un enunciado o solución probable que debe confirmarse con los hechos.",
-      "opcion_c": "La distribución de los elementos que se muestrearán en cada estrato.",
-      "opcion_d": "Perspectivas en las que se desglosa el concepto para operacionalizarlo y medirlo."
-    },
-    {
-      "content_id": "salud-13-012",
-      "materia": "SALUD PUBLICA",
-      "tema": "marco teorico e hipotesis",
-      "numero_pregunta": 11,
-      "pregunta": "¿Qué tres elementos forman la estructura científica de una hipótesis?",
-      "respuesta_correcta": "B",
-      "justificacion": "Unidades de observación, variables y relación entre las variables.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "67",
-      "pagina_impresa": "60",
-      "dificultad": "medio",
-      "opcion_a": "Que los datos no aportan evidencia suficiente para rechazarla.",
-      "opcion_b": "Unidades de observación, variables y relación entre las variables.",
-      "opcion_c": "De leyes generales o teorías aplicadas a situaciones particulares.",
-      "opcion_d": "Una correspondencia o correlación entre dos o más variables."
-    },
-    {
-      "content_id": "salud-13-013",
-      "materia": "SALUD PUBLICA",
-      "tema": "marco teorico e hipotesis",
-      "numero_pregunta": 12,
-      "pregunta": "¿Cómo debe ser la relación entre variables propuesta por una hipótesis?",
-      "respuesta_correcta": "C",
-      "justificacion": "Clara, lógica y verosímil.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "67",
-      "pagina_impresa": "60",
-      "dificultad": "medio",
-      "opcion_a": "Las relaciones entre variables y las hipótesis.",
-      "opcion_b": "Afirmativa.",
-      "opcion_c": "Clara, lógica y verosímil.",
-      "opcion_d": "Un marco de referencia."
-    },
-    {
-      "content_id": "salud-13-014",
-      "materia": "SALUD PUBLICA",
-      "tema": "marco teorico e hipotesis",
-      "numero_pregunta": 13,
-      "pregunta": "¿Qué establece una hipótesis de asociación o covariación?",
-      "respuesta_correcta": "C",
-      "justificacion": "Una correspondencia o correlación entre dos o más variables.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "68",
-      "pagina_impresa": "61",
-      "dificultad": "medio",
-      "opcion_a": "Que sí existe una diferencia entre los valores comparados.",
-      "opcion_b": "Que los datos no aportan evidencia suficiente para rechazarla.",
-      "opcion_c": "Una correspondencia o correlación entre dos o más variables.",
-      "opcion_d": "De leyes generales o teorías aplicadas a situaciones particulares."
-    },
-    {
-      "content_id": "salud-13-015",
-      "materia": "SALUD PUBLICA",
-      "tema": "marco teorico e hipotesis",
-      "numero_pregunta": 14,
-      "pregunta": "¿Qué plantea una hipótesis de relación de producción?",
-      "respuesta_correcta": "B",
-      "justificacion": "Que una variable influye o produce un cambio en otra, sin establecer causalidad.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "68",
-      "pagina_impresa": "61",
-      "dificultad": "medio",
-      "opcion_a": "Que sí existe una diferencia entre los valores comparados.",
-      "opcion_b": "Que una variable influye o produce un cambio en otra, sin establecer causalidad.",
-      "opcion_c": "De la observación de hechos, fenómenos, tendencias o asociaciones específicas.",
-      "opcion_d": "De leyes generales o teorías aplicadas a situaciones particulares."
-    },
-    {
-      "content_id": "salud-13-016",
-      "materia": "SALUD PUBLICA",
-      "tema": "marco teorico e hipotesis",
-      "numero_pregunta": 15,
-      "pregunta": "¿Qué orden temporal exige una hipótesis causal?",
-      "respuesta_correcta": "D",
-      "justificacion": "La causa debe ocurrir antes que el efecto.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "69",
-      "pagina_impresa": "62",
-      "dificultad": "medio",
-      "opcion_a": "Una correspondencia o correlación entre dos o más variables.",
-      "opcion_b": "Que sí existe una diferencia entre los valores comparados.",
-      "opcion_c": "Que sea producto de factores extraños o aleatorios.",
-      "opcion_d": "La causa debe ocurrir antes que el efecto."
-    },
-    {
-      "content_id": "salud-13-017",
-      "materia": "SALUD PUBLICA",
-      "tema": "marco teorico e hipotesis",
-      "numero_pregunta": 16,
-      "pregunta": "¿Qué debe descartarse para sostener que una covariación es causal?",
+      "pregunta": "Un estudio usa un constructo que no se observa directamente y registra un dato que sí puede medir en cada participante. ¿Cómo se distingue el dato medible del constructo?",
       "respuesta_correcta": "A",
-      "justificacion": "Que sea producto de factores extraños o aleatorios.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "69",
-      "pagina_impresa": "62",
-      "dificultad": "medio",
-      "opcion_a": "Que sea producto de factores extraños o aleatorios.",
-      "opcion_b": "Que sí existe una diferencia entre los valores comparados.",
-      "opcion_c": "Una correspondencia o correlación entre dos o más variables.",
-      "opcion_d": "La causa debe ocurrir antes que el efecto."
-    },
-    {
-      "content_id": "salud-13-018",
-      "materia": "SALUD PUBLICA",
-      "tema": "marco teorico e hipotesis",
-      "numero_pregunta": 17,
-      "pregunta": "¿De dónde parten las hipótesis inductivas?",
-      "respuesta_correcta": "A",
-      "justificacion": "De la observación de hechos, fenómenos, tendencias o asociaciones específicas.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "69",
-      "pagina_impresa": "62",
-      "dificultad": "medio",
-      "opcion_a": "De la observación de hechos, fenómenos, tendencias o asociaciones específicas.",
-      "opcion_b": "Unidades de observación, variables y relación entre las variables.",
-      "opcion_c": "De leyes generales o teorías aplicadas a situaciones particulares.",
-      "opcion_d": "Que una variable influye o produce un cambio en otra, sin establecer causalidad."
-    },
-    {
-      "content_id": "salud-13-019",
-      "materia": "SALUD PUBLICA",
-      "tema": "marco teorico e hipotesis",
-      "numero_pregunta": 18,
-      "pregunta": "¿De dónde parten las hipótesis deductivas?",
-      "respuesta_correcta": "C",
-      "justificacion": "De leyes generales o teorías aplicadas a situaciones particulares.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "69",
-      "pagina_impresa": "62",
-      "dificultad": "medio",
-      "opcion_a": "De la observación de hechos, fenómenos, tendencias o asociaciones específicas.",
-      "opcion_b": "Una correspondencia o correlación entre dos o más variables.",
-      "opcion_c": "De leyes generales o teorías aplicadas a situaciones particulares.",
-      "opcion_d": "Unidades de observación, variables y relación entre las variables."
-    },
-    {
-      "content_id": "salud-13-020",
-      "materia": "SALUD PUBLICA",
-      "tema": "marco teorico e hipotesis",
-      "numero_pregunta": 19,
-      "pregunta": "¿En qué forma gramatical debe enunciarse una hipótesis?",
-      "respuesta_correcta": "C",
-      "justificacion": "Afirmativa.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "70",
-      "pagina_impresa": "63",
-      "dificultad": "medio",
-      "opcion_a": "Marco teórico.",
-      "opcion_b": "Ausencia de diferencia entre los valores comparados.",
-      "opcion_c": "Afirmativa.",
-      "opcion_d": "Clara, lógica y verosímil."
-    },
-    {
-      "content_id": "salud-13-021",
-      "materia": "SALUD PUBLICA",
-      "tema": "marco teorico e hipotesis",
-      "numero_pregunta": 20,
-      "pregunta": "¿Qué plantea la hipótesis nula H₀?",
-      "respuesta_correcta": "B",
-      "justificacion": "Ausencia de diferencia entre los valores comparados.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "71",
-      "pagina_impresa": "64",
-      "dificultad": "medio",
-      "opcion_a": "Clara, lógica y verosímil.",
-      "opcion_b": "Ausencia de diferencia entre los valores comparados.",
-      "opcion_c": "Afirmativa.",
-      "opcion_d": "Las relaciones entre variables y las hipótesis."
-    },
-    {
-      "content_id": "salud-13-022",
-      "materia": "SALUD PUBLICA",
-      "tema": "marco teorico e hipotesis",
-      "numero_pregunta": 21,
-      "pregunta": "¿Qué plantea la hipótesis alterna Hₐ?",
-      "respuesta_correcta": "D",
-      "justificacion": "Que sí existe una diferencia entre los valores comparados.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "71",
-      "pagina_impresa": "64",
-      "dificultad": "medio",
-      "opcion_a": "Que los datos no aportan evidencia suficiente para rechazarla.",
-      "opcion_b": "Una correspondencia o correlación entre dos o más variables.",
-      "opcion_c": "Que una variable influye o produce un cambio en otra, sin establecer causalidad.",
-      "opcion_d": "Que sí existe una diferencia entre los valores comparados."
-    },
-    {
-      "content_id": "salud-13-023",
-      "materia": "SALUD PUBLICA",
-      "tema": "marco teorico e hipotesis",
-      "numero_pregunta": 22,
-      "pregunta": "¿Qué se concluye si no se rechaza la hipótesis nula?",
-      "respuesta_correcta": "A",
-      "justificacion": "Que los datos no aportan evidencia suficiente para rechazarla.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "71",
-      "pagina_impresa": "64",
-      "dificultad": "medio",
-      "opcion_a": "Que los datos no aportan evidencia suficiente para rechazarla.",
-      "opcion_b": "Que sí existe una diferencia entre los valores comparados.",
-      "opcion_c": "Una correspondencia o correlación entre dos o más variables.",
-      "opcion_d": "De leyes generales o teorías aplicadas a situaciones particulares."
+      "justificacion": "El compendio distingue los conceptos teóricos, que se observan a través de sus manifestaciones, de los empíricos, que se refieren a fenómenos observables y medibles directamente.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+      "paginas_pdf": "61, 62",
+      "pagina_impresa": "54, 55",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "Educación en Salud",
+          "section": "Fundamentación teórica",
+          "page": 61,
+          "printed": 54,
+          "marks": [
+            [
+              0.3313,
+              0.69,
+              0.2106,
+              0.0177
+            ]
+          ]
+        },
+        {
+          "slug": "educacion-salud",
+          "label": "Educación en Salud",
+          "section": "Fundamentación teórica",
+          "page": 62,
+          "printed": 55,
+          "marks": [
+            [
+              0.4271,
+              0.3058,
+              0.1122,
+              0.018
+            ],
+            [
+              0.2364,
+              0.3592,
+              0.1122,
+              0.018
+            ]
+          ]
+        }
+      ],
+      "source": {
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-13"
+      },
+      "opcion_a": "El dato es empírico y el constructo es teórico.",
+      "opcion_b": "El dato es teórico y el constructo es empírico.",
+      "opcion_c": "Ambos son empíricos porque se incorporan al mismo estudio.",
+      "opcion_d": "Ambos son teóricos porque se interpretan mediante un marco."
     }
   ]
 }

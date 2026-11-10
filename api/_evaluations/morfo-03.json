@@ -5,519 +5,491 @@
   "topic": "forma y funcion celulares",
   "title": "Forma y función celulares",
   "number": 3,
-  "count": 30,
-  "duration": 30,
+  "count": 9,
+  "duration": 9,
   "source": "Saladin · Anatomía y fisiología",
   "questions": [
     {
-      "content_id": "morfo-03-001",
+      "content_id": "evaluacion:medicina-oficial-morfo-03-intermedio-1",
       "materia": "MORFOFUNCION",
       "tema": "forma y funcion celulares",
       "numero_pregunta": 1,
-      "pregunta": "¿Cuáles son las tres partes principales de una célula humana típica?",
-      "respuesta_correcta": "B",
-      "justificacion": "Membrana plasmática, citoplasma y núcleo.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "109",
-      "pagina_impresa": "81",
+      "pregunta": "Una célula rodea un fragmento sólido de gran tamaño y lo encierra en una vesícula interna.\n¿Qué opción corresponde al caso?",
+      "respuesta_correcta": "D",
+      "justificacion": "En la fagocitosis, la célula envuelve una partícula grande y la incorpora en una vesícula.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "127",
+      "pagina_impresa": "99",
       "dificultad": "medio",
-      "opcion_a": "Continuos, fenestrados y sinusoides.",
-      "opcion_b": "Membrana plasmática, citoplasma y núcleo.",
-      "opcion_c": "Hialino, elástico y fibrocartílago.",
-      "opcion_d": "Mesencéfalo, puente y médula oblongada."
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Forma y función celulares · Transporte vesicular",
+          "page": 127,
+          "printed": 99,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-03",
+        "chapterNumber": 3,
+        "chapter": "Forma y función celulares",
+        "section": "Transporte vesicular",
+        "printedPages": [
+          99
+        ],
+        "pdfPages": [
+          127
+        ]
+      },
+      "opcion_a": "Exocitosis",
+      "opcion_b": "Transcitosis",
+      "opcion_c": "Pinocitosis",
+      "opcion_d": "Fagocitosis"
     },
     {
-      "content_id": "morfo-03-002",
+      "content_id": "evaluacion:medicina-oficial-morfo-03-intermedio-2",
       "materia": "MORFOFUNCION",
       "tema": "forma y funcion celulares",
       "numero_pregunta": 2,
-      "pregunta": "¿Qué estructura constituye la base de la membrana plasmática?",
-      "respuesta_correcta": "C",
-      "justificacion": "Una bicapa de fosfolípidos.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "112",
-      "pagina_impresa": "84",
+      "pregunta": "En el exterior hay un soluto disuelto; la célula incorpora gotas del líquido circundante, sin englobar una partícula sólida grande.\n¿Qué opción corresponde al caso?",
+      "respuesta_correcta": "A",
+      "justificacion": "La pinocitosis incorpora porciones de líquido extracelular con sustancias disueltas.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "127",
+      "pagina_impresa": "99",
       "dificultad": "medio",
-      "opcion_a": "Un canal regulado por voltaje.",
-      "opcion_b": "Los ribosomas.",
-      "opcion_c": "Una bicapa de fosfolípidos.",
-      "opcion_d": "La presión hidrostática."
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Forma y función celulares · Transporte vesicular",
+          "page": 127,
+          "printed": 99,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-03",
+        "chapterNumber": 3,
+        "chapter": "Forma y función celulares",
+        "section": "Transporte vesicular",
+        "printedPages": [
+          99
+        ],
+        "pdfPages": [
+          127
+        ]
+      },
+      "opcion_a": "Pinocitosis",
+      "opcion_b": "Fagocitosis",
+      "opcion_c": "Exocitosis",
+      "opcion_d": "Transcitosis"
     },
     {
-      "content_id": "morfo-03-003",
+      "content_id": "evaluacion:medicina-oficial-morfo-03-intermedio-3",
       "materia": "MORFOFUNCION",
       "tema": "forma y funcion celulares",
       "numero_pregunta": 3,
-      "pregunta": "¿Cómo se orientan los fosfolípidos en la membrana?",
+      "pregunta": "Se observa que una vesícula llega desde el citoplasma, se fusiona con la superficie y vacía su carga al exterior.\n¿Qué opción corresponde al caso?",
       "respuesta_correcta": "A",
-      "justificacion": "Cabezas hidrofílicas hacia el agua; colas hidrofóbicas hacia el interior.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "112",
-      "pagina_impresa": "84",
+      "justificacion": "La fusión de la vesícula con la membrana plasmática expone su contenido al exterior durante la exocitosis.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "128",
+      "pagina_impresa": "100",
       "dificultad": "medio",
-      "opcion_a": "Cabezas hidrofílicas hacia el agua; colas hidrofóbicas hacia el interior.",
-      "opcion_b": "El rugoso tiene ribosomas adheridos; el liso carece de ellos.",
-      "opcion_c": "Extiende la extremidad opuesta para sostener el peso durante la retirada.",
-      "opcion_d": "El queratinizado tiene células superficiales muertas llenas de queratina."
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Forma y función celulares · Transporte vesicular",
+          "page": 128,
+          "printed": 100,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-03",
+        "chapterNumber": 3,
+        "chapter": "Forma y función celulares",
+        "section": "Transporte vesicular",
+        "printedPages": [
+          100
+        ],
+        "pdfPages": [
+          128
+        ]
+      },
+      "opcion_a": "Exocitosis",
+      "opcion_b": "Transcitosis",
+      "opcion_c": "Fagocitosis",
+      "opcion_d": "Pinocitosis"
     },
     {
-      "content_id": "morfo-03-034",
+      "content_id": "evaluacion:medicina-oficial-morfo-03-intermedio-4",
       "materia": "MORFOFUNCION",
       "tema": "forma y funcion celulares",
       "numero_pregunta": 4,
-      "pregunta": "¿Qué tipo de canal se abre por un cambio de potencial eléctrico?",
-      "respuesta_correcta": "B",
-      "justificacion": "Un canal regulado por voltaje.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "114",
-      "pagina_impresa": "86",
+      "pregunta": "Se sigue una molécula marcada: entra por una cara de la célula y sale intacta por la otra.\n¿Qué opción corresponde al caso?",
+      "respuesta_correcta": "D",
+      "justificacion": "En la transcitosis, la endocitosis ocurre en una cara y la exocitosis en la opuesta.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "128",
+      "pagina_impresa": "100",
       "dificultad": "medio",
-      "opcion_a": "Una bicapa de fosfolípidos.",
-      "opcion_b": "Un canal regulado por voltaje.",
-      "opcion_c": "La presión hidrostática.",
-      "opcion_d": "Sus carbohidratos de superficie."
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Forma y función celulares · Transporte vesicular",
+          "page": 128,
+          "printed": 100,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-03",
+        "chapterNumber": 3,
+        "chapter": "Forma y función celulares",
+        "section": "Transporte vesicular",
+        "printedPages": [
+          100
+        ],
+        "pdfPages": [
+          128
+        ]
+      },
+      "opcion_a": "Fagocitosis",
+      "opcion_b": "Exocitosis",
+      "opcion_c": "Pinocitosis",
+      "opcion_d": "Transcitosis"
     },
     {
-      "content_id": "morfo-03-035",
+      "content_id": "evaluacion:medicina-oficial-morfo-03-ampliacion-01-umss",
       "materia": "MORFOFUNCION",
       "tema": "forma y funcion celulares",
       "numero_pregunta": 5,
-      "pregunta": "¿Qué tipo de canal se abre cuando se une una sustancia química?",
-      "respuesta_correcta": "C",
-      "justificacion": "Un canal regulado por ligandos.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "114",
-      "pagina_impresa": "86",
-      "dificultad": "medio",
-      "opcion_a": "La exocitosis.",
-      "opcion_b": "Una bicapa de fosfolípidos.",
-      "opcion_c": "Un canal regulado por ligandos.",
-      "opcion_d": "Sus carbohidratos de superficie."
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Por cada ATP, la bomba sodio-potasio introduce tres Na⁺ y expulsa dos K⁺.\n2. Si el paso neto de líquido a través de una membrana se debe a una diferencia de presión hidrostática, el mecanismo es filtración.",
+      "respuesta_correcta": "B",
+      "justificacion": "1. Incorrecta. La proporción se invierte. Salen tres Na⁺ y entran dos K⁺.\n2. Correcta. La presión empuja el líquido a través de la membrana durante la filtración.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "125, 129",
+      "pagina_impresa": "97, 101",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Forma y función celulares · Transporte activo / Transporte",
+          "page": 125,
+          "printed": 97,
+          "marks": []
+        },
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Forma y función celulares · Transporte activo / Transporte",
+          "page": 129,
+          "printed": 101,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-03",
+        "chapterNumber": 3,
+        "chapter": "Forma y función celulares",
+        "section": "Transporte activo / Transporte",
+        "printedPages": [
+          97,
+          101
+        ],
+        "pdfPages": [
+          125,
+          129
+        ],
+        "statements": [
+          {
+            "pdfPage": 125,
+            "printedPage": 97,
+            "section": "Transporte activo",
+            "cardId": "morfo-03-017"
+          },
+          {
+            "pdfPage": 129,
+            "printedPage": 101,
+            "section": "Transporte",
+            "cardId": "morfo-03-015"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. La proporción se invierte. Salen tres Na⁺ y entran dos K⁺. 2. Correcta. La presión empuja el líquido a través de la membrana durante la filtración.",
+        "B": "Solo la afirmación 2 es correcta.",
+        "C": "1. Incorrecta. La proporción se invierte. Salen tres Na⁺ y entran dos K⁺.",
+        "D": "2. Correcta. La presión empuja el líquido a través de la membrana durante la filtración."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "morfo-03-004",
+      "content_id": "evaluacion:medicina-oficial-morfo-03-ampliacion-02-umss",
       "materia": "MORFOFUNCION",
       "tema": "forma y funcion celulares",
       "numero_pregunta": 6,
-      "pregunta": "¿Qué componente del glucocáliz ayuda a identificar las células?",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Una célula pierde volumen si se coloca en una solución hipertónica.\n2. Que una solución sea isotónica implica que las moléculas de agua dejan de cruzar la membrana.",
       "respuesta_correcta": "A",
-      "justificacion": "Sus carbohidratos de superficie.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "116",
-      "pagina_impresa": "88",
-      "dificultad": "medio",
-      "opcion_a": "Sus carbohidratos de superficie.",
-      "opcion_b": "Un canal regulado por ligandos.",
-      "opcion_c": "Pierde agua y se encoge.",
-      "opcion_d": "Una bicapa de fosfolípidos."
+      "justificacion": "1. Correcta. El agua sale por ósmosis y la célula se encoge.\n2. Incorrecta. El volumen permanece estable porque no hay flujo neto de agua. Puede haber intercambio en ambos sentidos.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "122",
+      "pagina_impresa": "94",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Forma y función celulares · Tonicidad / 3.3 Tonicidad",
+          "page": 122,
+          "printed": 94,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-03",
+        "chapterNumber": 3,
+        "chapter": "Forma y función celulares",
+        "section": "Tonicidad / 3.3 Tonicidad",
+        "printedPages": [
+          94
+        ],
+        "pdfPages": [
+          122
+        ],
+        "statements": [
+          {
+            "pdfPage": 122,
+            "printedPage": 94,
+            "section": "Tonicidad",
+            "cardId": "morfo-03-012"
+          },
+          {
+            "pdfPage": 122,
+            "printedPage": 94,
+            "section": "3.3 Tonicidad",
+            "anchor": "ganan y pierden agua a velocidades iguales"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "Solo la afirmación 1 es correcta.",
+        "B": "1. Correcta. El agua sale por ósmosis y la célula se encoge. 2. Incorrecta. El volumen permanece estable porque no hay flujo neto de agua. Puede haber intercambio en ambos sentidos.",
+        "C": "2. Incorrecta. El volumen permanece estable porque no hay flujo neto de agua. Puede haber intercambio en ambos sentidos.",
+        "D": "1. Correcta. El agua sale por ósmosis y la célula se encoge."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "morfo-03-005",
+      "content_id": "evaluacion:medicina-oficial-morfo-03-ampliacion-03-umss",
       "materia": "MORFOFUNCION",
       "tema": "forma y funcion celulares",
       "numero_pregunta": 7,
-      "pregunta": "¿Qué hacen las microvellosidades?",
-      "respuesta_correcta": "C",
-      "justificacion": "Aumentan la superficie celular para la absorción.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "116",
-      "pagina_impresa": "88",
-      "dificultad": "medio",
-      "opcion_a": "Disminuye, facilitando la liberación de oxígeno.",
-      "opcion_b": "Producir ovocitos y secretar hormonas sexuales.",
-      "opcion_c": "Aumentan la superficie celular para la absorción.",
-      "opcion_d": "Disminuye por debajo de la presión atmosférica."
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. El armazón de los microtúbulos se construye con actina, del mismo modo que los microfilamentos.\n2. Si el canal se abre al cambiar el potencial de membrana, se clasifica como regulado por ligando.",
+      "respuesta_correcta": "D",
+      "justificacion": "1. Incorrecta. Los microtúbulos se forman con tubulina. La actina forma los microfilamentos.\n2. Incorrecta. El estímulo de apertura es eléctrico. En un canal regulado por ligando, el estímulo es la unión de una sustancia.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "114, 130",
+      "pagina_impresa": "86, 102",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Forma y función celulares · Citoesqueleto / Canales",
+          "page": 114,
+          "printed": 86,
+          "marks": []
+        },
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Forma y función celulares · Citoesqueleto / Canales",
+          "page": 130,
+          "printed": 102,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-03",
+        "chapterNumber": 3,
+        "chapter": "Forma y función celulares",
+        "section": "Citoesqueleto / Canales",
+        "printedPages": [
+          86,
+          102
+        ],
+        "pdfPages": [
+          114,
+          130
+        ],
+        "statements": [
+          {
+            "pdfPage": 130,
+            "printedPage": 102,
+            "section": "Citoesqueleto",
+            "cardId": "morfo-03-033"
+          },
+          {
+            "pdfPage": 114,
+            "printedPage": 86,
+            "section": "Canales",
+            "cardId": "morfo-03-034"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. Los microtúbulos se forman con tubulina. La actina forma los microfilamentos.",
+        "B": "2. Incorrecta. El estímulo de apertura es eléctrico. En un canal regulado por ligando, el estímulo es la unión de una sustancia.",
+        "C": "1. Incorrecta. Los microtúbulos se forman con tubulina. La actina forma los microfilamentos. 2. Incorrecta. El estímulo de apertura es eléctrico. En un canal regulado por ligando, el estímulo es la unión de una sustancia.",
+        "D": "Ninguna afirmación es correcta."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "morfo-03-006",
+      "content_id": "evaluacion:medicina-oficial-morfo-03-ampliacion-04-umss",
       "materia": "MORFOFUNCION",
       "tema": "forma y funcion celulares",
       "numero_pregunta": 8,
-      "pregunta": "¿Qué hacen los cilios móviles?",
-      "respuesta_correcta": "D",
-      "justificacion": "Desplazan sustancias sobre la superficie celular.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "118",
-      "pagina_impresa": "90",
-      "dificultad": "medio",
-      "opcion_a": "La facilitada utiliza proteínas transportadoras.",
-      "opcion_b": "Entra agua y se hincha; puede romperse.",
-      "opcion_c": "Mueve sustancias contra su gradiente utilizando energía.",
-      "opcion_d": "Desplazan sustancias sobre la superficie celular."
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Las proteínas pueden llegar al aparato de Golgi para ser modificadas y clasificadas antes de continuar hacia su destino.\n2. Los peroxisomas intervienen en reacciones oxidativas y pueden descomponer el peróxido de hidrógeno.",
+      "respuesta_correcta": "C",
+      "justificacion": "1. Correcta. El Golgi procesa y empaqueta productos que luego se distribuyen a destinos celulares diferentes.\n2. Correcta. Usan oxígeno para oxidar ciertas sustancias y contienen sistemas que degradan el peróxido resultante.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "134, 135",
+      "pagina_impresa": "106, 107",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Forma y función celulares · Organelos",
+          "page": 134,
+          "printed": 106,
+          "marks": []
+        },
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Forma y función celulares · Organelos",
+          "page": 135,
+          "printed": 107,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-03",
+        "chapterNumber": 3,
+        "chapter": "Forma y función celulares",
+        "section": "Organelos",
+        "printedPages": [
+          106,
+          107
+        ],
+        "pdfPages": [
+          134,
+          135
+        ],
+        "statements": [
+          {
+            "pdfPage": 134,
+            "printedPage": 106,
+            "section": "Organelos",
+            "cardId": "morfo-03-029"
+          },
+          {
+            "pdfPage": 135,
+            "printedPage": 107,
+            "section": "Organelos",
+            "cardId": "morfo-03-031"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "2. Correcta. Usan oxígeno para oxidar ciertas sustancias y contienen sistemas que degradan el peróxido resultante.",
+        "B": "1. Correcta. El Golgi procesa y empaqueta productos que luego se distribuyen a destinos celulares diferentes.",
+        "C": "Ambas afirmaciones son correctas.",
+        "D": "1. Correcta. El Golgi procesa y empaqueta productos que luego se distribuyen a destinos celulares diferentes. 2. Correcta. Usan oxígeno para oxidar ciertas sustancias y contienen sistemas que degradan el peróxido resultante."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "morfo-03-007",
+      "content_id": "evaluacion:banco-verificado:morfo-03:membrana",
       "materia": "MORFOFUNCION",
       "tema": "forma y funcion celulares",
       "numero_pregunta": 9,
-      "pregunta": "¿Qué estructura permite el movimiento del espermatozoide?",
+      "pregunta": "Un fosfolípido se desplaza lateralmente en la cara que ya ocupa. ¿Qué relación con el agua conserva durante ese movimiento?",
       "respuesta_correcta": "A",
-      "justificacion": "El flagelo.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "119",
-      "pagina_impresa": "91",
-      "dificultad": "medio",
-      "opcion_a": "El flagelo.",
-      "opcion_b": "La elastina.",
-      "opcion_c": "Fructosa.",
-      "opcion_d": "La enartrosis."
-    },
-    {
-      "content_id": "morfo-03-008",
-      "materia": "MORFOFUNCION",
-      "tema": "forma y funcion celulares",
-      "numero_pregunta": 10,
-      "pregunta": "¿Qué es la difusión simple?",
-      "respuesta_correcta": "A",
-      "justificacion": "El movimiento neto de partículas desde mayor hacia menor concentración.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "119",
-      "pagina_impresa": "91",
-      "dificultad": "medio",
-      "opcion_a": "El movimiento neto de partículas desde mayor hacia menor concentración.",
-      "opcion_b": "Endocitosis en un lado de la célula y exocitosis en el opuesto.",
-      "opcion_c": "El transporte de dos sustancias en direcciones opuestas.",
-      "opcion_d": "El movimiento de agua a través de una membrana selectivamente permeable."
-    },
-    {
-      "content_id": "morfo-03-011",
-      "materia": "MORFOFUNCION",
-      "tema": "forma y funcion celulares",
-      "numero_pregunta": 11,
-      "pregunta": "¿La ósmosis requiere ATP?",
-      "respuesta_correcta": "C",
-      "justificacion": "No.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "119",
-      "pagina_impresa": "91",
-      "dificultad": "medio",
-      "opcion_a": "La actina.",
-      "opcion_b": "La mitocondria.",
-      "opcion_c": "No.",
-      "opcion_d": "El núcleo."
-    },
-    {
-      "content_id": "morfo-03-010",
-      "materia": "MORFOFUNCION",
-      "tema": "forma y funcion celulares",
-      "numero_pregunta": 12,
-      "pregunta": "¿Qué es la ósmosis?",
-      "respuesta_correcta": "B",
-      "justificacion": "El movimiento de agua a través de una membrana selectivamente permeable.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "120",
-      "pagina_impresa": "92",
-      "dificultad": "medio",
-      "opcion_a": "El movimiento neto de partículas desde mayor hacia menor concentración.",
-      "opcion_b": "El movimiento de agua a través de una membrana selectivamente permeable.",
-      "opcion_c": "El transporte de dos sustancias en direcciones opuestas.",
-      "opcion_d": "Endocitosis en un lado de la célula y exocitosis en el opuesto."
-    },
-    {
-      "content_id": "morfo-03-012",
-      "materia": "MORFOFUNCION",
-      "tema": "forma y funcion celulares",
-      "numero_pregunta": 13,
-      "pregunta": "¿Qué le ocurre a una célula en una solución hipertónica?",
-      "respuesta_correcta": "B",
-      "justificacion": "Pierde agua y se encoge.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "122",
-      "pagina_impresa": "94",
-      "dificultad": "medio",
-      "opcion_a": "La presión hidrostática.",
-      "opcion_b": "Pierde agua y se encoge.",
-      "opcion_c": "Una bicapa de fosfolípidos.",
-      "opcion_d": "Sus carbohidratos de superficie."
-    },
-    {
-      "content_id": "morfo-03-013",
-      "materia": "MORFOFUNCION",
-      "tema": "forma y funcion celulares",
-      "numero_pregunta": 14,
-      "pregunta": "¿Qué le ocurre a una célula en una solución hipotónica?",
-      "respuesta_correcta": "D",
-      "justificacion": "Entra agua y se hincha; puede romperse.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "122",
-      "pagina_impresa": "94",
-      "dificultad": "medio",
-      "opcion_a": "Mueve sustancias contra su gradiente utilizando energía.",
-      "opcion_b": "Pierde agua y se encoge.",
-      "opcion_c": "Desplazan sustancias sobre la superficie celular.",
-      "opcion_d": "Entra agua y se hincha; puede romperse."
-    },
-    {
-      "content_id": "morfo-03-009",
-      "materia": "MORFOFUNCION",
-      "tema": "forma y funcion celulares",
-      "numero_pregunta": 15,
-      "pregunta": "¿Qué diferencia a la difusión facilitada de la simple?",
-      "respuesta_correcta": "D",
-      "justificacion": "La facilitada utiliza proteínas transportadoras.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "123",
-      "pagina_impresa": "95",
-      "dificultad": "medio",
-      "opcion_a": "Una bicapa de fosfolípidos.",
-      "opcion_b": "Un canal regulado por ligandos.",
-      "opcion_c": "Sus carbohidratos de superficie.",
-      "opcion_d": "La facilitada utiliza proteínas transportadoras."
-    },
-    {
-      "content_id": "morfo-03-018",
-      "materia": "MORFOFUNCION",
-      "tema": "forma y funcion celulares",
-      "numero_pregunta": 16,
-      "pregunta": "¿Qué es el cotransporte unidireccional?",
-      "respuesta_correcta": "C",
-      "justificacion": "El transporte de dos sustancias en la misma dirección.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "123",
-      "pagina_impresa": "95",
-      "dificultad": "medio",
-      "opcion_a": "El movimiento de agua a través de una membrana selectivamente permeable.",
-      "opcion_b": "El movimiento neto de partículas desde mayor hacia menor concentración.",
-      "opcion_c": "El transporte de dos sustancias en la misma dirección.",
-      "opcion_d": "Endocitosis en un lado de la célula y exocitosis en el opuesto."
-    },
-    {
-      "content_id": "morfo-03-019",
-      "materia": "MORFOFUNCION",
-      "tema": "forma y funcion celulares",
-      "numero_pregunta": 17,
-      "pregunta": "¿Qué es el cotransporte bidireccional?",
-      "respuesta_correcta": "C",
-      "justificacion": "El transporte de dos sustancias en direcciones opuestas.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "123",
-      "pagina_impresa": "95",
-      "dificultad": "medio",
-      "opcion_a": "Endocitosis en un lado de la célula y exocitosis en el opuesto.",
-      "opcion_b": "El movimiento neto de partículas desde mayor hacia menor concentración.",
-      "opcion_c": "El transporte de dos sustancias en direcciones opuestas.",
-      "opcion_d": "El movimiento de agua a través de una membrana selectivamente permeable."
-    },
-    {
-      "content_id": "morfo-03-017",
-      "materia": "MORFOFUNCION",
-      "tema": "forma y funcion celulares",
-      "numero_pregunta": 18,
-      "pregunta": "¿Cuántos iones transporta la bomba sodio-potasio por cada ATP?",
-      "respuesta_correcta": "D",
-      "justificacion": "Expulsa 3 Na⁺ e introduce 2 K⁺.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "125",
-      "pagina_impresa": "97",
-      "dificultad": "medio",
-      "opcion_a": "Disminuye el CO₂ y aumenta el pH.",
-      "opcion_b": "7 cervicales, 12 torácicas y 5 lumbares.",
-      "opcion_c": "C1: atlas. C2: axis o eje.",
-      "opcion_d": "Expulsa 3 Na⁺ e introduce 2 K⁺."
-    },
-    {
-      "content_id": "morfo-03-020",
-      "materia": "MORFOFUNCION",
-      "tema": "forma y funcion celulares",
-      "numero_pregunta": 19,
-      "pregunta": "¿Qué proceso incorpora partículas grandes en vesículas?",
-      "respuesta_correcta": "A",
-      "justificacion": "La fagocitosis.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "127",
-      "pagina_impresa": "99",
-      "dificultad": "medio",
-      "opcion_a": "La fagocitosis.",
-      "opcion_b": "La exocitosis.",
-      "opcion_c": "La mitocondria.",
-      "opcion_d": "Los ribosomas."
-    },
-    {
-      "content_id": "morfo-03-021",
-      "materia": "MORFOFUNCION",
-      "tema": "forma y funcion celulares",
-      "numero_pregunta": 20,
-      "pregunta": "¿Qué proceso incorpora líquido extracelular en vesículas?",
-      "respuesta_correcta": "C",
-      "justificacion": "La pinocitosis.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "127",
-      "pagina_impresa": "99",
-      "dificultad": "medio",
-      "opcion_a": "Los lisosomas.",
-      "opcion_b": "La mitocondria.",
-      "opcion_c": "La pinocitosis.",
-      "opcion_d": "La exocitosis."
-    },
-    {
-      "content_id": "morfo-03-022",
-      "materia": "MORFOFUNCION",
-      "tema": "forma y funcion celulares",
-      "numero_pregunta": 21,
-      "pregunta": "¿Qué proceso libera sustancias cuando una vesícula se fusiona con la membrana?",
-      "respuesta_correcta": "C",
-      "justificacion": "La exocitosis.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "128",
-      "pagina_impresa": "100",
-      "dificultad": "medio",
-      "opcion_a": "Los peroxisomas.",
-      "opcion_b": "Los lisosomas.",
-      "opcion_c": "La exocitosis.",
-      "opcion_d": "La fagocitosis."
-    },
-    {
-      "content_id": "morfo-03-023",
-      "materia": "MORFOFUNCION",
-      "tema": "forma y funcion celulares",
-      "numero_pregunta": 22,
-      "pregunta": "¿Qué es la transcitosis?",
-      "respuesta_correcta": "A",
-      "justificacion": "Endocitosis en un lado de la célula y exocitosis en el opuesto.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "128",
-      "pagina_impresa": "100",
-      "dificultad": "medio",
-      "opcion_a": "Endocitosis en un lado de la célula y exocitosis en el opuesto.",
-      "opcion_b": "El movimiento neto de partículas desde mayor hacia menor concentración.",
-      "opcion_c": "El transporte de dos sustancias en direcciones opuestas.",
-      "opcion_d": "El movimiento de agua a través de una membrana selectivamente permeable."
-    },
-    {
-      "content_id": "morfo-03-015",
-      "materia": "MORFOFUNCION",
-      "tema": "forma y funcion celulares",
-      "numero_pregunta": 23,
-      "pregunta": "¿Qué fuerza impulsa la filtración a través de una membrana?",
-      "respuesta_correcta": "B",
-      "justificacion": "La presión hidrostática.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "129",
-      "pagina_impresa": "101",
-      "dificultad": "medio",
-      "opcion_a": "La exocitosis.",
-      "opcion_b": "La presión hidrostática.",
-      "opcion_c": "Pierde agua y se encoge.",
-      "opcion_d": "Una bicapa de fosfolípidos."
-    },
-    {
-      "content_id": "morfo-03-024",
-      "materia": "MORFOFUNCION",
-      "tema": "forma y funcion celulares",
-      "numero_pregunta": 24,
-      "pregunta": "¿Qué organelo contiene la mayor parte del ADN celular?",
-      "respuesta_correcta": "B",
-      "justificacion": "El núcleo.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "130",
-      "pagina_impresa": "102",
-      "dificultad": "medio",
-      "opcion_a": "La tubulina.",
-      "opcion_b": "El núcleo.",
-      "opcion_c": "La mitocondria.",
-      "opcion_d": "La exocitosis."
-    },
-    {
-      "content_id": "morfo-03-026",
-      "materia": "MORFOFUNCION",
-      "tema": "forma y funcion celulares",
-      "numero_pregunta": 25,
-      "pregunta": "¿Dónde se ensamblan las subunidades ribosómicas?",
-      "respuesta_correcta": "D",
-      "justificacion": "En los nucléolos.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "130",
-      "pagina_impresa": "102",
-      "dificultad": "medio",
-      "opcion_a": "En el citosol.",
-      "opcion_b": "En el epidídimo.",
-      "opcion_c": "En la médula ósea.",
-      "opcion_d": "En los nucléolos."
-    },
-    {
-      "content_id": "morfo-03-032",
-      "materia": "MORFOFUNCION",
-      "tema": "forma y funcion celulares",
-      "numero_pregunta": 26,
-      "pregunta": "¿Qué proteína forma los microfilamentos?",
-      "respuesta_correcta": "B",
-      "justificacion": "La actina.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "130",
-      "pagina_impresa": "102",
-      "dificultad": "medio",
-      "opcion_a": "La tubulina.",
-      "opcion_b": "La actina.",
-      "opcion_c": "La exocitosis.",
-      "opcion_d": "La pinocitosis."
-    },
-    {
-      "content_id": "morfo-03-033",
-      "materia": "MORFOFUNCION",
-      "tema": "forma y funcion celulares",
-      "numero_pregunta": 27,
-      "pregunta": "¿Qué proteína forma los microtúbulos?",
-      "respuesta_correcta": "B",
-      "justificacion": "La tubulina.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "130",
-      "pagina_impresa": "102",
-      "dificultad": "medio",
-      "opcion_a": "La fagocitosis.",
-      "opcion_b": "La tubulina.",
-      "opcion_c": "La exocitosis.",
-      "opcion_d": "La mitocondria."
-    },
-    {
-      "content_id": "morfo-03-028",
-      "materia": "MORFOFUNCION",
-      "tema": "forma y funcion celulares",
-      "numero_pregunta": 28,
-      "pregunta": "¿Qué distingue al retículo endoplásmico rugoso del liso?",
-      "respuesta_correcta": "D",
-      "justificacion": "El rugoso tiene ribosomas adheridos; el liso carece de ellos.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "132",
-      "pagina_impresa": "104",
-      "dificultad": "medio",
-      "opcion_a": "Una base nitrogenada, una pentosa y uno o más grupos fosfato.",
-      "opcion_b": "El trombo permanece adherido; el émbolo circula por la sangre.",
-      "opcion_c": "Cabezas hidrofílicas hacia el agua; colas hidrofóbicas hacia el interior.",
-      "opcion_d": "El rugoso tiene ribosomas adheridos; el liso carece de ellos."
-    },
-    {
-      "content_id": "morfo-03-027",
-      "materia": "MORFOFUNCION",
-      "tema": "forma y funcion celulares",
-      "numero_pregunta": 29,
-      "pregunta": "¿Qué estructuras realizan la síntesis de proteínas?",
-      "respuesta_correcta": "D",
-      "justificacion": "Los ribosomas.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "133",
-      "pagina_impresa": "105",
-      "dificultad": "medio",
-      "opcion_a": "La tubulina.",
-      "opcion_b": "El aparato de Golgi.",
-      "opcion_c": "La actina.",
-      "opcion_d": "Los ribosomas."
-    },
-    {
-      "content_id": "morfo-03-025",
-      "materia": "MORFOFUNCION",
-      "tema": "forma y funcion celulares",
-      "numero_pregunta": 30,
-      "pregunta": "¿Qué organelo produce la mayor parte del ATP por respiración aeróbica?",
-      "respuesta_correcta": "A",
-      "justificacion": "La mitocondria.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "135",
-      "pagina_impresa": "107",
-      "dificultad": "medio",
-      "opcion_a": "La mitocondria.",
-      "opcion_b": "La fagocitosis.",
-      "opcion_c": "El aparato de Golgi.",
-      "opcion_d": "Los lisosomas."
+      "justificacion": "El desplazamiento lateral ocurre en el plano de la bicapa. Las cabezas con fosfato siguen orientadas al agua de esa cara.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "112",
+      "pagina_impresa": "84",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 3 · Membrana plasmática · Bicapa de fosfolípidos",
+          "page": 112,
+          "printed": 84,
+          "marks": [
+            [
+              0.7542,
+              0.1174,
+              0.0505,
+              0.0111
+            ],
+            [
+              0.4977,
+              0.1768,
+              0.1862,
+              0.0111
+            ]
+          ]
+        }
+      ],
+      "source": {
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-03"
+      },
+      "opcion_a": "Su cabeza con fosfato permanece orientada hacia el medio acuoso.",
+      "opcion_b": "Su cabeza con fosfato pasa a quedar enfrentada al centro de la bicapa.",
+      "opcion_c": "Su cabeza atraviesa la bicapa y queda expuesta en la cara opuesta.",
+      "opcion_d": "Su cola pasa a contactar el agua mientras la cabeza queda en el centro."
     }
   ]
 }

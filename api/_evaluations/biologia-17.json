@@ -5,519 +5,472 @@
   "topic": "respuesta inmunitaria",
   "title": "Bases celulares de la respuesta inmunitaria",
   "number": 17,
-  "count": 30,
-  "duration": 30,
+  "count": 9,
+  "duration": 9,
   "source": "Biología celular biomédica",
   "questions": [
     {
-      "content_id": "bio-17-001",
+      "content_id": "evaluacion:medicina-oficial-biologia-17-intermedio-1",
       "materia": "BIOLOGIA CELULAR",
       "tema": "respuesta inmunitaria",
       "numero_pregunta": 1,
-      "pregunta": "¿Qué tipo de inmunidad aumenta su magnitud y capacidad de defensa con exposiciones sucesivas?",
-      "respuesta_correcta": "C",
-      "justificacion": "La inmunidad adaptativa.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "700",
-      "pagina_impresa": "700",
+      "pregunta": "Una proteína originada dentro de la célula se fragmenta en el proteasoma. Se identifica la vía de presentación que utiliza esos péptidos.\n¿Qué opción corresponde al caso?",
+      "respuesta_correcta": "A",
+      "justificacion": "En la vía de CPH de clase I, el proteasoma aporta péptidos derivados de proteínas intracelulares.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+      "paginas_pdf": "717",
+      "pagina_impresa": "",
       "dificultad": "medio",
-      "opcion_a": "La humoral.",
-      "opcion_b": "Células B de memoria.",
-      "opcion_c": "La inmunidad adaptativa.",
-      "opcion_d": "Proteínas extracelulares."
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Bases celulares de la respuesta inmunitaria · Presentación de clase I",
+          "page": 717,
+          "printed": null,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-17",
+        "chapterNumber": 17,
+        "chapter": "Bases celulares de la respuesta inmunitaria",
+        "section": "Presentación de clase I",
+        "printedPages": [],
+        "pdfPages": [
+          717
+        ]
+      },
+      "opcion_a": "Presentación por CPH de clase I",
+      "opcion_b": "Presentación por CPH de clase II",
+      "opcion_c": "Coinhibición del linfocito T",
+      "opcion_d": "Coestimulación del linfocito T"
     },
     {
-      "content_id": "bio-17-002",
+      "content_id": "evaluacion:medicina-oficial-biologia-17-intermedio-2",
       "materia": "BIOLOGIA CELULAR",
       "tema": "respuesta inmunitaria",
       "numero_pregunta": 2,
-      "pregunta": "¿En qué tejido se originan las células del sistema inmunitario?",
-      "respuesta_correcta": "A",
-      "justificacion": "En la médula ósea.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "700",
-      "pagina_impresa": "700",
+      "pregunta": "Una célula incorpora una proteína desde fuera y la procesa. Se pide la vía que utiliza péptidos de ese origen.\n¿Qué opción corresponde al caso?",
+      "respuesta_correcta": "D",
+      "justificacion": "En la vía de CPH de clase II se procesan y presentan típicamente péptidos de proteínas que se incorporaron desde el exterior.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+      "paginas_pdf": "718",
+      "pagina_impresa": "",
       "dificultad": "medio",
-      "opcion_a": "En la médula ósea.",
-      "opcion_b": "En el citosol.",
-      "opcion_c": "En las células de Leydig.",
-      "opcion_d": "En las plaquetas."
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Bases celulares de la respuesta inmunitaria · Presentación de clase II",
+          "page": 718,
+          "printed": null,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-17",
+        "chapterNumber": 17,
+        "chapter": "Bases celulares de la respuesta inmunitaria",
+        "section": "Presentación de clase II",
+        "printedPages": [],
+        "pdfPages": [
+          718
+        ]
+      },
+      "opcion_a": "Presentación por CPH de clase I",
+      "opcion_b": "Coinhibición del linfocito T",
+      "opcion_c": "Coestimulación del linfocito T",
+      "opcion_d": "Presentación por CPH de clase II"
     },
     {
-      "content_id": "bio-17-003",
+      "content_id": "evaluacion:medicina-oficial-biologia-17-intermedio-3",
       "materia": "BIOLOGIA CELULAR",
       "tema": "respuesta inmunitaria",
       "numero_pregunta": 3,
-      "pregunta": "¿Qué inmunidad es la defensa principal contra microorganismos extracelulares y sus toxinas?",
+      "pregunta": "El receptor ya reconoce el péptido presentado. Se analiza una segunda señal cuyo efecto es facilitar la activación final.\n¿Qué opción corresponde al caso?",
       "respuesta_correcta": "B",
-      "justificacion": "La humoral.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "701",
-      "pagina_impresa": "701",
+      "justificacion": "La coestimulación aporta una señal adicional que favorece la activación del linfocito T tras reconocer el antígeno.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+      "paginas_pdf": "714",
+      "pagina_impresa": "",
       "dificultad": "medio",
-      "opcion_a": "El proteasoma.",
-      "opcion_b": "La humoral.",
-      "opcion_c": "La inmunidad adaptativa.",
-      "opcion_d": "La inhibe."
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Bases celulares de la respuesta inmunitaria · Coestimulación",
+          "page": 714,
+          "printed": null,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-17",
+        "chapterNumber": 17,
+        "chapter": "Bases celulares de la respuesta inmunitaria",
+        "section": "Coestimulación",
+        "printedPages": [],
+        "pdfPages": [
+          714
+        ]
+      },
+      "opcion_a": "Coinhibición del linfocito T",
+      "opcion_b": "Coestimulación del linfocito T",
+      "opcion_c": "Presentación por CPH de clase I",
+      "opcion_d": "Presentación por CPH de clase II"
     },
     {
-      "content_id": "bio-17-004",
+      "content_id": "evaluacion:medicina-oficial-biologia-17-intermedio-4",
       "materia": "BIOLOGIA CELULAR",
       "tema": "respuesta inmunitaria",
       "numero_pregunta": 4,
-      "pregunta": "¿Qué es la tolerancia inmunitaria?",
+      "pregunta": "Hay reconocimiento del antígeno, pero una señal adicional limita la respuesta. Se clasifica esa señal por su efecto inhibidor.\n¿Qué opción corresponde al caso?",
       "respuesta_correcta": "D",
-      "justificacion": "La capacidad de no responder contra antígenos propios o sin señales de peligro.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "701",
-      "pagina_impresa": "701",
+      "justificacion": "Una señal de coinhibición reduce la activación del linfocito T y contribuye a mantener la tolerancia.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+      "paginas_pdf": "714",
+      "pagina_impresa": "",
       "dificultad": "medio",
-      "opcion_a": "Apoptosis al dejar de recibir estimulación antigénica.",
-      "opcion_b": "El conjunto de alelos del CPH presentes en un cromosoma.",
-      "opcion_c": "Un estado de no respuesta que no implica su muerte.",
-      "opcion_d": "La capacidad de no responder contra antígenos propios o sin señales de peligro."
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Bases celulares de la respuesta inmunitaria · Coinhibición",
+          "page": 714,
+          "printed": null,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-17",
+        "chapterNumber": 17,
+        "chapter": "Bases celulares de la respuesta inmunitaria",
+        "section": "Coinhibición",
+        "printedPages": [],
+        "pdfPages": [
+          714
+        ]
+      },
+      "opcion_a": "Presentación por CPH de clase I",
+      "opcion_b": "Coestimulación del linfocito T",
+      "opcion_c": "Presentación por CPH de clase II",
+      "opcion_d": "Coinhibición del linfocito T"
     },
     {
-      "content_id": "bio-17-005",
+      "content_id": "evaluacion:medicina-oficial-biologia-17-ampliacion-01-umss",
       "materia": "BIOLOGIA CELULAR",
       "tema": "respuesta inmunitaria",
       "numero_pregunta": 5,
-      "pregunta": "¿Qué marcadores distinguen linfocitos T cooperadores y citotóxicos?",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. La región constante de una inmunoglobulina es la que se acopla de forma específica a su epítopo.\n2. Las dos cadenas ligeras de una inmunoglobulina pueden ser κ o λ, pero del mismo tipo entre sí.",
       "respuesta_correcta": "B",
-      "justificacion": "Cooperadores: CD4. Citotóxicos: CD8.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "702",
-      "pagina_impresa": "702",
-      "dificultad": "medio",
-      "opcion_a": "GATA-3.",
-      "opcion_b": "Cooperadores: CD4. Citotóxicos: CD8.",
-      "opcion_c": "Los linfocitos T CD4+.",
-      "opcion_d": "CD18."
+      "justificacion": "1. Incorrecta. El sitio de unión al antígeno se forma con regiones variables aminoterminales.\n2. Correcta. Cada inmunoglobulina tiene dos cadenas ligeras del mismo tipo.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+      "paginas_pdf": "706, 707",
+      "pagina_impresa": "",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Bases celulares de la respuesta inmunitaria · Anticuerpos",
+          "page": 706,
+          "printed": null,
+          "marks": []
+        },
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Bases celulares de la respuesta inmunitaria · Anticuerpos",
+          "page": 707,
+          "printed": null,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-17",
+        "chapterNumber": 17,
+        "chapter": "Bases celulares de la respuesta inmunitaria",
+        "section": "Anticuerpos",
+        "printedPages": [],
+        "pdfPages": [
+          706,
+          707
+        ],
+        "statements": [
+          {
+            "pdfPage": 706,
+            "printedPage": null,
+            "section": "Anticuerpos",
+            "cardId": "bio-17-008"
+          },
+          {
+            "pdfPage": 707,
+            "printedPage": null,
+            "section": "Anticuerpos",
+            "cardId": "bio-17-012"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. El sitio de unión al antígeno se forma con regiones variables aminoterminales. 2. Correcta. Cada inmunoglobulina tiene dos cadenas ligeras del mismo tipo.",
+        "B": "Solo la afirmación 2 es correcta.",
+        "C": "1. Incorrecta. El sitio de unión al antígeno se forma con regiones variables aminoterminales.",
+        "D": "2. Correcta. Cada inmunoglobulina tiene dos cadenas ligeras del mismo tipo."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "bio-17-006",
+      "content_id": "evaluacion:medicina-oficial-biologia-17-ampliacion-02-umss",
       "materia": "BIOLOGIA CELULAR",
       "tema": "respuesta inmunitaria",
       "numero_pregunta": 6,
-      "pregunta": "¿Qué reconocen los receptores de reconocimiento de patrones?",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. El receptor de un linfocito T reconoce un péptido en el contexto de la molécula del CPH que lo presenta.\n2. La cooperación del correceptor CD4 se establece con CPH de clase I y la de CD8 con clase II.",
       "respuesta_correcta": "A",
-      "justificacion": "Estructuras comunes a grupos de microorganismos.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "704",
-      "pagina_impresa": "704",
-      "dificultad": "medio",
-      "opcion_a": "Estructuras comunes a grupos de microorganismos.",
-      "opcion_b": "Transmite una señal inhibitoria al linfocito T.",
-      "opcion_c": "Su hendidura o bolsillo de unión.",
-      "opcion_d": "El anticuerpo unido a la célula diana."
+      "justificacion": "1. Correcta. La unidad reconocida es el complejo de péptido y CPH.\n2. Incorrecta. CD4 interactúa con clase II y CD8 con clase I.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+      "paginas_pdf": "713, 714",
+      "pagina_impresa": "",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Bases celulares de la respuesta inmunitaria · Receptor T / Correceptores T",
+          "page": 713,
+          "printed": null,
+          "marks": []
+        },
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Bases celulares de la respuesta inmunitaria · Receptor T / Correceptores T",
+          "page": 714,
+          "printed": null,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-17",
+        "chapterNumber": 17,
+        "chapter": "Bases celulares de la respuesta inmunitaria",
+        "section": "Receptor T / Correceptores T",
+        "printedPages": [],
+        "pdfPages": [
+          713,
+          714
+        ],
+        "statements": [
+          {
+            "pdfPage": 713,
+            "printedPage": null,
+            "section": "Receptor T",
+            "cardId": "bio-17-015"
+          },
+          {
+            "pdfPage": 714,
+            "printedPage": null,
+            "section": "Correceptores T",
+            "cardId": "bio-17-016"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "Solo la afirmación 1 es correcta.",
+        "B": "1. Correcta. La unidad reconocida es el complejo de péptido y CPH. 2. Incorrecta. CD4 interactúa con clase II y CD8 con clase I.",
+        "C": "2. Incorrecta. CD4 interactúa con clase II y CD8 con clase I.",
+        "D": "1. Correcta. La unidad reconocida es el complejo de péptido y CPH."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "bio-17-008",
+      "content_id": "evaluacion:medicina-oficial-biologia-17-ampliacion-03-umss",
       "materia": "BIOLOGIA CELULAR",
       "tema": "respuesta inmunitaria",
       "numero_pregunta": 7,
-      "pregunta": "¿Qué regiones de las cadenas de una inmunoglobulina reconocen el antígeno?",
-      "respuesta_correcta": "B",
-      "justificacion": "Las regiones variables aminoterminales.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "706",
-      "pagina_impresa": "706",
-      "dificultad": "medio",
-      "opcion_a": "Las regiones hipervariables o CDR.",
-      "opcion_b": "Las regiones variables aminoterminales.",
-      "opcion_c": "Fosfatasas que frenan la activación.",
-      "opcion_d": "Contra componentes del propio organismo."
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. La cadena invariante ocupa y protege la hendidura de CPH II durante su síntesis en el RER.\n2. La interacción entre B7 y CTLA-4 puede enviar una señal inhibitoria al linfocito T.",
+      "respuesta_correcta": "C",
+      "justificacion": "1. Correcta. Evita la ocupación prematura del sitio destinado al péptido.\n2. Correcta. Esta interacción limita su activación.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+      "paginas_pdf": "718, 720",
+      "pagina_impresa": "",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Bases celulares de la respuesta inmunitaria · Presentación de clase II / Activación T",
+          "page": 718,
+          "printed": null,
+          "marks": []
+        },
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Bases celulares de la respuesta inmunitaria · Presentación de clase II / Activación T",
+          "page": 720,
+          "printed": null,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-17",
+        "chapterNumber": 17,
+        "chapter": "Bases celulares de la respuesta inmunitaria",
+        "section": "Presentación de clase II / Activación T",
+        "printedPages": [],
+        "pdfPages": [
+          718,
+          720
+        ],
+        "statements": [
+          {
+            "pdfPage": 718,
+            "printedPage": null,
+            "section": "Presentación de clase II",
+            "cardId": "bio-17-022"
+          },
+          {
+            "pdfPage": 720,
+            "printedPage": null,
+            "section": "Activación T",
+            "cardId": "bio-17-023"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "2. Correcta. Esta interacción limita su activación.",
+        "B": "1. Correcta. Evita la ocupación prematura del sitio destinado al péptido.",
+        "C": "Ambas afirmaciones son correctas.",
+        "D": "1. Correcta. Evita la ocupación prematura del sitio destinado al péptido. 2. Correcta. Esta interacción limita su activación."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "bio-17-013",
+      "content_id": "evaluacion:medicina-oficial-biologia-17-ampliacion-04-umss",
       "materia": "BIOLOGIA CELULAR",
       "tema": "respuesta inmunitaria",
       "numero_pregunta": 8,
-      "pregunta": "¿Qué es un haplotipo del CPH?",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Los linfocitos T CD8⁺ destruyen sus dianas principalmente mediante la secreción de anticuerpos propios.\n2. El reconocimiento de CPH I normal en una célula diana es siempre una señal de ataque para una NK.",
       "respuesta_correcta": "D",
-      "justificacion": "El conjunto de alelos del CPH presentes en un cromosoma.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "711",
-      "pagina_impresa": "711",
-      "dificultad": "medio",
-      "opcion_a": "Un estado de no respuesta que no implica su muerte.",
-      "opcion_b": "Apoptosis al dejar de recibir estimulación antigénica.",
-      "opcion_c": "La capacidad de no responder contra antígenos propios o sin señales de peligro.",
-      "opcion_d": "El conjunto de alelos del CPH presentes en un cromosoma."
+      "justificacion": "1. Incorrecta. La citotoxicidad descrita emplea perforinas y granzimas.\n2. Incorrecta. El reconocimiento del CPH I normal aporta una señal inhibitoria a la NK.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+      "paginas_pdf": "727",
+      "pagina_impresa": "",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Bases celulares de la respuesta inmunitaria · Citotoxicidad / Células NK",
+          "page": 727,
+          "printed": null,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-17",
+        "chapterNumber": 17,
+        "chapter": "Bases celulares de la respuesta inmunitaria",
+        "section": "Citotoxicidad / Células NK",
+        "printedPages": [],
+        "pdfPages": [
+          727
+        ],
+        "statements": [
+          {
+            "pdfPage": 727,
+            "printedPage": null,
+            "section": "Citotoxicidad",
+            "cardId": "bio-17-030"
+          },
+          {
+            "pdfPage": 727,
+            "printedPage": null,
+            "section": "Células NK",
+            "cardId": "bio-17-032"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. La citotoxicidad descrita emplea perforinas y granzimas.",
+        "B": "2. Incorrecta. El reconocimiento del CPH I normal aporta una señal inhibitoria a la NK.",
+        "C": "1. Incorrecta. La citotoxicidad descrita emplea perforinas y granzimas. 2. Incorrecta. El reconocimiento del CPH I normal aporta una señal inhibitoria a la NK.",
+        "D": "Ninguna afirmación es correcta."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "bio-17-014",
+      "content_id": "evaluacion:banco-verificado:biologia-17:inmunidad",
       "materia": "BIOLOGIA CELULAR",
       "tema": "respuesta inmunitaria",
       "numero_pregunta": 9,
-      "pregunta": "¿Qué estructura del CPH aloja el péptido antigénico?",
-      "respuesta_correcta": "A",
-      "justificacion": "Su hendidura o bolsillo de unión.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "712",
-      "pagina_impresa": "712",
-      "dificultad": "medio",
-      "opcion_a": "Su hendidura o bolsillo de unión.",
-      "opcion_b": "Estructuras comunes a grupos de microorganismos.",
-      "opcion_c": "El anticuerpo unido a la célula diana.",
-      "opcion_d": "Transmite una señal inhibitoria al linfocito T."
-    },
-    {
-      "content_id": "bio-17-015",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "respuesta inmunitaria",
-      "numero_pregunta": 10,
-      "pregunta": "¿Qué reconoce el receptor del linfocito T?",
-      "respuesta_correcta": "C",
-      "justificacion": "El péptido antigénico junto con la molécula del CPH que lo presenta.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "713",
-      "pagina_impresa": "713",
-      "dificultad": "medio",
-      "opcion_a": "Un codón de parada y una proteína truncada por terminación prematura.",
-      "opcion_b": "Los iones y las moléculas polares grandes sin carga, como la glucosa.",
-      "opcion_c": "El péptido antigénico junto con la molécula del CPH que lo presenta.",
-      "opcion_d": "Cada doble hélice hija conserva una hebra vieja y contiene una nueva."
-    },
-    {
-      "content_id": "bio-17-016",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "respuesta inmunitaria",
-      "numero_pregunta": 11,
-      "pregunta": "¿Con qué clase de CPH interactúan CD4 y CD8?",
-      "respuesta_correcta": "A",
-      "justificacion": "CD4: clase II. CD8: clase I.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "714",
-      "pagina_impresa": "714",
-      "dificultad": "medio",
-      "opcion_a": "CD4: clase II. CD8: clase I.",
-      "opcion_b": "GATA-3.",
-      "opcion_c": "CD40L del T con CD40 del B.",
-      "opcion_d": "El linfocito T CD4+."
-    },
-    {
-      "content_id": "bio-17-017",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "respuesta inmunitaria",
-      "numero_pregunta": 12,
-      "pregunta": "¿Qué efecto tienen las moléculas coestimuladoras sobre el linfocito T?",
+      "pregunta": "Se necesita neutralizar una toxina que actúa fuera de las células. ¿Qué rama de la respuesta adaptativa corresponde directamente a ese objetivo?",
       "respuesta_correcta": "D",
-      "justificacion": "Favorecen su activación final.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "714",
-      "pagina_impresa": "714",
-      "dificultad": "medio",
-      "opcion_a": "Proteínas extracelulares.",
-      "opcion_b": "Complejo de ataque a membranas.",
-      "opcion_c": "Anafilaxia o choque anafiláctico.",
-      "opcion_d": "Favorecen su activación final."
-    },
-    {
-      "content_id": "bio-17-018",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "respuesta inmunitaria",
-      "numero_pregunta": 13,
-      "pregunta": "¿Qué función tienen las moléculas coinhibidoras?",
-      "respuesta_correcta": "C",
-      "justificacion": "Frenar la respuesta y contribuir a la tolerancia inmunitaria.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "714",
-      "pagina_impresa": "714",
-      "dificultad": "medio",
-      "opcion_a": "Actuar como antenas que recogen señales extracelulares.",
-      "opcion_b": "Perforinas y granzimas.",
-      "opcion_c": "Frenar la respuesta y contribuir a la tolerancia inmunitaria.",
-      "opcion_d": "Reemplazar células que mueren por renovación normal o lesión."
-    },
-    {
-      "content_id": "bio-17-019",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "respuesta inmunitaria",
-      "numero_pregunta": 14,
-      "pregunta": "¿Qué integrina está ausente en el síndrome de deficiencia de adhesión leucocitaria (LAD)?",
-      "respuesta_correcta": "D",
-      "justificacion": "CD18.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "716",
-      "pagina_impresa": "716",
-      "dificultad": "medio",
-      "opcion_a": "El linfocito T CD4+.",
-      "opcion_b": "GATA-3.",
-      "opcion_c": "Cooperadores: CD4. Citotóxicos: CD8.",
-      "opcion_d": "CD18."
-    },
-    {
-      "content_id": "bio-17-020",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "respuesta inmunitaria",
-      "numero_pregunta": 15,
-      "pregunta": "¿Qué complejo degrada proteínas citoplasmáticas para la presentación de clase I?",
-      "respuesta_correcta": "D",
-      "justificacion": "El proteasoma.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "717",
-      "pagina_impresa": "717",
-      "dificultad": "medio",
-      "opcion_a": "La humoral.",
-      "opcion_b": "Las células NK.",
-      "opcion_c": "La inhibe.",
-      "opcion_d": "El proteasoma."
-    },
-    {
-      "content_id": "bio-17-021",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "respuesta inmunitaria",
-      "numero_pregunta": 16,
-      "pregunta": "¿Qué origen tienen los antígenos procesados por la vía de clase II?",
-      "respuesta_correcta": "B",
-      "justificacion": "Proteínas extracelulares.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "718",
-      "pagina_impresa": "718",
-      "dificultad": "medio",
-      "opcion_a": "Favorecen su activación final.",
-      "opcion_b": "Proteínas extracelulares.",
-      "opcion_c": "Las regiones hipervariables o CDR.",
-      "opcion_d": "La cadena invariante."
-    },
-    {
-      "content_id": "bio-17-023",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "respuesta inmunitaria",
-      "numero_pregunta": 17,
-      "pregunta": "¿Qué efecto produce la interacción B7-CTLA4?",
-      "respuesta_correcta": "B",
-      "justificacion": "Transmite una señal inhibitoria al linfocito T.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "720",
-      "pagina_impresa": "720",
-      "dificultad": "medio",
-      "opcion_a": "Su hendidura o bolsillo de unión.",
-      "opcion_b": "Transmite una señal inhibitoria al linfocito T.",
-      "opcion_c": "El anticuerpo unido a la célula diana.",
-      "opcion_d": "Estructuras comunes a grupos de microorganismos."
-    },
-    {
-      "content_id": "bio-17-025",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "respuesta inmunitaria",
-      "numero_pregunta": 18,
-      "pregunta": "¿Qué factor de transcripción caracteriza a los Th2?",
-      "respuesta_correcta": "A",
-      "justificacion": "GATA-3.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "721",
-      "pagina_impresa": "721",
-      "dificultad": "medio",
-      "opcion_a": "GATA-3.",
-      "opcion_b": "CD18.",
-      "opcion_c": "El linfocito T CD4+.",
-      "opcion_d": "Cooperadores: CD4. Citotóxicos: CD8."
-    },
-    {
-      "content_id": "bio-17-026",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "respuesta inmunitaria",
-      "numero_pregunta": 19,
-      "pregunta": "¿Qué célula reconoce el antígeno presentado por un linfocito B en CPH II?",
-      "respuesta_correcta": "D",
-      "justificacion": "El linfocito T CD4+.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "722",
-      "pagina_impresa": "722",
-      "dificultad": "medio",
-      "opcion_a": "CD18.",
-      "opcion_b": "Cooperadores: CD4. Citotóxicos: CD8.",
-      "opcion_c": "GATA-3.",
-      "opcion_d": "El linfocito T CD4+."
-    },
-    {
-      "content_id": "bio-17-028",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "respuesta inmunitaria",
-      "numero_pregunta": 20,
-      "pregunta": "¿Qué células B persisten para responder en una nueva exposición?",
-      "respuesta_correcta": "C",
-      "justificacion": "Células B de memoria.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "723",
-      "pagina_impresa": "723",
-      "dificultad": "medio",
-      "opcion_a": "Proteínas extracelulares.",
-      "opcion_b": "La inmunidad adaptativa.",
-      "opcion_c": "Células B de memoria.",
-      "opcion_d": "La cadena invariante."
-    },
-    {
-      "content_id": "bio-17-029",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "respuesta inmunitaria",
-      "numero_pregunta": 21,
-      "pregunta": "¿Cómo se llama el poro lítico formado por el sistema del complemento?",
-      "respuesta_correcta": "D",
-      "justificacion": "Complejo de ataque a membranas.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "726",
-      "pagina_impresa": "726",
-      "dificultad": "medio",
-      "opcion_a": "Anafilaxia o choque anafiláctico.",
-      "opcion_b": "Las regiones hipervariables o CDR.",
-      "opcion_c": "Favorecen su activación final.",
-      "opcion_d": "Complejo de ataque a membranas."
-    },
-    {
-      "content_id": "bio-17-030",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "respuesta inmunitaria",
-      "numero_pregunta": 22,
-      "pregunta": "¿Qué moléculas son esenciales para la función lítica de los linfocitos T CD8+?",
-      "respuesta_correcta": "C",
-      "justificacion": "Perforinas y granzimas.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "727",
-      "pagina_impresa": "727",
-      "dificultad": "medio",
-      "opcion_a": "La de contraste de fases.",
-      "opcion_b": "Aumentar la superficie de absorción.",
-      "opcion_c": "Perforinas y granzimas.",
-      "opcion_d": "Frenar la respuesta y contribuir a la tolerancia inmunitaria."
-    },
-    {
-      "content_id": "bio-17-031",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "respuesta inmunitaria",
-      "numero_pregunta": 23,
-      "pregunta": "¿Qué células innatas contribuyen a eliminar células tumorales e infectadas por virus?",
-      "respuesta_correcta": "A",
-      "justificacion": "Las células NK.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "727",
-      "pagina_impresa": "727",
-      "dificultad": "medio",
-      "opcion_a": "Las células NK.",
-      "opcion_b": "La inhibe.",
-      "opcion_c": "El proteasoma.",
-      "opcion_d": "La humoral."
-    },
-    {
-      "content_id": "bio-17-033",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "respuesta inmunitaria",
-      "numero_pregunta": 24,
-      "pregunta": "¿Qué dirige a la célula lítica hacia su diana en la citotoxicidad dependiente de anticuerpos?",
-      "respuesta_correcta": "C",
-      "justificacion": "El anticuerpo unido a la célula diana.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "728",
-      "pagina_impresa": "728",
-      "dificultad": "medio",
-      "opcion_a": "Su hendidura o bolsillo de unión.",
-      "opcion_b": "Transmite una señal inhibitoria al linfocito T.",
-      "opcion_c": "El anticuerpo unido a la célula diana.",
-      "opcion_d": "Estructuras comunes a grupos de microorganismos."
-    },
-    {
-      "content_id": "bio-17-034",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "respuesta inmunitaria",
-      "numero_pregunta": 25,
-      "pregunta": "¿Qué ocurre con los linfocitos inmaduros que reconocen antígenos propios?",
-      "respuesta_correcta": "C",
-      "justificacion": "Son eliminados por selección negativa.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "729",
-      "pagina_impresa": "729",
-      "dificultad": "medio",
-      "opcion_a": "Son eliminadas.",
-      "opcion_b": "Aumenta anormalmente su producción.",
-      "opcion_c": "Son eliminados por selección negativa.",
-      "opcion_d": "Permiten agua y excluyen protones."
-    },
-    {
-      "content_id": "bio-17-035",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "respuesta inmunitaria",
-      "numero_pregunta": 26,
-      "pregunta": "¿Qué es la anergia de un linfocito?",
-      "respuesta_correcta": "A",
-      "justificacion": "Un estado de no respuesta que no implica su muerte.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "729",
-      "pagina_impresa": "729",
-      "dificultad": "medio",
-      "opcion_a": "Un estado de no respuesta que no implica su muerte.",
-      "opcion_b": "El conjunto de alelos del CPH presentes en un cromosoma.",
-      "opcion_c": "Apoptosis al dejar de recibir estimulación antigénica.",
-      "opcion_d": "La capacidad de no responder contra antígenos propios o sin señales de peligro."
-    },
-    {
-      "content_id": "bio-17-036",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "respuesta inmunitaria",
-      "numero_pregunta": 27,
-      "pregunta": "¿Qué es la muerte por abandono de un linfocito?",
-      "respuesta_correcta": "D",
-      "justificacion": "Apoptosis al dejar de recibir estimulación antigénica.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "730",
-      "pagina_impresa": "730",
-      "dificultad": "medio",
-      "opcion_a": "La capacidad de no responder contra antígenos propios o sin señales de peligro.",
-      "opcion_b": "Un estado de no respuesta que no implica su muerte.",
-      "opcion_c": "El conjunto de alelos del CPH presentes en un cromosoma.",
-      "opcion_d": "Apoptosis al dejar de recibir estimulación antigénica."
-    },
-    {
-      "content_id": "bio-17-037",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "respuesta inmunitaria",
-      "numero_pregunta": 28,
-      "pregunta": "¿Qué subpoblación T inhibe la actividad de otras células inmunitarias?",
-      "respuesta_correcta": "D",
-      "justificacion": "Los T CD4+ reguladores.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "730",
-      "pagina_impresa": "730",
-      "dificultad": "medio",
-      "opcion_a": "CD18.",
-      "opcion_b": "Cooperadores: CD4. Citotóxicos: CD8.",
-      "opcion_c": "GATA-3.",
-      "opcion_d": "Los T CD4+ reguladores."
-    },
-    {
-      "content_id": "bio-17-038",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "respuesta inmunitaria",
-      "numero_pregunta": 29,
-      "pregunta": "¿Cómo se llama una reacción alérgica sistémica grave?",
-      "respuesta_correcta": "D",
-      "justificacion": "Anafilaxia o choque anafiláctico.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "731",
-      "pagina_impresa": "731",
-      "dificultad": "medio",
-      "opcion_a": "Fosfatasas que frenan la activación.",
-      "opcion_b": "Las regiones hipervariables o CDR.",
-      "opcion_c": "Complejo de ataque a membranas.",
-      "opcion_d": "Anafilaxia o choque anafiláctico."
-    },
-    {
-      "content_id": "bio-17-039",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "respuesta inmunitaria",
-      "numero_pregunta": 30,
-      "pregunta": "¿Contra qué se dirige una respuesta autoinmunitaria?",
-      "respuesta_correcta": "D",
-      "justificacion": "Contra componentes del propio organismo.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "731",
-      "pagina_impresa": "731",
-      "dificultad": "medio",
-      "opcion_a": "Las regiones variables aminoterminales.",
-      "opcion_b": "Fosfatasas que frenan la activación.",
-      "opcion_c": "Las regiones hipervariables o CDR.",
-      "opcion_d": "Contra componentes del propio organismo."
+      "justificacion": "El texto vincula la inmunidad humoral con la defensa frente a agentes extracelulares y sus toxinas. En ese contexto, los anticuerpos pueden actuar sobre la toxina extracelular.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+      "paginas_pdf": "701",
+      "pagina_impresa": "701",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Capítulo 17 · Inmunidad adaptativa y humoral",
+          "page": 701,
+          "printed": 701,
+          "marks": [
+            [
+              0.834,
+              0.4147,
+              0.0715,
+              0.0197
+            ],
+            [
+              0.1536,
+              0.4927,
+              0.0733,
+              0.0198
+            ]
+          ]
+        }
+      ],
+      "source": {
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-17"
+      },
+      "opcion_a": "Inmunidad celular que elimina células diana.",
+      "opcion_b": "Respuesta innata que reconoce patrones microbianos.",
+      "opcion_c": "Tolerancia inmunitaria frente a antígenos propios.",
+      "opcion_d": "Inmunidad humoral mediada por anticuerpos."
     }
   ]
 }

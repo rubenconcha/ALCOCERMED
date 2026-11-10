@@ -5,434 +5,493 @@
   "topic": "sistema nervioso autonomo",
   "title": "El sistema nervioso autónomo y los reflejos viscerales",
   "number": 15,
-  "count": 25,
-  "duration": 25,
+  "count": 9,
+  "duration": 9,
   "source": "Saladin · Anatomía y fisiología",
   "questions": [
     {
-      "content_id": "morfo-15-022",
+      "content_id": "evaluacion:medicina-oficial-morfo-15-intermedio-1",
       "materia": "MORFOFUNCION",
       "tema": "sistema nervioso autonomo",
       "numero_pregunta": 1,
-      "pregunta": "¿Qué división favorece generalmente la actividad digestiva?",
+      "pregunta": "Se mide la señal en el primer tramo de una vía autónoma. La terminación libera acetilcolina sobre la neurona del ganglio.\n¿Qué opción corresponde al caso?",
       "respuesta_correcta": "D",
-      "justificacion": "La parasimpática.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "591",
-      "pagina_impresa": "563",
+      "justificacion": "Las fibras preganglionares de ambas divisiones autónomas liberan acetilcolina en el ganglio.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "601",
+      "pagina_impresa": "573",
       "dificultad": "medio",
-      "opcion_a": "Noradrenalina.",
-      "opcion_b": "La simpática.",
-      "opcion_c": "La disminuye.",
-      "opcion_d": "La parasimpática."
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "El sistema nervioso autónomo y los reflejos viscerales · Neurotransmisores y sus receptores",
+          "page": 601,
+          "printed": 573,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-15",
+        "chapterNumber": 15,
+        "chapter": "El sistema nervioso autónomo y los reflejos viscerales",
+        "section": "Neurotransmisores y sus receptores",
+        "printedPages": [
+          573
+        ],
+        "pdfPages": [
+          601
+        ]
+      },
+      "opcion_a": "Neurona simpática posganglionar sudomotora",
+      "opcion_b": "Neurona simpática posganglionar típica",
+      "opcion_c": "Neurona parasimpática posganglionar",
+      "opcion_d": "Neurona autónoma preganglionar"
     },
     {
-      "content_id": "morfo-15-023",
+      "content_id": "evaluacion:medicina-oficial-morfo-15-intermedio-2",
       "materia": "MORFOFUNCION",
       "tema": "sistema nervioso autonomo",
       "numero_pregunta": 2,
-      "pregunta": "¿Qué significa tono autónomo?",
-      "respuesta_correcta": "C",
-      "justificacion": "La actividad de fondo continua del sistema autónomo.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "591",
-      "pagina_impresa": "563",
+      "pregunta": "En el tramo final de una vía autónoma se encuentra noradrenalina como transmisor; se busca la clasificación habitual de esa fibra.\n¿Qué opción corresponde al caso?",
+      "respuesta_correcta": "B",
+      "justificacion": "Casi todas las fibras posganglionares simpáticas secretan noradrenalina en el efector.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "601",
+      "pagina_impresa": "573",
       "dificultad": "medio",
-      "opcion_a": "El paso de sustancias del túbulo renal a la sangre.",
-      "opcion_b": "Coloración azulada de la piel por insuficiente oxigenación sanguínea.",
-      "opcion_c": "La actividad de fondo continua del sistema autónomo.",
-      "opcion_d": "Una concentración de sodio sanguíneo inferior a la normal."
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "El sistema nervioso autónomo y los reflejos viscerales · Neurotransmisores y sus receptores",
+          "page": 601,
+          "printed": 573,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-15",
+        "chapterNumber": 15,
+        "chapter": "El sistema nervioso autónomo y los reflejos viscerales",
+        "section": "Neurotransmisores y sus receptores",
+        "printedPages": [
+          573
+        ],
+        "pdfPages": [
+          601
+        ]
+      },
+      "opcion_a": "Neurona autónoma preganglionar",
+      "opcion_b": "Neurona simpática posganglionar típica",
+      "opcion_c": "Neurona simpática posganglionar sudomotora",
+      "opcion_d": "Neurona parasimpática posganglionar"
     },
     {
-      "content_id": "morfo-15-001",
+      "content_id": "evaluacion:medicina-oficial-morfo-15-intermedio-3",
       "materia": "MORFOFUNCION",
       "tema": "sistema nervioso autonomo",
       "numero_pregunta": 3,
-      "pregunta": "¿Qué efectores controla el sistema nervioso autónomo?",
-      "respuesta_correcta": "A",
-      "justificacion": "Músculo liso, músculo cardíaco y glándulas.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "592",
-      "pagina_impresa": "564",
+      "pregunta": "En una vía craneosacra, el segundo tramo, después del ganglio, libera acetilcolina en el órgano efector.\n¿Qué opción corresponde al caso?",
+      "respuesta_correcta": "D",
+      "justificacion": "En la división parasimpática, la fibra posganglionar utiliza acetilcolina en el órgano diana.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "601",
+      "pagina_impresa": "573",
       "dificultad": "medio",
-      "opcion_a": "Músculo liso, músculo cardíaco y glándulas.",
-      "opcion_b": "Preganglionares cortas y posganglionares largas.",
-      "opcion_c": "Los plexos mientérico y submucoso.",
-      "opcion_d": "Receptores adrenérgicos alfa y beta."
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "El sistema nervioso autónomo y los reflejos viscerales · Neurotransmisores y sus receptores",
+          "page": 601,
+          "printed": 573,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-15",
+        "chapterNumber": 15,
+        "chapter": "El sistema nervioso autónomo y los reflejos viscerales",
+        "section": "Neurotransmisores y sus receptores",
+        "printedPages": [
+          573
+        ],
+        "pdfPages": [
+          601
+        ]
+      },
+      "opcion_a": "Neurona simpática posganglionar típica",
+      "opcion_b": "Neurona autónoma preganglionar",
+      "opcion_c": "Neurona simpática posganglionar sudomotora",
+      "opcion_d": "Neurona parasimpática posganglionar"
     },
     {
-      "content_id": "morfo-15-002",
+      "content_id": "evaluacion:medicina-oficial-morfo-15-intermedio-4",
       "materia": "MORFOFUNCION",
       "tema": "sistema nervioso autonomo",
       "numero_pregunta": 4,
-      "pregunta": "¿Cuántas neuronas suele tener la vía motora autónoma?",
+      "pregunta": "La fibra ya salió del ganglio y pertenece a la división simpática, pero libera acetilcolina en una glándula sudorípara.\n¿Qué opción corresponde al caso?",
       "respuesta_correcta": "B",
-      "justificacion": "Dos: preganglionar y posganglionar.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "592",
-      "pagina_impresa": "564",
+      "justificacion": "Las fibras simpáticas posganglionares que llegan a las glándulas sudoríparas constituyen una excepción y usan acetilcolina.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "601",
+      "pagina_impresa": "573",
       "dificultad": "medio",
-      "opcion_a": "La parasimpática.",
-      "opcion_b": "Dos: preganglionar y posganglionar.",
-      "opcion_c": "Receptores adrenérgicos alfa y beta.",
-      "opcion_d": "Los plexos mientérico y submucoso."
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "El sistema nervioso autónomo y los reflejos viscerales · Neurotransmisores y sus receptores",
+          "page": 601,
+          "printed": 573,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-15",
+        "chapterNumber": 15,
+        "chapter": "El sistema nervioso autónomo y los reflejos viscerales",
+        "section": "Neurotransmisores y sus receptores",
+        "printedPages": [
+          573
+        ],
+        "pdfPages": [
+          601
+        ]
+      },
+      "opcion_a": "Neurona parasimpática posganglionar",
+      "opcion_b": "Neurona simpática posganglionar sudomotora",
+      "opcion_c": "Neurona autónoma preganglionar",
+      "opcion_d": "Neurona simpática posganglionar típica"
     },
     {
-      "content_id": "morfo-15-004",
+      "content_id": "evaluacion:medicina-oficial-morfo-15-ampliacion-01-umss",
       "materia": "MORFOFUNCION",
       "tema": "sistema nervioso autonomo",
       "numero_pregunta": 5,
-      "pregunta": "¿Dónde se encuentra el soma de una neurona autónoma posganglionar?",
-      "respuesta_correcta": "B",
-      "justificacion": "En un ganglio autónomo periférico.",
-      "fuente": "Saladin · Anatomía y fisiología",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. La vía motora autónoma típica puede transmitir una señal a través de dos neuronas en serie.\n2. Los somas de la neurona posganglionar y de la preganglionar se localizan ambos en el sistema nervioso central.",
+      "respuesta_correcta": "A",
+      "justificacion": "1. Correcta. La preganglionar contacta con la posganglionar en un ganglio.\n2. Incorrecta. El soma posganglionar reside en un ganglio periférico.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
       "paginas_pdf": "592",
       "pagina_impresa": "564",
-      "dificultad": "medio",
-      "opcion_a": "En el conducto coclear.",
-      "opcion_b": "En un ganglio autónomo periférico.",
-      "opcion_c": "En el sistema nervioso central.",
-      "opcion_d": "En la membrana mitocondrial interna."
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "El sistema nervioso autónomo y los reflejos viscerales · Vías autónomas",
+          "page": 592,
+          "printed": 564,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-15",
+        "chapterNumber": 15,
+        "chapter": "El sistema nervioso autónomo y los reflejos viscerales",
+        "section": "Vías autónomas",
+        "printedPages": [
+          564
+        ],
+        "pdfPages": [
+          592
+        ],
+        "statements": [
+          {
+            "pdfPage": 592,
+            "printedPage": 564,
+            "section": "Vías autónomas",
+            "cardId": "morfo-15-002"
+          },
+          {
+            "pdfPage": 592,
+            "printedPage": 564,
+            "section": "Vías autónomas",
+            "cardId": "morfo-15-004"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "Solo la afirmación 1 es correcta.",
+        "B": "1. Correcta. La preganglionar contacta con la posganglionar en un ganglio. 2. Incorrecta. El soma posganglionar reside en un ganglio periférico.",
+        "C": "2. Incorrecta. El soma posganglionar reside en un ganglio periférico.",
+        "D": "1. Correcta. La preganglionar contacta con la posganglionar en un ganglio."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "morfo-15-011",
+      "content_id": "evaluacion:medicina-oficial-morfo-15-ampliacion-02-umss",
       "materia": "MORFOFUNCION",
       "tema": "sistema nervioso autonomo",
       "numero_pregunta": 6,
-      "pregunta": "¿Qué neurotransmisor liberan las neuronas parasimpáticas posganglionares?",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Una fibra preganglionar corta y una posganglionar larga constituyen la disposición típica de la vía parasimpática.\n2. La cercanía habitual del ganglio parasimpático al órgano se asocia con una fibra posganglionar corta.",
       "respuesta_correcta": "B",
-      "justificacion": "Acetilcolina.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "592",
-      "pagina_impresa": "564",
-      "dificultad": "medio",
-      "opcion_a": "La simpática.",
-      "opcion_b": "Acetilcolina.",
-      "opcion_c": "Noradrenalina.",
-      "opcion_d": "La disminuye."
+      "justificacion": "1. Incorrecta. Esa disposición es típica de la vía simpática. En la parasimpática suele ocurrir lo contrario.\n2. Correcta. La fibra preganglionar recorre la mayor parte de la distancia al órgano.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "593, 599",
+      "pagina_impresa": "565, 571",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "El sistema nervioso autónomo y los reflejos viscerales · División simpática / División parasimpática",
+          "page": 593,
+          "printed": 565,
+          "marks": []
+        },
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "El sistema nervioso autónomo y los reflejos viscerales · División simpática / División parasimpática",
+          "page": 599,
+          "printed": 571,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-15",
+        "chapterNumber": 15,
+        "chapter": "El sistema nervioso autónomo y los reflejos viscerales",
+        "section": "División simpática / División parasimpática",
+        "printedPages": [
+          565,
+          571
+        ],
+        "pdfPages": [
+          593,
+          599
+        ],
+        "statements": [
+          {
+            "pdfPage": 593,
+            "printedPage": 565,
+            "section": "División simpática",
+            "cardId": "morfo-15-007"
+          },
+          {
+            "pdfPage": 599,
+            "printedPage": 571,
+            "section": "División parasimpática",
+            "cardId": "morfo-15-008"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. Esa disposición es típica de la vía simpática. En la parasimpática suele ocurrir lo contrario. 2. Correcta. La fibra preganglionar recorre la mayor parte de la distancia al órgano.",
+        "B": "Solo la afirmación 2 es correcta.",
+        "C": "1. Incorrecta. Esa disposición es típica de la vía simpática. En la parasimpática suele ocurrir lo contrario.",
+        "D": "2. Correcta. La fibra preganglionar recorre la mayor parte de la distancia al órgano."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "morfo-15-005",
+      "content_id": "evaluacion:medicina-oficial-morfo-15-ampliacion-03-umss",
       "materia": "MORFOFUNCION",
       "tema": "sistema nervioso autonomo",
       "numero_pregunta": 7,
-      "pregunta": "¿Qué división autónoma tiene origen toracolumbar?",
-      "respuesta_correcta": "B",
-      "justificacion": "La simpática.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "593",
-      "pagina_impresa": "565",
-      "dificultad": "medio",
-      "opcion_a": "La disminuye.",
-      "opcion_b": "La simpática.",
-      "opcion_c": "Acetilcolina.",
-      "opcion_d": "La parasimpática."
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. La acetilcolina liberada en un ganglio autónomo actúa sobre receptores nicotínicos de la neurona posganglionar.\n2. En los efectores parasimpáticos, la respuesta a la acetilcolina se media generalmente por receptores muscarínicos.",
+      "respuesta_correcta": "C",
+      "justificacion": "1. Correcta. Los ganglios de ambas divisiones tienen receptores colinérgicos nicotínicos.\n2. Correcta. El receptor típico del efector parasimpático difiere del nicotínico ganglionar.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "601",
+      "pagina_impresa": "573",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "El sistema nervioso autónomo y los reflejos viscerales · Receptores",
+          "page": 601,
+          "printed": 573,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-15",
+        "chapterNumber": 15,
+        "chapter": "El sistema nervioso autónomo y los reflejos viscerales",
+        "section": "Receptores",
+        "printedPages": [
+          573
+        ],
+        "pdfPages": [
+          601
+        ],
+        "statements": [
+          {
+            "pdfPage": 601,
+            "printedPage": 573,
+            "section": "Receptores",
+            "cardId": "morfo-15-013"
+          },
+          {
+            "pdfPage": 601,
+            "printedPage": 573,
+            "section": "Receptores",
+            "cardId": "morfo-15-014"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "2. Correcta. El receptor típico del efector parasimpático difiere del nicotínico ganglionar.",
+        "B": "1. Correcta. Los ganglios de ambas divisiones tienen receptores colinérgicos nicotínicos.",
+        "C": "Ambas afirmaciones son correctas.",
+        "D": "1. Correcta. Los ganglios de ambas divisiones tienen receptores colinérgicos nicotínicos. 2. Correcta. El receptor típico del efector parasimpático difiere del nicotínico ganglionar."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "morfo-15-007",
+      "content_id": "evaluacion:medicina-oficial-morfo-15-ampliacion-04-umss",
       "materia": "MORFOFUNCION",
       "tema": "sistema nervioso autonomo",
       "numero_pregunta": 8,
-      "pregunta": "¿Cómo son, en general, las fibras simpáticas preganglionares y posganglionares?",
-      "respuesta_correcta": "C",
-      "justificacion": "Preganglionares cortas y posganglionares largas.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "593",
-      "pagina_impresa": "565",
-      "dificultad": "medio",
-      "opcion_a": "Receptores adrenérgicos alfa y beta.",
-      "opcion_b": "Dos: preganglionar y posganglionar.",
-      "opcion_c": "Preganglionares cortas y posganglionares largas.",
-      "opcion_d": "Noradrenalina."
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Ante un estímulo simpático, la médula suprarrenal libera solo acetilcolina a la sangre.\n2. La contracción pupilar que reduce el diámetro de la pupila corresponde a la respuesta simpática típica.",
+      "respuesta_correcta": "D",
+      "justificacion": "1. Incorrecta. La médula libera adrenalina y noradrenalina. La acetilcolina participa en la señal que llega a ella.\n2. Incorrecta. La miosis es parasimpática. La respuesta simpática tiende a dilatar la pupila.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "597, 603",
+      "pagina_impresa": "569, 575",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "El sistema nervioso autónomo y los reflejos viscerales · División simpática · Médula suprarrenal / Efectos autónomos",
+          "page": 597,
+          "printed": 569,
+          "marks": []
+        },
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "El sistema nervioso autónomo y los reflejos viscerales · División simpática · Médula suprarrenal / Efectos autónomos",
+          "page": 603,
+          "printed": 575,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-15",
+        "chapterNumber": 15,
+        "chapter": "El sistema nervioso autónomo y los reflejos viscerales",
+        "section": "División simpática · Médula suprarrenal / Efectos autónomos",
+        "printedPages": [
+          569,
+          575
+        ],
+        "pdfPages": [
+          597,
+          603
+        ],
+        "statements": [
+          {
+            "pdfPage": 597,
+            "printedPage": 569,
+            "section": "División simpática · Médula suprarrenal",
+            "anchor": "epinefrina (adrenalina), 15% de norepinefrina (noradrenalina)"
+          },
+          {
+            "pdfPage": 603,
+            "printedPage": 575,
+            "section": "Efectos autónomos",
+            "cardId": "morfo-15-018"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. La médula libera adrenalina y noradrenalina. La acetilcolina participa en la señal que llega a ella.",
+        "B": "2. Incorrecta. La miosis es parasimpática. La respuesta simpática tiende a dilatar la pupila.",
+        "C": "1. Incorrecta. La médula libera adrenalina y noradrenalina. La acetilcolina participa en la señal que llega a ella. 2. Incorrecta. La miosis es parasimpática. La respuesta simpática tiende a dilatar la pupila.",
+        "D": "Ninguna afirmación es correcta."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "morfo-15-025",
+      "content_id": "evaluacion:banco-verificado:morfo-15:vias-autonomas",
       "materia": "MORFOFUNCION",
       "tema": "sistema nervioso autonomo",
       "numero_pregunta": 9,
-      "pregunta": "¿Qué plexos principales forman el sistema nervioso entérico?",
+      "pregunta": "En una vía autónoma de dos neuronas, ¿qué tramo se interrumpe si la neurona del ganglio pierde su axón, pero se conserva la llegada desde el sistema nervioso central?",
       "respuesta_correcta": "A",
-      "justificacion": "Los plexos mientérico y submucoso.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "594",
-      "pagina_impresa": "566",
-      "dificultad": "medio",
-      "opcion_a": "Los plexos mientérico y submucoso.",
-      "opcion_b": "Adrenalina y noradrenalina.",
-      "opcion_c": "Receptores adrenérgicos alfa y beta.",
-      "opcion_d": "Dos: preganglionar y posganglionar."
-    },
-    {
-      "content_id": "morfo-15-003",
-      "materia": "MORFOFUNCION",
-      "tema": "sistema nervioso autonomo",
-      "numero_pregunta": 10,
-      "pregunta": "¿Dónde se encuentra el soma de una neurona autónoma preganglionar?",
-      "respuesta_correcta": "C",
-      "justificacion": "En el sistema nervioso central.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "595",
-      "pagina_impresa": "567",
-      "dificultad": "medio",
-      "opcion_a": "En la membrana mitocondrial interna.",
-      "opcion_b": "En el conducto coclear.",
-      "opcion_c": "En el sistema nervioso central.",
-      "opcion_d": "En un ganglio autónomo periférico."
-    },
-    {
-      "content_id": "morfo-15-012",
-      "materia": "MORFOFUNCION",
-      "tema": "sistema nervioso autonomo",
-      "numero_pregunta": 11,
-      "pregunta": "¿Qué neurotransmisor liberan las fibras simpáticas que inervan glándulas sudoríparas?",
-      "respuesta_correcta": "C",
-      "justificacion": "Acetilcolina.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "595",
-      "pagina_impresa": "567",
-      "dificultad": "medio",
-      "opcion_a": "Noradrenalina.",
-      "opcion_b": "La simpática.",
-      "opcion_c": "Acetilcolina.",
-      "opcion_d": "Muscarínicos."
-    },
-    {
-      "content_id": "morfo-15-010",
-      "materia": "MORFOFUNCION",
-      "tema": "sistema nervioso autonomo",
-      "numero_pregunta": 12,
-      "pregunta": "¿Qué neurotransmisor liberan la mayoría de las neuronas simpáticas posganglionares?",
-      "respuesta_correcta": "C",
-      "justificacion": "Noradrenalina.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "597",
-      "pagina_impresa": "569",
-      "dificultad": "medio",
-      "opcion_a": "Acetilcolina.",
-      "opcion_b": "La simpática.",
-      "opcion_c": "Noradrenalina.",
-      "opcion_d": "Muscarínicos."
-    },
-    {
-      "content_id": "morfo-15-006",
-      "materia": "MORFOFUNCION",
-      "tema": "sistema nervioso autonomo",
-      "numero_pregunta": 13,
-      "pregunta": "¿Qué división autónoma tiene origen craneosacro?",
-      "respuesta_correcta": "C",
-      "justificacion": "La parasimpática.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "599",
-      "pagina_impresa": "571",
-      "dificultad": "medio",
-      "opcion_a": "Acetilcolina.",
-      "opcion_b": "La disminuye.",
-      "opcion_c": "La parasimpática.",
-      "opcion_d": "La simpática."
-    },
-    {
-      "content_id": "morfo-15-008",
-      "materia": "MORFOFUNCION",
-      "tema": "sistema nervioso autonomo",
-      "numero_pregunta": 14,
-      "pregunta": "¿Cómo son, en general, las fibras parasimpáticas preganglionares y posganglionares?",
-      "respuesta_correcta": "A",
-      "justificacion": "Preganglionares largas y posganglionares cortas.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "599",
-      "pagina_impresa": "571",
-      "dificultad": "medio",
-      "opcion_a": "Preganglionares largas y posganglionares cortas.",
-      "opcion_b": "Dos: preganglionar y posganglionar.",
-      "opcion_c": "Receptores adrenérgicos alfa y beta.",
-      "opcion_d": "Acetilcolina."
-    },
-    {
-      "content_id": "morfo-15-009",
-      "materia": "MORFOFUNCION",
-      "tema": "sistema nervioso autonomo",
-      "numero_pregunta": 15,
-      "pregunta": "¿Qué neurotransmisor liberan todas las neuronas autónomas preganglionares?",
-      "respuesta_correcta": "A",
-      "justificacion": "Acetilcolina.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "600",
-      "pagina_impresa": "572",
-      "dificultad": "medio",
-      "opcion_a": "Acetilcolina.",
-      "opcion_b": "La parasimpática.",
-      "opcion_c": "Noradrenalina.",
-      "opcion_d": "La simpática."
-    },
-    {
-      "content_id": "morfo-15-013",
-      "materia": "MORFOFUNCION",
-      "tema": "sistema nervioso autonomo",
-      "numero_pregunta": 16,
-      "pregunta": "¿Qué receptores colinérgicos hay en los ganglios autónomos?",
-      "respuesta_correcta": "A",
-      "justificacion": "Nicotínicos.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "601",
-      "pagina_impresa": "573",
-      "dificultad": "medio",
-      "opcion_a": "Nicotínicos.",
-      "opcion_b": "La simpática.",
-      "opcion_c": "La aumenta.",
-      "opcion_d": "Acetilcolina."
-    },
-    {
-      "content_id": "morfo-15-014",
-      "materia": "MORFOFUNCION",
-      "tema": "sistema nervioso autonomo",
-      "numero_pregunta": 17,
-      "pregunta": "¿Qué receptores colinérgicos predominan en los efectores parasimpáticos?",
-      "respuesta_correcta": "A",
-      "justificacion": "Muscarínicos.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "601",
-      "pagina_impresa": "573",
-      "dificultad": "medio",
-      "opcion_a": "Muscarínicos.",
-      "opcion_b": "Acetilcolina.",
-      "opcion_c": "La disminuye.",
-      "opcion_d": "La simpática."
-    },
-    {
-      "content_id": "morfo-15-016",
-      "materia": "MORFOFUNCION",
-      "tema": "sistema nervioso autonomo",
-      "numero_pregunta": 18,
-      "pregunta": "¿Qué secreta la médula suprarrenal cuando recibe estímulo simpático?",
-      "respuesta_correcta": "B",
-      "justificacion": "Adrenalina y noradrenalina.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "601",
-      "pagina_impresa": "573",
-      "dificultad": "medio",
-      "opcion_a": "Los plexos mientérico y submucoso.",
-      "opcion_b": "Adrenalina y noradrenalina.",
-      "opcion_c": "Los dilata.",
-      "opcion_d": "La aumenta."
-    },
-    {
-      "content_id": "morfo-15-021",
-      "materia": "MORFOFUNCION",
-      "tema": "sistema nervioso autonomo",
-      "numero_pregunta": 19,
-      "pregunta": "¿Qué efecto tiene el simpático sobre los bronquios?",
-      "respuesta_correcta": "B",
-      "justificacion": "Los dilata.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "602",
-      "pagina_impresa": "574",
-      "dificultad": "medio",
-      "opcion_a": "La simpática.",
-      "opcion_b": "Los dilata.",
-      "opcion_c": "La aumenta.",
-      "opcion_d": "La disminuye."
-    },
-    {
-      "content_id": "morfo-15-017",
-      "materia": "MORFOFUNCION",
-      "tema": "sistema nervioso autonomo",
-      "numero_pregunta": 20,
-      "pregunta": "¿Qué división autónoma dilata la pupila?",
-      "respuesta_correcta": "D",
-      "justificacion": "La simpática.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "603",
-      "pagina_impresa": "575",
-      "dificultad": "medio",
-      "opcion_a": "Muscarínicos.",
-      "opcion_b": "La disminuye.",
-      "opcion_c": "Acetilcolina.",
-      "opcion_d": "La simpática."
-    },
-    {
-      "content_id": "morfo-15-018",
-      "materia": "MORFOFUNCION",
-      "tema": "sistema nervioso autonomo",
-      "numero_pregunta": 21,
-      "pregunta": "¿Qué división autónoma contrae la pupila?",
-      "respuesta_correcta": "C",
-      "justificacion": "La parasimpática.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "603",
-      "pagina_impresa": "575",
-      "dificultad": "medio",
-      "opcion_a": "Noradrenalina.",
-      "opcion_b": "Acetilcolina.",
-      "opcion_c": "La parasimpática.",
-      "opcion_d": "Muscarínicos."
-    },
-    {
-      "content_id": "morfo-15-024",
-      "materia": "MORFOFUNCION",
-      "tema": "sistema nervioso autonomo",
-      "numero_pregunta": 22,
-      "pregunta": "¿Qué es la inervación dual?",
-      "respuesta_correcta": "D",
-      "justificacion": "La recepción de fibras simpáticas y parasimpáticas por un mismo órgano.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "603",
-      "pagina_impresa": "575",
-      "dificultad": "medio",
-      "opcion_a": "Una estructura formada por dos o más tipos de tejido que actúan juntos.",
-      "opcion_b": "El movimiento neto de partículas desde mayor hacia menor concentración.",
-      "opcion_c": "El reblandecimiento de huesos adultos por mineralización insuficiente.",
-      "opcion_d": "La recepción de fibras simpáticas y parasimpáticas por un mismo órgano."
-    },
-    {
-      "content_id": "morfo-15-015",
-      "materia": "MORFOFUNCION",
-      "tema": "sistema nervioso autonomo",
-      "numero_pregunta": 23,
-      "pregunta": "¿Qué tipos principales de receptores responden a la noradrenalina?",
-      "respuesta_correcta": "D",
-      "justificacion": "Receptores adrenérgicos alfa y beta.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "606",
-      "pagina_impresa": "578",
-      "dificultad": "medio",
-      "opcion_a": "Dos: preganglionar y posganglionar.",
-      "opcion_b": "Los plexos mientérico y submucoso.",
-      "opcion_c": "Adrenalina y noradrenalina.",
-      "opcion_d": "Receptores adrenérgicos alfa y beta."
-    },
-    {
-      "content_id": "morfo-15-019",
-      "materia": "MORFOFUNCION",
-      "tema": "sistema nervioso autonomo",
-      "numero_pregunta": 24,
-      "pregunta": "¿Qué efecto tiene el simpático sobre la frecuencia cardíaca?",
-      "respuesta_correcta": "A",
-      "justificacion": "La aumenta.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "606",
-      "pagina_impresa": "578",
-      "dificultad": "medio",
-      "opcion_a": "La aumenta.",
-      "opcion_b": "La disminuye.",
-      "opcion_c": "Los dilata.",
-      "opcion_d": "La simpática."
-    },
-    {
-      "content_id": "morfo-15-020",
-      "materia": "MORFOFUNCION",
-      "tema": "sistema nervioso autonomo",
-      "numero_pregunta": 25,
-      "pregunta": "¿Qué efecto tiene el parasimpático sobre la frecuencia cardíaca?",
-      "respuesta_correcta": "A",
-      "justificacion": "La disminuye.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "606",
-      "pagina_impresa": "578",
-      "dificultad": "medio",
-      "opcion_a": "La disminuye.",
-      "opcion_b": "La aumenta.",
-      "opcion_c": "Los dilata.",
-      "opcion_d": "Muscarínicos."
+      "justificacion": "La neurona con soma en el ganglio es la posganglionar. Su axón alcanza el efector. La fibra que llega desde el sistema nervioso central pertenece a la neurona preganglionar.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "592",
+      "pagina_impresa": "564",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 15 · Vías motoras autónomas",
+          "page": 592,
+          "printed": 564,
+          "marks": [
+            [
+              0.1559,
+              0.8133,
+              0.0946,
+              0.0111
+            ],
+            [
+              0.6511,
+              0.4795,
+              0.0818,
+              0.0106
+            ],
+            [
+              0.2022,
+              0.8727,
+              0.093,
+              0.0111
+            ],
+            [
+              0.5884,
+              0.6683,
+              0.093,
+              0.0111
+            ]
+          ]
+        }
+      ],
+      "source": {
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-15"
+      },
+      "opcion_a": "Del ganglio al órgano efector.",
+      "opcion_b": "Del sistema nervioso central al ganglio.",
+      "opcion_c": "Del receptor sensitivo al sistema nervioso central.",
+      "opcion_d": "Del órgano efector al ganglio."
     }
   ]
 }

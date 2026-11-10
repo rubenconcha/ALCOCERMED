@@ -5,519 +5,506 @@
   "topic": "equilibrio hidrico y acidobasico",
   "title": "Equilibrios hídrico, hidroelectrolítico y acidobásico",
   "number": 24,
-  "count": 30,
-  "duration": 30,
+  "count": 9,
+  "duration": 9,
   "source": "Saladin · Anatomía y fisiología",
   "questions": [
     {
-      "content_id": "morfo-24-001",
+      "content_id": "evaluacion:medicina-oficial-morfo-24-intermedio-1",
       "materia": "MORFOFUNCION",
       "tema": "equilibrio hidrico y acidobasico",
       "numero_pregunta": 1,
-      "pregunta": "¿Qué compartimento contiene aproximadamente el 65 % del agua corporal?",
-      "respuesta_correcta": "D",
-      "justificacion": "El líquido intracelular.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "959",
-      "pagina_impresa": "931",
+      "pregunta": "El cambio inicial en el caso es retener CO₂ por hipoventilación. El pH desciende antes de que se describa compensación.\n¿Qué opción corresponde al caso?",
+      "respuesta_correcta": "A",
+      "justificacion": "La hipoventilación retiene CO₂ y disminuye el pH. El origen del cambio es respiratorio.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "974",
+      "pagina_impresa": "946",
       "dificultad": "medio",
-      "opcion_a": "La hormona antidiurética.",
-      "opcion_b": "Alcalosis respiratoria.",
-      "opcion_c": "Ganan agua y se hinchan.",
-      "opcion_d": "El líquido intracelular."
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Equilibrios hídrico, hidroelectrolítico y acidobásico · Trastornos acidobásicos",
+          "page": 974,
+          "printed": 946,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-24",
+        "chapterNumber": 24,
+        "chapter": "Equilibrios hídrico, hidroelectrolítico y acidobásico",
+        "section": "Trastornos acidobásicos",
+        "printedPages": [
+          946
+        ],
+        "pdfPages": [
+          974
+        ]
+      },
+      "opcion_a": "Acidosis respiratoria",
+      "opcion_b": "Alcalosis respiratoria",
+      "opcion_c": "Acidosis metabólica",
+      "opcion_d": "Alcalosis metabólica"
     },
     {
-      "content_id": "morfo-24-002",
+      "content_id": "evaluacion:medicina-oficial-morfo-24-intermedio-2",
       "materia": "MORFOFUNCION",
       "tema": "equilibrio hidrico y acidobasico",
       "numero_pregunta": 2,
-      "pregunta": "¿Qué compartimento contiene aproximadamente el 35 % del agua corporal?",
+      "pregunta": "Al aumentar la ventilación, el cambio inicial es perder CO₂. El pH sube; la causa primaria no es una ganancia de bicarbonato.\n¿Qué opción corresponde al caso?",
       "respuesta_correcta": "D",
-      "justificacion": "El líquido extracelular.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "959",
-      "pagina_impresa": "931",
+      "justificacion": "La hiperventilación elimina CO₂ más deprisa y eleva el pH. El origen del cambio es respiratorio.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "974",
+      "pagina_impresa": "946",
       "dificultad": "medio",
-      "opcion_a": "Alcalosis respiratoria.",
-      "opcion_b": "Ganan agua y se hinchan.",
-      "opcion_c": "La hormona antidiurética.",
-      "opcion_d": "El líquido extracelular."
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Equilibrios hídrico, hidroelectrolítico y acidobásico · Trastornos acidobásicos",
+          "page": 974,
+          "printed": 946,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-24",
+        "chapterNumber": 24,
+        "chapter": "Equilibrios hídrico, hidroelectrolítico y acidobásico",
+        "section": "Trastornos acidobásicos",
+        "printedPages": [
+          946
+        ],
+        "pdfPages": [
+          974
+        ]
+      },
+      "opcion_a": "Acidosis metabólica",
+      "opcion_b": "Acidosis respiratoria",
+      "opcion_c": "Alcalosis metabólica",
+      "opcion_d": "Alcalosis respiratoria"
     },
     {
-      "content_id": "morfo-24-003",
+      "content_id": "evaluacion:medicina-oficial-morfo-24-intermedio-3",
       "materia": "MORFOFUNCION",
       "tema": "equilibrio hidrico y acidobasico",
       "numero_pregunta": 3,
-      "pregunta": "¿Qué dos componentes principales forman el líquido extracelular?",
+      "pregunta": "En el ejercicio se pierde bicarbonato durante una diarrea intensa. El pH cae y el cambio inicial se atribuye a esa pérdida.\n¿Qué opción corresponde al caso?",
       "respuesta_correcta": "A",
-      "justificacion": "Líquido intersticial y plasma.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "959",
-      "pagina_impresa": "931",
+      "justificacion": "La pérdida de bicarbonato disminuye la reserva de base y reduce el pH. El cambio inicial es metabólico.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "974",
+      "pagina_impresa": "946",
       "dificultad": "medio",
-      "opcion_a": "Líquido intersticial y plasma.",
-      "opcion_b": "Ácido carbónico y bicarbonato.",
-      "opcion_c": "Ganan agua y se hinchan.",
-      "opcion_d": "Pierden agua y se encogen."
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Equilibrios hídrico, hidroelectrolítico y acidobásico · Trastornos acidobásicos",
+          "page": 974,
+          "printed": 946,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-24",
+        "chapterNumber": 24,
+        "chapter": "Equilibrios hídrico, hidroelectrolítico y acidobásico",
+        "section": "Trastornos acidobásicos",
+        "printedPages": [
+          946
+        ],
+        "pdfPages": [
+          974
+        ]
+      },
+      "opcion_a": "Acidosis metabólica",
+      "opcion_b": "Alcalosis metabólica",
+      "opcion_c": "Alcalosis respiratoria",
+      "opcion_d": "Acidosis respiratoria"
     },
     {
-      "content_id": "morfo-24-007",
+      "content_id": "evaluacion:medicina-oficial-morfo-24-intermedio-4",
       "materia": "MORFOFUNCION",
       "tema": "equilibrio hidrico y acidobasico",
       "numero_pregunta": 4,
-      "pregunta": "¿Qué estímulo osmótico activa la sed?",
-      "respuesta_correcta": "D",
-      "justificacion": "El aumento de la osmolaridad del líquido extracelular.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "961",
-      "pagina_impresa": "933",
+      "pregunta": "La pérdida primaria es ácido del estómago. El pH aumenta sin que el caso atribuya el cambio inicial a pérdida respiratoria de CO₂.\n¿Qué opción corresponde al caso?",
+      "respuesta_correcta": "A",
+      "justificacion": "La pérdida de ácido gástrico favorece una elevación del pH de origen metabólico.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "974",
+      "pagina_impresa": "946",
       "dificultad": "medio",
-      "opcion_a": "Una concentración de sodio sanguíneo inferior a la normal.",
-      "opcion_b": "Presión diastólica + un tercio de la presión de pulso.",
-      "opcion_c": "Acetil-CoA y coenzimas reducidas para obtener energía.",
-      "opcion_d": "El aumento de la osmolaridad del líquido extracelular."
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Equilibrios hídrico, hidroelectrolítico y acidobásico · Trastornos acidobásicos",
+          "page": 974,
+          "printed": 946,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-24",
+        "chapterNumber": 24,
+        "chapter": "Equilibrios hídrico, hidroelectrolítico y acidobásico",
+        "section": "Trastornos acidobásicos",
+        "printedPages": [
+          946
+        ],
+        "pdfPages": [
+          974
+        ]
+      },
+      "opcion_a": "Alcalosis metabólica",
+      "opcion_b": "Acidosis metabólica",
+      "opcion_c": "Alcalosis respiratoria",
+      "opcion_d": "Acidosis respiratoria"
     },
     {
-      "content_id": "morfo-24-008",
+      "content_id": "evaluacion:medicina-oficial-morfo-24-ampliacion-01-umss",
       "materia": "MORFOFUNCION",
       "tema": "equilibrio hidrico y acidobasico",
       "numero_pregunta": 5,
-      "pregunta": "¿Qué región encefálica regula principalmente la sed?",
-      "respuesta_correcta": "D",
-      "justificacion": "El hipotálamo.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "961",
-      "pagina_impresa": "933",
-      "dificultad": "medio",
-      "opcion_a": "La aldosterona.",
-      "opcion_b": "El potasio, K⁺.",
-      "opcion_c": "El sodio, Na⁺.",
-      "opcion_d": "El hipotálamo."
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. El compartimento intracelular almacena más agua que el conjunto de los compartimentos extracelulares.\n2. El Na⁺ predomina entre los cationes del líquido intracelular.",
+      "respuesta_correcta": "A",
+      "justificacion": "1. Correcta. Cerca del 65 % del agua corporal está dentro de las células.\n2. Incorrecta. El K⁺ es el catión predominante dentro de las células y el Na⁺ predomina fuera.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "959, 965",
+      "pagina_impresa": "931, 937",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Equilibrios hídrico, hidroelectrolítico y acidobásico · Compartimentos líquidos / Electrólitos",
+          "page": 959,
+          "printed": 931,
+          "marks": []
+        },
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Equilibrios hídrico, hidroelectrolítico y acidobásico · Compartimentos líquidos / Electrólitos",
+          "page": 965,
+          "printed": 937,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-24",
+        "chapterNumber": 24,
+        "chapter": "Equilibrios hídrico, hidroelectrolítico y acidobásico",
+        "section": "Compartimentos líquidos / Electrólitos",
+        "printedPages": [
+          931,
+          937
+        ],
+        "pdfPages": [
+          959,
+          965
+        ],
+        "statements": [
+          {
+            "pdfPage": 959,
+            "printedPage": 931,
+            "section": "Compartimentos líquidos",
+            "cardId": "morfo-24-001"
+          },
+          {
+            "pdfPage": 965,
+            "printedPage": 937,
+            "section": "Electrólitos",
+            "cardId": "morfo-24-005"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "Solo la afirmación 1 es correcta.",
+        "B": "1. Correcta. Cerca del 65 % del agua corporal está dentro de las células. 2. Incorrecta. El K⁺ es el catión predominante dentro de las células y el Na⁺ predomina fuera.",
+        "C": "2. Incorrecta. El K⁺ es el catión predominante dentro de las células y el Na⁺ predomina fuera.",
+        "D": "1. Correcta. Cerca del 65 % del agua corporal está dentro de las células."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "morfo-24-012",
+      "content_id": "evaluacion:medicina-oficial-morfo-24-ampliacion-02-umss",
       "materia": "MORFOFUNCION",
       "tema": "equilibrio hidrico y acidobasico",
       "numero_pregunta": 6,
-      "pregunta": "¿Qué es la deshidratación?",
-      "respuesta_correcta": "C",
-      "justificacion": "Una pérdida de agua corporal mayor que su reposición.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "963",
-      "pagina_impresa": "935",
-      "dificultad": "medio",
-      "opcion_a": "La transformación de espermátides en espermatozoides.",
-      "opcion_b": "El reemplazo de tejido dañado por tejido cicatricial.",
-      "opcion_c": "Una pérdida de agua corporal mayor que su reposición.",
-      "opcion_d": "Una respuesta inmunitaria contra componentes propios."
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Cuando aumenta la osmolaridad extracelular, se reduce la señal osmótica que estimula la sed.\n2. El péptido natriurético auricular favorece la eliminación renal de sodio.",
+      "respuesta_correcta": "B",
+      "justificacion": "1. Incorrecta. Una mayor osmolaridad extracelular estimula la sed.\n2. Correcta. Su efecto natriurético aumenta la excreción de sodio.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "961, 966",
+      "pagina_impresa": "933, 938",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Equilibrios hídrico, hidroelectrolítico y acidobásico · Balance hídrico / Balance de sodio",
+          "page": 961,
+          "printed": 933,
+          "marks": []
+        },
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Equilibrios hídrico, hidroelectrolítico y acidobásico · Balance hídrico / Balance de sodio",
+          "page": 966,
+          "printed": 938,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-24",
+        "chapterNumber": 24,
+        "chapter": "Equilibrios hídrico, hidroelectrolítico y acidobásico",
+        "section": "Balance hídrico / Balance de sodio",
+        "printedPages": [
+          933,
+          938
+        ],
+        "pdfPages": [
+          961,
+          966
+        ],
+        "statements": [
+          {
+            "pdfPage": 961,
+            "printedPage": 933,
+            "section": "Balance hídrico",
+            "cardId": "morfo-24-007"
+          },
+          {
+            "pdfPage": 966,
+            "printedPage": 938,
+            "section": "Balance de sodio",
+            "cardId": "morfo-24-011"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. Una mayor osmolaridad extracelular estimula la sed. 2. Correcta. Su efecto natriurético aumenta la excreción de sodio.",
+        "B": "Solo la afirmación 2 es correcta.",
+        "C": "1. Incorrecta. Una mayor osmolaridad extracelular estimula la sed.",
+        "D": "2. Correcta. Su efecto natriurético aumenta la excreción de sodio."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "morfo-24-013",
+      "content_id": "evaluacion:medicina-oficial-morfo-24-ampliacion-03-umss",
       "materia": "MORFOFUNCION",
       "tema": "equilibrio hidrico y acidobasico",
       "numero_pregunta": 7,
-      "pregunta": "¿Qué ocurre con las células si el líquido extracelular se vuelve hipertónico?",
-      "respuesta_correcta": "D",
-      "justificacion": "Pierden agua y se encogen.",
-      "fuente": "Saladin · Anatomía y fisiología",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Si el líquido extracelular se vuelve hipertónico, el agua puede salir de las células y disminuir su volumen.\n2. La hipotonía extracelular puede hacer que aumente el volumen de las células.",
+      "respuesta_correcta": "C",
+      "justificacion": "1. Correcta. La diferencia osmótica favorece el movimiento neto de agua hacia fuera.\n2. Correcta. El agua entra por ósmosis hacia el interior relativamente más concentrado.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
       "paginas_pdf": "964",
       "pagina_impresa": "936",
-      "dificultad": "medio",
-      "opcion_a": "Ganan agua y se hinchan.",
-      "opcion_b": "La hormona antidiurética.",
-      "opcion_c": "Líquido intersticial y plasma.",
-      "opcion_d": "Pierden agua y se encogen."
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Equilibrios hídrico, hidroelectrolítico y acidobásico · Alteraciones hídricas",
+          "page": 964,
+          "printed": 936,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-24",
+        "chapterNumber": 24,
+        "chapter": "Equilibrios hídrico, hidroelectrolítico y acidobásico",
+        "section": "Alteraciones hídricas",
+        "printedPages": [
+          936
+        ],
+        "pdfPages": [
+          964
+        ],
+        "statements": [
+          {
+            "pdfPage": 964,
+            "printedPage": 936,
+            "section": "Alteraciones hídricas",
+            "cardId": "morfo-24-013"
+          },
+          {
+            "pdfPage": 964,
+            "printedPage": 936,
+            "section": "Alteraciones hídricas",
+            "cardId": "morfo-24-014"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "2. Correcta. El agua entra por ósmosis hacia el interior relativamente más concentrado.",
+        "B": "1. Correcta. La diferencia osmótica favorece el movimiento neto de agua hacia fuera.",
+        "C": "Ambas afirmaciones son correctas.",
+        "D": "1. Correcta. La diferencia osmótica favorece el movimiento neto de agua hacia fuera. 2. Correcta. El agua entra por ósmosis hacia el interior relativamente más concentrado."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "morfo-24-014",
+      "content_id": "evaluacion:medicina-oficial-morfo-24-ampliacion-04-umss",
       "materia": "MORFOFUNCION",
       "tema": "equilibrio hidrico y acidobasico",
       "numero_pregunta": 8,
-      "pregunta": "¿Qué ocurre con las células si el líquido extracelular se vuelve hipotónico?",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. La compensación respiratoria de una acidosis metabólica comienza disminuyendo la ventilación para retener CO₂.\n2. Una respuesta renal que corrige la acidosis consiste en perder bicarbonato y retener H⁺.",
       "respuesta_correcta": "D",
-      "justificacion": "Ganan agua y se hinchan.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "964",
-      "pagina_impresa": "936",
-      "dificultad": "medio",
-      "opcion_a": "Pierden agua y se encogen.",
-      "opcion_b": "El sodio, Na⁺.",
-      "opcion_c": "Líquido intersticial y plasma.",
-      "opcion_d": "Ganan agua y se hinchan."
+      "justificacion": "1. Incorrecta. La compensación aumenta la ventilación y favorece la eliminación de CO₂.\n2. Incorrecta. Se elimina H⁺ y se conserva o genera bicarbonato para contribuir a recuperar el pH.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "970, 975",
+      "pagina_impresa": "942, 947",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Equilibrios hídrico, hidroelectrolítico y acidobásico · Compensación acidobásica / Regulación renal",
+          "page": 970,
+          "printed": 942,
+          "marks": []
+        },
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Equilibrios hídrico, hidroelectrolítico y acidobásico · Compensación acidobásica / Regulación renal",
+          "page": 975,
+          "printed": 947,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-24",
+        "chapterNumber": 24,
+        "chapter": "Equilibrios hídrico, hidroelectrolítico y acidobásico",
+        "section": "Compensación acidobásica / Regulación renal",
+        "printedPages": [
+          942,
+          947
+        ],
+        "pdfPages": [
+          970,
+          975
+        ],
+        "statements": [
+          {
+            "pdfPage": 975,
+            "printedPage": 947,
+            "section": "Compensación acidobásica",
+            "cardId": "morfo-24-029"
+          },
+          {
+            "pdfPage": 970,
+            "printedPage": 942,
+            "section": "Regulación renal",
+            "cardId": "morfo-24-030"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. La compensación aumenta la ventilación y favorece la eliminación de CO₂.",
+        "B": "2. Incorrecta. Se elimina H⁺ y se conserva o genera bicarbonato para contribuir a recuperar el pH.",
+        "C": "1. Incorrecta. La compensación aumenta la ventilación y favorece la eliminación de CO₂. 2. Incorrecta. Se elimina H⁺ y se conserva o genera bicarbonato para contribuir a recuperar el pH.",
+        "D": "Ninguna afirmación es correcta."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "morfo-24-004",
+      "content_id": "evaluacion:banco-verificado:morfo-24:compartimentos",
       "materia": "MORFOFUNCION",
       "tema": "equilibrio hidrico y acidobasico",
       "numero_pregunta": 9,
-      "pregunta": "¿Cuál es el principal catión extracelular?",
+      "pregunta": "Se identifica el compartimento que contiene la mayor proporción del agua corporal. ¿Qué catión predomina en él?",
       "respuesta_correcta": "A",
-      "justificacion": "El sodio, Na⁺.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "965",
-      "pagina_impresa": "937",
-      "dificultad": "medio",
-      "opcion_a": "El sodio, Na⁺.",
-      "opcion_b": "El potasio, K⁺.",
-      "opcion_c": "El hipotálamo.",
-      "opcion_d": "Ganan agua y se hinchan."
-    },
-    {
-      "content_id": "morfo-24-005",
-      "materia": "MORFOFUNCION",
-      "tema": "equilibrio hidrico y acidobasico",
-      "numero_pregunta": 10,
-      "pregunta": "¿Cuál es el principal catión intracelular?",
-      "respuesta_correcta": "A",
-      "justificacion": "El potasio, K⁺.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "965",
-      "pagina_impresa": "937",
-      "dificultad": "medio",
-      "opcion_a": "El potasio, K⁺.",
-      "opcion_b": "El hipotálamo.",
-      "opcion_c": "El sodio, Na⁺.",
-      "opcion_d": "La aldosterona."
-    },
-    {
-      "content_id": "morfo-24-006",
-      "materia": "MORFOFUNCION",
-      "tema": "equilibrio hidrico y acidobasico",
-      "numero_pregunta": 11,
-      "pregunta": "¿Qué sistema mantiene la diferencia de sodio y potasio entre interior y exterior celular?",
-      "respuesta_correcta": "B",
-      "justificacion": "La bomba Na⁺-K⁺.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "965",
-      "pagina_impresa": "937",
-      "dificultad": "medio",
-      "opcion_a": "El hipotálamo.",
-      "opcion_b": "La bomba Na⁺-K⁺.",
-      "opcion_c": "La aldosterona.",
-      "opcion_d": "Acidosis respiratoria."
-    },
-    {
-      "content_id": "morfo-24-009",
-      "materia": "MORFOFUNCION",
-      "tema": "equilibrio hidrico y acidobasico",
-      "numero_pregunta": 12,
-      "pregunta": "¿Qué hormona disminuye la pérdida renal de agua?",
-      "respuesta_correcta": "B",
-      "justificacion": "La hormona antidiurética.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "966",
-      "pagina_impresa": "938",
-      "dificultad": "medio",
-      "opcion_a": "El líquido extracelular.",
-      "opcion_b": "La hormona antidiurética.",
-      "opcion_c": "El péptido natriurético auricular.",
-      "opcion_d": "Pierden agua y se encogen."
-    },
-    {
-      "content_id": "morfo-24-010",
-      "materia": "MORFOFUNCION",
-      "tema": "equilibrio hidrico y acidobasico",
-      "numero_pregunta": 13,
-      "pregunta": "¿Qué hormona favorece la retención renal de sodio?",
-      "respuesta_correcta": "B",
-      "justificacion": "La aldosterona.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "966",
-      "pagina_impresa": "938",
-      "dificultad": "medio",
-      "opcion_a": "El péptido natriurético auricular.",
-      "opcion_b": "La aldosterona.",
-      "opcion_c": "La bomba Na⁺-K⁺.",
-      "opcion_d": "La hormona antidiurética."
-    },
-    {
-      "content_id": "morfo-24-011",
-      "materia": "MORFOFUNCION",
-      "tema": "equilibrio hidrico y acidobasico",
-      "numero_pregunta": 14,
-      "pregunta": "¿Qué péptido cardíaco favorece la eliminación renal de sodio?",
-      "respuesta_correcta": "A",
-      "justificacion": "El péptido natriurético auricular.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "966",
-      "pagina_impresa": "938",
-      "dificultad": "medio",
-      "opcion_a": "El péptido natriurético auricular.",
-      "opcion_b": "La hormona antidiurética.",
-      "opcion_c": "Ácido carbónico y bicarbonato.",
-      "opcion_d": "Alcalosis respiratoria."
-    },
-    {
-      "content_id": "morfo-24-015",
-      "materia": "MORFOFUNCION",
-      "tema": "equilibrio hidrico y acidobasico",
-      "numero_pregunta": 15,
-      "pregunta": "¿Qué significa hiponatremia?",
-      "respuesta_correcta": "B",
-      "justificacion": "Una concentración de sodio sanguíneo inferior a la normal.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "966",
-      "pagina_impresa": "938",
-      "dificultad": "medio",
-      "opcion_a": "Coloración azulada de la piel por insuficiente oxigenación sanguínea.",
-      "opcion_b": "Una concentración de sodio sanguíneo inferior a la normal.",
-      "opcion_c": "El aumento de la osmolaridad del líquido extracelular.",
-      "opcion_d": "La actividad de fondo continua del sistema autónomo."
-    },
-    {
-      "content_id": "morfo-24-016",
-      "materia": "MORFOFUNCION",
-      "tema": "equilibrio hidrico y acidobasico",
-      "numero_pregunta": 16,
-      "pregunta": "¿Qué significa hiperpotasemia?",
-      "respuesta_correcta": "D",
-      "justificacion": "Una concentración de potasio sanguíneo superior a la normal.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "968",
-      "pagina_impresa": "940",
-      "dificultad": "medio",
-      "opcion_a": "El aumento de la osmolaridad del líquido extracelular.",
-      "opcion_b": "Coloración azulada de la piel por insuficiente oxigenación sanguínea.",
-      "opcion_c": "La actividad de fondo continua del sistema autónomo.",
-      "opcion_d": "Una concentración de potasio sanguíneo superior a la normal."
-    },
-    {
-      "content_id": "morfo-24-022",
-      "materia": "MORFOFUNCION",
-      "tema": "equilibrio hidrico y acidobasico",
-      "numero_pregunta": 17,
-      "pregunta": "¿Qué pareja forma el amortiguador bicarbonato?",
-      "respuesta_correcta": "D",
-      "justificacion": "Ácido carbónico y bicarbonato.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "970",
-      "pagina_impresa": "942",
-      "dificultad": "medio",
-      "opcion_a": "Líquido intersticial y plasma.",
-      "opcion_b": "Trastornos del ritmo cardíaco.",
-      "opcion_c": "Pierden agua y se encogen.",
-      "opcion_d": "Ácido carbónico y bicarbonato."
-    },
-    {
-      "content_id": "morfo-24-030",
-      "materia": "MORFOFUNCION",
-      "tema": "equilibrio hidrico y acidobasico",
-      "numero_pregunta": 18,
-      "pregunta": "¿Cómo ayudan los riñones a corregir una acidosis?",
-      "respuesta_correcta": "B",
-      "justificacion": "Secretan H⁺ y conservan o generan bicarbonato.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "970",
-      "pagina_impresa": "942",
-      "dificultad": "medio",
-      "opcion_a": "Amortiguadores químicos, respiración y riñones.",
-      "opcion_b": "Secretan H⁺ y conservan o generan bicarbonato.",
-      "opcion_c": "El péptido natriurético auricular.",
-      "opcion_d": "Acidosis metabólica por pérdida de bicarbonato."
-    },
-    {
-      "content_id": "morfo-24-021",
-      "materia": "MORFOFUNCION",
-      "tema": "equilibrio hidrico y acidobasico",
-      "numero_pregunta": 19,
-      "pregunta": "¿Qué tres sistemas regulan el equilibrio acidobásico?",
-      "respuesta_correcta": "D",
-      "justificacion": "Amortiguadores químicos, respiración y riñones.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "971",
-      "pagina_impresa": "943",
-      "dificultad": "medio",
-      "opcion_a": "El péptido natriurético auricular.",
-      "opcion_b": "Trastornos del ritmo cardíaco.",
-      "opcion_c": "Ácido carbónico y bicarbonato.",
-      "opcion_d": "Amortiguadores químicos, respiración y riñones."
-    },
-    {
-      "content_id": "morfo-24-018",
-      "materia": "MORFOFUNCION",
-      "tema": "equilibrio hidrico y acidobasico",
-      "numero_pregunta": 20,
-      "pregunta": "¿Cuál es el intervalo normal del pH sanguíneo arterial?",
-      "respuesta_correcta": "D",
-      "justificacion": "7,35 a 7,45.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "973",
-      "pagina_impresa": "945",
-      "dificultad": "medio",
-      "opcion_a": "Aumentan la ventilación para eliminar CO₂.",
-      "opcion_b": "Disminuye el CO₂ y aumenta el pH.",
-      "opcion_c": "2 ATP.",
-      "opcion_d": "7,35 a 7,45."
-    },
-    {
-      "content_id": "morfo-24-019",
-      "materia": "MORFOFUNCION",
-      "tema": "equilibrio hidrico y acidobasico",
-      "numero_pregunta": 21,
-      "pregunta": "¿Qué indica acidosis respecto al pH sanguíneo?",
-      "respuesta_correcta": "B",
-      "justificacion": "Un pH inferior a 7,35.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "973",
-      "pagina_impresa": "945",
-      "dificultad": "medio",
-      "opcion_a": "Aproximadamente 9 kcal.",
-      "opcion_b": "Un pH inferior a 7,35.",
-      "opcion_c": "Aumentan la ventilación para eliminar CO₂.",
-      "opcion_d": "Disminuye el CO₂ y aumenta el pH."
-    },
-    {
-      "content_id": "morfo-24-020",
-      "materia": "MORFOFUNCION",
-      "tema": "equilibrio hidrico y acidobasico",
-      "numero_pregunta": 22,
-      "pregunta": "¿Qué indica alcalosis respecto al pH sanguíneo?",
-      "respuesta_correcta": "C",
-      "justificacion": "Un pH superior a 7,45.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "973",
-      "pagina_impresa": "945",
-      "dificultad": "medio",
-      "opcion_a": "Aproximadamente 9 kcal.",
-      "opcion_b": "Aumentan la ventilación para eliminar CO₂.",
-      "opcion_c": "Un pH superior a 7,45.",
-      "opcion_d": "Aumenta el CO₂ y disminuye el pH."
-    },
-    {
-      "content_id": "morfo-24-023",
-      "materia": "MORFOFUNCION",
-      "tema": "equilibrio hidrico y acidobasico",
-      "numero_pregunta": 23,
-      "pregunta": "¿Qué efecto tiene la hipoventilación sobre CO₂ y pH?",
-      "respuesta_correcta": "C",
-      "justificacion": "Aumenta el CO₂ y disminuye el pH.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "974",
-      "pagina_impresa": "946",
-      "dificultad": "medio",
-      "opcion_a": "Un pH superior a 7,45.",
-      "opcion_b": "Expulsa 3 Na⁺ e introduce 2 K⁺.",
-      "opcion_c": "Aumenta el CO₂ y disminuye el pH.",
-      "opcion_d": "Aumentan la ventilación para eliminar CO₂."
-    },
-    {
-      "content_id": "morfo-24-024",
-      "materia": "MORFOFUNCION",
-      "tema": "equilibrio hidrico y acidobasico",
-      "numero_pregunta": 24,
-      "pregunta": "¿Qué efecto tiene la hiperventilación sobre CO₂ y pH?",
-      "respuesta_correcta": "A",
-      "justificacion": "Disminuye el CO₂ y aumenta el pH.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "974",
-      "pagina_impresa": "946",
-      "dificultad": "medio",
-      "opcion_a": "Disminuye el CO₂ y aumenta el pH.",
-      "opcion_b": "Aumentan la ventilación para eliminar CO₂.",
-      "opcion_c": "Un pH superior a 7,45.",
-      "opcion_d": "Expulsa 3 Na⁺ e introduce 2 K⁺."
-    },
-    {
-      "content_id": "morfo-24-025",
-      "materia": "MORFOFUNCION",
-      "tema": "equilibrio hidrico y acidobasico",
-      "numero_pregunta": 25,
-      "pregunta": "¿Qué trastorno primario produce la retención de CO₂?",
-      "respuesta_correcta": "D",
-      "justificacion": "Acidosis respiratoria.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "974",
-      "pagina_impresa": "946",
-      "dificultad": "medio",
-      "opcion_a": "El líquido extracelular.",
-      "opcion_b": "La aldosterona.",
-      "opcion_c": "Ganan agua y se hinchan.",
-      "opcion_d": "Acidosis respiratoria."
-    },
-    {
-      "content_id": "morfo-24-026",
-      "materia": "MORFOFUNCION",
-      "tema": "equilibrio hidrico y acidobasico",
-      "numero_pregunta": 26,
-      "pregunta": "¿Qué trastorno primario produce la eliminación excesiva de CO₂?",
-      "respuesta_correcta": "D",
-      "justificacion": "Alcalosis respiratoria.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "974",
-      "pagina_impresa": "946",
-      "dificultad": "medio",
-      "opcion_a": "El péptido natriurético auricular.",
-      "opcion_b": "El líquido intracelular.",
-      "opcion_c": "Ganan agua y se hinchan.",
-      "opcion_d": "Alcalosis respiratoria."
-    },
-    {
-      "content_id": "morfo-24-027",
-      "materia": "MORFOFUNCION",
-      "tema": "equilibrio hidrico y acidobasico",
-      "numero_pregunta": 27,
-      "pregunta": "¿Qué trastorno acidobásico puede producir la diarrea intensa?",
-      "respuesta_correcta": "B",
-      "justificacion": "Acidosis metabólica por pérdida de bicarbonato.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "974",
-      "pagina_impresa": "946",
-      "dificultad": "medio",
-      "opcion_a": "Amortiguadores químicos, respiración y riñones.",
-      "opcion_b": "Acidosis metabólica por pérdida de bicarbonato.",
-      "opcion_c": "El péptido natriurético auricular.",
-      "opcion_d": "Secretan H⁺ y conservan o generan bicarbonato."
-    },
-    {
-      "content_id": "morfo-24-028",
-      "materia": "MORFOFUNCION",
-      "tema": "equilibrio hidrico y acidobasico",
-      "numero_pregunta": 28,
-      "pregunta": "¿Qué trastorno acidobásico pueden producir los vómitos prolongados?",
-      "respuesta_correcta": "C",
-      "justificacion": "Alcalosis metabólica por pérdida de ácido gástrico.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "974",
-      "pagina_impresa": "946",
-      "dificultad": "medio",
-      "opcion_a": "Trastornos del ritmo cardíaco.",
-      "opcion_b": "Secretan H⁺ y conservan o generan bicarbonato.",
-      "opcion_c": "Alcalosis metabólica por pérdida de ácido gástrico.",
-      "opcion_d": "Amortiguadores químicos, respiración y riñones."
-    },
-    {
-      "content_id": "morfo-24-029",
-      "materia": "MORFOFUNCION",
-      "tema": "equilibrio hidrico y acidobasico",
-      "numero_pregunta": 29,
-      "pregunta": "¿Cómo compensan los pulmones una acidosis metabólica?",
-      "respuesta_correcta": "D",
-      "justificacion": "Aumentan la ventilación para eliminar CO₂.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "975",
-      "pagina_impresa": "947",
-      "dificultad": "medio",
-      "opcion_a": "Un pH inferior a 7,35.",
-      "opcion_b": "Aumenta el CO₂ y disminuye el pH.",
-      "opcion_c": "7 cervicales, 12 torácicas y 5 lumbares.",
-      "opcion_d": "Aumentan la ventilación para eliminar CO₂."
-    },
-    {
-      "content_id": "morfo-24-017",
-      "materia": "MORFOFUNCION",
-      "tema": "equilibrio hidrico y acidobasico",
-      "numero_pregunta": 30,
-      "pregunta": "¿Qué efecto peligroso pueden causar las alteraciones del potasio?",
-      "respuesta_correcta": "A",
-      "justificacion": "Trastornos del ritmo cardíaco.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "977",
-      "pagina_impresa": "949",
-      "dificultad": "medio",
-      "opcion_a": "Trastornos del ritmo cardíaco.",
-      "opcion_b": "Pierden agua y se encogen.",
-      "opcion_c": "Líquido intersticial y plasma.",
-      "opcion_d": "Ácido carbónico y bicarbonato."
+      "justificacion": "El compartimento intracelular contiene la mayor parte del agua corporal. El potasio es su catión principal, mientras que el sodio predomina en el líquido extracelular.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "959, 965",
+      "pagina_impresa": "931, 937",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 24 · Equilibrio de agua y electrolitos",
+          "page": 959,
+          "printed": 931,
+          "marks": [
+            [
+              0.602,
+              0.4118,
+              0.1291,
+              0.0111
+            ]
+          ]
+        },
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 24 · Equilibrio de agua y electrolitos",
+          "page": 965,
+          "printed": 937,
+          "marks": [
+            [
+              0.367,
+              0.1667,
+              0.0338,
+              0.0112
+            ],
+            [
+              0.254,
+              0.3859,
+              0.0361,
+              0.0111
+            ]
+          ]
+        }
+      ],
+      "source": {
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-24"
+      },
+      "opcion_a": "Potasio.",
+      "opcion_b": "Sodio.",
+      "opcion_c": "Calcio.",
+      "opcion_d": "Magnesio."
     }
   ]
 }

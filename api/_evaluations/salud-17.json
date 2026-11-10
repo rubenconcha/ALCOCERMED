@@ -5,519 +5,507 @@
   "topic": "frecuencias y graficos",
   "title": "Frecuencias y gráficos",
   "number": 17,
-  "count": 30,
-  "duration": 30,
+  "count": 9,
+  "duration": 9,
   "source": "Educación en Salud e Investigación · Curso Básico 2025-2026",
   "questions": [
     {
-      "content_id": "salud-18-001",
+      "content_id": "evaluacion:medicina-oficial-salud-17-intermedio-1",
       "materia": "SALUD PUBLICA",
       "tema": "frecuencias y graficos",
       "numero_pregunta": 1,
-      "pregunta": "¿Qué se coloca junto a cada valor o atributo al tabular datos?",
+      "pregunta": "Entre 40 observaciones, 8 pertenecen a una categoría. En la fila de esa categoría se anota 8, sin dividir por 40 ni sumar otras filas.\n¿Qué opción corresponde al caso?",
       "respuesta_correcta": "D",
-      "justificacion": "Su frecuencia.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "109",
-      "pagina_impresa": "34",
+      "justificacion": "La frecuencia absoluta es el número de observaciones que pertenecen a una categoría o intervalo.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+      "paginas_pdf": "120",
+      "pagina_impresa": "45",
       "dificultad": "medio",
-      "opcion_a": "Las marcas de clase.",
-      "opcion_b": "Cuantitativa continua.",
-      "opcion_c": "La amplitud del intervalo.",
-      "opcion_d": "Su frecuencia."
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Frecuencias y gráficos · frecuencias y graficos",
+          "page": 120,
+          "printed": 45,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-17",
+        "chapterNumber": 17,
+        "chapter": "Frecuencias y gráficos",
+        "section": "frecuencias y graficos",
+        "printedPages": [
+          45
+        ],
+        "pdfPages": [
+          120
+        ]
+      },
+      "opcion_a": "Frecuencia relativa",
+      "opcion_b": "Frecuencia absoluta acumulada",
+      "opcion_c": "Frecuencia relativa acumulada",
+      "opcion_d": "Frecuencia absoluta"
     },
     {
-      "content_id": "salud-18-002",
+      "content_id": "evaluacion:medicina-oficial-salud-17-intermedio-2",
       "materia": "SALUD PUBLICA",
       "tema": "frecuencias y graficos",
       "numero_pregunta": 2,
-      "pregunta": "¿Cómo se ordenan los valores de una variable cuantitativa discreta para tabularlos?",
+      "pregunta": "Una categoría reúne 8 de 40 observaciones. Para su fila se informa 8 ÷ 40 = 0,20, equivalente al 20 %.\n¿Qué opción corresponde al caso?",
       "respuesta_correcta": "C",
-      "justificacion": "En forma creciente.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "109",
-      "pagina_impresa": "34",
+      "justificacion": "La frecuencia relativa divide el conteo de una categoría entre el total. Multiplicar el cociente por 100 da el porcentaje.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+      "paginas_pdf": "120",
+      "pagina_impresa": "45",
       "dificultad": "medio",
-      "opcion_a": "En cien partes iguales.",
-      "opcion_b": "Al total de datos.",
-      "opcion_c": "En forma creciente.",
-      "opcion_d": "A la mediana."
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Frecuencias y gráficos · frecuencias y graficos",
+          "page": 120,
+          "printed": 45,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-17",
+        "chapterNumber": 17,
+        "chapter": "Frecuencias y gráficos",
+        "section": "frecuencias y graficos",
+        "printedPages": [
+          45
+        ],
+        "pdfPages": [
+          120
+        ]
+      },
+      "opcion_a": "Frecuencia relativa acumulada",
+      "opcion_b": "Frecuencia absoluta",
+      "opcion_c": "Frecuencia relativa",
+      "opcion_d": "Frecuencia absoluta acumulada"
     },
     {
-      "content_id": "salud-18-003",
+      "content_id": "evaluacion:medicina-oficial-salud-17-intermedio-3",
       "materia": "SALUD PUBLICA",
       "tema": "frecuencias y graficos",
       "numero_pregunta": 3,
-      "pregunta": "¿Cuándo se recomienda agrupar los datos en intervalos?",
-      "respuesta_correcta": "C",
-      "justificacion": "Cuando son numerosos o corresponden a una variable cuantitativa continua.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "110",
-      "pagina_impresa": "35",
+      "pregunta": "Los primeros dos intervalos contienen 7 y 9 observaciones. En la segunda fila se informa cuántas observaciones quedan hasta allí: 16.\n¿Qué opción corresponde al caso?",
+      "respuesta_correcta": "B",
+      "justificacion": "La frecuencia absoluta acumulada suma los conteos desde el inicio hasta el intervalo elegido.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+      "paginas_pdf": "121",
+      "pagina_impresa": "46",
       "dificultad": "medio",
-      "opcion_a": "Las frecuencias absolutas hasta un valor o intervalo determinado.",
-      "opcion_b": "La tabulación y distribución de frecuencias de cada variable.",
-      "opcion_c": "Cuando son numerosos o corresponden a una variable cuantitativa continua.",
-      "opcion_d": "Promediando el límite inferior y el superior del intervalo."
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Frecuencias y gráficos · frecuencias y graficos",
+          "page": 121,
+          "printed": 46,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-17",
+        "chapterNumber": 17,
+        "chapter": "Frecuencias y gráficos",
+        "section": "frecuencias y graficos",
+        "printedPages": [
+          46
+        ],
+        "pdfPages": [
+          121
+        ]
+      },
+      "opcion_a": "Frecuencia relativa",
+      "opcion_b": "Frecuencia absoluta acumulada",
+      "opcion_c": "Frecuencia relativa acumulada",
+      "opcion_d": "Frecuencia absoluta"
     },
     {
-      "content_id": "salud-18-004",
+      "content_id": "evaluacion:medicina-oficial-salud-17-intermedio-4",
       "materia": "SALUD PUBLICA",
       "tema": "frecuencias y graficos",
       "numero_pregunta": 4,
-      "pregunta": "¿Cómo se calcula el rango o recorrido?",
+      "pregunta": "Los primeros dos intervalos representan el 30 % y el 25 %. Para el segundo intervalo se informa el 55 % que queda hasta ese punto.\n¿Qué opción corresponde al caso?",
       "respuesta_correcta": "B",
-      "justificacion": "Valor máximo menos valor mínimo.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "110",
-      "pagina_impresa": "35",
-      "dificultad": "medio",
-      "opcion_a": "La distribución acumulada de frecuencias.",
-      "opcion_b": "Valor máximo menos valor mínimo.",
-      "opcion_c": "La amplitud del intervalo.",
-      "opcion_d": "La frecuencia absoluta o relativa."
-    },
-    {
-      "content_id": "salud-18-005",
-      "materia": "SALUD PUBLICA",
-      "tema": "frecuencias y graficos",
-      "numero_pregunta": 5,
-      "pregunta": "¿Qué estima la fórmula de Sturges?",
-      "respuesta_correcta": "C",
-      "justificacion": "El número de intervalos o clases para agrupar los datos.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "111",
-      "pagina_impresa": "36",
-      "dificultad": "medio",
-      "opcion_a": "La frecuencia conjunta de las dos categorías que se cruzan.",
-      "opcion_b": "Añadiendo extremos a igual amplitud y con frecuencia cero.",
-      "opcion_c": "El número de intervalos o clases para agrupar los datos.",
-      "opcion_d": "Promediando el límite inferior y el superior del intervalo."
-    },
-    {
-      "content_id": "salud-18-006",
-      "materia": "SALUD PUBLICA",
-      "tema": "frecuencias y graficos",
-      "numero_pregunta": 6,
-      "pregunta": "¿Entre cuántos intervalos sugiere mantenerse el texto al agrupar datos?",
-      "respuesta_correcta": "D",
-      "justificacion": "Entre 5 y 20.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "111",
-      "pagina_impresa": "36",
-      "dificultad": "medio",
-      "opcion_a": "360°.",
-      "opcion_b": "Excluye 50 e incluye 55.",
-      "opcion_c": "100 %.",
-      "opcion_d": "Entre 5 y 20."
-    },
-    {
-      "content_id": "salud-18-007",
-      "materia": "SALUD PUBLICA",
-      "tema": "frecuencias y graficos",
-      "numero_pregunta": 7,
-      "pregunta": "¿Cómo se calcula la amplitud de un intervalo de clase?",
-      "respuesta_correcta": "D",
-      "justificacion": "Rango dividido entre número de intervalos.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "112",
-      "pagina_impresa": "37",
-      "dificultad": "medio",
-      "opcion_a": "Cuántas veces aparece un valor o categoría.",
-      "opcion_b": "La proporción o porcentaje de una categoría.",
-      "opcion_c": "Sumando la amplitud al límite inferior.",
-      "opcion_d": "Rango dividido entre número de intervalos."
-    },
-    {
-      "content_id": "salud-18-008",
-      "materia": "SALUD PUBLICA",
-      "tema": "frecuencias y graficos",
-      "numero_pregunta": 8,
-      "pregunta": "¿Cómo se obtiene el límite superior del primer intervalo?",
-      "respuesta_correcta": "D",
-      "justificacion": "Sumando la amplitud al límite inferior.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "112",
-      "pagina_impresa": "37",
-      "dificultad": "medio",
-      "opcion_a": "Rango dividido entre número de intervalos.",
-      "opcion_b": "Diagrama de barras en lugar de circular.",
-      "opcion_c": "Cuántas veces aparece un valor o categoría.",
-      "opcion_d": "Sumando la amplitud al límite inferior."
-    },
-    {
-      "content_id": "salud-18-009",
-      "materia": "SALUD PUBLICA",
-      "tema": "frecuencias y graficos",
-      "numero_pregunta": 9,
-      "pregunta": "¿Qué significa la notación (50–55] usada en los intervalos del ejemplo?",
-      "respuesta_correcta": "D",
-      "justificacion": "Excluye 50 e incluye 55.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "113",
-      "pagina_impresa": "38",
-      "dificultad": "medio",
-      "opcion_a": "100 %.",
-      "opcion_b": "Entre 5 y 20.",
-      "opcion_c": "360°.",
-      "opcion_d": "Excluye 50 e incluye 55."
-    },
-    {
-      "content_id": "salud-18-010",
-      "materia": "SALUD PUBLICA",
-      "tema": "frecuencias y graficos",
-      "numero_pregunta": 10,
-      "pregunta": "¿Qué es la marca de clase?",
-      "respuesta_correcta": "B",
-      "justificacion": "El punto medio que representa a un intervalo.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "114",
-      "pagina_impresa": "39",
-      "dificultad": "medio",
-      "opcion_a": "Una parte seleccionada de una población.",
-      "opcion_b": "El punto medio que representa a un intervalo.",
-      "opcion_c": "El valor central de los datos ordenados.",
-      "opcion_d": "El resultado o fenómeno explicado por otra variable."
-    },
-    {
-      "content_id": "salud-18-011",
-      "materia": "SALUD PUBLICA",
-      "tema": "frecuencias y graficos",
-      "numero_pregunta": 11,
-      "pregunta": "¿Cómo se calcula la marca de clase?",
-      "respuesta_correcta": "A",
-      "justificacion": "Promediando el límite inferior y el superior del intervalo.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "114",
-      "pagina_impresa": "39",
-      "dificultad": "medio",
-      "opcion_a": "Promediando el límite inferior y el superior del intervalo.",
-      "opcion_b": "La frecuencia conjunta de las dos categorías que se cruzan.",
-      "opcion_c": "La misma cantidad que la amplitud del intervalo.",
-      "opcion_d": "Añadiendo extremos a igual amplitud y con frecuencia cero."
-    },
-    {
-      "content_id": "salud-18-012",
-      "materia": "SALUD PUBLICA",
-      "tema": "frecuencias y graficos",
-      "numero_pregunta": 12,
-      "pregunta": "¿Cuánto aumenta la marca de clase entre intervalos de igual amplitud?",
-      "respuesta_correcta": "D",
-      "justificacion": "La misma cantidad que la amplitud del intervalo.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "114",
-      "pagina_impresa": "39",
-      "dificultad": "medio",
-      "opcion_a": "El número de intervalos o clases para agrupar los datos.",
-      "opcion_b": "Promediando el límite inferior y el superior del intervalo.",
-      "opcion_c": "Añadiendo extremos a igual amplitud y con frecuencia cero.",
-      "opcion_d": "La misma cantidad que la amplitud del intervalo."
-    },
-    {
-      "content_id": "salud-19-001",
-      "materia": "SALUD PUBLICA",
-      "tema": "frecuencias y graficos",
-      "numero_pregunta": 13,
-      "pregunta": "¿Qué expresa la frecuencia absoluta?",
-      "respuesta_correcta": "D",
-      "justificacion": "Cuántas veces aparece un valor o categoría.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "120",
-      "pagina_impresa": "45",
-      "dificultad": "medio",
-      "opcion_a": "Rango dividido entre número de intervalos.",
-      "opcion_b": "La proporción o porcentaje de una categoría.",
-      "opcion_c": "«Máximo», «hasta» o «a lo sumo».",
-      "opcion_d": "Cuántas veces aparece un valor o categoría."
-    },
-    {
-      "content_id": "salud-19-002",
-      "materia": "SALUD PUBLICA",
-      "tema": "frecuencias y graficos",
-      "numero_pregunta": 14,
-      "pregunta": "¿A qué debe ser igual la suma de frecuencias absolutas?",
-      "respuesta_correcta": "B",
-      "justificacion": "Al total de datos.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "120",
-      "pagina_impresa": "45",
-      "dificultad": "medio",
-      "opcion_a": "En forma creciente.",
-      "opcion_b": "Al total de datos.",
-      "opcion_c": "En diez partes iguales.",
-      "opcion_d": "A la mediana."
-    },
-    {
-      "content_id": "salud-19-003",
-      "materia": "SALUD PUBLICA",
-      "tema": "frecuencias y graficos",
-      "numero_pregunta": 15,
-      "pregunta": "¿Cómo se calcula la frecuencia relativa?",
-      "respuesta_correcta": "A",
-      "justificacion": "Frecuencia absoluta dividida entre total de datos; multiplicar por 100 para expresarla en porcentaje.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "120",
-      "pagina_impresa": "45",
-      "dificultad": "medio",
-      "opcion_a": "Frecuencia absoluta dividida entre total de datos; multiplicar por 100 para expresarla en porcentaje.",
-      "opcion_b": "Las frecuencias relativas hasta un valor o intervalo determinado.",
-      "opcion_c": "Añadiendo extremos a igual amplitud y con frecuencia cero.",
-      "opcion_d": "Promediando el límite inferior y el superior del intervalo."
-    },
-    {
-      "content_id": "salud-19-004",
-      "materia": "SALUD PUBLICA",
-      "tema": "frecuencias y graficos",
-      "numero_pregunta": 16,
-      "pregunta": "¿Cuánto deben sumar las frecuencias relativas porcentuales?",
-      "respuesta_correcta": "B",
-      "justificacion": "100 %, salvo pequeñas diferencias por redondeo.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "121",
-      "pagina_impresa": "46",
-      "dificultad": "medio",
-      "opcion_a": "Que 11 personas tardaron como máximo 55 minutos.",
-      "opcion_b": "100 %, salvo pequeñas diferencias por redondeo.",
-      "opcion_c": "Excluye 50 e incluye 55.",
-      "opcion_d": "Frecuencia de la celda ÷ total de su fila × 100."
-    },
-    {
-      "content_id": "salud-19-005",
-      "materia": "SALUD PUBLICA",
-      "tema": "frecuencias y graficos",
-      "numero_pregunta": 17,
-      "pregunta": "¿Qué acumula la frecuencia absoluta acumulada?",
-      "respuesta_correcta": "B",
-      "justificacion": "Las frecuencias absolutas hasta un valor o intervalo determinado.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "121",
-      "pagina_impresa": "46",
-      "dificultad": "medio",
-      "opcion_a": "Añadiendo extremos a igual amplitud y con frecuencia cero.",
-      "opcion_b": "Las frecuencias absolutas hasta un valor o intervalo determinado.",
-      "opcion_c": "Promediando el límite inferior y el superior del intervalo.",
-      "opcion_d": "La distribución de frecuencias de cada variable por separado."
-    },
-    {
-      "content_id": "salud-19-009",
-      "materia": "SALUD PUBLICA",
-      "tema": "frecuencias y graficos",
-      "numero_pregunta": 18,
-      "pregunta": "¿Qué frecuencia relativa corresponde a 12 observaciones de un total de 50?",
-      "respuesta_correcta": "D",
-      "justificacion": "24 %.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "121",
-      "pagina_impresa": "46",
-      "dificultad": "medio",
-      "opcion_a": "Entre 5 y 20.",
-      "opcion_b": "Excluye 50 e incluye 55.",
-      "opcion_c": "360°.",
-      "opcion_d": "24 %."
-    },
-    {
-      "content_id": "salud-19-006",
-      "materia": "SALUD PUBLICA",
-      "tema": "frecuencias y graficos",
-      "numero_pregunta": 19,
-      "pregunta": "¿Qué acumula la frecuencia relativa acumulada?",
-      "respuesta_correcta": "D",
-      "justificacion": "Las frecuencias relativas hasta un valor o intervalo determinado.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
+      "justificacion": "La frecuencia relativa acumulada suma proporciones o porcentajes hasta la categoría indicada.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
       "paginas_pdf": "122",
       "pagina_impresa": "47",
       "dificultad": "medio",
-      "opcion_a": "Frecuencia absoluta dividida entre total de datos; multiplicar por 100 para expresarla en porcentaje.",
-      "opcion_b": "La distribución de frecuencias de cada variable por separado.",
-      "opcion_c": "Añadiendo extremos a igual amplitud y con frecuencia cero.",
-      "opcion_d": "Las frecuencias relativas hasta un valor o intervalo determinado."
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Frecuencias y gráficos · frecuencias y graficos",
+          "page": 122,
+          "printed": 47,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-17",
+        "chapterNumber": 17,
+        "chapter": "Frecuencias y gráficos",
+        "section": "frecuencias y graficos",
+        "printedPages": [
+          47
+        ],
+        "pdfPages": [
+          122
+        ]
+      },
+      "opcion_a": "Frecuencia absoluta",
+      "opcion_b": "Frecuencia relativa acumulada",
+      "opcion_c": "Frecuencia relativa",
+      "opcion_d": "Frecuencia absoluta acumulada"
     },
     {
-      "content_id": "salud-19-007",
+      "content_id": "evaluacion:medicina-oficial-salud-17-ampliacion-01-umss",
       "materia": "SALUD PUBLICA",
       "tema": "frecuencias y graficos",
-      "numero_pregunta": 20,
-      "pregunta": "¿Con qué expresiones se interpretan las frecuencias acumuladas?",
+      "numero_pregunta": 5,
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. La marca de clase de un intervalo de 20 a 30 es 25.\n2. En el intervalo (50–55], una observación de 50 entra y una de 55 queda fuera.",
       "respuesta_correcta": "A",
-      "justificacion": "«Máximo», «hasta» o «a lo sumo».",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "123",
-      "pagina_impresa": "48",
-      "dificultad": "medio",
-      "opcion_a": "«Máximo», «hasta» o «a lo sumo».",
-      "opcion_b": "Sumando la amplitud al límite inferior.",
-      "opcion_c": "Diagrama de barras en lugar de circular.",
-      "opcion_d": "Cuántas veces aparece un valor o categoría."
+      "justificacion": "1. Correcta. Es el punto medio entre los límites, calculado como (20 + 30)/2.\n2. Incorrecta. El paréntesis excluye el límite de 50 y el corchete incluye 55.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+      "paginas_pdf": "113, 114",
+      "pagina_impresa": "38, 39",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Frecuencias y gráficos · frecuencias y graficos",
+          "page": 113,
+          "printed": 38,
+          "marks": []
+        },
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Frecuencias y gráficos · frecuencias y graficos",
+          "page": 114,
+          "printed": 39,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-17",
+        "chapterNumber": 17,
+        "chapter": "Frecuencias y gráficos",
+        "section": "frecuencias y graficos",
+        "printedPages": [
+          38,
+          39
+        ],
+        "pdfPages": [
+          113,
+          114
+        ],
+        "statements": [
+          {
+            "pdfPage": 114,
+            "printedPage": 39,
+            "section": "frecuencias y graficos",
+            "cardId": "salud-18-010"
+          },
+          {
+            "pdfPage": 113,
+            "printedPage": 38,
+            "section": "frecuencias y graficos",
+            "cardId": "salud-18-009"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "Solo la afirmación 1 es correcta.",
+        "B": "1. Correcta. Es el punto medio entre los límites, calculado como (20 + 30)/2. 2. Incorrecta. El paréntesis excluye el límite de 50 y el corchete incluye 55.",
+        "C": "2. Incorrecta. El paréntesis excluye el límite de 50 y el corchete incluye 55.",
+        "D": "1. Correcta. Es el punto medio entre los límites, calculado como (20 + 30)/2."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "salud-19-010",
+      "content_id": "evaluacion:medicina-oficial-salud-17-ampliacion-02-umss",
       "materia": "SALUD PUBLICA",
       "tema": "frecuencias y graficos",
-      "numero_pregunta": 21,
-      "pregunta": "¿Qué significa una frecuencia acumulada de 11 hasta 55 minutos en el ejemplo?",
-      "respuesta_correcta": "C",
-      "justificacion": "Que 11 personas tardaron como máximo 55 minutos.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "123",
-      "pagina_impresa": "48",
-      "dificultad": "medio",
-      "opcion_a": "Frecuencia de la celda ÷ total de su fila × 100.",
-      "opcion_b": "Excluye 50 e incluye 55.",
-      "opcion_c": "Que 11 personas tardaron como máximo 55 minutos.",
-      "opcion_d": "100 %, salvo pequeñas diferencias por redondeo."
-    },
-    {
-      "content_id": "salud-20-001",
-      "materia": "SALUD PUBLICA",
-      "tema": "frecuencias y graficos",
-      "numero_pregunta": 22,
-      "pregunta": "¿Qué tipo de variable representa el histograma?",
-      "respuesta_correcta": "A",
-      "justificacion": "Cuantitativa continua.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "128",
-      "pagina_impresa": "53",
-      "dificultad": "medio",
-      "opcion_a": "Cuantitativa continua.",
-      "opcion_b": "La frecuencia absoluta o relativa.",
-      "opcion_c": "La amplitud del intervalo.",
-      "opcion_d": "La distribución acumulada de frecuencias."
-    },
-    {
-      "content_id": "salud-20-002",
-      "materia": "SALUD PUBLICA",
-      "tema": "frecuencias y graficos",
-      "numero_pregunta": 23,
-      "pregunta": "¿Qué se ubica en los ejes del histograma?",
-      "respuesta_correcta": "C",
-      "justificacion": "Horizontal: intervalos. Vertical: frecuencias.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "128",
-      "pagina_impresa": "53",
-      "dificultad": "medio",
-      "opcion_a": "Cuantitativa continua.",
-      "opcion_b": "La distribución acumulada de frecuencias.",
-      "opcion_c": "Horizontal: intervalos. Vertical: frecuencias.",
-      "opcion_d": "Las marcas de clase."
-    },
-    {
-      "content_id": "salud-20-003",
-      "materia": "SALUD PUBLICA",
-      "tema": "frecuencias y graficos",
-      "numero_pregunta": 24,
-      "pregunta": "¿Qué representa la base de cada rectángulo del histograma?",
+      "numero_pregunta": 6,
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Si 8 de 40 observaciones pertenecen a una categoría, la frecuencia relativa de la categoría es 40 %.\n2. Si la frecuencia acumulada hasta 55 minutos es 11, once observaciones son de 55 minutos o menos.",
       "respuesta_correcta": "B",
-      "justificacion": "La amplitud del intervalo.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "128",
-      "pagina_impresa": "53",
-      "dificultad": "medio",
-      "opcion_a": "La frecuencia absoluta o relativa.",
-      "opcion_b": "La amplitud del intervalo.",
-      "opcion_c": "La distribución acumulada de frecuencias.",
-      "opcion_d": "Cuantitativa continua."
+      "justificacion": "1. Incorrecta. Se divide 8 entre 40. La proporción 0,20 equivale a 20 %.\n2. Correcta. La acumulación incluye los intervalos anteriores hasta el límite indicado.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+      "paginas_pdf": "121, 123",
+      "pagina_impresa": "46, 48",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Frecuencias y gráficos · frecuencias y graficos",
+          "page": 121,
+          "printed": 46,
+          "marks": []
+        },
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Frecuencias y gráficos · frecuencias y graficos",
+          "page": 123,
+          "printed": 48,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-17",
+        "chapterNumber": 17,
+        "chapter": "Frecuencias y gráficos",
+        "section": "frecuencias y graficos",
+        "printedPages": [
+          46,
+          48
+        ],
+        "pdfPages": [
+          121,
+          123
+        ],
+        "statements": [
+          {
+            "pdfPage": 121,
+            "printedPage": 46,
+            "section": "frecuencias y graficos",
+            "cardId": "salud-19-009"
+          },
+          {
+            "pdfPage": 123,
+            "printedPage": 48,
+            "section": "frecuencias y graficos",
+            "cardId": "salud-19-007"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. Se divide 8 entre 40. La proporción 0,20 equivale a 20 %. 2. Correcta. La acumulación incluye los intervalos anteriores hasta el límite indicado.",
+        "B": "Solo la afirmación 2 es correcta.",
+        "C": "1. Incorrecta. Se divide 8 entre 40. La proporción 0,20 equivale a 20 %.",
+        "D": "2. Correcta. La acumulación incluye los intervalos anteriores hasta el límite indicado."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "salud-20-004",
+      "content_id": "evaluacion:medicina-oficial-salud-17-ampliacion-03-umss",
       "materia": "SALUD PUBLICA",
       "tema": "frecuencias y graficos",
-      "numero_pregunta": 25,
-      "pregunta": "¿Qué representa la altura de cada rectángulo del histograma del texto?",
+      "numero_pregunta": 7,
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Las marcas de clase sirven para ubicar en el eje horizontal los puntos de un polígono de frecuencias.\n2. Una ojiva permite ver cómo se acumulan las frecuencias hasta un determinado valor.",
+      "respuesta_correcta": "C",
+      "justificacion": "1. Correcta. Cada intervalo se representa en su punto medio.\n2. Correcta. Es una representación de la distribución acumulada.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+      "paginas_pdf": "129, 131",
+      "pagina_impresa": "54, 56",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Frecuencias y gráficos · frecuencias y graficos",
+          "page": 129,
+          "printed": 54,
+          "marks": []
+        },
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Frecuencias y gráficos · frecuencias y graficos",
+          "page": 131,
+          "printed": 56,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-17",
+        "chapterNumber": 17,
+        "chapter": "Frecuencias y gráficos",
+        "section": "frecuencias y graficos",
+        "printedPages": [
+          54,
+          56
+        ],
+        "pdfPages": [
+          129,
+          131
+        ],
+        "statements": [
+          {
+            "pdfPage": 129,
+            "printedPage": 54,
+            "section": "frecuencias y graficos",
+            "cardId": "salud-20-005"
+          },
+          {
+            "pdfPage": 131,
+            "printedPage": 56,
+            "section": "frecuencias y graficos",
+            "cardId": "salud-20-007"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "2. Correcta. Es una representación de la distribución acumulada.",
+        "B": "1. Correcta. Cada intervalo se representa en su punto medio.",
+        "C": "Ambas afirmaciones son correctas.",
+        "D": "1. Correcta. Cada intervalo se representa en su punto medio. 2. Correcta. Es una representación de la distribución acumulada."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
+    },
+    {
+      "content_id": "evaluacion:medicina-oficial-salud-17-ampliacion-04-umss",
+      "materia": "SALUD PUBLICA",
+      "tema": "frecuencias y graficos",
+      "numero_pregunta": 8,
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. En una tabla cruzada, los totales marginales muestran únicamente las frecuencias conjuntas de cada par de categorías.\n2. Para obtener un porcentaje de fila, se divide la frecuencia de la celda entre el total de la columna correspondiente.",
       "respuesta_correcta": "D",
-      "justificacion": "La frecuencia del intervalo.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "128",
-      "pagina_impresa": "53",
-      "dificultad": "medio",
-      "opcion_a": "Tabla de contingencia.",
-      "opcion_b": "Cuantitativa continua.",
-      "opcion_c": "Valor máximo menos valor mínimo.",
-      "opcion_d": "La frecuencia del intervalo."
+      "justificacion": "1. Incorrecta. Las frecuencias conjuntas están en las celdas interiores. Los márgenes resumen cada variable por separado.\n2. Incorrecta. El denominador debe ser el total de esa fila.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+      "paginas_pdf": "141, 142",
+      "pagina_impresa": "66, 67",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Frecuencias y gráficos · frecuencias y graficos",
+          "page": 141,
+          "printed": 66,
+          "marks": []
+        },
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Frecuencias y gráficos · frecuencias y graficos",
+          "page": 142,
+          "printed": 67,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-17",
+        "chapterNumber": 17,
+        "chapter": "Frecuencias y gráficos",
+        "section": "frecuencias y graficos",
+        "printedPages": [
+          66,
+          67
+        ],
+        "pdfPages": [
+          141,
+          142
+        ],
+        "statements": [
+          {
+            "pdfPage": 141,
+            "printedPage": 66,
+            "section": "frecuencias y graficos",
+            "cardId": "salud-21-004"
+          },
+          {
+            "pdfPage": 142,
+            "printedPage": 67,
+            "section": "frecuencias y graficos",
+            "cardId": "salud-21-005"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. Las frecuencias conjuntas están en las celdas interiores. Los márgenes resumen cada variable por separado.",
+        "B": "2. Incorrecta. El denominador debe ser el total de esa fila.",
+        "C": "1. Incorrecta. Las frecuencias conjuntas están en las celdas interiores. Los márgenes resumen cada variable por separado. 2. Incorrecta. El denominador debe ser el total de esa fila.",
+        "D": "Ninguna afirmación es correcta."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "salud-20-005",
+      "content_id": "evaluacion:banco-verificado:salud-17:tabulacion",
       "materia": "SALUD PUBLICA",
       "tema": "frecuencias y graficos",
-      "numero_pregunta": 26,
-      "pregunta": "¿Qué se ubica en el eje horizontal del polígono de frecuencias?",
-      "respuesta_correcta": "B",
-      "justificacion": "Las marcas de clase.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "129",
-      "pagina_impresa": "54",
-      "dificultad": "medio",
-      "opcion_a": "Su frecuencia.",
-      "opcion_b": "Las marcas de clase.",
-      "opcion_c": "La amplitud del intervalo.",
-      "opcion_d": "Tabla de contingencia."
-    },
-    {
-      "content_id": "salud-20-006",
-      "materia": "SALUD PUBLICA",
-      "tema": "frecuencias y graficos",
-      "numero_pregunta": 27,
-      "pregunta": "¿Cómo se cierra un polígono de frecuencias?",
+      "numero_pregunta": 9,
+      "pregunta": "Una variable continua toma muchos valores y se va a presentar en una tabla agrupada. Si el mínimo es 12 y el máximo 47, ¿qué recorrido se usa para planificar los intervalos?",
       "respuesta_correcta": "A",
-      "justificacion": "Añadiendo extremos a igual amplitud y con frecuencia cero.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "131",
-      "pagina_impresa": "56",
-      "dificultad": "medio",
-      "opcion_a": "Añadiendo extremos a igual amplitud y con frecuencia cero.",
-      "opcion_b": "La frecuencia conjunta de las dos categorías que se cruzan.",
-      "opcion_c": "Promediando el límite inferior y el superior del intervalo.",
-      "opcion_d": "Las frecuencias absolutas hasta un valor o intervalo determinado."
-    },
-    {
-      "content_id": "salud-20-007",
-      "materia": "SALUD PUBLICA",
-      "tema": "frecuencias y graficos",
-      "numero_pregunta": 28,
-      "pregunta": "¿Qué representa una ojiva?",
-      "respuesta_correcta": "B",
-      "justificacion": "La distribución acumulada de frecuencias.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "131",
-      "pagina_impresa": "56",
-      "dificultad": "medio",
-      "opcion_a": "La frecuencia absoluta o relativa.",
-      "opcion_b": "La distribución acumulada de frecuencias.",
-      "opcion_c": "Cuantitativa continua.",
-      "opcion_d": "La amplitud del intervalo."
-    },
-    {
-      "content_id": "salud-20-008",
-      "materia": "SALUD PUBLICA",
-      "tema": "frecuencias y graficos",
-      "numero_pregunta": 29,
-      "pregunta": "¿Para qué variables se usa especialmente el diagrama de barras?",
-      "respuesta_correcta": "A",
-      "justificacion": "Cualitativas y cuantitativas discretas.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "132",
-      "pagina_impresa": "57",
-      "dificultad": "medio",
-      "opcion_a": "Cualitativas y cuantitativas discretas.",
-      "opcion_b": "Archivo → Opciones → Complementos.",
-      "opcion_c": "El comportamiento simultáneo de dos variables.",
-      "opcion_d": "Búsqueda de casos febriles exantemáticos."
-    },
-    {
-      "content_id": "salud-20-009",
-      "materia": "SALUD PUBLICA",
-      "tema": "frecuencias y graficos",
-      "numero_pregunta": 30,
-      "pregunta": "¿Qué representa la longitud de las barras?",
-      "respuesta_correcta": "C",
-      "justificacion": "La frecuencia absoluta o relativa.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "132",
-      "pagina_impresa": "57",
-      "dificultad": "medio",
-      "opcion_a": "La amplitud del intervalo.",
-      "opcion_b": "La distribución acumulada de frecuencias.",
-      "opcion_c": "La frecuencia absoluta o relativa.",
-      "opcion_d": "Cuantitativa continua."
+      "justificacion": "El recorrido es la diferencia entre el valor máximo y el mínimo. Para esos datos se obtiene 47 menos 12, que da 35.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+      "paginas_pdf": "110",
+      "pagina_impresa": "35",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "Educación en Salud",
+          "section": "Tabulación y recorrido de datos",
+          "page": 110,
+          "printed": 35,
+          "marks": [
+            [
+              0.6489,
+              0.3279,
+              0.1131,
+              0.0192
+            ],
+            [
+              0.5991,
+              0.3509,
+              0.1061,
+              0.0192
+            ],
+            [
+              0.3144,
+              0.4476,
+              0.1106,
+              0.0191
+            ]
+          ]
+        }
+      ],
+      "source": {
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-17"
+      },
+      "opcion_a": "35.",
+      "opcion_b": "47.",
+      "opcion_c": "59.",
+      "opcion_d": "12."
     }
   ]
 }

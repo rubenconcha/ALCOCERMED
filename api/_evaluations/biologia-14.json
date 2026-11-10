@@ -5,519 +5,581 @@
   "topic": "ciclo celular",
   "title": "Ciclo celular y destinos vitales de la célula",
   "number": 14,
-  "count": 30,
-  "duration": 30,
+  "count": 11,
+  "duration": 11,
   "source": "Biología celular biomédica",
   "questions": [
     {
-      "content_id": "bio-14-001",
+      "content_id": "evaluacion:medicina-oficial-biologia-14-intermedio-1",
       "materia": "BIOLOGIA CELULAR",
       "tema": "ciclo celular",
       "numero_pregunta": 1,
-      "pregunta": "¿Cuáles son las dos grandes etapas del ciclo celular?",
-      "respuesta_correcta": "C",
-      "justificacion": "Interfase y división celular.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "583",
-      "pagina_impresa": "583",
+      "pregunta": "Un complejo con Cdk1 queda inactivo tras recibir una fosforilación inhibitoria. Se busca la quinasa que la introdujo.\n¿Qué opción corresponde al caso?",
+      "respuesta_correcta": "A",
+      "justificacion": "Wee1 fosforila Cdk1 en sitios inhibidores y reduce su actividad.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+      "paginas_pdf": "594",
+      "pagina_impresa": "",
       "dificultad": "medio",
-      "opcion_a": "Ectodermo, mesodermo y endodermo.",
-      "opcion_b": "Bacterias y archaea.",
-      "opcion_c": "Interfase y división celular.",
-      "opcion_d": "Hélice α y lámina β."
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Ciclo celular y destinos vitales de la célula · Regulación de Cdk",
+          "page": 594,
+          "printed": null,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-14",
+        "chapterNumber": 14,
+        "chapter": "Ciclo celular y destinos vitales de la célula",
+        "section": "Regulación de Cdk",
+        "printedPages": [],
+        "pdfPages": [
+          594
+        ]
+      },
+      "opcion_a": "Wee1",
+      "opcion_b": "APC/C",
+      "opcion_c": "Cdc25",
+      "opcion_d": "Proteínas Mad y Bub"
     },
     {
-      "content_id": "bio-14-002",
+      "content_id": "evaluacion:medicina-oficial-biologia-14-intermedio-2",
       "materia": "BIOLOGIA CELULAR",
       "tema": "ciclo celular",
       "numero_pregunta": 2,
-      "pregunta": "¿Entre qué fases se encuentra la fase S?",
-      "respuesta_correcta": "B",
-      "justificacion": "Entre G1 y G2.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "583",
-      "pagina_impresa": "583",
+      "pregunta": "El complejo Cdk1-ciclina B ya existe y está inhibido. Para reactivarlo se quita el fosfato inhibidor.\n¿Qué opción corresponde al caso?",
+      "respuesta_correcta": "D",
+      "justificacion": "Cdc25 retira la fosforilación inhibidora de Cdk1 y permite reactivar el complejo.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+      "paginas_pdf": "594",
+      "pagina_impresa": "",
       "dificultad": "medio",
-      "opcion_a": "Cdk1-ciclina B.",
-      "opcion_b": "Entre G1 y G2.",
-      "opcion_c": "Cdk4/6-ciclinas D.",
-      "opcion_d": "ATM: Chk2. ATR: Chk1."
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Ciclo celular y destinos vitales de la célula · Regulación de Cdk",
+          "page": 594,
+          "printed": null,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-14",
+        "chapterNumber": 14,
+        "chapter": "Ciclo celular y destinos vitales de la célula",
+        "section": "Regulación de Cdk",
+        "printedPages": [],
+        "pdfPages": [
+          594
+        ]
+      },
+      "opcion_a": "Proteínas Mad y Bub",
+      "opcion_b": "Wee1",
+      "opcion_c": "APC/C",
+      "opcion_d": "Cdc25"
     },
     {
-      "content_id": "bio-14-003",
+      "content_id": "evaluacion:medicina-oficial-biologia-14-intermedio-3",
       "materia": "BIOLOGIA CELULAR",
       "tema": "ciclo celular",
       "numero_pregunta": 3,
-      "pregunta": "¿G1 ocurre antes o después de la replicación del ADN?",
+      "pregunta": "Cuando el control del huso lo permite, se marca la segurina para su degradación. Se pide el complejo que la marca.\n¿Qué opción corresponde al caso?",
       "respuesta_correcta": "B",
-      "justificacion": "Antes; es un período posmitótico de crecimiento.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "584",
-      "pagina_impresa": "584",
+      "justificacion": "APC/C promueve la ubiquitinación de la segurina y su posterior degradación.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+      "paginas_pdf": "602",
+      "pagina_impresa": "",
       "dificultad": "medio",
-      "opcion_a": "La desaparición completa de la envoltura nuclear.",
-      "opcion_b": "Antes; es un período posmitótico de crecimiento.",
-      "opcion_c": "Retira fosfatos inhibidores y la reactiva.",
-      "opcion_d": "Eliminar contenido citoplasmático mediante digestión lisosómica."
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Ciclo celular y destinos vitales de la célula · Control de anafase",
+          "page": 602,
+          "printed": null,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-14",
+        "chapterNumber": 14,
+        "chapter": "Ciclo celular y destinos vitales de la célula",
+        "section": "Control de anafase",
+        "printedPages": [],
+        "pdfPages": [
+          602
+        ]
+      },
+      "opcion_a": "Cdc25",
+      "opcion_b": "APC/C",
+      "opcion_c": "Proteínas Mad y Bub",
+      "opcion_d": "Wee1"
     },
     {
-      "content_id": "bio-14-004",
+      "content_id": "evaluacion:medicina-oficial-biologia-14-intermedio-4",
       "materia": "BIOLOGIA CELULAR",
       "tema": "ciclo celular",
       "numero_pregunta": 4,
-      "pregunta": "¿Qué proteínas mantienen unidas las cromátidas hermanas tras la replicación?",
+      "pregunta": "Queda un cinetocoro sin unir al huso y todavía no debe comenzar la anafase. Se busca el grupo de proteínas que mantiene ese freno.\n¿Qué opción corresponde al caso?",
       "respuesta_correcta": "A",
-      "justificacion": "Las cohesinas.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "587",
-      "pagina_impresa": "587",
+      "justificacion": "Las proteínas Mad y Bub intervienen en la señal de un cinetocoro sin anclar. Esa señal retrasa la activación de APC/C-Cdc20.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+      "paginas_pdf": "603",
+      "pagina_impresa": "",
       "dificultad": "medio",
-      "opcion_a": "Las cohesinas.",
-      "opcion_b": "La segurina.",
-      "opcion_c": "Las integrinas.",
-      "opcion_d": "Mad y Bub."
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Ciclo celular y destinos vitales de la célula · Control del huso",
+          "page": 603,
+          "printed": null,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-14",
+        "chapterNumber": 14,
+        "chapter": "Ciclo celular y destinos vitales de la célula",
+        "section": "Control del huso",
+        "printedPages": [],
+        "pdfPages": [
+          603
+        ]
+      },
+      "opcion_a": "Proteínas Mad y Bub",
+      "opcion_b": "Wee1",
+      "opcion_c": "APC/C",
+      "opcion_d": "Cdc25"
     },
     {
-      "content_id": "bio-14-005",
+      "content_id": "evaluacion:medicina-oficial-biologia-14-ampliacion-01-umss",
       "materia": "BIOLOGIA CELULAR",
       "tema": "ciclo celular",
       "numero_pregunta": 5,
-      "pregunta": "¿Qué dos procesos se solapan durante la división celular?",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. El punto de control mitótico evalúa si los cromosomas se han unido correctamente al huso.\n2. La entrada en mitosis depende en el modelo del texto del complejo Cdk4-ciclina D.",
       "respuesta_correcta": "A",
-      "justificacion": "Cariocinesis y citocinesis.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "587",
-      "pagina_impresa": "587",
-      "dificultad": "medio",
-      "opcion_a": "Cariocinesis y citocinesis.",
-      "opcion_b": "La inhibe por fosforilación.",
-      "opcion_c": "Las integrinas.",
-      "opcion_d": "La capacidad de dividirse."
+      "justificacion": "1. Correcta. La unión adecuada se comprueba antes de permitir la separación cromosómica.\n2. Incorrecta. El complejo que promueve la entrada en mitosis es Cdk1-ciclina B.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+      "paginas_pdf": "590, 592",
+      "pagina_impresa": "",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Ciclo celular y destinos vitales de la célula · Puntos de control / Control mitótico",
+          "page": 590,
+          "printed": null,
+          "marks": []
+        },
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Ciclo celular y destinos vitales de la célula · Puntos de control / Control mitótico",
+          "page": 592,
+          "printed": null,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-14",
+        "chapterNumber": 14,
+        "chapter": "Ciclo celular y destinos vitales de la célula",
+        "section": "Puntos de control / Control mitótico",
+        "printedPages": [],
+        "pdfPages": [
+          590,
+          592
+        ],
+        "statements": [
+          {
+            "pdfPage": 590,
+            "printedPage": null,
+            "section": "Puntos de control",
+            "cardId": "bio-14-009"
+          },
+          {
+            "pdfPage": 592,
+            "printedPage": null,
+            "section": "Control mitótico",
+            "cardId": "bio-14-011"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "Solo la afirmación 1 es correcta.",
+        "B": "1. Correcta. La unión adecuada se comprueba antes de permitir la separación cromosómica. 2. Incorrecta. El complejo que promueve la entrada en mitosis es Cdk1-ciclina B.",
+        "C": "2. Incorrecta. El complejo que promueve la entrada en mitosis es Cdk1-ciclina B.",
+        "D": "1. Correcta. La unión adecuada se comprueba antes de permitir la separación cromosómica."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "bio-14-006",
+      "content_id": "evaluacion:medicina-oficial-biologia-14-ampliacion-02-umss",
       "materia": "BIOLOGIA CELULAR",
       "tema": "ciclo celular",
       "numero_pregunta": 6,
-      "pregunta": "¿Qué cambio nuclear marca la prometafase?",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. La unión de pRb a E2F activador estimula la transcripción de los genes de entrada en S.\n2. La fosforilación de pRb favorece la liberación de E2F activador.",
       "respuesta_correcta": "B",
-      "justificacion": "La desaparición completa de la envoltura nuclear.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "588",
-      "pagina_impresa": "588",
-      "dificultad": "medio",
-      "opcion_a": "Antes; es un período posmitótico de crecimiento.",
-      "opcion_b": "La desaparición completa de la envoltura nuclear.",
-      "opcion_c": "Eliminar contenido citoplasmático mediante digestión lisosómica.",
-      "opcion_d": "Retira fosfatos inhibidores y la reactiva."
+      "justificacion": "1. Incorrecta. Cuando pRb está unida a E2F, esos genes permanecen reprimidos.\n2. Correcta. E2F liberado puede inducir genes necesarios para entrar en fase S.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+      "paginas_pdf": "598",
+      "pagina_impresa": "",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Ciclo celular y destinos vitales de la célula · Rb y E2F",
+          "page": 598,
+          "printed": null,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-14",
+        "chapterNumber": 14,
+        "chapter": "Ciclo celular y destinos vitales de la célula",
+        "section": "Rb y E2F",
+        "printedPages": [],
+        "pdfPages": [
+          598
+        ],
+        "statements": [
+          {
+            "pdfPage": 598,
+            "printedPage": null,
+            "section": "Rb y E2F",
+            "cardId": "bio-14-016"
+          },
+          {
+            "pdfPage": 598,
+            "printedPage": null,
+            "section": "Rb y E2F",
+            "cardId": "bio-14-017"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. Cuando pRb está unida a E2F, esos genes permanecen reprimidos. 2. Correcta. E2F liberado puede inducir genes necesarios para entrar en fase S.",
+        "B": "Solo la afirmación 2 es correcta.",
+        "C": "1. Incorrecta. Cuando pRb está unida a E2F, esos genes permanecen reprimidos.",
+        "D": "2. Correcta. E2F liberado puede inducir genes necesarios para entrar en fase S."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "bio-14-007",
+      "content_id": "evaluacion:medicina-oficial-biologia-14-ampliacion-03-umss",
       "materia": "BIOLOGIA CELULAR",
       "tema": "ciclo celular",
       "numero_pregunta": 7,
-      "pregunta": "¿Qué es la citocinesis?",
-      "respuesta_correcta": "D",
-      "justificacion": "La división del citoplasma.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "588",
-      "pagina_impresa": "588",
-      "dificultad": "medio",
-      "opcion_a": "El proceso de desarrollo del cáncer.",
-      "opcion_b": "Plegamientos de la membrana interna.",
-      "opcion_c": "Un estado de no respuesta que no implica su muerte.",
-      "opcion_d": "La división del citoplasma."
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Degradar la segurina permite activar separasa.\n2. Ante una lesión del ADN, p53 puede participar tanto en detener el ciclo como en activar apoptosis.",
+      "respuesta_correcta": "C",
+      "justificacion": "1. Correcta. Al perder su inhibidor, la separasa puede participar en liberar la cohesión entre cromátidas.\n2. Correcta. La respuesta permite frenar la proliferación y, según el daño, inducir muerte celular.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+      "paginas_pdf": "601, 604",
+      "pagina_impresa": "",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Ciclo celular y destinos vitales de la célula · Control de anafase / Daño del ADN",
+          "page": 601,
+          "printed": null,
+          "marks": []
+        },
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Ciclo celular y destinos vitales de la célula · Control de anafase / Daño del ADN",
+          "page": 604,
+          "printed": null,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-14",
+        "chapterNumber": 14,
+        "chapter": "Ciclo celular y destinos vitales de la célula",
+        "section": "Control de anafase / Daño del ADN",
+        "printedPages": [],
+        "pdfPages": [
+          601,
+          604
+        ],
+        "statements": [
+          {
+            "pdfPage": 601,
+            "printedPage": null,
+            "section": "Control de anafase",
+            "cardId": "bio-14-020"
+          },
+          {
+            "pdfPage": 604,
+            "printedPage": null,
+            "section": "Daño del ADN",
+            "cardId": "bio-14-023"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "2. Correcta. La respuesta permite frenar la proliferación y, según el daño, inducir muerte celular.",
+        "B": "1. Correcta. Al perder su inhibidor, la separasa puede participar en liberar la cohesión entre cromátidas.",
+        "C": "Ambas afirmaciones son correctas.",
+        "D": "1. Correcta. Al perder su inhibidor, la separasa puede participar en liberar la cohesión entre cromátidas. 2. Correcta. La respuesta permite frenar la proliferación y, según el daño, inducir muerte celular."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "bio-14-008",
+      "content_id": "evaluacion:medicina-oficial-biologia-14-ampliacion-04-umss",
       "materia": "BIOLOGIA CELULAR",
       "tema": "ciclo celular",
       "numero_pregunta": 8,
-      "pregunta": "¿Cómo se clasifican los tejidos adultos por su capacidad proliferativa?",
-      "respuesta_correcta": "C",
-      "justificacion": "Lábiles, estables y permanentes.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "589",
-      "pagina_impresa": "589",
-      "dificultad": "medio",
-      "opcion_a": "Detención del ciclo y/o apoptosis.",
-      "opcion_b": "La capacidad de dividirse.",
-      "opcion_c": "Lábiles, estables y permanentes.",
-      "opcion_d": "Quinasa dependiente de ciclina."
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Una célula senescente conserva intacta su capacidad de división, aunque se detenga transitoriamente.\n2. La quiescencia impide que la célula vuelva a dividirse aun cuando se restaure la señal mitógena.",
+      "respuesta_correcta": "D",
+      "justificacion": "1. Incorrecta. La pérdida persistente de capacidad de división caracteriza a la senescencia.\n2. Incorrecta. La quiescencia puede revertirse con estímulos adecuados. La senescencia es el estado persistente.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+      "paginas_pdf": "607, 608",
+      "pagina_impresa": "",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Ciclo celular y destinos vitales de la célula · Senescencia / Quiescencia y senescencia",
+          "page": 607,
+          "printed": null,
+          "marks": []
+        },
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Ciclo celular y destinos vitales de la célula · Senescencia / Quiescencia y senescencia",
+          "page": 608,
+          "printed": null,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-14",
+        "chapterNumber": 14,
+        "chapter": "Ciclo celular y destinos vitales de la célula",
+        "section": "Senescencia / Quiescencia y senescencia",
+        "printedPages": [],
+        "pdfPages": [
+          607,
+          608
+        ],
+        "statements": [
+          {
+            "pdfPage": 607,
+            "printedPage": null,
+            "section": "Senescencia",
+            "cardId": "bio-14-028"
+          },
+          {
+            "pdfPage": 608,
+            "printedPage": null,
+            "section": "Quiescencia y senescencia",
+            "cardId": "bio-14-029"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. La pérdida persistente de capacidad de división caracteriza a la senescencia.",
+        "B": "2. Incorrecta. La quiescencia puede revertirse con estímulos adecuados. La senescencia es el estado persistente.",
+        "C": "1. Incorrecta. La pérdida persistente de capacidad de división caracteriza a la senescencia. 2. Incorrecta. La quiescencia puede revertirse con estímulos adecuados. La senescencia es el estado persistente.",
+        "D": "Ninguna afirmación es correcta."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "bio-14-009",
+      "content_id": "evaluacion:banco-verificado:biologia-14:g2m",
       "materia": "BIOLOGIA CELULAR",
       "tema": "ciclo celular",
       "numero_pregunta": 9,
-      "pregunta": "¿Qué comprueba el punto de control M?",
-      "respuesta_correcta": "B",
-      "justificacion": "Que los cromosomas estén correctamente unidos al huso en la placa ecuatorial.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "590",
-      "pagina_impresa": "590",
-      "dificultad": "medio",
-      "opcion_a": "La senescencia es irreversible; la quiescencia puede revertirse con estímulos mitógenos.",
-      "opcion_b": "Que los cromosomas estén correctamente unidos al huso en la placa ecuatorial.",
-      "opcion_c": "Cerebrósidos: un monosacárido. Gangliósidos: oligosacáridos con ácido siálico.",
-      "opcion_d": "Lo libera para transcribir genes de entrada en fase S."
+      "pregunta": "Al final de G2 se detecta daño en el ADN. ¿Qué cambio vincula esa señal con el retraso de la entrada en mitosis en el esquema de Calvo?",
+      "respuesta_correcta": "A",
+      "justificacion": "En el esquema, las quinasas de respuesta al daño inhiben Cdc25 y se inactiva el complejo mitótico Cdk1–ciclina M. Sin la actividad de ese complejo, se retrasa la entrada a M.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+      "paginas_pdf": "606",
+      "pagina_impresa": "606",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Capítulo 14 · Punto de control G2/M",
+          "page": 606,
+          "printed": 606,
+          "marks": [
+            [
+              0.4261,
+              0.2611,
+              0.047,
+              0.0172
+            ],
+            [
+              0.7533,
+              0.2611,
+              0.0382,
+              0.0172
+            ]
+          ]
+        }
+      ],
+      "source": {
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-14"
+      },
+      "opcion_a": "La inhibición de Cdc25 mantiene inactivo el complejo Cdk1–ciclina M.",
+      "opcion_b": "La activación de Cdc25 mantiene inactivo el complejo Cdk1–ciclina M.",
+      "opcion_c": "La inhibición de Cdc25 activa el complejo Cdk1–ciclina M.",
+      "opcion_d": "La activación de Cdc25 detiene la mitosis al aumentar la actividad de Cdk1–ciclina M."
     },
     {
-      "content_id": "bio-14-010",
+      "content_id": "evaluacion:banco-verificado:biologia-14:secuencia",
       "materia": "BIOLOGIA CELULAR",
       "tema": "ciclo celular",
       "numero_pregunta": 10,
-      "pregunta": "¿Qué significa Cdk?",
+      "pregunta": "Una célula acaba de completar la duplicación de su ADN y todavía no ha iniciado la división. ¿En qué fase de la interfase entra a continuación?",
       "respuesta_correcta": "C",
-      "justificacion": "Quinasa dependiente de ciclina.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "591",
-      "pagina_impresa": "591",
-      "dificultad": "medio",
-      "opcion_a": "Antígeno nuclear de proliferación celular.",
-      "opcion_b": "Lábiles, estables y permanentes.",
-      "opcion_c": "Quinasa dependiente de ciclina.",
-      "opcion_d": "Detención del ciclo y/o apoptosis."
+      "justificacion": "La duplicación ocurre en S. Una vez terminada, la célula pasa a G2 antes de entrar en la fase M.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+      "paginas_pdf": "583, 584",
+      "pagina_impresa": "583, 584",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Capítulo 14 · Fases del ciclo celular",
+          "page": 583,
+          "printed": 583,
+          "marks": [
+            [
+              0.0892,
+              0.1765,
+              0.0752,
+              0.0198
+            ],
+            [
+              0.7245,
+              0.5922,
+              0.063,
+              0.0172
+            ]
+          ]
+        },
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Capítulo 14 · Fases del ciclo celular",
+          "page": 584,
+          "printed": 584,
+          "marks": [
+            [
+              0.0082,
+              0.1123,
+              0.0845,
+              0.0282
+            ],
+            [
+              0.0928,
+              0.1277,
+              0.0045,
+              0.009
+            ]
+          ]
+        }
+      ],
+      "source": {
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-14"
+      },
+      "opcion_a": "S.",
+      "opcion_b": "M.",
+      "opcion_c": "G2.",
+      "opcion_d": "G1."
     },
     {
-      "content_id": "bio-14-011",
+      "content_id": "evaluacion:banco-verificado:biologia-14:cohesion",
       "materia": "BIOLOGIA CELULAR",
       "tema": "ciclo celular",
       "numero_pregunta": 11,
-      "pregunta": "¿Qué complejo Cdk-ciclina promueve el inicio de la mitosis?",
-      "respuesta_correcta": "C",
-      "justificacion": "Cdk1-ciclina B.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "592",
-      "pagina_impresa": "592",
-      "dificultad": "medio",
-      "opcion_a": "Entre G1 y G2.",
-      "opcion_b": "Cdk4/6-ciclinas D.",
-      "opcion_c": "Cdk1-ciclina B.",
-      "opcion_d": "ATM: Chk2. ATR: Chk1."
-    },
-    {
-      "content_id": "bio-14-012",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "ciclo celular",
-      "numero_pregunta": 12,
-      "pregunta": "¿Qué efecto tiene la unión de una ciclina sobre su Cdk?",
-      "respuesta_correcta": "C",
-      "justificacion": "La activa.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "593",
-      "pagina_impresa": "593",
-      "dificultad": "medio",
-      "opcion_a": "La inhibe por fosforilación.",
-      "opcion_b": "La segurina.",
-      "opcion_c": "La activa.",
-      "opcion_d": "Mad y Bub."
-    },
-    {
-      "content_id": "bio-14-013",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "ciclo celular",
-      "numero_pregunta": 13,
-      "pregunta": "¿Qué efecto tiene Wee1 sobre Cdk1?",
-      "respuesta_correcta": "A",
-      "justificacion": "La inhibe por fosforilación.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "594",
-      "pagina_impresa": "594",
-      "dificultad": "medio",
-      "opcion_a": "La inhibe por fosforilación.",
-      "opcion_b": "La activa.",
-      "opcion_c": "Cariocinesis y citocinesis.",
-      "opcion_d": "La capacidad de dividirse."
-    },
-    {
-      "content_id": "bio-14-015",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "ciclo celular",
-      "numero_pregunta": 14,
-      "pregunta": "¿Qué hacen las proteínas CKI con los complejos Cdk-ciclina?",
-      "respuesta_correcta": "A",
-      "justificacion": "Se unen a ellos y los inactivan.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "595",
-      "pagina_impresa": "595",
-      "dificultad": "medio",
-      "opcion_a": "Se unen a ellos y los inactivan.",
-      "opcion_b": "Se cierran canales de Na+ y se hiperpolariza.",
-      "opcion_c": "Se une a ellas e impide que inhiban las caspasas.",
-      "opcion_d": "Se condensa en cromosomas más cortos y compactos."
-    },
-    {
-      "content_id": "bio-14-016",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "ciclo celular",
-      "numero_pregunta": 15,
-      "pregunta": "¿Qué ocurre con E2F cuando pRb está unida a él?",
+      "pregunta": "Tras la replicación, dos cromátidas hermanas permanecen unidas hasta su separación. ¿Qué complejo proteico mantiene directamente esa unión?",
       "respuesta_correcta": "B",
-      "justificacion": "Sus genes diana permanecen reprimidos.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "598",
-      "pagina_impresa": "598",
-      "dificultad": "medio",
-      "opcion_a": "Lábiles, estables y permanentes.",
-      "opcion_b": "Sus genes diana permanecen reprimidos.",
-      "opcion_c": "Detención del ciclo y/o apoptosis.",
-      "opcion_d": "Antígeno nuclear de proliferación celular."
-    },
-    {
-      "content_id": "bio-14-018",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "ciclo celular",
-      "numero_pregunta": 16,
-      "pregunta": "¿Qué complejos comienzan la fosforilación de pRb tras estímulos mitógenos?",
-      "respuesta_correcta": "C",
-      "justificacion": "Cdk4/6-ciclinas D.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "599",
-      "pagina_impresa": "599",
-      "dificultad": "medio",
-      "opcion_a": "Entre G1 y G2.",
-      "opcion_b": "Cdk1-ciclina B.",
-      "opcion_c": "Cdk4/6-ciclinas D.",
-      "opcion_d": "ATM: Chk2. ATR: Chk1."
-    },
-    {
-      "content_id": "bio-14-020",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "ciclo celular",
-      "numero_pregunta": 17,
-      "pregunta": "¿Qué proteína debe degradarse para permitir la activación de separasa?",
-      "respuesta_correcta": "B",
-      "justificacion": "La segurina.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "601",
-      "pagina_impresa": "601",
-      "dificultad": "medio",
-      "opcion_a": "La activa.",
-      "opcion_b": "La segurina.",
-      "opcion_c": "Las cohesinas.",
-      "opcion_d": "Mad y Bub."
-    },
-    {
-      "content_id": "bio-14-022",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "ciclo celular",
-      "numero_pregunta": 18,
-      "pregunta": "¿Qué proteínas bloquean APC/C-Cdc20 mientras quede un cinetocoro libre?",
-      "respuesta_correcta": "B",
-      "justificacion": "Mad y Bub.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "603",
-      "pagina_impresa": "603",
-      "dificultad": "medio",
-      "opcion_a": "La activa.",
-      "opcion_b": "Mad y Bub.",
-      "opcion_c": "La segurina.",
-      "opcion_d": "Las cohesinas."
-    },
-    {
-      "content_id": "bio-14-023",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "ciclo celular",
-      "numero_pregunta": 19,
-      "pregunta": "¿Qué respuestas puede activar p53 ante daño del ADN?",
-      "respuesta_correcta": "D",
-      "justificacion": "Detención del ciclo y/o apoptosis.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "604",
-      "pagina_impresa": "604",
-      "dificultad": "medio",
-      "opcion_a": "Quinasa dependiente de ciclina.",
-      "opcion_b": "Sus genes diana permanecen reprimidos.",
-      "opcion_c": "Lábiles, estables y permanentes.",
-      "opcion_d": "Detención del ciclo y/o apoptosis."
-    },
-    {
-      "content_id": "bio-14-024",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "ciclo celular",
-      "numero_pregunta": 20,
-      "pregunta": "¿Cuál es el regulador principal de p53 en células sin daño?",
-      "respuesta_correcta": "B",
-      "justificacion": "Mdm2.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "605",
-      "pagina_impresa": "605",
-      "dificultad": "medio",
-      "opcion_a": "E6.",
-      "opcion_b": "Mdm2.",
-      "opcion_c": "TP53.",
-      "opcion_d": "G1/S y G2/M."
-    },
-    {
-      "content_id": "bio-14-026",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "ciclo celular",
-      "numero_pregunta": 21,
-      "pregunta": "¿Qué significa PCNA?",
-      "respuesta_correcta": "B",
-      "justificacion": "Antígeno nuclear de proliferación celular.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "606",
-      "pagina_impresa": "606",
-      "dificultad": "medio",
-      "opcion_a": "Detención del ciclo y/o apoptosis.",
-      "opcion_b": "Antígeno nuclear de proliferación celular.",
-      "opcion_c": "Quinasa dependiente de ciclina.",
-      "opcion_d": "Sus genes diana permanecen reprimidos."
-    },
-    {
-      "content_id": "bio-14-027",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "ciclo celular",
-      "numero_pregunta": 22,
-      "pregunta": "¿En qué transiciones puede detener p53 el ciclo por lesión del ADN?",
-      "respuesta_correcta": "C",
-      "justificacion": "G1/S y G2/M.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "607",
-      "pagina_impresa": "607",
-      "dificultad": "medio",
-      "opcion_a": "E6.",
-      "opcion_b": "Cdk1-ciclina B.",
-      "opcion_c": "G1/S y G2/M.",
-      "opcion_d": "Mdm2."
-    },
-    {
-      "content_id": "bio-14-028",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "ciclo celular",
-      "numero_pregunta": 23,
-      "pregunta": "¿Qué capacidad pierde de forma característica una célula senescente?",
-      "respuesta_correcta": "C",
-      "justificacion": "La capacidad de dividirse.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "607",
-      "pagina_impresa": "607",
-      "dificultad": "medio",
-      "opcion_a": "La inhibe por fosforilación.",
-      "opcion_b": "Lábiles, estables y permanentes.",
-      "opcion_c": "La capacidad de dividirse.",
-      "opcion_d": "Cariocinesis y citocinesis."
-    },
-    {
-      "content_id": "bio-14-029",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "ciclo celular",
-      "numero_pregunta": 24,
-      "pregunta": "¿Qué diferencia la senescencia de la quiescencia?",
-      "respuesta_correcta": "C",
-      "justificacion": "La senescencia es irreversible; la quiescencia puede revertirse con estímulos mitógenos.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "608",
-      "pagina_impresa": "608",
-      "dificultad": "medio",
-      "opcion_a": "Que los cromosomas estén correctamente unidos al huso en la placa ecuatorial.",
-      "opcion_b": "La pluripotencia genera derivados de las tres capas embrionarias, pero no placenta.",
-      "opcion_c": "La senescencia es irreversible; la quiescencia puede revertirse con estímulos mitógenos.",
-      "opcion_d": "Lo libera para transcribir genes de entrada en fase S."
-    },
-    {
-      "content_id": "bio-14-030",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "ciclo celular",
-      "numero_pregunta": 25,
-      "pregunta": "¿Qué gen está alterado en el síndrome de Li-Fraumeni?",
-      "respuesta_correcta": "D",
-      "justificacion": "TP53.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "609",
-      "pagina_impresa": "609",
-      "dificultad": "medio",
-      "opcion_a": "Mdm2.",
-      "opcion_b": "G1/S y G2/M.",
-      "opcion_c": "E6.",
-      "opcion_d": "TP53."
-    },
-    {
-      "content_id": "bio-14-031",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "ciclo celular",
-      "numero_pregunta": 26,
-      "pregunta": "¿Qué proteína del HPV inhibe p53?",
-      "respuesta_correcta": "D",
-      "justificacion": "E6.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "609",
-      "pagina_impresa": "609",
-      "dificultad": "medio",
-      "opcion_a": "TP53.",
-      "opcion_b": "Mdm2.",
-      "opcion_c": "G1/S y G2/M.",
-      "opcion_d": "E6."
-    },
-    {
-      "content_id": "bio-14-032",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "ciclo celular",
-      "numero_pregunta": 27,
-      "pregunta": "¿Qué factor estimula la proliferación de numerosos epitelios?",
-      "respuesta_correcta": "D",
-      "justificacion": "EGF.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "610",
-      "pagina_impresa": "610",
-      "dificultad": "medio",
-      "opcion_a": "APC/C.",
-      "opcion_b": "Mad y Bub.",
-      "opcion_c": "La activa.",
-      "opcion_d": "EGF."
-    },
-    {
-      "content_id": "bio-14-033",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "ciclo celular",
-      "numero_pregunta": 28,
-      "pregunta": "¿Qué receptores transmiten al ciclo celular señales de la matriz extracelular?",
-      "respuesta_correcta": "A",
-      "justificacion": "Las integrinas.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "611",
-      "pagina_impresa": "611",
-      "dificultad": "medio",
-      "opcion_a": "Las integrinas.",
-      "opcion_b": "La segurina.",
-      "opcion_c": "Las cohesinas.",
-      "opcion_d": "Cariocinesis y citocinesis."
-    },
-    {
-      "content_id": "bio-14-034",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "ciclo celular",
-      "numero_pregunta": 29,
-      "pregunta": "¿Cómo se relacionan diferenciación y capacidad mitótica?",
-      "respuesta_correcta": "C",
-      "justificacion": "En general, de forma inversa.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "612",
-      "pagina_impresa": "612",
-      "dificultad": "medio",
-      "opcion_a": "Entre cromosomas homólogos.",
-      "opcion_b": "A filamentos intermedios.",
-      "opcion_c": "En general, de forma inversa.",
-      "opcion_d": "Hacia el exterior celular."
-    },
-    {
-      "content_id": "bio-14-035",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "ciclo celular",
-      "numero_pregunta": 30,
-      "pregunta": "¿En qué consiste la autofagia?",
-      "respuesta_correcta": "D",
-      "justificacion": "Eliminar contenido citoplasmático mediante digestión lisosómica.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "613",
-      "pagina_impresa": "613",
-      "dificultad": "medio",
-      "opcion_a": "La desaparición completa de la envoltura nuclear.",
-      "opcion_b": "Antes; es un período posmitótico de crecimiento.",
-      "opcion_c": "Retira fosfatos inhibidores y la reactiva.",
-      "opcion_d": "Eliminar contenido citoplasmático mediante digestión lisosómica."
+      "justificacion": "Las cohesinas mantienen asociadas las cromátidas hermanas. Las condensinas se relacionan con la compactación de los cromosomas, que es una función diferente.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+      "paginas_pdf": "587",
+      "pagina_impresa": "587",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Capítulo 14 · Final de la interfase y división",
+          "page": 587,
+          "printed": 587,
+          "marks": [
+            [
+              0.1187,
+              0.0765,
+              0.0836,
+              0.0198
+            ],
+            [
+              0.5657,
+              0.321,
+              0.0802,
+              0.0197
+            ]
+          ]
+        }
+      ],
+      "source": {
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-14"
+      },
+      "opcion_a": "Filamentos del anillo contráctil.",
+      "opcion_b": "Cohesinas.",
+      "opcion_c": "Condensinas.",
+      "opcion_d": "Complejos Cdk–ciclina."
     }
   ]
 }

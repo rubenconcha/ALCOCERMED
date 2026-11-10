@@ -79,7 +79,10 @@
             const paper=await response.json();
             const liveSession=(await getSupabase().auth.getSession()).data.session;
             if (!isCurrent() || liveSession?.access_token !== session.access_token) return;
-            if (paper.id !== exam.id || paper.duration !== exam.duration || paper.questions?.length !== exam.count) {
+            // Catalog metadata can be older than the paper during a release.
+            if (paper.id !== exam.id || paper.subject !== exam.subject || paper.topic !== exam.topic ||
+                !Number.isInteger(paper.duration) || paper.duration <= 0 || !Number.isInteger(paper.count) ||
+                paper.count <= 0 || paper.questions?.length !== paper.count) {
                 throw new Error('El contenido recibido no corresponde a este tema.');
             }
             if ($('sim-passage')?.dataset?.passage) renderPracticePassage('sim', null);

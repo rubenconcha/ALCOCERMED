@@ -5,383 +5,496 @@
   "topic": "el sistema muscular",
   "title": "El sistema muscular",
   "number": 10,
-  "count": 22,
-  "duration": 22,
+  "count": 9,
+  "duration": 9,
   "source": "Saladin · Anatomía y fisiología",
   "questions": [
     {
-      "content_id": "morfo-10-001",
+      "content_id": "evaluacion:medicina-oficial-morfo-10-intermedio-1",
       "materia": "MORFOFUNCION",
       "tema": "el sistema muscular",
       "numero_pregunta": 1,
-      "pregunta": "¿Qué envuelve a cada fibra muscular?",
+      "pregunta": "En una acción participan varios músculos, pero uno aporta la acción principal del movimiento que se analiza.\n¿Qué opción corresponde al caso?",
       "respuesta_correcta": "C",
-      "justificacion": "El endomisio.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "342",
-      "pagina_impresa": "314",
+      "justificacion": "El agonista es el motor principal de la acción que se está analizando.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "346",
+      "pagina_impresa": "318",
       "dificultad": "medio",
-      "opcion_a": "El epimisio.",
-      "opcion_b": "El perimisio.",
-      "opcion_c": "El endomisio.",
-      "opcion_d": "La inserción."
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "El sistema muscular · Acción muscular",
+          "page": 346,
+          "printed": 318,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-10",
+        "chapterNumber": 10,
+        "chapter": "El sistema muscular",
+        "section": "Acción muscular",
+        "printedPages": [
+          318
+        ],
+        "pdfPages": [
+          346
+        ]
+      },
+      "opcion_a": "Antagonista",
+      "opcion_b": "Fijador",
+      "opcion_c": "Agonista",
+      "opcion_d": "Sinergista"
     },
     {
-      "content_id": "morfo-10-002",
+      "content_id": "evaluacion:medicina-oficial-morfo-10-intermedio-2",
       "materia": "MORFOFUNCION",
       "tema": "el sistema muscular",
       "numero_pregunta": 2,
-      "pregunta": "¿Qué envuelve a cada fascículo muscular?",
-      "respuesta_correcta": "C",
-      "justificacion": "El perimisio.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "343",
-      "pagina_impresa": "315",
+      "pregunta": "Un músculo actúa en dirección contraria al movimiento principal y permite que la acción se controle.\n¿Qué opción corresponde al caso?",
+      "respuesta_correcta": "D",
+      "justificacion": "El antagonista se opone al agonista y puede controlar el movimiento resultante.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "346",
+      "pagina_impresa": "318",
       "dificultad": "medio",
-      "opcion_a": "El origen.",
-      "opcion_b": "La inserción.",
-      "opcion_c": "El perimisio.",
-      "opcion_d": "El epimisio."
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "El sistema muscular · Acción muscular",
+          "page": 346,
+          "printed": 318,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-10",
+        "chapterNumber": 10,
+        "chapter": "El sistema muscular",
+        "section": "Acción muscular",
+        "printedPages": [
+          318
+        ],
+        "pdfPages": [
+          346
+        ]
+      },
+      "opcion_a": "Agonista",
+      "opcion_b": "Fijador",
+      "opcion_c": "Sinergista",
+      "opcion_d": "Antagonista"
     },
     {
-      "content_id": "morfo-10-003",
+      "content_id": "evaluacion:medicina-oficial-morfo-10-intermedio-3",
       "materia": "MORFOFUNCION",
       "tema": "el sistema muscular",
       "numero_pregunta": 3,
-      "pregunta": "¿Qué envuelve a todo el músculo?",
-      "respuesta_correcta": "D",
-      "justificacion": "El epimisio.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "343",
-      "pagina_impresa": "315",
+      "pregunta": "Un segundo músculo contribuye al mismo desplazamiento que el principal. Su papel aquí es ayudar al movimiento, sin limitarse a sostener su base.\n¿Qué opción corresponde al caso?",
+      "respuesta_correcta": "B",
+      "justificacion": "El sinergista ayuda al agonista a producir la acción del movimiento.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "346",
+      "pagina_impresa": "318",
       "dificultad": "medio",
-      "opcion_a": "El endomisio.",
-      "opcion_b": "El buccinador.",
-      "opcion_c": "El diafragma.",
-      "opcion_d": "El epimisio."
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "El sistema muscular · Acción muscular",
+          "page": 346,
+          "printed": 318,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-10",
+        "chapterNumber": 10,
+        "chapter": "El sistema muscular",
+        "section": "Acción muscular",
+        "printedPages": [
+          318
+        ],
+        "pdfPages": [
+          346
+        ]
+      },
+      "opcion_a": "Antagonista",
+      "opcion_b": "Sinergista",
+      "opcion_c": "Fijador",
+      "opcion_d": "Agonista"
     },
     {
-      "content_id": "morfo-10-004",
+      "content_id": "evaluacion:medicina-oficial-morfo-10-intermedio-4",
       "materia": "MORFOFUNCION",
       "tema": "el sistema muscular",
       "numero_pregunta": 4,
-      "pregunta": "¿Qué es una aponeurosis?",
-      "respuesta_correcta": "C",
-      "justificacion": "Un tendón ancho y aplanado.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "345",
-      "pagina_impresa": "317",
+      "pregunta": "Un músculo mantiene estable el segmento donde se origina el motor del movimiento, sin ser el que desplaza la parte móvil.\n¿Qué opción corresponde al caso?",
+      "respuesta_correcta": "A",
+      "justificacion": "El fijador estabiliza una parte para que el motor principal pueda mover otra.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "346",
+      "pagina_impresa": "318",
       "dificultad": "medio",
-      "opcion_a": "El principal responsable de un movimiento.",
-      "opcion_b": "Un ion con carga positiva.",
-      "opcion_c": "Un tendón ancho y aplanado.",
-      "opcion_d": "La muerte celular programada."
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "El sistema muscular · Acciones musculares",
+          "page": 346,
+          "printed": 318,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-10",
+        "chapterNumber": 10,
+        "chapter": "El sistema muscular",
+        "section": "Acciones musculares",
+        "printedPages": [
+          318
+        ],
+        "pdfPages": [
+          346
+        ]
+      },
+      "opcion_a": "Fijador",
+      "opcion_b": "Sinergista",
+      "opcion_c": "Antagonista",
+      "opcion_d": "Agonista"
     },
     {
-      "content_id": "morfo-10-005",
+      "content_id": "evaluacion:medicina-oficial-morfo-10-ampliacion-01-umss",
       "materia": "MORFOFUNCION",
       "tema": "el sistema muscular",
       "numero_pregunta": 5,
-      "pregunta": "¿Qué inserción muscular suele permanecer más fija?",
-      "respuesta_correcta": "C",
-      "justificacion": "El origen.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "345",
-      "pagina_impresa": "317",
-      "dificultad": "medio",
-      "opcion_a": "El endomisio.",
-      "opcion_b": "El perimisio.",
-      "opcion_c": "El origen.",
-      "opcion_d": "El epimisio."
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. El perimisio rodea individualmente cada fibra contráctil antes de que estas se agrupen.\n2. El epimisio delimita al músculo completo, con independencia de cuántos fascículos lo formen.",
+      "respuesta_correcta": "B",
+      "justificacion": "1. Incorrecta. El perimisio rodea el fascículo. La envoltura de una fibra individual es el endomisio.\n2. Correcta. Esta capa cubre el conjunto de fascículos y corresponde a la envoltura externa.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "343",
+      "pagina_impresa": "315",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "El sistema muscular · Organización muscular",
+          "page": 343,
+          "printed": 315,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-10",
+        "chapterNumber": 10,
+        "chapter": "El sistema muscular",
+        "section": "Organización muscular",
+        "printedPages": [
+          315
+        ],
+        "pdfPages": [
+          343
+        ],
+        "statements": [
+          {
+            "pdfPage": 343,
+            "printedPage": 315,
+            "section": "Organización muscular",
+            "cardId": "morfo-10-002"
+          },
+          {
+            "pdfPage": 343,
+            "printedPage": 315,
+            "section": "Organización muscular",
+            "cardId": "morfo-10-003"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. El perimisio rodea el fascículo. La envoltura de una fibra individual es el endomisio. 2. Correcta. Esta capa cubre el conjunto de fascículos y corresponde a la envoltura externa.",
+        "B": "Solo la afirmación 2 es correcta.",
+        "C": "1. Incorrecta. El perimisio rodea el fascículo. La envoltura de una fibra individual es el endomisio.",
+        "D": "2. Correcta. Esta capa cubre el conjunto de fascículos y corresponde a la envoltura externa."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "morfo-10-006",
+      "content_id": "evaluacion:medicina-oficial-morfo-10-ampliacion-02-umss",
       "materia": "MORFOFUNCION",
       "tema": "el sistema muscular",
       "numero_pregunta": 6,
-      "pregunta": "¿Qué inserción muscular suele desplazarse durante la contracción?",
-      "respuesta_correcta": "D",
-      "justificacion": "La inserción.",
-      "fuente": "Saladin · Anatomía y fisiología",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Una lámina tendinosa ancha y aplanada puede corresponder a una aponeurosis.\n2. El origen se define habitualmente como el punto de unión muscular que se desplaza más durante la contracción.",
+      "respuesta_correcta": "A",
+      "justificacion": "1. Correcta. Se trata de una forma de tendón que distribuye la fijación sobre una superficie amplia.\n2. Incorrecta. Por convención, el origen suele ser el extremo más fijo y la inserción el más móvil.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
       "paginas_pdf": "345",
       "pagina_impresa": "317",
-      "dificultad": "medio",
-      "opcion_a": "El perimisio.",
-      "opcion_b": "El buccinador.",
-      "opcion_c": "El endomisio.",
-      "opcion_d": "La inserción."
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "El sistema muscular · Inserciones",
+          "page": 345,
+          "printed": 317,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-10",
+        "chapterNumber": 10,
+        "chapter": "El sistema muscular",
+        "section": "Inserciones",
+        "printedPages": [
+          317
+        ],
+        "pdfPages": [
+          345
+        ],
+        "statements": [
+          {
+            "pdfPage": 345,
+            "printedPage": 317,
+            "section": "Inserciones",
+            "cardId": "morfo-10-004"
+          },
+          {
+            "pdfPage": 345,
+            "printedPage": 317,
+            "section": "Inserciones",
+            "cardId": "morfo-10-005"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "Solo la afirmación 1 es correcta.",
+        "B": "1. Correcta. Se trata de una forma de tendón que distribuye la fijación sobre una superficie amplia. 2. Incorrecta. Por convención, el origen suele ser el extremo más fijo y la inserción el más móvil.",
+        "C": "2. Incorrecta. Por convención, el origen suele ser el extremo más fijo y la inserción el más móvil.",
+        "D": "1. Correcta. Se trata de una forma de tendón que distribuye la fijación sobre una superficie amplia."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "morfo-10-019",
+      "content_id": "evaluacion:medicina-oficial-morfo-10-ampliacion-03-umss",
       "materia": "MORFOFUNCION",
       "tema": "el sistema muscular",
       "numero_pregunta": 7,
-      "pregunta": "¿Qué grupo muscular extiende la rodilla?",
-      "respuesta_correcta": "A",
-      "justificacion": "El cuádriceps femoral.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "345",
-      "pagina_impresa": "317",
-      "dificultad": "medio",
-      "opcion_a": "El cuádriceps femoral.",
-      "opcion_b": "El perimisio.",
-      "opcion_c": "El tríceps braquial.",
-      "opcion_d": "El endomisio."
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. El buccinador contribuye a mantener el alimento en la zona de masticación al comprimir la mejilla.\n2. El bíceps braquial puede participar tanto en la flexión del codo como en la supinación.",
+      "respuesta_correcta": "C",
+      "justificacion": "1. Correcta. Su acción empuja el contenido de la mejilla hacia la zona de contacto de los dientes.\n2. Correcta. Actúa sobre el antebrazo al flexionarlo y también al girarlo hacia la posición supinada.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "354, 378",
+      "pagina_impresa": "326, 350",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "El sistema muscular · Músculos de la cabeza / Miembro superior",
+          "page": 354,
+          "printed": 326,
+          "marks": []
+        },
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "El sistema muscular · Músculos de la cabeza / Miembro superior",
+          "page": 378,
+          "printed": 350,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-10",
+        "chapterNumber": 10,
+        "chapter": "El sistema muscular",
+        "section": "Músculos de la cabeza / Miembro superior",
+        "printedPages": [
+          326,
+          350
+        ],
+        "pdfPages": [
+          354,
+          378
+        ],
+        "statements": [
+          {
+            "pdfPage": 354,
+            "printedPage": 326,
+            "section": "Músculos de la cabeza",
+            "cardId": "morfo-10-013"
+          },
+          {
+            "pdfPage": 378,
+            "printedPage": 350,
+            "section": "Miembro superior",
+            "cardId": "morfo-10-018"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "2. Correcta. Actúa sobre el antebrazo al flexionarlo y también al girarlo hacia la posición supinada.",
+        "B": "1. Correcta. Su acción empuja el contenido de la mejilla hacia la zona de contacto de los dientes.",
+        "C": "Ambas afirmaciones son correctas.",
+        "D": "1. Correcta. Su acción empuja el contenido de la mejilla hacia la zona de contacto de los dientes. 2. Correcta. Actúa sobre el antebrazo al flexionarlo y también al girarlo hacia la posición supinada."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "morfo-10-022",
+      "content_id": "evaluacion:medicina-oficial-morfo-10-ampliacion-04-umss",
       "materia": "MORFOFUNCION",
       "tema": "el sistema muscular",
       "numero_pregunta": 8,
-      "pregunta": "¿Qué tendón común une gastrocnemio y sóleo con el calcáneo?",
-      "respuesta_correcta": "B",
-      "justificacion": "El tendón calcáneo o de Aquiles.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "345",
-      "pagina_impresa": "317",
-      "dificultad": "medio",
-      "opcion_a": "El cuádriceps femoral.",
-      "opcion_b": "El tendón calcáneo o de Aquiles.",
-      "opcion_c": "Ayuda al agonista a realizar un movimiento.",
-      "opcion_d": "El orbicular de la boca."
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. La combinación de flexión plantar y eversión es la acción característica del tibial anterior.\n2. El tendón calcáneo transmite principalmente la acción del tibial anterior al calcáneo.",
+      "respuesta_correcta": "D",
+      "justificacion": "1. Incorrecta. El tibial anterior se asocia a dorsiflexión e inversión del pie.\n2. Incorrecta. El tendón calcáneo es compartido por gastrocnemio y sóleo.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "345, 394",
+      "pagina_impresa": "317, 366",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "El sistema muscular · Miembro inferior",
+          "page": 345,
+          "printed": 317,
+          "marks": []
+        },
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "El sistema muscular · Miembro inferior",
+          "page": 394,
+          "printed": 366,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-10",
+        "chapterNumber": 10,
+        "chapter": "El sistema muscular",
+        "section": "Miembro inferior",
+        "printedPages": [
+          317,
+          366
+        ],
+        "pdfPages": [
+          345,
+          394
+        ],
+        "statements": [
+          {
+            "pdfPage": 394,
+            "printedPage": 366,
+            "section": "Miembro inferior",
+            "cardId": "morfo-10-021"
+          },
+          {
+            "pdfPage": 345,
+            "printedPage": 317,
+            "section": "Miembro inferior",
+            "cardId": "morfo-10-022"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. El tibial anterior se asocia a dorsiflexión e inversión del pie.",
+        "B": "2. Incorrecta. El tendón calcáneo es compartido por gastrocnemio y sóleo.",
+        "C": "1. Incorrecta. El tibial anterior se asocia a dorsiflexión e inversión del pie. 2. Incorrecta. El tendón calcáneo es compartido por gastrocnemio y sóleo.",
+        "D": "Ninguna afirmación es correcta."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "morfo-10-007",
+      "content_id": "evaluacion:banco-verificado:morfo-10:envolturas",
       "materia": "MORFOFUNCION",
       "tema": "el sistema muscular",
       "numero_pregunta": 9,
-      "pregunta": "¿Qué es un músculo agonista?",
-      "respuesta_correcta": "D",
-      "justificacion": "El principal responsable de un movimiento.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "346",
-      "pagina_impresa": "318",
-      "dificultad": "medio",
-      "opcion_a": "La fase de contracción de los ventrículos.",
-      "opcion_b": "La muerte patológica de células o tejidos.",
-      "opcion_c": "Un tendón ancho y aplanado.",
-      "opcion_d": "El principal responsable de un movimiento."
-    },
-    {
-      "content_id": "morfo-10-008",
-      "materia": "MORFOFUNCION",
-      "tema": "el sistema muscular",
-      "numero_pregunta": 10,
-      "pregunta": "¿Qué hace un músculo antagonista?",
+      "pregunta": "En un corte muscular se separa un fascículo completo y quedan intactas las fibras que contiene. ¿Qué cubierta rodea a la unidad que se aisló?",
       "respuesta_correcta": "C",
-      "justificacion": "Se opone a la acción del agonista.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "346",
-      "pagina_impresa": "318",
-      "dificultad": "medio",
-      "opcion_a": "Producir ovocitos y secretar hormonas sexuales.",
-      "opcion_b": "Disminuye por debajo de la presión atmosférica.",
-      "opcion_c": "Se opone a la acción del agonista.",
-      "opcion_d": "Se opone al cambio y acerca la variable a su valor normal."
-    },
-    {
-      "content_id": "morfo-10-009",
-      "materia": "MORFOFUNCION",
-      "tema": "el sistema muscular",
-      "numero_pregunta": 11,
-      "pregunta": "¿Qué hace un músculo sinergista?",
-      "respuesta_correcta": "B",
-      "justificacion": "Ayuda al agonista a realizar un movimiento.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "346",
-      "pagina_impresa": "318",
-      "dificultad": "medio",
-      "opcion_a": "El orbicular del ojo.",
-      "opcion_b": "Ayuda al agonista a realizar un movimiento.",
-      "opcion_c": "El tendón calcáneo o de Aquiles.",
-      "opcion_d": "El tríceps braquial."
-    },
-    {
-      "content_id": "morfo-10-017",
-      "materia": "MORFOFUNCION",
-      "tema": "el sistema muscular",
-      "numero_pregunta": 12,
-      "pregunta": "¿Qué músculo extiende principalmente el antebrazo en el codo?",
-      "respuesta_correcta": "A",
-      "justificacion": "El tríceps braquial.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "346",
-      "pagina_impresa": "318",
-      "dificultad": "medio",
-      "opcion_a": "El tríceps braquial.",
-      "opcion_b": "El glúteo mayor.",
-      "opcion_c": "El cuádriceps femoral.",
-      "opcion_d": "El orbicular del ojo."
-    },
-    {
-      "content_id": "morfo-10-010",
-      "materia": "MORFOFUNCION",
-      "tema": "el sistema muscular",
-      "numero_pregunta": 13,
-      "pregunta": "¿Qué hace un músculo fijador?",
-      "respuesta_correcta": "C",
-      "justificacion": "Estabiliza una estructura para permitir el movimiento de otra.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "350",
-      "pagina_impresa": "322",
-      "dificultad": "medio",
-      "opcion_a": "El trombo permanece adherido; el émbolo circula por la sangre.",
-      "opcion_b": "Extiende la extremidad opuesta para sostener el peso durante la retirada.",
-      "opcion_c": "Estabiliza una estructura para permitir el movimiento de otra.",
-      "opcion_d": "El rugoso tiene ribosomas adheridos; el liso carece de ellos."
-    },
-    {
-      "content_id": "morfo-10-011",
-      "materia": "MORFOFUNCION",
-      "tema": "el sistema muscular",
-      "numero_pregunta": 14,
-      "pregunta": "¿Qué músculo cierra los párpados?",
-      "respuesta_correcta": "D",
-      "justificacion": "El orbicular del ojo.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "352",
-      "pagina_impresa": "324",
-      "dificultad": "medio",
-      "opcion_a": "El epimisio.",
-      "opcion_b": "El tríceps braquial.",
-      "opcion_c": "El tibial anterior.",
-      "opcion_d": "El orbicular del ojo."
-    },
-    {
-      "content_id": "morfo-10-012",
-      "materia": "MORFOFUNCION",
-      "tema": "el sistema muscular",
-      "numero_pregunta": 15,
-      "pregunta": "¿Qué músculo cierra y protruye los labios?",
-      "respuesta_correcta": "B",
-      "justificacion": "El orbicular de la boca.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "352",
-      "pagina_impresa": "324",
-      "dificultad": "medio",
-      "opcion_a": "El tibial anterior.",
-      "opcion_b": "El orbicular de la boca.",
-      "opcion_c": "El tríceps braquial.",
-      "opcion_d": "El epimisio."
-    },
-    {
-      "content_id": "morfo-10-013",
-      "materia": "MORFOFUNCION",
-      "tema": "el sistema muscular",
-      "numero_pregunta": 16,
-      "pregunta": "¿Qué músculo comprime la mejilla durante la masticación?",
-      "respuesta_correcta": "C",
-      "justificacion": "El buccinador.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "354",
-      "pagina_impresa": "326",
-      "dificultad": "medio",
-      "opcion_a": "La inserción.",
-      "opcion_b": "El epimisio.",
-      "opcion_c": "El buccinador.",
-      "opcion_d": "El diafragma."
-    },
-    {
-      "content_id": "morfo-10-014",
-      "materia": "MORFOFUNCION",
-      "tema": "el sistema muscular",
-      "numero_pregunta": 17,
-      "pregunta": "¿Qué músculo es el principal motor de la inspiración?",
-      "respuesta_correcta": "B",
-      "justificacion": "El diafragma.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "361",
-      "pagina_impresa": "333",
-      "dificultad": "medio",
-      "opcion_a": "El orbicular del ojo.",
-      "opcion_b": "El diafragma.",
-      "opcion_c": "El epimisio.",
-      "opcion_d": "El buccinador."
-    },
-    {
-      "content_id": "morfo-10-015",
-      "materia": "MORFOFUNCION",
-      "tema": "el sistema muscular",
-      "numero_pregunta": 18,
-      "pregunta": "¿Qué acción principal realiza el recto abdominal?",
-      "respuesta_correcta": "C",
-      "justificacion": "Flexiona el tronco.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "363",
-      "pagina_impresa": "335",
-      "dificultad": "medio",
-      "opcion_a": "El diafragma.",
-      "opcion_b": "El tibial anterior.",
-      "opcion_c": "Flexiona el tronco.",
-      "opcion_d": "Abduce el brazo."
-    },
-    {
-      "content_id": "morfo-10-016",
-      "materia": "MORFOFUNCION",
-      "tema": "el sistema muscular",
-      "numero_pregunta": 19,
-      "pregunta": "¿Qué acción realiza principalmente el deltoides?",
-      "respuesta_correcta": "D",
-      "justificacion": "Abduce el brazo.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "377",
-      "pagina_impresa": "349",
-      "dificultad": "medio",
-      "opcion_a": "Flexiona el tronco.",
-      "opcion_b": "El glúteo mayor.",
-      "opcion_c": "El tríceps braquial.",
-      "opcion_d": "Abduce el brazo."
-    },
-    {
-      "content_id": "morfo-10-018",
-      "materia": "MORFOFUNCION",
-      "tema": "el sistema muscular",
-      "numero_pregunta": 20,
-      "pregunta": "¿Qué músculo flexiona el codo y supina el antebrazo?",
-      "respuesta_correcta": "A",
-      "justificacion": "El bíceps braquial.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "378",
-      "pagina_impresa": "350",
-      "dificultad": "medio",
-      "opcion_a": "El bíceps braquial.",
-      "opcion_b": "El orbicular del ojo.",
-      "opcion_c": "El epimisio.",
-      "opcion_d": "El tibial anterior."
-    },
-    {
-      "content_id": "morfo-10-020",
-      "materia": "MORFOFUNCION",
-      "tema": "el sistema muscular",
-      "numero_pregunta": 21,
-      "pregunta": "¿Qué músculo extiende principalmente la cadera al subir escaleras?",
-      "respuesta_correcta": "C",
-      "justificacion": "El glúteo mayor.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "389",
-      "pagina_impresa": "361",
-      "dificultad": "medio",
-      "opcion_a": "El tríceps braquial.",
-      "opcion_b": "El epimisio.",
-      "opcion_c": "El glúteo mayor.",
-      "opcion_d": "Abduce el brazo."
-    },
-    {
-      "content_id": "morfo-10-021",
-      "materia": "MORFOFUNCION",
-      "tema": "el sistema muscular",
-      "numero_pregunta": 22,
-      "pregunta": "¿Qué músculo realiza dorsiflexión e inversión del pie?",
-      "respuesta_correcta": "C",
-      "justificacion": "El tibial anterior.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "394",
-      "pagina_impresa": "366",
-      "dificultad": "medio",
-      "opcion_a": "El orbicular del ojo.",
-      "opcion_b": "Flexiona el tronco.",
-      "opcion_c": "El tibial anterior.",
-      "opcion_d": "El bíceps braquial."
+      "justificacion": "El perimisio envuelve el fascículo. El endomisio rodea fibras individuales, el epimisio envuelve todo el músculo y el sarcolema es la membrana de una fibra.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "342, 343",
+      "pagina_impresa": "314, 315",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 10 · Organización del músculo esquelético",
+          "page": 342,
+          "printed": 314,
+          "marks": [
+            [
+              0.5266,
+              0.8761,
+              0.0714,
+              0.0111
+            ],
+            [
+              0.0699,
+              0.4532,
+              0.0561,
+              0.0093
+            ]
+          ]
+        },
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 10 · Organización del músculo esquelético",
+          "page": 343,
+          "printed": 315,
+          "marks": [
+            [
+              0.1198,
+              0.6327,
+              0.0593,
+              0.0111
+            ]
+          ]
+        }
+      ],
+      "source": {
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-10"
+      },
+      "opcion_a": "Epimisio.",
+      "opcion_b": "Sarcolema.",
+      "opcion_c": "Perimisio.",
+      "opcion_d": "Endomisio."
     }
   ]
 }

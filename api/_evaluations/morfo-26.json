@@ -5,519 +5,513 @@
   "topic": "nutricion y metabolismo",
   "title": "Nutrición y metabolismo",
   "number": 26,
-  "count": 30,
-  "duration": 30,
+  "count": 9,
+  "duration": 9,
   "source": "Saladin · Anatomía y fisiología",
   "questions": [
     {
-      "content_id": "morfo-26-010",
+      "content_id": "evaluacion:medicina-oficial-morfo-26-intermedio-1",
       "materia": "MORFOFUNCION",
       "tema": "nutricion y metabolismo",
       "numero_pregunta": 1,
-      "pregunta": "¿Qué hormona gástrica favorece el hambre?",
-      "respuesta_correcta": "B",
-      "justificacion": "La grelina.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "1029",
-      "pagina_impresa": "1001",
-      "dificultad": "medio",
-      "opcion_a": "La leptina.",
-      "opcion_b": "La grelina.",
-      "opcion_c": "La insulina.",
-      "opcion_d": "El glucagón."
-    },
-    {
-      "content_id": "morfo-26-009",
-      "materia": "MORFOFUNCION",
-      "tema": "nutricion y metabolismo",
-      "numero_pregunta": 2,
-      "pregunta": "¿Qué hormona del tejido adiposo señala reservas energéticas al encéfalo?",
-      "respuesta_correcta": "A",
-      "justificacion": "La leptina.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "1030",
-      "pagina_impresa": "1002",
-      "dificultad": "medio",
-      "opcion_a": "La leptina.",
-      "opcion_b": "La insulina.",
-      "opcion_c": "El glucagón.",
-      "opcion_d": "La grelina."
-    },
-    {
-      "content_id": "morfo-26-008",
-      "materia": "MORFOFUNCION",
-      "tema": "nutricion y metabolismo",
-      "numero_pregunta": 3,
-      "pregunta": "¿Qué órgano regula de manera central el apetito y la saciedad?",
+      "pregunta": "En un esquema metabólico el material de partida es glucosa y el producto es una reserva en forma de glucógeno.\n¿Qué opción corresponde al caso?",
       "respuesta_correcta": "C",
-      "justificacion": "El hipotálamo.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "1031",
-      "pagina_impresa": "1003",
-      "dificultad": "medio",
-      "opcion_a": "La evaporación.",
-      "opcion_b": "El hígado.",
-      "opcion_c": "El hipotálamo.",
-      "opcion_d": "La glucólisis."
-    },
-    {
-      "content_id": "morfo-26-001",
-      "materia": "MORFOFUNCION",
-      "tema": "nutricion y metabolismo",
-      "numero_pregunta": 4,
-      "pregunta": "¿Cuánta energía aporta un gramo de carbohidratos?",
-      "respuesta_correcta": "C",
-      "justificacion": "Aproximadamente 4 kcal.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "1032",
-      "pagina_impresa": "1004",
-      "dificultad": "medio",
-      "opcion_a": "2 ATP.",
-      "opcion_b": "Un pH superior a 7,45.",
-      "opcion_c": "Aproximadamente 4 kcal.",
-      "opcion_d": "Los pares 11 y 12."
-    },
-    {
-      "content_id": "morfo-26-002",
-      "materia": "MORFOFUNCION",
-      "tema": "nutricion y metabolismo",
-      "numero_pregunta": 5,
-      "pregunta": "¿Cuánta energía aporta un gramo de proteínas?",
-      "respuesta_correcta": "A",
-      "justificacion": "Aproximadamente 4 kcal.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "1032",
-      "pagina_impresa": "1004",
-      "dificultad": "medio",
-      "opcion_a": "Aproximadamente 4 kcal.",
-      "opcion_b": "Un pH superior a 7,45.",
-      "opcion_c": "Los pares 11 y 12.",
-      "opcion_d": "2 ATP."
-    },
-    {
-      "content_id": "morfo-26-003",
-      "materia": "MORFOFUNCION",
-      "tema": "nutricion y metabolismo",
-      "numero_pregunta": 6,
-      "pregunta": "¿Cuánta energía aporta un gramo de grasa?",
-      "respuesta_correcta": "A",
-      "justificacion": "Aproximadamente 9 kcal.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "1032",
-      "pagina_impresa": "1004",
-      "dificultad": "medio",
-      "opcion_a": "Aproximadamente 9 kcal.",
-      "opcion_b": "Los pares 11 y 12.",
-      "opcion_c": "Un pH superior a 7,45.",
-      "opcion_d": "2 ATP."
-    },
-    {
-      "content_id": "morfo-26-004",
-      "materia": "MORFOFUNCION",
-      "tema": "nutricion y metabolismo",
-      "numero_pregunta": 7,
-      "pregunta": "¿Qué es un nutriente esencial?",
-      "respuesta_correcta": "A",
-      "justificacion": "Uno que el organismo no puede sintetizar en cantidad suficiente y debe obtener de la dieta.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "1034",
-      "pagina_impresa": "1006",
-      "dificultad": "medio",
-      "opcion_a": "Uno que el organismo no puede sintetizar en cantidad suficiente y debe obtener de la dieta.",
-      "opcion_b": "El gasto energético mínimo para sostener funciones vitales en condiciones basales.",
-      "opcion_c": "La degradación de glucógeno para liberar glucosa o sus derivados.",
-      "opcion_d": "La formación de glucosa a partir de precursores no glucídicos."
-    },
-    {
-      "content_id": "morfo-26-005",
-      "materia": "MORFOFUNCION",
-      "tema": "nutricion y metabolismo",
-      "numero_pregunta": 8,
-      "pregunta": "¿Qué vitaminas son liposolubles?",
-      "respuesta_correcta": "A",
-      "justificacion": "A, D, E y K.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "1039",
-      "pagina_impresa": "1011",
-      "dificultad": "medio",
-      "opcion_a": "A, D, E y K.",
-      "opcion_b": "Por exocitosis.",
-      "opcion_c": "A la troponina.",
-      "opcion_d": "A la calmodulina."
-    },
-    {
-      "content_id": "morfo-26-006",
-      "materia": "MORFOFUNCION",
-      "tema": "nutricion y metabolismo",
-      "numero_pregunta": 9,
-      "pregunta": "¿Qué vitaminas son hidrosolubles?",
-      "respuesta_correcta": "A",
-      "justificacion": "Las del complejo B y la vitamina C.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "1039",
-      "pagina_impresa": "1011",
-      "dificultad": "medio",
-      "opcion_a": "Las del complejo B y la vitamina C.",
-      "opcion_b": "Acetil-CoA y coenzimas reducidas para obtener energía.",
-      "opcion_c": "Un ácido dona H⁺; una base acepta H⁺.",
-      "opcion_d": "Está formado por un solo tipo de átomo."
-    },
-    {
-      "content_id": "morfo-26-014",
-      "materia": "MORFOFUNCION",
-      "tema": "nutricion y metabolismo",
-      "numero_pregunta": 10,
-      "pregunta": "¿Qué producto se forma a partir del piruvato durante la fermentación láctica?",
-      "respuesta_correcta": "A",
-      "justificacion": "Lactato.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "1042",
-      "pagina_impresa": "1014",
-      "dificultad": "medio",
-      "opcion_a": "Lactato.",
-      "opcion_b": "Acetil-CoA.",
-      "opcion_c": "La grelina.",
-      "opcion_d": "La leptina."
-    },
-    {
-      "content_id": "morfo-26-011",
-      "materia": "MORFOFUNCION",
-      "tema": "nutricion y metabolismo",
-      "numero_pregunta": 11,
-      "pregunta": "¿Qué vía transforma glucosa en dos moléculas de piruvato?",
-      "respuesta_correcta": "C",
-      "justificacion": "La glucólisis.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "1043",
-      "pagina_impresa": "1015",
-      "dificultad": "medio",
-      "opcion_a": "Lactato.",
-      "opcion_b": "El hipotálamo.",
-      "opcion_c": "La glucólisis.",
-      "opcion_d": "La ATP sintasa."
-    },
-    {
-      "content_id": "morfo-26-013",
-      "materia": "MORFOFUNCION",
-      "tema": "nutricion y metabolismo",
-      "numero_pregunta": 12,
-      "pregunta": "¿Cuál es la ganancia neta de ATP de la glucólisis por glucosa?",
-      "respuesta_correcta": "A",
-      "justificacion": "2 ATP.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "1043",
-      "pagina_impresa": "1015",
-      "dificultad": "medio",
-      "opcion_a": "2 ATP.",
-      "opcion_b": "Cuatro.",
-      "opcion_c": "7,35 a 7,45.",
-      "opcion_d": "Aproximadamente 9 kcal."
-    },
-    {
-      "content_id": "morfo-26-016",
-      "materia": "MORFOFUNCION",
-      "tema": "nutricion y metabolismo",
-      "numero_pregunta": 13,
-      "pregunta": "¿Dónde ocurre el ciclo del ácido cítrico?",
-      "respuesta_correcta": "B",
-      "justificacion": "En la matriz mitocondrial.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "1043",
-      "pagina_impresa": "1015",
-      "dificultad": "medio",
-      "opcion_a": "En la médula ósea roja.",
-      "opcion_b": "En la matriz mitocondrial.",
-      "opcion_c": "En el citosol.",
-      "opcion_d": "En el hígado."
-    },
-    {
-      "content_id": "morfo-26-012",
-      "materia": "MORFOFUNCION",
-      "tema": "nutricion y metabolismo",
-      "numero_pregunta": 14,
-      "pregunta": "¿Dónde ocurre la glucólisis?",
-      "respuesta_correcta": "B",
-      "justificacion": "En el citosol.",
-      "fuente": "Saladin · Anatomía y fisiología",
+      "justificacion": "La glucogénesis incorpora glucosa al glucógeno para almacenarla.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
       "paginas_pdf": "1046",
       "pagina_impresa": "1018",
       "dificultad": "medio",
-      "opcion_a": "En la matriz mitocondrial.",
-      "opcion_b": "En el citosol.",
-      "opcion_c": "En el hígado.",
-      "opcion_d": "En la médula ósea roja."
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Nutrición y metabolismo · Metabolismo de los carbohidratos",
+          "page": 1046,
+          "printed": 1018,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-26",
+        "chapterNumber": 26,
+        "chapter": "Nutrición y metabolismo",
+        "section": "Metabolismo de los carbohidratos",
+        "printedPages": [
+          1018
+        ],
+        "pdfPages": [
+          1046
+        ]
+      },
+      "opcion_a": "Glucogenólisis",
+      "opcion_b": "Lipólisis",
+      "opcion_c": "Glucogénesis",
+      "opcion_d": "Gluconeogénesis"
     },
     {
-      "content_id": "morfo-26-017",
+      "content_id": "evaluacion:medicina-oficial-morfo-26-intermedio-2",
       "materia": "MORFOFUNCION",
       "tema": "nutricion y metabolismo",
-      "numero_pregunta": 15,
-      "pregunta": "¿Dónde se encuentra la cadena de transporte de electrones?",
-      "respuesta_correcta": "B",
-      "justificacion": "En la membrana mitocondrial interna.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "1047",
-      "pagina_impresa": "1019",
-      "dificultad": "medio",
-      "opcion_a": "En el citosol.",
-      "opcion_b": "En la membrana mitocondrial interna.",
-      "opcion_c": "En el hígado.",
-      "opcion_d": "En un ganglio autónomo periférico."
-    },
-    {
-      "content_id": "morfo-26-020",
-      "materia": "MORFOFUNCION",
-      "tema": "nutricion y metabolismo",
-      "numero_pregunta": 16,
-      "pregunta": "¿Qué es la glucogénesis?",
-      "respuesta_correcta": "B",
-      "justificacion": "La síntesis de glucógeno a partir de glucosa.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "1047",
-      "pagina_impresa": "1019",
-      "dificultad": "medio",
-      "opcion_a": "Uno que el organismo no puede sintetizar en cantidad suficiente y debe obtener de la dieta.",
-      "opcion_b": "La síntesis de glucógeno a partir de glucosa.",
-      "opcion_c": "La degradación de triglicéridos en glicerol y ácidos grasos.",
-      "opcion_d": "El gasto energético mínimo para sostener funciones vitales en condiciones basales."
-    },
-    {
-      "content_id": "morfo-26-021",
-      "materia": "MORFOFUNCION",
-      "tema": "nutricion y metabolismo",
-      "numero_pregunta": 17,
-      "pregunta": "¿Qué es la glucogenólisis?",
-      "respuesta_correcta": "B",
-      "justificacion": "La degradación de glucógeno para liberar glucosa o sus derivados.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "1047",
-      "pagina_impresa": "1019",
-      "dificultad": "medio",
-      "opcion_a": "La formación de glucosa a partir de precursores no glucídicos.",
-      "opcion_b": "La degradación de glucógeno para liberar glucosa o sus derivados.",
-      "opcion_c": "El gasto energético mínimo para sostener funciones vitales en condiciones basales.",
-      "opcion_d": "La degradación de triglicéridos en glicerol y ácidos grasos."
-    },
-    {
-      "content_id": "morfo-26-022",
-      "materia": "MORFOFUNCION",
-      "tema": "nutricion y metabolismo",
-      "numero_pregunta": 18,
-      "pregunta": "¿Qué es la gluconeogénesis?",
-      "respuesta_correcta": "A",
-      "justificacion": "La formación de glucosa a partir de precursores no glucídicos.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "1047",
-      "pagina_impresa": "1019",
-      "dificultad": "medio",
-      "opcion_a": "La formación de glucosa a partir de precursores no glucídicos.",
-      "opcion_b": "La degradación de triglicéridos en glicerol y ácidos grasos.",
-      "opcion_c": "El gasto energético mínimo para sostener funciones vitales en condiciones basales.",
-      "opcion_d": "La degradación de glucógeno para liberar glucosa o sus derivados."
-    },
-    {
-      "content_id": "morfo-26-015",
-      "materia": "MORFOFUNCION",
-      "tema": "nutricion y metabolismo",
-      "numero_pregunta": 19,
-      "pregunta": "¿Qué molécula entra al ciclo del ácido cítrico tras la oxidación del piruvato?",
-      "respuesta_correcta": "B",
-      "justificacion": "Acetil-CoA.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "1048",
-      "pagina_impresa": "1020",
-      "dificultad": "medio",
-      "opcion_a": "La glucólisis.",
-      "opcion_b": "Acetil-CoA.",
-      "opcion_c": "La grelina.",
-      "opcion_d": "Lactato."
-    },
-    {
-      "content_id": "morfo-26-023",
-      "materia": "MORFOFUNCION",
-      "tema": "nutricion y metabolismo",
-      "numero_pregunta": 20,
-      "pregunta": "¿Qué es la lipólisis?",
-      "respuesta_correcta": "D",
-      "justificacion": "La degradación de triglicéridos en glicerol y ácidos grasos.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "1048",
-      "pagina_impresa": "1020",
-      "dificultad": "medio",
-      "opcion_a": "La degradación de glucógeno para liberar glucosa o sus derivados.",
-      "opcion_b": "La formación de glucosa a partir de precursores no glucídicos.",
-      "opcion_c": "El gasto energético mínimo para sostener funciones vitales en condiciones basales.",
-      "opcion_d": "La degradación de triglicéridos en glicerol y ácidos grasos."
-    },
-    {
-      "content_id": "morfo-26-024",
-      "materia": "MORFOFUNCION",
-      "tema": "nutricion y metabolismo",
-      "numero_pregunta": 21,
-      "pregunta": "¿Qué produce la betaoxidación de ácidos grasos?",
-      "respuesta_correcta": "D",
-      "justificacion": "Acetil-CoA y coenzimas reducidas para obtener energía.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "1048",
-      "pagina_impresa": "1020",
-      "dificultad": "medio",
-      "opcion_a": "Presión diastólica + un tercio de la presión de pulso.",
-      "opcion_b": "El aumento de la osmolaridad del líquido extracelular.",
-      "opcion_c": "Las del complejo B y la vitamina C.",
-      "opcion_d": "Acetil-CoA y coenzimas reducidas para obtener energía."
-    },
-    {
-      "content_id": "morfo-26-026",
-      "materia": "MORFOFUNCION",
-      "tema": "nutricion y metabolismo",
-      "numero_pregunta": 22,
-      "pregunta": "¿Qué proceso elimina el grupo amino de un aminoácido?",
-      "respuesta_correcta": "A",
-      "justificacion": "La desaminación.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "1050",
-      "pagina_impresa": "1022",
-      "dificultad": "medio",
-      "opcion_a": "La desaminación.",
-      "opcion_b": "La ATP sintasa.",
-      "opcion_c": "La evaporación.",
-      "opcion_d": "Los escalofríos."
-    },
-    {
-      "content_id": "morfo-26-027",
-      "materia": "MORFOFUNCION",
-      "tema": "nutricion y metabolismo",
-      "numero_pregunta": 23,
-      "pregunta": "¿En qué órgano se convierte principalmente el amoníaco en urea?",
+      "numero_pregunta": 2,
+      "pregunta": "Se moviliza una reserva de glucógeno ya existente para obtener glucosa o sus derivados.\n¿Qué opción corresponde al caso?",
       "respuesta_correcta": "C",
-      "justificacion": "En el hígado.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "1050",
-      "pagina_impresa": "1022",
+      "justificacion": "La glucogenólisis rompe el glucógeno para movilizar la reserva de carbohidratos.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "1046",
+      "pagina_impresa": "1018",
       "dificultad": "medio",
-      "opcion_a": "En el citosol.",
-      "opcion_b": "En la matriz mitocondrial.",
-      "opcion_c": "En el hígado.",
-      "opcion_d": "En el epidídimo."
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Nutrición y metabolismo · Metabolismo de los carbohidratos",
+          "page": 1046,
+          "printed": 1018,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-26",
+        "chapterNumber": 26,
+        "chapter": "Nutrición y metabolismo",
+        "section": "Metabolismo de los carbohidratos",
+        "printedPages": [
+          1018
+        ],
+        "pdfPages": [
+          1046
+        ]
+      },
+      "opcion_a": "Gluconeogénesis",
+      "opcion_b": "Lipólisis",
+      "opcion_c": "Glucogenólisis",
+      "opcion_d": "Glucogénesis"
     },
     {
-      "content_id": "morfo-26-025",
+      "content_id": "evaluacion:medicina-oficial-morfo-26-intermedio-3",
       "materia": "MORFOFUNCION",
       "tema": "nutricion y metabolismo",
-      "numero_pregunta": 24,
-      "pregunta": "¿Qué órgano produce cuerpos cetónicos?",
-      "respuesta_correcta": "B",
-      "justificacion": "El hígado.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "1052",
-      "pagina_impresa": "1024",
-      "dificultad": "medio",
-      "opcion_a": "El hipotálamo.",
-      "opcion_b": "El hígado.",
-      "opcion_c": "El oxígeno.",
-      "opcion_d": "La grelina."
-    },
-    {
-      "content_id": "morfo-26-028",
-      "materia": "MORFOFUNCION",
-      "tema": "nutricion y metabolismo",
-      "numero_pregunta": 25,
-      "pregunta": "¿Qué hormona predomina en el estado de absorción?",
-      "respuesta_correcta": "B",
-      "justificacion": "La insulina.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "1052",
-      "pagina_impresa": "1024",
-      "dificultad": "medio",
-      "opcion_a": "La grelina.",
-      "opcion_b": "La insulina.",
-      "opcion_c": "El glucagón.",
-      "opcion_d": "La leptina."
-    },
-    {
-      "content_id": "morfo-26-029",
-      "materia": "MORFOFUNCION",
-      "tema": "nutricion y metabolismo",
-      "numero_pregunta": 26,
-      "pregunta": "¿Qué hormona favorece la movilización de reservas en el estado posabsortivo?",
+      "numero_pregunta": 3,
+      "pregunta": "La célula produce glucosa nueva usando un sustrato que no es carbohidrato. No está desarmando un depósito de glucógeno.\n¿Qué opción corresponde al caso?",
       "respuesta_correcta": "C",
-      "justificacion": "El glucagón.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "1052",
-      "pagina_impresa": "1024",
+      "justificacion": "La gluconeogénesis sintetiza glucosa a partir de sustancias que no son carbohidratos.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "1047",
+      "pagina_impresa": "1019",
       "dificultad": "medio",
-      "opcion_a": "La leptina.",
-      "opcion_b": "La grelina.",
-      "opcion_c": "El glucagón.",
-      "opcion_d": "La insulina."
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Nutrición y metabolismo · Ayuno",
+          "page": 1047,
+          "printed": 1019,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-26",
+        "chapterNumber": 26,
+        "chapter": "Nutrición y metabolismo",
+        "section": "Ayuno",
+        "printedPages": [
+          1019
+        ],
+        "pdfPages": [
+          1047
+        ]
+      },
+      "opcion_a": "Lipólisis",
+      "opcion_b": "Glucogénesis",
+      "opcion_c": "Gluconeogénesis",
+      "opcion_d": "Glucogenólisis"
     },
     {
-      "content_id": "morfo-26-030",
+      "content_id": "evaluacion:medicina-oficial-morfo-26-intermedio-4",
       "materia": "MORFOFUNCION",
       "tema": "nutricion y metabolismo",
-      "numero_pregunta": 27,
-      "pregunta": "¿Qué es el metabolismo basal?",
-      "respuesta_correcta": "D",
-      "justificacion": "El gasto energético mínimo para sostener funciones vitales en condiciones basales.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "1053",
-      "pagina_impresa": "1025",
-      "dificultad": "medio",
-      "opcion_a": "Uno que el organismo no puede sintetizar en cantidad suficiente y debe obtener de la dieta.",
-      "opcion_b": "La formación de glucosa a partir de precursores no glucídicos.",
-      "opcion_c": "La degradación de glucógeno para liberar glucosa o sus derivados.",
-      "opcion_d": "El gasto energético mínimo para sostener funciones vitales en condiciones basales."
-    },
-    {
-      "content_id": "morfo-26-033",
-      "materia": "MORFOFUNCION",
-      "tema": "nutricion y metabolismo",
-      "numero_pregunta": 28,
-      "pregunta": "¿Qué mecanismo pierde calor cuando el sudor pasa a vapor?",
-      "respuesta_correcta": "D",
-      "justificacion": "La evaporación.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "1054",
-      "pagina_impresa": "1026",
-      "dificultad": "medio",
-      "opcion_a": "La vasodilatación.",
-      "opcion_b": "Los escalofríos.",
-      "opcion_c": "La ATP sintasa.",
-      "opcion_d": "La evaporación."
-    },
-    {
-      "content_id": "morfo-26-031",
-      "materia": "MORFOFUNCION",
-      "tema": "nutricion y metabolismo",
-      "numero_pregunta": 29,
-      "pregunta": "¿Qué centro coordina la termorregulación?",
-      "respuesta_correcta": "D",
-      "justificacion": "El hipotálamo.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "1055",
-      "pagina_impresa": "1027",
-      "dificultad": "medio",
-      "opcion_a": "La glucólisis.",
-      "opcion_b": "La ATP sintasa.",
-      "opcion_c": "La evaporación.",
-      "opcion_d": "El hipotálamo."
-    },
-    {
-      "content_id": "morfo-26-032",
-      "materia": "MORFOFUNCION",
-      "tema": "nutricion y metabolismo",
-      "numero_pregunta": 30,
-      "pregunta": "¿Qué respuesta cutánea favorece la pérdida de calor?",
+      "numero_pregunta": 4,
+      "pregunta": "Se movilizan reservas grasas; los productos observados son glicerol y ácidos grasos, no glucosa a partir de glucógeno.\n¿Qué opción corresponde al caso?",
       "respuesta_correcta": "B",
-      "justificacion": "La vasodilatación.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "1055",
-      "pagina_impresa": "1027",
+      "justificacion": "La lipólisis descompone triglicéridos y libera glicerol y ácidos grasos.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "1048",
+      "pagina_impresa": "1020",
       "dificultad": "medio",
-      "opcion_a": "La grelina.",
-      "opcion_b": "La vasodilatación.",
-      "opcion_c": "La evaporación.",
-      "opcion_d": "Los escalofríos."
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Nutrición y metabolismo · Metabolismo de lípidos",
+          "page": 1048,
+          "printed": 1020,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-26",
+        "chapterNumber": 26,
+        "chapter": "Nutrición y metabolismo",
+        "section": "Metabolismo de lípidos",
+        "printedPages": [
+          1020
+        ],
+        "pdfPages": [
+          1048
+        ]
+      },
+      "opcion_a": "Glucogenólisis",
+      "opcion_b": "Lipólisis",
+      "opcion_c": "Glucogénesis",
+      "opcion_d": "Gluconeogénesis"
+    },
+    {
+      "content_id": "evaluacion:medicina-oficial-morfo-26-ampliacion-01-umss",
+      "materia": "MORFOFUNCION",
+      "tema": "nutricion y metabolismo",
+      "numero_pregunta": 5,
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Para una masa igual de grasa y carbohidratos, la grasa proporciona más energía según los valores del texto.\n2. Un nutriente es esencial si el organismo puede sintetizarlo en cantidad suficiente aunque no lo reciba de la dieta.",
+      "respuesta_correcta": "A",
+      "justificacion": "1. Correcta. Un gramo de grasa aporta alrededor de 9 kcal, frente a unas 4 kcal por gramo de carbohidrato.\n2. Incorrecta. La condición es la necesidad de aporte dietético porque la síntesis resulta insuficiente.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "1032, 1034",
+      "pagina_impresa": "1004, 1006",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Nutrición y metabolismo · Nutrición",
+          "page": 1032,
+          "printed": 1004,
+          "marks": []
+        },
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Nutrición y metabolismo · Nutrición",
+          "page": 1034,
+          "printed": 1006,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-26",
+        "chapterNumber": 26,
+        "chapter": "Nutrición y metabolismo",
+        "section": "Nutrición",
+        "printedPages": [
+          1004,
+          1006
+        ],
+        "pdfPages": [
+          1032,
+          1034
+        ],
+        "statements": [
+          {
+            "pdfPage": 1032,
+            "printedPage": 1004,
+            "section": "Nutrición",
+            "cardId": "morfo-26-003"
+          },
+          {
+            "pdfPage": 1034,
+            "printedPage": 1006,
+            "section": "Nutrición",
+            "cardId": "morfo-26-004"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "Solo la afirmación 1 es correcta.",
+        "B": "1. Correcta. Un gramo de grasa aporta alrededor de 9 kcal, frente a unas 4 kcal por gramo de carbohidrato. 2. Incorrecta. La condición es la necesidad de aporte dietético porque la síntesis resulta insuficiente.",
+        "C": "2. Incorrecta. La condición es la necesidad de aporte dietético porque la síntesis resulta insuficiente.",
+        "D": "1. Correcta. Un gramo de grasa aporta alrededor de 9 kcal, frente a unas 4 kcal por gramo de carbohidrato."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
+    },
+    {
+      "content_id": "evaluacion:medicina-oficial-morfo-26-ampliacion-02-umss",
+      "materia": "MORFOFUNCION",
+      "tema": "nutricion y metabolismo",
+      "numero_pregunta": 6,
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. La glucólisis se realiza dentro de la matriz mitocondrial.\n2. La ganancia neta de la glucólisis por cada glucosa es de dos ATP.",
+      "respuesta_correcta": "B",
+      "justificacion": "1. Incorrecta. La glucólisis tiene lugar en el citosol.\n2. Correcta. La ganancia neta resulta de restar el ATP que la vía consume del que produce.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "1043, 1046",
+      "pagina_impresa": "1015, 1018",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Nutrición y metabolismo · Metabolismo de carbohidratos",
+          "page": 1043,
+          "printed": 1015,
+          "marks": []
+        },
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Nutrición y metabolismo · Metabolismo de carbohidratos",
+          "page": 1046,
+          "printed": 1018,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-26",
+        "chapterNumber": 26,
+        "chapter": "Nutrición y metabolismo",
+        "section": "Metabolismo de carbohidratos",
+        "printedPages": [
+          1015,
+          1018
+        ],
+        "pdfPages": [
+          1043,
+          1046
+        ],
+        "statements": [
+          {
+            "pdfPage": 1046,
+            "printedPage": 1018,
+            "section": "Metabolismo de carbohidratos",
+            "cardId": "morfo-26-012"
+          },
+          {
+            "pdfPage": 1043,
+            "printedPage": 1015,
+            "section": "Metabolismo de carbohidratos",
+            "cardId": "morfo-26-013"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. La glucólisis tiene lugar en el citosol. 2. Correcta. La ganancia neta resulta de restar el ATP que la vía consume del que produce.",
+        "B": "Solo la afirmación 2 es correcta.",
+        "C": "1. Incorrecta. La glucólisis tiene lugar en el citosol.",
+        "D": "2. Correcta. La ganancia neta resulta de restar el ATP que la vía consume del que produce."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
+    },
+    {
+      "content_id": "evaluacion:medicina-oficial-morfo-26-ampliacion-03-umss",
+      "materia": "MORFOFUNCION",
+      "tema": "nutricion y metabolismo",
+      "numero_pregunta": 7,
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. La cadena respiratoria se encuentra en la membrana mitocondrial interna.\n2. El gradiente de protones proporciona energía para que la ATP sintasa forme ATP.",
+      "respuesta_correcta": "C",
+      "justificacion": "1. Correcta. Allí se organizan los complejos por los que se transfieren electrones.\n2. Correcta. El flujo de protones a través de la enzima se acopla a la síntesis de ATP.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "1045, 1047",
+      "pagina_impresa": "1017, 1019",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Nutrición y metabolismo · Respiración aeróbica",
+          "page": 1045,
+          "printed": 1017,
+          "marks": []
+        },
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Nutrición y metabolismo · Respiración aeróbica",
+          "page": 1047,
+          "printed": 1019,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-26",
+        "chapterNumber": 26,
+        "chapter": "Nutrición y metabolismo",
+        "section": "Respiración aeróbica",
+        "printedPages": [
+          1017,
+          1019
+        ],
+        "pdfPages": [
+          1045,
+          1047
+        ],
+        "statements": [
+          {
+            "pdfPage": 1047,
+            "printedPage": 1019,
+            "section": "Respiración aeróbica",
+            "cardId": "morfo-26-017"
+          },
+          {
+            "pdfPage": 1045,
+            "printedPage": 1017,
+            "section": "Respiración aeróbica",
+            "cardId": "morfo-26-019"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "2. Correcta. El flujo de protones a través de la enzima se acopla a la síntesis de ATP.",
+        "B": "1. Correcta. Allí se organizan los complejos por los que se transfieren electrones.",
+        "C": "Ambas afirmaciones son correctas.",
+        "D": "1. Correcta. Allí se organizan los complejos por los que se transfieren electrones. 2. Correcta. El flujo de protones a través de la enzima se acopla a la síntesis de ATP."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
+    },
+    {
+      "content_id": "evaluacion:medicina-oficial-morfo-26-ampliacion-04-umss",
+      "materia": "MORFOFUNCION",
+      "tema": "nutricion y metabolismo",
+      "numero_pregunta": 8,
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. La desaminación de un aminoácido consiste en retirar su grupo carboxilo.\n2. Durante el estado posabsortivo, el glucagón estimula principalmente el almacenamiento de reservas, como la insulina después de una comida.",
+      "respuesta_correcta": "D",
+      "justificacion": "1. Incorrecta. El grupo que se retira en la desaminación es el amino.\n2. Incorrecta. En el estado posabsortivo, el glucagón favorece movilizar reservas.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "1050, 1052",
+      "pagina_impresa": "1022, 1024",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Nutrición y metabolismo · Metabolismo de proteínas / Estados metabólicos",
+          "page": 1050,
+          "printed": 1022,
+          "marks": []
+        },
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Nutrición y metabolismo · Metabolismo de proteínas / Estados metabólicos",
+          "page": 1052,
+          "printed": 1024,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-26",
+        "chapterNumber": 26,
+        "chapter": "Nutrición y metabolismo",
+        "section": "Metabolismo de proteínas / Estados metabólicos",
+        "printedPages": [
+          1022,
+          1024
+        ],
+        "pdfPages": [
+          1050,
+          1052
+        ],
+        "statements": [
+          {
+            "pdfPage": 1050,
+            "printedPage": 1022,
+            "section": "Metabolismo de proteínas",
+            "cardId": "morfo-26-026"
+          },
+          {
+            "pdfPage": 1052,
+            "printedPage": 1024,
+            "section": "Estados metabólicos",
+            "cardId": "morfo-26-029"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. El grupo que se retira en la desaminación es el amino.",
+        "B": "2. Incorrecta. En el estado posabsortivo, el glucagón favorece movilizar reservas.",
+        "C": "1. Incorrecta. El grupo que se retira en la desaminación es el amino. 2. Incorrecta. En el estado posabsortivo, el glucagón favorece movilizar reservas.",
+        "D": "Ninguna afirmación es correcta."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
+    },
+    {
+      "content_id": "evaluacion:banco-verificado:morfo-26:energia",
+      "materia": "MORFOFUNCION",
+      "tema": "nutricion y metabolismo",
+      "numero_pregunta": 9,
+      "pregunta": "Si se reemplazan 10 g de grasa por 10 g de carbohidratos, ¿cuánto cambia aproximadamente el aporte energético calculado con los valores del texto?",
+      "respuesta_correcta": "B",
+      "justificacion": "La grasa aporta cerca de 9 kcal por gramo y los carbohidratos 4. La diferencia es de 5 kcal por gramo, o 50 kcal para 10 gramos.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "1032",
+      "pagina_impresa": "1004",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 26 · Nutrientes · Valor energético",
+          "page": 1032,
+          "printed": 1004,
+          "marks": [
+            [
+              0.2961,
+              0.3501,
+              0.0273,
+              0.0111
+            ],
+            [
+              0.1286,
+              0.4243,
+              0.0273,
+              0.0111
+            ],
+            [
+              0.3782,
+              0.2659,
+              0.0617,
+              0.0111
+            ],
+            [
+              0.0915,
+              0.4095,
+              0.0617,
+              0.0111
+            ]
+          ]
+        }
+      ],
+      "source": {
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-26"
+      },
+      "opcion_a": "Aumenta 90 kcal.",
+      "opcion_b": "Disminuye 50 kcal.",
+      "opcion_c": "Disminuye 40 kcal.",
+      "opcion_d": "Aumenta 50 kcal."
     }
   ]
 }

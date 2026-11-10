@@ -5,434 +5,493 @@
   "topic": "tejido nervioso",
   "title": "Tejido nervioso",
   "number": 12,
-  "count": 25,
-  "duration": 25,
+  "count": 9,
+  "duration": 9,
   "source": "Saladin · Anatomía y fisiología",
   "questions": [
     {
-      "content_id": "morfo-12-001",
+      "content_id": "evaluacion:medicina-oficial-morfo-12-intermedio-1",
       "materia": "MORFOFUNCION",
       "tema": "tejido nervioso",
       "numero_pregunta": 1,
-      "pregunta": "¿Cuáles son las dos divisiones anatómicas del sistema nervioso?",
-      "respuesta_correcta": "D",
-      "justificacion": "Sistema nervioso central y periférico.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "468",
-      "pagina_impresa": "440",
+      "pregunta": "Una muestra de médula espinal contiene glía que envuelve axones con mielina. Se pregunta por la glía que hizo esa envoltura central.\n¿Qué opción corresponde al caso?",
+      "respuesta_correcta": "C",
+      "justificacion": "Los oligodendrocitos forman mielina en el sistema nervioso central, incluida la médula espinal.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "474",
+      "pagina_impresa": "446",
       "dificultad": "medio",
-      "opcion_a": "Externo, medio e interno.",
-      "opcion_b": "Plasma y elementos formes.",
-      "opcion_c": "Mesencéfalo, puente y médula oblongada.",
-      "opcion_d": "Sistema nervioso central y periférico."
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Tejido nervioso · Neuroglia",
+          "page": 474,
+          "printed": 446,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-12",
+        "chapterNumber": 12,
+        "chapter": "Tejido nervioso",
+        "section": "Neuroglia",
+        "printedPages": [
+          446
+        ],
+        "pdfPages": [
+          474
+        ]
+      },
+      "opcion_a": "Células de Schwann",
+      "opcion_b": "Astrocitos",
+      "opcion_c": "Oligodendrocitos",
+      "opcion_d": "Microglía"
     },
     {
-      "content_id": "morfo-12-002",
+      "content_id": "evaluacion:medicina-oficial-morfo-12-intermedio-2",
       "materia": "MORFOFUNCION",
       "tema": "tejido nervioso",
       "numero_pregunta": 2,
-      "pregunta": "¿Qué estructuras forman el sistema nervioso central?",
-      "respuesta_correcta": "A",
-      "justificacion": "Encéfalo y médula espinal.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "468",
-      "pagina_impresa": "440",
-      "dificultad": "medio",
-      "opcion_a": "Encéfalo y médula espinal.",
-      "opcion_b": "Las células de Schwann.",
-      "opcion_c": "La microglia.",
-      "opcion_d": "Los oligodendrocitos."
-    },
-    {
-      "content_id": "morfo-12-003",
-      "materia": "MORFOFUNCION",
-      "tema": "tejido nervioso",
-      "numero_pregunta": 3,
-      "pregunta": "¿Qué dirección llevan las señales aferentes?",
-      "respuesta_correcta": "A",
-      "justificacion": "Hacia el sistema nervioso central.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "470",
-      "pagina_impresa": "442",
-      "dificultad": "medio",
-      "opcion_a": "Hacia el sistema nervioso central.",
-      "opcion_b": "Durante la vida fetal.",
-      "opcion_c": "Entre aracnoides y piamadre.",
-      "opcion_d": "Al alcanzar el umbral se genera completo; por debajo del umbral no se genera."
-    },
-    {
-      "content_id": "morfo-12-004",
-      "materia": "MORFOFUNCION",
-      "tema": "tejido nervioso",
-      "numero_pregunta": 4,
-      "pregunta": "¿Qué dirección llevan las señales eferentes?",
-      "respuesta_correcta": "C",
-      "justificacion": "Desde el sistema nervioso central hacia los efectores.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "470",
-      "pagina_impresa": "442",
-      "dificultad": "medio",
-      "opcion_a": "Al alcanzar el umbral se genera completo; por debajo del umbral no se genera.",
-      "opcion_b": "A temperatura constante, al aumentar el volumen disminuye la presión.",
-      "opcion_c": "Desde el sistema nervioso central hacia los efectores.",
-      "opcion_d": "Al inicio de la novena semana."
-    },
-    {
-      "content_id": "morfo-12-005",
-      "materia": "MORFOFUNCION",
-      "tema": "tejido nervioso",
-      "numero_pregunta": 5,
-      "pregunta": "¿Qué parte de la neurona contiene el núcleo?",
-      "respuesta_correcta": "A",
-      "justificacion": "El soma o cuerpo celular.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "470",
-      "pagina_impresa": "442",
-      "dificultad": "medio",
-      "opcion_a": "El soma o cuerpo celular.",
-      "opcion_b": "Las dendritas.",
-      "opcion_c": "Encéfalo y médula espinal.",
-      "opcion_d": "Las células ependimarias."
-    },
-    {
-      "content_id": "morfo-12-013",
-      "materia": "MORFOFUNCION",
-      "tema": "tejido nervioso",
-      "numero_pregunta": 6,
-      "pregunta": "¿Qué son los nodos de Ranvier?",
-      "respuesta_correcta": "A",
-      "justificacion": "Interrupciones entre segmentos de mielina del axón.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "471",
-      "pagina_impresa": "443",
-      "dificultad": "medio",
-      "opcion_a": "Interrupciones entre segmentos de mielina del axón.",
-      "opcion_b": "Una unión en la que una célula comunica su señal mediante neurotransmisores.",
-      "opcion_c": "La suma de potenciales postsinápticos que llegan desde distintas entradas.",
-      "opcion_d": "La propagación del impulso de un nodo de Ranvier al siguiente."
-    },
-    {
-      "content_id": "morfo-12-006",
-      "materia": "MORFOFUNCION",
-      "tema": "tejido nervioso",
-      "numero_pregunta": 7,
-      "pregunta": "¿Qué prolongaciones reciben la mayoría de las señales de una neurona?",
-      "respuesta_correcta": "C",
-      "justificacion": "Las dendritas.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "472",
-      "pagina_impresa": "444",
-      "dificultad": "medio",
-      "opcion_a": "La microglia.",
-      "opcion_b": "Los astrocitos.",
-      "opcion_c": "Las dendritas.",
-      "opcion_d": "El soma o cuerpo celular."
-    },
-    {
-      "content_id": "morfo-12-008",
-      "materia": "MORFOFUNCION",
-      "tema": "tejido nervioso",
-      "numero_pregunta": 8,
-      "pregunta": "¿Qué glía produce mielina en el sistema nervioso central?",
+      "pregunta": "Se observa una cubierta de mielina alrededor de un axón en un nervio del brazo, fuera del sistema nervioso central.\n¿Qué opción corresponde al caso?",
       "respuesta_correcta": "B",
-      "justificacion": "Los oligodendrocitos.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "474",
-      "pagina_impresa": "446",
-      "dificultad": "medio",
-      "opcion_a": "La microglia.",
-      "opcion_b": "Los oligodendrocitos.",
-      "opcion_c": "Las células de Schwann.",
-      "opcion_d": "Encéfalo y médula espinal."
-    },
-    {
-      "content_id": "morfo-12-010",
-      "materia": "MORFOFUNCION",
-      "tema": "tejido nervioso",
-      "numero_pregunta": 9,
-      "pregunta": "¿Qué glía realiza funciones fagocíticas en el sistema nervioso central?",
-      "respuesta_correcta": "B",
-      "justificacion": "La microglia.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "474",
-      "pagina_impresa": "446",
-      "dificultad": "medio",
-      "opcion_a": "Los oligodendrocitos.",
-      "opcion_b": "La microglia.",
-      "opcion_c": "Las células de Schwann.",
-      "opcion_d": "Encéfalo y médula espinal."
-    },
-    {
-      "content_id": "morfo-12-012",
-      "materia": "MORFOFUNCION",
-      "tema": "tejido nervioso",
-      "numero_pregunta": 10,
-      "pregunta": "¿Qué células revisten los ventrículos y el conducto central de la médula?",
-      "respuesta_correcta": "B",
-      "justificacion": "Las células ependimarias.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "474",
-      "pagina_impresa": "446",
-      "dificultad": "medio",
-      "opcion_a": "Encéfalo y médula espinal.",
-      "opcion_b": "Las células ependimarias.",
-      "opcion_c": "El soma o cuerpo celular.",
-      "opcion_d": "Los oligodendrocitos."
-    },
-    {
-      "content_id": "morfo-12-011",
-      "materia": "MORFOFUNCION",
-      "tema": "tejido nervioso",
-      "numero_pregunta": 11,
-      "pregunta": "¿Qué glía ayuda a mantener el entorno químico neuronal y la barrera hematoencefálica?",
-      "respuesta_correcta": "D",
-      "justificacion": "Los astrocitos.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "475",
-      "pagina_impresa": "447",
-      "dificultad": "medio",
-      "opcion_a": "Los oligodendrocitos.",
-      "opcion_b": "La microglia.",
-      "opcion_c": "Las células de Schwann.",
-      "opcion_d": "Los astrocitos."
-    },
-    {
-      "content_id": "morfo-12-009",
-      "materia": "MORFOFUNCION",
-      "tema": "tejido nervioso",
-      "numero_pregunta": 12,
-      "pregunta": "¿Qué glía produce mielina en el sistema nervioso periférico?",
-      "respuesta_correcta": "D",
-      "justificacion": "Las células de Schwann.",
-      "fuente": "Saladin · Anatomía y fisiología",
+      "justificacion": "Las células de Schwann forman la vaina de mielina de los axones en los nervios periféricos.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
       "paginas_pdf": "476",
       "pagina_impresa": "448",
       "dificultad": "medio",
-      "opcion_a": "Encéfalo y médula espinal.",
-      "opcion_b": "La microglia.",
-      "opcion_c": "Los astrocitos.",
-      "opcion_d": "Las células de Schwann."
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Tejido nervioso · Neuroglia",
+          "page": 476,
+          "printed": 448,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-12",
+        "chapterNumber": 12,
+        "chapter": "Tejido nervioso",
+        "section": "Neuroglia",
+        "printedPages": [
+          448
+        ],
+        "pdfPages": [
+          476
+        ]
+      },
+      "opcion_a": "Astrocitos",
+      "opcion_b": "Células de Schwann",
+      "opcion_c": "Microglía",
+      "opcion_d": "Oligodendrocitos"
     },
     {
-      "content_id": "morfo-12-015",
+      "content_id": "evaluacion:medicina-oficial-morfo-12-intermedio-3",
       "materia": "MORFOFUNCION",
       "tema": "tejido nervioso",
-      "numero_pregunta": 13,
-      "pregunta": "¿Qué dos rasgos aceleran la conducción de un axón?",
-      "respuesta_correcta": "D",
-      "justificacion": "Mayor diámetro y mielinización.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "478",
-      "pagina_impresa": "450",
-      "dificultad": "medio",
-      "opcion_a": "El soma o cuerpo celular.",
-      "opcion_b": "Encéfalo y médula espinal.",
-      "opcion_c": "Las células ependimarias.",
-      "opcion_d": "Mayor diámetro y mielinización."
-    },
-    {
-      "content_id": "morfo-12-023",
-      "materia": "MORFOFUNCION",
-      "tema": "tejido nervioso",
-      "numero_pregunta": 14,
-      "pregunta": "¿Qué efecto tiene un potencial postsináptico inhibitorio?",
+      "numero_pregunta": 3,
+      "pregunta": "En una muestra del sistema nervioso central se busca la glía que retira restos celulares por fagocitosis.\n¿Qué opción corresponde al caso?",
       "respuesta_correcta": "B",
-      "justificacion": "Reduce la probabilidad de generar un potencial de acción.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "482",
-      "pagina_impresa": "454",
+      "justificacion": "La microglía elimina desechos y restos celulares por fagocitosis en el sistema nervioso central.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "474",
+      "pagina_impresa": "446",
       "dificultad": "medio",
-      "opcion_a": "La generación de otro potencial de acción, sin importar la intensidad del estímulo.",
-      "opcion_b": "Reduce la probabilidad de generar un potencial de acción.",
-      "opcion_c": "Simple: una capa celular. Estratificado: dos o más capas.",
-      "opcion_d": "Las células sanguíneas y la mayor parte de las proteínas."
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Tejido nervioso · Neuroglia",
+          "page": 474,
+          "printed": 446,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-12",
+        "chapterNumber": 12,
+        "chapter": "Tejido nervioso",
+        "section": "Neuroglia",
+        "printedPages": [
+          446
+        ],
+        "pdfPages": [
+          474
+        ]
+      },
+      "opcion_a": "Células de Schwann",
+      "opcion_b": "Microglía",
+      "opcion_c": "Oligodendrocitos",
+      "opcion_d": "Astrocitos"
     },
     {
-      "content_id": "morfo-12-016",
+      "content_id": "evaluacion:medicina-oficial-morfo-12-intermedio-4",
       "materia": "MORFOFUNCION",
       "tema": "tejido nervioso",
-      "numero_pregunta": 15,
-      "pregunta": "¿Qué ion entra principalmente durante la despolarización del potencial de acción?",
+      "numero_pregunta": 4,
+      "pregunta": "Se investiga el tipo glial que ayuda a mantener estable el medio alrededor de las neuronas y participa en la barrera de los capilares del encéfalo.\n¿Qué opción corresponde al caso?",
+      "respuesta_correcta": "B",
+      "justificacion": "Los astrocitos ayudan a mantener el medio químico de las neuronas y participan en el mantenimiento de la barrera hematoencefálica.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "475",
+      "pagina_impresa": "447",
+      "dificultad": "medio",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Tejido nervioso · Neuroglia",
+          "page": 475,
+          "printed": 447,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-12",
+        "chapterNumber": 12,
+        "chapter": "Tejido nervioso",
+        "section": "Neuroglia",
+        "printedPages": [
+          447
+        ],
+        "pdfPages": [
+          475
+        ]
+      },
+      "opcion_a": "Microglía",
+      "opcion_b": "Astrocitos",
+      "opcion_c": "Células de Schwann",
+      "opcion_d": "Oligodendrocitos"
+    },
+    {
+      "content_id": "evaluacion:medicina-oficial-morfo-12-ampliacion-01-umss",
+      "materia": "MORFOFUNCION",
+      "tema": "tejido nervioso",
+      "numero_pregunta": 5,
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Una señal que va del sistema nervioso central a un músculo es aferente porque llega a un efector.\n2. En la conducción saltatoria, el potencial de acción se regenera de un nodo de Ranvier al siguiente.",
+      "respuesta_correcta": "B",
+      "justificacion": "1. Incorrecta. Aferente significa que se dirige al sistema nervioso central. La señal que sale hacia un efector es eferente.\n2. Correcta. Los nodos interrumpen la mielina y permiten regenerar la señal a lo largo del axón.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "470, 487",
+      "pagina_impresa": "442, 459",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Tejido nervioso · Organización nerviosa / Potenciales",
+          "page": 470,
+          "printed": 442,
+          "marks": []
+        },
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Tejido nervioso · Organización nerviosa / Potenciales",
+          "page": 487,
+          "printed": 459,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-12",
+        "chapterNumber": 12,
+        "chapter": "Tejido nervioso",
+        "section": "Organización nerviosa / Potenciales",
+        "printedPages": [
+          442,
+          459
+        ],
+        "pdfPages": [
+          470,
+          487
+        ],
+        "statements": [
+          {
+            "pdfPage": 470,
+            "printedPage": 442,
+            "section": "Organización nerviosa",
+            "cardId": "morfo-12-003"
+          },
+          {
+            "pdfPage": 487,
+            "printedPage": 459,
+            "section": "Potenciales",
+            "cardId": "morfo-12-014"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. Aferente significa que se dirige al sistema nervioso central. La señal que sale hacia un efector es eferente. 2. Correcta. Los nodos interrumpen la mielina y permiten regenerar la señal a lo largo del axón.",
+        "B": "Solo la afirmación 2 es correcta.",
+        "C": "1. Incorrecta. Aferente significa que se dirige al sistema nervioso central. La señal que sale hacia un efector es eferente.",
+        "D": "2. Correcta. Los nodos interrumpen la mielina y permiten regenerar la señal a lo largo del axón."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
+    },
+    {
+      "content_id": "evaluacion:medicina-oficial-morfo-12-ampliacion-02-umss",
+      "materia": "MORFOFUNCION",
+      "tema": "tejido nervioso",
+      "numero_pregunta": 6,
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. En la fase ascendente del potencial de acción neuronal, la entrada de Na⁺ contribuye a despolarizar la membrana.\n2. Durante la repolarización, la salida de Na⁺ por los canales de K⁺ explica la recuperación del potencial.",
       "respuesta_correcta": "A",
-      "justificacion": "Na⁺.",
-      "fuente": "Saladin · Anatomía y fisiología",
+      "justificacion": "1. Correcta. El influjo de sodio reduce e invierte transitoriamente la diferencia de potencial.\n2. Incorrecta. Durante la repolarización sale principalmente K⁺. La dirección de ese flujo devuelve el interior hacia un potencial más negativo.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
       "paginas_pdf": "484",
       "pagina_impresa": "456",
-      "dificultad": "medio",
-      "opcion_a": "Na⁺.",
-      "opcion_b": "La microglia.",
-      "opcion_c": "El axón.",
-      "opcion_d": "Las dendritas."
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Tejido nervioso · Potenciales",
+          "page": 484,
+          "printed": 456,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-12",
+        "chapterNumber": 12,
+        "chapter": "Tejido nervioso",
+        "section": "Potenciales",
+        "printedPages": [
+          456
+        ],
+        "pdfPages": [
+          484
+        ],
+        "statements": [
+          {
+            "pdfPage": 484,
+            "printedPage": 456,
+            "section": "Potenciales",
+            "cardId": "morfo-12-016"
+          },
+          {
+            "pdfPage": 484,
+            "printedPage": 456,
+            "section": "Potenciales",
+            "cardId": "morfo-12-017"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "Solo la afirmación 1 es correcta.",
+        "B": "1. Correcta. El influjo de sodio reduce e invierte transitoriamente la diferencia de potencial. 2. Incorrecta. Durante la repolarización sale principalmente K⁺. La dirección de ese flujo devuelve el interior hacia un potencial más negativo.",
+        "C": "2. Incorrecta. Durante la repolarización sale principalmente K⁺. La dirección de ese flujo devuelve el interior hacia un potencial más negativo.",
+        "D": "1. Correcta. El influjo de sodio reduce e invierte transitoriamente la diferencia de potencial."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "morfo-12-017",
+      "content_id": "evaluacion:medicina-oficial-morfo-12-ampliacion-03-umss",
       "materia": "MORFOFUNCION",
       "tema": "tejido nervioso",
-      "numero_pregunta": 16,
-      "pregunta": "¿Qué ion sale principalmente durante la repolarización del potencial de acción?",
+      "numero_pregunta": 7,
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Un estímulo suficientemente intenso genera otro potencial de acción durante el período refractario absoluto.\n2. La entrada de K⁺ en la terminal presináptica es el estímulo inmediato para liberar neurotransmisor.",
       "respuesta_correcta": "D",
-      "justificacion": "K⁺.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "484",
-      "pagina_impresa": "456",
-      "dificultad": "medio",
-      "opcion_a": "La microglia.",
-      "opcion_b": "Las dendritas.",
-      "opcion_c": "El axón.",
-      "opcion_d": "K⁺."
+      "justificacion": "1. Incorrecta. En el período absoluto no puede iniciarse otro potencial, incluso con un estímulo intenso.\n2. Incorrecta. La llegada de la señal favorece la entrada de Ca²⁺, que desencadena la liberación.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "485, 491",
+      "pagina_impresa": "457, 463",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Tejido nervioso · 12.4 Período refractario / Sinapsis",
+          "page": 485,
+          "printed": 457,
+          "marks": []
+        },
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Tejido nervioso · 12.4 Período refractario / Sinapsis",
+          "page": 491,
+          "printed": 463,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-12",
+        "chapterNumber": 12,
+        "chapter": "Tejido nervioso",
+        "section": "12.4 Período refractario / Sinapsis",
+        "printedPages": [
+          457,
+          463
+        ],
+        "pdfPages": [
+          485,
+          491
+        ],
+        "statements": [
+          {
+            "pdfPage": 485,
+            "printedPage": 457,
+            "section": "12.4 Período refractario",
+            "anchor": "ningún estímulo de ninguna fuerza disparará un nuevo potencial de acción"
+          },
+          {
+            "pdfPage": 491,
+            "printedPage": 463,
+            "section": "Sinapsis",
+            "cardId": "morfo-12-020"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. En el período absoluto no puede iniciarse otro potencial, incluso con un estímulo intenso.",
+        "B": "2. Incorrecta. La llegada de la señal favorece la entrada de Ca²⁺, que desencadena la liberación.",
+        "C": "1. Incorrecta. En el período absoluto no puede iniciarse otro potencial, incluso con un estímulo intenso. 2. Incorrecta. La llegada de la señal favorece la entrada de Ca²⁺, que desencadena la liberación.",
+        "D": "Ninguna afirmación es correcta."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "morfo-12-018",
+      "content_id": "evaluacion:medicina-oficial-morfo-12-ampliacion-04-umss",
       "materia": "MORFOFUNCION",
       "tema": "tejido nervioso",
-      "numero_pregunta": 17,
-      "pregunta": "¿Qué significa que el potencial de acción cumpla la ley de todo o nada?",
-      "respuesta_correcta": "A",
-      "justificacion": "Al alcanzar el umbral se genera completo; por debajo del umbral no se genera.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "485",
-      "pagina_impresa": "457",
-      "dificultad": "medio",
-      "opcion_a": "Al alcanzar el umbral se genera completo; por debajo del umbral no se genera.",
-      "opcion_b": "Al inicio de la novena semana.",
-      "opcion_c": "Desde el sistema nervioso central hacia los efectores.",
-      "opcion_d": "A temperatura constante, al aumentar el volumen disminuye la presión."
-    },
-    {
-      "content_id": "morfo-12-014",
-      "materia": "MORFOFUNCION",
-      "tema": "tejido nervioso",
-      "numero_pregunta": 18,
-      "pregunta": "¿Qué es la conducción saltatoria?",
-      "respuesta_correcta": "A",
-      "justificacion": "La propagación del impulso de un nodo de Ranvier al siguiente.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "487",
-      "pagina_impresa": "459",
-      "dificultad": "medio",
-      "opcion_a": "La propagación del impulso de un nodo de Ranvier al siguiente.",
-      "opcion_b": "La suma de potenciales postsinápticos que llegan desde distintas entradas.",
-      "opcion_c": "Interrupciones entre segmentos de mielina del axón.",
-      "opcion_d": "Una unión en la que una célula comunica su señal mediante neurotransmisores."
-    },
-    {
-      "content_id": "morfo-12-007",
-      "materia": "MORFOFUNCION",
-      "tema": "tejido nervioso",
-      "numero_pregunta": 19,
-      "pregunta": "¿Qué prolongación conduce señales desde el soma hacia otras células?",
+      "numero_pregunta": 8,
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Los potenciales postsinápticos rápidos de una sola entrada pueden sumarse temporalmente.\n2. La activación coincidente de distintas entradas sobre una neurona puede producir sumación espacial.",
       "respuesta_correcta": "C",
-      "justificacion": "El axón.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "488",
-      "pagina_impresa": "460",
-      "dificultad": "medio",
-      "opcion_a": "La microglia.",
-      "opcion_b": "K⁺.",
-      "opcion_c": "El axón.",
-      "opcion_d": "Las dendritas."
-    },
-    {
-      "content_id": "morfo-12-020",
-      "materia": "MORFOFUNCION",
-      "tema": "tejido nervioso",
-      "numero_pregunta": 20,
-      "pregunta": "¿Qué ion desencadena la liberación de neurotransmisor en la terminal presináptica?",
-      "respuesta_correcta": "C",
-      "justificacion": "Ca²⁺.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "491",
-      "pagina_impresa": "463",
-      "dificultad": "medio",
-      "opcion_a": "Tres.",
-      "opcion_b": "126.",
-      "opcion_c": "Ca²⁺.",
-      "opcion_d": "2 ATP."
-    },
-    {
-      "content_id": "morfo-12-021",
-      "materia": "MORFOFUNCION",
-      "tema": "tejido nervioso",
-      "numero_pregunta": 21,
-      "pregunta": "¿Qué es una sinapsis química?",
-      "respuesta_correcta": "D",
-      "justificacion": "Una unión en la que una célula comunica su señal mediante neurotransmisores.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "494",
-      "pagina_impresa": "466",
-      "dificultad": "medio",
-      "opcion_a": "La suma de potenciales postsinápticos que llegan desde distintas entradas.",
-      "opcion_b": "Interrupciones entre segmentos de mielina del axón.",
-      "opcion_c": "La propagación del impulso de un nodo de Ranvier al siguiente.",
-      "opcion_d": "Una unión en la que una célula comunica su señal mediante neurotransmisores."
-    },
-    {
-      "content_id": "morfo-12-022",
-      "materia": "MORFOFUNCION",
-      "tema": "tejido nervioso",
-      "numero_pregunta": 22,
-      "pregunta": "¿Qué efecto tiene un potencial postsináptico excitatorio?",
-      "respuesta_correcta": "C",
-      "justificacion": "Acerca la membrana al umbral de disparo.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "494",
-      "pagina_impresa": "466",
-      "dificultad": "medio",
-      "opcion_a": "Encéfalo y médula espinal.",
-      "opcion_b": "Mayor diámetro y mielinización.",
-      "opcion_c": "Acerca la membrana al umbral de disparo.",
-      "opcion_d": "Las células ependimarias."
-    },
-    {
-      "content_id": "morfo-12-024",
-      "materia": "MORFOFUNCION",
-      "tema": "tejido nervioso",
-      "numero_pregunta": 23,
-      "pregunta": "¿Qué es la sumación temporal?",
-      "respuesta_correcta": "B",
-      "justificacion": "La suma de potenciales postsinápticos producidos rápidamente por una misma entrada.",
-      "fuente": "Saladin · Anatomía y fisiología",
+      "justificacion": "1. Correcta. Si las señales llegan antes de que se disipe la anterior, sus efectos se superponen.\n2. Correcta. En este caso los potenciales se originan en sitios distintos de la membrana.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
       "paginas_pdf": "495",
       "pagina_impresa": "467",
-      "dificultad": "medio",
-      "opcion_a": "Interrupciones entre segmentos de mielina del axón.",
-      "opcion_b": "La suma de potenciales postsinápticos producidos rápidamente por una misma entrada.",
-      "opcion_c": "Una unión en la que una célula comunica su señal mediante neurotransmisores.",
-      "opcion_d": "La propagación del impulso de un nodo de Ranvier al siguiente."
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Tejido nervioso · Integración / 12.6 Sumatoria espacial",
+          "page": 495,
+          "printed": 467,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-12",
+        "chapterNumber": 12,
+        "chapter": "Tejido nervioso",
+        "section": "Integración / 12.6 Sumatoria espacial",
+        "printedPages": [
+          467
+        ],
+        "pdfPages": [
+          495
+        ],
+        "statements": [
+          {
+            "pdfPage": 495,
+            "printedPage": 467,
+            "section": "Integración",
+            "cardId": "morfo-12-024"
+          },
+          {
+            "pdfPage": 495,
+            "printedPage": 467,
+            "section": "12.6 Sumatoria espacial",
+            "anchor": "los EPSP de varias sinapsis se suman"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "2. Correcta. En este caso los potenciales se originan en sitios distintos de la membrana.",
+        "B": "1. Correcta. Si las señales llegan antes de que se disipe la anterior, sus efectos se superponen.",
+        "C": "Ambas afirmaciones son correctas.",
+        "D": "1. Correcta. Si las señales llegan antes de que se disipe la anterior, sus efectos se superponen. 2. Correcta. En este caso los potenciales se originan en sitios distintos de la membrana."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "morfo-12-019",
+      "content_id": "evaluacion:banco-verificado:morfo-12:vias",
       "materia": "MORFOFUNCION",
       "tema": "tejido nervioso",
-      "numero_pregunta": 24,
-      "pregunta": "¿Qué impide el período refractario absoluto?",
-      "respuesta_correcta": "B",
-      "justificacion": "La generación de otro potencial de acción, sin importar la intensidad del estímulo.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "497",
-      "pagina_impresa": "469",
-      "dificultad": "medio",
-      "opcion_a": "Reduce la probabilidad de generar un potencial de acción.",
-      "opcion_b": "La generación de otro potencial de acción, sin importar la intensidad del estímulo.",
-      "opcion_c": "Concéntrica: el músculo se acorta. Excéntrica: se alarga mientras mantiene tensión.",
-      "opcion_d": "El saturado no tiene dobles enlaces entre carbonos; el insaturado tiene uno o más."
-    },
-    {
-      "content_id": "morfo-12-025",
-      "materia": "MORFOFUNCION",
-      "tema": "tejido nervioso",
-      "numero_pregunta": 25,
-      "pregunta": "¿Qué es la sumación espacial?",
-      "respuesta_correcta": "B",
-      "justificacion": "La suma de potenciales postsinápticos que llegan desde distintas entradas.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "497",
-      "pagina_impresa": "469",
-      "dificultad": "medio",
-      "opcion_a": "La propagación del impulso de un nodo de Ranvier al siguiente.",
-      "opcion_b": "La suma de potenciales postsinápticos que llegan desde distintas entradas.",
-      "opcion_c": "Una unión en la que una célula comunica su señal mediante neurotransmisores.",
-      "opcion_d": "Interrupciones entre segmentos de mielina del axón."
+      "numero_pregunta": 9,
+      "pregunta": "En un circuito, una señal llega desde un receptor a la médula y otra sale hacia un músculo. ¿Qué cambio de dirección ocurre entre ambos trayectos?",
+      "respuesta_correcta": "C",
+      "justificacion": "La señal de entrada es aferente porque se dirige al sistema nervioso central. La señal que sale hacia el músculo es eferente.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "470",
+      "pagina_impresa": "442",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 12 · Divisiones funcionales del sistema nervioso",
+          "page": 470,
+          "printed": 442,
+          "marks": [
+            [
+              0.2701,
+              0.4504,
+              0.0545,
+              0.0111
+            ],
+            [
+              0.8237,
+              0.1174,
+              0.0537,
+              0.0111
+            ],
+            [
+              0.6589,
+              0.355,
+              0.0537,
+              0.0111
+            ],
+            [
+              0.1143,
+              0.7061,
+              0.0433,
+              0.0093
+            ]
+          ]
+        }
+      ],
+      "source": {
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-12"
+      },
+      "opcion_a": "De aferente a aferente.",
+      "opcion_b": "De eferente a eferente.",
+      "opcion_c": "De aferente a eferente.",
+      "opcion_d": "De eferente a aferente."
     }
   ]
 }

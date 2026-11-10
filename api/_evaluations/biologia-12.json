@@ -5,519 +5,493 @@
   "topic": "citoesqueleto",
   "title": "El citoesqueleto",
   "number": 12,
-  "count": 30,
-  "duration": 30,
+  "count": 9,
+  "duration": 9,
   "source": "Biología celular biomédica",
   "questions": [
     {
-      "content_id": "bio-12-001",
+      "content_id": "evaluacion:medicina-oficial-biologia-12-intermedio-1",
       "materia": "BIOLOGIA CELULAR",
       "tema": "citoesqueleto",
       "numero_pregunta": 1,
-      "pregunta": "¿Cuáles son los tres elementos principales del citoesqueleto?",
+      "pregunta": "Un corte muestra nueve grupos de tres microtúbulos alrededor de un cilindro. No se ven los dobletes de un axonema.\n¿Qué opción corresponde al caso?",
       "respuesta_correcta": "A",
-      "justificacion": "Microtúbulos, microfilamentos y filamentos intermedios.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "493",
-      "pagina_impresa": "493",
+      "justificacion": "El centríolo se organiza en nueve tripletes de microtúbulos dispuestos como un cilindro.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+      "paginas_pdf": "501",
+      "pagina_impresa": "",
       "dificultad": "medio",
-      "opcion_a": "Microtúbulos, microfilamentos y filamentos intermedios.",
-      "opcion_b": "Ectodermo, mesodermo y endodermo.",
-      "opcion_c": "Interfase y división celular.",
-      "opcion_d": "UAA, UAG y UGA."
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "El citoesqueleto · Centríolos",
+          "page": 501,
+          "printed": null,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-12",
+        "chapterNumber": 12,
+        "chapter": "El citoesqueleto",
+        "section": "Centríolos",
+        "printedPages": [],
+        "pdfPages": [
+          501
+        ]
+      },
+      "opcion_a": "Centríolo",
+      "opcion_b": "Axonema de un cilio móvil típico",
+      "opcion_c": "Axonema de un cilio primario típico",
+      "opcion_d": "Citoqueratinas"
     },
     {
-      "content_id": "bio-12-002",
+      "content_id": "evaluacion:medicina-oficial-biologia-12-intermedio-2",
       "materia": "BIOLOGIA CELULAR",
       "tema": "citoesqueleto",
       "numero_pregunta": 2,
-      "pregunta": "¿Qué diámetro externo tiene un microtúbulo?",
+      "pregunta": "Se estudia la estructura motora de un cilio y se cuentan nueve pares periféricos además de dos microtúbulos en el centro.\n¿Qué opción corresponde al caso?",
       "respuesta_correcta": "C",
-      "justificacion": "25 nm.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "494",
-      "pagina_impresa": "494",
+      "justificacion": "El axonema del cilio móvil típico tiene nueve dobletes periféricos y dos microtúbulos centrales.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+      "paginas_pdf": "503",
+      "pagina_impresa": "",
       "dificultad": "medio",
-      "opcion_a": "Un axonema 9+2.",
-      "opcion_b": "9+0, sin el par central.",
-      "opcion_c": "25 nm.",
-      "opcion_d": "Rac: lamelipodios. Cdc42: filopodios."
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "El citoesqueleto · Cilios",
+          "page": 503,
+          "printed": null,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-12",
+        "chapterNumber": 12,
+        "chapter": "El citoesqueleto",
+        "section": "Cilios",
+        "printedPages": [],
+        "pdfPages": [
+          503
+        ]
+      },
+      "opcion_a": "Axonema de un cilio primario típico",
+      "opcion_b": "Citoqueratinas",
+      "opcion_c": "Axonema de un cilio móvil típico",
+      "opcion_d": "Centríolo"
     },
     {
-      "content_id": "bio-12-003",
+      "content_id": "evaluacion:medicina-oficial-biologia-12-intermedio-3",
       "materia": "BIOLOGIA CELULAR",
       "tema": "citoesqueleto",
       "numero_pregunta": 3,
-      "pregunta": "¿Qué subunidades forman el heterodímero de tubulina?",
-      "respuesta_correcta": "A",
-      "justificacion": "α-tubulina y β-tubulina.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "494",
-      "pagina_impresa": "494",
+      "pregunta": "Se observa una prolongación ciliar con organización 9+0. Se pide identificarla según la organización típica que compara el capítulo.\n¿Qué opción corresponde al caso?",
+      "respuesta_correcta": "B",
+      "justificacion": "El axonema del cilio primario típico conserva los nueve dobletes periféricos y carece del par central.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+      "paginas_pdf": "503",
+      "pagina_impresa": "",
       "dificultad": "medio",
-      "opcion_a": "α-tubulina y β-tubulina.",
-      "opcion_b": "Sarcómeros.",
-      "opcion_c": "GTP.",
-      "opcion_d": "Las citoqueratinas."
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "El citoesqueleto · Cilios",
+          "page": 503,
+          "printed": null,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-12",
+        "chapterNumber": 12,
+        "chapter": "El citoesqueleto",
+        "section": "Cilios",
+        "printedPages": [],
+        "pdfPages": [
+          503
+        ]
+      },
+      "opcion_a": "Axonema de un cilio móvil típico",
+      "opcion_b": "Axonema de un cilio primario típico",
+      "opcion_c": "Citoqueratinas",
+      "opcion_d": "Centríolo"
     },
     {
-      "content_id": "bio-12-004",
+      "content_id": "evaluacion:medicina-oficial-biologia-12-intermedio-4",
       "materia": "BIOLOGIA CELULAR",
       "tema": "citoesqueleto",
       "numero_pregunta": 4,
-      "pregunta": "¿Por qué extremo crece preferentemente un microtúbulo in vitro?",
-      "respuesta_correcta": "A",
-      "justificacion": "Por el extremo positivo (+).",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "494",
-      "pagina_impresa": "494",
+      "pregunta": "Un marcador debe reconocer los filamentos intermedios del epitelio, en lugar de teñir cilindros formados por microtúbulos.\n¿Qué opción corresponde al caso?",
+      "respuesta_correcta": "B",
+      "justificacion": "Las citoqueratinas son filamentos intermedios característicos de las células epiteliales.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+      "paginas_pdf": "529",
+      "pagina_impresa": "",
       "dificultad": "medio",
-      "opcion_a": "Por el extremo positivo (+).",
-      "opcion_b": "Los estabiliza y ayuda a agruparlos en haces paralelos.",
-      "opcion_c": "La evasión de la apoptosis.",
-      "opcion_d": "Actuar como antenas que recogen señales extracelulares."
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "El citoesqueleto · Filamentos intermedios",
+          "page": 529,
+          "printed": null,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-12",
+        "chapterNumber": 12,
+        "chapter": "El citoesqueleto",
+        "section": "Filamentos intermedios",
+        "printedPages": [],
+        "pdfPages": [
+          529
+        ]
+      },
+      "opcion_a": "Centríolo",
+      "opcion_b": "Citoqueratinas",
+      "opcion_c": "Axonema de un cilio móvil típico",
+      "opcion_d": "Axonema de un cilio primario típico"
     },
     {
-      "content_id": "bio-12-007",
+      "content_id": "evaluacion:medicina-oficial-biologia-12-ampliacion-01-umss",
       "materia": "BIOLOGIA CELULAR",
       "tema": "citoesqueleto",
       "numero_pregunta": 5,
-      "pregunta": "¿Qué tubulina es esencial en los centros organizadores de microtúbulos?",
-      "respuesta_correcta": "D",
-      "justificacion": "γ-tubulina.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "497",
-      "pagina_impresa": "497",
-      "dificultad": "medio",
-      "opcion_a": "Sarcómeros.",
-      "opcion_b": "La miosina.",
-      "opcion_c": "GTP.",
-      "opcion_d": "γ-tubulina."
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Un microtúbulo puede pasar de una fase de crecimiento a una pérdida rápida de subunidades.\n2. La colchicina promueve el alargamiento al favorecer que la tubulina libre se incorpore al microtúbulo.",
+      "respuesta_correcta": "A",
+      "justificacion": "1. Correcta. Esa alternancia es la inestabilidad dinámica.\n2. Incorrecta. Se une a tubulina libre e impide su incorporación normal.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+      "paginas_pdf": "496, 498",
+      "pagina_impresa": "",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "El citoesqueleto · Microtúbulos / Fármacos y microtúbulos",
+          "page": 496,
+          "printed": null,
+          "marks": []
+        },
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "El citoesqueleto · Microtúbulos / Fármacos y microtúbulos",
+          "page": 498,
+          "printed": null,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-12",
+        "chapterNumber": 12,
+        "chapter": "El citoesqueleto",
+        "section": "Microtúbulos / Fármacos y microtúbulos",
+        "printedPages": [],
+        "pdfPages": [
+          496,
+          498
+        ],
+        "statements": [
+          {
+            "pdfPage": 496,
+            "printedPage": null,
+            "section": "Microtúbulos",
+            "cardId": "bio-12-006"
+          },
+          {
+            "pdfPage": 498,
+            "printedPage": null,
+            "section": "Fármacos y microtúbulos",
+            "cardId": "bio-12-008"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "Solo la afirmación 1 es correcta.",
+        "B": "1. Correcta. Esa alternancia es la inestabilidad dinámica. 2. Incorrecta. Se une a tubulina libre e impide su incorporación normal.",
+        "C": "2. Incorrecta. Se une a tubulina libre e impide su incorporación normal.",
+        "D": "1. Correcta. Esa alternancia es la inestabilidad dinámica."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "bio-12-008",
+      "content_id": "evaluacion:medicina-oficial-biologia-12-ampliacion-02-umss",
       "materia": "BIOLOGIA CELULAR",
       "tema": "citoesqueleto",
       "numero_pregunta": 6,
-      "pregunta": "¿Qué efecto tiene la colchicina sobre los microtúbulos?",
-      "respuesta_correcta": "C",
-      "justificacion": "Impide su polimerización al unirse a tubulina libre.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "498",
-      "pagina_impresa": "498",
-      "dificultad": "medio",
-      "opcion_a": "El peptidil-ARNt que lleva la cadena en crecimiento.",
-      "opcion_b": "Lo libera para transcribir genes de entrada en fase S.",
-      "opcion_c": "Impide su polimerización al unirse a tubulina libre.",
-      "opcion_d": "Abre sus canales y lo libera al citosol."
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. La proteína tau debilita de forma habitual los microtúbulos axónicos para impedir que formen haces.\n2. Los microtúbulos cinetocóricos se acoplan a una estructura asociada al centrómero.",
+      "respuesta_correcta": "B",
+      "justificacion": "1. Incorrecta. Tau los estabiliza y favorece su organización en haces.\n2. Correcta. El sitio de unión es el cinetocoro del cromosoma.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+      "paginas_pdf": "500, 502",
+      "pagina_impresa": "",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "El citoesqueleto · Proteínas asociadas / Huso mitótico",
+          "page": 500,
+          "printed": null,
+          "marks": []
+        },
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "El citoesqueleto · Proteínas asociadas / Huso mitótico",
+          "page": 502,
+          "printed": null,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-12",
+        "chapterNumber": 12,
+        "chapter": "El citoesqueleto",
+        "section": "Proteínas asociadas / Huso mitótico",
+        "printedPages": [],
+        "pdfPages": [
+          500,
+          502
+        ],
+        "statements": [
+          {
+            "pdfPage": 500,
+            "printedPage": null,
+            "section": "Proteínas asociadas",
+            "cardId": "bio-12-010"
+          },
+          {
+            "pdfPage": 502,
+            "printedPage": null,
+            "section": "Huso mitótico",
+            "cardId": "bio-12-013"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. Tau los estabiliza y favorece su organización en haces. 2. Correcta. El sitio de unión es el cinetocoro del cromosoma.",
+        "B": "Solo la afirmación 2 es correcta.",
+        "C": "1. Incorrecta. Tau los estabiliza y favorece su organización en haces.",
+        "D": "2. Correcta. El sitio de unión es el cinetocoro del cromosoma."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "bio-12-009",
+      "content_id": "evaluacion:medicina-oficial-biologia-12-ampliacion-03-umss",
       "materia": "BIOLOGIA CELULAR",
       "tema": "citoesqueleto",
       "numero_pregunta": 7,
-      "pregunta": "¿En qué dirección se desplazan las quinesinas por el microtúbulo?",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. La nexina contribuye a mantener vinculados dobletes vecinos de microtúbulos en el axonema.\n2. La actina F se forma por ensamblaje de subunidades de actina G.",
       "respuesta_correcta": "C",
-      "justificacion": "Del extremo negativo al positivo.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "499",
-      "pagina_impresa": "499",
-      "dificultad": "medio",
-      "opcion_a": "Las citoqueratinas.",
-      "opcion_b": "Troponina C, TnC.",
-      "opcion_c": "Del extremo negativo al positivo.",
-      "opcion_d": "α-tubulina y β-tubulina."
+      "justificacion": "1. Correcta. Establece uniones entre dobletes adyacentes.\n2. Correcta. Actina G es la forma monomérica y actina F la filamentosa.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+      "paginas_pdf": "506, 513",
+      "pagina_impresa": "",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "El citoesqueleto · Cilios móviles / Actina",
+          "page": 506,
+          "printed": null,
+          "marks": []
+        },
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "El citoesqueleto · Cilios móviles / Actina",
+          "page": 513,
+          "printed": null,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-12",
+        "chapterNumber": 12,
+        "chapter": "El citoesqueleto",
+        "section": "Cilios móviles / Actina",
+        "printedPages": [],
+        "pdfPages": [
+          506,
+          513
+        ],
+        "statements": [
+          {
+            "pdfPage": 506,
+            "printedPage": null,
+            "section": "Cilios móviles",
+            "cardId": "bio-12-018"
+          },
+          {
+            "pdfPage": 513,
+            "printedPage": null,
+            "section": "Actina",
+            "cardId": "bio-12-022"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "2. Correcta. Actina G es la forma monomérica y actina F la filamentosa.",
+        "B": "1. Correcta. Establece uniones entre dobletes adyacentes.",
+        "C": "Ambas afirmaciones son correctas.",
+        "D": "1. Correcta. Establece uniones entre dobletes adyacentes. 2. Correcta. Actina G es la forma monomérica y actina F la filamentosa."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "bio-12-010",
+      "content_id": "evaluacion:medicina-oficial-biologia-12-ampliacion-04-umss",
       "materia": "BIOLOGIA CELULAR",
       "tema": "citoesqueleto",
       "numero_pregunta": 8,
-      "pregunta": "¿Qué función tiene tau en los microtúbulos axónicos?",
-      "respuesta_correcta": "C",
-      "justificacion": "Los estabiliza y ayuda a agruparlos en haces paralelos.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "500",
-      "pagina_impresa": "500",
-      "dificultad": "medio",
-      "opcion_a": "Permitir la salida del ARNt tras transferir la cadena.",
-      "opcion_b": "Actuar como antenas que recogen señales extracelulares.",
-      "opcion_c": "Los estabiliza y ayuda a agruparlos en haces paralelos.",
-      "opcion_d": "Por el extremo positivo (+)."
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. La timosina acelera la incorporación espontánea de actina G a los filamentos.\n2. En músculo liso, la MLCK activa la contracción al fosforilar la cadena ligera de la actina.",
+      "respuesta_correcta": "D",
+      "justificacion": "1. Incorrecta. Secuestra el monómero y limita su polimerización espontánea.\n2. Incorrecta. La diana es la cadena ligera de miosina.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+      "paginas_pdf": "516, 525",
+      "pagina_impresa": "",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "El citoesqueleto · Actina / Músculo liso",
+          "page": 516,
+          "printed": null,
+          "marks": []
+        },
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "El citoesqueleto · Actina / Músculo liso",
+          "page": 525,
+          "printed": null,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-12",
+        "chapterNumber": 12,
+        "chapter": "El citoesqueleto",
+        "section": "Actina / Músculo liso",
+        "printedPages": [],
+        "pdfPages": [
+          516,
+          525
+        ],
+        "statements": [
+          {
+            "pdfPage": 516,
+            "printedPage": null,
+            "section": "Actina",
+            "cardId": "bio-12-027"
+          },
+          {
+            "pdfPage": 525,
+            "printedPage": null,
+            "section": "Músculo liso",
+            "cardId": "bio-12-032"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. Secuestra el monómero y limita su polimerización espontánea.",
+        "B": "2. Incorrecta. La diana es la cadena ligera de miosina.",
+        "C": "1. Incorrecta. Secuestra el monómero y limita su polimerización espontánea. 2. Incorrecta. La diana es la cadena ligera de miosina.",
+        "D": "Ninguna afirmación es correcta."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "bio-12-011",
+      "content_id": "evaluacion:banco-verificado:biologia-12:microtubulos",
       "materia": "BIOLOGIA CELULAR",
       "tema": "citoesqueleto",
       "numero_pregunta": 9,
-      "pregunta": "¿Cómo se organizan los microtúbulos de un centríolo?",
-      "respuesta_correcta": "D",
-      "justificacion": "En nueve tripletes dispuestos en cilindro.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "501",
-      "pagina_impresa": "501",
-      "dificultad": "medio",
-      "opcion_a": "A corta distancia, sobre células vecinas.",
-      "opcion_b": "Al cinetocoro.",
-      "opcion_c": "Por interacción homófila con otras NCAM.",
-      "opcion_d": "En nueve tripletes dispuestos en cilindro."
-    },
-    {
-      "content_id": "bio-12-012",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "citoesqueleto",
-      "numero_pregunta": 10,
-      "pregunta": "¿Cómo se llama la pareja de centríolos?",
-      "respuesta_correcta": "B",
-      "justificacion": "Diplosoma.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "501",
-      "pagina_impresa": "501",
-      "dificultad": "medio",
-      "opcion_a": "γ-tubulina.",
-      "opcion_b": "Diplosoma.",
-      "opcion_c": "La miosina.",
-      "opcion_d": "Sarcómeros."
-    },
-    {
-      "content_id": "bio-12-013",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "citoesqueleto",
-      "numero_pregunta": 11,
-      "pregunta": "¿A qué estructura cromosómica se unen los microtúbulos cinetocóricos?",
-      "respuesta_correcta": "D",
-      "justificacion": "Al cinetocoro.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "502",
-      "pagina_impresa": "502",
-      "dificultad": "medio",
-      "opcion_a": "En nueve tripletes dispuestos en cilindro.",
-      "opcion_b": "A filamentos intermedios.",
-      "opcion_c": "Al promotor.",
-      "opcion_d": "Al cinetocoro."
-    },
-    {
-      "content_id": "bio-12-014",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "citoesqueleto",
-      "numero_pregunta": 12,
-      "pregunta": "¿Cuál es la organización típica del axonema de un cilio móvil?",
+      "pregunta": "Hay tubulina disponible en una concentración superior a la crítica del extremo positivo, pero inferior a la del negativo. ¿Qué extremo puede incorporar subunidades con crecimiento neto en esas condiciones?",
       "respuesta_correcta": "C",
-      "justificacion": "Nueve dobletes periféricos y dos microtúbulos centrales: 9+2.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "503",
-      "pagina_impresa": "503",
-      "dificultad": "medio",
-      "opcion_a": "Rac: lamelipodios. Cdc42: filopodios.",
-      "opcion_b": "8-12 nm.",
-      "opcion_c": "Nueve dobletes periféricos y dos microtúbulos centrales: 9+2.",
-      "opcion_d": "9+0, sin el par central."
-    },
-    {
-      "content_id": "bio-12-015",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "citoesqueleto",
-      "numero_pregunta": 13,
-      "pregunta": "¿Qué disposición típica tienen los cilios primarios?",
-      "respuesta_correcta": "C",
-      "justificacion": "9+0, sin el par central.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "503",
-      "pagina_impresa": "503",
-      "dificultad": "medio",
-      "opcion_a": "Rac: lamelipodios. Cdc42: filopodios.",
-      "opcion_b": "Un axonema 9+2.",
-      "opcion_c": "9+0, sin el par central.",
-      "opcion_d": "8-12 nm."
-    },
-    {
-      "content_id": "bio-12-016",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "citoesqueleto",
-      "numero_pregunta": 14,
-      "pregunta": "¿Qué función principal tienen los cilios primarios?",
-      "respuesta_correcta": "D",
-      "justificacion": "Actuar como antenas que recogen señales extracelulares.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "504",
-      "pagina_impresa": "504",
-      "dificultad": "medio",
-      "opcion_a": "Por el extremo positivo (+).",
-      "opcion_b": "Los estabiliza y ayuda a agruparlos en haces paralelos.",
-      "opcion_c": "Frenar la respuesta y contribuir a la tolerancia inmunitaria.",
-      "opcion_d": "Actuar como antenas que recogen señales extracelulares."
-    },
-    {
-      "content_id": "bio-12-017",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "citoesqueleto",
-      "numero_pregunta": 15,
-      "pregunta": "¿Qué desplazan los cilios del epitelio traqueobronquial?",
-      "respuesta_correcta": "D",
-      "justificacion": "El moco, con partículas y microorganismos atrapados.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "505",
-      "pagina_impresa": "505",
-      "dificultad": "medio",
-      "opcion_a": "Fosforila la cadena ligera de miosina.",
-      "opcion_b": "G: monómero globular. F: polímero filamentoso.",
-      "opcion_c": "La alternancia de crecimiento y despolimerización brusca.",
-      "opcion_d": "El moco, con partículas y microorganismos atrapados."
-    },
-    {
-      "content_id": "bio-12-018",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "citoesqueleto",
-      "numero_pregunta": 16,
-      "pregunta": "¿Qué proteína une dobletes adyacentes del axonema?",
-      "respuesta_correcta": "C",
-      "justificacion": "Nexina.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "506",
-      "pagina_impresa": "506",
-      "dificultad": "medio",
-      "opcion_a": "CapZ.",
-      "opcion_b": "La filamina.",
-      "opcion_c": "Nexina.",
-      "opcion_d": "La miosina."
-    },
-    {
-      "content_id": "bio-12-019",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "citoesqueleto",
-      "numero_pregunta": 17,
-      "pregunta": "¿Qué estructura motora recorre la cola del espermatozoide?",
-      "respuesta_correcta": "D",
-      "justificacion": "Un axonema 9+2.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "509",
-      "pagina_impresa": "509",
-      "dificultad": "medio",
-      "opcion_a": "8-12 nm.",
-      "opcion_b": "9+0, sin el par central.",
-      "opcion_c": "Rac: lamelipodios. Cdc42: filopodios.",
-      "opcion_d": "Un axonema 9+2."
-    },
-    {
-      "content_id": "bio-12-020",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "citoesqueleto",
-      "numero_pregunta": 18,
-      "pregunta": "¿Cómo se denomina la formación de cilios?",
-      "respuesta_correcta": "C",
-      "justificacion": "Ciliogénesis.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "510",
-      "pagina_impresa": "510",
-      "dificultad": "medio",
-      "opcion_a": "La distrofina.",
-      "opcion_b": "La profilina.",
-      "opcion_c": "Ciliogénesis.",
-      "opcion_d": "La timosina."
-    },
-    {
-      "content_id": "bio-12-021",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "citoesqueleto",
-      "numero_pregunta": 19,
-      "pregunta": "¿Qué diámetro tienen los microfilamentos?",
-      "respuesta_correcta": "B",
-      "justificacion": "7 nm.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "513",
-      "pagina_impresa": "513",
-      "dificultad": "medio",
-      "opcion_a": "Rac: lamelipodios. Cdc42: filopodios.",
-      "opcion_b": "7 nm.",
-      "opcion_c": "Un axonema 9+2.",
-      "opcion_d": "9+0, sin el par central."
-    },
-    {
-      "content_id": "bio-12-022",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "citoesqueleto",
-      "numero_pregunta": 20,
-      "pregunta": "¿Qué diferencia a la actina G de la actina F?",
-      "respuesta_correcta": "B",
-      "justificacion": "G: monómero globular. F: polímero filamentoso.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "513",
-      "pagina_impresa": "513",
-      "dificultad": "medio",
-      "opcion_a": "Fosforila la cadena ligera de miosina.",
-      "opcion_b": "G: monómero globular. F: polímero filamentoso.",
-      "opcion_c": "El moco, con partículas y microorganismos atrapados.",
-      "opcion_d": "La alternancia de crecimiento y despolimerización brusca."
-    },
-    {
-      "content_id": "bio-12-023",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "citoesqueleto",
-      "numero_pregunta": 21,
-      "pregunta": "¿Qué proteína favorece el intercambio ADP-ATP en actina G?",
-      "respuesta_correcta": "B",
-      "justificacion": "La profilina.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "515",
-      "pagina_impresa": "515",
-      "dificultad": "medio",
-      "opcion_a": "La filamina.",
-      "opcion_b": "La profilina.",
-      "opcion_c": "La timosina.",
-      "opcion_d": "La miosina."
-    },
-    {
-      "content_id": "bio-12-024",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "citoesqueleto",
-      "numero_pregunta": 22,
-      "pregunta": "¿Qué GTPasas favorecen lamelipodios y filopodios, respectivamente?",
-      "respuesta_correcta": "C",
-      "justificacion": "Rac: lamelipodios. Cdc42: filopodios.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "515",
-      "pagina_impresa": "515",
-      "dificultad": "medio",
-      "opcion_a": "9+0, sin el par central.",
-      "opcion_b": "8-12 nm.",
-      "opcion_c": "Rac: lamelipodios. Cdc42: filopodios.",
-      "opcion_d": "Un axonema 9+2."
-    },
-    {
-      "content_id": "bio-12-028",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "citoesqueleto",
-      "numero_pregunta": 23,
-      "pregunta": "¿Qué proteína motora interactúa con actina en la contracción?",
-      "respuesta_correcta": "A",
-      "justificacion": "La miosina.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "519",
-      "pagina_impresa": "519",
-      "dificultad": "medio",
-      "opcion_a": "La miosina.",
-      "opcion_b": "La profilina.",
-      "opcion_c": "La timosina.",
-      "opcion_d": "La filamina."
-    },
-    {
-      "content_id": "bio-12-029",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "citoesqueleto",
-      "numero_pregunta": 24,
-      "pregunta": "¿Qué unidades repetitivas forman las miofibrillas?",
-      "respuesta_correcta": "B",
-      "justificacion": "Sarcómeros.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "521",
-      "pagina_impresa": "521",
-      "dificultad": "medio",
-      "opcion_a": "α-tubulina y β-tubulina.",
-      "opcion_b": "Sarcómeros.",
-      "opcion_c": "Diplosoma.",
-      "opcion_d": "La miosina."
-    },
-    {
-      "content_id": "bio-12-030",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "citoesqueleto",
-      "numero_pregunta": 25,
-      "pregunta": "¿A qué subunidad de troponina se une el Ca2+?",
-      "respuesta_correcta": "D",
-      "justificacion": "Troponina C, TnC.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "522",
-      "pagina_impresa": "522",
-      "dificultad": "medio",
-      "opcion_a": "La distrofina.",
-      "opcion_b": "Las citoqueratinas.",
-      "opcion_c": "Nexina.",
-      "opcion_d": "Troponina C, TnC."
-    },
-    {
-      "content_id": "bio-12-031",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "citoesqueleto",
-      "numero_pregunta": 26,
-      "pregunta": "¿Qué uniones ayudan a coordinar la contracción entre células musculares lisas?",
-      "respuesta_correcta": "A",
-      "justificacion": "Uniones gap.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "524",
-      "pagina_impresa": "524",
-      "dificultad": "medio",
-      "opcion_a": "Uniones gap.",
-      "opcion_b": "La timosina.",
-      "opcion_c": "La miosina.",
-      "opcion_d": "Las citoqueratinas."
-    },
-    {
-      "content_id": "bio-12-032",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "citoesqueleto",
-      "numero_pregunta": 27,
-      "pregunta": "¿Qué modifica la MLCK para favorecer la contracción?",
-      "respuesta_correcta": "A",
-      "justificacion": "Fosforila la cadena ligera de miosina.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "525",
-      "pagina_impresa": "525",
-      "dificultad": "medio",
-      "opcion_a": "Fosforila la cadena ligera de miosina.",
-      "opcion_b": "El moco, con partículas y microorganismos atrapados.",
-      "opcion_c": "G: monómero globular. F: polímero filamentoso.",
-      "opcion_d": "La alternancia de crecimiento y despolimerización brusca."
-    },
-    {
-      "content_id": "bio-12-033",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "citoesqueleto",
-      "numero_pregunta": 28,
-      "pregunta": "¿Qué proteína está alterada en la distrofia muscular de Duchenne?",
-      "respuesta_correcta": "A",
-      "justificacion": "La distrofina.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "527",
-      "pagina_impresa": "527",
-      "dificultad": "medio",
-      "opcion_a": "La distrofina.",
-      "opcion_b": "La profilina.",
-      "opcion_c": "La filamina.",
-      "opcion_d": "La miosina."
-    },
-    {
-      "content_id": "bio-12-034",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "citoesqueleto",
-      "numero_pregunta": 29,
-      "pregunta": "¿Qué diámetro tienen los filamentos intermedios?",
-      "respuesta_correcta": "D",
-      "justificacion": "8-12 nm.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "529",
-      "pagina_impresa": "529",
-      "dificultad": "medio",
-      "opcion_a": "Un axonema 9+2.",
-      "opcion_b": "Rac: lamelipodios. Cdc42: filopodios.",
-      "opcion_c": "9+0, sin el par central.",
-      "opcion_d": "8-12 nm."
-    },
-    {
-      "content_id": "bio-12-035",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "citoesqueleto",
-      "numero_pregunta": 30,
-      "pregunta": "¿Qué filamentos intermedios son característicos de células epiteliales?",
-      "respuesta_correcta": "B",
-      "justificacion": "Las citoqueratinas.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "529",
-      "pagina_impresa": "529",
-      "dificultad": "medio",
-      "opcion_a": "α-tubulina y β-tubulina.",
-      "opcion_b": "Las citoqueratinas.",
-      "opcion_c": "Uniones gap.",
-      "opcion_d": "Troponina C, TnC."
+      "justificacion": "Calvo describe una concentración crítica menor para el extremo positivo. En el intervalo indicado, solo ese extremo supera su umbral para el crecimiento.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+      "paginas_pdf": "495",
+      "pagina_impresa": "495",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Capítulo 12 · Microtúbulos · Polaridad y polimerización",
+          "page": 495,
+          "printed": 495,
+          "marks": [
+            [
+              0.0209,
+              0.4619,
+              0.0839,
+              0.0172
+            ],
+            [
+              0.0922,
+              0.4773,
+              0.0835,
+              0.0172
+            ],
+            [
+              0.8373,
+              0.4467,
+              0.0334,
+              0.0172
+            ],
+            [
+              0.2464,
+              0.4619,
+              0.0334,
+              0.0172
+            ]
+          ]
+        }
+      ],
+      "source": {
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-12"
+      },
+      "opcion_a": "Ambos extremos con crecimiento neto.",
+      "opcion_b": "Ningún extremo con crecimiento neto.",
+      "opcion_c": "El extremo positivo.",
+      "opcion_d": "El extremo negativo."
     }
   ]
 }

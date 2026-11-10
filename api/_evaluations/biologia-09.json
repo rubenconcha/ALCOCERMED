@@ -5,519 +5,466 @@
   "topic": "sintesis y modificacion de proteinas",
   "title": "Síntesis y modificación de proteínas",
   "number": 9,
-  "count": 30,
-  "duration": 30,
+  "count": 9,
+  "duration": 9,
   "source": "Biología celular biomédica",
   "questions": [
     {
-      "content_id": "bio-09-001",
+      "content_id": "evaluacion:medicina-oficial-biologia-09-intermedio-1",
       "materia": "BIOLOGIA CELULAR",
       "tema": "sintesis y modificacion de proteinas",
       "numero_pregunta": 1,
-      "pregunta": "¿Qué parte de un aminoácido determina sus propiedades fisicoquímicas?",
-      "respuesta_correcta": "B",
-      "justificacion": "La cadena lateral o grupo R.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "388",
-      "pagina_impresa": "388",
+      "pregunta": "Una quinasa actúa sobre una proteína; se registra el grupo que esta incorpora, antes de que actúe la fosfatasa.\n¿Qué opción corresponde al caso?",
+      "respuesta_correcta": "C",
+      "justificacion": "Una quinasa incorpora un grupo fosfato a la proteína. Una fosfatasa puede retirarlo.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+      "paginas_pdf": "407",
+      "pagina_impresa": "",
       "dificultad": "medio",
-      "opcion_a": "Una cadena de ubiquitinas o poliubiquitinación.",
-      "opcion_b": "La cadena lateral o grupo R.",
-      "opcion_c": "Heat shock protein: proteína de choque térmico.",
-      "opcion_d": "El final de la síntesis proteica."
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Síntesis y modificación de proteínas · Modificaciones postraduccionales",
+          "page": 407,
+          "printed": null,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-09",
+        "chapterNumber": 9,
+        "chapter": "Síntesis y modificación de proteínas",
+        "section": "Modificaciones postraduccionales",
+        "printedPages": [],
+        "pdfPages": [
+          407
+        ]
+      },
+      "opcion_a": "Acilación lipídica",
+      "opcion_b": "Acetilación",
+      "opcion_c": "Fosforilación",
+      "opcion_d": "Poliubiquitinación"
     },
     {
-      "content_id": "bio-09-002",
+      "content_id": "evaluacion:medicina-oficial-biologia-09-intermedio-2",
       "materia": "BIOLOGIA CELULAR",
       "tema": "sintesis y modificacion de proteinas",
       "numero_pregunta": 2,
-      "pregunta": "¿Qué enlace une aminoácidos en una proteína?",
-      "respuesta_correcta": "A",
-      "justificacion": "El enlace peptídico.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "388",
-      "pagina_impresa": "388",
+      "pregunta": "Un experimento registra la incorporación de un acetilo y debe distinguirla de una adición de fosfato o de una marca de degradación.\n¿Qué opción corresponde al caso?",
+      "respuesta_correcta": "D",
+      "justificacion": "En la acetilación, el grupo añadido a la proteína es un acetilo.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+      "paginas_pdf": "408",
+      "pagina_impresa": "",
       "dificultad": "medio",
-      "opcion_a": "El enlace peptídico.",
-      "opcion_b": "AUG; metionina.",
-      "opcion_c": "Su secuencia de aminoácidos.",
-      "opcion_d": "Las β- y γ-secretasas."
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Síntesis y modificación de proteínas · Modificaciones postraduccionales",
+          "page": 408,
+          "printed": null,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-09",
+        "chapterNumber": 9,
+        "chapter": "Síntesis y modificación de proteínas",
+        "section": "Modificaciones postraduccionales",
+        "printedPages": [],
+        "pdfPages": [
+          408
+        ]
+      },
+      "opcion_a": "Poliubiquitinación",
+      "opcion_b": "Fosforilación",
+      "opcion_c": "Acilación lipídica",
+      "opcion_d": "Acetilación"
     },
     {
-      "content_id": "bio-09-003",
+      "content_id": "evaluacion:medicina-oficial-biologia-09-intermedio-3",
       "materia": "BIOLOGIA CELULAR",
       "tema": "sintesis y modificacion de proteinas",
       "numero_pregunta": 3,
-      "pregunta": "¿Qué tres elementos principales requiere la traducción?",
-      "respuesta_correcta": "A",
-      "justificacion": "ARNm, ribosomas y ARNt.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "389",
-      "pagina_impresa": "389",
+      "pregunta": "Una proteína citosólica se asocia a membrana después de recibir un grupo lipídico. Se clasifica el cambio que aportó ese anclaje.\n¿Qué opción corresponde al caso?",
+      "respuesta_correcta": "D",
+      "justificacion": "Al recibir un grupo lipídico, una proteína puede quedar asociada a la membrana.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+      "paginas_pdf": "409",
+      "pagina_impresa": "",
       "dificultad": "medio",
-      "opcion_a": "ARNm, ribosomas y ARNt.",
-      "opcion_b": "Las β- y γ-secretasas.",
-      "opcion_c": "AUG; metionina.",
-      "opcion_d": "La chaperonina TRiC/CCT."
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Síntesis y modificación de proteínas · Modificaciones postraduccionales",
+          "page": 409,
+          "printed": null,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-09",
+        "chapterNumber": 9,
+        "chapter": "Síntesis y modificación de proteínas",
+        "section": "Modificaciones postraduccionales",
+        "printedPages": [],
+        "pdfPages": [
+          409
+        ]
+      },
+      "opcion_a": "Acetilación",
+      "opcion_b": "Fosforilación",
+      "opcion_c": "Poliubiquitinación",
+      "opcion_d": "Acilación lipídica"
     },
     {
-      "content_id": "bio-09-004",
+      "content_id": "evaluacion:medicina-oficial-biologia-09-intermedio-4",
       "materia": "BIOLOGIA CELULAR",
       "tema": "sintesis y modificacion de proteinas",
       "numero_pregunta": 4,
-      "pregunta": "¿Cómo se denomina un conjunto de ribosomas traduciendo el mismo ARNm?",
-      "respuesta_correcta": "A",
-      "justificacion": "Polisoma o polirribosoma.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "389",
-      "pagina_impresa": "389",
+      "pregunta": "Se sigue una proteína destinada al proteasoma y se detecta una cadena de ubiquitinas añadida a ella.\n¿Qué opción corresponde al caso?",
+      "respuesta_correcta": "D",
+      "justificacion": "Una cadena de ubiquitinas puede dirigir la proteína marcada hacia el proteasoma.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+      "paginas_pdf": "414",
+      "pagina_impresa": "",
       "dificultad": "medio",
-      "opcion_a": "Polisoma o polirribosoma.",
-      "opcion_b": "La chaperonina TRiC/CCT.",
-      "opcion_c": "ARNm, ribosomas y ARNt.",
-      "opcion_d": "El aminoacil-ARNt entrante."
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Síntesis y modificación de proteínas · Degradación proteica",
+          "page": 414,
+          "printed": null,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-09",
+        "chapterNumber": 9,
+        "chapter": "Síntesis y modificación de proteínas",
+        "section": "Degradación proteica",
+        "printedPages": [],
+        "pdfPages": [
+          414
+        ]
+      },
+      "opcion_a": "Acilación lipídica",
+      "opcion_b": "Fosforilación",
+      "opcion_c": "Acetilación",
+      "opcion_d": "Poliubiquitinación"
     },
     {
-      "content_id": "bio-09-005",
+      "content_id": "evaluacion:medicina-oficial-biologia-09-ampliacion-01-umss",
       "materia": "BIOLOGIA CELULAR",
       "tema": "sintesis y modificacion de proteinas",
       "numero_pregunta": 5,
-      "pregunta": "¿A qué extremo del ARNt se une el aminoácido?",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Durante la elongación, el sitio A se especializa en liberar el ARNt que ya cedió su cadena peptídica.\n2. El ARNt iniciador se ubica en el sitio P durante la iniciación eucariota.",
       "respuesta_correcta": "B",
-      "justificacion": "Al extremo 3′, terminado en CCA.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "391",
-      "pagina_impresa": "391",
-      "dificultad": "medio",
-      "opcion_a": "eRF1.",
-      "opcion_b": "Al extremo 3′, terminado en CCA.",
-      "opcion_c": "Dos copias de H2A, H2B, H3 y H4.",
-      "opcion_d": "ARN de transferencia y ARNr 5 S."
+      "justificacion": "1. Incorrecta. El sitio A recibe el aminoacil-ARNt entrante. La salida ocurre por el sitio E.\n2. Correcta. Se incorpora en P antes de que el siguiente aminoacil-ARNt llegue a A.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+      "paginas_pdf": "395",
+      "pagina_impresa": "",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Síntesis y modificación de proteínas · Sitios ribosómicos / Iniciación",
+          "page": 395,
+          "printed": null,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-09",
+        "chapterNumber": 9,
+        "chapter": "Síntesis y modificación de proteínas",
+        "section": "Sitios ribosómicos / Iniciación",
+        "printedPages": [],
+        "pdfPages": [
+          395
+        ],
+        "statements": [
+          {
+            "pdfPage": 395,
+            "printedPage": null,
+            "section": "Sitios ribosómicos",
+            "cardId": "bio-09-007"
+          },
+          {
+            "pdfPage": 395,
+            "printedPage": null,
+            "section": "Iniciación",
+            "cardId": "bio-09-011"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. El sitio A recibe el aminoacil-ARNt entrante. La salida ocurre por el sitio E. 2. Correcta. Se incorpora en P antes de que el siguiente aminoacil-ARNt llegue a A.",
+        "B": "Solo la afirmación 2 es correcta.",
+        "C": "1. Incorrecta. El sitio A recibe el aminoacil-ARNt entrante. La salida ocurre por el sitio E.",
+        "D": "2. Correcta. Se incorpora en P antes de que el siguiente aminoacil-ARNt llegue a A."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "bio-09-006",
+      "content_id": "evaluacion:medicina-oficial-biologia-09-ampliacion-02-umss",
       "materia": "BIOLOGIA CELULAR",
       "tema": "sintesis y modificacion de proteinas",
       "numero_pregunta": 6,
-      "pregunta": "¿Qué señalan los codones de terminación?",
-      "respuesta_correcta": "C",
-      "justificacion": "El final de la síntesis proteica.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "393",
-      "pagina_impresa": "393",
-      "dificultad": "medio",
-      "opcion_a": "Heat shock protein: proteína de choque térmico.",
-      "opcion_b": "La cadena lateral o grupo R.",
-      "opcion_c": "El final de la síntesis proteica.",
-      "opcion_d": "Una cadena de ubiquitinas o poliubiquitinación."
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. La formación del enlace peptídico depende de actividad catalítica del ARNr de la subunidad mayor.\n2. Al llegar a un codón de terminación, eRF1 introduce otro aminoácido en la cadena.",
+      "respuesta_correcta": "A",
+      "justificacion": "1. Correcta. El centro peptidil-transferasa del ribosoma cataliza la unión de aminoácidos.\n2. Incorrecta. Es un factor de liberación. Favorece que la proteína recién sintetizada se separe del ARNt.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+      "paginas_pdf": "397, 399",
+      "pagina_impresa": "",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Síntesis y modificación de proteínas · Elongación / Terminación",
+          "page": 397,
+          "printed": null,
+          "marks": []
+        },
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Síntesis y modificación de proteínas · Elongación / Terminación",
+          "page": 399,
+          "printed": null,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-09",
+        "chapterNumber": 9,
+        "chapter": "Síntesis y modificación de proteínas",
+        "section": "Elongación / Terminación",
+        "printedPages": [],
+        "pdfPages": [
+          397,
+          399
+        ],
+        "statements": [
+          {
+            "pdfPage": 397,
+            "printedPage": null,
+            "section": "Elongación",
+            "cardId": "bio-09-012"
+          },
+          {
+            "pdfPage": 399,
+            "printedPage": null,
+            "section": "Terminación",
+            "cardId": "bio-09-014"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "Solo la afirmación 1 es correcta.",
+        "B": "1. Correcta. El centro peptidil-transferasa del ribosoma cataliza la unión de aminoácidos. 2. Incorrecta. Es un factor de liberación. Favorece que la proteína recién sintetizada se separe del ARNt.",
+        "C": "2. Incorrecta. Es un factor de liberación. Favorece que la proteína recién sintetizada se separe del ARNt.",
+        "D": "1. Correcta. El centro peptidil-transferasa del ribosoma cataliza la unión de aminoácidos."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "bio-09-007",
+      "content_id": "evaluacion:medicina-oficial-biologia-09-ampliacion-03-umss",
       "materia": "BIOLOGIA CELULAR",
       "tema": "sintesis y modificacion de proteinas",
       "numero_pregunta": 7,
-      "pregunta": "¿Qué recibe el sitio A del ribosoma?",
-      "respuesta_correcta": "B",
-      "justificacion": "El aminoacil-ARNt entrante.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "395",
-      "pagina_impresa": "395",
-      "dificultad": "medio",
-      "opcion_a": "Su hiperfosforilación anormal.",
-      "opcion_b": "El aminoacil-ARNt entrante.",
-      "opcion_c": "Polisoma o polirribosoma.",
-      "opcion_d": "Su secuencia de aminoácidos."
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Las cadenas laterales hidrófobas suelen quedar hacia el interior de una proteína globular soluble.\n2. Una chaperonina en forma de barril puede ayudar al plegamiento de proteínas complejas.",
+      "respuesta_correcta": "C",
+      "justificacion": "1. Correcta. El plegamiento reduce el contacto de esas regiones con el agua.\n2. Correcta. El complejo TRiC/CCT aporta un entorno que favorece su plegamiento.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+      "paginas_pdf": "402, 404",
+      "pagina_impresa": "",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Síntesis y modificación de proteínas · Plegamiento",
+          "page": 402,
+          "printed": null,
+          "marks": []
+        },
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Síntesis y modificación de proteínas · Plegamiento",
+          "page": 404,
+          "printed": null,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-09",
+        "chapterNumber": 9,
+        "chapter": "Síntesis y modificación de proteínas",
+        "section": "Plegamiento",
+        "printedPages": [],
+        "pdfPages": [
+          402,
+          404
+        ],
+        "statements": [
+          {
+            "pdfPage": 402,
+            "printedPage": null,
+            "section": "Plegamiento",
+            "cardId": "bio-09-018"
+          },
+          {
+            "pdfPage": 404,
+            "printedPage": null,
+            "section": "Plegamiento",
+            "cardId": "bio-09-020"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "2. Correcta. El complejo TRiC/CCT aporta un entorno que favorece su plegamiento.",
+        "B": "1. Correcta. El plegamiento reduce el contacto de esas regiones con el agua.",
+        "C": "Ambas afirmaciones son correctas.",
+        "D": "1. Correcta. El plegamiento reduce el contacto de esas regiones con el agua. 2. Correcta. El complejo TRiC/CCT aporta un entorno que favorece su plegamiento."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "bio-09-008",
+      "content_id": "evaluacion:medicina-oficial-biologia-09-ampliacion-04-umss",
       "materia": "BIOLOGIA CELULAR",
       "tema": "sintesis y modificacion de proteinas",
       "numero_pregunta": 8,
-      "pregunta": "¿Qué ocupa el sitio P del ribosoma durante la elongación?",
-      "respuesta_correcta": "C",
-      "justificacion": "El peptidil-ARNt que lleva la cadena en crecimiento.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "395",
-      "pagina_impresa": "395",
-      "dificultad": "medio",
-      "opcion_a": "Del gradiente de Na+ generado por la Na+/K+ ATPasa.",
-      "opcion_b": "Un ARNr de la subunidad mayor con actividad peptidil-transferasa.",
-      "opcion_c": "El peptidil-ARNt que lleva la cadena en crecimiento.",
-      "opcion_d": "Impide su polimerización al unirse a tubulina libre."
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Una proteína sin señales de clasificación se envía necesariamente a la luz del retículo endoplasmático.\n2. La proteólisis durante la maduración de la insulina indica degradación de un producto ya activo.",
+      "respuesta_correcta": "D",
+      "justificacion": "1. Incorrecta. Muchas proteínas sin señal de clasificación permanecen en el citosol.\n2. Incorrecta. Los cortes de maduración convierten un precursor en un producto funcional.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+      "paginas_pdf": "405, 410",
+      "pagina_impresa": "",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Síntesis y modificación de proteínas · Destino proteico / Procesamiento proteico",
+          "page": 405,
+          "printed": null,
+          "marks": []
+        },
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Síntesis y modificación de proteínas · Destino proteico / Procesamiento proteico",
+          "page": 410,
+          "printed": null,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-09",
+        "chapterNumber": 9,
+        "chapter": "Síntesis y modificación de proteínas",
+        "section": "Destino proteico / Procesamiento proteico",
+        "printedPages": [],
+        "pdfPages": [
+          405,
+          410
+        ],
+        "statements": [
+          {
+            "pdfPage": 405,
+            "printedPage": null,
+            "section": "Destino proteico",
+            "cardId": "bio-09-021"
+          },
+          {
+            "pdfPage": 410,
+            "printedPage": null,
+            "section": "Procesamiento proteico",
+            "cardId": "bio-09-027"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. Muchas proteínas sin señal de clasificación permanecen en el citosol.",
+        "B": "2. Incorrecta. Los cortes de maduración convierten un precursor en un producto funcional.",
+        "C": "1. Incorrecta. Muchas proteínas sin señal de clasificación permanecen en el citosol. 2. Incorrecta. Los cortes de maduración convierten un precursor en un producto funcional.",
+        "D": "Ninguna afirmación es correcta."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "bio-09-009",
+      "content_id": "evaluacion:banco-verificado:biologia-09:traduccion",
       "materia": "BIOLOGIA CELULAR",
       "tema": "sintesis y modificacion de proteinas",
       "numero_pregunta": 9,
-      "pregunta": "¿Qué función tiene el sitio E del ribosoma?",
+      "pregunta": "Un ARNt conserva su anticodón, pero pierde su extremo 3′ con la secuencia CCA. ¿Qué paso se afecta directamente?",
       "respuesta_correcta": "C",
-      "justificacion": "Permitir la salida del ARNt tras transferir la cadena.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "395",
-      "pagina_impresa": "395",
-      "dificultad": "medio",
-      "opcion_a": "Anclarla a la membrana mediante un grupo lipídico.",
-      "opcion_b": "Porque se sintetiza como un precursor que debe fragmentarse para ser funcional.",
-      "opcion_c": "Permitir la salida del ARNt tras transferir la cadena.",
-      "opcion_d": "Los estabiliza y ayuda a agruparlos en haces paralelos."
-    },
-    {
-      "content_id": "bio-09-010",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "sintesis y modificacion de proteinas",
-      "numero_pregunta": 10,
-      "pregunta": "¿Qué codón inicia la traducción eucariota y qué aminoácido codifica?",
-      "respuesta_correcta": "A",
-      "justificacion": "AUG; metionina.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "395",
-      "pagina_impresa": "395",
-      "dificultad": "medio",
-      "opcion_a": "AUG; metionina.",
-      "opcion_b": "Las β- y γ-secretasas.",
-      "opcion_c": "El enlace peptídico.",
-      "opcion_d": "ARNm, ribosomas y ARNt."
-    },
-    {
-      "content_id": "bio-09-011",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "sintesis y modificacion de proteinas",
-      "numero_pregunta": 11,
-      "pregunta": "¿En qué sitio ribosómico se coloca el ARNt iniciador?",
-      "respuesta_correcta": "D",
-      "justificacion": "En el sitio P.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "395",
-      "pagina_impresa": "395",
-      "dificultad": "medio",
-      "opcion_a": "En el citosol.",
-      "opcion_b": "Hacia el interior, lejos del agua.",
-      "opcion_c": "En el hígado.",
-      "opcion_d": "En el sitio P."
-    },
-    {
-      "content_id": "bio-09-012",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "sintesis y modificacion de proteinas",
-      "numero_pregunta": 12,
-      "pregunta": "¿Qué componente cataliza el enlace peptídico?",
-      "respuesta_correcta": "C",
-      "justificacion": "Un ARNr de la subunidad mayor con actividad peptidil-transferasa.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "397",
-      "pagina_impresa": "397",
-      "dificultad": "medio",
-      "opcion_a": "La longitud de las cadenas hidrocarbonadas de sus ácidos grasos.",
-      "opcion_b": "Dos células hijas con la misma dotación cromosómica que la madre.",
-      "opcion_c": "Un ARNr de la subunidad mayor con actividad peptidil-transferasa.",
-      "opcion_d": "El peptidil-ARNt que lleva la cadena en crecimiento."
-    },
-    {
-      "content_id": "bio-09-013",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "sintesis y modificacion de proteinas",
-      "numero_pregunta": 13,
-      "pregunta": "¿Cuáles son los tres codones de parada?",
-      "respuesta_correcta": "C",
-      "justificacion": "UAA, UAG y UGA.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "398",
-      "pagina_impresa": "398",
-      "dificultad": "medio",
-      "opcion_a": "Bacterias y archaea.",
-      "opcion_b": "Hélice α y lámina β.",
-      "opcion_c": "UAA, UAG y UGA.",
-      "opcion_d": "Ectodermo, mesodermo y endodermo."
-    },
-    {
-      "content_id": "bio-09-014",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "sintesis y modificacion de proteinas",
-      "numero_pregunta": 14,
-      "pregunta": "¿Qué factor libera la proteína recién sintetizada de su ARNt?",
-      "respuesta_correcta": "C",
-      "justificacion": "eRF1.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "399",
-      "pagina_impresa": "399",
-      "dificultad": "medio",
-      "opcion_a": "Al extremo 3′, terminado en CCA.",
-      "opcion_b": "TIM23.",
-      "opcion_c": "eRF1.",
-      "opcion_d": "E6."
-    },
-    {
-      "content_id": "bio-09-015",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "sintesis y modificacion de proteinas",
-      "numero_pregunta": 15,
-      "pregunta": "¿Qué define la estructura primaria de una proteína?",
-      "respuesta_correcta": "D",
-      "justificacion": "Su secuencia de aminoácidos.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "401",
-      "pagina_impresa": "401",
-      "dificultad": "medio",
-      "opcion_a": "El enlace peptídico.",
-      "opcion_b": "Su conformación tridimensional final.",
-      "opcion_c": "La chaperonina TRiC/CCT.",
-      "opcion_d": "Su secuencia de aminoácidos."
-    },
-    {
-      "content_id": "bio-09-016",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "sintesis y modificacion de proteinas",
-      "numero_pregunta": 16,
-      "pregunta": "¿Cuáles son dos estructuras secundarias frecuentes?",
-      "respuesta_correcta": "C",
-      "justificacion": "Hélice α y lámina β.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "401",
-      "pagina_impresa": "401",
-      "dificultad": "medio",
-      "opcion_a": "UAA, UAG y UGA.",
-      "opcion_b": "Bacterias y archaea.",
-      "opcion_c": "Hélice α y lámina β.",
-      "opcion_d": "Interfase y división celular."
-    },
-    {
-      "content_id": "bio-09-017",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "sintesis y modificacion de proteinas",
-      "numero_pregunta": 17,
-      "pregunta": "¿Qué define la estructura terciaria de una proteína?",
-      "respuesta_correcta": "C",
-      "justificacion": "Su conformación tridimensional final.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "402",
-      "pagina_impresa": "402",
-      "dificultad": "medio",
-      "opcion_a": "Quinasas: añaden. Fosfatasas: retiran.",
-      "opcion_b": "Después de completar su síntesis.",
-      "opcion_c": "Su conformación tridimensional final.",
-      "opcion_d": "Su secuencia de aminoácidos."
-    },
-    {
-      "content_id": "bio-09-018",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "sintesis y modificacion de proteinas",
-      "numero_pregunta": 18,
-      "pregunta": "¿Hacia dónde tienden a orientarse las cadenas laterales hidrófobas de una proteína soluble?",
-      "respuesta_correcta": "B",
-      "justificacion": "Hacia el interior, lejos del agua.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "402",
-      "pagina_impresa": "402",
-      "dificultad": "medio",
-      "opcion_a": "En el sitio P.",
-      "opcion_b": "Hacia el interior, lejos del agua.",
-      "opcion_c": "Desde la cara cis hacia la trans.",
-      "opcion_d": "En el citosol."
-    },
-    {
-      "content_id": "bio-09-019",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "sintesis y modificacion de proteinas",
-      "numero_pregunta": 19,
-      "pregunta": "¿Qué significa Hsp en las proteínas de estrés?",
-      "respuesta_correcta": "C",
-      "justificacion": "Heat shock protein: proteína de choque térmico.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "403",
-      "pagina_impresa": "403",
-      "dificultad": "medio",
-      "opcion_a": "El final de la síntesis proteica.",
-      "opcion_b": "La cadena lateral o grupo R.",
-      "opcion_c": "Heat shock protein: proteína de choque térmico.",
-      "opcion_d": "Una cadena de ubiquitinas o poliubiquitinación."
-    },
-    {
-      "content_id": "bio-09-020",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "sintesis y modificacion de proteinas",
-      "numero_pregunta": 20,
-      "pregunta": "¿Qué complejo en forma de barril ayuda a plegar proteínas complejas?",
-      "respuesta_correcta": "A",
-      "justificacion": "La chaperonina TRiC/CCT.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "404",
-      "pagina_impresa": "404",
-      "dificultad": "medio",
-      "opcion_a": "La chaperonina TRiC/CCT.",
-      "opcion_b": "ARNm, ribosomas y ARNt.",
-      "opcion_c": "El enlace peptídico.",
-      "opcion_d": "Su secuencia de aminoácidos."
-    },
-    {
-      "content_id": "bio-09-021",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "sintesis y modificacion de proteinas",
-      "numero_pregunta": 21,
-      "pregunta": "¿Dónde permanecen muchas proteínas que carecen de señal de clasificación?",
-      "respuesta_correcta": "B",
-      "justificacion": "En el citosol.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "405",
-      "pagina_impresa": "405",
-      "dificultad": "medio",
-      "opcion_a": "En el sitio P.",
-      "opcion_b": "En el citosol.",
-      "opcion_c": "Hacia el interior, lejos del agua.",
-      "opcion_d": "En su extremo N-terminal."
-    },
-    {
-      "content_id": "bio-09-022",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "sintesis y modificacion de proteinas",
-      "numero_pregunta": 22,
-      "pregunta": "¿Qué determina el destino intracelular de una proteína?",
-      "respuesta_correcta": "D",
-      "justificacion": "Sus secuencias señal de aminoácidos.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "405",
-      "pagina_impresa": "405",
-      "dificultad": "medio",
-      "opcion_a": "Después de completar su síntesis.",
-      "opcion_b": "Quinasas: añaden. Fosfatasas: retiran.",
-      "opcion_c": "Su conformación tridimensional final.",
-      "opcion_d": "Sus secuencias señal de aminoácidos."
-    },
-    {
-      "content_id": "bio-09-023",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "sintesis y modificacion de proteinas",
-      "numero_pregunta": 23,
-      "pregunta": "¿Cuándo ingresan a núcleo, mitocondrias y peroxisomas las proteínas sintetizadas en el citosol?",
-      "respuesta_correcta": "C",
-      "justificacion": "Después de completar su síntesis.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "406",
-      "pagina_impresa": "406",
-      "dificultad": "medio",
-      "opcion_a": "Sus secuencias señal de aminoácidos.",
-      "opcion_b": "Su conformación tridimensional final.",
-      "opcion_c": "Después de completar su síntesis.",
-      "opcion_d": "Quinasas: añaden. Fosfatasas: retiran."
-    },
-    {
-      "content_id": "bio-09-024",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "sintesis y modificacion de proteinas",
-      "numero_pregunta": 24,
-      "pregunta": "¿Qué enzimas añaden y retiran fosfatos de las proteínas?",
-      "respuesta_correcta": "B",
-      "justificacion": "Quinasas: añaden. Fosfatasas: retiran.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "407",
-      "pagina_impresa": "407",
-      "dificultad": "medio",
-      "opcion_a": "Después de completar su síntesis.",
-      "opcion_b": "Quinasas: añaden. Fosfatasas: retiran.",
-      "opcion_c": "Su conformación tridimensional final.",
-      "opcion_d": "Sus secuencias señal de aminoácidos."
-    },
-    {
-      "content_id": "bio-09-025",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "sintesis y modificacion de proteinas",
-      "numero_pregunta": 25,
-      "pregunta": "¿Qué grupo se añade en la acetilación proteica?",
-      "respuesta_correcta": "B",
-      "justificacion": "Un grupo acetilo.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "408",
-      "pagina_impresa": "408",
-      "dificultad": "medio",
-      "opcion_a": "El enlace peptídico.",
-      "opcion_b": "Un grupo acetilo.",
-      "opcion_c": "Las β- y γ-secretasas.",
-      "opcion_d": "AUG; metionina."
-    },
-    {
-      "content_id": "bio-09-026",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "sintesis y modificacion de proteinas",
-      "numero_pregunta": 26,
-      "pregunta": "¿Qué permite la acilación de una proteína citosólica?",
-      "respuesta_correcta": "B",
-      "justificacion": "Anclarla a la membrana mediante un grupo lipídico.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "409",
-      "pagina_impresa": "409",
-      "dificultad": "medio",
-      "opcion_a": "Permitir la salida del ARNt tras transferir la cadena.",
-      "opcion_b": "Anclarla a la membrana mediante un grupo lipídico.",
-      "opcion_c": "Una proteína en un fluido o extracto de tejido.",
-      "opcion_d": "Porque se sintetiza como un precursor que debe fragmentarse para ser funcional."
-    },
-    {
-      "content_id": "bio-09-027",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "sintesis y modificacion de proteinas",
-      "numero_pregunta": 27,
-      "pregunta": "¿Por qué la insulina necesita proteólisis durante su maduración?",
-      "respuesta_correcta": "A",
-      "justificacion": "Porque se sintetiza como un precursor que debe fragmentarse para ser funcional.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "410",
-      "pagina_impresa": "410",
-      "dificultad": "medio",
-      "opcion_a": "Porque se sintetiza como un precursor que debe fragmentarse para ser funcional.",
-      "opcion_b": "Permitir la salida del ARNt tras transferir la cadena.",
-      "opcion_c": "Anclarla a la membrana mediante un grupo lipídico.",
-      "opcion_d": "Porque los peroxisomas carecen de cadena respiratoria y ciclo de Krebs."
-    },
-    {
-      "content_id": "bio-09-028",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "sintesis y modificacion de proteinas",
-      "numero_pregunta": 28,
-      "pregunta": "¿Qué secretasas generan el péptido β-amiloide de 42 aminoácidos a partir de APP?",
-      "respuesta_correcta": "C",
-      "justificacion": "Las β- y γ-secretasas.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "411",
-      "pagina_impresa": "411",
-      "dificultad": "medio",
-      "opcion_a": "AUG; metionina.",
-      "opcion_b": "El enlace peptídico.",
-      "opcion_c": "Las β- y γ-secretasas.",
-      "opcion_d": "ARNm, ribosomas y ARNt."
-    },
-    {
-      "content_id": "bio-09-029",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "sintesis y modificacion de proteinas",
-      "numero_pregunta": 29,
-      "pregunta": "¿Qué modificación de tau favorece los ovillos neurofibrilares?",
-      "respuesta_correcta": "C",
-      "justificacion": "Su hiperfosforilación anormal.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "412",
-      "pagina_impresa": "412",
-      "dificultad": "medio",
-      "opcion_a": "Su secuencia de aminoácidos.",
-      "opcion_b": "Después de completar su síntesis.",
-      "opcion_c": "Su hiperfosforilación anormal.",
-      "opcion_d": "El aminoacil-ARNt entrante."
-    },
-    {
-      "content_id": "bio-09-030",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "sintesis y modificacion de proteinas",
-      "numero_pregunta": 30,
-      "pregunta": "¿Qué marca dirige una proteína al proteasoma?",
-      "respuesta_correcta": "A",
-      "justificacion": "Una cadena de ubiquitinas o poliubiquitinación.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "414",
-      "pagina_impresa": "414",
-      "dificultad": "medio",
-      "opcion_a": "Una cadena de ubiquitinas o poliubiquitinación.",
-      "opcion_b": "La cadena lateral o grupo R.",
-      "opcion_c": "El final de la síntesis proteica.",
-      "opcion_d": "Heat shock protein: proteína de choque térmico."
+      "justificacion": "El aminoácido se une en el extremo 3′ del ARNt, donde se encuentra CCA. El anticodón es una región distinta y permite reconocer el codón.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+      "paginas_pdf": "391",
+      "pagina_impresa": "391",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Capítulo 9 · Traducción · Ribosoma y ARNt",
+          "page": 391,
+          "printed": 391,
+          "marks": [
+            [
+              0.1337,
+              0.1,
+              0.0419,
+              0.0198
+            ]
+          ]
+        }
+      ],
+      "source": {
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-09"
+      },
+      "opcion_a": "La transcripción del ARNm que contiene el codón.",
+      "opcion_b": "La lectura del codón de terminación por un factor de liberación.",
+      "opcion_c": "La unión del aminoácido al ARNt.",
+      "opcion_d": "El reconocimiento inicial del codón por el anticodón."
     }
   ]
 }

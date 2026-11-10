@@ -5,519 +5,495 @@
   "topic": "encefalo y pares craneales",
   "title": "El encéfalo y los pares craneales",
   "number": 14,
-  "count": 30,
-  "duration": 30,
+  "count": 9,
+  "duration": 9,
   "source": "Saladin · Anatomía y fisiología",
   "questions": [
     {
-      "content_id": "morfo-14-005",
+      "content_id": "evaluacion:medicina-oficial-morfo-14-intermedio-1",
       "materia": "MORFOFUNCION",
       "tema": "encefalo y pares craneales",
       "numero_pregunta": 1,
-      "pregunta": "¿Qué cisura separa los hemisferios cerebrales?",
-      "respuesta_correcta": "A",
-      "justificacion": "La cisura longitudinal.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "546",
-      "pagina_impresa": "518",
+      "pregunta": "En un esquema se busca la estación de paso de numerosas señales sensitivas que deben dirigirse a la corteza.\n¿Qué opción corresponde al caso?",
+      "respuesta_correcta": "C",
+      "justificacion": "Gran parte de la información sensitiva pasa por el tálamo antes de proyectarse a la corteza.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "556",
+      "pagina_impresa": "528",
       "dificultad": "medio",
-      "opcion_a": "La cisura longitudinal.",
-      "opcion_b": "El surco central.",
-      "opcion_c": "VIII: vestibulococlear.",
-      "opcion_d": "El cuerpo calloso."
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "El encéfalo y los pares craneales · El tálamo",
+          "page": 556,
+          "printed": 528,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-14",
+        "chapterNumber": 14,
+        "chapter": "El encéfalo y los pares craneales",
+        "section": "El tálamo",
+        "printedPages": [
+          528
+        ],
+        "pdfPages": [
+          556
+        ]
+      },
+      "opcion_a": "Hipotálamo",
+      "opcion_b": "Cerebelo",
+      "opcion_c": "Tálamo",
+      "opcion_d": "Hipocampo"
     },
     {
-      "content_id": "morfo-14-008",
+      "content_id": "evaluacion:medicina-oficial-morfo-14-intermedio-2",
       "materia": "MORFOFUNCION",
       "tema": "encefalo y pares craneales",
       "numero_pregunta": 2,
-      "pregunta": "¿Qué comunica el tercer ventrículo con el cuarto?",
-      "respuesta_correcta": "C",
-      "justificacion": "El acueducto cerebral.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "546",
-      "pagina_impresa": "518",
+      "pregunta": "El diagrama reúne señales de temperatura y sed con el control endocrino. Se busca la región que coordina esas funciones.\n¿Qué opción corresponde al caso?",
+      "respuesta_correcta": "A",
+      "justificacion": "El hipotálamo participa en la regulación de la temperatura, el balance de agua y la ingesta.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "557",
+      "pagina_impresa": "529",
       "dificultad": "medio",
-      "opcion_a": "La cisura longitudinal.",
-      "opcion_b": "El cuerpo calloso.",
-      "opcion_c": "El acueducto cerebral.",
-      "opcion_d": "Los agujeros interventriculares."
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "El encéfalo y los pares craneales · El hipotálamo",
+          "page": 557,
+          "printed": 529,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-14",
+        "chapterNumber": 14,
+        "chapter": "El encéfalo y los pares craneales",
+        "section": "El hipotálamo",
+        "printedPages": [
+          529
+        ],
+        "pdfPages": [
+          557
+        ]
+      },
+      "opcion_a": "Hipotálamo",
+      "opcion_b": "Cerebelo",
+      "opcion_c": "Hipocampo",
+      "opcion_d": "Tálamo"
     },
     {
-      "content_id": "morfo-14-007",
+      "content_id": "evaluacion:medicina-oficial-morfo-14-intermedio-3",
       "materia": "MORFOFUNCION",
       "tema": "encefalo y pares craneales",
       "numero_pregunta": 3,
-      "pregunta": "¿Qué comunica los ventrículos laterales con el tercer ventrículo?",
-      "respuesta_correcta": "A",
-      "justificacion": "Los agujeros interventriculares.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "548",
-      "pagina_impresa": "520",
+      "pregunta": "El ejercicio pide ubicar la estructura que ajusta la coordinación de un movimiento, más que iniciar la orden voluntaria.\n¿Qué opción corresponde al caso?",
+      "respuesta_correcta": "D",
+      "justificacion": "El cerebelo ajusta la coordinación de los movimientos y participa en el equilibrio.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "571",
+      "pagina_impresa": "543",
       "dificultad": "medio",
-      "opcion_a": "Los agujeros interventriculares.",
-      "opcion_b": "El cuerpo calloso.",
-      "opcion_c": "Tálamo, hipotálamo y epitálamo.",
-      "opcion_d": "El acueducto cerebral."
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "El encéfalo y los pares craneales · Cerebelo",
+          "page": 571,
+          "printed": 543,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-14",
+        "chapterNumber": 14,
+        "chapter": "El encéfalo y los pares craneales",
+        "section": "Cerebelo",
+        "printedPages": [
+          543
+        ],
+        "pdfPages": [
+          571
+        ]
+      },
+      "opcion_a": "Tálamo",
+      "opcion_b": "Hipotálamo",
+      "opcion_c": "Hipocampo",
+      "opcion_d": "Cerebelo"
     },
     {
-      "content_id": "morfo-14-009",
+      "content_id": "evaluacion:medicina-oficial-morfo-14-intermedio-4",
       "materia": "MORFOFUNCION",
       "tema": "encefalo y pares craneales",
       "numero_pregunta": 4,
-      "pregunta": "¿Dónde se reabsorbe el líquido cefalorraquídeo hacia la sangre?",
-      "respuesta_correcta": "D",
-      "justificacion": "En las granulaciones aracnoideas.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "548",
-      "pagina_impresa": "520",
-      "dificultad": "medio",
-      "opcion_a": "En el temporal.",
-      "opcion_b": "En el occipital.",
-      "opcion_c": "En los plexos coroideos.",
-      "opcion_d": "En las granulaciones aracnoideas."
-    },
-    {
-      "content_id": "morfo-14-006",
-      "materia": "MORFOFUNCION",
-      "tema": "encefalo y pares craneales",
-      "numero_pregunta": 5,
-      "pregunta": "¿Dónde se produce la mayor parte del líquido cefalorraquídeo?",
-      "respuesta_correcta": "C",
-      "justificacion": "En los plexos coroideos.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "549",
-      "pagina_impresa": "521",
-      "dificultad": "medio",
-      "opcion_a": "En el temporal.",
-      "opcion_b": "En las granulaciones aracnoideas.",
-      "opcion_c": "En los plexos coroideos.",
-      "opcion_d": "En el occipital."
-    },
-    {
-      "content_id": "morfo-14-028",
-      "materia": "MORFOFUNCION",
-      "tema": "encefalo y pares craneales",
-      "numero_pregunta": 6,
-      "pregunta": "¿Qué par craneal mueve principalmente la lengua?",
-      "respuesta_correcta": "B",
-      "justificacion": "XII: hipogloso.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "550",
-      "pagina_impresa": "522",
-      "dificultad": "medio",
-      "opcion_a": "I: olfatorio.",
-      "opcion_b": "XII: hipogloso.",
-      "opcion_c": "VII: facial.",
-      "opcion_d": "IV: troclear."
-    },
-    {
-      "content_id": "morfo-14-029",
-      "materia": "MORFOFUNCION",
-      "tema": "encefalo y pares craneales",
-      "numero_pregunta": 7,
-      "pregunta": "¿Qué par craneal inerva los principales músculos de la masticación?",
+      "pregunta": "En un ejercicio se separa recordar información recién aprendida de coordinar un gesto. Se pregunta por la estructura vinculada con el primer proceso.\n¿Qué opción corresponde al caso?",
       "respuesta_correcta": "A",
-      "justificacion": "V: trigémino.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "553",
-      "pagina_impresa": "525",
-      "dificultad": "medio",
-      "opcion_a": "V: trigémino.",
-      "opcion_b": "VII: facial.",
-      "opcion_c": "IV: troclear.",
-      "opcion_d": "XI: accesorio."
-    },
-    {
-      "content_id": "morfo-14-001",
-      "materia": "MORFOFUNCION",
-      "tema": "encefalo y pares craneales",
-      "numero_pregunta": 8,
-      "pregunta": "¿Cuáles son las tres partes del tallo encefálico?",
-      "respuesta_correcta": "D",
-      "justificacion": "Mesencéfalo, puente y médula oblongada.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "554",
-      "pagina_impresa": "526",
-      "dificultad": "medio",
-      "opcion_a": "Hialino, elástico y fibrocartílago.",
-      "opcion_b": "Membrana plasmática, citoplasma y núcleo.",
-      "opcion_c": "Continuos, fenestrados y sinusoides.",
-      "opcion_d": "Mesencéfalo, puente y médula oblongada."
-    },
-    {
-      "content_id": "morfo-14-002",
-      "materia": "MORFOFUNCION",
-      "tema": "encefalo y pares craneales",
-      "numero_pregunta": 9,
-      "pregunta": "¿Qué estructuras principales forman el diencéfalo?",
-      "respuesta_correcta": "D",
-      "justificacion": "Tálamo, hipotálamo y epitálamo.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "556",
-      "pagina_impresa": "528",
-      "dificultad": "medio",
-      "opcion_a": "La corteza motora primaria.",
-      "opcion_b": "Los agujeros interventriculares.",
-      "opcion_c": "VI: motor ocular externo (abducens).",
-      "opcion_d": "Tálamo, hipotálamo y epitálamo."
-    },
-    {
-      "content_id": "morfo-14-010",
-      "materia": "MORFOFUNCION",
-      "tema": "encefalo y pares craneales",
-      "numero_pregunta": 10,
-      "pregunta": "¿Qué estructura es la principal estación de relevo sensitivo hacia la corteza?",
-      "respuesta_correcta": "D",
-      "justificacion": "El tálamo.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "556",
-      "pagina_impresa": "528",
-      "dificultad": "medio",
-      "opcion_a": "El hipocampo.",
-      "opcion_b": "II: óptico.",
-      "opcion_c": "El cerebelo.",
-      "opcion_d": "El tálamo."
-    },
-    {
-      "content_id": "morfo-14-011",
-      "materia": "MORFOFUNCION",
-      "tema": "encefalo y pares craneales",
-      "numero_pregunta": 11,
-      "pregunta": "¿Qué región coordina la temperatura, hambre, sed y control endocrino?",
-      "respuesta_correcta": "D",
-      "justificacion": "El hipotálamo.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "556",
-      "pagina_impresa": "528",
-      "dificultad": "medio",
-      "opcion_a": "IV: troclear.",
-      "opcion_b": "XI: accesorio.",
-      "opcion_c": "El cerebelo.",
-      "opcion_d": "El hipotálamo."
-    },
-    {
-      "content_id": "morfo-14-003",
-      "materia": "MORFOFUNCION",
-      "tema": "encefalo y pares craneales",
-      "numero_pregunta": 12,
-      "pregunta": "¿Qué comunica los dos hemisferios cerebrales?",
-      "respuesta_correcta": "A",
-      "justificacion": "El cuerpo calloso.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "558",
-      "pagina_impresa": "530",
-      "dificultad": "medio",
-      "opcion_a": "El cuerpo calloso.",
-      "opcion_b": "El acueducto cerebral.",
-      "opcion_c": "La cisura longitudinal.",
-      "opcion_d": "Los agujeros interventriculares."
-    },
-    {
-      "content_id": "morfo-14-012",
-      "materia": "MORFOFUNCION",
-      "tema": "encefalo y pares craneales",
-      "numero_pregunta": 13,
-      "pregunta": "¿Qué glándula del epitálamo secreta melatonina?",
-      "respuesta_correcta": "C",
-      "justificacion": "La glándula pineal.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "558",
-      "pagina_impresa": "530",
-      "dificultad": "medio",
-      "opcion_a": "El cuerpo calloso.",
-      "opcion_b": "El surco central.",
-      "opcion_c": "La glándula pineal.",
-      "opcion_d": "El área de Wernicke."
-    },
-    {
-      "content_id": "morfo-14-019",
-      "materia": "MORFOFUNCION",
-      "tema": "encefalo y pares craneales",
-      "numero_pregunta": 14,
-      "pregunta": "¿Qué estructura es esencial para formar nuevos recuerdos declarativos?",
-      "respuesta_correcta": "D",
-      "justificacion": "El hipocampo.",
-      "fuente": "Saladin · Anatomía y fisiología",
+      "justificacion": "El hipocampo interviene en la formación de nuevos recuerdos declarativos.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
       "paginas_pdf": "567",
       "pagina_impresa": "539",
       "dificultad": "medio",
-      "opcion_a": "I: olfatorio.",
-      "opcion_b": "El tálamo.",
-      "opcion_c": "V: trigémino.",
-      "opcion_d": "El hipocampo."
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "El encéfalo y los pares craneales · Memoria",
+          "page": 567,
+          "printed": 539,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-14",
+        "chapterNumber": 14,
+        "chapter": "El encéfalo y los pares craneales",
+        "section": "Memoria",
+        "printedPages": [
+          539
+        ],
+        "pdfPages": [
+          567
+        ]
+      },
+      "opcion_a": "Hipocampo",
+      "opcion_b": "Tálamo",
+      "opcion_c": "Cerebelo",
+      "opcion_d": "Hipotálamo"
     },
     {
-      "content_id": "morfo-14-004",
+      "content_id": "evaluacion:medicina-oficial-morfo-14-ampliacion-01-umss",
       "materia": "MORFOFUNCION",
       "tema": "encefalo y pares craneales",
-      "numero_pregunta": 15,
-      "pregunta": "¿Qué surco separa los lóbulos frontal y parietal?",
-      "respuesta_correcta": "D",
-      "justificacion": "El surco central.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "568",
-      "pagina_impresa": "540",
-      "dificultad": "medio",
-      "opcion_a": "El cuerpo calloso.",
-      "opcion_b": "La cisura longitudinal.",
-      "opcion_c": "El área de Broca.",
-      "opcion_d": "El surco central."
-    },
-    {
-      "content_id": "morfo-14-015",
-      "materia": "MORFOFUNCION",
-      "tema": "encefalo y pares craneales",
-      "numero_pregunta": 16,
-      "pregunta": "¿En qué lóbulo se encuentra la corteza visual primaria?",
+      "numero_pregunta": 5,
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. El líquido cefalorraquídeo pasa de cada ventrículo lateral al tercero por el acueducto cerebral.\n2. El acueducto cerebral comunica el tercero y el cuarto ventrículo.",
       "respuesta_correcta": "B",
-      "justificacion": "En el occipital.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "568",
-      "pagina_impresa": "540",
-      "dificultad": "medio",
-      "opcion_a": "En el temporal.",
-      "opcion_b": "En el occipital.",
-      "opcion_c": "En las granulaciones aracnoideas.",
-      "opcion_d": "En los plexos coroideos."
+      "justificacion": "1. Incorrecta. Los ventrículos laterales comunican con el tercero por los agujeros interventriculares.\n2. Correcta. Constituye el paso estrecho entre ambos ventrículos.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "546, 548",
+      "pagina_impresa": "518, 520",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "El encéfalo y los pares craneales · Ventrículos",
+          "page": 546,
+          "printed": 518,
+          "marks": []
+        },
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "El encéfalo y los pares craneales · Ventrículos",
+          "page": 548,
+          "printed": 520,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-14",
+        "chapterNumber": 14,
+        "chapter": "El encéfalo y los pares craneales",
+        "section": "Ventrículos",
+        "printedPages": [
+          518,
+          520
+        ],
+        "pdfPages": [
+          546,
+          548
+        ],
+        "statements": [
+          {
+            "pdfPage": 548,
+            "printedPage": 520,
+            "section": "Ventrículos",
+            "cardId": "morfo-14-007"
+          },
+          {
+            "pdfPage": 546,
+            "printedPage": 518,
+            "section": "Ventrículos",
+            "cardId": "morfo-14-008"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. Los ventrículos laterales comunican con el tercero por los agujeros interventriculares. 2. Correcta. Constituye el paso estrecho entre ambos ventrículos.",
+        "B": "Solo la afirmación 2 es correcta.",
+        "C": "1. Incorrecta. Los ventrículos laterales comunican con el tercero por los agujeros interventriculares.",
+        "D": "2. Correcta. Constituye el paso estrecho entre ambos ventrículos."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "morfo-14-016",
+      "content_id": "evaluacion:medicina-oficial-morfo-14-ampliacion-02-umss",
       "materia": "MORFOFUNCION",
       "tema": "encefalo y pares craneales",
-      "numero_pregunta": 17,
-      "pregunta": "¿En qué lóbulo se encuentra la corteza auditiva primaria?",
+      "numero_pregunta": 6,
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Los plexos coroideos aportan la mayor parte del líquido cefalorraquídeo.\n2. El retorno de líquido cefalorraquídeo a la sangre se realiza principalmente por los plexos coroideos.",
+      "respuesta_correcta": "A",
+      "justificacion": "1. Correcta. La producción principal ocurre en estos plexos de los ventrículos.\n2. Incorrecta. El retorno venoso ocurre a través de granulaciones aracnoideas. Los plexos producen el líquido.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "548, 549",
+      "pagina_impresa": "520, 521",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "El encéfalo y los pares craneales · Líquido cefalorraquídeo",
+          "page": 548,
+          "printed": 520,
+          "marks": []
+        },
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "El encéfalo y los pares craneales · Líquido cefalorraquídeo",
+          "page": 549,
+          "printed": 521,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-14",
+        "chapterNumber": 14,
+        "chapter": "El encéfalo y los pares craneales",
+        "section": "Líquido cefalorraquídeo",
+        "printedPages": [
+          520,
+          521
+        ],
+        "pdfPages": [
+          548,
+          549
+        ],
+        "statements": [
+          {
+            "pdfPage": 549,
+            "printedPage": 521,
+            "section": "Líquido cefalorraquídeo",
+            "cardId": "morfo-14-006"
+          },
+          {
+            "pdfPage": 548,
+            "printedPage": 520,
+            "section": "Líquido cefalorraquídeo",
+            "cardId": "morfo-14-009"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "Solo la afirmación 1 es correcta.",
+        "B": "1. Correcta. La producción principal ocurre en estos plexos de los ventrículos. 2. Incorrecta. El retorno venoso ocurre a través de granulaciones aracnoideas. Los plexos producen el líquido.",
+        "C": "2. Incorrecta. El retorno venoso ocurre a través de granulaciones aracnoideas. Los plexos producen el líquido.",
+        "D": "1. Correcta. La producción principal ocurre en estos plexos de los ventrículos."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
+    },
+    {
+      "content_id": "evaluacion:medicina-oficial-morfo-14-ampliacion-03-umss",
+      "materia": "MORFOFUNCION",
+      "tema": "encefalo y pares craneales",
+      "numero_pregunta": 7,
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Una alteración del área de Broca puede comprometer la producción del habla.\n2. Una alteración del área de Wernicke puede comprometer la comprensión del lenguaje.",
+      "respuesta_correcta": "C",
+      "justificacion": "1. Correcta. Esta área interviene en organizar la expresión verbal.\n2. Correcta. Esta área interviene en interpretar el lenguaje.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "571, 573",
+      "pagina_impresa": "543, 545",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "El encéfalo y los pares craneales · Lenguaje",
+          "page": 571,
+          "printed": 543,
+          "marks": []
+        },
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "El encéfalo y los pares craneales · Lenguaje",
+          "page": 573,
+          "printed": 545,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-14",
+        "chapterNumber": 14,
+        "chapter": "El encéfalo y los pares craneales",
+        "section": "Lenguaje",
+        "printedPages": [
+          543,
+          545
+        ],
+        "pdfPages": [
+          571,
+          573
+        ],
+        "statements": [
+          {
+            "pdfPage": 573,
+            "printedPage": 545,
+            "section": "Lenguaje",
+            "cardId": "morfo-14-017"
+          },
+          {
+            "pdfPage": 571,
+            "printedPage": 543,
+            "section": "Lenguaje",
+            "cardId": "morfo-14-018"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "2. Correcta. Esta área interviene en interpretar el lenguaje.",
+        "B": "1. Correcta. Esta área interviene en organizar la expresión verbal.",
+        "C": "Ambas afirmaciones son correctas.",
+        "D": "1. Correcta. Esta área interviene en organizar la expresión verbal. 2. Correcta. Esta área interviene en interpretar el lenguaje."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
+    },
+    {
+      "content_id": "evaluacion:medicina-oficial-morfo-14-ampliacion-04-umss",
+      "materia": "MORFOFUNCION",
+      "tema": "encefalo y pares craneales",
+      "numero_pregunta": 8,
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Si una lesión de un par craneal afecta selectivamente la acción del recto lateral, el nervio relacionado es el troclear.\n2. La información sobre el equilibrio discurre por el facial, mientras que el octavo par transporta solo la audición.",
+      "respuesta_correcta": "D",
+      "justificacion": "1. Incorrecta. El recto lateral recibe al abducens (VI). El troclear (IV) se dirige al oblicuo superior.\n2. Incorrecta. Las dos modalidades se conducen por el vestibulococlear (VIII).",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "579, 581",
+      "pagina_impresa": "551, 553",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "El encéfalo y los pares craneales · Pares craneales",
+          "page": 579,
+          "printed": 551,
+          "marks": []
+        },
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "El encéfalo y los pares craneales · Pares craneales",
+          "page": 581,
+          "printed": 553,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-14",
+        "chapterNumber": 14,
+        "chapter": "El encéfalo y los pares craneales",
+        "section": "Pares craneales",
+        "printedPages": [
+          551,
+          553
+        ],
+        "pdfPages": [
+          579,
+          581
+        ],
+        "statements": [
+          {
+            "pdfPage": 579,
+            "printedPage": 551,
+            "section": "Pares craneales",
+            "cardId": "morfo-14-024"
+          },
+          {
+            "pdfPage": 581,
+            "printedPage": 553,
+            "section": "Pares craneales",
+            "cardId": "morfo-14-026"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. El recto lateral recibe al abducens (VI). El troclear (IV) se dirige al oblicuo superior.",
+        "B": "2. Incorrecta. Las dos modalidades se conducen por el vestibulococlear (VIII).",
+        "C": "1. Incorrecta. El recto lateral recibe al abducens (VI). El troclear (IV) se dirige al oblicuo superior. 2. Incorrecta. Las dos modalidades se conducen por el vestibulococlear (VIII).",
+        "D": "Ninguna afirmación es correcta."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
+    },
+    {
+      "content_id": "evaluacion:banco-verificado:morfo-14:regiones",
+      "materia": "MORFOFUNCION",
+      "tema": "encefalo y pares craneales",
+      "numero_pregunta": 9,
+      "pregunta": "Dos autores discrepan sobre si una región debe incluirse en el tallo encefálico. ¿Cuál es la región que Saladin incluye expresamente en la definición que adopta, a diferencia de otros autores que cita?",
       "respuesta_correcta": "B",
-      "justificacion": "En el temporal.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "568",
-      "pagina_impresa": "540",
-      "dificultad": "medio",
-      "opcion_a": "En las granulaciones aracnoideas.",
-      "opcion_b": "En el temporal.",
-      "opcion_c": "En los plexos coroideos.",
-      "opcion_d": "En el occipital."
-    },
-    {
-      "content_id": "morfo-14-013",
-      "materia": "MORFOFUNCION",
-      "tema": "encefalo y pares craneales",
-      "numero_pregunta": 18,
-      "pregunta": "¿Qué estructura coordina los movimientos y contribuye al equilibrio?",
-      "respuesta_correcta": "A",
-      "justificacion": "El cerebelo.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "571",
-      "pagina_impresa": "543",
-      "dificultad": "medio",
-      "opcion_a": "El cerebelo.",
-      "opcion_b": "El hipotálamo.",
-      "opcion_c": "El tálamo.",
-      "opcion_d": "El hipocampo."
-    },
-    {
-      "content_id": "morfo-14-018",
-      "materia": "MORFOFUNCION",
-      "tema": "encefalo y pares craneales",
-      "numero_pregunta": 19,
-      "pregunta": "¿Qué área participa en la comprensión del lenguaje?",
-      "respuesta_correcta": "D",
-      "justificacion": "El área de Wernicke.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "571",
-      "pagina_impresa": "543",
-      "dificultad": "medio",
-      "opcion_a": "La glándula pineal.",
-      "opcion_b": "El cuerpo calloso.",
-      "opcion_c": "El acueducto cerebral.",
-      "opcion_d": "El área de Wernicke."
-    },
-    {
-      "content_id": "morfo-14-017",
-      "materia": "MORFOFUNCION",
-      "tema": "encefalo y pares craneales",
-      "numero_pregunta": 20,
-      "pregunta": "¿Qué área participa en la producción del habla?",
-      "respuesta_correcta": "C",
-      "justificacion": "El área de Broca.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "573",
-      "pagina_impresa": "545",
-      "dificultad": "medio",
-      "opcion_a": "El surco central.",
-      "opcion_b": "El cuerpo calloso.",
-      "opcion_c": "El área de Broca.",
-      "opcion_d": "La glándula pineal."
-    },
-    {
-      "content_id": "morfo-14-020",
-      "materia": "MORFOFUNCION",
-      "tema": "encefalo y pares craneales",
-      "numero_pregunta": 21,
-      "pregunta": "¿Cuántos pares craneales existen?",
-      "respuesta_correcta": "A",
-      "justificacion": "12 pares.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "574",
-      "pagina_impresa": "546",
-      "dificultad": "medio",
-      "opcion_a": "12 pares.",
-      "opcion_b": "120 días.",
-      "opcion_c": "Tres.",
-      "opcion_d": "Cuatro."
-    },
-    {
-      "content_id": "morfo-14-021",
-      "materia": "MORFOFUNCION",
-      "tema": "encefalo y pares craneales",
-      "numero_pregunta": 22,
-      "pregunta": "¿Qué par craneal transmite el olfato?",
-      "respuesta_correcta": "A",
-      "justificacion": "I: olfatorio.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "575",
-      "pagina_impresa": "547",
-      "dificultad": "medio",
-      "opcion_a": "I: olfatorio.",
-      "opcion_b": "II: óptico.",
-      "opcion_c": "XI: accesorio.",
-      "opcion_d": "VIII: vestibulococlear."
-    },
-    {
-      "content_id": "morfo-14-022",
-      "materia": "MORFOFUNCION",
-      "tema": "encefalo y pares craneales",
-      "numero_pregunta": 23,
-      "pregunta": "¿Qué par craneal transmite la visión?",
-      "respuesta_correcta": "A",
-      "justificacion": "II: óptico.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "575",
-      "pagina_impresa": "547",
-      "dificultad": "medio",
-      "opcion_a": "II: óptico.",
-      "opcion_b": "VIII: vestibulococlear.",
-      "opcion_c": "XI: accesorio.",
-      "opcion_d": "I: olfatorio."
-    },
-    {
-      "content_id": "morfo-14-027",
-      "materia": "MORFOFUNCION",
-      "tema": "encefalo y pares craneales",
-      "numero_pregunta": 24,
-      "pregunta": "¿Qué par craneal proporciona gran parte de la inervación parasimpática toracoabdominal?",
-      "respuesta_correcta": "C",
-      "justificacion": "X: vago.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "575",
-      "pagina_impresa": "547",
-      "dificultad": "medio",
-      "opcion_a": "II: óptico.",
-      "opcion_b": "XI: accesorio.",
-      "opcion_c": "X: vago.",
-      "opcion_d": "I: olfatorio."
-    },
-    {
-      "content_id": "morfo-14-023",
-      "materia": "MORFOFUNCION",
-      "tema": "encefalo y pares craneales",
-      "numero_pregunta": 25,
-      "pregunta": "¿Qué par craneal mueve el músculo oblicuo superior del ojo?",
-      "respuesta_correcta": "D",
-      "justificacion": "IV: troclear.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "577",
-      "pagina_impresa": "549",
-      "dificultad": "medio",
-      "opcion_a": "VII: facial.",
-      "opcion_b": "V: trigémino.",
-      "opcion_c": "XII: hipogloso.",
-      "opcion_d": "IV: troclear."
-    },
-    {
-      "content_id": "morfo-14-024",
-      "materia": "MORFOFUNCION",
-      "tema": "encefalo y pares craneales",
-      "numero_pregunta": 26,
-      "pregunta": "¿Qué par craneal mueve el recto lateral del ojo?",
-      "respuesta_correcta": "D",
-      "justificacion": "VI: motor ocular externo (abducens).",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "579",
-      "pagina_impresa": "551",
-      "dificultad": "medio",
-      "opcion_a": "IV: troclear.",
-      "opcion_b": "XII: hipogloso.",
-      "opcion_c": "VIII: vestibulococlear.",
-      "opcion_d": "VI: motor ocular externo (abducens)."
-    },
-    {
-      "content_id": "morfo-14-025",
-      "materia": "MORFOFUNCION",
-      "tema": "encefalo y pares craneales",
-      "numero_pregunta": 27,
-      "pregunta": "¿Qué par craneal controla principalmente los músculos de la expresión facial?",
-      "respuesta_correcta": "D",
-      "justificacion": "VII: facial.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "580",
-      "pagina_impresa": "552",
-      "dificultad": "medio",
-      "opcion_a": "IV: troclear.",
-      "opcion_b": "V: trigémino.",
-      "opcion_c": "XII: hipogloso.",
-      "opcion_d": "VII: facial."
-    },
-    {
-      "content_id": "morfo-14-026",
-      "materia": "MORFOFUNCION",
-      "tema": "encefalo y pares craneales",
-      "numero_pregunta": 28,
-      "pregunta": "¿Qué par craneal transmite audición y equilibrio?",
-      "respuesta_correcta": "B",
-      "justificacion": "VIII: vestibulococlear.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "581",
-      "pagina_impresa": "553",
-      "dificultad": "medio",
-      "opcion_a": "XII: hipogloso.",
-      "opcion_b": "VIII: vestibulococlear.",
-      "opcion_c": "I: olfatorio.",
-      "opcion_d": "II: óptico."
-    },
-    {
-      "content_id": "morfo-14-030",
-      "materia": "MORFOFUNCION",
-      "tema": "encefalo y pares craneales",
-      "numero_pregunta": 29,
-      "pregunta": "¿Qué par craneal inerva esternocleidomastoideo y trapecio?",
-      "respuesta_correcta": "C",
-      "justificacion": "XI: accesorio.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "583",
-      "pagina_impresa": "555",
-      "dificultad": "medio",
-      "opcion_a": "I: olfatorio.",
-      "opcion_b": "II: óptico.",
-      "opcion_c": "XI: accesorio.",
-      "opcion_d": "V: trigémino."
-    },
-    {
-      "content_id": "morfo-14-014",
-      "materia": "MORFOFUNCION",
-      "tema": "encefalo y pares craneales",
-      "numero_pregunta": 30,
-      "pregunta": "¿Qué región cortical inicia los movimientos voluntarios?",
-      "respuesta_correcta": "C",
-      "justificacion": "La corteza motora primaria.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "585",
-      "pagina_impresa": "557",
-      "dificultad": "medio",
-      "opcion_a": "VIII: vestibulococlear.",
-      "opcion_b": "El hipotálamo.",
-      "opcion_c": "La corteza motora primaria.",
-      "opcion_d": "El cerebelo."
+      "justificacion": "Saladin incluye diencéfalo, mesencéfalo, protuberancia y bulbo raquídeo. La definición más restringida que menciona mantiene los últimos tres y excluye al diencéfalo.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "542",
+      "pagina_impresa": "514",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 14 · Tallo encefálico y diencéfalo",
+          "page": 542,
+          "printed": 514,
+          "marks": [
+            [
+              0.1704,
+              0.3402,
+              0.1288,
+              0.0111
+            ]
+          ]
+        }
+      ],
+      "source": {
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-14"
+      },
+      "opcion_a": "Bulbo raquídeo.",
+      "opcion_b": "Diencéfalo.",
+      "opcion_c": "Mesencéfalo.",
+      "opcion_d": "Protuberancia."
     }
   ]
 }

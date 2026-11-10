@@ -5,519 +5,500 @@
   "topic": "genetica y funcion celular",
   "title": "Genética y función celular",
   "number": 4,
-  "count": 30,
-  "duration": 30,
+  "count": 9,
+  "duration": 9,
   "source": "Saladin · Anatomía y fisiología",
   "questions": [
     {
-      "content_id": "morfo-04-001",
+      "content_id": "evaluacion:medicina-oficial-morfo-04-intermedio-1",
       "materia": "MORFOFUNCION",
       "tema": "genetica y funcion celular",
       "numero_pregunta": 1,
-      "pregunta": "¿Qué bases se aparean en el ADN?",
-      "respuesta_correcta": "C",
-      "justificacion": "Adenina con timina; guanina con citosina.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "145",
-      "pagina_impresa": "117",
+      "pregunta": "El experimento sigue una cadena nueva de ARN que se sintetiza usando ADN como molde.\n¿Qué opción corresponde al caso?",
+      "respuesta_correcta": "D",
+      "justificacion": "En la transcripción, el ADN sirve de molde para producir una molécula de ARN.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "150",
+      "pagina_impresa": "122",
       "dificultad": "medio",
-      "opcion_a": "El uracilo.",
-      "opcion_b": "Profase → metafase → anafase → telofase.",
-      "opcion_c": "Adenina con timina; guanina con citosina.",
-      "opcion_d": "Genotipo: constitución genética. Fenotipo: rasgos expresados."
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Genética y función celular · Expresión genética",
+          "page": 150,
+          "printed": 122,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-04",
+        "chapterNumber": 4,
+        "chapter": "Genética y función celular",
+        "section": "Expresión genética",
+        "printedPages": [
+          122
+        ],
+        "pdfPages": [
+          150
+        ]
+      },
+      "opcion_a": "Empalme alternativo del ARN",
+      "opcion_b": "Traducción",
+      "opcion_c": "Replicación semiconservadora",
+      "opcion_d": "Transcripción"
     },
     {
-      "content_id": "morfo-04-002",
+      "content_id": "evaluacion:medicina-oficial-morfo-04-intermedio-2",
       "materia": "MORFOFUNCION",
       "tema": "genetica y funcion celular",
       "numero_pregunta": 2,
-      "pregunta": "¿Qué azúcar contiene el ADN?",
-      "respuesta_correcta": "B",
-      "justificacion": "Desoxirribosa.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "147",
-      "pagina_impresa": "119",
+      "pregunta": "Un ribosoma lee un mensaje y enlaza los aminoácidos en el orden que este especifica.\n¿Qué opción corresponde al caso?",
+      "respuesta_correcta": "D",
+      "justificacion": "En la traducción, el ribosoma utiliza el mensaje del ARNm para ordenar los aminoácidos del polipéptido.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "150",
+      "pagina_impresa": "122",
       "dificultad": "medio",
-      "opcion_a": "La transcripción.",
-      "opcion_b": "Desoxirribosa.",
-      "opcion_c": "La helicasa.",
-      "opcion_d": "El uracilo."
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Genética y función celular · Traducción",
+          "page": 150,
+          "printed": 122,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-04",
+        "chapterNumber": 4,
+        "chapter": "Genética y función celular",
+        "section": "Traducción",
+        "printedPages": [
+          122
+        ],
+        "pdfPages": [
+          150
+        ]
+      },
+      "opcion_a": "Transcripción",
+      "opcion_b": "Empalme alternativo del ARN",
+      "opcion_c": "Replicación semiconservadora",
+      "opcion_d": "Traducción"
     },
     {
-      "content_id": "morfo-04-003",
+      "content_id": "evaluacion:medicina-oficial-morfo-04-intermedio-3",
       "materia": "MORFOFUNCION",
       "tema": "genetica y funcion celular",
       "numero_pregunta": 3,
-      "pregunta": "¿Qué base del ARN sustituye a la timina del ADN?",
+      "pregunta": "Dos células transcriben el mismo gen. Sus mensajes maduros conservan combinaciones distintas de exones.\n¿Qué opción corresponde al caso?",
       "respuesta_correcta": "B",
-      "justificacion": "El uracilo.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "147",
-      "pagina_impresa": "119",
+      "justificacion": "El empalme alternativo combina distintos exones de un mismo transcrito. Así un gen puede dar lugar a productos distintos.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "151",
+      "pagina_impresa": "123",
       "dificultad": "medio",
-      "opcion_a": "El anticodón.",
-      "opcion_b": "El uracilo.",
-      "opcion_c": "La transcripción.",
-      "opcion_d": "La helicasa."
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Genética y función celular · Procesamiento del ARN",
+          "page": 151,
+          "printed": 123,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-04",
+        "chapterNumber": 4,
+        "chapter": "Genética y función celular",
+        "section": "Procesamiento del ARN",
+        "printedPages": [
+          123
+        ],
+        "pdfPages": [
+          151
+        ]
+      },
+      "opcion_a": "Transcripción",
+      "opcion_b": "Empalme alternativo del ARN",
+      "opcion_c": "Traducción",
+      "opcion_d": "Replicación semiconservadora"
     },
     {
-      "content_id": "morfo-04-004",
+      "content_id": "evaluacion:medicina-oficial-morfo-04-intermedio-4",
       "materia": "MORFOFUNCION",
       "tema": "genetica y funcion celular",
       "numero_pregunta": 4,
-      "pregunta": "¿Qué es un gen?",
-      "respuesta_correcta": "C",
-      "justificacion": "Una secuencia de ADN que contiene información para producir un ARN o una proteína.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "148",
-      "pagina_impresa": "120",
+      "pregunta": "Tras una ronda de copia, cada doble hélice conserva una de las hebras que estaban marcadas antes del experimento.\n¿Qué opción corresponde al caso?",
+      "respuesta_correcta": "A",
+      "justificacion": "Cada doble hélice hija conserva una hebra del ADN inicial y recibe una recién sintetizada.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "158",
+      "pagina_impresa": "130",
       "dificultad": "medio",
-      "opcion_a": "Uno cuya expresión queda oculta en presencia de un alelo dominante.",
-      "opcion_b": "Regiones que se eliminan del pre-ARNm durante su procesamiento.",
-      "opcion_c": "Una secuencia de ADN que contiene información para producir un ARN o una proteína.",
-      "opcion_d": "Varios ribosomas que traducen simultáneamente un mismo ARNm."
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Genética y función celular · Replicación",
+          "page": 158,
+          "printed": 130,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-04",
+        "chapterNumber": 4,
+        "chapter": "Genética y función celular",
+        "section": "Replicación",
+        "printedPages": [
+          130
+        ],
+        "pdfPages": [
+          158
+        ]
+      },
+      "opcion_a": "Replicación semiconservadora",
+      "opcion_b": "Empalme alternativo del ARN",
+      "opcion_c": "Transcripción",
+      "opcion_d": "Traducción"
     },
     {
-      "content_id": "morfo-04-005",
+      "content_id": "evaluacion:medicina-oficial-morfo-04-ampliacion-01-umss",
       "materia": "MORFOFUNCION",
       "tema": "genetica y funcion celular",
       "numero_pregunta": 5,
-      "pregunta": "¿Qué es el genoma?",
-      "respuesta_correcta": "B",
-      "justificacion": "Todo el ADN de un juego haploide de cromosomas.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "148",
-      "pagina_impresa": "120",
-      "dificultad": "medio",
-      "opcion_a": "La división del citoplasma en dos células hijas.",
-      "opcion_b": "Todo el ADN de un juego haploide de cromosomas.",
-      "opcion_c": "La determinación de un rasgo por varios genes.",
-      "opcion_d": "Un cambio en la secuencia de nucleótidos del ADN."
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Retirar intrones de un precursor de ARNm es una etapa del procesamiento, previa a la traducción.\n2. La región del ARNt que se aparea con el codón se llama codón porque pertenece al ARNt.",
+      "respuesta_correcta": "A",
+      "justificacion": "1. Correcta. Los intrones se eliminan cuando se procesa el transcrito.\n2. Incorrecta. La región del ARNt es el anticodón. El codón correspondiente está en el ARNm.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "150, 151",
+      "pagina_impresa": "122, 123",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Genética y función celular · Procesamiento del ARN / Traducción",
+          "page": 150,
+          "printed": 122,
+          "marks": []
+        },
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Genética y función celular · Procesamiento del ARN / Traducción",
+          "page": 151,
+          "printed": 123,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-04",
+        "chapterNumber": 4,
+        "chapter": "Genética y función celular",
+        "section": "Procesamiento del ARN / Traducción",
+        "printedPages": [
+          122,
+          123
+        ],
+        "pdfPages": [
+          150,
+          151
+        ],
+        "statements": [
+          {
+            "pdfPage": 150,
+            "printedPage": 122,
+            "section": "Procesamiento del ARN",
+            "cardId": "morfo-04-008"
+          },
+          {
+            "pdfPage": 151,
+            "printedPage": 123,
+            "section": "Traducción",
+            "cardId": "morfo-04-014"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "Solo la afirmación 1 es correcta.",
+        "B": "1. Correcta. Los intrones se eliminan cuando se procesa el transcrito. 2. Incorrecta. La región del ARNt es el anticodón. El codón correspondiente está en el ARNm.",
+        "C": "2. Incorrecta. La región del ARNt es el anticodón. El codón correspondiente está en el ARNm.",
+        "D": "1. Correcta. Los intrones se eliminan cuando se procesa el transcrito."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "morfo-04-027",
+      "content_id": "evaluacion:medicina-oficial-morfo-04-ampliacion-02-umss",
       "materia": "MORFOFUNCION",
       "tema": "genetica y funcion celular",
       "numero_pregunta": 6,
-      "pregunta": "¿Qué son los alelos?",
-      "respuesta_correcta": "C",
-      "justificacion": "Versiones alternativas de un mismo gen.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "148",
-      "pagina_impresa": "120",
-      "dificultad": "medio",
-      "opcion_a": "La determinación de un rasgo por varios genes.",
-      "opcion_b": "Regiones que se conservan en el ARNm maduro.",
-      "opcion_c": "Versiones alternativas de un mismo gen.",
-      "opcion_d": "Uno cuya expresión queda oculta en presencia de un alelo dominante."
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. La duplicación del ADN nuclear se inicia cuando los cromosomas se alinean en el ecuador durante la metafase.\n2. En mitosis, la separación de cromátides hermanas corresponde a una etapa posterior a la alineación ecuatorial.",
+      "respuesta_correcta": "B",
+      "justificacion": "1. Incorrecta. El ADN ya se replicó en la fase S de la interfase.\n2. Correcta. La separación se produce en la anafase, después de la metafase.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "159, 160",
+      "pagina_impresa": "131, 132",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Genética y función celular · Ciclo celular / Mitosis",
+          "page": 159,
+          "printed": 131,
+          "marks": []
+        },
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Genética y función celular · Ciclo celular / Mitosis",
+          "page": 160,
+          "printed": 132,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-04",
+        "chapterNumber": 4,
+        "chapter": "Genética y función celular",
+        "section": "Ciclo celular / Mitosis",
+        "printedPages": [
+          131,
+          132
+        ],
+        "pdfPages": [
+          159,
+          160
+        ],
+        "statements": [
+          {
+            "pdfPage": 159,
+            "printedPage": 131,
+            "section": "Ciclo celular",
+            "cardId": "morfo-04-019"
+          },
+          {
+            "pdfPage": 160,
+            "printedPage": 132,
+            "section": "Mitosis",
+            "cardId": "morfo-04-023"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. El ADN ya se replicó en la fase S de la interfase. 2. Correcta. La separación se produce en la anafase, después de la metafase.",
+        "B": "Solo la afirmación 2 es correcta.",
+        "C": "1. Incorrecta. El ADN ya se replicó en la fase S de la interfase.",
+        "D": "2. Correcta. La separación se produce en la anafase, después de la metafase."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "morfo-04-012",
+      "content_id": "evaluacion:medicina-oficial-morfo-04-ampliacion-03-umss",
       "materia": "MORFOFUNCION",
       "tema": "genetica y funcion celular",
       "numero_pregunta": 7,
-      "pregunta": "¿Cuántos nucleótidos forman un codón?",
-      "respuesta_correcta": "D",
-      "justificacion": "Tres.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "149",
-      "pagina_impresa": "121",
-      "dificultad": "medio",
-      "opcion_a": "G₁ → S → G₂.",
-      "opcion_b": "23.",
-      "opcion_c": "126.",
-      "opcion_d": "Tres."
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Cuando los dos alelos se expresan simultáneamente en el heterocigoto, la relación es codominante.\n2. Si la variación de un solo gen afecta a varios rasgos, se habla de pleiotropía.",
+      "respuesta_correcta": "C",
+      "justificacion": "1. Correcta. En la codominancia se pueden reconocer los productos de ambos alelos en el heterocigoto.\n2. Correcta. Se considera el efecto de un único gen sobre más de un carácter.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "164",
+      "pagina_impresa": "136",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Genética y función celular · Herencia",
+          "page": 164,
+          "printed": 136,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-04",
+        "chapterNumber": 4,
+        "chapter": "Genética y función celular",
+        "section": "Herencia",
+        "printedPages": [
+          136
+        ],
+        "pdfPages": [
+          164
+        ],
+        "statements": [
+          {
+            "pdfPage": 164,
+            "printedPage": 136,
+            "section": "Herencia",
+            "cardId": "morfo-04-031"
+          },
+          {
+            "pdfPage": 164,
+            "printedPage": 136,
+            "section": "Herencia",
+            "cardId": "morfo-04-033"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "2. Correcta. Se considera el efecto de un único gen sobre más de un carácter.",
+        "B": "1. Correcta. En la codominancia se pueden reconocer los productos de ambos alelos en el heterocigoto.",
+        "C": "Ambas afirmaciones son correctas.",
+        "D": "1. Correcta. En la codominancia se pueden reconocer los productos de ambos alelos en el heterocigoto. 2. Correcta. Se considera el efecto de un único gen sobre más de un carácter."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "morfo-04-006",
+      "content_id": "evaluacion:medicina-oficial-morfo-04-ampliacion-04-umss",
       "materia": "MORFOFUNCION",
       "tema": "genetica y funcion celular",
       "numero_pregunta": 8,
-      "pregunta": "¿Qué proceso copia la información del ADN en ARN?",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Un gameto humano habitual contiene el mismo número de cromosomas que una célula somática.\n2. En un polirribosoma, cada ribosoma traduce necesariamente una molécula de ARNm diferente.",
       "respuesta_correcta": "D",
-      "justificacion": "La transcripción.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "150",
-      "pagina_impresa": "122",
-      "dificultad": "medio",
-      "opcion_a": "La helicasa.",
-      "opcion_b": "El uracilo.",
-      "opcion_c": "Desoxirribosa.",
-      "opcion_d": "La transcripción."
+      "justificacion": "1. Incorrecta. El gameto tiene un juego de 23 cromosomas. La célula somática contiene dos juegos.\n2. Incorrecta. Los ribosomas del conjunto pueden traducir de forma simultánea una sola molécula de ARNm.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "153, 162",
+      "pagina_impresa": "125, 134",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Genética y función celular · Cromosomas / Traducción",
+          "page": 153,
+          "printed": 125,
+          "marks": []
+        },
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Genética y función celular · Cromosomas / Traducción",
+          "page": 162,
+          "printed": 134,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-04",
+        "chapterNumber": 4,
+        "chapter": "Genética y función celular",
+        "section": "Cromosomas / Traducción",
+        "printedPages": [
+          125,
+          134
+        ],
+        "pdfPages": [
+          153,
+          162
+        ],
+        "statements": [
+          {
+            "pdfPage": 162,
+            "printedPage": 134,
+            "section": "Cromosomas",
+            "cardId": "morfo-04-026"
+          },
+          {
+            "pdfPage": 153,
+            "printedPage": 125,
+            "section": "Traducción",
+            "cardId": "morfo-04-015"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. El gameto tiene un juego de 23 cromosomas. La célula somática contiene dos juegos.",
+        "B": "2. Incorrecta. Los ribosomas del conjunto pueden traducir de forma simultánea una sola molécula de ARNm.",
+        "C": "1. Incorrecta. El gameto tiene un juego de 23 cromosomas. La célula somática contiene dos juegos. 2. Incorrecta. Los ribosomas del conjunto pueden traducir de forma simultánea una sola molécula de ARNm.",
+        "D": "Ninguna afirmación es correcta."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "morfo-04-007",
+      "content_id": "evaluacion:banco-verificado:morfo-04:acidos",
       "materia": "MORFOFUNCION",
       "tema": "genetica y funcion celular",
       "numero_pregunta": 9,
-      "pregunta": "¿Qué enzima realiza la transcripción?",
-      "respuesta_correcta": "A",
-      "justificacion": "La ARN polimerasa.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "150",
-      "pagina_impresa": "122",
-      "dificultad": "medio",
-      "opcion_a": "La ARN polimerasa.",
-      "opcion_b": "Desoxirribosa.",
-      "opcion_c": "El anticodón.",
-      "opcion_d": "La helicasa."
-    },
-    {
-      "content_id": "morfo-04-008",
-      "materia": "MORFOFUNCION",
-      "tema": "genetica y funcion celular",
-      "numero_pregunta": 10,
-      "pregunta": "¿Qué son los intrones?",
-      "respuesta_correcta": "C",
-      "justificacion": "Regiones que se eliminan del pre-ARNm durante su procesamiento.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "150",
-      "pagina_impresa": "122",
-      "dificultad": "medio",
-      "opcion_a": "Uno cuya expresión queda oculta en presencia de un alelo dominante.",
-      "opcion_b": "La expresión simultánea de ambos alelos en el heterocigoto.",
-      "opcion_c": "Regiones que se eliminan del pre-ARNm durante su procesamiento.",
-      "opcion_d": "Varios ribosomas que traducen simultáneamente un mismo ARNm."
-    },
-    {
-      "content_id": "morfo-04-009",
-      "materia": "MORFOFUNCION",
-      "tema": "genetica y funcion celular",
-      "numero_pregunta": 11,
-      "pregunta": "¿Qué son los exones?",
-      "respuesta_correcta": "C",
-      "justificacion": "Regiones que se conservan en el ARNm maduro.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "150",
-      "pagina_impresa": "122",
-      "dificultad": "medio",
-      "opcion_a": "La división del citoplasma en dos células hijas.",
-      "opcion_b": "Todo el ADN de un juego haploide de cromosomas.",
-      "opcion_c": "Regiones que se conservan en el ARNm maduro.",
-      "opcion_d": "La determinación de un rasgo por varios genes."
-    },
-    {
-      "content_id": "morfo-04-011",
-      "materia": "MORFOFUNCION",
-      "tema": "genetica y funcion celular",
-      "numero_pregunta": 12,
-      "pregunta": "¿Qué proceso utiliza el ARNm para construir una proteína?",
+      "pregunta": "Al comparar un nucleótido de ADN con el que ocupa una posición equivalente en un ARN, ¿qué combinación identifica específicamente al nucleótido de ARN frente al que contiene timina?",
       "respuesta_correcta": "B",
-      "justificacion": "La traducción.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "150",
-      "pagina_impresa": "122",
-      "dificultad": "medio",
-      "opcion_a": "La helicasa.",
-      "opcion_b": "La traducción.",
-      "opcion_c": "El anticodón.",
-      "opcion_d": "Desoxirribosa."
-    },
-    {
-      "content_id": "morfo-04-010",
-      "materia": "MORFOFUNCION",
-      "tema": "genetica y funcion celular",
-      "numero_pregunta": 13,
-      "pregunta": "¿Qué permite el ensamble alternado del ARN?",
-      "respuesta_correcta": "C",
-      "justificacion": "Producir distintas proteínas a partir de un mismo gen.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "151",
-      "pagina_impresa": "123",
-      "dificultad": "medio",
-      "opcion_a": "Ayudan al plegamiento correcto de proteínas.",
-      "opcion_b": "Percibir la profundidad y las relaciones tridimensionales.",
-      "opcion_c": "Producir distintas proteínas a partir de un mismo gen.",
-      "opcion_d": "Cada molécula nueva conserva una cadena original y contiene una nueva."
-    },
-    {
-      "content_id": "morfo-04-013",
-      "materia": "MORFOFUNCION",
-      "tema": "genetica y funcion celular",
-      "numero_pregunta": 14,
-      "pregunta": "¿Qué transporta el ARNt al ribosoma?",
-      "respuesta_correcta": "C",
-      "justificacion": "Un aminoácido específico.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "151",
-      "pagina_impresa": "123",
-      "dificultad": "medio",
-      "opcion_a": "La ARN polimerasa.",
-      "opcion_b": "Varones: XY. Mujeres: XX.",
-      "opcion_c": "Un aminoácido específico.",
-      "opcion_d": "La transcripción."
-    },
-    {
-      "content_id": "morfo-04-014",
-      "materia": "MORFOFUNCION",
-      "tema": "genetica y funcion celular",
-      "numero_pregunta": 15,
-      "pregunta": "¿Qué región del ARNt reconoce el codón del ARNm?",
-      "respuesta_correcta": "C",
-      "justificacion": "El anticodón.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "151",
-      "pagina_impresa": "123",
-      "dificultad": "medio",
-      "opcion_a": "La helicasa.",
-      "opcion_b": "El uracilo.",
-      "opcion_c": "El anticodón.",
-      "opcion_d": "Desoxirribosa."
-    },
-    {
-      "content_id": "morfo-04-015",
-      "materia": "MORFOFUNCION",
-      "tema": "genetica y funcion celular",
-      "numero_pregunta": 16,
-      "pregunta": "¿Qué es un polirribosoma?",
-      "respuesta_correcta": "B",
-      "justificacion": "Varios ribosomas que traducen simultáneamente un mismo ARNm.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "153",
-      "pagina_impresa": "125",
-      "dificultad": "medio",
-      "opcion_a": "Regiones que se eliminan del pre-ARNm durante su procesamiento.",
-      "opcion_b": "Varios ribosomas que traducen simultáneamente un mismo ARNm.",
-      "opcion_c": "Uno cuya expresión queda oculta en presencia de un alelo dominante.",
-      "opcion_d": "La expresión simultánea de ambos alelos en el heterocigoto."
-    },
-    {
-      "content_id": "morfo-04-016",
-      "materia": "MORFOFUNCION",
-      "tema": "genetica y funcion celular",
-      "numero_pregunta": 17,
-      "pregunta": "¿Qué función cumplen las chaperonas?",
-      "respuesta_correcta": "D",
-      "justificacion": "Ayudan al plegamiento correcto de proteínas.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "154",
-      "pagina_impresa": "126",
-      "dificultad": "medio",
-      "opcion_a": "Conducen órdenes motoras desde el encéfalo.",
-      "opcion_b": "Producir distintas proteínas a partir de un mismo gen.",
-      "opcion_c": "Cada molécula nueva conserva una cadena original y contiene una nueva.",
-      "opcion_d": "Ayudan al plegamiento correcto de proteínas."
-    },
-    {
-      "content_id": "morfo-04-017",
-      "materia": "MORFOFUNCION",
-      "tema": "genetica y funcion celular",
-      "numero_pregunta": 18,
-      "pregunta": "¿Por qué la replicación del ADN se llama semiconservadora?",
-      "respuesta_correcta": "D",
-      "justificacion": "Cada molécula nueva conserva una cadena original y contiene una nueva.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "158",
-      "pagina_impresa": "130",
-      "dificultad": "medio",
-      "opcion_a": "Ayudan al plegamiento correcto de proteínas.",
-      "opcion_b": "Para comparar sus resultados con los del grupo que recibe el tratamiento.",
-      "opcion_c": "Producir distintas proteínas a partir de un mismo gen.",
-      "opcion_d": "Cada molécula nueva conserva una cadena original y contiene una nueva."
-    },
-    {
-      "content_id": "morfo-04-018",
-      "materia": "MORFOFUNCION",
-      "tema": "genetica y funcion celular",
-      "numero_pregunta": 19,
-      "pregunta": "¿Qué enzima separa las cadenas de ADN durante la replicación?",
-      "respuesta_correcta": "B",
-      "justificacion": "La helicasa.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "158",
-      "pagina_impresa": "130",
-      "dificultad": "medio",
-      "opcion_a": "Desoxirribosa.",
-      "opcion_b": "La helicasa.",
-      "opcion_c": "El uracilo.",
-      "opcion_d": "La ARN polimerasa."
-    },
-    {
-      "content_id": "morfo-04-019",
-      "materia": "MORFOFUNCION",
-      "tema": "genetica y funcion celular",
-      "numero_pregunta": 20,
-      "pregunta": "¿En qué fase del ciclo celular se replica el ADN?",
-      "respuesta_correcta": "C",
-      "justificacion": "En la fase S.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "159",
-      "pagina_impresa": "131",
-      "dificultad": "medio",
-      "opcion_a": "En la anafase.",
-      "opcion_b": "En la metafase.",
-      "opcion_c": "En la fase S.",
-      "opcion_d": "En el hígado."
-    },
-    {
-      "content_id": "morfo-04-020",
-      "materia": "MORFOFUNCION",
-      "tema": "genetica y funcion celular",
-      "numero_pregunta": 21,
-      "pregunta": "¿Cuáles son las fases de la interfase?",
-      "respuesta_correcta": "D",
-      "justificacion": "G₁ → S → G₂.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "159",
-      "pagina_impresa": "131",
-      "dificultad": "medio",
-      "opcion_a": "El axis, C2.",
-      "opcion_b": "Tres.",
-      "opcion_c": "23.",
-      "opcion_d": "G₁ → S → G₂."
-    },
-    {
-      "content_id": "morfo-04-021",
-      "materia": "MORFOFUNCION",
-      "tema": "genetica y funcion celular",
-      "numero_pregunta": 22,
-      "pregunta": "¿Cuál es el orden de las fases de la mitosis?",
-      "respuesta_correcta": "D",
-      "justificacion": "Profase → metafase → anafase → telofase.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "159",
-      "pagina_impresa": "131",
-      "dificultad": "medio",
-      "opcion_a": "Adenina con timina; guanina con citosina.",
-      "opcion_b": "Un aminoácido específico.",
-      "opcion_c": "Genotipo: constitución genética. Fenotipo: rasgos expresados.",
-      "opcion_d": "Profase → metafase → anafase → telofase."
-    },
-    {
-      "content_id": "morfo-04-035",
-      "materia": "MORFOFUNCION",
-      "tema": "genetica y funcion celular",
-      "numero_pregunta": 23,
-      "pregunta": "¿Qué es una mutación?",
-      "respuesta_correcta": "B",
-      "justificacion": "Un cambio en la secuencia de nucleótidos del ADN.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "159",
-      "pagina_impresa": "131",
-      "dificultad": "medio",
-      "opcion_a": "Todo el ADN de un juego haploide de cromosomas.",
-      "opcion_b": "Un cambio en la secuencia de nucleótidos del ADN.",
-      "opcion_c": "La división del citoplasma en dos células hijas.",
-      "opcion_d": "La influencia de un solo gen sobre varios rasgos."
-    },
-    {
-      "content_id": "morfo-04-022",
-      "materia": "MORFOFUNCION",
-      "tema": "genetica y funcion celular",
-      "numero_pregunta": 24,
-      "pregunta": "¿En qué fase mitótica se alinean los cromosomas en el ecuador celular?",
-      "respuesta_correcta": "A",
-      "justificacion": "En la metafase.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "160",
-      "pagina_impresa": "132",
-      "dificultad": "medio",
-      "opcion_a": "En la metafase.",
-      "opcion_b": "En la fase S.",
-      "opcion_c": "En el temporal.",
-      "opcion_d": "En el occipital."
-    },
-    {
-      "content_id": "morfo-04-023",
-      "materia": "MORFOFUNCION",
-      "tema": "genetica y funcion celular",
-      "numero_pregunta": 25,
-      "pregunta": "¿En qué fase mitótica se separan las cromátides hermanas?",
-      "respuesta_correcta": "D",
-      "justificacion": "En la anafase.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "160",
-      "pagina_impresa": "132",
-      "dificultad": "medio",
-      "opcion_a": "En la fase S.",
-      "opcion_b": "En la laringe.",
-      "opcion_c": "En la metafase.",
-      "opcion_d": "En la anafase."
-    },
-    {
-      "content_id": "morfo-04-024",
-      "materia": "MORFOFUNCION",
-      "tema": "genetica y funcion celular",
-      "numero_pregunta": 26,
-      "pregunta": "¿Qué es la citocinesis?",
-      "respuesta_correcta": "C",
-      "justificacion": "La división del citoplasma en dos células hijas.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "160",
-      "pagina_impresa": "132",
-      "dificultad": "medio",
-      "opcion_a": "La influencia de un solo gen sobre varios rasgos.",
-      "opcion_b": "Todo el ADN de un juego haploide de cromosomas.",
-      "opcion_c": "La división del citoplasma en dos células hijas.",
-      "opcion_d": "Un cambio en la secuencia de nucleótidos del ADN."
-    },
-    {
-      "content_id": "morfo-04-025",
-      "materia": "MORFOFUNCION",
-      "tema": "genetica y funcion celular",
-      "numero_pregunta": 27,
-      "pregunta": "¿Cuántos cromosomas tiene una célula somática humana normal?",
-      "respuesta_correcta": "A",
-      "justificacion": "46, organizados en 23 pares.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "162",
-      "pagina_impresa": "134",
-      "dificultad": "medio",
-      "opcion_a": "46, organizados en 23 pares.",
-      "opcion_b": "Aproximadamente 4 kcal.",
-      "opcion_c": "G₁ → S → G₂.",
-      "opcion_d": "Tres."
-    },
-    {
-      "content_id": "morfo-04-026",
-      "materia": "MORFOFUNCION",
-      "tema": "genetica y funcion celular",
-      "numero_pregunta": 28,
-      "pregunta": "¿Cuántos cromosomas contiene un gameto humano?",
-      "respuesta_correcta": "C",
-      "justificacion": "23.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "162",
-      "pagina_impresa": "134",
-      "dificultad": "medio",
-      "opcion_a": "80.",
-      "opcion_b": "G₁ → S → G₂.",
-      "opcion_c": "23.",
-      "opcion_d": "Tres."
-    },
-    {
-      "content_id": "morfo-04-028",
-      "materia": "MORFOFUNCION",
-      "tema": "genetica y funcion celular",
-      "numero_pregunta": 29,
-      "pregunta": "¿Qué diferencia al homocigoto del heterocigoto?",
-      "respuesta_correcta": "B",
-      "justificacion": "El homocigoto tiene dos alelos iguales; el heterocigoto tiene dos diferentes.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "163",
-      "pagina_impresa": "135",
-      "dificultad": "medio",
-      "opcion_a": "El suero es el líquido restante después de la coagulación y carece de fibrinógeno.",
-      "opcion_b": "El homocigoto tiene dos alelos iguales; el heterocigoto tiene dos diferentes.",
-      "opcion_c": "La endocrina libera hormonas al medio interno; la exocrina utiliza conductos.",
-      "opcion_d": "La de conducción transporta aire; la respiratoria realiza intercambio gaseoso."
-    },
-    {
-      "content_id": "morfo-04-029",
-      "materia": "MORFOFUNCION",
-      "tema": "genetica y funcion celular",
-      "numero_pregunta": 30,
-      "pregunta": "¿Qué diferencia al genotipo del fenotipo?",
-      "respuesta_correcta": "C",
-      "justificacion": "Genotipo: constitución genética. Fenotipo: rasgos expresados.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "163",
-      "pagina_impresa": "135",
-      "dificultad": "medio",
-      "opcion_a": "Un aminoácido específico.",
-      "opcion_b": "Adenina con timina; guanina con citosina.",
-      "opcion_c": "Genotipo: constitución genética. Fenotipo: rasgos expresados.",
-      "opcion_d": "Profase → metafase → anafase → telofase."
+      "justificacion": "En el ARN, el azúcar es ribosa y se usa uracilo en lugar de timina. El ADN contiene desoxirribosa y timina.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "147, 148",
+      "pagina_impresa": "119, 120",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 4 · Ácidos nucleicos",
+          "page": 147,
+          "printed": 119,
+          "marks": [
+            [
+              0.7955,
+              0.7855,
+              0.0481,
+              0.0111
+            ]
+          ]
+        },
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 4 · Ácidos nucleicos",
+          "page": 148,
+          "printed": 120,
+          "marks": [
+            [
+              0.3092,
+              0.1437,
+              0.071,
+              0.0094
+            ]
+          ]
+        }
+      ],
+      "source": {
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-04"
+      },
+      "opcion_a": "Desoxirribosa y timina.",
+      "opcion_b": "Ribosa y uracilo.",
+      "opcion_c": "Desoxirribosa y uracilo.",
+      "opcion_d": "Ribosa y timina."
     }
   ]
 }

@@ -5,519 +5,506 @@
   "topic": "aparato urinario",
   "title": "El aparato urinario",
   "number": 23,
-  "count": 30,
-  "duration": 30,
+  "count": 9,
+  "duration": 9,
   "source": "Saladin · Anatomía y fisiología",
   "questions": [
     {
-      "content_id": "morfo-23-025",
+      "content_id": "evaluacion:medicina-oficial-morfo-23-intermedio-1",
       "materia": "MORFOFUNCION",
       "tema": "aparato urinario",
       "numero_pregunta": 1,
-      "pregunta": "¿Qué desecho nitrogenado deriva principalmente del metabolismo de proteínas?",
-      "respuesta_correcta": "A",
-      "justificacion": "La urea.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "924",
-      "pagina_impresa": "896",
+      "pregunta": "En el corpúsculo renal el líquido sale de los capilares y entra en la cápsula antes de recorrer el túbulo.\n¿Qué opción corresponde al caso?",
+      "respuesta_correcta": "B",
+      "justificacion": "La presión hidrostática sanguínea favorece la salida de líquido de los capilares glomerulares al espacio capsular.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "933",
+      "pagina_impresa": "905",
       "dificultad": "medio",
-      "opcion_a": "La urea.",
-      "opcion_b": "El externo.",
-      "opcion_c": "El urocromo.",
-      "opcion_d": "La nefrona."
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "El aparato urinario · Filtración glomerular",
+          "page": 933,
+          "printed": 905,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-23",
+        "chapterNumber": 23,
+        "chapter": "El aparato urinario",
+        "section": "Filtración glomerular",
+        "printedPages": [
+          905
+        ],
+        "pdfPages": [
+          933
+        ]
+      },
+      "opcion_a": "Secreción tubular",
+      "opcion_b": "Filtración glomerular",
+      "opcion_c": "Reabsorción tubular",
+      "opcion_d": "Depuración renal"
     },
     {
-      "content_id": "morfo-23-002",
+      "content_id": "evaluacion:medicina-oficial-morfo-23-intermedio-2",
       "materia": "MORFOFUNCION",
       "tema": "aparato urinario",
       "numero_pregunta": 2,
-      "pregunta": "¿Qué dos regiones principales forman el riñón?",
-      "respuesta_correcta": "B",
-      "justificacion": "Corteza y médula.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "927",
-      "pagina_impresa": "899",
+      "pregunta": "Se sigue una sustancia filtrada que sale del líquido tubular y vuelve a la sangre. Se clasifica este segundo paso.\n¿Qué opción corresponde al caso?",
+      "respuesta_correcta": "D",
+      "justificacion": "En la reabsorción se recuperan sustancias del líquido tubular y vuelven a la sangre.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "933",
+      "pagina_impresa": "905",
       "dificultad": "medio",
-      "opcion_a": "Glomérulo y cápsula glomerular.",
-      "opcion_b": "Corteza y médula.",
-      "opcion_c": "El peristaltismo.",
-      "opcion_d": "La nefrona."
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "El aparato urinario · Procesamiento tubular",
+          "page": 933,
+          "printed": 905,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-23",
+        "chapterNumber": 23,
+        "chapter": "El aparato urinario",
+        "section": "Procesamiento tubular",
+        "printedPages": [
+          905
+        ],
+        "pdfPages": [
+          933
+        ]
+      },
+      "opcion_a": "Secreción tubular",
+      "opcion_b": "Filtración glomerular",
+      "opcion_c": "Depuración renal",
+      "opcion_d": "Reabsorción tubular"
     },
     {
-      "content_id": "morfo-23-001",
+      "content_id": "evaluacion:medicina-oficial-morfo-23-intermedio-3",
       "materia": "MORFOFUNCION",
       "tema": "aparato urinario",
       "numero_pregunta": 3,
-      "pregunta": "¿Qué unidad funcional produce la orina en el riñón?",
+      "pregunta": "Una sustancia de la sangre se añade al líquido que ya está recorriendo el túbulo, sin pasar por el filtro glomerular en ese paso.\n¿Qué opción corresponde al caso?",
       "respuesta_correcta": "A",
-      "justificacion": "La nefrona.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "928",
-      "pagina_impresa": "900",
+      "justificacion": "La secreción incorpora sustancias de la sangre al líquido que circula por el túbulo.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "941",
+      "pagina_impresa": "913",
       "dificultad": "medio",
-      "opcion_a": "La nefrona.",
-      "opcion_b": "El urocromo.",
-      "opcion_c": "El peristaltismo.",
-      "opcion_d": "Corteza y médula."
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "El aparato urinario · Procesamiento tubular",
+          "page": 941,
+          "printed": 913,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-23",
+        "chapterNumber": 23,
+        "chapter": "El aparato urinario",
+        "section": "Procesamiento tubular",
+        "printedPages": [
+          913
+        ],
+        "pdfPages": [
+          941
+        ]
+      },
+      "opcion_a": "Secreción tubular",
+      "opcion_b": "Reabsorción tubular",
+      "opcion_c": "Filtración glomerular",
+      "opcion_d": "Depuración renal"
     },
     {
-      "content_id": "morfo-23-005",
+      "content_id": "evaluacion:medicina-oficial-morfo-23-intermedio-4",
       "materia": "MORFOFUNCION",
       "tema": "aparato urinario",
       "numero_pregunta": 4,
-      "pregunta": "¿Qué vaso lleva sangre al glomérulo?",
-      "respuesta_correcta": "D",
-      "justificacion": "La arteriola aferente.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "928",
-      "pagina_impresa": "900",
-      "dificultad": "medio",
-      "opcion_a": "La rama descendente.",
-      "opcion_b": "La hormona antidiurética.",
-      "opcion_c": "La depuración renal.",
-      "opcion_d": "La arteriola aferente."
-    },
-    {
-      "content_id": "morfo-23-004",
-      "materia": "MORFOFUNCION",
-      "tema": "aparato urinario",
-      "numero_pregunta": 5,
-      "pregunta": "¿Qué dos estructuras forman el corpúsculo renal?",
-      "respuesta_correcta": "B",
-      "justificacion": "Glomérulo y cápsula glomerular.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "929",
-      "pagina_impresa": "901",
-      "dificultad": "medio",
-      "opcion_a": "Corteza y médula.",
-      "opcion_b": "Glomérulo y cápsula glomerular.",
-      "opcion_c": "La rama ascendente gruesa.",
-      "opcion_d": "Las células yuxtaglomerulares."
-    },
-    {
-      "content_id": "morfo-23-006",
-      "materia": "MORFOFUNCION",
-      "tema": "aparato urinario",
-      "numero_pregunta": 6,
-      "pregunta": "¿Qué vaso saca sangre del glomérulo?",
-      "respuesta_correcta": "A",
-      "justificacion": "La arteriola eferente.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "929",
-      "pagina_impresa": "901",
-      "dificultad": "medio",
-      "opcion_a": "La arteriola eferente.",
-      "opcion_b": "La depuración renal.",
-      "opcion_c": "La rama descendente.",
-      "opcion_d": "La hormona antidiurética."
-    },
-    {
-      "content_id": "morfo-23-007",
-      "materia": "MORFOFUNCION",
-      "tema": "aparato urinario",
-      "numero_pregunta": 7,
-      "pregunta": "¿Cuál es el orden del túbulo renal?",
-      "respuesta_correcta": "A",
-      "justificacion": "Túbulo contorneado proximal → asa de la nefrona → túbulo contorneado distal.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "930",
-      "pagina_impresa": "902",
-      "dificultad": "medio",
-      "opcion_a": "Túbulo contorneado proximal → asa de la nefrona → túbulo contorneado distal.",
-      "opcion_b": "Hematoma y tejido de granulación → callo blando → callo duro → remodelación ósea.",
-      "opcion_c": "Las células sanguíneas y la mayor parte de las proteínas.",
-      "opcion_d": "El paso de sustancias de la sangre al túbulo renal."
-    },
-    {
-      "content_id": "morfo-23-008",
-      "materia": "MORFOFUNCION",
-      "tema": "aparato urinario",
-      "numero_pregunta": 8,
-      "pregunta": "¿Qué son los podocitos?",
+      "pregunta": "Se quiere comparar la eliminación de un soluto mediante un volumen virtual de plasma que queda libre de él en un minuto.\n¿Qué opción corresponde al caso?",
       "respuesta_correcta": "C",
-      "justificacion": "Células de la capa visceral de la cápsula glomerular que rodean capilares glomerulares.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "930",
-      "pagina_impresa": "902",
-      "dificultad": "medio",
-      "opcion_a": "Un conjunto de células semejantes y material extracelular que realizan una función.",
-      "opcion_b": "El volumen de filtrado producido por ambos riñones por minuto.",
-      "opcion_c": "Células de la capa visceral de la cápsula glomerular que rodean capilares glomerulares.",
-      "opcion_d": "Sacos con líquido que reducen la fricción entre estructuras próximas a una articulación."
-    },
-    {
-      "content_id": "morfo-23-017",
-      "materia": "MORFOFUNCION",
-      "tema": "aparato urinario",
-      "numero_pregunta": 9,
-      "pregunta": "¿Qué segmento del asa de la nefrona es muy permeable al agua?",
-      "respuesta_correcta": "D",
-      "justificacion": "La rama descendente.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "930",
-      "pagina_impresa": "902",
-      "dificultad": "medio",
-      "opcion_a": "La arteriola eferente.",
-      "opcion_b": "La hormona antidiurética.",
-      "opcion_c": "La depuración renal.",
-      "opcion_d": "La rama descendente."
-    },
-    {
-      "content_id": "morfo-23-003",
-      "materia": "MORFOFUNCION",
-      "tema": "aparato urinario",
-      "numero_pregunta": 10,
-      "pregunta": "¿Cuál es el orden del flujo urinario desde la papila renal?",
-      "respuesta_correcta": "C",
-      "justificacion": "Cáliz menor → cáliz mayor → pelvis renal → uréter.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "932",
-      "pagina_impresa": "904",
-      "dificultad": "medio",
-      "opcion_a": "La presión hidrostática de los capilares glomerulares.",
-      "opcion_b": "Glomérulo y cápsula glomerular.",
-      "opcion_c": "Cáliz menor → cáliz mayor → pelvis renal → uréter.",
-      "opcion_d": "La concentración de NaCl del líquido tubular."
-    },
-    {
-      "content_id": "morfo-23-009",
-      "materia": "MORFOFUNCION",
-      "tema": "aparato urinario",
-      "numero_pregunta": 11,
-      "pregunta": "¿Cuáles son las tres capas principales de la barrera de filtración?",
-      "respuesta_correcta": "C",
-      "justificacion": "Endotelio fenestrado → membrana basal → hendiduras entre pedicelos.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "932",
-      "pagina_impresa": "904",
-      "dificultad": "medio",
-      "opcion_a": "Fase folicular → ovulación → fase lútea.",
-      "opcion_b": "Dilatación → expulsión del bebé → expulsión de la placenta.",
-      "opcion_c": "Endotelio fenestrado → membrana basal → hendiduras entre pedicelos.",
-      "opcion_d": "Espasmo vascular → tapón plaquetario → coagulación."
-    },
-    {
-      "content_id": "morfo-23-010",
-      "materia": "MORFOFUNCION",
-      "tema": "aparato urinario",
-      "numero_pregunta": 12,
-      "pregunta": "¿Qué componentes sanguíneos no atraviesan normalmente la barrera de filtración?",
-      "respuesta_correcta": "C",
-      "justificacion": "Las células sanguíneas y la mayor parte de las proteínas.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "933",
-      "pagina_impresa": "905",
-      "dificultad": "medio",
-      "opcion_a": "Una base nitrogenada, una pentosa y uno o más grupos fosfato.",
-      "opcion_b": "El paso de sustancias del túbulo renal a la sangre.",
-      "opcion_c": "Las células sanguíneas y la mayor parte de las proteínas.",
-      "opcion_d": "Túbulo contorneado proximal → asa de la nefrona → túbulo contorneado distal."
-    },
-    {
-      "content_id": "morfo-23-011",
-      "materia": "MORFOFUNCION",
-      "tema": "aparato urinario",
-      "numero_pregunta": 13,
-      "pregunta": "¿Qué fuerza impulsa principalmente la filtración glomerular?",
-      "respuesta_correcta": "D",
-      "justificacion": "La presión hidrostática de los capilares glomerulares.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "933",
-      "pagina_impresa": "905",
-      "dificultad": "medio",
-      "opcion_a": "Glomérulo y cápsula glomerular.",
-      "opcion_b": "La concentración de NaCl del líquido tubular.",
-      "opcion_c": "Cáliz menor → cáliz mayor → pelvis renal → uréter.",
-      "opcion_d": "La presión hidrostática de los capilares glomerulares."
-    },
-    {
-      "content_id": "morfo-23-013",
-      "materia": "MORFOFUNCION",
-      "tema": "aparato urinario",
-      "numero_pregunta": 14,
-      "pregunta": "¿Qué significa reabsorción tubular?",
-      "respuesta_correcta": "C",
-      "justificacion": "El paso de sustancias del túbulo renal a la sangre.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "933",
-      "pagina_impresa": "905",
-      "dificultad": "medio",
-      "opcion_a": "Las células sanguíneas y la mayor parte de las proteínas.",
-      "opcion_b": "La actividad de fondo continua del sistema autónomo.",
-      "opcion_c": "El paso de sustancias del túbulo renal a la sangre.",
-      "opcion_d": "Túbulo contorneado proximal → asa de la nefrona → túbulo contorneado distal."
-    },
-    {
-      "content_id": "morfo-23-019",
-      "materia": "MORFOFUNCION",
-      "tema": "aparato urinario",
-      "numero_pregunta": 15,
-      "pregunta": "¿Qué hormona aumenta la permeabilidad al agua del conducto colector?",
-      "respuesta_correcta": "B",
-      "justificacion": "La hormona antidiurética.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "933",
-      "pagina_impresa": "905",
-      "dificultad": "medio",
-      "opcion_a": "La rama ascendente gruesa.",
-      "opcion_b": "La hormona antidiurética.",
-      "opcion_c": "La aldosterona.",
-      "opcion_d": "La arteriola aferente."
-    },
-    {
-      "content_id": "morfo-23-012",
-      "materia": "MORFOFUNCION",
-      "tema": "aparato urinario",
-      "numero_pregunta": 16,
-      "pregunta": "¿Qué es la tasa de filtración glomerular?",
-      "respuesta_correcta": "B",
-      "justificacion": "El volumen de filtrado producido por ambos riñones por minuto.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "934",
-      "pagina_impresa": "906",
-      "dificultad": "medio",
-      "opcion_a": "La primera secreción mamaria, rica en proteínas y anticuerpos.",
-      "opcion_b": "El volumen de filtrado producido por ambos riñones por minuto.",
-      "opcion_c": "Una palabra formada con las letras iniciales de una expresión.",
-      "opcion_d": "Células de la capa visceral de la cápsula glomerular que rodean capilares glomerulares."
-    },
-    {
-      "content_id": "morfo-23-022",
-      "materia": "MORFOFUNCION",
-      "tema": "aparato urinario",
-      "numero_pregunta": 17,
-      "pregunta": "¿Qué detecta la mácula densa?",
-      "respuesta_correcta": "C",
-      "justificacion": "La concentración de NaCl del líquido tubular.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "936",
-      "pagina_impresa": "908",
-      "dificultad": "medio",
-      "opcion_a": "La presión hidrostática de los capilares glomerulares.",
-      "opcion_b": "Glomérulo y cápsula glomerular.",
-      "opcion_c": "La concentración de NaCl del líquido tubular.",
-      "opcion_d": "Cáliz menor → cáliz mayor → pelvis renal → uréter."
-    },
-    {
-      "content_id": "morfo-23-021",
-      "materia": "MORFOFUNCION",
-      "tema": "aparato urinario",
-      "numero_pregunta": 18,
-      "pregunta": "¿Qué células liberan renina?",
-      "respuesta_correcta": "D",
-      "justificacion": "Las células yuxtaglomerulares.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "937",
-      "pagina_impresa": "909",
-      "dificultad": "medio",
-      "opcion_a": "La rama ascendente gruesa.",
-      "opcion_b": "Glomérulo y cápsula glomerular.",
-      "opcion_c": "La hormona antidiurética.",
-      "opcion_d": "Las células yuxtaglomerulares."
-    },
-    {
-      "content_id": "morfo-23-015",
-      "materia": "MORFOFUNCION",
-      "tema": "aparato urinario",
-      "numero_pregunta": 19,
-      "pregunta": "¿Dónde se reabsorbe la mayor parte del agua y los solutos filtrados?",
-      "respuesta_correcta": "D",
-      "justificacion": "En el túbulo contorneado proximal.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "939",
-      "pagina_impresa": "911",
-      "dificultad": "medio",
-      "opcion_a": "En los plexos coroideos.",
-      "opcion_b": "En un ganglio autónomo periférico.",
-      "opcion_c": "En las granulaciones aracnoideas.",
-      "opcion_d": "En el túbulo contorneado proximal."
-    },
-    {
-      "content_id": "morfo-23-016",
-      "materia": "MORFOFUNCION",
-      "tema": "aparato urinario",
-      "numero_pregunta": 20,
-      "pregunta": "¿Qué suele ocurrir con la glucosa filtrada en condiciones normales?",
-      "respuesta_correcta": "C",
-      "justificacion": "Se reabsorbe por completo.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "939",
-      "pagina_impresa": "911",
-      "dificultad": "medio",
-      "opcion_a": "Se vuelve positiva.",
-      "opcion_b": "Aumenta.",
-      "opcion_c": "Se reabsorbe por completo.",
-      "opcion_d": "Se opone a la acción del agonista."
-    },
-    {
-      "content_id": "morfo-23-014",
-      "materia": "MORFOFUNCION",
-      "tema": "aparato urinario",
-      "numero_pregunta": 21,
-      "pregunta": "¿Qué significa secreción tubular?",
-      "respuesta_correcta": "A",
-      "justificacion": "El paso de sustancias de la sangre al túbulo renal.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "941",
-      "pagina_impresa": "913",
-      "dificultad": "medio",
-      "opcion_a": "El paso de sustancias de la sangre al túbulo renal.",
-      "opcion_b": "Las células sanguíneas y la mayor parte de las proteínas.",
-      "opcion_c": "La actividad de fondo continua del sistema autónomo.",
-      "opcion_d": "Túbulo contorneado proximal → asa de la nefrona → túbulo contorneado distal."
-    },
-    {
-      "content_id": "morfo-23-018",
-      "materia": "MORFOFUNCION",
-      "tema": "aparato urinario",
-      "numero_pregunta": 22,
-      "pregunta": "¿Qué segmento grueso del asa reabsorbe sales pero es impermeable al agua?",
-      "respuesta_correcta": "C",
-      "justificacion": "La rama ascendente gruesa.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "941",
-      "pagina_impresa": "913",
-      "dificultad": "medio",
-      "opcion_a": "Las células yuxtaglomerulares.",
-      "opcion_b": "La hormona antidiurética.",
-      "opcion_c": "La rama ascendente gruesa.",
-      "opcion_d": "La arteriola aferente."
-    },
-    {
-      "content_id": "morfo-23-020",
-      "materia": "MORFOFUNCION",
-      "tema": "aparato urinario",
-      "numero_pregunta": 23,
-      "pregunta": "¿Qué hormona favorece la reabsorción renal de sodio y secreción de potasio?",
-      "respuesta_correcta": "D",
-      "justificacion": "La aldosterona.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "941",
-      "pagina_impresa": "913",
-      "dificultad": "medio",
-      "opcion_a": "La parasimpática.",
-      "opcion_b": "La hormona antidiurética.",
-      "opcion_c": "Corteza y médula.",
-      "opcion_d": "La aldosterona."
-    },
-    {
-      "content_id": "morfo-23-023",
-      "materia": "MORFOFUNCION",
-      "tema": "aparato urinario",
-      "numero_pregunta": 24,
-      "pregunta": "¿Qué proteína transportadora permite el paso de agua por la membrana?",
-      "respuesta_correcta": "B",
-      "justificacion": "La acuaporina.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "942",
-      "pagina_impresa": "914",
-      "dificultad": "medio",
-      "opcion_a": "La elastina.",
-      "opcion_b": "La acuaporina.",
-      "opcion_c": "El agujero oval.",
-      "opcion_d": "El flagelo."
-    },
-    {
-      "content_id": "morfo-23-026",
-      "materia": "MORFOFUNCION",
-      "tema": "aparato urinario",
-      "numero_pregunta": 25,
-      "pregunta": "¿Qué pigmento contribuye al color amarillo de la orina?",
-      "respuesta_correcta": "A",
-      "justificacion": "El urocromo.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "946",
-      "pagina_impresa": "918",
-      "dificultad": "medio",
-      "opcion_a": "El urocromo.",
-      "opcion_b": "El peristaltismo.",
-      "opcion_c": "La nefrona.",
-      "opcion_d": "El detrusor."
-    },
-    {
-      "content_id": "morfo-23-024",
-      "materia": "MORFOFUNCION",
-      "tema": "aparato urinario",
-      "numero_pregunta": 26,
-      "pregunta": "¿Qué prueba estima el volumen de plasma depurado de una sustancia por minuto?",
-      "respuesta_correcta": "B",
-      "justificacion": "La depuración renal.",
-      "fuente": "Saladin · Anatomía y fisiología",
+      "justificacion": "La depuración renal expresa cuántos mililitros de plasma quedan libres del soluto por minuto.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
       "paginas_pdf": "948",
       "pagina_impresa": "920",
       "dificultad": "medio",
-      "opcion_a": "La rama descendente.",
-      "opcion_b": "La depuración renal.",
-      "opcion_c": "Corteza y médula.",
-      "opcion_d": "La arteriola eferente."
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "El aparato urinario · Evaluación renal",
+          "page": 948,
+          "printed": 920,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-23",
+        "chapterNumber": 23,
+        "chapter": "El aparato urinario",
+        "section": "Evaluación renal",
+        "printedPages": [
+          920
+        ],
+        "pdfPages": [
+          948
+        ]
+      },
+      "opcion_a": "Secreción tubular",
+      "opcion_b": "Reabsorción tubular",
+      "opcion_c": "Depuración renal",
+      "opcion_d": "Filtración glomerular"
     },
     {
-      "content_id": "morfo-23-030",
+      "content_id": "evaluacion:medicina-oficial-morfo-23-ampliacion-01-umss",
       "materia": "MORFOFUNCION",
       "tema": "aparato urinario",
-      "numero_pregunta": 27,
-      "pregunta": "¿Qué movimiento impulsa la orina por los uréteres?",
-      "respuesta_correcta": "D",
-      "justificacion": "El peristaltismo.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "949",
-      "pagina_impresa": "921",
-      "dificultad": "medio",
-      "opcion_a": "La nefrona.",
-      "opcion_b": "El urocromo.",
-      "opcion_c": "La parasimpática.",
-      "opcion_d": "El peristaltismo."
-    },
-    {
-      "content_id": "morfo-23-027",
-      "materia": "MORFOFUNCION",
-      "tema": "aparato urinario",
-      "numero_pregunta": 28,
-      "pregunta": "¿Qué músculo forma la pared de la vejiga urinaria?",
-      "respuesta_correcta": "D",
-      "justificacion": "El detrusor.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "950",
-      "pagina_impresa": "922",
-      "dificultad": "medio",
-      "opcion_a": "El externo.",
-      "opcion_b": "El urocromo.",
-      "opcion_c": "La nefrona.",
-      "opcion_d": "El detrusor."
-    },
-    {
-      "content_id": "morfo-23-028",
-      "materia": "MORFOFUNCION",
-      "tema": "aparato urinario",
-      "numero_pregunta": 29,
-      "pregunta": "¿Qué esfínter uretral está bajo control voluntario?",
+      "numero_pregunta": 5,
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. El corpúsculo renal se compone del asa de la nefrona y del túbulo distal.\n2. Los podocitos forman parte de la capa de la cápsula aplicada a los capilares del glomérulo.",
       "respuesta_correcta": "B",
-      "justificacion": "El externo.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "950",
-      "pagina_impresa": "922",
-      "dificultad": "medio",
-      "opcion_a": "El detrusor.",
-      "opcion_b": "El externo.",
-      "opcion_c": "El urocromo.",
-      "opcion_d": "La nefrona."
+      "justificacion": "1. Incorrecta. Sus partes son el glomérulo y la cápsula glomerular.\n2. Correcta. Son células de la capa visceral y sus prolongaciones participan en la filtración.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "929, 930",
+      "pagina_impresa": "901, 902",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "El aparato urinario · Nefrona / Filtración glomerular",
+          "page": 929,
+          "printed": 901,
+          "marks": []
+        },
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "El aparato urinario · Nefrona / Filtración glomerular",
+          "page": 930,
+          "printed": 902,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-23",
+        "chapterNumber": 23,
+        "chapter": "El aparato urinario",
+        "section": "Nefrona / Filtración glomerular",
+        "printedPages": [
+          901,
+          902
+        ],
+        "pdfPages": [
+          929,
+          930
+        ],
+        "statements": [
+          {
+            "pdfPage": 929,
+            "printedPage": 901,
+            "section": "Nefrona",
+            "cardId": "morfo-23-004"
+          },
+          {
+            "pdfPage": 930,
+            "printedPage": 902,
+            "section": "Filtración glomerular",
+            "cardId": "morfo-23-008"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. Sus partes son el glomérulo y la cápsula glomerular. 2. Correcta. Son células de la capa visceral y sus prolongaciones participan en la filtración.",
+        "B": "Solo la afirmación 2 es correcta.",
+        "C": "1. Incorrecta. Sus partes son el glomérulo y la cápsula glomerular.",
+        "D": "2. Correcta. Son células de la capa visceral y sus prolongaciones participan en la filtración."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "morfo-23-029",
+      "content_id": "evaluacion:medicina-oficial-morfo-23-ampliacion-02-umss",
       "materia": "MORFOFUNCION",
       "tema": "aparato urinario",
-      "numero_pregunta": 30,
-      "pregunta": "¿Qué división autónoma contrae el detrusor durante la micción?",
+      "numero_pregunta": 6,
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Antes de llegar al espacio capsular, el líquido filtrado atraviesa el endotelio, la membrana basal y las hendiduras entre pedicelos.\n2. Los eritrocitos atraviesan normalmente la barrera glomerular junto con las proteínas plasmáticas de mayor tamaño.",
+      "respuesta_correcta": "A",
+      "justificacion": "1. Correcta. Esas capas constituyen la barrera glomerular a lo largo de la vía de filtración.\n2. Incorrecta. La barrera retiene las células y la mayor parte de las proteínas.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "933",
+      "pagina_impresa": "905",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "El aparato urinario · 23.3 Filtro glomerular / Filtración glomerular",
+          "page": 933,
+          "printed": 905,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-23",
+        "chapterNumber": 23,
+        "chapter": "El aparato urinario",
+        "section": "23.3 Filtro glomerular / Filtración glomerular",
+        "printedPages": [
+          905
+        ],
+        "pdfPages": [
+          933
+        ],
+        "statements": [
+          {
+            "pdfPage": 933,
+            "printedPage": 905,
+            "section": "23.3 Filtro glomerular",
+            "anchor": "Los pedículos tienen ranuras de filtración"
+          },
+          {
+            "pdfPage": 933,
+            "printedPage": 905,
+            "section": "Filtración glomerular",
+            "cardId": "morfo-23-010"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "Solo la afirmación 1 es correcta.",
+        "B": "1. Correcta. Esas capas constituyen la barrera glomerular a lo largo de la vía de filtración. 2. Incorrecta. La barrera retiene las células y la mayor parte de las proteínas.",
+        "C": "2. Incorrecta. La barrera retiene las células y la mayor parte de las proteínas.",
+        "D": "1. Correcta. Esas capas constituyen la barrera glomerular a lo largo de la vía de filtración."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
+    },
+    {
+      "content_id": "evaluacion:medicina-oficial-morfo-23-ampliacion-03-umss",
+      "materia": "MORFOFUNCION",
+      "tema": "aparato urinario",
+      "numero_pregunta": 7,
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. El segmento que recupera la mayor fracción de agua y solutos filtrados es el túbulo contorneado proximal.\n2. La rama ascendente gruesa puede reabsorber sales sin que el agua la siga a través de su pared.",
+      "respuesta_correcta": "C",
+      "justificacion": "1. Correcta. Es el primer segmento tubular y tiene una gran capacidad de reabsorción.\n2. Correcta. La pared de esa rama es poco permeable al agua mientras transporta sales.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "939, 941",
+      "pagina_impresa": "911, 913",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "El aparato urinario · Reabsorción / Concentración urinaria",
+          "page": 939,
+          "printed": 911,
+          "marks": []
+        },
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "El aparato urinario · Reabsorción / Concentración urinaria",
+          "page": 941,
+          "printed": 913,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-23",
+        "chapterNumber": 23,
+        "chapter": "El aparato urinario",
+        "section": "Reabsorción / Concentración urinaria",
+        "printedPages": [
+          911,
+          913
+        ],
+        "pdfPages": [
+          939,
+          941
+        ],
+        "statements": [
+          {
+            "pdfPage": 939,
+            "printedPage": 911,
+            "section": "Reabsorción",
+            "cardId": "morfo-23-015"
+          },
+          {
+            "pdfPage": 941,
+            "printedPage": 913,
+            "section": "Concentración urinaria",
+            "cardId": "morfo-23-018"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "2. Correcta. La pared de esa rama es poco permeable al agua mientras transporta sales.",
+        "B": "1. Correcta. Es el primer segmento tubular y tiene una gran capacidad de reabsorción.",
+        "C": "Ambas afirmaciones son correctas.",
+        "D": "1. Correcta. Es el primer segmento tubular y tiene una gran capacidad de reabsorción. 2. Correcta. La pared de esa rama es poco permeable al agua mientras transporta sales."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
+    },
+    {
+      "content_id": "evaluacion:medicina-oficial-morfo-23-ampliacion-04-umss",
+      "materia": "MORFOFUNCION",
+      "tema": "aparato urinario",
+      "numero_pregunta": 8,
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. La mácula densa vierte renina, mientras que las células yuxtaglomerulares detectan el NaCl tubular.\n2. El esfínter uretral externo está bajo control exclusivamente involuntario.",
       "respuesta_correcta": "D",
-      "justificacion": "La parasimpática.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "951",
-      "pagina_impresa": "923",
-      "dificultad": "medio",
-      "opcion_a": "Corteza y médula.",
-      "opcion_b": "La aldosterona.",
-      "opcion_c": "El peristaltismo.",
-      "opcion_d": "La parasimpática."
+      "justificacion": "1. Incorrecta. La renina procede de las células yuxtaglomerulares. La mácula densa monitoriza el NaCl tubular.\n2. Incorrecta. El externo puede controlarse voluntariamente.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "937, 950",
+      "pagina_impresa": "909, 922",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "El aparato urinario · Aparato yuxtaglomerular / Micción",
+          "page": 937,
+          "printed": 909,
+          "marks": []
+        },
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "El aparato urinario · Aparato yuxtaglomerular / Micción",
+          "page": 950,
+          "printed": 922,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-23",
+        "chapterNumber": 23,
+        "chapter": "El aparato urinario",
+        "section": "Aparato yuxtaglomerular / Micción",
+        "printedPages": [
+          909,
+          922
+        ],
+        "pdfPages": [
+          937,
+          950
+        ],
+        "statements": [
+          {
+            "pdfPage": 937,
+            "printedPage": 909,
+            "section": "Aparato yuxtaglomerular",
+            "cardId": "morfo-23-021"
+          },
+          {
+            "pdfPage": 950,
+            "printedPage": 922,
+            "section": "Micción",
+            "cardId": "morfo-23-028"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. La renina procede de las células yuxtaglomerulares. La mácula densa monitoriza el NaCl tubular.",
+        "B": "2. Incorrecta. El externo puede controlarse voluntariamente.",
+        "C": "1. Incorrecta. La renina procede de las células yuxtaglomerulares. La mácula densa monitoriza el NaCl tubular. 2. Incorrecta. El externo puede controlarse voluntariamente.",
+        "D": "Ninguna afirmación es correcta."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
+    },
+    {
+      "content_id": "evaluacion:banco-verificado:morfo-23:nefrona",
+      "materia": "MORFOFUNCION",
+      "tema": "aparato urinario",
+      "numero_pregunta": 9,
+      "pregunta": "Una lesión afecta el filtro capilar renal, pero conserva la cápsula que lo rodea. ¿Qué componente del corpúsculo está lesionado?",
+      "respuesta_correcta": "B",
+      "justificacion": "El glomérulo es la red capilar del corpúsculo renal. La cápsula glomerular la rodea, mientras que las arteriolas aportan y retiran sangre.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "929, 928",
+      "pagina_impresa": "901, 900",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 23 · Corpúsculo renal",
+          "page": 929,
+          "printed": 901,
+          "marks": [
+            [
+              0.2388,
+              0.8758,
+              0.1322,
+              0.0111
+            ]
+          ]
+        },
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 23 · Corpúsculo renal",
+          "page": 928,
+          "printed": 900,
+          "marks": [
+            [
+              0.1008,
+              0.6926,
+              0.1125,
+              0.0111
+            ],
+            [
+              0.2258,
+              0.7075,
+              0.1137,
+              0.0111
+            ]
+          ]
+        }
+      ],
+      "source": {
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-23"
+      },
+      "opcion_a": "Arteriola aferente.",
+      "opcion_b": "Glomérulo.",
+      "opcion_c": "Cápsula glomerular.",
+      "opcion_d": "Arteriola eferente."
     }
   ]
 }

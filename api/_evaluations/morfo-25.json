@@ -5,519 +5,493 @@
   "topic": "aparato digestivo",
   "title": "El aparato digestivo",
   "number": 25,
-  "count": 30,
-  "duration": 30,
+  "count": 9,
+  "duration": 9,
   "source": "Saladin · Anatomía y fisiología",
   "questions": [
     {
-      "content_id": "morfo-25-026",
+      "content_id": "evaluacion:medicina-oficial-morfo-25-intermedio-1",
       "materia": "MORFOFUNCION",
       "tema": "aparato digestivo",
       "numero_pregunta": 1,
-      "pregunta": "¿En qué forma se absorben principalmente los carbohidratos?",
-      "respuesta_correcta": "A",
-      "justificacion": "Como monosacáridos.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "982",
-      "pagina_impresa": "954",
+      "pregunta": "Se observa que el almidón empieza a degradarse mientras el alimento aún está en la boca. Se busca la sustancia salival responsable.\n¿Qué opción corresponde al caso?",
+      "respuesta_correcta": "B",
+      "justificacion": "La amilasa de la saliva empieza a hidrolizar el almidón durante la digestión oral.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "990",
+      "pagina_impresa": "962",
       "dificultad": "medio",
-      "opcion_a": "Como monosacáridos.",
-      "opcion_b": "La colecistocinina.",
-      "opcion_c": "El plexo mientérico.",
-      "opcion_d": "La secretina."
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "El aparato digestivo · Boca",
+          "page": 990,
+          "printed": 962,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-25",
+        "chapterNumber": 25,
+        "chapter": "El aparato digestivo",
+        "section": "Boca",
+        "printedPages": [
+          962
+        ],
+        "pdfPages": [
+          990
+        ]
+      },
+      "opcion_a": "Lipasa pancreática",
+      "opcion_b": "Amilasa salival",
+      "opcion_c": "Sales biliares",
+      "opcion_d": "Pepsina"
     },
     {
-      "content_id": "morfo-25-001",
+      "content_id": "evaluacion:medicina-oficial-morfo-25-intermedio-2",
       "materia": "MORFOFUNCION",
       "tema": "aparato digestivo",
       "numero_pregunta": 2,
-      "pregunta": "¿Cuáles son las cuatro capas generales del tubo digestivo, desde la luz hacia fuera?",
-      "respuesta_correcta": "A",
-      "justificacion": "Mucosa → submucosa → muscular externa → serosa.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "983",
-      "pagina_impresa": "955",
+      "pregunta": "Un sustrato proteico se fragmenta en el estómago. Se identifica la enzima activa, no su precursor ni una enzima para grasas.\n¿Qué opción corresponde al caso?",
+      "respuesta_correcta": "C",
+      "justificacion": "La pepsina activa comienza la digestión de proteínas en el estómago.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "997",
+      "pagina_impresa": "969",
       "dificultad": "medio",
-      "opcion_a": "Mucosa → submucosa → muscular externa → serosa.",
-      "opcion_b": "Espasmo vascular → tapón plaquetario → coagulación.",
-      "opcion_c": "Fase folicular → ovulación → fase lútea.",
-      "opcion_d": "Zona glomerulosa → fasciculada → reticular."
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "El aparato digestivo · Estómago",
+          "page": 997,
+          "printed": 969,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-25",
+        "chapterNumber": 25,
+        "chapter": "El aparato digestivo",
+        "section": "Estómago",
+        "printedPages": [
+          969
+        ],
+        "pdfPages": [
+          997
+        ]
+      },
+      "opcion_a": "Lipasa pancreática",
+      "opcion_b": "Sales biliares",
+      "opcion_c": "Pepsina",
+      "opcion_d": "Amilasa salival"
     },
     {
-      "content_id": "morfo-25-002",
+      "content_id": "evaluacion:medicina-oficial-morfo-25-intermedio-3",
       "materia": "MORFOFUNCION",
       "tema": "aparato digestivo",
       "numero_pregunta": 3,
-      "pregunta": "¿Qué plexo regula principalmente la motilidad del tubo digestivo?",
-      "respuesta_correcta": "B",
-      "justificacion": "El plexo mientérico.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "984",
-      "pagina_impresa": "956",
+      "pregunta": "En el intestino, los triglicéridos ya dispersos se someten a hidrólisis por una enzima que llega desde el páncreas.\n¿Qué opción corresponde al caso?",
+      "respuesta_correcta": "A",
+      "justificacion": "La lipasa pancreática hidroliza triglicéridos en el intestino.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "1007",
+      "pagina_impresa": "979",
       "dificultad": "medio",
-      "opcion_a": "Como monosacáridos.",
-      "opcion_b": "El plexo mientérico.",
-      "opcion_c": "Proteínas.",
-      "opcion_d": "La secretina."
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "El aparato digestivo · Páncreas exocrino",
+          "page": 1007,
+          "printed": 979,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-25",
+        "chapterNumber": 25,
+        "chapter": "El aparato digestivo",
+        "section": "Páncreas exocrino",
+        "printedPages": [
+          979
+        ],
+        "pdfPages": [
+          1007
+        ]
+      },
+      "opcion_a": "Lipasa pancreática",
+      "opcion_b": "Pepsina",
+      "opcion_c": "Amilasa salival",
+      "opcion_d": "Sales biliares"
     },
     {
-      "content_id": "morfo-25-003",
+      "content_id": "evaluacion:medicina-oficial-morfo-25-intermedio-4",
       "materia": "MORFOFUNCION",
       "tema": "aparato digestivo",
       "numero_pregunta": 4,
-      "pregunta": "¿Qué plexo regula principalmente secreción y flujo sanguíneo de la mucosa?",
-      "respuesta_correcta": "B",
-      "justificacion": "El plexo submucoso.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "984",
-      "pagina_impresa": "956",
+      "pregunta": "Las gotas grandes de grasa se dispersan en otras más pequeñas. El paso observado es emulsificación, sin ruptura enzimática de los triglicéridos.\n¿Qué opción corresponde al caso?",
+      "respuesta_correcta": "C",
+      "justificacion": "Las sales biliares dispersan las grasas en gotas pequeñas. Esa emulsificación facilita la acción posterior de la lipasa.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "1015",
+      "pagina_impresa": "987",
       "dificultad": "medio",
-      "opcion_a": "El bicarbonato.",
-      "opcion_b": "El plexo submucoso.",
-      "opcion_c": "Como monosacáridos.",
-      "opcion_d": "La secretina."
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "El aparato digestivo · Digestión de lípidos",
+          "page": 1015,
+          "printed": 987,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-25",
+        "chapterNumber": 25,
+        "chapter": "El aparato digestivo",
+        "section": "Digestión de lípidos",
+        "printedPages": [
+          987
+        ],
+        "pdfPages": [
+          1015
+        ]
+      },
+      "opcion_a": "Pepsina",
+      "opcion_b": "Amilasa salival",
+      "opcion_c": "Sales biliares",
+      "opcion_d": "Lipasa pancreática"
     },
     {
-      "content_id": "morfo-25-023",
+      "content_id": "evaluacion:medicina-oficial-morfo-25-ampliacion-01-umss",
       "materia": "MORFOFUNCION",
       "tema": "aparato digestivo",
       "numero_pregunta": 5,
-      "pregunta": "¿Qué hormona estimula principalmente la secreción pancreática de bicarbonato?",
-      "respuesta_correcta": "A",
-      "justificacion": "La secretina.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "985",
-      "pagina_impresa": "957",
-      "dificultad": "medio",
-      "opcion_a": "La secretina.",
-      "opcion_b": "La colecistocinina.",
-      "opcion_c": "El bicarbonato.",
-      "opcion_d": "El plexo submucoso."
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. El plexo mientérico regula la secreción mucosa como función principal y apenas participa en la motilidad.\n2. El plexo submucoso influye sobre secreciones y circulación local de la mucosa.",
+      "respuesta_correcta": "B",
+      "justificacion": "1. Incorrecta. El plexo mientérico interviene principalmente en el control de la motilidad.\n2. Correcta. Su función se vincula a la actividad de la mucosa.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "984",
+      "pagina_impresa": "956",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "El aparato digestivo · Control digestivo",
+          "page": 984,
+          "printed": 956,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-25",
+        "chapterNumber": 25,
+        "chapter": "El aparato digestivo",
+        "section": "Control digestivo",
+        "printedPages": [
+          956
+        ],
+        "pdfPages": [
+          984
+        ],
+        "statements": [
+          {
+            "pdfPage": 984,
+            "printedPage": 956,
+            "section": "Control digestivo",
+            "cardId": "morfo-25-002"
+          },
+          {
+            "pdfPage": 984,
+            "printedPage": 956,
+            "section": "Control digestivo",
+            "cardId": "morfo-25-003"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. El plexo mientérico interviene principalmente en el control de la motilidad. 2. Correcta. Su función se vincula a la actividad de la mucosa.",
+        "B": "Solo la afirmación 2 es correcta.",
+        "C": "1. Incorrecta. El plexo mientérico interviene principalmente en el control de la motilidad.",
+        "D": "2. Correcta. Su función se vincula a la actividad de la mucosa."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "morfo-25-006",
+      "content_id": "evaluacion:medicina-oficial-morfo-25-ampliacion-02-umss",
       "materia": "MORFOFUNCION",
       "tema": "aparato digestivo",
       "numero_pregunta": 6,
-      "pregunta": "¿Qué enzima salival inicia la digestión del almidón?",
-      "respuesta_correcta": "B",
-      "justificacion": "La amilasa salival.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "990",
-      "pagina_impresa": "962",
-      "dificultad": "medio",
-      "opcion_a": "La colecistocinina.",
-      "opcion_b": "La amilasa salival.",
-      "opcion_c": "Como monosacáridos.",
-      "opcion_d": "La lipasa pancreática."
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Las células parietales del estómago secretan tanto ácido clorhídrico como factor intrínseco.\n2. Las células principales son la fuente directa de ácido clorhídrico que activa sus productos.",
+      "respuesta_correcta": "A",
+      "justificacion": "1. Correcta. La misma población de células participa en la acidificación y aporta factor intrínseco.\n2. Incorrecta. Las principales liberan pepsinógeno. El ácido procede de las células parietales.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "995",
+      "pagina_impresa": "967",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "El aparato digestivo · Estómago",
+          "page": 995,
+          "printed": 967,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-25",
+        "chapterNumber": 25,
+        "chapter": "El aparato digestivo",
+        "section": "Estómago",
+        "printedPages": [
+          967
+        ],
+        "pdfPages": [
+          995
+        ],
+        "statements": [
+          {
+            "pdfPage": 995,
+            "printedPage": 967,
+            "section": "Estómago",
+            "cardId": "morfo-25-009"
+          },
+          {
+            "pdfPage": 995,
+            "printedPage": 967,
+            "section": "Estómago",
+            "cardId": "morfo-25-010"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "Solo la afirmación 1 es correcta.",
+        "B": "1. Correcta. La misma población de células participa en la acidificación y aporta factor intrínseco. 2. Incorrecta. Las principales liberan pepsinógeno. El ácido procede de las células parietales.",
+        "C": "2. Incorrecta. Las principales liberan pepsinógeno. El ácido procede de las células parietales.",
+        "D": "1. Correcta. La misma población de células participa en la acidificación y aporta factor intrínseco."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "morfo-25-007",
+      "content_id": "evaluacion:medicina-oficial-morfo-25-ampliacion-03-umss",
       "materia": "MORFOFUNCION",
       "tema": "aparato digestivo",
       "numero_pregunta": 7,
-      "pregunta": "¿Qué glándulas salivales mayores existen?",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. La secretina actúa principalmente contrayendo la vesícula biliar para liberar bilis.\n2. La colecistocinina inhibe las enzimas pancreáticas al mismo tiempo que relaja la vesícula biliar.",
       "respuesta_correcta": "D",
-      "justificacion": "Parótidas, submandibulares y sublinguales.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "990",
-      "pagina_impresa": "962",
-      "dificultad": "medio",
-      "opcion_a": "Duodeno → yeyuno → íleon.",
-      "opcion_b": "Pliegues circulares, vellosidades y microvellosidades.",
-      "opcion_c": "La enterocinasa (enteropeptidasa).",
-      "opcion_d": "Parótidas, submandibulares y sublinguales."
+      "justificacion": "1. Incorrecta. La secretina estimula la secreción pancreática de bicarbonato.\n2. Incorrecta. Estimula la secreción enzimática y favorece la contracción de la vesícula.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "985, 1007",
+      "pagina_impresa": "957, 979",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "El aparato digestivo · Control hormonal",
+          "page": 985,
+          "printed": 957,
+          "marks": []
+        },
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "El aparato digestivo · Control hormonal",
+          "page": 1007,
+          "printed": 979,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-25",
+        "chapterNumber": 25,
+        "chapter": "El aparato digestivo",
+        "section": "Control hormonal",
+        "printedPages": [
+          957,
+          979
+        ],
+        "pdfPages": [
+          985,
+          1007
+        ],
+        "statements": [
+          {
+            "pdfPage": 985,
+            "printedPage": 957,
+            "section": "Control hormonal",
+            "cardId": "morfo-25-023"
+          },
+          {
+            "pdfPage": 1007,
+            "printedPage": 979,
+            "section": "Control hormonal",
+            "cardId": "morfo-25-024"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. La secretina estimula la secreción pancreática de bicarbonato.",
+        "B": "2. Incorrecta. Estimula la secreción enzimática y favorece la contracción de la vesícula.",
+        "C": "1. Incorrecta. La secretina estimula la secreción pancreática de bicarbonato. 2. Incorrecta. Estimula la secreción enzimática y favorece la contracción de la vesícula.",
+        "D": "Ninguna afirmación es correcta."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "morfo-25-008",
+      "content_id": "evaluacion:medicina-oficial-morfo-25-ampliacion-04-umss",
       "materia": "MORFOFUNCION",
       "tema": "aparato digestivo",
       "numero_pregunta": 8,
-      "pregunta": "¿Qué fase de la deglución es voluntaria?",
-      "respuesta_correcta": "D",
-      "justificacion": "La fase bucal.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "991",
-      "pagina_impresa": "963",
-      "dificultad": "medio",
-      "opcion_a": "El bicarbonato.",
-      "opcion_b": "La gastrina.",
-      "opcion_c": "La secretina.",
-      "opcion_d": "La fase bucal."
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Una parte de los lípidos absorbidos sale del intestino en quilomicrones a través de la linfa.\n2. El íleon participa en recuperar sales biliares que pueden regresar al hígado.",
+      "respuesta_correcta": "C",
+      "justificacion": "1. Correcta. Los quilomicrones empaquetados en los enterocitos entran en los vasos linfáticos intestinales.\n2. Correcta. La absorción ileal es parte de la circulación enterohepática de las sales biliares.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "1006, 1015",
+      "pagina_impresa": "978, 987",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "El aparato digestivo · Absorción / 25.4 Circulación enterohepática",
+          "page": 1006,
+          "printed": 978,
+          "marks": []
+        },
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "El aparato digestivo · Absorción / 25.4 Circulación enterohepática",
+          "page": 1015,
+          "printed": 987,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-25",
+        "chapterNumber": 25,
+        "chapter": "El aparato digestivo",
+        "section": "Absorción / 25.4 Circulación enterohepática",
+        "printedPages": [
+          978,
+          987
+        ],
+        "pdfPages": [
+          1006,
+          1015
+        ],
+        "statements": [
+          {
+            "pdfPage": 1015,
+            "printedPage": 987,
+            "section": "Absorción",
+            "cardId": "morfo-25-027"
+          },
+          {
+            "pdfPage": 1006,
+            "printedPage": 978,
+            "section": "25.4 Circulación enterohepática",
+            "anchor": "los ácidos biliares se reabsorbe en el íleon"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "2. Correcta. La absorción ileal es parte de la circulación enterohepática de las sales biliares.",
+        "B": "1. Correcta. Los quilomicrones empaquetados en los enterocitos entran en los vasos linfáticos intestinales.",
+        "C": "Ambas afirmaciones son correctas.",
+        "D": "1. Correcta. Los quilomicrones empaquetados en los enterocitos entran en los vasos linfáticos intestinales. 2. Correcta. La absorción ileal es parte de la circulación enterohepática de las sales biliares."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "morfo-25-009",
+      "content_id": "evaluacion:banco-verificado:morfo-25:plexos",
       "materia": "MORFOFUNCION",
       "tema": "aparato digestivo",
       "numero_pregunta": 9,
-      "pregunta": "¿Qué células gástricas secretan ácido clorhídrico y factor intrínseco?",
-      "respuesta_correcta": "D",
-      "justificacion": "Las células parietales.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "995",
-      "pagina_impresa": "967",
-      "dificultad": "medio",
-      "opcion_a": "El bicarbonato.",
-      "opcion_b": "La lipasa pancreática.",
-      "opcion_c": "Duodeno → yeyuno → íleon.",
-      "opcion_d": "Las células parietales."
-    },
-    {
-      "content_id": "morfo-25-010",
-      "materia": "MORFOFUNCION",
-      "tema": "aparato digestivo",
-      "numero_pregunta": 10,
-      "pregunta": "¿Qué células gástricas secretan pepsinógeno?",
-      "respuesta_correcta": "D",
-      "justificacion": "Las células principales.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "995",
-      "pagina_impresa": "967",
-      "dificultad": "medio",
-      "opcion_a": "Duodeno → yeyuno → íleon.",
-      "opcion_b": "La gastrina.",
-      "opcion_c": "El esfínter anal externo.",
-      "opcion_d": "Las células principales."
-    },
-    {
-      "content_id": "morfo-25-011",
-      "materia": "MORFOFUNCION",
-      "tema": "aparato digestivo",
-      "numero_pregunta": 11,
-      "pregunta": "¿Qué convierte al pepsinógeno en pepsina?",
-      "respuesta_correcta": "D",
-      "justificacion": "El ácido gástrico y la propia pepsina.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "997",
-      "pagina_impresa": "969",
-      "dificultad": "medio",
-      "opcion_a": "Parótidas, submandibulares y sublinguales.",
-      "opcion_b": "La enterocinasa (enteropeptidasa).",
-      "opcion_c": "Las células caliciformes.",
-      "opcion_d": "El ácido gástrico y la propia pepsina."
-    },
-    {
-      "content_id": "morfo-25-012",
-      "materia": "MORFOFUNCION",
-      "tema": "aparato digestivo",
-      "numero_pregunta": 12,
-      "pregunta": "¿Qué digiere principalmente la pepsina?",
-      "respuesta_correcta": "B",
-      "justificacion": "Proteínas.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "997",
-      "pagina_impresa": "969",
-      "dificultad": "medio",
-      "opcion_a": "Como monosacáridos.",
-      "opcion_b": "Proteínas.",
-      "opcion_c": "La lipasa pancreática.",
-      "opcion_d": "La secretina."
-    },
-    {
-      "content_id": "morfo-25-014",
-      "materia": "MORFOFUNCION",
-      "tema": "aparato digestivo",
-      "numero_pregunta": 13,
-      "pregunta": "¿Qué hormona gástrica estimula secreción ácida y motilidad?",
-      "respuesta_correcta": "A",
-      "justificacion": "La gastrina.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "1000",
-      "pagina_impresa": "972",
-      "dificultad": "medio",
-      "opcion_a": "La gastrina.",
-      "opcion_b": "La colecistocinina.",
-      "opcion_c": "El bicarbonato.",
-      "opcion_d": "La secretina."
-    },
-    {
-      "content_id": "morfo-25-018",
-      "materia": "MORFOFUNCION",
-      "tema": "aparato digestivo",
-      "numero_pregunta": 14,
-      "pregunta": "¿Qué órgano produce la bilis?",
-      "respuesta_correcta": "A",
-      "justificacion": "El hígado.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "1002",
-      "pagina_impresa": "974",
-      "dificultad": "medio",
-      "opcion_a": "El hígado.",
-      "opcion_b": "La gastrina.",
-      "opcion_c": "El íleon.",
-      "opcion_d": "Proteínas."
-    },
-    {
-      "content_id": "morfo-25-019",
-      "materia": "MORFOFUNCION",
-      "tema": "aparato digestivo",
-      "numero_pregunta": 15,
-      "pregunta": "¿Qué órgano almacena y concentra la bilis?",
-      "respuesta_correcta": "B",
-      "justificacion": "La vesícula biliar.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "1005",
-      "pagina_impresa": "977",
-      "dificultad": "medio",
-      "opcion_a": "Como monosacáridos.",
-      "opcion_b": "La vesícula biliar.",
-      "opcion_c": "La colecistocinina.",
-      "opcion_d": "La amilasa salival."
-    },
-    {
-      "content_id": "morfo-25-028",
-      "materia": "MORFOFUNCION",
-      "tema": "aparato digestivo",
-      "numero_pregunta": 16,
-      "pregunta": "¿Qué porción intestinal absorbe las sales biliares para su recirculación?",
-      "respuesta_correcta": "B",
-      "justificacion": "El íleon.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "1005",
-      "pagina_impresa": "977",
-      "dificultad": "medio",
-      "opcion_a": "La gastrina.",
-      "opcion_b": "El íleon.",
-      "opcion_c": "Proteínas.",
-      "opcion_d": "La secretina."
-    },
-    {
-      "content_id": "morfo-25-021",
-      "materia": "MORFOFUNCION",
-      "tema": "aparato digestivo",
-      "numero_pregunta": 17,
-      "pregunta": "¿Qué enzima pancreática digiere triglicéridos?",
-      "respuesta_correcta": "A",
-      "justificacion": "La lipasa pancreática.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "1007",
-      "pagina_impresa": "979",
-      "dificultad": "medio",
-      "opcion_a": "La lipasa pancreática.",
-      "opcion_b": "La colecistocinina.",
-      "opcion_c": "La amilasa salival.",
-      "opcion_d": "El bicarbonato."
-    },
-    {
-      "content_id": "morfo-25-022",
-      "materia": "MORFOFUNCION",
-      "tema": "aparato digestivo",
-      "numero_pregunta": 18,
-      "pregunta": "¿Qué secreción pancreática neutraliza el ácido del quimo?",
-      "respuesta_correcta": "A",
-      "justificacion": "El bicarbonato.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "1007",
-      "pagina_impresa": "979",
-      "dificultad": "medio",
-      "opcion_a": "El bicarbonato.",
-      "opcion_b": "La lipasa pancreática.",
-      "opcion_c": "La gastrina.",
-      "opcion_d": "La colecistocinina."
-    },
-    {
-      "content_id": "morfo-25-024",
-      "materia": "MORFOFUNCION",
-      "tema": "aparato digestivo",
-      "numero_pregunta": 19,
-      "pregunta": "¿Qué hormona estimula enzimas pancreáticas y contracción de la vesícula?",
-      "respuesta_correcta": "D",
-      "justificacion": "La colecistocinina.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "1007",
-      "pagina_impresa": "979",
-      "dificultad": "medio",
-      "opcion_a": "La lipasa pancreática.",
-      "opcion_b": "La gastrina.",
-      "opcion_c": "La amilasa salival.",
-      "opcion_d": "La colecistocinina."
-    },
-    {
-      "content_id": "morfo-25-025",
-      "materia": "MORFOFUNCION",
-      "tema": "aparato digestivo",
-      "numero_pregunta": 20,
-      "pregunta": "¿Qué enzima intestinal activa el tripsinógeno?",
+      "pregunta": "Se altera la secreción de la mucosa intestinal sin afectar en primer término la motilidad. ¿Qué plexo corresponde a la función alterada?",
       "respuesta_correcta": "C",
-      "justificacion": "La enterocinasa (enteropeptidasa).",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "1007",
-      "pagina_impresa": "979",
-      "dificultad": "medio",
-      "opcion_a": "La amilasa salival.",
-      "opcion_b": "La colecistocinina.",
-      "opcion_c": "La enterocinasa (enteropeptidasa).",
-      "opcion_d": "Pliegues circulares, vellosidades y microvellosidades."
-    },
-    {
-      "content_id": "morfo-25-015",
-      "materia": "MORFOFUNCION",
-      "tema": "aparato digestivo",
-      "numero_pregunta": 21,
-      "pregunta": "¿Cuál es el orden de las porciones del intestino delgado?",
-      "respuesta_correcta": "C",
-      "justificacion": "Duodeno → yeyuno → íleon.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "1008",
-      "pagina_impresa": "980",
-      "dificultad": "medio",
-      "opcion_a": "Las células caliciformes.",
-      "opcion_b": "Los quilomicrones.",
-      "opcion_c": "Duodeno → yeyuno → íleon.",
-      "opcion_d": "El esfínter anal externo."
-    },
-    {
-      "content_id": "morfo-25-016",
-      "materia": "MORFOFUNCION",
-      "tema": "aparato digestivo",
-      "numero_pregunta": 22,
-      "pregunta": "¿Qué estructuras aumentan la superficie de absorción intestinal?",
-      "respuesta_correcta": "C",
-      "justificacion": "Pliegues circulares, vellosidades y microvellosidades.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "1009",
-      "pagina_impresa": "981",
-      "dificultad": "medio",
-      "opcion_a": "Las células caliciformes.",
-      "opcion_b": "Parótidas, submandibulares y sublinguales.",
-      "opcion_c": "Pliegues circulares, vellosidades y microvellosidades.",
-      "opcion_d": "La enterocinasa (enteropeptidasa)."
-    },
-    {
-      "content_id": "morfo-25-004",
-      "materia": "MORFOFUNCION",
-      "tema": "aparato digestivo",
-      "numero_pregunta": 23,
-      "pregunta": "¿Qué es el peristaltismo?",
-      "respuesta_correcta": "D",
-      "justificacion": "Ondas de contracción que impulsan el contenido por el tubo digestivo.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "1011",
-      "pagina_impresa": "983",
-      "dificultad": "medio",
-      "opcion_a": "Proteínas que ayudan a proteger células frente a infecciones virales.",
-      "opcion_b": "Contracciones locales que mezclan el contenido intestinal.",
-      "opcion_c": "Cambios que permiten al espermatozoide adquirir capacidad fecundante.",
-      "opcion_d": "Ondas de contracción que impulsan el contenido por el tubo digestivo."
-    },
-    {
-      "content_id": "morfo-25-005",
-      "materia": "MORFOFUNCION",
-      "tema": "aparato digestivo",
-      "numero_pregunta": 24,
-      "pregunta": "¿Qué es la segmentación intestinal?",
-      "respuesta_correcta": "B",
-      "justificacion": "Contracciones locales que mezclan el contenido intestinal.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "1011",
-      "pagina_impresa": "983",
-      "dificultad": "medio",
-      "opcion_a": "Ondas de contracción que impulsan el contenido por el tubo digestivo.",
-      "opcion_b": "Contracciones locales que mezclan el contenido intestinal.",
-      "opcion_c": "Una serie de divisiones mitóticas sin aumento importante del tamaño total.",
-      "opcion_d": "El aire inspirado o espirado en una respiración tranquila."
-    },
-    {
-      "content_id": "morfo-25-013",
-      "materia": "MORFOFUNCION",
-      "tema": "aparato digestivo",
-      "numero_pregunta": 25,
-      "pregunta": "¿Qué vitamina necesita factor intrínseco para absorberse?",
-      "respuesta_correcta": "D",
-      "justificacion": "La vitamina B₁₂.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "1015",
-      "pagina_impresa": "987",
-      "dificultad": "medio",
-      "opcion_a": "Los pares 11 y 12.",
-      "opcion_b": "Los pares 1 a 7.",
-      "opcion_c": "7,35 a 7,45.",
-      "opcion_d": "La vitamina B₁₂."
-    },
-    {
-      "content_id": "morfo-25-020",
-      "materia": "MORFOFUNCION",
-      "tema": "aparato digestivo",
-      "numero_pregunta": 26,
-      "pregunta": "¿Qué función digestiva tienen las sales biliares?",
-      "respuesta_correcta": "A",
-      "justificacion": "Emulsionan grasas y facilitan su digestión y absorción.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "1015",
-      "pagina_impresa": "987",
-      "dificultad": "medio",
-      "opcion_a": "Emulsionan grasas y facilitan su digestión y absorción.",
-      "opcion_b": "Absorber agua y electrólitos y formar las heces.",
-      "opcion_c": "Conducen la excitación eléctrica al interior de la fibra.",
-      "opcion_d": "Conducen información sensitiva hacia el encéfalo."
-    },
-    {
-      "content_id": "morfo-25-027",
-      "materia": "MORFOFUNCION",
-      "tema": "aparato digestivo",
-      "numero_pregunta": 27,
-      "pregunta": "¿Qué partículas llevan lípidos absorbidos desde el intestino hacia la linfa?",
-      "respuesta_correcta": "D",
-      "justificacion": "Los quilomicrones.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "1015",
-      "pagina_impresa": "987",
-      "dificultad": "medio",
-      "opcion_a": "Duodeno → yeyuno → íleon.",
-      "opcion_b": "El plexo submucoso.",
-      "opcion_c": "Como monosacáridos.",
-      "opcion_d": "Los quilomicrones."
-    },
-    {
-      "content_id": "morfo-25-017",
-      "materia": "MORFOFUNCION",
-      "tema": "aparato digestivo",
-      "numero_pregunta": 28,
-      "pregunta": "¿Qué células intestinales secretan moco?",
-      "respuesta_correcta": "C",
-      "justificacion": "Las células caliciformes.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "1018",
-      "pagina_impresa": "990",
-      "dificultad": "medio",
-      "opcion_a": "El esfínter anal externo.",
-      "opcion_b": "Duodeno → yeyuno → íleon.",
-      "opcion_c": "Las células caliciformes.",
-      "opcion_d": "La lipasa pancreática."
-    },
-    {
-      "content_id": "morfo-25-029",
-      "materia": "MORFOFUNCION",
-      "tema": "aparato digestivo",
-      "numero_pregunta": 29,
-      "pregunta": "¿Cuál es la función digestiva principal del intestino grueso?",
-      "respuesta_correcta": "D",
-      "justificacion": "Absorber agua y electrólitos y formar las heces.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "1020",
-      "pagina_impresa": "992",
-      "dificultad": "medio",
-      "opcion_a": "Emulsionan grasas y facilitan su digestión y absorción.",
-      "opcion_b": "Ayuda a retener agua en el torrente sanguíneo.",
-      "opcion_c": "Conducen información sensitiva hacia el encéfalo.",
-      "opcion_d": "Absorber agua y electrólitos y formar las heces."
-    },
-    {
-      "content_id": "morfo-25-030",
-      "materia": "MORFOFUNCION",
-      "tema": "aparato digestivo",
-      "numero_pregunta": 30,
-      "pregunta": "¿Qué esfínter anal está bajo control voluntario?",
-      "respuesta_correcta": "D",
-      "justificacion": "El esfínter anal externo.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "1020",
-      "pagina_impresa": "992",
-      "dificultad": "medio",
-      "opcion_a": "Las células caliciformes.",
-      "opcion_b": "La lipasa pancreática.",
-      "opcion_c": "Duodeno → yeyuno → íleon.",
-      "opcion_d": "El esfínter anal externo."
+      "justificacion": "El plexo submucoso regula la secreción y el flujo de la mucosa. El mientérico se relaciona principalmente con la motilidad.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "984",
+      "pagina_impresa": "956",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 25 · Inervación del tubo digestivo",
+          "page": 984,
+          "printed": 956,
+          "marks": [
+            [
+              0.0636,
+              0.6523,
+              0.1135,
+              0.0111
+            ],
+            [
+              0.0825,
+              0.6968,
+              0.1135,
+              0.0111
+            ],
+            [
+              0.3563,
+              0.682,
+              0.1147,
+              0.0111
+            ],
+            [
+              0.3089,
+              0.7117,
+              0.1152,
+              0.0111
+            ]
+          ]
+        }
+      ],
+      "source": {
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-25"
+      },
+      "opcion_a": "Plexo celíaco.",
+      "opcion_b": "Plexo mesentérico superior.",
+      "opcion_c": "Plexo submucoso.",
+      "opcion_d": "Plexo mientérico."
     }
   ]
 }

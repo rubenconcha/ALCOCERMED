@@ -5,502 +5,487 @@
   "topic": "aparato reproductor femenino",
   "title": "Aparato reproductor femenino",
   "number": 28,
-  "count": 29,
-  "duration": 29,
+  "count": 9,
+  "duration": 9,
   "source": "Saladin · Anatomía y fisiología",
   "questions": [
     {
-      "content_id": "morfo-28-001",
+      "content_id": "evaluacion:medicina-oficial-morfo-28-intermedio-1",
       "materia": "MORFOFUNCION",
       "tema": "aparato reproductor femenino",
       "numero_pregunta": 1,
-      "pregunta": "¿Cuáles son las gónadas femeninas?",
-      "respuesta_correcta": "C",
-      "justificacion": "Los ovarios.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "1093",
-      "pagina_impresa": "1065",
+      "pregunta": "Se sigue un ciclo ovárico y se busca la señal cuyo pico precede y desencadena la liberación del ovocito.\n¿Qué opción corresponde al caso?",
+      "respuesta_correcta": "D",
+      "justificacion": "El pico de LH actúa sobre el folículo maduro y desencadena la liberación del ovocito.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "1108",
+      "pagina_impresa": "1080",
       "dificultad": "medio",
-      "opcion_a": "Perimetrio, miometrio y endometrio.",
-      "opcion_b": "Fase folicular → ovulación → fase lútea.",
-      "opcion_c": "Los ovarios.",
-      "opcion_d": "Dilatación → expulsión del bebé → expulsión de la placenta."
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Aparato reproductor femenino · Ciclo ovárico, ovulación",
+          "page": 1108,
+          "printed": 1080,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-28",
+        "chapterNumber": 28,
+        "chapter": "Aparato reproductor femenino",
+        "section": "Ciclo ovárico, ovulación",
+        "printedPages": [
+          1080
+        ],
+        "pdfPages": [
+          1108
+        ]
+      },
+      "opcion_a": "Gonadotropina coriónica humana (hCG)",
+      "opcion_b": "Estrógenos",
+      "opcion_c": "Progesterona",
+      "opcion_d": "Hormona luteinizante (LH)"
     },
     {
-      "content_id": "morfo-28-002",
+      "content_id": "evaluacion:medicina-oficial-morfo-28-intermedio-2",
       "materia": "MORFOFUNCION",
       "tema": "aparato reproductor femenino",
       "numero_pregunta": 2,
-      "pregunta": "¿Qué dos funciones principales tienen los ovarios?",
+      "pregunta": "Después de la ovulación, interesa la señal que promueve el cambio secretor del endometrio en lugar de su fase proliferativa.\n¿Qué opción corresponde al caso?",
       "respuesta_correcta": "D",
-      "justificacion": "Producir ovocitos y secretar hormonas sexuales.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "1093",
-      "pagina_impresa": "1065",
+      "justificacion": "La progesterona favorece que el endometrio pase a la fase secretora tras la ovulación.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "1111",
+      "pagina_impresa": "1083",
       "dificultad": "medio",
-      "opcion_a": "Disminuye, facilitando la liberación de oxígeno.",
-      "opcion_b": "Disminuye por debajo de la presión atmosférica.",
-      "opcion_c": "Aumentan la superficie celular para la absorción.",
-      "opcion_d": "Producir ovocitos y secretar hormonas sexuales."
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Aparato reproductor femenino · Ciclo uterino",
+          "page": 1111,
+          "printed": 1083,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-28",
+        "chapterNumber": 28,
+        "chapter": "Aparato reproductor femenino",
+        "section": "Ciclo uterino",
+        "printedPages": [
+          1083
+        ],
+        "pdfPages": [
+          1111
+        ]
+      },
+      "opcion_a": "Hormona luteinizante (LH)",
+      "opcion_b": "Estrógenos",
+      "opcion_c": "Gonadotropina coriónica humana (hCG)",
+      "opcion_d": "Progesterona"
     },
     {
-      "content_id": "morfo-28-003",
+      "content_id": "evaluacion:medicina-oficial-morfo-28-intermedio-3",
       "materia": "MORFOFUNCION",
       "tema": "aparato reproductor femenino",
       "numero_pregunta": 3,
-      "pregunta": "¿Qué estructura ovárica contiene un ovocito rodeado de células de sostén?",
+      "pregunta": "Se observa crecimiento del endometrio en la fase previa a la ovulación. Se pide la señal que favorece esa proliferación.\n¿Qué opción corresponde al caso?",
       "respuesta_correcta": "C",
-      "justificacion": "Un folículo ovárico.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "1093",
-      "pagina_impresa": "1065",
+      "justificacion": "Los estrógenos ováricos estimulan el crecimiento del endometrio en la fase proliferativa.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "1111",
+      "pagina_impresa": "1083",
       "dificultad": "medio",
-      "opcion_a": "La fecundación.",
-      "opcion_b": "Un ovocito secundario.",
-      "opcion_c": "Un folículo ovárico.",
-      "opcion_d": "Las fimbrias."
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Aparato reproductor femenino · Ciclo menstrual, fase proliferativa",
+          "page": 1111,
+          "printed": 1083,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-28",
+        "chapterNumber": 28,
+        "chapter": "Aparato reproductor femenino",
+        "section": "Ciclo menstrual, fase proliferativa",
+        "printedPages": [
+          1083
+        ],
+        "pdfPages": [
+          1111
+        ]
+      },
+      "opcion_a": "Gonadotropina coriónica humana (hCG)",
+      "opcion_b": "Hormona luteinizante (LH)",
+      "opcion_c": "Estrógenos",
+      "opcion_d": "Progesterona"
     },
     {
-      "content_id": "morfo-28-008",
+      "content_id": "evaluacion:medicina-oficial-morfo-28-intermedio-4",
       "materia": "MORFOFUNCION",
       "tema": "aparato reproductor femenino",
       "numero_pregunta": 4,
-      "pregunta": "¿Dónde ocurre habitualmente la fecundación?",
-      "respuesta_correcta": "B",
-      "justificacion": "En la ampolla de la trompa uterina.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "1095",
-      "pagina_impresa": "1067",
-      "dificultad": "medio",
-      "opcion_a": "En metafase II.",
-      "opcion_b": "En la ampolla de la trompa uterina.",
-      "opcion_c": "En la médula oblongada y el puente.",
-      "opcion_d": "En el cuerpo lúteo."
-    },
-    {
-      "content_id": "morfo-28-009",
-      "materia": "MORFOFUNCION",
-      "tema": "aparato reproductor femenino",
-      "numero_pregunta": 5,
-      "pregunta": "¿Qué estructuras ayudan a captar el ovocito hacia la trompa uterina?",
-      "respuesta_correcta": "A",
-      "justificacion": "Las fimbrias.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "1095",
-      "pagina_impresa": "1067",
-      "dificultad": "medio",
-      "opcion_a": "Las fimbrias.",
-      "opcion_b": "La fecundación.",
-      "opcion_c": "El miometrio.",
-      "opcion_d": "Un folículo ovárico."
-    },
-    {
-      "content_id": "morfo-28-010",
-      "materia": "MORFOFUNCION",
-      "tema": "aparato reproductor femenino",
-      "numero_pregunta": 6,
-      "pregunta": "¿Qué movimientos ayudan a transportar el ovocito por la trompa?",
-      "respuesta_correcta": "C",
-      "justificacion": "El batido ciliar y las contracciones musculares.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "1095",
-      "pagina_impresa": "1067",
-      "dificultad": "medio",
-      "opcion_a": "Las fimbrias.",
-      "opcion_b": "La caída de progesterona y estrógenos.",
-      "opcion_c": "El batido ciliar y las contracciones musculares.",
-      "opcion_d": "Involuciona y se transforma en cuerpo albo."
-    },
-    {
-      "content_id": "morfo-28-011",
-      "materia": "MORFOFUNCION",
-      "tema": "aparato reproductor femenino",
-      "numero_pregunta": 7,
-      "pregunta": "¿Cuáles son las tres capas de la pared uterina?",
+      "pregunta": "El cuerpo lúteo se conserva al inicio del embarazo. Se identifica la señal que evita su involución temprana en ese contexto.\n¿Qué opción corresponde al caso?",
       "respuesta_correcta": "D",
-      "justificacion": "Perimetrio, miometrio y endometrio.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "1097",
-      "pagina_impresa": "1069",
-      "dificultad": "medio",
-      "opcion_a": "Fase folicular → ovulación → fase lútea.",
-      "opcion_b": "Dilatación → expulsión del bebé → expulsión de la placenta.",
-      "opcion_c": "Los ovarios.",
-      "opcion_d": "Perimetrio, miometrio y endometrio."
-    },
-    {
-      "content_id": "morfo-28-012",
-      "materia": "MORFOFUNCION",
-      "tema": "aparato reproductor femenino",
-      "numero_pregunta": 8,
-      "pregunta": "¿Qué capa uterina se contrae durante el parto?",
-      "respuesta_correcta": "C",
-      "justificacion": "El miometrio.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "1097",
-      "pagina_impresa": "1069",
-      "dificultad": "medio",
-      "opcion_a": "Las fimbrias.",
-      "opcion_b": "La capa basal.",
-      "opcion_c": "El miometrio.",
-      "opcion_d": "Retroalimentación positiva."
-    },
-    {
-      "content_id": "morfo-28-014",
-      "materia": "MORFOFUNCION",
-      "tema": "aparato reproductor femenino",
-      "numero_pregunta": 9,
-      "pregunta": "¿Qué capa del endometrio regenera la capa funcional?",
-      "respuesta_correcta": "C",
-      "justificacion": "La capa basal.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "1097",
-      "pagina_impresa": "1069",
-      "dificultad": "medio",
-      "opcion_a": "La progesterona.",
-      "opcion_b": "El miometrio.",
-      "opcion_c": "La capa basal.",
-      "opcion_d": "Los estrógenos."
-    },
-    {
-      "content_id": "morfo-28-023",
-      "materia": "MORFOFUNCION",
-      "tema": "aparato reproductor femenino",
-      "numero_pregunta": 10,
-      "pregunta": "¿Qué es la menopausia?",
-      "respuesta_correcta": "C",
-      "justificacion": "El cese permanente de la menstruación por agotamiento de la actividad folicular.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "1104",
-      "pagina_impresa": "1076",
-      "dificultad": "medio",
-      "opcion_a": "La primera secreción mamaria, rica en proteínas y anticuerpos.",
-      "opcion_b": "Una secuencia de ADN que contiene información para producir un ARN o una proteína.",
-      "opcion_c": "El cese permanente de la menstruación por agotamiento de la actividad folicular.",
-      "opcion_d": "El gasto energético mínimo para sostener funciones vitales en condiciones basales."
-    },
-    {
-      "content_id": "morfo-28-004",
-      "materia": "MORFOFUNCION",
-      "tema": "aparato reproductor femenino",
-      "numero_pregunta": 11,
-      "pregunta": "¿Cuándo se forman los ovocitos primarios?",
-      "respuesta_correcta": "B",
-      "justificacion": "Durante la vida fetal.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "1105",
-      "pagina_impresa": "1077",
-      "dificultad": "medio",
-      "opcion_a": "Entre aracnoides y piamadre.",
-      "opcion_b": "Durante la vida fetal.",
-      "opcion_c": "A la calmodulina.",
-      "opcion_d": "Por exocitosis."
-    },
-    {
-      "content_id": "morfo-28-005",
-      "materia": "MORFOFUNCION",
-      "tema": "aparato reproductor femenino",
-      "numero_pregunta": 12,
-      "pregunta": "¿Qué célula se libera habitualmente durante la ovulación?",
-      "respuesta_correcta": "C",
-      "justificacion": "Un ovocito secundario.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "1105",
-      "pagina_impresa": "1077",
-      "dificultad": "medio",
-      "opcion_a": "El pico de LH.",
-      "opcion_b": "Un folículo ovárico.",
-      "opcion_c": "Un ovocito secundario.",
-      "opcion_d": "Retroalimentación positiva."
-    },
-    {
-      "content_id": "morfo-28-006",
-      "materia": "MORFOFUNCION",
-      "tema": "aparato reproductor femenino",
-      "numero_pregunta": 13,
-      "pregunta": "¿En qué fase queda detenido el ovocito secundario?",
-      "respuesta_correcta": "A",
-      "justificacion": "En metafase II.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "1105",
-      "pagina_impresa": "1077",
-      "dificultad": "medio",
-      "opcion_a": "En metafase II.",
-      "opcion_b": "En la ampolla de la trompa uterina.",
-      "opcion_c": "En el cuerpo lúteo.",
-      "opcion_d": "En la anafase."
-    },
-    {
-      "content_id": "morfo-28-007",
-      "materia": "MORFOFUNCION",
-      "tema": "aparato reproductor femenino",
-      "numero_pregunta": 14,
-      "pregunta": "¿Qué desencadena la finalización de la meiosis II del ovocito?",
-      "respuesta_correcta": "C",
-      "justificacion": "La fecundación.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "1105",
-      "pagina_impresa": "1077",
-      "dificultad": "medio",
-      "opcion_a": "El pico de LH.",
-      "opcion_b": "Las fimbrias.",
-      "opcion_c": "La fecundación.",
-      "opcion_d": "Un folículo ovárico."
-    },
-    {
-      "content_id": "morfo-28-015",
-      "materia": "MORFOFUNCION",
-      "tema": "aparato reproductor femenino",
-      "numero_pregunta": 15,
-      "pregunta": "¿Cuáles son las tres fases principales del ciclo ovárico?",
-      "respuesta_correcta": "D",
-      "justificacion": "Fase folicular → ovulación → fase lútea.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "1108",
-      "pagina_impresa": "1080",
-      "dificultad": "medio",
-      "opcion_a": "Perimetrio, miometrio y endometrio.",
-      "opcion_b": "Dilatación → expulsión del bebé → expulsión de la placenta.",
-      "opcion_c": "Espasmo vascular → tapón plaquetario → coagulación.",
-      "opcion_d": "Fase folicular → ovulación → fase lútea."
-    },
-    {
-      "content_id": "morfo-28-017",
-      "materia": "MORFOFUNCION",
-      "tema": "aparato reproductor femenino",
-      "numero_pregunta": 16,
-      "pregunta": "¿En qué se transforma el folículo después de la ovulación?",
-      "respuesta_correcta": "A",
-      "justificacion": "En el cuerpo lúteo.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "1108",
-      "pagina_impresa": "1080",
-      "dificultad": "medio",
-      "opcion_a": "En el cuerpo lúteo.",
-      "opcion_b": "En metafase II.",
-      "opcion_c": "En la fase telógena.",
-      "opcion_d": "En la ampolla de la trompa uterina."
-    },
-    {
-      "content_id": "morfo-28-016",
-      "materia": "MORFOFUNCION",
-      "tema": "aparato reproductor femenino",
-      "numero_pregunta": 17,
-      "pregunta": "¿Qué hormona desencadena principalmente la ovulación?",
-      "respuesta_correcta": "B",
-      "justificacion": "El pico de LH.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "1109",
-      "pagina_impresa": "1081",
-      "dificultad": "medio",
-      "opcion_a": "Los estrógenos.",
-      "opcion_b": "El pico de LH.",
-      "opcion_c": "La oxitocina.",
-      "opcion_d": "La prolactina."
-    },
-    {
-      "content_id": "morfo-28-020",
-      "materia": "MORFOFUNCION",
-      "tema": "aparato reproductor femenino",
-      "numero_pregunta": 18,
-      "pregunta": "¿Qué hormona favorece la fase proliferativa del endometrio?",
-      "respuesta_correcta": "D",
-      "justificacion": "Los estrógenos.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "1109",
-      "pagina_impresa": "1081",
-      "dificultad": "medio",
-      "opcion_a": "La progesterona.",
-      "opcion_b": "El pico de LH.",
-      "opcion_c": "La capa basal.",
-      "opcion_d": "Los estrógenos."
-    },
-    {
-      "content_id": "morfo-28-013",
-      "materia": "MORFOFUNCION",
-      "tema": "aparato reproductor femenino",
-      "numero_pregunta": 19,
-      "pregunta": "¿Qué capa del endometrio se elimina en la menstruación?",
-      "respuesta_correcta": "C",
-      "justificacion": "La capa funcional.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "1111",
-      "pagina_impresa": "1083",
-      "dificultad": "medio",
-      "opcion_a": "La progesterona.",
-      "opcion_b": "El miometrio.",
-      "opcion_c": "La capa funcional.",
-      "opcion_d": "Los estrógenos."
-    },
-    {
-      "content_id": "morfo-28-018",
-      "materia": "MORFOFUNCION",
-      "tema": "aparato reproductor femenino",
-      "numero_pregunta": 20,
-      "pregunta": "¿Qué hormona secreta principalmente el cuerpo lúteo?",
-      "respuesta_correcta": "A",
-      "justificacion": "Progesterona.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "1111",
-      "pagina_impresa": "1083",
-      "dificultad": "medio",
-      "opcion_a": "Progesterona.",
-      "opcion_b": "El pico de LH.",
-      "opcion_c": "La oxitocina.",
-      "opcion_d": "La prolactina."
-    },
-    {
-      "content_id": "morfo-28-019",
-      "materia": "MORFOFUNCION",
-      "tema": "aparato reproductor femenino",
-      "numero_pregunta": 21,
-      "pregunta": "¿Qué ocurre con el cuerpo lúteo si no hay embarazo?",
-      "respuesta_correcta": "D",
-      "justificacion": "Involuciona y se transforma en cuerpo albo.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "1111",
-      "pagina_impresa": "1083",
-      "dificultad": "medio",
-      "opcion_a": "La gonadotropina coriónica humana, hCG.",
-      "opcion_b": "El batido ciliar y las contracciones musculares.",
-      "opcion_c": "La caída de progesterona y estrógenos.",
-      "opcion_d": "Involuciona y se transforma en cuerpo albo."
-    },
-    {
-      "content_id": "morfo-28-021",
-      "materia": "MORFOFUNCION",
-      "tema": "aparato reproductor femenino",
-      "numero_pregunta": 22,
-      "pregunta": "¿Qué hormona favorece la fase secretora del endometrio?",
-      "respuesta_correcta": "A",
-      "justificacion": "La progesterona.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "1111",
-      "pagina_impresa": "1083",
-      "dificultad": "medio",
-      "opcion_a": "La progesterona.",
-      "opcion_b": "La capa basal.",
-      "opcion_c": "El pico de LH.",
-      "opcion_d": "Los estrógenos."
-    },
-    {
-      "content_id": "morfo-28-024",
-      "materia": "MORFOFUNCION",
-      "tema": "aparato reproductor femenino",
-      "numero_pregunta": 23,
-      "pregunta": "¿Qué hormona mantiene inicialmente el cuerpo lúteo durante el embarazo?",
-      "respuesta_correcta": "B",
-      "justificacion": "La gonadotropina coriónica humana, hCG.",
-      "fuente": "Saladin · Anatomía y fisiología",
+      "justificacion": "Al comienzo del embarazo, la hCG sostiene la actividad del cuerpo lúteo.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
       "paginas_pdf": "1115",
       "pagina_impresa": "1087",
       "dificultad": "medio",
-      "opcion_a": "La progesterona.",
-      "opcion_b": "La gonadotropina coriónica humana, hCG.",
-      "opcion_c": "Un ovocito secundario.",
-      "opcion_d": "Retroalimentación positiva."
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Aparato reproductor femenino · Embarazo",
+          "page": 1115,
+          "printed": 1087,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-28",
+        "chapterNumber": 28,
+        "chapter": "Aparato reproductor femenino",
+        "section": "Embarazo",
+        "printedPages": [
+          1087
+        ],
+        "pdfPages": [
+          1115
+        ]
+      },
+      "opcion_a": "Hormona luteinizante (LH)",
+      "opcion_b": "Estrógenos",
+      "opcion_c": "Progesterona",
+      "opcion_d": "Gonadotropina coriónica humana (hCG)"
     },
     {
-      "content_id": "morfo-28-022",
+      "content_id": "evaluacion:medicina-oficial-morfo-28-ampliacion-01-umss",
       "materia": "MORFOFUNCION",
       "tema": "aparato reproductor femenino",
-      "numero_pregunta": 24,
-      "pregunta": "¿Qué cambio hormonal desencadena la menstruación?",
+      "numero_pregunta": 5,
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. En el momento habitual de la ovulación, el ovocito secundario permanece detenido en metafase II.\n2. El ovocito completa la meiosis II antes de la ovulación, sin estímulo de la fecundación.",
+      "respuesta_correcta": "A",
+      "justificacion": "1. Correcta. La segunda división meiótica todavía no termina.\n2. Incorrecta. La fecundación desencadena la finalización de la segunda meiosis.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "1105",
+      "pagina_impresa": "1077",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Aparato reproductor femenino · Ovogénesis",
+          "page": 1105,
+          "printed": 1077,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-28",
+        "chapterNumber": 28,
+        "chapter": "Aparato reproductor femenino",
+        "section": "Ovogénesis",
+        "printedPages": [
+          1077
+        ],
+        "pdfPages": [
+          1105
+        ],
+        "statements": [
+          {
+            "pdfPage": 1105,
+            "printedPage": 1077,
+            "section": "Ovogénesis",
+            "cardId": "morfo-28-006"
+          },
+          {
+            "pdfPage": 1105,
+            "printedPage": 1077,
+            "section": "Ovogénesis",
+            "cardId": "morfo-28-007"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "Solo la afirmación 1 es correcta.",
+        "B": "1. Correcta. La segunda división meiótica todavía no termina. 2. Incorrecta. La fecundación desencadena la finalización de la segunda meiosis.",
+        "C": "2. Incorrecta. La fecundación desencadena la finalización de la segunda meiosis.",
+        "D": "1. Correcta. La segunda división meiótica todavía no termina."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
+    },
+    {
+      "content_id": "evaluacion:medicina-oficial-morfo-28-ampliacion-02-umss",
+      "materia": "MORFOFUNCION",
+      "tema": "aparato reproductor femenino",
+      "numero_pregunta": 6,
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Las contracciones uterinas del parto se originan en la capa funcional del endometrio.\n2. Tras la menstruación, la capa basal permite recuperar la capa funcional del endometrio.",
+      "respuesta_correcta": "B",
+      "justificacion": "1. Incorrecta. Se originan en la capa muscular del útero, el miometrio.\n2. Correcta. La basal permanece después del desprendimiento y sirve para regenerar la capa superficial.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "1097",
+      "pagina_impresa": "1069",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Aparato reproductor femenino · Útero",
+          "page": 1097,
+          "printed": 1069,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-28",
+        "chapterNumber": 28,
+        "chapter": "Aparato reproductor femenino",
+        "section": "Útero",
+        "printedPages": [
+          1069
+        ],
+        "pdfPages": [
+          1097
+        ],
+        "statements": [
+          {
+            "pdfPage": 1097,
+            "printedPage": 1069,
+            "section": "Útero",
+            "cardId": "morfo-28-012"
+          },
+          {
+            "pdfPage": 1097,
+            "printedPage": 1069,
+            "section": "Útero",
+            "cardId": "morfo-28-014"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. Se originan en la capa muscular del útero, el miometrio. 2. Correcta. La basal permanece después del desprendimiento y sirve para regenerar la capa superficial.",
+        "B": "Solo la afirmación 2 es correcta.",
+        "C": "1. Incorrecta. Se originan en la capa muscular del útero, el miometrio.",
+        "D": "2. Correcta. La basal permanece después del desprendimiento y sirve para regenerar la capa superficial."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
+    },
+    {
+      "content_id": "evaluacion:medicina-oficial-morfo-28-ampliacion-03-umss",
+      "materia": "MORFOFUNCION",
+      "tema": "aparato reproductor femenino",
+      "numero_pregunta": 7,
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Tras la ovulación, el cuerpo lúteo se convierte en una fuente importante de progesterona.\n2. La caída de progesterona y estrógenos contribuye al inicio de la menstruación.",
       "respuesta_correcta": "C",
-      "justificacion": "La caída de progesterona y estrógenos.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "1116",
-      "pagina_impresa": "1088",
-      "dificultad": "medio",
-      "opcion_a": "La gonadotropina coriónica humana, hCG.",
-      "opcion_b": "Involuciona y se transforma en cuerpo albo.",
-      "opcion_c": "La caída de progesterona y estrógenos.",
-      "opcion_d": "El batido ciliar y las contracciones musculares."
+      "justificacion": "1. Correcta. La progesterona es su principal secreción durante la fase lútea.\n2. Correcta. Al perderse el apoyo hormonal, se desencadena el desprendimiento de la capa funcional.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "1111, 1116",
+      "pagina_impresa": "1083, 1088",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Aparato reproductor femenino · Ciclo ovárico / Ciclo uterino",
+          "page": 1111,
+          "printed": 1083,
+          "marks": []
+        },
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Aparato reproductor femenino · Ciclo ovárico / Ciclo uterino",
+          "page": 1116,
+          "printed": 1088,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-28",
+        "chapterNumber": 28,
+        "chapter": "Aparato reproductor femenino",
+        "section": "Ciclo ovárico / Ciclo uterino",
+        "printedPages": [
+          1083,
+          1088
+        ],
+        "pdfPages": [
+          1111,
+          1116
+        ],
+        "statements": [
+          {
+            "pdfPage": 1111,
+            "printedPage": 1083,
+            "section": "Ciclo ovárico",
+            "cardId": "morfo-28-018"
+          },
+          {
+            "pdfPage": 1116,
+            "printedPage": 1088,
+            "section": "Ciclo uterino",
+            "cardId": "morfo-28-022"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "2. Correcta. Al perderse el apoyo hormonal, se desencadena el desprendimiento de la capa funcional.",
+        "B": "1. Correcta. La progesterona es su principal secreción durante la fase lútea.",
+        "C": "Ambas afirmaciones son correctas.",
+        "D": "1. Correcta. La progesterona es su principal secreción durante la fase lútea. 2. Correcta. Al perderse el apoyo hormonal, se desencadena el desprendimiento de la capa funcional."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "morfo-28-026",
+      "content_id": "evaluacion:medicina-oficial-morfo-28-ampliacion-04-umss",
       "materia": "MORFOFUNCION",
       "tema": "aparato reproductor femenino",
-      "numero_pregunta": 25,
-      "pregunta": "¿Qué hormona produce la eyección de leche?",
+      "numero_pregunta": 8,
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. La prolactina se encarga de expulsar la leche, mientras que la oxitocina se encarga de producirla.\n2. El calostro es una secreción tardía que aparece al agotarse los anticuerpos de la leche.",
       "respuesta_correcta": "D",
-      "justificacion": "La oxitocina.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "1119",
-      "pagina_impresa": "1091",
-      "dificultad": "medio",
-      "opcion_a": "Progesterona.",
-      "opcion_b": "El pico de LH.",
-      "opcion_c": "La prolactina.",
-      "opcion_d": "La oxitocina."
+      "justificacion": "1. Incorrecta. La prolactina favorece la síntesis de leche y la oxitocina su eyección.\n2. Incorrecta. Es la secreción inicial y contiene abundantes proteínas y anticuerpos.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "1121, 1122",
+      "pagina_impresa": "1093, 1094",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Aparato reproductor femenino · Lactancia",
+          "page": 1121,
+          "printed": 1093,
+          "marks": []
+        },
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Aparato reproductor femenino · Lactancia",
+          "page": 1122,
+          "printed": 1094,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-28",
+        "chapterNumber": 28,
+        "chapter": "Aparato reproductor femenino",
+        "section": "Lactancia",
+        "printedPages": [
+          1093,
+          1094
+        ],
+        "pdfPages": [
+          1121,
+          1122
+        ],
+        "statements": [
+          {
+            "pdfPage": 1122,
+            "printedPage": 1094,
+            "section": "Lactancia",
+            "cardId": "morfo-28-025"
+          },
+          {
+            "pdfPage": 1121,
+            "printedPage": 1093,
+            "section": "Lactancia",
+            "cardId": "morfo-28-027"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. La prolactina favorece la síntesis de leche y la oxitocina su eyección.",
+        "B": "2. Incorrecta. Es la secreción inicial y contiene abundantes proteínas y anticuerpos.",
+        "C": "1. Incorrecta. La prolactina favorece la síntesis de leche y la oxitocina su eyección. 2. Incorrecta. Es la secreción inicial y contiene abundantes proteínas y anticuerpos.",
+        "D": "Ninguna afirmación es correcta."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "morfo-28-028",
+      "content_id": "evaluacion:banco-verificado:morfo-28:ovocitos",
       "materia": "MORFOFUNCION",
       "tema": "aparato reproductor femenino",
-      "numero_pregunta": 26,
-      "pregunta": "¿Qué tipo de retroalimentación favorece las contracciones durante el parto?",
+      "numero_pregunta": 9,
+      "pregunta": "Justo después de completarse la primera división meiótica y antes de la fecundación, ¿qué célula se libera habitualmente en la ovulación?",
       "respuesta_correcta": "A",
-      "justificacion": "Retroalimentación positiva.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "1119",
-      "pagina_impresa": "1091",
-      "dificultad": "medio",
-      "opcion_a": "Retroalimentación positiva.",
-      "opcion_b": "El miometrio.",
-      "opcion_c": "Un ovocito secundario.",
-      "opcion_d": "La progesterona."
-    },
-    {
-      "content_id": "morfo-28-029",
-      "materia": "MORFOFUNCION",
-      "tema": "aparato reproductor femenino",
-      "numero_pregunta": 27,
-      "pregunta": "¿Cuáles son las tres etapas principales del parto?",
-      "respuesta_correcta": "C",
-      "justificacion": "Dilatación → expulsión del bebé → expulsión de la placenta.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "1120",
-      "pagina_impresa": "1092",
-      "dificultad": "medio",
-      "opcion_a": "Fase folicular → ovulación → fase lútea.",
-      "opcion_b": "Los ovarios.",
-      "opcion_c": "Dilatación → expulsión del bebé → expulsión de la placenta.",
-      "opcion_d": "Perimetrio, miometrio y endometrio."
-    },
-    {
-      "content_id": "morfo-28-027",
-      "materia": "MORFOFUNCION",
-      "tema": "aparato reproductor femenino",
-      "numero_pregunta": 28,
-      "pregunta": "¿Qué es el calostro?",
-      "respuesta_correcta": "C",
-      "justificacion": "La primera secreción mamaria, rica en proteínas y anticuerpos.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "1121",
-      "pagina_impresa": "1093",
-      "dificultad": "medio",
-      "opcion_a": "El cese permanente de la menstruación por agotamiento de la actividad folicular.",
-      "opcion_b": "Espacios membranosos entre los huesos del cráneo del lactante.",
-      "opcion_c": "La primera secreción mamaria, rica en proteínas y anticuerpos.",
-      "opcion_d": "El deterioro gradual de la función asociado al envejecimiento."
-    },
-    {
-      "content_id": "morfo-28-025",
-      "materia": "MORFOFUNCION",
-      "tema": "aparato reproductor femenino",
-      "numero_pregunta": 29,
-      "pregunta": "¿Qué hormona estimula la producción de leche?",
-      "respuesta_correcta": "A",
-      "justificacion": "La prolactina.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "1122",
-      "pagina_impresa": "1094",
-      "dificultad": "medio",
-      "opcion_a": "La prolactina.",
-      "opcion_b": "La oxitocina.",
-      "opcion_c": "El pico de LH.",
-      "opcion_d": "Los estrógenos."
+      "justificacion": "El ovocito primario completa la primera meiosis y da lugar al ovocito secundario, que es el que se libera habitualmente. El cigoto se forma después de la fecundación.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "1105",
+      "pagina_impresa": "1077",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 28 · Ovogénesis",
+          "page": 1105,
+          "printed": 1077,
+          "marks": [
+            [
+              0.7647,
+              0.4589,
+              0.1286,
+              0.0111
+            ],
+            [
+              0.6533,
+              0.5183,
+              0.1259,
+              0.0111
+            ],
+            [
+              0.6728,
+              0.2807,
+              0.123,
+              0.0111
+            ]
+          ]
+        }
+      ],
+      "source": {
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-28"
+      },
+      "opcion_a": "Ovocito secundario.",
+      "opcion_b": "Ovocito primario.",
+      "opcion_c": "Ovogonio.",
+      "opcion_d": "Cigoto."
     }
   ]
 }

@@ -1,4 +1,4 @@
-const CACHE_NAME = 'alcocermed-main-v185-apertura';
+const CACHE_NAME = 'alcocermed-main-v186-evaluaciones';
 const APP_SHELL = [
     './student-results.js?v=6',
     './student-results.css?v=1',
@@ -47,9 +47,9 @@ const APP_SHELL = [
     './flashcard-workspace.js?v=20261109-foco',
     './script.js?v=20261109-apertura',
     './campus-login.js?v=2',
-    './campus-catalogs.js?v=1',
+    './campus-catalogs.js?v=2',
     './campus-exam-engine.js?v=1',
-    './topic-evaluations.js?v=20261109-apertura',
+    './topic-evaluations.js?v=20261110-revision',
     './topic-evaluations.css?v=5',
     './recuperar.html',
     './password-recovery.js?v=1',

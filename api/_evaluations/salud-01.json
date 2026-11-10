@@ -5,230 +5,481 @@
   "topic": "educacion en salud",
   "title": "Educación en salud",
   "number": 1,
-  "count": 13,
-  "duration": 13,
+  "count": 9,
+  "duration": 9,
   "source": "Educación en Salud e Investigación · Curso Básico 2025-2026",
   "questions": [
     {
-      "content_id": "salud-01-001",
+      "content_id": "evaluacion:medicina-oficial-salud-01-intermedio-1",
       "materia": "SALUD PUBLICA",
       "tema": "educacion en salud",
       "numero_pregunta": 1,
-      "pregunta": "¿Qué tres cambios busca la educación en salud?",
-      "respuesta_correcta": "A",
-      "justificacion": "Adquirir conocimientos, desarrollar actitudes y adoptar prácticas saludables.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "2",
-      "pagina_impresa": "1",
+      "pregunta": "Un taller deja tiempo para que cada participante ensaye la conducta y reciba retroalimentación sobre cómo realizarla.\n¿Qué opción corresponde al caso?",
+      "respuesta_correcta": "D",
+      "justificacion": "La educación para la salud desarrolla habilidades para que las personas puedan llevar a la práctica conductas saludables.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+      "paginas_pdf": "6",
+      "pagina_impresa": "5",
       "dificultad": "medio",
-      "opcion_a": "Adquirir conocimientos, desarrollar actitudes y adoptar prácticas saludables.",
-      "opcion_b": "Disminuyen natalidad y mortalidad y aumenta la esperanza de vida.",
-      "opcion_c": "Reducir la malnutrición infantil y promover la seguridad alimentaria en la primera infancia.",
-      "opcion_d": "Evitar intervenciones innecesarias o iatrogénicas, sobrediagnóstico y sobretratamiento."
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Educación en salud · educacion en salud",
+          "page": 6,
+          "printed": 5,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-01",
+        "chapterNumber": 1,
+        "chapter": "Educación en salud",
+        "section": "educacion en salud",
+        "printedPages": [
+          5
+        ],
+        "pdfPages": [
+          6
+        ]
+      },
+      "opcion_a": "Toma de decisiones informadas",
+      "opcion_b": "Comunicación bidireccional",
+      "opcion_c": "Adaptación al contexto sociocultural",
+      "opcion_d": "Desarrollo de habilidades"
     },
     {
-      "content_id": "salud-01-002",
+      "content_id": "evaluacion:medicina-oficial-salud-01-intermedio-2",
       "materia": "SALUD PUBLICA",
       "tema": "educacion en salud",
       "numero_pregunta": 2,
-      "pregunta": "¿A quiénes se dirige la educación en salud?",
-      "respuesta_correcta": "A",
-      "justificacion": "A individuos, familias y comunidades.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "2",
-      "pagina_impresa": "1",
+      "pregunta": "El equipo evita dictar una charla sin diálogo: las familias exponen sus dudas y el equipo ajusta la explicación en el intercambio.\n¿Qué opción corresponde al caso?",
+      "respuesta_correcta": "B",
+      "justificacion": "La comunicación es bidireccional cuando la población también aporta y recibe respuesta en el intercambio.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+      "paginas_pdf": "16",
+      "pagina_impresa": "15",
       "dificultad": "medio",
-      "opcion_a": "A individuos, familias y comunidades.",
-      "opcion_b": "En forma creciente.",
-      "opcion_c": "Al total de datos.",
-      "opcion_d": "En cien partes iguales."
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Educación en salud · educacion en salud",
+          "page": 16,
+          "printed": 15,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-01",
+        "chapterNumber": 1,
+        "chapter": "Educación en salud",
+        "section": "educacion en salud",
+        "printedPages": [
+          15
+        ],
+        "pdfPages": [
+          16
+        ]
+      },
+      "opcion_a": "Desarrollo de habilidades",
+      "opcion_b": "Comunicación bidireccional",
+      "opcion_c": "Toma de decisiones informadas",
+      "opcion_d": "Adaptación al contexto sociocultural"
     },
     {
-      "content_id": "salud-01-003",
+      "content_id": "evaluacion:medicina-oficial-salud-01-intermedio-3",
       "materia": "SALUD PUBLICA",
       "tema": "educacion en salud",
       "numero_pregunta": 3,
-      "pregunta": "¿Qué tipo de cambios en el estilo de vida promueve la educación en salud?",
-      "respuesta_correcta": "D",
-      "justificacion": "Cambios sostenibles.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "2",
-      "pagina_impresa": "1",
+      "pregunta": "Después de revisar la información disponible, una persona compara las alternativas y elige por sí misma una acción para su salud.\n¿Qué opción corresponde al caso?",
+      "respuesta_correcta": "C",
+      "justificacion": "El empoderamiento facilita que las personas usen información para decidir sobre su salud.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+      "paginas_pdf": "16",
+      "pagina_impresa": "15",
       "dificultad": "medio",
-      "opcion_a": "Cuantitativa continua.",
-      "opcion_b": "Genética, edad y sexo.",
-      "opcion_c": "Prevención terciaria.",
-      "opcion_d": "Cambios sostenibles."
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Educación en salud · educacion en salud",
+          "page": 16,
+          "printed": 15,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-01",
+        "chapterNumber": 1,
+        "chapter": "Educación en salud",
+        "section": "educacion en salud",
+        "printedPages": [
+          15
+        ],
+        "pdfPages": [
+          16
+        ]
+      },
+      "opcion_a": "Desarrollo de habilidades",
+      "opcion_b": "Comunicación bidireccional",
+      "opcion_c": "Toma de decisiones informadas",
+      "opcion_d": "Adaptación al contexto sociocultural"
     },
     {
-      "content_id": "salud-01-004",
+      "content_id": "evaluacion:medicina-oficial-salud-01-intermedio-4",
       "materia": "SALUD PUBLICA",
       "tema": "educacion en salud",
       "numero_pregunta": 4,
-      "pregunta": "¿Sobre qué deben ejercer control activo las personas mediante la educación en salud?",
+      "pregunta": "Para un mismo objetivo, el material educativo se adapta al idioma y a las prácticas habituales de cada comunidad.\n¿Qué opción corresponde al caso?",
       "respuesta_correcta": "A",
-      "justificacion": "Sobre los determinantes de la salud.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "2",
-      "pagina_impresa": "1",
+      "justificacion": "Ajustar el material al contexto social y cultural hace que la educación se vincule a la realidad del grupo.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+      "paginas_pdf": "16",
+      "pagina_impresa": "15",
       "dificultad": "medio",
-      "opcion_a": "Sobre los determinantes de la salud.",
-      "opcion_b": "En quiénes se realizará el estudio.",
-      "opcion_c": "A un hospital de segundo o tercer nivel.",
-      "opcion_d": "A las comunidades más pobres y vulnerables."
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Educación en salud · educacion en salud",
+          "page": 16,
+          "printed": 15,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-01",
+        "chapterNumber": 1,
+        "chapter": "Educación en salud",
+        "section": "educacion en salud",
+        "printedPages": [
+          15
+        ],
+        "pdfPages": [
+          16
+        ]
+      },
+      "opcion_a": "Adaptación al contexto sociocultural",
+      "opcion_b": "Toma de decisiones informadas",
+      "opcion_c": "Desarrollo de habilidades",
+      "opcion_d": "Comunicación bidireccional"
     },
     {
-      "content_id": "salud-01-005",
+      "content_id": "evaluacion:medicina-oficial-salud-01-ampliacion-01-umss",
       "materia": "SALUD PUBLICA",
       "tema": "educacion en salud",
       "numero_pregunta": 5,
-      "pregunta": "¿Hacia qué dos acciones sanitarias se orienta la educación en salud?",
-      "respuesta_correcta": "D",
-      "justificacion": "Promoción de la salud y prevención de enfermedades.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Un programa que comprueba si cambiaron conocimientos, actitudes y prácticas está evaluando tres resultados de la educación en salud.\n2. Si el trabajo se realiza con familias y comunidades en lugar de con pacientes individuales, deja de ser educación en salud.",
+      "respuesta_correcta": "A",
+      "justificacion": "1. Correcta. El compendio distingue aprender, desarrollar actitudes y adoptar prácticas saludables.\n2. Incorrecta. La educación en salud puede dirigirse a individuos, familias y comunidades.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
       "paginas_pdf": "2",
       "pagina_impresa": "1",
-      "dificultad": "medio",
-      "opcion_a": "Que los Estados garanticen condiciones de vida dignas.",
-      "opcion_b": "Riesgos ambientales e inocuidad de alimentos, agua y aire.",
-      "opcion_c": "Investigación epidemiológica e investigación en sistemas de salud.",
-      "opcion_d": "Promoción de la salud y prevención de enfermedades."
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Educación en salud · educacion en salud",
+          "page": 2,
+          "printed": 1,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-01",
+        "chapterNumber": 1,
+        "chapter": "Educación en salud",
+        "section": "educacion en salud",
+        "printedPages": [
+          1
+        ],
+        "pdfPages": [
+          2
+        ],
+        "statements": [
+          {
+            "pdfPage": 2,
+            "printedPage": 1,
+            "section": "educacion en salud",
+            "cardId": "salud-01-001"
+          },
+          {
+            "pdfPage": 2,
+            "printedPage": 1,
+            "section": "educacion en salud",
+            "cardId": "salud-01-002"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "Solo la afirmación 1 es correcta.",
+        "B": "1. Correcta. El compendio distingue aprender, desarrollar actitudes y adoptar prácticas saludables. 2. Incorrecta. La educación en salud puede dirigirse a individuos, familias y comunidades.",
+        "C": "2. Incorrecta. La educación en salud puede dirigirse a individuos, familias y comunidades.",
+        "D": "1. Correcta. El compendio distingue aprender, desarrollar actitudes y adoptar prácticas saludables."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "salud-01-006",
+      "content_id": "evaluacion:medicina-oficial-salud-01-ampliacion-02-umss",
       "materia": "SALUD PUBLICA",
       "tema": "educacion en salud",
       "numero_pregunta": 6,
-      "pregunta": "¿Qué enfoque integra la educación en salud?",
-      "respuesta_correcta": "A",
-      "justificacion": "El enfoque biopsicosocial.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Un cambio breve de conducta durante una charla basta para cumplir el propósito de cambio que describe el texto.\n2. Enseñar a reconocer y actuar sobre factores que afectan la salud concuerda con la idea de control activo.",
+      "respuesta_correcta": "B",
+      "justificacion": "1. Incorrecta. Se busca que los cambios del estilo de vida sean sostenibles.\n2. Correcta. La educación busca que las personas puedan intervenir sobre sus determinantes de salud.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
       "paginas_pdf": "2",
       "pagina_impresa": "1",
-      "dificultad": "medio",
-      "opcion_a": "El enfoque biopsicosocial.",
-      "opcion_b": "Científico, técnico y operativo.",
-      "opcion_c": "Normativo, político y estratégico.",
-      "opcion_d": "El saneamiento ambiental."
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Educación en salud · educacion en salud",
+          "page": 2,
+          "printed": 1,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-01",
+        "chapterNumber": 1,
+        "chapter": "Educación en salud",
+        "section": "educacion en salud",
+        "printedPages": [
+          1
+        ],
+        "pdfPages": [
+          2
+        ],
+        "statements": [
+          {
+            "pdfPage": 2,
+            "printedPage": 1,
+            "section": "educacion en salud",
+            "cardId": "salud-01-003"
+          },
+          {
+            "pdfPage": 2,
+            "printedPage": 1,
+            "section": "educacion en salud",
+            "cardId": "salud-01-004"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. Se busca que los cambios del estilo de vida sean sostenibles. 2. Correcta. La educación busca que las personas puedan intervenir sobre sus determinantes de salud.",
+        "B": "Solo la afirmación 2 es correcta.",
+        "C": "1. Incorrecta. Se busca que los cambios del estilo de vida sean sostenibles.",
+        "D": "2. Correcta. La educación busca que las personas puedan intervenir sobre sus determinantes de salud."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "salud-01-007",
+      "content_id": "evaluacion:medicina-oficial-salud-01-ampliacion-03-umss",
       "materia": "SALUD PUBLICA",
       "tema": "educacion en salud",
       "numero_pregunta": 7,
-      "pregunta": "¿Qué tres capacidades desarrolla la educación para la salud?",
-      "respuesta_correcta": "D",
-      "justificacion": "Información, motivación y habilidades para adoptar conductas saludables.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "6",
-      "pagina_impresa": "5",
-      "dificultad": "medio",
-      "opcion_a": "Visitas domiciliarias, atención primaria integral y educación en salud.",
-      "opcion_b": "¿Qué se investigará? ¿Cuál es su base teórica? ¿Cómo se investigará?",
-      "opcion_c": "Como derecho humano fundamental y responsabilidad indelegable del Estado.",
-      "opcion_d": "Información, motivación y habilidades para adoptar conductas saludables."
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. El enfoque biopsicosocial permite abordar la conducta y el contexto social junto con los factores biológicos.\n2. Una intervención de promoción puede usar la educación como parte de un conjunto más amplio de acciones.",
+      "respuesta_correcta": "C",
+      "justificacion": "1. Correcta. La educación en salud considera la interacción de esas dimensiones.\n2. Correcta. El compendio presenta la educación como una herramienta de promoción.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+      "paginas_pdf": "2, 6",
+      "pagina_impresa": "1, 5",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Educación en salud · educacion en salud",
+          "page": 2,
+          "printed": 1,
+          "marks": []
+        },
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Educación en salud · educacion en salud",
+          "page": 6,
+          "printed": 5,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-01",
+        "chapterNumber": 1,
+        "chapter": "Educación en salud",
+        "section": "educacion en salud",
+        "printedPages": [
+          1,
+          5
+        ],
+        "pdfPages": [
+          2,
+          6
+        ],
+        "statements": [
+          {
+            "pdfPage": 2,
+            "printedPage": 1,
+            "section": "educacion en salud",
+            "cardId": "salud-01-006"
+          },
+          {
+            "pdfPage": 6,
+            "printedPage": 5,
+            "section": "educacion en salud",
+            "cardId": "salud-01-009"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "2. Correcta. El compendio presenta la educación como una herramienta de promoción.",
+        "B": "1. Correcta. La educación en salud considera la interacción de esas dimensiones.",
+        "C": "Ambas afirmaciones son correctas.",
+        "D": "1. Correcta. La educación en salud considera la interacción de esas dimensiones. 2. Correcta. El compendio presenta la educación como una herramienta de promoción."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "salud-01-009",
+      "content_id": "evaluacion:medicina-oficial-salud-01-ampliacion-04-umss",
       "materia": "SALUD PUBLICA",
       "tema": "educacion en salud",
       "numero_pregunta": 8,
-      "pregunta": "¿Qué relación existe entre educación para la salud y promoción de la salud?",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. La educación por sí sola transforma determinantes como las condiciones de vivienda aunque no cambien los recursos ni las políticas.\n2. La educación en salud se limita a sustituir conductas individuales y excluye las prácticas colectivas.",
       "respuesta_correcta": "D",
-      "justificacion": "La educación es una herramienta de la promoción de la salud.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "6",
-      "pagina_impresa": "5",
-      "dificultad": "medio",
-      "opcion_a": "Riesgos ambientales e inocuidad de alimentos, agua y aire.",
-      "opcion_b": "Mínimo: dato de menor valor. Máximo: dato de mayor valor.",
-      "opcion_c": "Mejor calidad de vida y bienestar físico, mental y social.",
-      "opcion_d": "La educación es una herramienta de la promoción de la salud."
+      "justificacion": "1. Incorrecta. Los determinantes estructurales requieren acciones que van más allá de informar o educar.\n2. Incorrecta. También puede reforzar, modificar o sustituir conductas familiares y colectivas.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+      "paginas_pdf": "6, 16",
+      "pagina_impresa": "5, 15",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Educación en salud · educacion en salud",
+          "page": 6,
+          "printed": 5,
+          "marks": []
+        },
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Educación en salud · educacion en salud",
+          "page": 16,
+          "printed": 15,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-01",
+        "chapterNumber": 1,
+        "chapter": "Educación en salud",
+        "section": "educacion en salud",
+        "printedPages": [
+          5,
+          15
+        ],
+        "pdfPages": [
+          6,
+          16
+        ],
+        "statements": [
+          {
+            "pdfPage": 6,
+            "printedPage": 5,
+            "section": "educacion en salud",
+            "cardId": "salud-01-008"
+          },
+          {
+            "pdfPage": 16,
+            "printedPage": 15,
+            "section": "educacion en salud",
+            "cardId": "salud-01-011"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. Los determinantes estructurales requieren acciones que van más allá de informar o educar.",
+        "B": "2. Incorrecta. También puede reforzar, modificar o sustituir conductas familiares y colectivas.",
+        "C": "1. Incorrecta. Los determinantes estructurales requieren acciones que van más allá de informar o educar. 2. Incorrecta. También puede reforzar, modificar o sustituir conductas familiares y colectivas.",
+        "D": "Ninguna afirmación es correcta."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "salud-01-010",
+      "content_id": "evaluacion:banco-verificado:salud-01:educacion",
       "materia": "SALUD PUBLICA",
       "tema": "educacion en salud",
       "numero_pregunta": 9,
-      "pregunta": "¿Cómo debe ser la comunicación en educación para la salud?",
+      "pregunta": "Una intervención con familias busca mejorar la higiene. Al terminar, los participantes explican bien la recomendación, pero en casa mantienen la práctica anterior. ¿Qué resultado sigue pendiente según el compendio?",
       "respuesta_correcta": "A",
-      "justificacion": "Bidireccional y con participación activa de la comunidad.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "16",
-      "pagina_impresa": "15",
-      "dificultad": "medio",
-      "opcion_a": "Bidireccional y con participación activa de la comunidad.",
-      "opcion_b": "La tabulación y distribución de frecuencias de cada variable.",
-      "opcion_c": "Mejor calidad de vida y bienestar físico, mental y social.",
-      "opcion_d": "Riesgos ambientales e inocuidad de alimentos, agua y aire."
-    },
-    {
-      "content_id": "salud-01-011",
-      "materia": "SALUD PUBLICA",
-      "tema": "educacion en salud",
-      "numero_pregunta": 10,
-      "pregunta": "¿Qué conductas busca reforzar, modificar o sustituir la educación para la salud?",
-      "respuesta_correcta": "B",
-      "justificacion": "Las conductas individuales, familiares y colectivas, para favorecer las saludables.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "16",
-      "pagina_impresa": "15",
-      "dificultad": "medio",
-      "opcion_a": "Control comunitario de vectores, brigadas de salud escolar y comités de agua segura.",
-      "opcion_b": "Las conductas individuales, familiares y colectivas, para favorecer las saludables.",
-      "opcion_c": "Establecer generalizaciones sobre una población a partir de una muestra representativa.",
-      "opcion_d": "La respuesta social organizada a las condiciones de salud y enfermedad poblacionales."
-    },
-    {
-      "content_id": "salud-01-012",
-      "materia": "SALUD PUBLICA",
-      "tema": "educacion en salud",
-      "numero_pregunta": 11,
-      "pregunta": "¿Qué finalidad autogestionaria tiene la educación para la salud?",
-      "respuesta_correcta": "B",
-      "justificacion": "Mantener la salud personal, familiar y comunitaria.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "16",
-      "pagina_impresa": "15",
-      "dificultad": "medio",
-      "opcion_a": "Visualizar el significado de los códigos registrados.",
-      "opcion_b": "Mantener la salud personal, familiar y comunitaria.",
-      "opcion_c": "Recolectar y analizar datos para detectar riesgos y brotes.",
-      "opcion_d": "Recolección → recopilación → análisis → diseminación."
-    },
-    {
-      "content_id": "salud-01-013",
-      "materia": "SALUD PUBLICA",
-      "tema": "educacion en salud",
-      "numero_pregunta": 12,
-      "pregunta": "¿Qué permite el empoderamiento en educación para la salud?",
-      "respuesta_correcta": "C",
-      "justificacion": "Tomar decisiones informadas sobre la salud.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "16",
-      "pagina_impresa": "15",
-      "dificultad": "medio",
-      "opcion_a": "El comportamiento simultáneo de dos variables.",
-      "opcion_b": "Dividir los datos en muestras separadas.",
-      "opcion_c": "Tomar decisiones informadas sobre la salud.",
-      "opcion_d": "Recolección → recopilación → análisis → diseminación."
-    },
-    {
-      "content_id": "salud-01-014",
-      "materia": "SALUD PUBLICA",
-      "tema": "educacion en salud",
-      "numero_pregunta": 13,
-      "pregunta": "¿Qué contextos debe considerar el aprendizaje en salud?",
-      "respuesta_correcta": "B",
-      "justificacion": "Los contextos culturales y sociales de la población.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "16",
-      "pagina_impresa": "15",
-      "dificultad": "medio",
-      "opcion_a": "Que sea producto de factores extraños o aleatorios.",
-      "opcion_b": "Los contextos culturales y sociales de la población.",
-      "opcion_c": "Que los Estados garanticen condiciones de vida dignas.",
-      "opcion_d": "Riesgos ambientales e inocuidad de alimentos, agua y aire."
+      "justificacion": "El compendio distingue conocimientos, actitudes y prácticas. Poder explicar una recomendación demuestra conocimiento, pero no que se haya incorporado la práctica.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+      "paginas_pdf": "2",
+      "pagina_impresa": "1",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "Educación en Salud",
+          "section": "Educación en salud · Alcance y resultados",
+          "page": 2,
+          "printed": 1,
+          "marks": [
+            [
+              0.2329,
+              0.4616,
+              0.0696,
+              0.0168
+            ],
+            [
+              0.5005,
+              0.4353,
+              0.0637,
+              0.0168
+            ]
+          ]
+        }
+      ],
+      "source": {
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-01"
+      },
+      "opcion_a": "La adopción de la práctica saludable en la vida cotidiana.",
+      "opcion_b": "La adquisición del conocimiento sobre la recomendación.",
+      "opcion_c": "La inclusión de las familias como destinatarias del programa.",
+      "opcion_d": "La transmisión de información durante la intervención."
     }
   ]
 }

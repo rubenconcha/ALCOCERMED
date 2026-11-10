@@ -5,315 +5,477 @@
   "topic": "proceso de investigacion",
   "title": "Proceso de investigación",
   "number": 11,
-  "count": 18,
-  "duration": 18,
+  "count": 9,
+  "duration": 9,
   "source": "Educación en Salud e Investigación · Curso Básico 2025-2026",
   "questions": [
     {
-      "content_id": "salud-11-001",
+      "content_id": "evaluacion:medicina-oficial-salud-11-intermedio-1",
       "materia": "SALUD PUBLICA",
       "tema": "proceso de investigacion",
       "numero_pregunta": 1,
-      "pregunta": "¿Cuál es el primer paso para originar un proyecto de investigación?",
-      "respuesta_correcta": "B",
-      "justificacion": "Una idea acerca de la realidad.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
+      "pregunta": "El equipo delimita el problema, elige el diseño y decide cómo recogerá los datos. Se pide nombrar la etapa que está desarrollando.\n¿Qué opción corresponde al caso?",
+      "respuesta_correcta": "D",
+      "justificacion": "En la planificación se toman decisiones sobre qué investigar, con qué base teórica y cómo hacerlo.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
       "paginas_pdf": "41",
       "pagina_impresa": "34",
       "dificultad": "medio",
-      "opcion_a": "Ordenamiento, tabulación y clasificación.",
-      "opcion_b": "Una idea acerca de la realidad.",
-      "opcion_c": "Capacitar personal, seleccionar instrumentos y estandarizar procedimientos.",
-      "opcion_d": "Una relación sujeto-sujeto."
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Proceso de investigación · proceso de investigacion",
+          "page": 41,
+          "printed": 34,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-11",
+        "chapterNumber": 11,
+        "chapter": "Proceso de investigación",
+        "section": "proceso de investigacion",
+        "printedPages": [
+          34
+        ],
+        "pdfPages": [
+          41
+        ]
+      },
+      "opcion_a": "Ejecución",
+      "opcion_b": "Protocolo",
+      "opcion_c": "Informe final",
+      "opcion_d": "Planificación"
     },
     {
-      "content_id": "salud-11-002",
+      "content_id": "evaluacion:medicina-oficial-salud-11-intermedio-2",
       "materia": "SALUD PUBLICA",
       "tema": "proceso de investigacion",
       "numero_pregunta": 2,
-      "pregunta": "¿Qué debe hacerse con una idea inicial vaga de investigación?",
-      "respuesta_correcta": "C",
-      "justificacion": "Analizarla y precisar el planteamiento, ampliando el conocimiento del tema.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
+      "pregunta": "Antes de iniciar el estudio, el equipo entrega un documento que detalla qué investigará, con qué base teórica y mediante qué procedimientos.\n¿Qué opción corresponde al caso?",
+      "respuesta_correcta": "A",
+      "justificacion": "El protocolo es el documento en el que se explicitan decisiones tomadas durante la planificación.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
       "paginas_pdf": "41",
       "pagina_impresa": "34",
       "dificultad": "medio",
-      "opcion_a": "Cuadros, gráficos y análisis para interpretar resultados según el problema.",
-      "opcion_b": "Recolección, procesamiento, análisis e interpretación de datos; conclusiones y recomendaciones.",
-      "opcion_c": "Analizarla y precisar el planteamiento, ampliando el conocimiento del tema.",
-      "opcion_d": "¿Qué se investigará? ¿Cuál es su base teórica? ¿Cómo se investigará?"
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Proceso de investigación · proceso de investigacion",
+          "page": 41,
+          "printed": 34,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-11",
+        "chapterNumber": 11,
+        "chapter": "Proceso de investigación",
+        "section": "proceso de investigacion",
+        "printedPages": [
+          34
+        ],
+        "pdfPages": [
+          41
+        ]
+      },
+      "opcion_a": "Protocolo",
+      "opcion_b": "Ejecución",
+      "opcion_c": "Planificación",
+      "opcion_d": "Informe final"
     },
     {
-      "content_id": "salud-11-003",
+      "content_id": "evaluacion:medicina-oficial-salud-11-intermedio-3",
       "materia": "SALUD PUBLICA",
       "tema": "proceso de investigacion",
       "numero_pregunta": 3,
-      "pregunta": "¿Qué se busca al revisar antecedentes antes de investigar?",
-      "respuesta_correcta": "C",
-      "justificacion": "Conocer lo ya investigado y la importancia del tema propuesto.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "41",
-      "pagina_impresa": "34",
+      "pregunta": "El equipo ya tiene aprobado el plan. Ahora aplica los instrumentos, tabula los datos e interpreta los resultados. Se pide identificar la etapa.\n¿Qué opción corresponde al caso?",
+      "respuesta_correcta": "B",
+      "justificacion": "La ejecución lleva a la práctica el diseño. Incluye recolectar, procesar e interpretar los datos.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+      "paginas_pdf": "44",
+      "pagina_impresa": "37",
       "dificultad": "medio",
-      "opcion_a": "¿Qué se investigará? ¿Cuál es su base teórica? ¿Cómo se investigará?",
-      "opcion_b": "Analizarla y precisar el planteamiento, ampliando el conocimiento del tema.",
-      "opcion_c": "Conocer lo ya investigado y la importancia del tema propuesto.",
-      "opcion_d": "Elaborar el informe final y dar a conocer los resultados."
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Proceso de investigación · proceso de investigacion",
+          "page": 44,
+          "printed": 37,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-11",
+        "chapterNumber": 11,
+        "chapter": "Proceso de investigación",
+        "section": "proceso de investigacion",
+        "printedPages": [
+          37
+        ],
+        "pdfPages": [
+          44
+        ]
+      },
+      "opcion_a": "Protocolo",
+      "opcion_b": "Ejecución",
+      "opcion_c": "Informe final",
+      "opcion_d": "Planificación"
     },
     {
-      "content_id": "salud-11-004",
+      "content_id": "evaluacion:medicina-oficial-salud-11-intermedio-4",
       "materia": "SALUD PUBLICA",
       "tema": "proceso de investigacion",
       "numero_pregunta": 4,
-      "pregunta": "¿Cuáles son los tres momentos de la investigación cuantitativa que adopta el texto?",
+      "pregunta": "Con el análisis concluido, el equipo prepara el documento con resultados, conclusiones y recomendaciones para darlos a conocer.\n¿Qué opción corresponde al caso?",
       "respuesta_correcta": "A",
-      "justificacion": "Planificación → ejecución → informe final.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "41",
-      "pagina_impresa": "34",
+      "justificacion": "El informe final recoge los resultados del estudio y permite darlos a conocer.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+      "paginas_pdf": "44",
+      "pagina_impresa": "37",
       "dificultad": "medio",
-      "opcion_a": "Planificación → ejecución → informe final.",
-      "opcion_b": "Biomédica, clínica y en salud pública.",
-      "opcion_c": "Prevenir enfermedades, prolongar la vida y promover el bienestar colectivo.",
-      "opcion_d": "Nominal, ordinal, de intervalo y de razón."
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Proceso de investigación · proceso de investigacion",
+          "page": 44,
+          "printed": 37,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-11",
+        "chapterNumber": 11,
+        "chapter": "Proceso de investigación",
+        "section": "proceso de investigacion",
+        "printedPages": [
+          37
+        ],
+        "pdfPages": [
+          44
+        ]
+      },
+      "opcion_a": "Informe final",
+      "opcion_b": "Planificación",
+      "opcion_c": "Ejecución",
+      "opcion_d": "Protocolo"
     },
     {
-      "content_id": "salud-11-005",
+      "content_id": "evaluacion:medicina-oficial-salud-11-ampliacion-01-umss",
       "materia": "SALUD PUBLICA",
       "tema": "proceso de investigacion",
       "numero_pregunta": 5,
-      "pregunta": "¿Qué momento antecede a la recolección de datos?",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Si una idea inicial resulta muy amplia, conocer mejor el tema permite precisar el problema.\n2. Revisar antecedentes sirve para confirmar que la idea puede mantenerse sin conocer investigaciones anteriores.",
       "respuesta_correcta": "A",
-      "justificacion": "La planificación.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
+      "justificacion": "1. Correcta. Analizar la idea y revisar el tema ayuda a convertirla en una pregunta abordable.\n2. Incorrecta. Busca conocer qué se ha investigado y cuál es la importancia del problema propuesto.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
       "paginas_pdf": "41",
       "pagina_impresa": "34",
-      "dificultad": "medio",
-      "opcion_a": "La planificación.",
-      "opcion_b": "Ordenamiento, tabulación y clasificación.",
-      "opcion_c": "Una relación sujeto-sujeto.",
-      "opcion_d": "Protocolo."
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Proceso de investigación · proceso de investigacion",
+          "page": 41,
+          "printed": 34,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-11",
+        "chapterNumber": 11,
+        "chapter": "Proceso de investigación",
+        "section": "proceso de investigacion",
+        "printedPages": [
+          34
+        ],
+        "pdfPages": [
+          41
+        ],
+        "statements": [
+          {
+            "pdfPage": 41,
+            "printedPage": 34,
+            "section": "proceso de investigacion",
+            "cardId": "salud-11-002"
+          },
+          {
+            "pdfPage": 41,
+            "printedPage": 34,
+            "section": "proceso de investigacion",
+            "cardId": "salud-11-003"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "Solo la afirmación 1 es correcta.",
+        "B": "1. Correcta. Analizar la idea y revisar el tema ayuda a convertirla en una pregunta abordable. 2. Incorrecta. Busca conocer qué se ha investigado y cuál es la importancia del problema propuesto.",
+        "C": "2. Incorrecta. Busca conocer qué se ha investigado y cuál es la importancia del problema propuesto.",
+        "D": "1. Correcta. Analizar la idea y revisar el tema ayuda a convertirla en una pregunta abordable."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "salud-11-006",
+      "content_id": "evaluacion:medicina-oficial-salud-11-ampliacion-02-umss",
       "materia": "SALUD PUBLICA",
       "tema": "proceso de investigacion",
       "numero_pregunta": 6,
-      "pregunta": "¿Cómo se llama el documento que explicita parte de la planificación de la investigación?",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. El informe final debe preceder a la ejecución en la secuencia cuantitativa que adopta el compendio.\n2. Al definir el diseño metodológico, se decide si el estudio observará un momento o seguirá el fenómeno en el tiempo.",
       "respuesta_correcta": "B",
-      "justificacion": "Protocolo.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "41",
-      "pagina_impresa": "34",
-      "dificultad": "medio",
-      "opcion_a": "Encuestas, observaciones, entrevistas y formularios.",
-      "opcion_b": "Protocolo.",
-      "opcion_c": "Una relación sujeto-sujeto.",
-      "opcion_d": "Ordenamiento, tabulación y clasificación."
+      "justificacion": "1. Incorrecta. La secuencia es planificación, ejecución e informe final.\n2. Correcta. La distinción entre transversal y longitudinal forma parte de precisar el tipo de estudio.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+      "paginas_pdf": "41, 43",
+      "pagina_impresa": "34, 36",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Proceso de investigación · proceso de investigacion",
+          "page": 41,
+          "printed": 34,
+          "marks": []
+        },
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Proceso de investigación · proceso de investigacion",
+          "page": 43,
+          "printed": 36,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-11",
+        "chapterNumber": 11,
+        "chapter": "Proceso de investigación",
+        "section": "proceso de investigacion",
+        "printedPages": [
+          34,
+          36
+        ],
+        "pdfPages": [
+          41,
+          43
+        ],
+        "statements": [
+          {
+            "pdfPage": 41,
+            "printedPage": 34,
+            "section": "proceso de investigacion",
+            "cardId": "salud-11-004"
+          },
+          {
+            "pdfPage": 43,
+            "printedPage": 36,
+            "section": "proceso de investigacion",
+            "cardId": "salud-11-008"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. La secuencia es planificación, ejecución e informe final. 2. Correcta. La distinción entre transversal y longitudinal forma parte de precisar el tipo de estudio.",
+        "B": "Solo la afirmación 2 es correcta.",
+        "C": "1. Incorrecta. La secuencia es planificación, ejecución e informe final.",
+        "D": "2. Correcta. La distinción entre transversal y longitudinal forma parte de precisar el tipo de estudio."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "salud-11-007",
+      "content_id": "evaluacion:medicina-oficial-salud-11-ampliacion-03-umss",
       "materia": "SALUD PUBLICA",
       "tema": "proceso de investigacion",
       "numero_pregunta": 7,
-      "pregunta": "¿Qué tres preguntas organizan la planificación de una investigación?",
-      "respuesta_correcta": "A",
-      "justificacion": "¿Qué se investigará? ¿Cuál es su base teórica? ¿Cómo se investigará?",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "41",
-      "pagina_impresa": "34",
-      "dificultad": "medio",
-      "opcion_a": "¿Qué se investigará? ¿Cuál es su base teórica? ¿Cómo se investigará?",
-      "opcion_b": "Conocer lo ya investigado y la importancia del tema propuesto.",
-      "opcion_c": "Elaborar el informe final y dar a conocer los resultados.",
-      "opcion_d": "Analizarla y precisar el planteamiento, ampliando el conocimiento del tema."
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Capacitar al personal y estandarizar el modo de aplicar los instrumentos son tareas de preparación de la recolección.\n2. El plan de análisis puede prever las tablas y gráficos que servirán para interpretar los resultados.",
+      "respuesta_correcta": "C",
+      "justificacion": "1. Correcta. Ayudan a aplicar procedimientos consistentes al obtener la información.\n2. Correcta. Las formas de tabulación y análisis deben responder al problema de investigación.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+      "paginas_pdf": "43",
+      "pagina_impresa": "36",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Proceso de investigación · proceso de investigacion",
+          "page": 43,
+          "printed": 36,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-11",
+        "chapterNumber": 11,
+        "chapter": "Proceso de investigación",
+        "section": "proceso de investigacion",
+        "printedPages": [
+          36
+        ],
+        "pdfPages": [
+          43
+        ],
+        "statements": [
+          {
+            "pdfPage": 43,
+            "printedPage": 36,
+            "section": "proceso de investigacion",
+            "cardId": "salud-11-010"
+          },
+          {
+            "pdfPage": 43,
+            "printedPage": 36,
+            "section": "proceso de investigacion",
+            "cardId": "salud-11-011"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "2. Correcta. Las formas de tabulación y análisis deben responder al problema de investigación.",
+        "B": "1. Correcta. Ayudan a aplicar procedimientos consistentes al obtener la información.",
+        "C": "Ambas afirmaciones son correctas.",
+        "D": "1. Correcta. Ayudan a aplicar procedimientos consistentes al obtener la información. 2. Correcta. Las formas de tabulación y análisis deben responder al problema de investigación."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "salud-11-009",
+      "content_id": "evaluacion:medicina-oficial-salud-11-ampliacion-04-umss",
       "materia": "SALUD PUBLICA",
       "tema": "proceso de investigacion",
       "numero_pregunta": 8,
-      "pregunta": "¿Qué métodos pueden usarse para recolectar datos?",
-      "respuesta_correcta": "C",
-      "justificacion": "Encuestas, observaciones, entrevistas y formularios.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "43",
-      "pagina_impresa": "36",
-      "dificultad": "medio",
-      "opcion_a": "Ordenamiento, tabulación y clasificación.",
-      "opcion_b": "La planificación.",
-      "opcion_c": "Encuestas, observaciones, entrevistas y formularios.",
-      "opcion_d": "Una relación sujeto-sujeto."
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. La investigación cualitativa debe retirar el fenómeno de su ambiente para poder comprenderlo en condiciones uniformes.\n2. En la investigación participativa descrita, el investigador identifica el problema por su cuenta y la comunidad solo responde preguntas.",
+      "respuesta_correcta": "D",
+      "justificacion": "1. Incorrecta. Busca comprenderlo en su ambiente natural.\n2. Incorrecta. La comunidad identifica el problema con la asesoría del investigador guía.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+      "paginas_pdf": "45",
+      "pagina_impresa": "38",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Proceso de investigación · proceso de investigacion",
+          "page": 45,
+          "printed": 38,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-11",
+        "chapterNumber": 11,
+        "chapter": "Proceso de investigación",
+        "section": "proceso de investigacion",
+        "printedPages": [
+          38
+        ],
+        "pdfPages": [
+          45
+        ],
+        "statements": [
+          {
+            "pdfPage": 45,
+            "printedPage": 38,
+            "section": "proceso de investigacion",
+            "cardId": "salud-11-016"
+          },
+          {
+            "pdfPage": 45,
+            "printedPage": 38,
+            "section": "proceso de investigacion",
+            "cardId": "salud-11-019"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. Busca comprenderlo en su ambiente natural.",
+        "B": "2. Incorrecta. La comunidad identifica el problema con la asesoría del investigador guía.",
+        "C": "1. Incorrecta. Busca comprenderlo en su ambiente natural. 2. Incorrecta. La comunidad identifica el problema con la asesoría del investigador guía.",
+        "D": "Ninguna afirmación es correcta."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "salud-11-010",
+      "content_id": "evaluacion:banco-verificado:salud-11:investigacion",
       "materia": "SALUD PUBLICA",
       "tema": "proceso de investigacion",
       "numero_pregunta": 9,
-      "pregunta": "¿Qué incluye preparar los procedimientos de recolección de información?",
+      "pregunta": "Un equipo definió qué información recogerá y cómo lo hará. A continuación empieza a aplicar los instrumentos. ¿Qué transición está realizando?",
       "respuesta_correcta": "C",
-      "justificacion": "Capacitar personal, seleccionar instrumentos y estandarizar procedimientos.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "43",
-      "pagina_impresa": "36",
-      "dificultad": "medio",
-      "opcion_a": "Una idea acerca de la realidad.",
-      "opcion_b": "Encuestas, observaciones, entrevistas y formularios.",
-      "opcion_c": "Capacitar personal, seleccionar instrumentos y estandarizar procedimientos.",
-      "opcion_d": "Ordenamiento, tabulación y clasificación."
-    },
-    {
-      "content_id": "salud-11-011",
-      "materia": "SALUD PUBLICA",
-      "tema": "proceso de investigacion",
-      "numero_pregunta": 10,
-      "pregunta": "¿Qué define el plan de tabulación y análisis?",
-      "respuesta_correcta": "B",
-      "justificacion": "Cuadros, gráficos y análisis para interpretar resultados según el problema.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "43",
-      "pagina_impresa": "36",
-      "dificultad": "medio",
-      "opcion_a": "Analizarla y precisar el planteamiento, ampliando el conocimiento del tema.",
-      "opcion_b": "Cuadros, gráficos y análisis para interpretar resultados según el problema.",
-      "opcion_c": "Conocer lo ya investigado y la importancia del tema propuesto.",
-      "opcion_d": "¿Qué se investigará? ¿Cuál es su base teórica? ¿Cómo se investigará?"
-    },
-    {
-      "content_id": "salud-11-012",
-      "materia": "SALUD PUBLICA",
-      "tema": "proceso de investigacion",
-      "numero_pregunta": 11,
-      "pregunta": "¿Qué incluye la ejecución de una investigación?",
-      "respuesta_correcta": "B",
-      "justificacion": "Recolección, procesamiento, análisis e interpretación de datos; conclusiones y recomendaciones.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "44",
-      "pagina_impresa": "37",
-      "dificultad": "medio",
-      "opcion_a": "¿Qué se investigará? ¿Cuál es su base teórica? ¿Cómo se investigará?",
-      "opcion_b": "Recolección, procesamiento, análisis e interpretación de datos; conclusiones y recomendaciones.",
-      "opcion_c": "Analizarla y precisar el planteamiento, ampliando el conocimiento del tema.",
-      "opcion_d": "Cuadros, gráficos y análisis para interpretar resultados según el problema."
-    },
-    {
-      "content_id": "salud-11-013",
-      "materia": "SALUD PUBLICA",
-      "tema": "proceso de investigacion",
-      "numero_pregunta": 12,
-      "pregunta": "¿Qué pasos intermedios siguen a la recolección de datos?",
-      "respuesta_correcta": "A",
-      "justificacion": "Ordenamiento, tabulación y clasificación.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "44",
-      "pagina_impresa": "37",
-      "dificultad": "medio",
-      "opcion_a": "Ordenamiento, tabulación y clasificación.",
-      "opcion_b": "Una relación sujeto-sujeto.",
-      "opcion_c": "La planificación.",
-      "opcion_d": "Encuestas, observaciones, entrevistas y formularios."
-    },
-    {
-      "content_id": "salud-11-014",
-      "materia": "SALUD PUBLICA",
-      "tema": "proceso de investigacion",
-      "numero_pregunta": 13,
-      "pregunta": "¿En qué deben basarse las conclusiones y recomendaciones de una investigación?",
-      "respuesta_correcta": "A",
-      "justificacion": "En los resultados obtenidos del estudio.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "44",
-      "pagina_impresa": "37",
-      "dificultad": "medio",
-      "opcion_a": "En los resultados obtenidos del estudio.",
-      "opcion_b": "Hacia la promoción de la salud y la atención primaria.",
-      "opcion_c": "En unidades de la variable elevadas al cuadrado.",
-      "opcion_d": "En su ambiente natural."
-    },
-    {
-      "content_id": "salud-11-015",
-      "materia": "SALUD PUBLICA",
-      "tema": "proceso de investigacion",
-      "numero_pregunta": 14,
-      "pregunta": "¿Cuál es el último momento del proceso de investigación?",
-      "respuesta_correcta": "B",
-      "justificacion": "Elaborar el informe final y dar a conocer los resultados.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "44",
-      "pagina_impresa": "37",
-      "dificultad": "medio",
-      "opcion_a": "¿Qué se investigará? ¿Cuál es su base teórica? ¿Cómo se investigará?",
-      "opcion_b": "Elaborar el informe final y dar a conocer los resultados.",
-      "opcion_c": "Analizarla y precisar el planteamiento, ampliando el conocimiento del tema.",
-      "opcion_d": "Conocer lo ya investigado y la importancia del tema propuesto."
-    },
-    {
-      "content_id": "salud-11-016",
-      "materia": "SALUD PUBLICA",
-      "tema": "proceso de investigacion",
-      "numero_pregunta": 15,
-      "pregunta": "¿Dónde busca comprender los fenómenos la investigación cualitativa?",
-      "respuesta_correcta": "A",
-      "justificacion": "En su ambiente natural.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "45",
-      "pagina_impresa": "38",
-      "dificultad": "medio",
-      "opcion_a": "En su ambiente natural.",
-      "opcion_b": "En el terreno epidémico.",
-      "opcion_c": "En los resultados obtenidos del estudio.",
-      "opcion_d": "En todos los niveles."
-    },
-    {
-      "content_id": "salud-11-017",
-      "materia": "SALUD PUBLICA",
-      "tema": "proceso de investigacion",
-      "numero_pregunta": 16,
-      "pregunta": "¿Qué relación establecen investigador y sujeto en un estudio cualitativo?",
-      "respuesta_correcta": "A",
-      "justificacion": "Una relación sujeto-sujeto.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "45",
-      "pagina_impresa": "38",
-      "dificultad": "medio",
-      "opcion_a": "Una relación sujeto-sujeto.",
-      "opcion_b": "La planificación.",
-      "opcion_c": "Ordenamiento, tabulación y clasificación.",
-      "opcion_d": "Protocolo."
-    },
-    {
-      "content_id": "salud-11-018",
-      "materia": "SALUD PUBLICA",
-      "tema": "proceso de investigacion",
-      "numero_pregunta": 17,
-      "pregunta": "¿Cuándo pueden desarrollarse objetivos e hipótesis en la investigación cualitativa participativa?",
-      "respuesta_correcta": "D",
-      "justificacion": "Durante la recolección de datos o en otras etapas de la investigación.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "45",
-      "pagina_impresa": "38",
-      "dificultad": "medio",
-      "opcion_a": "Por qué conviene realizarla, sus beneficios y la utilidad de los resultados.",
-      "opcion_b": "A medida que se ejecuta la investigación.",
-      "opcion_c": "A personas o grupos en riesgo o con predisposición a patologías concretas.",
-      "opcion_d": "Durante la recolección de datos o en otras etapas de la investigación."
-    },
-    {
-      "content_id": "salud-11-020",
-      "materia": "SALUD PUBLICA",
-      "tema": "proceso de investigacion",
-      "numero_pregunta": 18,
-      "pregunta": "¿Cómo se construye la fundamentación teórica en la investigación cualitativa descrita?",
-      "respuesta_correcta": "C",
-      "justificacion": "A medida que se ejecuta la investigación.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "45",
-      "pagina_impresa": "38",
-      "dificultad": "medio",
-      "opcion_a": "A un hospital de segundo o tercer nivel.",
-      "opcion_b": "Durante la recolección de datos o en otras etapas de la investigación.",
-      "opcion_c": "A medida que se ejecuta la investigación.",
-      "opcion_d": "A las comunidades más pobres y vulnerables."
+      "justificacion": "La planificación antecede a la recolección y define los pasos. Aplicar los instrumentos inicia la ejecución. El informe final se prepara después.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+      "paginas_pdf": "41",
+      "pagina_impresa": "34",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "Educación en Salud",
+          "section": "Etapas de la investigación",
+          "page": 41,
+          "printed": 34,
+          "marks": [
+            [
+              0.5052,
+              0.1547,
+              0.1274,
+              0.0183
+            ],
+            [
+              0.5069,
+              0.7482,
+              0.1208,
+              0.0183
+            ],
+            [
+              0.774,
+              0.7482,
+              0.1231,
+              0.0183
+            ]
+          ]
+        }
+      ],
+      "source": {
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-11"
+      },
+      "opcion_a": "De la ejecución al informe final.",
+      "opcion_b": "De la planificación al informe final.",
+      "opcion_c": "De la planificación a la ejecución.",
+      "opcion_d": "De la ejecución a la planificación."
     }
   ]
 }

@@ -5,519 +5,490 @@
   "topic": "sistema linfatico e inmunidad",
   "title": "Los sistemas linfático e inmunitario",
   "number": 21,
-  "count": 30,
-  "duration": 30,
+  "count": 9,
+  "duration": 9,
   "source": "Saladin · Anatomía y fisiología",
   "questions": [
     {
-      "content_id": "morfo-21-001",
+      "content_id": "evaluacion:medicina-oficial-morfo-21-intermedio-1",
       "materia": "MORFOFUNCION",
       "tema": "sistema linfatico e inmunidad",
       "numero_pregunta": 1,
-      "pregunta": "¿Qué tres funciones principales cumple el sistema linfático?",
-      "respuesta_correcta": "A",
-      "justificacion": "Retorna líquido a la sangre, participa en la defensa y transporta lípidos intestinales.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "837",
-      "pagina_impresa": "809",
+      "pregunta": "Se estudian anticuerpos de una secreción de la mucosa. El objetivo es identificar la clase que predomina en esa muestra.\n¿Qué opción corresponde al caso?",
+      "respuesta_correcta": "C",
+      "justificacion": "La IgA se encuentra en secreciones como lágrimas y saliva, donde protege superficies mucosas.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "868",
+      "pagina_impresa": "840",
       "dificultad": "medio",
-      "opcion_a": "Retorna líquido a la sangre, participa en la defensa y transporta lípidos intestinales.",
-      "opcion_b": "La innata responde de forma general; la adaptativa reconoce antígenos específicos y genera memoria.",
-      "opcion_c": "Receptor → neurona sensitiva → centro integrador → neurona motora → músculo esquelético.",
-      "opcion_d": "El lado derecho de cabeza y cuello, tórax derecho y miembro superior derecho."
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Los sistemas linfático e inmunitario · Clases de anticuerpos, cuadro 21.3",
+          "page": 868,
+          "printed": 840,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-21",
+        "chapterNumber": 21,
+        "chapter": "Los sistemas linfático e inmunitario",
+        "section": "Clases de anticuerpos, cuadro 21.3",
+        "printedPages": [
+          840
+        ],
+        "pdfPages": [
+          868
+        ]
+      },
+      "opcion_a": "IgE",
+      "opcion_b": "IgM",
+      "opcion_c": "IgA",
+      "opcion_d": "IgG"
     },
     {
-      "content_id": "morfo-21-003",
+      "content_id": "evaluacion:medicina-oficial-morfo-21-intermedio-2",
       "materia": "MORFOFUNCION",
       "tema": "sistema linfatico e inmunidad",
       "numero_pregunta": 2,
-      "pregunta": "¿Qué evita el retroceso de linfa en los vasos?",
+      "pregunta": "Un anticuerpo materno se encuentra en la circulación fetal después de pasar por la placenta. Se pide su clase.\n¿Qué opción corresponde al caso?",
       "respuesta_correcta": "B",
-      "justificacion": "Las válvulas.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "840",
-      "pagina_impresa": "812",
-      "dificultad": "medio",
-      "opcion_a": "Los ganglios linfáticos.",
-      "opcion_b": "Las válvulas.",
-      "opcion_c": "El bazo.",
-      "opcion_d": "Las células NK."
-    },
-    {
-      "content_id": "morfo-21-005",
-      "materia": "MORFOFUNCION",
-      "tema": "sistema linfatico e inmunidad",
-      "numero_pregunta": 3,
-      "pregunta": "¿Qué regiones drena el conducto linfático derecho?",
-      "respuesta_correcta": "C",
-      "justificacion": "El lado derecho de cabeza y cuello, tórax derecho y miembro superior derecho.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "840",
-      "pagina_impresa": "812",
-      "dificultad": "medio",
-      "opcion_a": "El homocigoto tiene dos alelos iguales; el heterocigoto tiene dos diferentes.",
-      "opcion_b": "Retorna líquido a la sangre, participa en la defensa y transporta lípidos intestinales.",
-      "opcion_c": "El lado derecho de cabeza y cuello, tórax derecho y miembro superior derecho.",
-      "opcion_d": "La innata responde de forma general; la adaptativa reconoce antígenos específicos y genera memoria."
-    },
-    {
-      "content_id": "morfo-21-002",
-      "materia": "MORFOFUNCION",
-      "tema": "sistema linfatico e inmunidad",
-      "numero_pregunta": 4,
-      "pregunta": "¿Cómo se llama el líquido intersticial cuando entra en un vaso linfático?",
-      "respuesta_correcta": "B",
-      "justificacion": "Linfa.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "841",
-      "pagina_impresa": "813",
-      "dificultad": "medio",
-      "opcion_a": "El bazo.",
-      "opcion_b": "Linfa.",
-      "opcion_c": "IgA.",
-      "opcion_d": "IgE."
-    },
-    {
-      "content_id": "morfo-21-008",
-      "materia": "MORFOFUNCION",
-      "tema": "sistema linfatico e inmunidad",
-      "numero_pregunta": 5,
-      "pregunta": "¿Dónde maduran los linfocitos T?",
-      "respuesta_correcta": "C",
-      "justificacion": "En el timo.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "841",
-      "pagina_impresa": "813",
-      "dificultad": "medio",
-      "opcion_a": "En la laringe.",
-      "opcion_b": "En el epidídimo.",
-      "opcion_c": "En el timo.",
-      "opcion_d": "En el citosol."
-    },
-    {
-      "content_id": "morfo-21-009",
-      "materia": "MORFOFUNCION",
-      "tema": "sistema linfatico e inmunidad",
-      "numero_pregunta": 6,
-      "pregunta": "¿Dónde maduran los linfocitos B?",
-      "respuesta_correcta": "A",
-      "justificacion": "En la médula ósea.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "841",
-      "pagina_impresa": "813",
-      "dificultad": "medio",
-      "opcion_a": "En la médula ósea.",
-      "opcion_b": "En el citosol.",
-      "opcion_c": "En los nucléolos.",
-      "opcion_d": "En el epidídimo."
-    },
-    {
-      "content_id": "morfo-21-004",
-      "materia": "MORFOFUNCION",
-      "tema": "sistema linfatico e inmunidad",
-      "numero_pregunta": 7,
-      "pregunta": "¿Qué conducto drena la mayor parte del cuerpo?",
-      "respuesta_correcta": "B",
-      "justificacion": "El conducto torácico.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "842",
-      "pagina_impresa": "814",
-      "dificultad": "medio",
-      "opcion_a": "Las válvulas.",
-      "opcion_b": "El conducto torácico.",
-      "opcion_c": "Las células NK.",
-      "opcion_d": "Los ganglios linfáticos."
-    },
-    {
-      "content_id": "morfo-21-006",
-      "materia": "MORFOFUNCION",
-      "tema": "sistema linfatico e inmunidad",
-      "numero_pregunta": 8,
-      "pregunta": "¿Qué estructuras filtran la linfa antes de que regrese a la sangre?",
-      "respuesta_correcta": "A",
-      "justificacion": "Los ganglios linfáticos.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "843",
-      "pagina_impresa": "815",
-      "dificultad": "medio",
-      "opcion_a": "Los ganglios linfáticos.",
-      "opcion_b": "Los linfocitos T citotóxicos.",
-      "opcion_c": "El conducto torácico.",
-      "opcion_d": "Las válvulas."
-    },
-    {
-      "content_id": "morfo-21-011",
-      "materia": "MORFOFUNCION",
-      "tema": "sistema linfatico e inmunidad",
-      "numero_pregunta": 9,
-      "pregunta": "¿Qué dos barreras físicas constituyen la primera línea de defensa?",
-      "respuesta_correcta": "C",
-      "justificacion": "La piel y las membranas mucosas.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "850",
-      "pagina_impresa": "822",
-      "dificultad": "medio",
-      "opcion_a": "Vasodilatación y aumento de la permeabilidad capilar.",
-      "opcion_b": "Las células plasmáticas derivadas de linfocitos B.",
-      "opcion_c": "La piel y las membranas mucosas.",
-      "opcion_d": "Principalmente neutrófilos y macrófagos."
-    },
-    {
-      "content_id": "morfo-21-023",
-      "materia": "MORFOFUNCION",
-      "tema": "sistema linfatico e inmunidad",
-      "numero_pregunta": 10,
-      "pregunta": "¿Qué inmunoglobulina predomina en las secreciones mucosas?",
-      "respuesta_correcta": "D",
-      "justificacion": "IgA.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "850",
-      "pagina_impresa": "822",
-      "dificultad": "medio",
-      "opcion_a": "IgE.",
-      "opcion_b": "IgG.",
-      "opcion_c": "IgM.",
-      "opcion_d": "IgA."
-    },
-    {
-      "content_id": "morfo-21-012",
-      "materia": "MORFOFUNCION",
-      "tema": "sistema linfatico e inmunidad",
-      "numero_pregunta": 11,
-      "pregunta": "¿Qué células fagocitan microorganismos en la defensa innata?",
-      "respuesta_correcta": "A",
-      "justificacion": "Principalmente neutrófilos y macrófagos.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "852",
-      "pagina_impresa": "824",
-      "dificultad": "medio",
-      "opcion_a": "Principalmente neutrófilos y macrófagos.",
-      "opcion_b": "Los linfocitos T colaboradores.",
-      "opcion_c": "Las proteínas del complemento.",
-      "opcion_d": "Las células NK."
-    },
-    {
-      "content_id": "morfo-21-013",
-      "materia": "MORFOFUNCION",
-      "tema": "sistema linfatico e inmunidad",
-      "numero_pregunta": 12,
-      "pregunta": "¿Qué células destruyen células infectadas y tumorales sin sensibilización previa?",
-      "respuesta_correcta": "D",
-      "justificacion": "Las células NK.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "852",
-      "pagina_impresa": "824",
-      "dificultad": "medio",
-      "opcion_a": "Los linfocitos T citotóxicos.",
-      "opcion_b": "El conducto torácico.",
-      "opcion_c": "Las válvulas.",
-      "opcion_d": "Las células NK."
-    },
-    {
-      "content_id": "morfo-21-014",
-      "materia": "MORFOFUNCION",
-      "tema": "sistema linfatico e inmunidad",
-      "numero_pregunta": 13,
-      "pregunta": "¿Qué son los interferones?",
-      "respuesta_correcta": "C",
-      "justificacion": "Proteínas que ayudan a proteger células frente a infecciones virales.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "852",
-      "pagina_impresa": "824",
-      "dificultad": "medio",
-      "opcion_a": "La protección por anticuerpos recibidos de otra fuente.",
-      "opcion_b": "La protección generada por la propia respuesta inmunitaria.",
-      "opcion_c": "Proteínas que ayudan a proteger células frente a infecciones virales.",
-      "opcion_d": "Una respuesta inmunitaria contra componentes propios."
-    },
-    {
-      "content_id": "morfo-21-017",
-      "materia": "MORFOFUNCION",
-      "tema": "sistema linfatico e inmunidad",
-      "numero_pregunta": 14,
-      "pregunta": "¿Qué proteínas forman un sistema que favorece inflamación, opsonización y lisis?",
-      "respuesta_correcta": "B",
-      "justificacion": "Las proteínas del complemento.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "852",
-      "pagina_impresa": "824",
-      "dificultad": "medio",
-      "opcion_a": "Los linfocitos T citotóxicos.",
-      "opcion_b": "Las proteínas del complemento.",
-      "opcion_c": "Los ganglios linfáticos.",
-      "opcion_d": "El conducto torácico."
-    },
-    {
-      "content_id": "morfo-21-015",
-      "materia": "MORFOFUNCION",
-      "tema": "sistema linfatico e inmunidad",
-      "numero_pregunta": 15,
-      "pregunta": "¿Cuáles son los cuatro signos clásicos de inflamación?",
-      "respuesta_correcta": "D",
-      "justificacion": "Rubor, calor, hinchazón y dolor.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "855",
-      "pagina_impresa": "827",
-      "dificultad": "medio",
-      "opcion_a": "Hialino, elástico y fibrocartílago.",
-      "opcion_b": "Esquelético, cardíaco y liso.",
-      "opcion_c": "Epitelial, conjuntivo, nervioso y muscular.",
-      "opcion_d": "Rubor, calor, hinchazón y dolor."
-    },
-    {
-      "content_id": "morfo-21-016",
-      "materia": "MORFOFUNCION",
-      "tema": "sistema linfatico e inmunidad",
-      "numero_pregunta": 16,
-      "pregunta": "¿Qué efecto vascular produce la histamina durante la inflamación?",
-      "respuesta_correcta": "B",
-      "justificacion": "Vasodilatación y aumento de la permeabilidad capilar.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "856",
-      "pagina_impresa": "828",
-      "dificultad": "medio",
-      "opcion_a": "Las células plasmáticas derivadas de linfocitos B.",
-      "opcion_b": "Vasodilatación y aumento de la permeabilidad capilar.",
-      "opcion_c": "Principalmente neutrófilos y macrófagos.",
-      "opcion_d": "La piel y las membranas mucosas."
-    },
-    {
-      "content_id": "morfo-21-010",
-      "materia": "MORFOFUNCION",
-      "tema": "sistema linfatico e inmunidad",
-      "numero_pregunta": 17,
-      "pregunta": "¿Qué diferencia a la inmunidad innata de la adaptativa?",
-      "respuesta_correcta": "B",
-      "justificacion": "La innata responde de forma general; la adaptativa reconoce antígenos específicos y genera memoria.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "858",
-      "pagina_impresa": "830",
-      "dificultad": "medio",
-      "opcion_a": "La macroscópica estudia estructuras visibles a simple vista; la microscópica requiere microscopio.",
-      "opcion_b": "La innata responde de forma general; la adaptativa reconoce antígenos específicos y genera memoria.",
-      "opcion_c": "Retorna líquido a la sangre, participa en la defensa y transporta lípidos intestinales.",
-      "opcion_d": "El lado derecho de cabeza y cuello, tórax derecho y miembro superior derecho."
-    },
-    {
-      "content_id": "morfo-21-018",
-      "materia": "MORFOFUNCION",
-      "tema": "sistema linfatico e inmunidad",
-      "numero_pregunta": 18,
-      "pregunta": "¿Qué es un antígeno?",
-      "respuesta_correcta": "B",
-      "justificacion": "Una sustancia reconocida por el sistema inmunitario que puede desencadenar una respuesta específica.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "858",
-      "pagina_impresa": "830",
-      "dificultad": "medio",
-      "opcion_a": "Proteínas que ayudan a proteger células frente a infecciones virales.",
-      "opcion_b": "Una sustancia reconocida por el sistema inmunitario que puede desencadenar una respuesta específica.",
-      "opcion_c": "La protección por anticuerpos recibidos de otra fuente.",
-      "opcion_d": "La protección generada por la propia respuesta inmunitaria."
-    },
-    {
-      "content_id": "morfo-21-027",
-      "materia": "MORFOFUNCION",
-      "tema": "sistema linfatico e inmunidad",
-      "numero_pregunta": 19,
-      "pregunta": "¿Qué es la inmunidad activa?",
-      "respuesta_correcta": "D",
-      "justificacion": "La protección generada por la propia respuesta inmunitaria.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "859",
-      "pagina_impresa": "831",
-      "dificultad": "medio",
-      "opcion_a": "Proteínas que ayudan a proteger células frente a infecciones virales.",
-      "opcion_b": "Una respuesta inmunitaria contra componentes propios.",
-      "opcion_c": "La protección por anticuerpos recibidos de otra fuente.",
-      "opcion_d": "La protección generada por la propia respuesta inmunitaria."
-    },
-    {
-      "content_id": "morfo-21-028",
-      "materia": "MORFOFUNCION",
-      "tema": "sistema linfatico e inmunidad",
-      "numero_pregunta": 20,
-      "pregunta": "¿Qué es la inmunidad pasiva?",
-      "respuesta_correcta": "C",
-      "justificacion": "La protección por anticuerpos recibidos de otra fuente.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "859",
-      "pagina_impresa": "831",
-      "dificultad": "medio",
-      "opcion_a": "Una respuesta inmunitaria contra componentes propios.",
-      "opcion_b": "Proteínas que ayudan a proteger células frente a infecciones virales.",
-      "opcion_c": "La protección por anticuerpos recibidos de otra fuente.",
-      "opcion_d": "La protección generada por la propia respuesta inmunitaria."
-    },
-    {
-      "content_id": "morfo-21-020",
-      "materia": "MORFOFUNCION",
-      "tema": "sistema linfatico e inmunidad",
-      "numero_pregunta": 21,
-      "pregunta": "¿Qué linfocitos coordinan la respuesta inmunitaria adaptativa?",
-      "respuesta_correcta": "B",
-      "justificacion": "Los linfocitos T colaboradores.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "862",
-      "pagina_impresa": "834",
-      "dificultad": "medio",
-      "opcion_a": "Las proteínas del complemento.",
-      "opcion_b": "Los linfocitos T colaboradores.",
-      "opcion_c": "Los ganglios linfáticos.",
-      "opcion_d": "Principalmente neutrófilos y macrófagos."
-    },
-    {
-      "content_id": "morfo-21-025",
-      "materia": "MORFOFUNCION",
-      "tema": "sistema linfatico e inmunidad",
-      "numero_pregunta": 22,
-      "pregunta": "¿Qué inmunoglobulina participa especialmente en alergias y defensa antiparasitaria?",
-      "respuesta_correcta": "D",
-      "justificacion": "IgE.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "862",
-      "pagina_impresa": "834",
-      "dificultad": "medio",
-      "opcion_a": "Linfa.",
-      "opcion_b": "IgG.",
-      "opcion_c": "IgM.",
-      "opcion_d": "IgE."
-    },
-    {
-      "content_id": "morfo-21-021",
-      "materia": "MORFOFUNCION",
-      "tema": "sistema linfatico e inmunidad",
-      "numero_pregunta": 23,
-      "pregunta": "¿Qué linfocitos destruyen directamente células blanco infectadas?",
-      "respuesta_correcta": "A",
-      "justificacion": "Los linfocitos T citotóxicos.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "864",
-      "pagina_impresa": "836",
-      "dificultad": "medio",
-      "opcion_a": "Los linfocitos T citotóxicos.",
-      "opcion_b": "Las células NK.",
-      "opcion_c": "Las proteínas del complemento.",
-      "opcion_d": "Principalmente neutrófilos y macrófagos."
-    },
-    {
-      "content_id": "morfo-21-019",
-      "materia": "MORFOFUNCION",
-      "tema": "sistema linfatico e inmunidad",
-      "numero_pregunta": 24,
-      "pregunta": "¿Qué células producen anticuerpos?",
-      "respuesta_correcta": "C",
-      "justificacion": "Las células plasmáticas derivadas de linfocitos B.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "865",
-      "pagina_impresa": "837",
-      "dificultad": "medio",
-      "opcion_a": "La piel y las membranas mucosas.",
-      "opcion_b": "Principalmente neutrófilos y macrófagos.",
-      "opcion_c": "Las células plasmáticas derivadas de linfocitos B.",
-      "opcion_d": "Vasodilatación y aumento de la permeabilidad capilar."
-    },
-    {
-      "content_id": "morfo-21-024",
-      "materia": "MORFOFUNCION",
-      "tema": "sistema linfatico e inmunidad",
-      "numero_pregunta": 25,
-      "pregunta": "¿Qué inmunoglobulina atraviesa la placenta?",
-      "respuesta_correcta": "A",
-      "justificacion": "IgG.",
-      "fuente": "Saladin · Anatomía y fisiología",
+      "justificacion": "La IgG materna atraviesa la placenta y puede pasar a la circulación fetal.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
       "paginas_pdf": "867",
       "pagina_impresa": "839",
       "dificultad": "medio",
-      "opcion_a": "IgG.",
-      "opcion_b": "Las células NK.",
-      "opcion_c": "El bazo.",
-      "opcion_d": "Las válvulas."
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Los sistemas linfático e inmunitario · Anticuerpos",
+          "page": 867,
+          "printed": 839,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-21",
+        "chapterNumber": 21,
+        "chapter": "Los sistemas linfático e inmunitario",
+        "section": "Anticuerpos",
+        "printedPages": [
+          839
+        ],
+        "pdfPages": [
+          867
+        ]
+      },
+      "opcion_a": "IgE",
+      "opcion_b": "IgG",
+      "opcion_c": "IgM",
+      "opcion_d": "IgA"
     },
     {
-      "content_id": "morfo-21-026",
+      "content_id": "evaluacion:medicina-oficial-morfo-21-intermedio-3",
       "materia": "MORFOFUNCION",
       "tema": "sistema linfatico e inmunidad",
-      "numero_pregunta": 26,
-      "pregunta": "¿Qué inmunoglobulina aparece primero en una respuesta primaria?",
+      "numero_pregunta": 3,
+      "pregunta": "Se compara la clase implicada en una reacción alérgica con las que predominan en mucosas o pasan por la placenta.\n¿Qué opción corresponde al caso?",
       "respuesta_correcta": "D",
-      "justificacion": "IgM.",
-      "fuente": "Saladin · Anatomía y fisiología",
+      "justificacion": "La IgE se une a mastocitos y basófilos y participa en respuestas alérgicas y frente a parásitos.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "868",
+      "pagina_impresa": "840",
+      "dificultad": "medio",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Los sistemas linfático e inmunitario · Clases de anticuerpos, cuadro 21.3",
+          "page": 868,
+          "printed": 840,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-21",
+        "chapterNumber": 21,
+        "chapter": "Los sistemas linfático e inmunitario",
+        "section": "Clases de anticuerpos, cuadro 21.3",
+        "printedPages": [
+          840
+        ],
+        "pdfPages": [
+          868
+        ]
+      },
+      "opcion_a": "IgG",
+      "opcion_b": "IgA",
+      "opcion_c": "IgM",
+      "opcion_d": "IgE"
+    },
+    {
+      "content_id": "evaluacion:medicina-oficial-morfo-21-intermedio-4",
+      "materia": "MORFOFUNCION",
+      "tema": "sistema linfatico e inmunidad",
+      "numero_pregunta": 4,
+      "pregunta": "Se toman muestras en orden temporal después de un primer contacto con el antígeno. Interesa la clase que aparece antes que las demás.\n¿Qué opción corresponde al caso?",
+      "respuesta_correcta": "C",
+      "justificacion": "En la respuesta primaria, la IgM aparece antes que la IgG.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
       "paginas_pdf": "869",
       "pagina_impresa": "841",
       "dificultad": "medio",
-      "opcion_a": "El bazo.",
-      "opcion_b": "IgA.",
-      "opcion_c": "Las válvulas.",
-      "opcion_d": "IgM."
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Los sistemas linfático e inmunitario · Anticuerpos",
+          "page": 869,
+          "printed": 841,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-21",
+        "chapterNumber": 21,
+        "chapter": "Los sistemas linfático e inmunitario",
+        "section": "Anticuerpos",
+        "printedPages": [
+          841
+        ],
+        "pdfPages": [
+          869
+        ]
+      },
+      "opcion_a": "IgE",
+      "opcion_b": "IgA",
+      "opcion_c": "IgM",
+      "opcion_d": "IgG"
     },
     {
-      "content_id": "morfo-21-022",
+      "content_id": "evaluacion:medicina-oficial-morfo-21-ampliacion-01-umss",
       "materia": "MORFOFUNCION",
       "tema": "sistema linfatico e inmunidad",
-      "numero_pregunta": 27,
-      "pregunta": "¿Qué diferencia a la respuesta inmunitaria secundaria de la primaria?",
-      "respuesta_correcta": "C",
-      "justificacion": "Es más rápida y más intensa por las células de memoria.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "870",
-      "pagina_impresa": "842",
-      "dificultad": "medio",
-      "opcion_a": "Producir espermatozoides y secretar hormonas sexuales.",
-      "opcion_b": "Se opone al cambio y acerca la variable a su valor normal.",
-      "opcion_c": "Es más rápida y más intensa por las células de memoria.",
-      "opcion_d": "Aumenta la reabsorción de sodio y la secreción de potasio."
-    },
-    {
-      "content_id": "morfo-21-029",
-      "materia": "MORFOFUNCION",
-      "tema": "sistema linfatico e inmunidad",
-      "numero_pregunta": 28,
-      "pregunta": "¿Qué es la autoinmunidad?",
+      "numero_pregunta": 5,
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. El conducto linfático derecho recoge la linfa del miembro superior izquierdo y de ambos lados de la cabeza.\n2. Un ganglio linfático puede filtrar la linfa antes de que vuelva a la circulación venosa.",
       "respuesta_correcta": "B",
-      "justificacion": "Una respuesta inmunitaria contra componentes propios.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "871",
-      "pagina_impresa": "843",
-      "dificultad": "medio",
-      "opcion_a": "Proteínas que ayudan a proteger células frente a infecciones virales.",
-      "opcion_b": "Una respuesta inmunitaria contra componentes propios.",
-      "opcion_c": "La protección por anticuerpos recibidos de otra fuente.",
-      "opcion_d": "La protección generada por la propia respuesta inmunitaria."
+      "justificacion": "1. Incorrecta. Drena el miembro superior derecho y el lado derecho de cabeza, cuello y tórax.\n2. Correcta. La linfa atraviesa los ganglios, donde se retiene material y se facilita la vigilancia inmunitaria.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "840, 843",
+      "pagina_impresa": "812, 815",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Los sistemas linfático e inmunitario · Drenaje linfático / Órganos linfáticos",
+          "page": 840,
+          "printed": 812,
+          "marks": []
+        },
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Los sistemas linfático e inmunitario · Drenaje linfático / Órganos linfáticos",
+          "page": 843,
+          "printed": 815,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-21",
+        "chapterNumber": 21,
+        "chapter": "Los sistemas linfático e inmunitario",
+        "section": "Drenaje linfático / Órganos linfáticos",
+        "printedPages": [
+          812,
+          815
+        ],
+        "pdfPages": [
+          840,
+          843
+        ],
+        "statements": [
+          {
+            "pdfPage": 840,
+            "printedPage": 812,
+            "section": "Drenaje linfático",
+            "cardId": "morfo-21-005"
+          },
+          {
+            "pdfPage": 843,
+            "printedPage": 815,
+            "section": "Órganos linfáticos",
+            "cardId": "morfo-21-006"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. Drena el miembro superior derecho y el lado derecho de cabeza, cuello y tórax. 2. Correcta. La linfa atraviesa los ganglios, donde se retiene material y se facilita la vigilancia inmunitaria.",
+        "B": "Solo la afirmación 2 es correcta.",
+        "C": "1. Incorrecta. Drena el miembro superior derecho y el lado derecho de cabeza, cuello y tórax.",
+        "D": "2. Correcta. La linfa atraviesa los ganglios, donde se retiene material y se facilita la vigilancia inmunitaria."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "morfo-21-030",
+      "content_id": "evaluacion:medicina-oficial-morfo-21-ampliacion-02-umss",
       "materia": "MORFOFUNCION",
       "tema": "sistema linfatico e inmunidad",
-      "numero_pregunta": 29,
-      "pregunta": "¿Qué células ataca principalmente el VIH?",
+      "numero_pregunta": 6,
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. El timo es el sitio donde maduran los linfocitos T.\n2. Los linfocitos B completan su maduración normalmente en el timo.",
       "respuesta_correcta": "A",
-      "justificacion": "Los linfocitos T colaboradores.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "873",
-      "pagina_impresa": "845",
-      "dificultad": "medio",
-      "opcion_a": "Los linfocitos T colaboradores.",
-      "opcion_b": "Las proteínas del complemento.",
-      "opcion_c": "Principalmente neutrófilos y macrófagos.",
-      "opcion_d": "Las células NK."
+      "justificacion": "1. Correcta. Estas células completan allí etapas de diferenciación y selección.\n2. Incorrecta. La médula ósea es su principal sitio de maduración.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "841",
+      "pagina_impresa": "813",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Los sistemas linfático e inmunitario · Órganos linfáticos",
+          "page": 841,
+          "printed": 813,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-21",
+        "chapterNumber": 21,
+        "chapter": "Los sistemas linfático e inmunitario",
+        "section": "Órganos linfáticos",
+        "printedPages": [
+          813
+        ],
+        "pdfPages": [
+          841
+        ],
+        "statements": [
+          {
+            "pdfPage": 841,
+            "printedPage": 813,
+            "section": "Órganos linfáticos",
+            "cardId": "morfo-21-008"
+          },
+          {
+            "pdfPage": 841,
+            "printedPage": 813,
+            "section": "Órganos linfáticos",
+            "cardId": "morfo-21-009"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "Solo la afirmación 1 es correcta.",
+        "B": "1. Correcta. Estas células completan allí etapas de diferenciación y selección. 2. Incorrecta. La médula ósea es su principal sitio de maduración.",
+        "C": "2. Incorrecta. La médula ósea es su principal sitio de maduración.",
+        "D": "1. Correcta. Estas células completan allí etapas de diferenciación y selección."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "morfo-21-007",
+      "content_id": "evaluacion:medicina-oficial-morfo-21-ampliacion-03-umss",
       "materia": "MORFOFUNCION",
       "tema": "sistema linfatico e inmunidad",
-      "numero_pregunta": 30,
-      "pregunta": "¿Qué órgano linfático filtra la sangre y elimina eritrocitos viejos?",
-      "respuesta_correcta": "A",
-      "justificacion": "El bazo.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "877",
-      "pagina_impresa": "849",
-      "dificultad": "medio",
-      "opcion_a": "El bazo.",
-      "opcion_b": "IgA.",
-      "opcion_c": "IgG.",
-      "opcion_d": "IgM."
+      "numero_pregunta": 7,
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Una célula NK puede actuar contra una célula tumoral sin sensibilización específica previa.\n2. La memoria inmunitaria permite que una exposición posterior al mismo antígeno produzca una respuesta más rápida.",
+      "respuesta_correcta": "C",
+      "justificacion": "1. Correcta. Las NK pertenecen a la defensa innata y pueden destruir células alteradas.\n2. Correcta. La respuesta secundaria se apoya en células de memoria generadas durante la exposición previa.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "852, 870",
+      "pagina_impresa": "824, 842",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Los sistemas linfático e inmunitario · Inmunidad innata / Memoria inmunitaria",
+          "page": 852,
+          "printed": 824,
+          "marks": []
+        },
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Los sistemas linfático e inmunitario · Inmunidad innata / Memoria inmunitaria",
+          "page": 870,
+          "printed": 842,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-21",
+        "chapterNumber": 21,
+        "chapter": "Los sistemas linfático e inmunitario",
+        "section": "Inmunidad innata / Memoria inmunitaria",
+        "printedPages": [
+          824,
+          842
+        ],
+        "pdfPages": [
+          852,
+          870
+        ],
+        "statements": [
+          {
+            "pdfPage": 852,
+            "printedPage": 824,
+            "section": "Inmunidad innata",
+            "cardId": "morfo-21-013"
+          },
+          {
+            "pdfPage": 870,
+            "printedPage": 842,
+            "section": "Memoria inmunitaria",
+            "cardId": "morfo-21-022"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "2. Correcta. La respuesta secundaria se apoya en células de memoria generadas durante la exposición previa.",
+        "B": "1. Correcta. Las NK pertenecen a la defensa innata y pueden destruir células alteradas.",
+        "C": "Ambas afirmaciones son correctas.",
+        "D": "1. Correcta. Las NK pertenecen a la defensa innata y pueden destruir células alteradas. 2. Correcta. La respuesta secundaria se apoya en células de memoria generadas durante la exposición previa."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
+    },
+    {
+      "content_id": "evaluacion:medicina-oficial-morfo-21-ampliacion-04-umss",
+      "materia": "MORFOFUNCION",
+      "tema": "sistema linfatico e inmunidad",
+      "numero_pregunta": 8,
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Transferir anticuerpos ya formados provoca inmunidad activa en quien los recibe.\n2. La protección pasiva se define por la formación de anticuerpos a partir de la propia respuesta al antígeno.",
+      "respuesta_correcta": "D",
+      "justificacion": "1. Incorrecta. La inmunidad activa requiere que la propia persona monte la respuesta.\n2. Incorrecta. En la protección pasiva se reciben anticuerpos elaborados por otra fuente.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "859",
+      "pagina_impresa": "831",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Los sistemas linfático e inmunitario · Adquisición de inmunidad",
+          "page": 859,
+          "printed": 831,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-21",
+        "chapterNumber": 21,
+        "chapter": "Los sistemas linfático e inmunitario",
+        "section": "Adquisición de inmunidad",
+        "printedPages": [
+          831
+        ],
+        "pdfPages": [
+          859
+        ],
+        "statements": [
+          {
+            "pdfPage": 859,
+            "printedPage": 831,
+            "section": "Adquisición de inmunidad",
+            "cardId": "morfo-21-027"
+          },
+          {
+            "pdfPage": 859,
+            "printedPage": 831,
+            "section": "Adquisición de inmunidad",
+            "cardId": "morfo-21-028"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. La inmunidad activa requiere que la propia persona monte la respuesta.",
+        "B": "2. Incorrecta. En la protección pasiva se reciben anticuerpos elaborados por otra fuente.",
+        "C": "1. Incorrecta. La inmunidad activa requiere que la propia persona monte la respuesta. 2. Incorrecta. En la protección pasiva se reciben anticuerpos elaborados por otra fuente.",
+        "D": "Ninguna afirmación es correcta."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
+    },
+    {
+      "content_id": "evaluacion:banco-verificado:morfo-21:linfa",
+      "materia": "MORFOFUNCION",
+      "tema": "sistema linfatico e inmunidad",
+      "numero_pregunta": 9,
+      "pregunta": "Un trazador sigue el drenaje linfático del miembro superior izquierdo. ¿En qué conducto termina ese trayecto?",
+      "respuesta_correcta": "B",
+      "justificacion": "El conducto torácico recibe la linfa del miembro superior izquierdo. El conducto linfático derecho drena territorios superiores del lado derecho.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "841, 840",
+      "pagina_impresa": "813, 812",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 21 · Drenaje linfático",
+          "page": 841,
+          "printed": 813,
+          "marks": [
+            [
+              0.1913,
+              0.7618,
+              0.1437,
+              0.0111
+            ]
+          ]
+        },
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 21 · Drenaje linfático",
+          "page": 840,
+          "printed": 812,
+          "marks": [
+            [
+              0.5951,
+              0.7179,
+              0.0944,
+              0.0111
+            ]
+          ]
+        }
+      ],
+      "source": {
+        "document": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-21"
+      },
+      "opcion_a": "Tronco intestinal.",
+      "opcion_b": "Conducto torácico.",
+      "opcion_c": "Conducto linfático derecho.",
+      "opcion_d": "Tronco lumbar derecho."
     }
   ]
 }

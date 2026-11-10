@@ -14,510 +14,1800 @@
       "materia": "MORFOFUNCION",
       "tema": "sangre",
       "numero_pregunta": 1,
-      "pregunta": "¿Cuáles son los dos componentes principales de la sangre?",
-      "respuesta_correcta": "A",
-      "justificacion": "Plasma y elementos formes.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "709",
-      "pagina_impresa": "681",
-      "dificultad": "medio",
-      "opcion_a": "Plasma y elementos formes.",
-      "opcion_b": "Espasmo vascular → tapón plaquetario → coagulación.",
-      "opcion_c": "Epidermis y dermis.",
-      "opcion_d": "Fibrosa, vascular y retina."
-    },
-    {
-      "content_id": "morfo-18-004",
-      "materia": "MORFOFUNCION",
-      "tema": "sangre",
-      "numero_pregunta": 2,
-      "pregunta": "¿Cuál es la proteína plasmática más abundante?",
-      "respuesta_correcta": "B",
-      "justificacion": "La albúmina.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "709",
-      "pagina_impresa": "681",
-      "dificultad": "medio",
-      "opcion_a": "El neutrófilo.",
-      "opcion_b": "La albúmina.",
-      "opcion_c": "El fibrinógeno.",
-      "opcion_d": "La hemoglobina."
-    },
-    {
-      "content_id": "morfo-18-007",
-      "materia": "MORFOFUNCION",
-      "tema": "sangre",
-      "numero_pregunta": 3,
-      "pregunta": "¿Qué diferencia al suero del plasma?",
-      "respuesta_correcta": "A",
-      "justificacion": "El suero es el líquido restante después de la coagulación y carece de fibrinógeno.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "709",
-      "pagina_impresa": "681",
-      "dificultad": "medio",
-      "opcion_a": "El suero es el líquido restante después de la coagulación y carece de fibrinógeno.",
-      "opcion_b": "Hipertrofia: aumenta el tamaño celular. Hiperplasia: aumenta el número de células.",
-      "opcion_c": "El trombo permanece adherido; el émbolo circula por la sangre.",
-      "opcion_d": "El porcentaje del volumen sanguíneo ocupado por eritrocitos."
-    },
-    {
-      "content_id": "morfo-18-005",
-      "materia": "MORFOFUNCION",
-      "tema": "sangre",
-      "numero_pregunta": 4,
-      "pregunta": "¿Qué función principal cumple la albúmina en la presión osmótica sanguínea?",
-      "respuesta_correcta": "D",
-      "justificacion": "Ayuda a retener agua en el torrente sanguíneo.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "710",
-      "pagina_impresa": "682",
-      "dificultad": "medio",
-      "opcion_a": "Favorece el volumen de las heces y su desplazamiento.",
-      "opcion_b": "Ejecuta la respuesta que modifica la variable.",
-      "opcion_c": "Absorber agua y electrólitos y formar las heces.",
-      "opcion_d": "Ayuda a retener agua en el torrente sanguíneo."
-    },
-    {
-      "content_id": "morfo-18-008",
-      "materia": "MORFOFUNCION",
-      "tema": "sangre",
-      "numero_pregunta": 5,
-      "pregunta": "¿Qué forma tienen los eritrocitos maduros?",
+      "pregunta": "¿Cuáles son los dos componentes principales de la sangre completa?",
       "respuesta_correcta": "C",
-      "justificacion": "Discos bicóncavos.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "713",
-      "pagina_impresa": "685",
+      "justificacion": "El plasma es la matriz líquida y los elementos formes son eritrocitos, leucocitos y plaquetas. La distinción es entre la fase líquida y el conjunto de elementos suspendidos.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología. La unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "708",
+      "pagina_impresa": "680",
       "dificultad": "medio",
-      "opcion_a": "Los eosinófilos.",
-      "opcion_b": "La eritropoyetina.",
-      "opcion_c": "Discos bicóncavos.",
-      "opcion_d": "Bilirrubina."
-    },
-    {
-      "content_id": "morfo-18-009",
-      "materia": "MORFOFUNCION",
-      "tema": "sangre",
-      "numero_pregunta": 6,
-      "pregunta": "¿Qué proteína transporta la mayor parte del oxígeno sanguíneo?",
-      "respuesta_correcta": "A",
-      "justificacion": "La hemoglobina.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "713",
-      "pagina_impresa": "685",
-      "dificultad": "medio",
-      "opcion_a": "La hemoglobina.",
-      "opcion_b": "El riñón.",
-      "opcion_c": "El fibrinógeno.",
-      "opcion_d": "La albúmina."
-    },
-    {
-      "content_id": "morfo-18-011",
-      "materia": "MORFOFUNCION",
-      "tema": "sangre",
-      "numero_pregunta": 7,
-      "pregunta": "¿Cuántas moléculas de oxígeno puede transportar una hemoglobina?",
-      "respuesta_correcta": "C",
-      "justificacion": "Cuatro.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "713",
-      "pagina_impresa": "685",
-      "dificultad": "medio",
-      "opcion_a": "2 ATP.",
-      "opcion_b": "120 días.",
-      "opcion_c": "Cuatro.",
-      "opcion_d": "12 pares."
-    },
-    {
-      "content_id": "morfo-18-012",
-      "materia": "MORFOFUNCION",
-      "tema": "sangre",
-      "numero_pregunta": 8,
-      "pregunta": "¿Cuánto vive aproximadamente un eritrocito?",
-      "respuesta_correcta": "D",
-      "justificacion": "120 días.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "714",
-      "pagina_impresa": "686",
-      "dificultad": "medio",
-      "opcion_a": "Tres.",
-      "opcion_b": "14.",
-      "opcion_c": "12 pares.",
-      "opcion_d": "120 días."
-    },
-    {
-      "content_id": "morfo-18-010",
-      "materia": "MORFOFUNCION",
-      "tema": "sangre",
-      "numero_pregunta": 9,
-      "pregunta": "¿Qué metal contiene el grupo hemo?",
-      "respuesta_correcta": "A",
-      "justificacion": "Hierro.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "715",
-      "pagina_impresa": "687",
-      "dificultad": "medio",
-      "opcion_a": "Hierro.",
-      "opcion_b": "Bilirrubina.",
-      "opcion_c": "Anti-B.",
-      "opcion_d": "Antígenos A."
-    },
-    {
-      "content_id": "morfo-18-014",
-      "materia": "MORFOFUNCION",
-      "tema": "sangre",
-      "numero_pregunta": 10,
-      "pregunta": "¿Qué órgano produce la mayor parte de la eritropoyetina?",
-      "respuesta_correcta": "A",
-      "justificacion": "El riñón.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "716",
-      "pagina_impresa": "688",
-      "dificultad": "medio",
-      "opcion_a": "El riñón.",
-      "opcion_b": "La hemoglobina.",
-      "opcion_c": "Anti-B.",
-      "opcion_d": "Hierro."
-    },
-    {
-      "content_id": "morfo-18-016",
-      "materia": "MORFOFUNCION",
-      "tema": "sangre",
-      "numero_pregunta": 11,
-      "pregunta": "¿Qué pigmento se forma al degradarse el hemo?",
-      "respuesta_correcta": "D",
-      "justificacion": "Bilirrubina.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "716",
-      "pagina_impresa": "688",
-      "dificultad": "medio",
-      "opcion_a": "La trombina.",
-      "opcion_b": "Discos bicóncavos.",
-      "opcion_c": "La plasmina.",
-      "opcion_d": "Bilirrubina."
-    },
-    {
-      "content_id": "morfo-18-013",
-      "materia": "MORFOFUNCION",
-      "tema": "sangre",
-      "numero_pregunta": 12,
-      "pregunta": "¿Qué hormona estimula la producción de eritrocitos?",
-      "respuesta_correcta": "D",
-      "justificacion": "La eritropoyetina.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "717",
-      "pagina_impresa": "689",
-      "dificultad": "medio",
-      "opcion_a": "Los linfocitos.",
-      "opcion_b": "Los eosinófilos.",
-      "opcion_c": "Discos bicóncavos.",
-      "opcion_d": "La eritropoyetina."
-    },
-    {
-      "content_id": "morfo-18-017",
-      "materia": "MORFOFUNCION",
-      "tema": "sangre",
-      "numero_pregunta": 13,
-      "pregunta": "¿Qué antígenos eritrocitarios tiene una persona del grupo A?",
-      "respuesta_correcta": "D",
-      "justificacion": "Antígenos A.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "719",
-      "pagina_impresa": "691",
-      "dificultad": "medio",
-      "opcion_a": "La trombina.",
-      "opcion_b": "La plasmina.",
-      "opcion_c": "Hierro.",
-      "opcion_d": "Antígenos A."
-    },
-    {
-      "content_id": "morfo-18-019",
-      "materia": "MORFOFUNCION",
-      "tema": "sangre",
-      "numero_pregunta": 14,
-      "pregunta": "¿Qué antígenos ABO tiene una persona del grupo O?",
-      "respuesta_correcta": "A",
-      "justificacion": "Ninguno de los antígenos A o B.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "719",
-      "pagina_impresa": "691",
-      "dificultad": "medio",
-      "opcion_a": "Ninguno de los antígenos A o B.",
-      "opcion_b": "Eritrocitos, leucocitos y plaquetas.",
-      "opcion_c": "Que los eritrocitos presentan el antígeno D.",
-      "opcion_d": "De los megacariocitos."
-    },
-    {
-      "content_id": "morfo-18-020",
-      "materia": "MORFOFUNCION",
-      "tema": "sangre",
-      "numero_pregunta": 15,
-      "pregunta": "¿Qué significa Rh positivo?",
-      "respuesta_correcta": "B",
-      "justificacion": "Que los eritrocitos presentan el antígeno D.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "719",
-      "pagina_impresa": "691",
-      "dificultad": "medio",
-      "opcion_a": "Eritrocitos, leucocitos y plaquetas.",
-      "opcion_b": "Que los eritrocitos presentan el antígeno D.",
-      "opcion_c": "Ninguno de los antígenos A o B.",
-      "opcion_d": "De los megacariocitos."
-    },
-    {
-      "content_id": "morfo-18-018",
-      "materia": "MORFOFUNCION",
-      "tema": "sangre",
-      "numero_pregunta": 16,
-      "pregunta": "¿Qué anticuerpos ABO tiene habitualmente una persona del grupo A?",
-      "respuesta_correcta": "B",
-      "justificacion": "Anti-B.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "721",
-      "pagina_impresa": "693",
-      "dificultad": "medio",
-      "opcion_a": "Antígenos A.",
-      "opcion_b": "Anti-B.",
-      "opcion_c": "Hierro.",
-      "opcion_d": "El riñón."
-    },
-    {
-      "content_id": "morfo-18-024",
-      "materia": "MORFOFUNCION",
-      "tema": "sangre",
-      "numero_pregunta": 17,
-      "pregunta": "¿Qué leucocitos incluyen células B, T y NK?",
-      "respuesta_correcta": "A",
-      "justificacion": "Los linfocitos.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "725",
-      "pagina_impresa": "697",
-      "dificultad": "medio",
-      "opcion_a": "Los linfocitos.",
-      "opcion_b": "El neutrófilo.",
-      "opcion_c": "De los megacariocitos.",
-      "opcion_d": "Los monocitos."
-    },
-    {
-      "content_id": "morfo-18-022",
-      "materia": "MORFOFUNCION",
-      "tema": "sangre",
-      "numero_pregunta": 18,
-      "pregunta": "¿Qué leucocitos aumentan especialmente en parasitosis y ciertas alergias?",
-      "respuesta_correcta": "B",
-      "justificacion": "Los eosinófilos.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "726",
-      "pagina_impresa": "698",
-      "dificultad": "medio",
-      "opcion_a": "Los monocitos.",
-      "opcion_b": "Los eosinófilos.",
-      "opcion_c": "Los linfocitos.",
-      "opcion_d": "El neutrófilo."
-    },
-    {
-      "content_id": "morfo-18-003",
-      "materia": "MORFOFUNCION",
-      "tema": "sangre",
-      "numero_pregunta": 19,
-      "pregunta": "¿Qué expresa el hematócrito?",
-      "respuesta_correcta": "A",
-      "justificacion": "El porcentaje del volumen sanguíneo ocupado por eritrocitos.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "729",
-      "pagina_impresa": "701",
-      "dificultad": "medio",
-      "opcion_a": "El porcentaje del volumen sanguíneo ocupado por eritrocitos.",
-      "opcion_b": "Una concentración de potasio sanguíneo superior a la normal.",
-      "opcion_c": "El suero es el líquido restante después de la coagulación y carece de fibrinógeno.",
-      "opcion_d": "El trombo permanece adherido; el émbolo circula por la sangre."
-    },
-    {
-      "content_id": "morfo-18-023",
-      "materia": "MORFOFUNCION",
-      "tema": "sangre",
-      "numero_pregunta": 20,
-      "pregunta": "¿Qué leucocitos se transforman en macrófagos al entrar en tejidos?",
-      "respuesta_correcta": "C",
-      "justificacion": "Los monocitos.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "729",
-      "pagina_impresa": "701",
-      "dificultad": "medio",
-      "opcion_a": "Los eosinófilos.",
-      "opcion_b": "El neutrófilo.",
-      "opcion_c": "Los monocitos.",
-      "opcion_d": "La vitamina K."
-    },
-    {
-      "content_id": "morfo-18-021",
-      "materia": "MORFOFUNCION",
-      "tema": "sangre",
-      "numero_pregunta": 21,
-      "pregunta": "¿Cuál es el leucocito más abundante en sangre normal?",
-      "respuesta_correcta": "A",
-      "justificacion": "El neutrófilo.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "730",
-      "pagina_impresa": "702",
-      "dificultad": "medio",
-      "opcion_a": "El neutrófilo.",
-      "opcion_b": "Los linfocitos.",
-      "opcion_c": "La albúmina.",
-      "opcion_d": "Los monocitos."
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 18 · 18.1 · Componentes de la sangre",
+          "page": 708,
+          "printed": 680,
+          "marks": [
+            [
+              0.218,
+              0.6259,
+              0.1205,
+              0.0111
+            ]
+          ]
+        }
+      ],
+      "source": {
+        "document": "Kenneth S. Saladin · Anatomía y fisiología. La unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-18",
+        "chapterNumber": 18,
+        "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
+        "sha256": "e00074c7105c10052637b1c2a82f2b8959cf7c4cb9a91c4abd058ce958e58148",
+        "pdf_pages": [
+          708
+        ],
+        "section": "18.1 · Componentes de la sangre",
+        "verified_anchors": [
+          {
+            "pdf_page": 708,
+            "printed_page": 680,
+            "anchor": "plasma sanguíneo"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "Las proteínas plasmáticas están disueltas en el plasma. Ambas partes de esta opción corresponden a la misma fracción.",
+        "B": "El suero se obtiene después de la coagulación. La matriz líquida de la sangre completa es el plasma.",
+        "C": "El plasma es la matriz líquida y los elementos formes son eritrocitos, leucocitos y plaquetas. La distinción es entre la fase líquida y el conjunto de elementos suspendidos.",
+        "D": "Los eritrocitos son el elemento forme más abundante. Faltan los leucocitos y las plaquetas."
+      },
+      "opcion_a": "Plasma y proteínas plasmáticas.",
+      "opcion_b": "Suero y elementos formes.",
+      "opcion_c": "Plasma y elementos formes.",
+      "opcion_d": "Plasma y eritrocitos."
     },
     {
       "content_id": "morfo-18-002",
       "materia": "MORFOFUNCION",
       "tema": "sangre",
-      "numero_pregunta": 22,
-      "pregunta": "¿Qué elementos formes contiene la sangre?",
-      "respuesta_correcta": "C",
-      "justificacion": "Eritrocitos, leucocitos y plaquetas.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "731",
-      "pagina_impresa": "703",
+      "numero_pregunta": 2,
+      "pregunta": "¿Qué lista incluye exclusivamente los tres grandes grupos de elementos formes de la sangre?",
+      "respuesta_correcta": "D",
+      "justificacion": "Los eritrocitos, los leucocitos y las plaquetas son los elementos suspendidos en el plasma. Los distintos tipos de leucocitos se agrupan en una sola categoría en esta clasificación.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología. La unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "708",
+      "pagina_impresa": "680",
       "dificultad": "medio",
-      "opcion_a": "Hierro.",
-      "opcion_b": "De los megacariocitos.",
-      "opcion_c": "Eritrocitos, leucocitos y plaquetas.",
-      "opcion_d": "El neutrófilo."
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 18 · 18.1 · Figura 18.1. Elementos formes",
+          "page": 708,
+          "printed": 680,
+          "marks": [
+            [
+              0.1695,
+              0.4713,
+              0.1896,
+              0.0106
+            ]
+          ]
+        }
+      ],
+      "source": {
+        "document": "Kenneth S. Saladin · Anatomía y fisiología. La unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-18",
+        "chapterNumber": 18,
+        "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
+        "sha256": "e00074c7105c10052637b1c2a82f2b8959cf7c4cb9a91c4abd058ce958e58148",
+        "pdf_pages": [
+          708
+        ],
+        "section": "18.1 · Figura 18.1. Elementos formes",
+        "verified_anchors": [
+          {
+            "pdf_page": 708,
+            "printed_page": 680,
+            "anchor": "Elementos formes de la sangre"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "El fibrinógeno es una proteína disuelta del plasma. Faltan las plaquetas.",
+        "B": "La albúmina pertenece a las proteínas plasmáticas. Faltan los leucocitos.",
+        "C": "Las globulinas plasmáticas son solutos, no elementos formes. Faltan los eritrocitos.",
+        "D": "Los eritrocitos, los leucocitos y las plaquetas son los elementos suspendidos en el plasma. Los distintos tipos de leucocitos se agrupan en una sola categoría en esta clasificación."
+      },
+      "opcion_a": "Eritrocitos, leucocitos y fibrinógeno.",
+      "opcion_b": "Eritrocitos, albúmina y plaquetas.",
+      "opcion_c": "Leucocitos, plaquetas y globulinas plasmáticas.",
+      "opcion_d": "Eritrocitos, leucocitos y plaquetas."
+    },
+    {
+      "content_id": "morfo-18-003",
+      "materia": "MORFOFUNCION",
+      "tema": "sangre",
+      "numero_pregunta": 3,
+      "pregunta": "En una muestra centrifugada, ¿qué relación expresa el hematócrito?",
+      "respuesta_correcta": "A",
+      "justificacion": "El hematócrito indica qué fracción de la sangre completa corresponde a eritrocitos. Suele expresarse como porcentaje.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología. La unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "709",
+      "pagina_impresa": "681",
+      "dificultad": "medio",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 18 · 18.1 · Figura 18.2. Sangre centrifugada",
+          "page": 709,
+          "printed": 681,
+          "marks": [
+            [
+              0.3713,
+              0.4607,
+              0.1049,
+              0.0106
+            ]
+          ]
+        }
+      ],
+      "source": {
+        "document": "Kenneth S. Saladin · Anatomía y fisiología. La unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-18",
+        "chapterNumber": 18,
+        "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
+        "sha256": "e00074c7105c10052637b1c2a82f2b8959cf7c4cb9a91c4abd058ce958e58148",
+        "pdf_pages": [
+          709
+        ],
+        "section": "18.1 · Figura 18.2. Sangre centrifugada",
+        "verified_anchors": [
+          {
+            "pdf_page": 709,
+            "printed_page": 681,
+            "anchor": "Al centrifugar una"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "El hematócrito indica qué fracción de la sangre completa corresponde a eritrocitos. Suele expresarse como porcentaje.",
+        "B": "Esa relación expresa la fracción líquida, no la fracción eritrocitaria.",
+        "C": "Esa relación corresponde a la capa intermedia. El hematócrito mide la fracción eritrocitaria.",
+        "D": "El denominador debe ser el volumen total de sangre y no solo el de plasma."
+      },
+      "opcion_a": "Volumen de eritrocitos dividido por volumen de sangre completa.",
+      "opcion_b": "Volumen de plasma dividido por volumen de sangre completa.",
+      "opcion_c": "Volumen de leucocitos y plaquetas dividido por volumen de sangre completa.",
+      "opcion_d": "Volumen de eritrocitos dividido por volumen de plasma."
+    },
+    {
+      "content_id": "morfo-18-004",
+      "materia": "MORFOFUNCION",
+      "tema": "sangre",
+      "numero_pregunta": 4,
+      "pregunta": "¿Cuál de estas proteínas representa la mayor fracción de las proteínas del plasma?",
+      "respuesta_correcta": "B",
+      "justificacion": "La albúmina es la proteína plasmática más abundante. El cuadro 18.3 distingue su aporte del de las globulinas y el fibrinógeno.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología. La unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "709",
+      "pagina_impresa": "681",
+      "dificultad": "medio",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 18 · 18.1 · Proteínas plasmáticas",
+          "page": 709,
+          "printed": 681,
+          "marks": [
+            [
+              0.8309,
+              0.3786,
+              0.0305,
+              0.0111
+            ],
+            [
+              0.8648,
+              0.3786,
+              0.0601,
+              0.0111
+            ]
+          ]
+        }
+      ],
+      "source": {
+        "document": "Kenneth S. Saladin · Anatomía y fisiología. La unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-18",
+        "chapterNumber": 18,
+        "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
+        "sha256": "e00074c7105c10052637b1c2a82f2b8959cf7c4cb9a91c4abd058ce958e58148",
+        "pdf_pages": [
+          709
+        ],
+        "section": "18.1 · Proteínas plasmáticas",
+        "verified_anchors": [
+          {
+            "pdf_page": 709,
+            "printed_page": 681,
+            "anchor": "más pequeña y abundante"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "Forman parte de las globulinas y comprenden anticuerpos. La albúmina predomina en cantidad.",
+        "B": "La albúmina es la proteína plasmática más abundante. El cuadro 18.3 distingue su aporte del de las globulinas y el fibrinógeno.",
+        "C": "Es el precursor de la fibrina y su proporción plasmática es menor.",
+        "D": "Participa en la coagulación como precursor de la trombina. No constituye la fracción plasmática predominante."
+      },
+      "opcion_a": "Gammaglobulinas.",
+      "opcion_b": "Albúmina.",
+      "opcion_c": "Fibrinógeno.",
+      "opcion_d": "Protrombina."
+    },
+    {
+      "content_id": "morfo-18-005",
+      "materia": "MORFOFUNCION",
+      "tema": "sangre",
+      "numero_pregunta": 5,
+      "pregunta": "Si disminuye la concentración de albúmina plasmática, ¿qué cambio se espera por su función osmótica?",
+      "respuesta_correcta": "C",
+      "justificacion": "La albúmina contribuye a la presión osmótica del plasma. Con menos albúmina disminuye la fuerza que favorece la permanencia del agua dentro de los vasos.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología. La unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "710",
+      "pagina_impresa": "682",
+      "dificultad": "medio",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 18 · 18.1 · Cuadro 18.3. Proteínas plasmáticas",
+          "page": 710,
+          "printed": 682,
+          "marks": [
+            [
+              0.6743,
+              0.1559,
+              0.1874,
+              0.0094
+            ]
+          ]
+        }
+      ],
+      "source": {
+        "document": "Kenneth S. Saladin · Anatomía y fisiología. La unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-18",
+        "chapterNumber": 18,
+        "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
+        "sha256": "e00074c7105c10052637b1c2a82f2b8959cf7c4cb9a91c4abd058ce958e58148",
+        "pdf_pages": [
+          710
+        ],
+        "section": "18.1 · Cuadro 18.3. Proteínas plasmáticas",
+        "verified_anchors": [
+          {
+            "pdf_page": 710,
+            "printed_page": 682,
+            "anchor": "Responsable de la presión osmótica"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "La reducción de la principal proteína plasmática disminuye su aporte a esa presión.",
+        "B": "La albúmina es la principal contribuyente plasmática. El fibrinógeno tiene una función destacada en la coagulación.",
+        "C": "La albúmina contribuye a la presión osmótica del plasma. Con menos albúmina disminuye la fuerza que favorece la permanencia del agua dentro de los vasos.",
+        "D": "Una menor concentración de albúmina debilita su efecto osmótico sobre la retención de agua."
+      },
+      "opcion_a": "Aumenta la presión osmótica debida a proteínas plasmáticas.",
+      "opcion_b": "Se conserva la retención de agua porque depende del fibrinógeno.",
+      "opcion_c": "Disminuye la retención de agua en el compartimento vascular.",
+      "opcion_d": "Aumenta la retención de agua en el compartimento vascular."
+    },
+    {
+      "content_id": "morfo-18-007",
+      "materia": "MORFOFUNCION",
+      "tema": "sangre",
+      "numero_pregunta": 6,
+      "pregunta": "Tras dejar coagular una muestra y retirar el coágulo, ¿qué diferencia al líquido que queda del plasma de una muestra anticoagulada?",
+      "respuesta_correcta": "D",
+      "justificacion": "El fibrinógeno se transforma en fibrina durante la coagulación y la fibrina queda en el coágulo. El líquido que queda se llama suero.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología. La unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "709",
+      "pagina_impresa": "681",
+      "dificultad": "medio",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 18 · 18.1 · Plasma y suero",
+          "page": 709,
+          "printed": 681,
+          "marks": [
+            [
+              0.6274,
+              0.2004,
+              0.1245,
+              0.0111
+            ]
+          ]
+        }
+      ],
+      "source": {
+        "document": "Kenneth S. Saladin · Anatomía y fisiología. La unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-18",
+        "chapterNumber": 18,
+        "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
+        "sha256": "e00074c7105c10052637b1c2a82f2b8959cf7c4cb9a91c4abd058ce958e58148",
+        "pdf_pages": [
+          709
+        ],
+        "section": "18.1 · Plasma y suero",
+        "verified_anchors": [
+          {
+            "pdf_page": 709,
+            "printed_page": 681,
+            "anchor": "líquido remanente"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "La coagulación consume el fibrinógeno para formar fibrina. Esa pérdida es la diferencia que describe el capítulo.",
+        "B": "La muestra sí coaguló y el líquido resultante es suero. La albúmina sigue disuelta.",
+        "C": "La fibrina forma parte de la red del coágulo que se retiró. El líquido remanente es suero.",
+        "D": "El fibrinógeno se transforma en fibrina durante la coagulación y la fibrina queda en el coágulo. El líquido que queda se llama suero."
+      },
+      "opcion_a": "El líquido restante es suero y conserva el fibrinógeno del plasma.",
+      "opcion_b": "El líquido restante es plasma y carece de albúmina.",
+      "opcion_c": "El líquido restante es plasma y contiene la fibrina del coágulo.",
+      "opcion_d": "El líquido restante es suero y carece de fibrinógeno."
     },
     {
       "content_id": "morfo-18-015",
       "materia": "MORFOFUNCION",
       "tema": "sangre",
-      "numero_pregunta": 23,
-      "pregunta": "¿Dónde ocurre principalmente la hematopoyesis del adulto?",
-      "respuesta_correcta": "D",
-      "justificacion": "En la médula ósea roja.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "731",
-      "pagina_impresa": "703",
+      "numero_pregunta": 7,
+      "pregunta": "¿Dónde se producen principalmente los elementos formes sanguíneos después del nacimiento?",
+      "respuesta_correcta": "A",
+      "justificacion": "Después del nacimiento, la médula ósea roja produce los elementos formes. Parte de la producción de linfocitos ocurre también en tejidos linfáticos.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología. La unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "711",
+      "pagina_impresa": "683",
       "dificultad": "medio",
-      "opcion_a": "En la placa epifisaria.",
-      "opcion_b": "En el citosol.",
-      "opcion_c": "En la matriz mitocondrial.",
-      "opcion_d": "En la médula ósea roja."
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 18 · 18.1 · Formación de los elementos formes",
+          "page": 711,
+          "printed": 683,
+          "marks": [
+            [
+              0.6849,
+              0.8261,
+              0.1625,
+              0.0111
+            ]
+          ]
+        }
+      ],
+      "source": {
+        "document": "Kenneth S. Saladin · Anatomía y fisiología. La unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-18",
+        "chapterNumber": 18,
+        "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
+        "sha256": "e00074c7105c10052637b1c2a82f2b8959cf7c4cb9a91c4abd058ce958e58148",
+        "pdf_pages": [
+          711
+        ],
+        "section": "18.1 · Formación de los elementos formes",
+        "verified_anchors": [
+          {
+            "pdf_page": 711,
+            "printed_page": 683,
+            "anchor": "médula ósea roja produce"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "Después del nacimiento, la médula ósea roja produce los elementos formes. Parte de la producción de linfocitos ocurre también en tejidos linfáticos.",
+        "B": "La médula identificada como sitio de producción principal en condiciones normales es la roja.",
+        "C": "Es un órgano linfático y participa en el recambio de células sanguíneas. No reemplaza a la médula roja como sitio principal.",
+        "D": "Durante el desarrollo fetal participa en la formación de sangre. Después del nacimiento predomina la médula roja."
+      },
+      "opcion_a": "Médula ósea roja.",
+      "opcion_b": "Médula ósea amarilla.",
+      "opcion_c": "Bazo.",
+      "opcion_d": "Hígado."
+    },
+    {
+      "content_id": "morfo-18-008",
+      "materia": "MORFOFUNCION",
+      "tema": "sangre",
+      "numero_pregunta": 8,
+      "pregunta": "¿Cómo se describe la forma normal de un eritrocito humano maduro?",
+      "respuesta_correcta": "B",
+      "justificacion": "La concavidad en ambas caras deja una zona central más delgada y un borde más grueso.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología. La unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "712",
+      "pagina_impresa": "684",
+      "dificultad": "medio",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 18 · 18.2 · Forma y estructura del eritrocito",
+          "page": 712,
+          "printed": 684,
+          "marks": [
+            [
+              0.7049,
+              0.2461,
+              0.1722,
+              0.0111
+            ]
+          ]
+        }
+      ],
+      "source": {
+        "document": "Kenneth S. Saladin · Anatomía y fisiología. La unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-18",
+        "chapterNumber": 18,
+        "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
+        "sha256": "e00074c7105c10052637b1c2a82f2b8959cf7c4cb9a91c4abd058ce958e58148",
+        "pdf_pages": [
+          712
+        ],
+        "section": "18.2 · Forma y estructura del eritrocito",
+        "verified_anchors": [
+          {
+            "pdf_page": 712,
+            "printed_page": 684,
+            "anchor": "forma de disco, bicóncava"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "El eritrocito típico presenta un perfil discoide con concavidades, no uno esférico.",
+        "B": "La concavidad en ambas caras deja una zona central más delgada y un borde más grueso.",
+        "C": "Describe el perfil inverso. El centro del eritrocito típico es más delgado.",
+        "D": "La diferencia de espesor entre el centro y el borde es característica de su forma."
+      },
+      "opcion_a": "Esfera, de grosor comparable en todos sus ejes.",
+      "opcion_b": "Disco bicóncavo, con centro delgado y borde grueso.",
+      "opcion_c": "Disco biconvexo, con centro grueso y borde delgado.",
+      "opcion_d": "Disco plano, de grosor uniforme."
+    },
+    {
+      "content_id": "morfo-18-009",
+      "materia": "MORFOFUNCION",
+      "tema": "sangre",
+      "numero_pregunta": 9,
+      "pregunta": "¿A qué proteína se une el oxígeno para su transporte dentro del eritrocito?",
+      "respuesta_correcta": "C",
+      "justificacion": "Cada grupo hemo de la hemoglobina puede unir oxígeno a su ion ferroso. Esa es la base del transporte de oxígeno en el eritrocito.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología. La unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "713",
+      "pagina_impresa": "685",
+      "dificultad": "medio",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 18 · 18.2 · Figura 18.5. Hemoglobina",
+          "page": 713,
+          "printed": 685,
+          "marks": [
+            [
+              0.5658,
+              0.9028,
+              0.1046,
+              0.0106
+            ]
+          ]
+        }
+      ],
+      "source": {
+        "document": "Kenneth S. Saladin · Anatomía y fisiología. La unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-18",
+        "chapterNumber": 18,
+        "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
+        "sha256": "e00074c7105c10052637b1c2a82f2b8959cf7c4cb9a91c4abd058ce958e58148",
+        "pdf_pages": [
+          713
+        ],
+        "section": "18.2 · Figura 18.5. Hemoglobina",
+        "verified_anchors": [
+          {
+            "pdf_page": 713,
+            "printed_page": 685,
+            "anchor": "El oxígeno se une"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "Transporta hierro en el plasma. El transporte de oxígeno dentro del eritrocito depende del hierro incorporado a la hemoglobina.",
+        "B": "Circula en el plasma y sirve de precursor de la fibrina. No realiza la función de transporte de oxígeno en el eritrocito.",
+        "C": "Cada grupo hemo de la hemoglobina puede unir oxígeno a su ion ferroso. Esa es la base del transporte de oxígeno en el eritrocito.",
+        "D": "Es una proteína del plasma que contribuye a la presión osmótica. La unión del oxígeno dentro del eritrocito corresponde a la hemoglobina."
+      },
+      "opcion_a": "Transferrina.",
+      "opcion_b": "Fibrinógeno.",
+      "opcion_c": "Hemoglobina.",
+      "opcion_d": "Albúmina."
+    },
+    {
+      "content_id": "morfo-18-010",
+      "materia": "MORFOFUNCION",
+      "tema": "sangre",
+      "numero_pregunta": 10,
+      "pregunta": "¿Qué ion se encuentra en el grupo hemo de la hemoglobina funcional y se une al oxígeno?",
+      "respuesta_correcta": "D",
+      "justificacion": "El ion Fe²⁺ ocupa el centro del grupo hemo y proporciona el sitio de unión del oxígeno.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología. La unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "713",
+      "pagina_impresa": "685",
+      "dificultad": "medio",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 18 · 18.2 · Hemoglobina",
+          "page": 713,
+          "printed": 685,
+          "marks": [
+            [
+              0.9147,
+              0.3476,
+              0.0257,
+              0.0111
+            ],
+            [
+              0.525,
+              0.3625,
+              0.0457,
+              0.0111
+            ]
+          ]
+        }
+      ],
+      "source": {
+        "document": "Kenneth S. Saladin · Anatomía y fisiología. La unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-18",
+        "chapterNumber": 18,
+        "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
+        "sha256": "e00074c7105c10052637b1c2a82f2b8959cf7c4cb9a91c4abd058ce958e58148",
+        "pdf_pages": [
+          713
+        ],
+        "section": "18.2 · Hemoglobina",
+        "verified_anchors": [
+          {
+            "pdf_page": 713,
+            "printed_page": 685,
+            "anchor": "ion ferroso"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "Es otro estado de oxidación del hierro. El sitio funcional que describe el capítulo contiene Fe²⁺.",
+        "B": "Tiene funciones sanguíneas como participar en la coagulación. El átomo central del hemo es hierro.",
+        "C": "Que sea un catión divalente no lo convierte en el metal del hemo. El ion central es Fe²⁺.",
+        "D": "El ion Fe²⁺ ocupa el centro del grupo hemo y proporciona el sitio de unión del oxígeno."
+      },
+      "opcion_a": "Hierro férrico (Fe³⁺).",
+      "opcion_b": "Calcio (Ca²⁺).",
+      "opcion_c": "Magnesio (Mg²⁺).",
+      "opcion_d": "Hierro ferroso (Fe²⁺)."
+    },
+    {
+      "content_id": "morfo-18-011",
+      "materia": "MORFOFUNCION",
+      "tema": "sangre",
+      "numero_pregunta": 11,
+      "pregunta": "¿Cuántas moléculas de O₂ puede fijar como máximo una molécula de hemoglobina con sus cuatro grupos hemo funcionales?",
+      "respuesta_correcta": "A",
+      "justificacion": "Cada grupo hemo puede unir una molécula de O₂. Los cuatro grupos permiten un máximo de cuatro moléculas por hemoglobina.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología. La unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "713",
+      "pagina_impresa": "685",
+      "dificultad": "medio",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 18 · 18.2 · Hemoglobina",
+          "page": 713,
+          "printed": 685,
+          "marks": [
+            [
+              0.7018,
+              0.2882,
+              0.1847,
+              0.0111
+            ]
+          ]
+        }
+      ],
+      "source": {
+        "document": "Kenneth S. Saladin · Anatomía y fisiología. La unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-18",
+        "chapterNumber": 18,
+        "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
+        "sha256": "e00074c7105c10052637b1c2a82f2b8959cf7c4cb9a91c4abd058ce958e58148",
+        "pdf_pages": [
+          713
+        ],
+        "section": "18.2 · Hemoglobina",
+        "verified_anchors": [
+          {
+            "pdf_page": 713,
+            "printed_page": 685,
+            "anchor": "cuatro cadenas de proteínas"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "Cada grupo hemo puede unir una molécula de O₂. Los cuatro grupos permiten un máximo de cuatro moléculas por hemoglobina.",
+        "B": "Ese es el máximo por grupo hemo, no por toda la hemoglobina.",
+        "C": "Contar solo dos sitios omite dos de los cuatro grupos hemo disponibles.",
+        "D": "Cuatro moléculas de O₂ contienen ocho átomos de oxígeno. Aquí se cuentan moléculas."
+      },
+      "opcion_a": "Cuatro moléculas de O₂.",
+      "opcion_b": "Una molécula de O₂.",
+      "opcion_c": "Dos moléculas de O₂.",
+      "opcion_d": "Ocho moléculas de O₂."
+    },
+    {
+      "content_id": "morfo-18-012",
+      "materia": "MORFOFUNCION",
+      "tema": "sangre",
+      "numero_pregunta": 12,
+      "pregunta": "¿Cuánto tiempo vive en promedio un eritrocito normal según el capítulo?",
+      "respuesta_correcta": "B",
+      "justificacion": "El capítulo describe una supervivencia promedio de 120 días entre la producción y el retiro del eritrocito de la circulación.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología. La unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "714",
+      "pagina_impresa": "686",
+      "dificultad": "medio",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 18 · 18.2 · Ciclo vital del eritrocito",
+          "page": 714,
+          "printed": 686,
+          "marks": [
+            [
+              0.6209,
+              0.287,
+              0.1456,
+              0.0111
+            ]
+          ]
+        }
+      ],
+      "source": {
+        "document": "Kenneth S. Saladin · Anatomía y fisiología. La unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-18",
+        "chapterNumber": 18,
+        "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
+        "sha256": "e00074c7105c10052637b1c2a82f2b8959cf7c4cb9a91c4abd058ce958e58148",
+        "pdf_pages": [
+          714
+        ],
+        "section": "18.2 · Ciclo vital del eritrocito",
+        "verified_anchors": [
+          {
+            "pdf_page": 714,
+            "printed_page": 686,
+            "anchor": "en promedio, 120 días"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "Duplica el promedio que señala el texto.",
+        "B": "El capítulo describe una supervivencia promedio de 120 días entre la producción y el retiro del eritrocito de la circulación.",
+        "C": "Es un orden de magnitud menor que la duración promedio descrita.",
+        "D": "Equivale aproximadamente a un mes. La duración descrita es cercana a cuatro meses."
+      },
+      "opcion_a": "240 días.",
+      "opcion_b": "120 días.",
+      "opcion_c": "12 días.",
+      "opcion_d": "30 días."
+    },
+    {
+      "content_id": "morfo-18-013",
+      "materia": "MORFOFUNCION",
+      "tema": "sangre",
+      "numero_pregunta": 13,
+      "pregunta": "¿Qué señal estimula la línea eritropoyética de la médula ósea cuando disminuye el aporte de oxígeno?",
+      "respuesta_correcta": "C",
+      "justificacion": "La eritropoyetina estimula a los precursores eritroides. Al aumentar la producción de eritrocitos, aumenta la capacidad de transportar oxígeno.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología. La unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "714",
+      "pagina_impresa": "686",
+      "dificultad": "medio",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 18 · 18.2 · Eritropoyesis",
+          "page": 714,
+          "printed": 686,
+          "marks": [
+            [
+              0.4977,
+              0.506,
+              0.1603,
+              0.0111
+            ]
+          ]
+        }
+      ],
+      "source": {
+        "document": "Kenneth S. Saladin · Anatomía y fisiología. La unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-18",
+        "chapterNumber": 18,
+        "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
+        "sha256": "e00074c7105c10052637b1c2a82f2b8959cf7c4cb9a91c4abd058ce958e58148",
+        "pdf_pages": [
+          714
+        ],
+        "section": "18.2 · Eritropoyesis",
+        "verified_anchors": [
+          {
+            "pdf_page": 714,
+            "printed_page": 686,
+            "anchor": "hormona eritropoyetina"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "Lleva hierro en el plasma y facilita su disponibilidad. La señal hormonal que estimula la eritropoyesis es la eritropoyetina.",
+        "B": "Actúa sobre el fibrinógeno durante la coagulación. La regulación de los precursores eritroides corresponde a la eritropoyetina.",
+        "C": "La eritropoyetina estimula a los precursores eritroides. Al aumentar la producción de eritrocitos, aumenta la capacidad de transportar oxígeno.",
+        "D": "Estimula la producción de plaquetas por la línea megacariocítica. La señal pedida actúa sobre la línea eritroide."
+      },
+      "opcion_a": "Transferrina.",
+      "opcion_b": "Trombina.",
+      "opcion_c": "Eritropoyetina.",
+      "opcion_d": "Trombopoyetina."
+    },
+    {
+      "content_id": "morfo-18-014",
+      "materia": "MORFOFUNCION",
+      "tema": "sangre",
+      "numero_pregunta": 14,
+      "pregunta": "¿Qué órgano produce la mayor parte de la eritropoyetina en el adulto?",
+      "respuesta_correcta": "D",
+      "justificacion": "Los riñones son la principal fuente de eritropoyetina. Esta hormona actúa sobre la línea eritropoyética de la médula ósea.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología. La unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "717",
+      "pagina_impresa": "689",
+      "dificultad": "medio",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 18 · 18.2 · Eritropoyetina",
+          "page": 717,
+          "printed": 689,
+          "marks": [
+            [
+              0.698,
+              0.2144,
+              0.1704,
+              0.0111
+            ]
+          ]
+        }
+      ],
+      "source": {
+        "document": "Kenneth S. Saladin · Anatomía y fisiología. La unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-18",
+        "chapterNumber": 18,
+        "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
+        "sha256": "e00074c7105c10052637b1c2a82f2b8959cf7c4cb9a91c4abd058ce958e58148",
+        "pdf_pages": [
+          717
+        ],
+        "section": "18.2 · Eritropoyetina",
+        "verified_anchors": [
+          {
+            "pdf_page": 717,
+            "printed_page": 689,
+            "anchor": "sobre todo por los riñones"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "El capítulo identifica a los riñones como fuente principal en el adulto.",
+        "B": "Interviene en el retiro de eritrocitos. La principal secreción de eritropoyetina es renal.",
+        "C": "Es el sitio donde se producen los eritrocitos y donde actúa la hormona, no su principal fuente.",
+        "D": "Los riñones son la principal fuente de eritropoyetina. Esta hormona actúa sobre la línea eritropoyética de la médula ósea."
+      },
+      "opcion_a": "Hígado.",
+      "opcion_b": "Bazo.",
+      "opcion_c": "Médula ósea roja.",
+      "opcion_d": "Riñón."
+    },
+    {
+      "content_id": "morfo-18-016",
+      "materia": "MORFOFUNCION",
+      "tema": "sangre",
+      "numero_pregunta": 15,
+      "pregunta": "Cuando se degrada el hemo, ¿en qué orden se forman los dos pigmentos biliares que muestra la figura 18.9?",
+      "respuesta_correcta": "A",
+      "justificacion": "La biliverdina es el primer pigmento de esta secuencia y después se convierte en bilirrubina. El hierro se recupera por separado.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología. La unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "716",
+      "pagina_impresa": "688",
+      "dificultad": "medio",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 18 · 18.2 · Figura 18.9. Degradación de la hemoglobina",
+          "page": 716,
+          "printed": 688,
+          "marks": [
+            [
+              0.6172,
+              0.8218,
+              0.0728,
+              0.0111
+            ],
+            [
+              0.5026,
+              0.4933,
+              0.0549,
+              0.0093
+            ]
+          ]
+        }
+      ],
+      "source": {
+        "document": "Kenneth S. Saladin · Anatomía y fisiología. La unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-18",
+        "chapterNumber": 18,
+        "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
+        "sha256": "e00074c7105c10052637b1c2a82f2b8959cf7c4cb9a91c4abd058ce958e58148",
+        "pdf_pages": [
+          716
+        ],
+        "section": "18.2 · Figura 18.9. Degradación de la hemoglobina",
+        "verified_anchors": [
+          {
+            "pdf_page": 716,
+            "printed_page": 688,
+            "anchor": "Biliverdina"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "La biliverdina es el primer pigmento de esta secuencia y después se convierte en bilirrubina. El hierro se recupera por separado.",
+        "B": "Invierte el orden de transformación mostrado en la figura.",
+        "C": "La hemoglobina es el punto de partida de la degradación. Falta el intermediario pigmentario, la biliverdina.",
+        "D": "La biliverdina se transforma en bilirrubina en esa ruta. No vuelve a formar hemoglobina."
+      },
+      "opcion_a": "Primero biliverdina y después bilirrubina.",
+      "opcion_b": "Primero bilirrubina y después biliverdina.",
+      "opcion_c": "Primero hemoglobina y después bilirrubina.",
+      "opcion_d": "Primero biliverdina y después hemoglobina."
+    },
+    {
+      "content_id": "morfo-18-017",
+      "materia": "MORFOFUNCION",
+      "tema": "sangre",
+      "numero_pregunta": 16,
+      "pregunta": "¿Qué antígeno del sistema ABO se encuentra en la superficie de los eritrocitos de una persona de grupo A?",
+      "respuesta_correcta": "B",
+      "justificacion": "El grupo A se define por el antígeno A en el eritrocito. El cuadro 18.4 separa los antígenos celulares de los anticuerpos plasmáticos.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología. La unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "719",
+      "pagina_impresa": "691",
+      "dificultad": "medio",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 18 · 18.3 · Cuadro 18.4. Sistema ABO",
+          "page": 719,
+          "printed": 691,
+          "marks": [
+            [
+              0.1102,
+              0.7747,
+              0.1159,
+              0.0094
+            ]
+          ]
+        }
+      ],
+      "source": {
+        "document": "Kenneth S. Saladin · Anatomía y fisiología. La unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-18",
+        "chapterNumber": 18,
+        "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
+        "sha256": "e00074c7105c10052637b1c2a82f2b8959cf7c4cb9a91c4abd058ce958e58148",
+        "pdf_pages": [
+          719
+        ],
+        "section": "18.3 · Cuadro 18.4. Sistema ABO",
+        "verified_anchors": [
+          {
+            "pdf_page": 719,
+            "printed_page": 691,
+            "anchor": "Antígeno de eritrocito"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "Es el perfil ABO de los eritrocitos del grupo O.",
+        "B": "El grupo A se define por el antígeno A en el eritrocito. El cuadro 18.4 separa los antígenos celulares de los anticuerpos plasmáticos.",
+        "C": "Es el perfil del grupo B.",
+        "D": "Corresponde al grupo AB."
+      },
+      "opcion_a": "Ausencia de antígenos A y B.",
+      "opcion_b": "Solo el antígeno A.",
+      "opcion_c": "Solo el antígeno B.",
+      "opcion_d": "Antígenos A y B."
+    },
+    {
+      "content_id": "morfo-18-019",
+      "materia": "MORFOFUNCION",
+      "tema": "sangre",
+      "numero_pregunta": 17,
+      "pregunta": "¿Cuál es el perfil de antígenos A y B en los eritrocitos del grupo O?",
+      "respuesta_correcta": "C",
+      "justificacion": "El grupo O carece de ambos antígenos ABO en sus eritrocitos. Esa clasificación es independiente del Rh.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología. La unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "719",
+      "pagina_impresa": "691",
+      "dificultad": "medio",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 18 · 18.3 · Cuadro 18.4. Sistema ABO",
+          "page": 719,
+          "printed": 691,
+          "marks": [
+            [
+              0.4086,
+              0.7358,
+              0.042,
+              0.0106
+            ],
+            [
+              0.3333,
+              0.8094,
+              0.0207,
+              0.0094
+            ]
+          ]
+        }
+      ],
+      "source": {
+        "document": "Kenneth S. Saladin · Anatomía y fisiología. La unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-18",
+        "chapterNumber": 18,
+        "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
+        "sha256": "e00074c7105c10052637b1c2a82f2b8959cf7c4cb9a91c4abd058ce958e58148",
+        "pdf_pages": [
+          719
+        ],
+        "section": "18.3 · Cuadro 18.4. Sistema ABO",
+        "verified_anchors": [
+          {
+            "pdf_page": 719,
+            "printed_page": 691,
+            "anchor": "Tipo O"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "Ese perfil define al grupo B.",
+        "B": "Ese perfil define al grupo AB.",
+        "C": "El grupo O carece de ambos antígenos ABO en sus eritrocitos. Esa clasificación es independiente del Rh.",
+        "D": "Ese perfil define al grupo A."
+      },
+      "opcion_a": "Presentan el antígeno B, sin A.",
+      "opcion_b": "Presentan los dos antígenos, A y B.",
+      "opcion_c": "No presentan antígeno A ni B.",
+      "opcion_d": "Presentan el antígeno A, sin B."
+    },
+    {
+      "content_id": "morfo-18-018",
+      "materia": "MORFOFUNCION",
+      "tema": "sangre",
+      "numero_pregunta": 18,
+      "pregunta": "¿Qué anticuerpo ABO se espera habitualmente en el plasma de una persona del grupo A?",
+      "respuesta_correcta": "D",
+      "justificacion": "Los eritrocitos del grupo A expresan A y su plasma contiene anti-B. Si entran eritrocitos que expresan B, el anti-B puede aglutinarlos.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología. La unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "720",
+      "pagina_impresa": "692",
+      "dificultad": "medio",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 18 · 18.3 · Anticuerpos del sistema ABO",
+          "page": 720,
+          "printed": 692,
+          "marks": [
+            [
+              0.3752,
+              0.8862,
+              0.0998,
+              0.0111
+            ]
+          ]
+        }
+      ],
+      "source": {
+        "document": "Kenneth S. Saladin · Anatomía y fisiología. La unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-18",
+        "chapterNumber": 18,
+        "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
+        "sha256": "e00074c7105c10052637b1c2a82f2b8959cf7c4cb9a91c4abd058ce958e58148",
+        "pdf_pages": [
+          720
+        ],
+        "section": "18.3 · Anticuerpos del sistema ABO",
+        "verified_anchors": [
+          {
+            "pdf_page": 720,
+            "printed_page": 692,
+            "anchor": "beta aglutinina"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "Es el anticuerpo que se encuentra habitualmente en el plasma del grupo B.",
+        "B": "La combinación es propia del grupo O.",
+        "C": "La ausencia habitual de ambos corresponde al grupo AB.",
+        "D": "Los eritrocitos del grupo A expresan A y su plasma contiene anti-B. Si entran eritrocitos que expresan B, el anti-B puede aglutinarlos."
+      },
+      "opcion_a": "Anti-A.",
+      "opcion_b": "Anti-A y anti-B.",
+      "opcion_c": "Ninguno de los dos.",
+      "opcion_d": "Anti-B."
+    },
+    {
+      "content_id": "morfo-18-020",
+      "materia": "MORFOFUNCION",
+      "tema": "sangre",
+      "numero_pregunta": 19,
+      "pregunta": "¿Qué hallazgo permite clasificar una muestra como Rh positiva?",
+      "respuesta_correcta": "A",
+      "justificacion": "En la clasificación usual, Rh positivo indica que los eritrocitos expresan el antígeno D. Los anticuerpos plasmáticos se consideran por separado.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología. La unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "721",
+      "pagina_impresa": "693",
+      "dificultad": "medio",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 18 · 18.3 · Sistema Rh",
+          "page": 721,
+          "printed": 693,
+          "marks": [
+            [
+              0.7506,
+              0.5901,
+              0.1858,
+              0.0111
+            ]
+          ]
+        }
+      ],
+      "source": {
+        "document": "Kenneth S. Saladin · Anatomía y fisiología. La unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-18",
+        "chapterNumber": 18,
+        "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
+        "sha256": "e00074c7105c10052637b1c2a82f2b8959cf7c4cb9a91c4abd058ce958e58148",
+        "pdf_pages": [
+          721
+        ],
+        "section": "18.3 · Sistema Rh",
+        "verified_anchors": [
+          {
+            "pdf_page": 721,
+            "printed_page": 693,
+            "anchor": "se le considera Rh positivo"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "En la clasificación usual, Rh positivo indica que los eritrocitos expresan el antígeno D. Los anticuerpos plasmáticos se consideran por separado.",
+        "B": "La ausencia de D corresponde a Rh negativo.",
+        "C": "La presencia de anti-D indica una respuesta al antígeno. No define que los eritrocitos expresen D.",
+        "D": "Ese hallazgo corresponde al grupo AB. La clasificación Rh requiere evaluar el antígeno D."
+      },
+      "opcion_a": "Presencia del antígeno D en los eritrocitos.",
+      "opcion_b": "Ausencia del antígeno D en los eritrocitos.",
+      "opcion_c": "Presencia de anticuerpos anti-D en el plasma.",
+      "opcion_d": "Presencia conjunta de antígenos A y B en los eritrocitos."
+    },
+    {
+      "content_id": "morfo-18-021",
+      "materia": "MORFOFUNCION",
+      "tema": "sangre",
+      "numero_pregunta": 20,
+      "pregunta": "En un recuento diferencial normal, ¿qué clase de leucocito constituye la mayor proporción?",
+      "respuesta_correcta": "B",
+      "justificacion": "El cuadro 18.6 les atribuye aproximadamente del 60 al 70 % del total de leucocitos.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología. La unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "726",
+      "pagina_impresa": "698",
+      "dificultad": "medio",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 18 · 18.4 · Cuadro 18.6. Recuento diferencial",
+          "page": 726,
+          "printed": 698,
+          "marks": [
+            [
+              0.0829,
+              0.1422,
+              0.1279,
+              0.0094
+            ],
+            [
+              0.0829,
+              0.4311,
+              0.1279,
+              0.0094
+            ]
+          ]
+        }
+      ],
+      "source": {
+        "document": "Kenneth S. Saladin · Anatomía y fisiología. La unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-18",
+        "chapterNumber": 18,
+        "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
+        "sha256": "e00074c7105c10052637b1c2a82f2b8959cf7c4cb9a91c4abd058ce958e58148",
+        "pdf_pages": [
+          726
+        ],
+        "section": "18.4 · Cuadro 18.6. Recuento diferencial",
+        "verified_anchors": [
+          {
+            "pdf_page": 726,
+            "printed_page": 698,
+            "anchor": "Porcentaje de leucocitos"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "Son una fracción pequeña del recuento normal, aunque pueden aumentar en ciertas condiciones.",
+        "B": "El cuadro 18.6 les atribuye aproximadamente del 60 al 70 % del total de leucocitos.",
+        "C": "Son abundantes y ocupan el segundo lugar, por debajo de los neutrófilos.",
+        "D": "Su proporción normal es mucho menor que la de los neutrófilos."
+      },
+      "opcion_a": "Eosinófilos.",
+      "opcion_b": "Neutrófilos.",
+      "opcion_c": "Linfocitos.",
+      "opcion_d": "Monocitos."
+    },
+    {
+      "content_id": "morfo-18-022",
+      "materia": "MORFOFUNCION",
+      "tema": "sangre",
+      "numero_pregunta": 21,
+      "pregunta": "Según el cuadro 18.6, ¿qué leucocito se asocia tanto a la defensa frente a parásitos como al aumento en ciertas reacciones alérgicas?",
+      "respuesta_correcta": "C",
+      "justificacion": "El cuadro describe el aumento de eosinófilos en parasitosis y alergias, además de su acción contra parásitos.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología. La unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "726",
+      "pagina_impresa": "698",
+      "dificultad": "medio",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 18 · 18.4 · Cuadro 18.6. Leucocitos",
+          "page": 726,
+          "printed": 698,
+          "marks": [
+            [
+              0.1661,
+              0.5628,
+              0.1664,
+              0.0094
+            ]
+          ]
+        }
+      ],
+      "source": {
+        "document": "Kenneth S. Saladin · Anatomía y fisiología. La unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-18",
+        "chapterNumber": 18,
+        "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
+        "sha256": "e00074c7105c10052637b1c2a82f2b8959cf7c4cb9a91c4abd058ce958e58148",
+        "pdf_pages": [
+          726
+        ],
+        "section": "18.4 · Cuadro 18.6. Leucocitos",
+        "verified_anchors": [
+          {
+            "pdf_page": 726,
+            "printed_page": 698,
+            "anchor": "infecciones parasitarias, alergias"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "Participa en respuestas inflamatorias y alérgicas. La función frente a parásitos que destaca el cuadro corresponde al eosinófilo.",
+        "B": "Puede diferenciarse en macrófago y fagocitar residuos. El cuadro atribuye la combinación de rasgos al eosinófilo.",
+        "C": "El cuadro describe el aumento de eosinófilos en parasitosis y alergias, además de su acción contra parásitos.",
+        "D": "Se distingue por su función fagocitaria y su relación con infecciones bacterianas. La combinación pedida caracteriza al eosinófilo."
+      },
+      "opcion_a": "Basófilo.",
+      "opcion_b": "Monocito.",
+      "opcion_c": "Eosinófilo.",
+      "opcion_d": "Neutrófilo."
+    },
+    {
+      "content_id": "morfo-18-023",
+      "materia": "MORFOFUNCION",
+      "tema": "sangre",
+      "numero_pregunta": 22,
+      "pregunta": "¿Qué leucocito circulante puede diferenciarse en macrófago al pasar a los tejidos?",
+      "respuesta_correcta": "D",
+      "justificacion": "La diferenciación de monocito circulante a macrófago ocurre tras el paso a los tejidos.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología. La unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "729",
+      "pagina_impresa": "701",
+      "dificultad": "medio",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 18 · 18.4 · Ciclo vital de los leucocitos",
+          "page": 729,
+          "printed": 701,
+          "marks": [
+            [
+              0.2396,
+              0.3995,
+              0.2586,
+              0.0111
+            ]
+          ]
+        }
+      ],
+      "source": {
+        "document": "Kenneth S. Saladin · Anatomía y fisiología. La unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-18",
+        "chapterNumber": 18,
+        "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
+        "sha256": "e00074c7105c10052637b1c2a82f2b8959cf7c4cb9a91c4abd058ce958e58148",
+        "pdf_pages": [
+          729
+        ],
+        "section": "18.4 · Ciclo vital de los leucocitos",
+        "verified_anchors": [
+          {
+            "pdf_page": 729,
+            "printed_page": 701,
+            "anchor": "se transforman en diversos macrófagos"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "Puede migrar a los tejidos y fagocitar. La diferenciación en macrófago es propia de la línea monocítica.",
+        "B": "Interviene, entre otras funciones, en la respuesta a parásitos. No es el precursor circulante señalado en el capítulo.",
+        "C": "Comprende poblaciones como B, T y NK. El precursor circulante del macrófago descrito aquí es el monocito.",
+        "D": "La diferenciación de monocito circulante a macrófago ocurre tras el paso a los tejidos."
+      },
+      "opcion_a": "Neutrófilo.",
+      "opcion_b": "Eosinófilo.",
+      "opcion_c": "Linfocito.",
+      "opcion_d": "Monocito."
+    },
+    {
+      "content_id": "morfo-18-024",
+      "materia": "MORFOFUNCION",
+      "tema": "sangre",
+      "numero_pregunta": 23,
+      "pregunta": "¿A qué grupo de leucocitos pertenecen las células B, T y NK?",
+      "respuesta_correcta": "A",
+      "justificacion": "Las tres poblaciones pertenecen a los linfocitos. Sus funciones difieren, aunque comparten esa clasificación celular.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología. La unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "728",
+      "pagina_impresa": "700",
+      "dificultad": "medio",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 18 · 18.4 · Figura 18.18. Leucopoyesis",
+          "page": 728,
+          "printed": 700,
+          "marks": [
+            [
+              0.7796,
+              0.7666,
+              0.0648,
+              0.0093
+            ],
+            [
+              0.563,
+              0.7666,
+              0.0608,
+              0.0093
+            ]
+          ]
+        }
+      ],
+      "source": {
+        "document": "Kenneth S. Saladin · Anatomía y fisiología. La unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-18",
+        "chapterNumber": 18,
+        "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
+        "sha256": "e00074c7105c10052637b1c2a82f2b8959cf7c4cb9a91c4abd058ce958e58148",
+        "pdf_pages": [
+          728
+        ],
+        "section": "18.4 · Figura 18.18. Leucopoyesis",
+        "verified_anchors": [
+          {
+            "pdf_page": 728,
+            "printed_page": 700,
+            "anchor": "Linfocito NK"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "Las tres poblaciones pertenecen a los linfocitos. Sus funciones difieren, aunque comparten esa clasificación celular.",
+        "B": "Los monocitos son otra clase de agranulocito y pueden diferenciarse en macrófagos.",
+        "C": "Son granulocitos. La denominación B, T o NK se aplica a poblaciones de linfocitos.",
+        "D": "Son granulocitos relacionados con respuestas frente a parásitos y algunas alergias."
+      },
+      "opcion_a": "Linfocitos.",
+      "opcion_b": "Monocitos.",
+      "opcion_c": "Neutrófilos.",
+      "opcion_d": "Eosinófilos."
     },
     {
       "content_id": "morfo-18-025",
       "materia": "MORFOFUNCION",
       "tema": "sangre",
       "numero_pregunta": 24,
-      "pregunta": "¿De qué células se desprenden las plaquetas?",
-      "respuesta_correcta": "A",
-      "justificacion": "De los megacariocitos.",
-      "fuente": "Saladin · Anatomía y fisiología",
+      "pregunta": "¿De qué célula de la médula ósea se desprenden los fragmentos que forman las plaquetas?",
+      "respuesta_correcta": "B",
+      "justificacion": "Las plaquetas son fragmentos citoplasmáticos de megacariocitos, que se liberan a la circulación.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología. La unidad entre forma y función · 6.ª edición",
       "paginas_pdf": "731",
       "pagina_impresa": "703",
       "dificultad": "medio",
-      "opcion_a": "De los megacariocitos.",
-      "opcion_b": "La eritropoyetina.",
-      "opcion_c": "Discos bicóncavos.",
-      "opcion_d": "Los linfocitos."
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 18 · 18.5 · Trombocitos",
+          "page": 731,
+          "printed": 703,
+          "marks": [
+            [
+              0.4421,
+              0.1718,
+              0.0641,
+              0.0111
+            ],
+            [
+              0.0909,
+              0.1867,
+              0.0997,
+              0.0111
+            ]
+          ]
+        }
+      ],
+      "source": {
+        "document": "Kenneth S. Saladin · Anatomía y fisiología. La unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-18",
+        "chapterNumber": 18,
+        "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
+        "sha256": "e00074c7105c10052637b1c2a82f2b8959cf7c4cb9a91c4abd058ce958e58148",
+        "pdf_pages": [
+          731
+        ],
+        "section": "18.5 · Trombocitos",
+        "verified_anchors": [
+          {
+            "pdf_page": 731,
+            "printed_page": 703,
+            "anchor": "llamados megacariocitos"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "Pertenece a la línea que origina linfocitos. La línea plaquetaria pasa por el megacariocito.",
+        "B": "Las plaquetas son fragmentos citoplasmáticos de megacariocitos, que se liberan a la circulación.",
+        "C": "Es un precursor de eritrocitos. La fragmentación para formar plaquetas corresponde al megacariocito.",
+        "D": "Es un leucocito circulante que puede originar macrófagos. No se fragmenta para formar plaquetas."
+      },
+      "opcion_a": "Linfoblasto.",
+      "opcion_b": "Megacariocito.",
+      "opcion_c": "Eritroblasto.",
+      "opcion_d": "Monocito."
     },
     {
       "content_id": "morfo-18-026",
       "materia": "MORFOFUNCION",
       "tema": "sangre",
       "numero_pregunta": 25,
-      "pregunta": "¿Cuáles son las tres etapas principales de la hemostasia?",
+      "pregunta": "¿Qué secuencia resume los tres mecanismos de la hemostasia que presenta el capítulo?",
       "respuesta_correcta": "C",
-      "justificacion": "Espasmo vascular → tapón plaquetario → coagulación.",
-      "fuente": "Saladin · Anatomía y fisiología",
+      "justificacion": "Primero disminuye el sangrado por vasoconstricción. Las plaquetas forman un tapón y la fibrina estabiliza la unión durante la coagulación. Los mecanismos pueden superponerse.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología. La unidad entre forma y función · 6.ª edición",
       "paginas_pdf": "732",
       "pagina_impresa": "704",
       "dificultad": "medio",
-      "opcion_a": "Fase folicular → ovulación → fase lútea.",
-      "opcion_b": "Plasma y elementos formes.",
-      "opcion_c": "Espasmo vascular → tapón plaquetario → coagulación.",
-      "opcion_d": "Dilatación → expulsión del bebé → expulsión de la placenta."
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 18 · 18.5 · Figura 18.21. Hemostasia",
+          "page": 732,
+          "printed": 704,
+          "marks": [
+            [
+              0.2901,
+              0.4562,
+              0.1129,
+              0.0111
+            ],
+            [
+              0.0636,
+              0.5152,
+              0.1542,
+              0.0149
+            ]
+          ]
+        }
+      ],
+      "source": {
+        "document": "Kenneth S. Saladin · Anatomía y fisiología. La unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-18",
+        "chapterNumber": 18,
+        "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
+        "sha256": "e00074c7105c10052637b1c2a82f2b8959cf7c4cb9a91c4abd058ce958e58148",
+        "pdf_pages": [
+          732
+        ],
+        "section": "18.5 · Figura 18.21. Hemostasia",
+        "verified_anchors": [
+          {
+            "pdf_page": 732,
+            "printed_page": 704,
+            "anchor": "espasmo vascular"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "El tapón se inicia antes de que la fibrina lo estabilice. La opción invierte esos pasos.",
+        "B": "La fibrinólisis disuelve el coágulo. El tercer mecanismo de la secuencia descrita es la coagulación.",
+        "C": "Primero disminuye el sangrado por vasoconstricción. Las plaquetas forman un tapón y la fibrina estabiliza la unión durante la coagulación. Los mecanismos pueden superponerse.",
+        "D": "La vasoconstricción es la respuesta inmediata del vaso. El tapón se forma después."
+      },
+      "opcion_a": "Espasmo vascular, coagulación y tapón plaquetario.",
+      "opcion_b": "Espasmo vascular, tapón plaquetario y fibrinólisis.",
+      "opcion_c": "Espasmo vascular, tapón plaquetario y coagulación.",
+      "opcion_d": "Tapón plaquetario, espasmo vascular y coagulación."
     },
     {
       "content_id": "morfo-18-027",
       "materia": "MORFOFUNCION",
       "tema": "sangre",
       "numero_pregunta": 26,
-      "pregunta": "¿Qué enzima convierte el fibrinógeno en fibrina?",
-      "respuesta_correcta": "A",
-      "justificacion": "La trombina.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "735",
-      "pagina_impresa": "707",
+      "pregunta": "¿Qué enzima actúa directamente sobre el fibrinógeno para iniciar la formación de fibrina?",
+      "respuesta_correcta": "D",
+      "justificacion": "El activador de la protrombina genera trombina. La trombina corta el fibrinógeno y permite que se forme fibrina.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología. La unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "733",
+      "pagina_impresa": "705",
       "dificultad": "medio",
-      "opcion_a": "La trombina.",
-      "opcion_b": "Bilirrubina.",
-      "opcion_c": "Antígenos A.",
-      "opcion_d": "El fibrinógeno."
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 18 · 18.5 · Fase común de la coagulación",
+          "page": 733,
+          "printed": 705,
+          "marks": [
+            [
+              0.525,
+              0.4664,
+              0.0521,
+              0.0111
+            ],
+            [
+              0.5805,
+              0.4664,
+              0.0617,
+              0.0111
+            ]
+          ]
+        }
+      ],
+      "source": {
+        "document": "Kenneth S. Saladin · Anatomía y fisiología. La unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-18",
+        "chapterNumber": 18,
+        "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
+        "sha256": "e00074c7105c10052637b1c2a82f2b8959cf7c4cb9a91c4abd058ce958e58148",
+        "pdf_pages": [
+          733
+        ],
+        "section": "18.5 · Fase común de la coagulación",
+        "verified_anchors": [
+          {
+            "pdf_page": 733,
+            "printed_page": 705,
+            "anchor": "enzima trombina"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "Es el precursor que debe activarse a trombina antes de que actúe sobre el fibrinógeno.",
+        "B": "Actúa durante la fibrinólisis al degradar la fibrina ya formada.",
+        "C": "Estabiliza los filamentos de fibrina. La conversión inicial del fibrinógeno depende de la trombina.",
+        "D": "El activador de la protrombina genera trombina. La trombina corta el fibrinógeno y permite que se forme fibrina."
+      },
+      "opcion_a": "Protrombina.",
+      "opcion_b": "Plasmina.",
+      "opcion_c": "Factor XIII activado.",
+      "opcion_d": "Trombina."
     },
     {
-      "content_id": "morfo-18-029",
+      "content_id": "morfo-18-006",
       "materia": "MORFOFUNCION",
       "tema": "sangre",
       "numero_pregunta": 27,
-      "pregunta": "¿Qué enzima degrada la fibrina para disolver un coágulo?",
-      "respuesta_correcta": "D",
-      "justificacion": "La plasmina.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "735",
-      "pagina_impresa": "707",
+      "pregunta": "¿Cuál es el precursor plasmático de la proteína que forma la malla del coágulo?",
+      "respuesta_correcta": "A",
+      "justificacion": "La trombina actúa sobre el fibrinógeno soluble. La fibrina que se forma constituye la malla del coágulo.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología. La unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "733",
+      "pagina_impresa": "705",
       "dificultad": "medio",
-      "opcion_a": "El fibrinógeno.",
-      "opcion_b": "Bilirrubina.",
-      "opcion_c": "La albúmina.",
-      "opcion_d": "La plasmina."
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 18 · 18.5 · Fase común de la coagulación",
+          "page": 733,
+          "printed": 705,
+          "marks": [
+            [
+              0.6538,
+              0.4664,
+              0.02,
+              0.0111
+            ],
+            [
+              0.6772,
+              0.4664,
+              0.0641,
+              0.0111
+            ]
+          ]
+        }
+      ],
+      "source": {
+        "document": "Kenneth S. Saladin · Anatomía y fisiología. La unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-18",
+        "chapterNumber": 18,
+        "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
+        "sha256": "e00074c7105c10052637b1c2a82f2b8959cf7c4cb9a91c4abd058ce958e58148",
+        "pdf_pages": [
+          733
+        ],
+        "section": "18.5 · Fase común de la coagulación",
+        "verified_anchors": [
+          {
+            "pdf_page": 733,
+            "printed_page": 705,
+            "anchor": "La trombina fragmenta"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "La trombina actúa sobre el fibrinógeno soluble. La fibrina que se forma constituye la malla del coágulo.",
+        "B": "Es el precursor de la enzima trombina. La malla se forma a partir del fibrinógeno.",
+        "C": "Es el precursor de la plasmina, implicada en la degradación de la malla.",
+        "D": "Contribuye a la presión osmótica del plasma. La proteína precursora de la malla de fibrina es el fibrinógeno."
+      },
+      "opcion_a": "Fibrinógeno.",
+      "opcion_b": "Protrombina.",
+      "opcion_c": "Plasminógeno.",
+      "opcion_d": "Albúmina."
     },
     {
       "content_id": "morfo-18-028",
       "materia": "MORFOFUNCION",
       "tema": "sangre",
       "numero_pregunta": 28,
-      "pregunta": "¿Qué vitamina se necesita para sintetizar varios factores de coagulación?",
-      "respuesta_correcta": "A",
-      "justificacion": "La vitamina K.",
-      "fuente": "Saladin · Anatomía y fisiología",
+      "pregunta": "¿Qué vitamina se requiere para la síntesis normal de varios factores de coagulación, incluida la protrombina?",
+      "respuesta_correcta": "B",
+      "justificacion": "El capítulo señala que la síntesis de los factores II, VII, IX y X depende de vitamina K. El factor II es la protrombina.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología. La unidad entre forma y función · 6.ª edición",
       "paginas_pdf": "736",
       "pagina_impresa": "708",
       "dificultad": "medio",
-      "opcion_a": "La vitamina K.",
-      "opcion_b": "El fibrinógeno.",
-      "opcion_c": "Los monocitos.",
-      "opcion_d": "El neutrófilo."
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 18 · 18.5 · Factores de coagulación dependientes de vitamina K",
+          "page": 736,
+          "printed": 708,
+          "marks": [
+            [
+              0.5365,
+              0.2414,
+              0.1139,
+              0.0106
+            ]
+          ]
+        }
+      ],
+      "source": {
+        "document": "Kenneth S. Saladin · Anatomía y fisiología. La unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-18",
+        "chapterNumber": 18,
+        "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
+        "sha256": "e00074c7105c10052637b1c2a82f2b8959cf7c4cb9a91c4abd058ce958e58148",
+        "pdf_pages": [
+          736
+        ],
+        "section": "18.5 · Factores de coagulación dependientes de vitamina K",
+        "verified_anchors": [
+          {
+            "pdf_page": 736,
+            "printed_page": 708,
+            "anchor": "requiere vitamina K"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "No es la vitamina que el capítulo identifica como necesaria para la síntesis de la protrombina.",
+        "B": "El capítulo señala que la síntesis de los factores II, VII, IX y X depende de vitamina K. El factor II es la protrombina.",
+        "C": "El capítulo la relaciona con la producción normal de eritrocitos. La síntesis de los factores señalados depende de vitamina K.",
+        "D": "El ácido fólico participa en la producción normal de eritrocitos. La vitamina requerida por los factores señalados es la K."
+      },
+      "opcion_a": "Vitamina C.",
+      "opcion_b": "Vitamina K.",
+      "opcion_c": "Vitamina B₁₂.",
+      "opcion_d": "Ácido fólico."
+    },
+    {
+      "content_id": "morfo-18-029",
+      "materia": "MORFOFUNCION",
+      "tema": "sangre",
+      "numero_pregunta": 29,
+      "pregunta": "¿Qué enzima degrada la fibrina durante la disolución de un coágulo?",
+      "respuesta_correcta": "C",
+      "justificacion": "El plasminógeno se activa a plasmina. La plasmina degrada la fibrina y contribuye a retirar el coágulo.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología. La unidad entre forma y función · 6.ª edición",
+      "paginas_pdf": "736",
+      "pagina_impresa": "708",
+      "dificultad": "medio",
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 18 · 18.5 · Fibrinólisis",
+          "page": 736,
+          "printed": 708,
+          "marks": [
+            [
+              0.204,
+              0.0877,
+              0.1351,
+              0.0111
+            ]
+          ]
+        }
+      ],
+      "source": {
+        "document": "Kenneth S. Saladin · Anatomía y fisiología. La unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-18",
+        "chapterNumber": 18,
+        "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
+        "sha256": "e00074c7105c10052637b1c2a82f2b8959cf7c4cb9a91c4abd058ce958e58148",
+        "pdf_pages": [
+          736
+        ],
+        "section": "18.5 · Fibrinólisis",
+        "verified_anchors": [
+          {
+            "pdf_page": 736,
+            "printed_page": 708,
+            "anchor": "enzima que disuelve"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "Su acción sobre el fibrinógeno favorece la formación del coágulo. Degradar la fibrina es función de la plasmina.",
+        "B": "Ayuda a estabilizar los filamentos de fibrina, en vez de degradarlos.",
+        "C": "El plasminógeno se activa a plasmina. La plasmina degrada la fibrina y contribuye a retirar el coágulo.",
+        "D": "Es el precursor inactivo. La actividad que disuelve la fibrina aparece al convertirse en plasmina."
+      },
+      "opcion_a": "Trombina.",
+      "opcion_b": "Factor XIII activado.",
+      "opcion_c": "Plasmina.",
+      "opcion_d": "Plasminógeno."
     },
     {
       "content_id": "morfo-18-030",
       "materia": "MORFOFUNCION",
       "tema": "sangre",
-      "numero_pregunta": 29,
-      "pregunta": "¿Qué diferencia a un trombo de un émbolo?",
-      "respuesta_correcta": "B",
-      "justificacion": "El trombo permanece adherido; el émbolo circula por la sangre.",
-      "fuente": "Saladin · Anatomía y fisiología",
+      "numero_pregunta": 30,
+      "pregunta": "Un fragmento se desprende de un coágulo intravascular y se desplaza con la sangre. ¿Cómo se distingue del coágulo adherido al sitio de origen?",
+      "respuesta_correcta": "D",
+      "justificacion": "La diferencia es la movilidad. El trombo se forma localmente y el material que se desprende y viaja es un émbolo.",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología. La unidad entre forma y función · 6.ª edición",
       "paginas_pdf": "736",
       "pagina_impresa": "708",
       "dificultad": "medio",
-      "opcion_a": "El suero es el líquido restante después de la coagulación y carece de fibrinógeno.",
-      "opcion_b": "El trombo permanece adherido; el émbolo circula por la sangre.",
-      "opcion_c": "Miopía: delante de la retina. Hipermetropía: detrás de la retina.",
-      "opcion_d": "El porcentaje del volumen sanguíneo ocupado por eritrocitos."
-    },
-    {
-      "content_id": "morfo-18-006",
-      "materia": "MORFOFUNCION",
-      "tema": "sangre",
-      "numero_pregunta": 30,
-      "pregunta": "¿Qué proteína plasmática se convierte en fibrina durante la coagulación?",
-      "respuesta_correcta": "D",
-      "justificacion": "El fibrinógeno.",
-      "fuente": "Saladin · Anatomía y fisiología",
-      "paginas_pdf": "738",
-      "pagina_impresa": "710",
-      "dificultad": "medio",
-      "opcion_a": "La trombina.",
-      "opcion_b": "La albúmina.",
-      "opcion_c": "La hemoglobina.",
-      "opcion_d": "El fibrinógeno."
+      "lecturas_comentario": [
+        {
+          "slug": "morfofuncion",
+          "label": "Saladin",
+          "section": "Capítulo 18 · 18.5 · Trombosis y embolia",
+          "page": 736,
+          "printed": 708,
+          "marks": [
+            [
+              0.8137,
+              0.7921,
+              0.0489,
+              0.0111
+            ]
+          ]
+        }
+      ],
+      "source": {
+        "document": "Kenneth S. Saladin · Anatomía y fisiología. La unidad entre forma y función · 6.ª edición",
+        "topicId": "morfo-18",
+        "chapterNumber": 18,
+        "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
+        "sha256": "e00074c7105c10052637b1c2a82f2b8959cf7c4cb9a91c4abd058ce958e58148",
+        "pdf_pages": [
+          736
+        ],
+        "section": "18.5 · Trombosis y embolia",
+        "verified_anchors": [
+          {
+            "pdf_page": 736,
+            "printed_page": 708,
+            "anchor": "émbolo"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "Los términos están invertidos. El coágulo fijado en el sitio de formación es el trombo.",
+        "B": "Cuando el material se desprende y es transportado por la sangre se denomina émbolo.",
+        "C": "El coágulo local adherido se denomina trombo. El fragmento desprendido es el émbolo.",
+        "D": "La diferencia es la movilidad. El trombo se forma localmente y el material que se desprende y viaja es un émbolo."
+      },
+      "opcion_a": "El fragmento móvil es un trombo y el coágulo adherido es un émbolo.",
+      "opcion_b": "Ambos se llaman trombos mientras el fragmento circule.",
+      "opcion_c": "Ambos se llaman émbolos desde que se forma el coágulo.",
+      "opcion_d": "El fragmento móvil es un émbolo y el coágulo adherido es un trombo."
     }
   ]
 }

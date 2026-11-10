@@ -5,332 +5,493 @@
   "topic": "variables y medicion",
   "title": "Variables y medición",
   "number": 14,
-  "count": 19,
-  "duration": 19,
+  "count": 9,
+  "duration": 9,
   "source": "Educación en Salud e Investigación · Curso Básico 2025-2026",
   "questions": [
     {
-      "content_id": "salud-14-001",
+      "content_id": "evaluacion:medicina-oficial-salud-14-intermedio-1",
       "materia": "SALUD PUBLICA",
       "tema": "variables y medicion",
       "numero_pregunta": 1,
-      "pregunta": "¿Qué es una variable de investigación?",
-      "respuesta_correcta": "D",
-      "justificacion": "Una cualidad, propiedad o característica que puede tomar distintos valores.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "72",
-      "pagina_impresa": "65",
+      "pregunta": "Los grupos sanguíneos se representan con códigos numéricos que solo distinguen categorías. Comparar cuál código es mayor no tiene interpretación.\n¿Qué opción corresponde al caso?",
+      "respuesta_correcta": "A",
+      "justificacion": "Los códigos de una escala nominal sirven para distinguir categorías. Su orden numérico carece de significado.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+      "paginas_pdf": "93",
+      "pagina_impresa": "18",
       "dificultad": "medio",
-      "opcion_a": "Un elemento que influye indirectamente en la relación entre independiente y dependiente.",
-      "opcion_b": "El resultado o fenómeno explicado por otra variable.",
-      "opcion_c": "La que explica, condiciona o determina cambios en la dependiente.",
-      "opcion_d": "Una cualidad, propiedad o característica que puede tomar distintos valores."
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Variables y medición · variables y medicion",
+          "page": 93,
+          "printed": 18,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-14",
+        "chapterNumber": 14,
+        "chapter": "Variables y medición",
+        "section": "variables y medicion",
+        "printedPages": [
+          18
+        ],
+        "pdfPages": [
+          93
+        ]
+      },
+      "opcion_a": "Escala nominal",
+      "opcion_b": "Escala de razón",
+      "opcion_c": "Escala ordinal",
+      "opcion_d": "Escala de intervalo"
     },
     {
-      "content_id": "salud-14-002",
+      "content_id": "evaluacion:medicina-oficial-salud-14-intermedio-2",
       "materia": "SALUD PUBLICA",
       "tema": "variables y medicion",
       "numero_pregunta": 2,
-      "pregunta": "¿Cómo se clasifican las variables por su posición en una hipótesis?",
+      "pregunta": "Una encuesta registra satisfacción baja, media o alta. Los niveles tienen un orden, pero no se conoce la distancia entre dos niveles vecinos.\n¿Qué opción corresponde al caso?",
       "respuesta_correcta": "C",
-      "justificacion": "Independientes, dependientes e intervinientes.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "72",
-      "pagina_impresa": "65",
+      "justificacion": "En la escala ordinal las categorías se pueden ordenar. Las distancias entre categorías no están definidas.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+      "paginas_pdf": "93",
+      "pagina_impresa": "18",
       "dificultad": "medio",
-      "opcion_a": "Ordinal.",
-      "opcion_b": "Mediante magnitudes numéricas.",
-      "opcion_c": "Independientes, dependientes e intervinientes.",
-      "opcion_d": "Escala de razón."
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Variables y medición · variables y medicion",
+          "page": 93,
+          "printed": 18,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-14",
+        "chapterNumber": 14,
+        "chapter": "Variables y medición",
+        "section": "variables y medicion",
+        "printedPages": [
+          18
+        ],
+        "pdfPages": [
+          93
+        ]
+      },
+      "opcion_a": "Escala nominal",
+      "opcion_b": "Escala de intervalo",
+      "opcion_c": "Escala ordinal",
+      "opcion_d": "Escala de razón"
     },
     {
-      "content_id": "salud-14-003",
+      "content_id": "evaluacion:medicina-oficial-salud-14-intermedio-3",
       "materia": "SALUD PUBLICA",
       "tema": "variables y medicion",
       "numero_pregunta": 3,
-      "pregunta": "¿Qué es la variable independiente?",
-      "respuesta_correcta": "A",
-      "justificacion": "La que explica, condiciona o determina cambios en la dependiente.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "72",
-      "pagina_impresa": "65",
+      "pregunta": "Dos lecturas en grados Celsius se comparan por su diferencia. El cero de esa escala no representa ausencia de temperatura.\n¿Qué opción corresponde al caso?",
+      "respuesta_correcta": "B",
+      "justificacion": "La escala de intervalo permite comparar diferencias. Su cero es un punto de referencia convencional.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+      "paginas_pdf": "94",
+      "pagina_impresa": "19",
       "dificultad": "medio",
-      "opcion_a": "La que explica, condiciona o determina cambios en la dependiente.",
-      "opcion_b": "El resultado o fenómeno explicado por otra variable.",
-      "opcion_c": "Una cualidad, propiedad o característica que puede tomar distintos valores.",
-      "opcion_d": "Un elemento que influye indirectamente en la relación entre independiente y dependiente."
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Variables y medición · variables y medicion",
+          "page": 94,
+          "printed": 19,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-14",
+        "chapterNumber": 14,
+        "chapter": "Variables y medición",
+        "section": "variables y medicion",
+        "printedPages": [
+          19
+        ],
+        "pdfPages": [
+          94
+        ]
+      },
+      "opcion_a": "Escala de razón",
+      "opcion_b": "Escala de intervalo",
+      "opcion_c": "Escala ordinal",
+      "opcion_d": "Escala nominal"
     },
     {
-      "content_id": "salud-14-004",
+      "content_id": "evaluacion:medicina-oficial-salud-14-intermedio-4",
       "materia": "SALUD PUBLICA",
       "tema": "variables y medicion",
       "numero_pregunta": 4,
-      "pregunta": "¿Qué es la variable dependiente?",
+      "pregunta": "En la medición de longitud, 0 cm representa ausencia de extensión y 20 cm equivalen al doble de 10 cm.\n¿Qué opción corresponde al caso?",
       "respuesta_correcta": "B",
-      "justificacion": "El resultado o fenómeno explicado por otra variable.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "72",
-      "pagina_impresa": "65",
+      "justificacion": "Con un cero absoluto, la escala de razón admite comparaciones como el doble o la mitad.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+      "paginas_pdf": "94",
+      "pagina_impresa": "19",
       "dificultad": "medio",
-      "opcion_a": "La que explica, condiciona o determina cambios en la dependiente.",
-      "opcion_b": "El resultado o fenómeno explicado por otra variable.",
-      "opcion_c": "Un elemento que influye indirectamente en la relación entre independiente y dependiente.",
-      "opcion_d": "Una cualidad, propiedad o característica que puede tomar distintos valores."
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Variables y medición · variables y medicion",
+          "page": 94,
+          "printed": 19,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-14",
+        "chapterNumber": 14,
+        "chapter": "Variables y medición",
+        "section": "variables y medicion",
+        "printedPages": [
+          19
+        ],
+        "pdfPages": [
+          94
+        ]
+      },
+      "opcion_a": "Escala nominal",
+      "opcion_b": "Escala de razón",
+      "opcion_c": "Escala de intervalo",
+      "opcion_d": "Escala ordinal"
     },
     {
-      "content_id": "salud-14-005",
+      "content_id": "evaluacion:medicina-oficial-salud-14-ampliacion-01-umss",
       "materia": "SALUD PUBLICA",
       "tema": "variables y medicion",
       "numero_pregunta": 5,
-      "pregunta": "¿Qué es la variable interviniente?",
-      "respuesta_correcta": "A",
-      "justificacion": "Un elemento que influye indirectamente en la relación entre independiente y dependiente.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Una característica que no puede adoptar distintos valores satisface la definición de variable del compendio.\n2. En una hipótesis, la variable independiente puede plantearse como condición que explica el cambio en otra.",
+      "respuesta_correcta": "B",
+      "justificacion": "1. Incorrecta. Una variable se distingue por poder adoptar valores diferentes.\n2. Correcta. Cumple la función explicativa con respecto a la variable dependiente.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
       "paginas_pdf": "72",
       "pagina_impresa": "65",
-      "dificultad": "medio",
-      "opcion_a": "Un elemento que influye indirectamente en la relación entre independiente y dependiente.",
-      "opcion_b": "La que explica, condiciona o determina cambios en la dependiente.",
-      "opcion_c": "El resultado o fenómeno explicado por otra variable.",
-      "opcion_d": "Una cualidad, propiedad o característica que puede tomar distintos valores."
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Variables y medición · variables y medicion",
+          "page": 72,
+          "printed": 65,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-14",
+        "chapterNumber": 14,
+        "chapter": "Variables y medición",
+        "section": "variables y medicion",
+        "printedPages": [
+          65
+        ],
+        "pdfPages": [
+          72
+        ],
+        "statements": [
+          {
+            "pdfPage": 72,
+            "printedPage": 65,
+            "section": "variables y medicion",
+            "cardId": "salud-14-001"
+          },
+          {
+            "pdfPage": 72,
+            "printedPage": 65,
+            "section": "variables y medicion",
+            "cardId": "salud-14-003"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. Una variable se distingue por poder adoptar valores diferentes. 2. Correcta. Cumple la función explicativa con respecto a la variable dependiente.",
+        "B": "Solo la afirmación 2 es correcta.",
+        "C": "1. Incorrecta. Una variable se distingue por poder adoptar valores diferentes.",
+        "D": "2. Correcta. Cumple la función explicativa con respecto a la variable dependiente."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "salud-14-006",
+      "content_id": "evaluacion:medicina-oficial-salud-14-ampliacion-02-umss",
       "materia": "SALUD PUBLICA",
       "tema": "variables y medicion",
       "numero_pregunta": 6,
-      "pregunta": "¿Cómo se expresan las variables cuantitativas?",
-      "respuesta_correcta": "C",
-      "justificacion": "Mediante magnitudes numéricas.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "73",
-      "pagina_impresa": "66",
-      "dificultad": "medio",
-      "opcion_a": "Independientes, dependientes e intervinientes.",
-      "opcion_b": "Ordinal.",
-      "opcion_c": "Mediante magnitudes numéricas.",
-      "opcion_d": "Escala de razón."
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Si el estudio busca explicar por qué cambia un resultado, ese resultado puede formularse como variable dependiente.\n2. Una variable interviniente no puede influir en la relación entre la independiente y la dependiente.",
+      "respuesta_correcta": "A",
+      "justificacion": "1. Correcta. La dependiente es el fenómeno explicado por otra variable en la hipótesis.\n2. Incorrecta. Su papel es influir indirectamente en esa relación.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+      "paginas_pdf": "72",
+      "pagina_impresa": "65",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Variables y medición · variables y medicion",
+          "page": 72,
+          "printed": 65,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-14",
+        "chapterNumber": 14,
+        "chapter": "Variables y medición",
+        "section": "variables y medicion",
+        "printedPages": [
+          65
+        ],
+        "pdfPages": [
+          72
+        ],
+        "statements": [
+          {
+            "pdfPage": 72,
+            "printedPage": 65,
+            "section": "variables y medicion",
+            "cardId": "salud-14-004"
+          },
+          {
+            "pdfPage": 72,
+            "printedPage": 65,
+            "section": "variables y medicion",
+            "cardId": "salud-14-005"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "Solo la afirmación 1 es correcta.",
+        "B": "1. Correcta. La dependiente es el fenómeno explicado por otra variable en la hipótesis. 2. Incorrecta. Su papel es influir indirectamente en esa relación.",
+        "C": "2. Incorrecta. Su papel es influir indirectamente en esa relación.",
+        "D": "1. Correcta. La dependiente es el fenómeno explicado por otra variable en la hipótesis."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "salud-14-007",
+      "content_id": "evaluacion:medicina-oficial-salud-14-ampliacion-03-umss",
       "materia": "SALUD PUBLICA",
       "tema": "variables y medicion",
       "numero_pregunta": 7,
-      "pregunta": "¿Qué tipo de variable es el número de hijos?",
-      "respuesta_correcta": "A",
-      "justificacion": "Cuantitativa discreta: sus unidades no se fraccionan.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "73",
-      "pagina_impresa": "66",
-      "dificultad": "medio",
-      "opcion_a": "Cuantitativa discreta: sus unidades no se fraccionan.",
-      "opcion_b": "Independientes, dependientes e intervinientes.",
-      "opcion_c": "Mediante magnitudes numéricas.",
-      "opcion_d": "Atributos o categorías de los elementos."
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. El número de hijos es cuantitativo discreto porque se cuenta en unidades que no se fraccionan.\n2. Medir un atributo que admite valores intermedios dentro de un intervalo concuerda con una variable continua.",
+      "respuesta_correcta": "C",
+      "justificacion": "1. Correcta. Entre dos valores consecutivos del conteo no hay resultados intermedios.\n2. Correcta. La variable continua no se limita a valores aislados.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+      "paginas_pdf": "73, 92",
+      "pagina_impresa": "66, 17",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Variables y medición · variables y medicion",
+          "page": 73,
+          "printed": 66,
+          "marks": []
+        },
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Variables y medición · variables y medicion",
+          "page": 92,
+          "printed": 17,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-14",
+        "chapterNumber": 14,
+        "chapter": "Variables y medición",
+        "section": "variables y medicion",
+        "printedPages": [
+          17,
+          66
+        ],
+        "pdfPages": [
+          73,
+          92
+        ],
+        "statements": [
+          {
+            "pdfPage": 73,
+            "printedPage": 66,
+            "section": "variables y medicion",
+            "cardId": "salud-14-007"
+          },
+          {
+            "pdfPage": 92,
+            "printedPage": 17,
+            "section": "variables y medicion",
+            "cardId": "salud-15-003"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "2. Correcta. La variable continua no se limita a valores aislados.",
+        "B": "1. Correcta. Entre dos valores consecutivos del conteo no hay resultados intermedios.",
+        "C": "Ambas afirmaciones son correctas.",
+        "D": "1. Correcta. Entre dos valores consecutivos del conteo no hay resultados intermedios. 2. Correcta. La variable continua no se limita a valores aislados."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "salud-15-001",
+      "content_id": "evaluacion:medicina-oficial-salud-14-ampliacion-04-umss",
       "materia": "SALUD PUBLICA",
       "tema": "variables y medicion",
       "numero_pregunta": 8,
-      "pregunta": "¿Qué representan las variables cualitativas?",
-      "respuesta_correcta": "C",
-      "justificacion": "Atributos o categorías de los elementos.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "91",
-      "pagina_impresa": "16",
-      "dificultad": "medio",
-      "opcion_a": "Mediante magnitudes numéricas.",
-      "opcion_b": "Cuantitativa discreta: sus unidades no se fraccionan.",
-      "opcion_c": "Atributos o categorías de los elementos.",
-      "opcion_d": "Independientes, dependientes e intervinientes."
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Registrar categorías con números las convierte automáticamente en cantidades comparables por aritmética.\n2. Una escala que permite comparar razones requiere un cero arbitrario y carece de distancias iguales.",
+      "respuesta_correcta": "D",
+      "justificacion": "1. Incorrecta. Un código numérico puede limitarse a identificar una categoría cualitativa.\n2. Incorrecta. La escala de razón admite intervalos comparables y tiene un cero absoluto.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+      "paginas_pdf": "91, 94",
+      "pagina_impresa": "16, 19",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Variables y medición · variables y medicion",
+          "page": 91,
+          "printed": 16,
+          "marks": []
+        },
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Variables y medición · variables y medicion",
+          "page": 94,
+          "printed": 19,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-14",
+        "chapterNumber": 14,
+        "chapter": "Variables y medición",
+        "section": "variables y medicion",
+        "printedPages": [
+          16,
+          19
+        ],
+        "pdfPages": [
+          91,
+          94
+        ],
+        "statements": [
+          {
+            "pdfPage": 91,
+            "printedPage": 16,
+            "section": "variables y medicion",
+            "cardId": "salud-15-002"
+          },
+          {
+            "pdfPage": 94,
+            "printedPage": 19,
+            "section": "variables y medicion",
+            "cardId": "salud-15-010"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. Un código numérico puede limitarse a identificar una categoría cualitativa.",
+        "B": "2. Incorrecta. La escala de razón admite intervalos comparables y tiene un cero absoluto.",
+        "C": "1. Incorrecta. Un código numérico puede limitarse a identificar una categoría cualitativa. 2. Incorrecta. La escala de razón admite intervalos comparables y tiene un cero absoluto.",
+        "D": "Ninguna afirmación es correcta."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "salud-15-003",
+      "content_id": "evaluacion:banco-verificado:salud-14:variables",
       "materia": "SALUD PUBLICA",
       "tema": "variables y medicion",
       "numero_pregunta": 9,
-      "pregunta": "¿Qué caracteriza a una variable cuantitativa continua?",
-      "respuesta_correcta": "D",
-      "justificacion": "Puede tomar cualquier valor dentro de un intervalo, incluidos valores intermedios.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "92",
-      "pagina_impresa": "17",
-      "dificultad": "medio",
-      "opcion_a": "Un orden entre niveles; las distancias entre niveles no son necesariamente iguales.",
-      "opcion_b": "Clasifica en categorías identificadas por nombres, mutuamente excluyentes.",
-      "opcion_c": "Toma valores aislados, con separaciones que no admiten valores intermedios.",
-      "opcion_d": "Puede tomar cualquier valor dentro de un intervalo, incluidos valores intermedios."
-    },
-    {
-      "content_id": "salud-15-004",
-      "materia": "SALUD PUBLICA",
-      "tema": "variables y medicion",
-      "numero_pregunta": 10,
-      "pregunta": "¿Qué caracteriza a una variable cuantitativa discreta?",
+      "pregunta": "Una hipótesis propone que la duración de una intervención explica el cambio en una puntuación. ¿Qué papel ocupa la puntuación en esa hipótesis?",
       "respuesta_correcta": "A",
-      "justificacion": "Toma valores aislados, con separaciones que no admiten valores intermedios.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "92",
-      "pagina_impresa": "17",
-      "dificultad": "medio",
-      "opcion_a": "Toma valores aislados, con separaciones que no admiten valores intermedios.",
-      "opcion_b": "Clasifica en categorías identificadas por nombres, mutuamente excluyentes.",
-      "opcion_c": "Distancias iguales entre valores y un cero arbitrario.",
-      "opcion_d": "Puede tomar cualquier valor dentro de un intervalo, incluidos valores intermedios."
-    },
-    {
-      "content_id": "salud-15-005",
-      "materia": "SALUD PUBLICA",
-      "tema": "variables y medicion",
-      "numero_pregunta": 11,
-      "pregunta": "¿Cuáles son las cuatro escalas de medición?",
-      "respuesta_correcta": "D",
-      "justificacion": "Nominal, ordinal, de intervalo y de razón.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "93",
-      "pagina_impresa": "18",
-      "dificultad": "medio",
-      "opcion_a": "Biomédica, clínica y en salud pública.",
-      "opcion_b": "Prevenir enfermedades, prolongar la vida y promover el bienestar colectivo.",
-      "opcion_c": "Planificación → ejecución → informe final.",
-      "opcion_d": "Nominal, ordinal, de intervalo y de razón."
-    },
-    {
-      "content_id": "salud-15-006",
-      "materia": "SALUD PUBLICA",
-      "tema": "variables y medicion",
-      "numero_pregunta": 12,
-      "pregunta": "¿Qué caracteriza a la escala nominal?",
-      "respuesta_correcta": "B",
-      "justificacion": "Clasifica en categorías identificadas por nombres, mutuamente excluyentes.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "93",
-      "pagina_impresa": "18",
-      "dificultad": "medio",
-      "opcion_a": "Puede tomar cualquier valor dentro de un intervalo, incluidos valores intermedios.",
-      "opcion_b": "Clasifica en categorías identificadas por nombres, mutuamente excluyentes.",
-      "opcion_c": "Toma valores aislados, con separaciones que no admiten valores intermedios.",
-      "opcion_d": "Distancias iguales entre valores y un cero arbitrario."
-    },
-    {
-      "content_id": "salud-15-007",
-      "materia": "SALUD PUBLICA",
-      "tema": "variables y medicion",
-      "numero_pregunta": 13,
-      "pregunta": "¿Qué añade la escala ordinal respecto a la nominal?",
-      "respuesta_correcta": "D",
-      "justificacion": "Un orden entre niveles; las distancias entre niveles no son necesariamente iguales.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "93",
-      "pagina_impresa": "18",
-      "dificultad": "medio",
-      "opcion_a": "Puede tomar cualquier valor dentro de un intervalo, incluidos valores intermedios.",
-      "opcion_b": "Toma valores aislados, con separaciones que no admiten valores intermedios.",
-      "opcion_c": "Clasifica en categorías identificadas por nombres, mutuamente excluyentes.",
-      "opcion_d": "Un orden entre niveles; las distancias entre niveles no son necesariamente iguales."
-    },
-    {
-      "content_id": "salud-15-012",
-      "materia": "SALUD PUBLICA",
-      "tema": "variables y medicion",
-      "numero_pregunta": 14,
-      "pregunta": "¿Qué escala corresponde a categorías como sano, afectado y muy enfermo?",
-      "respuesta_correcta": "C",
-      "justificacion": "Ordinal.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "93",
-      "pagina_impresa": "18",
-      "dificultad": "medio",
-      "opcion_a": "Mediante magnitudes numéricas.",
-      "opcion_b": "Independientes, dependientes e intervinientes.",
-      "opcion_c": "Ordinal.",
-      "opcion_d": "Escala de razón."
-    },
-    {
-      "content_id": "salud-15-013",
-      "materia": "SALUD PUBLICA",
-      "tema": "variables y medicion",
-      "numero_pregunta": 15,
-      "pregunta": "¿Qué función cumplen los números asignados a niveles ordinales?",
-      "respuesta_correcta": "C",
-      "justificacion": "Etiquetas de orden, no cantidades para operar aritméticamente.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "93",
-      "pagina_impresa": "18",
-      "dificultad": "medio",
-      "opcion_a": "Para asignar etiquetas a los códigos o valores de las variables.",
-      "opcion_b": "La escala de razón.",
-      "opcion_c": "Etiquetas de orden, no cantidades para operar aritméticamente.",
-      "opcion_d": "Recolectar y analizar datos para detectar riesgos y brotes."
-    },
-    {
-      "content_id": "salud-15-008",
-      "materia": "SALUD PUBLICA",
-      "tema": "variables y medicion",
-      "numero_pregunta": 16,
-      "pregunta": "¿Qué caracteriza a la escala de intervalo?",
-      "respuesta_correcta": "A",
-      "justificacion": "Distancias iguales entre valores y un cero arbitrario.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "94",
-      "pagina_impresa": "19",
-      "dificultad": "medio",
-      "opcion_a": "Distancias iguales entre valores y un cero arbitrario.",
-      "opcion_b": "Clasifica en categorías identificadas por nombres, mutuamente excluyentes.",
-      "opcion_c": "Toma valores aislados, con separaciones que no admiten valores intermedios.",
-      "opcion_d": "Ausencia del atributo medido; es un cero absoluto."
-    },
-    {
-      "content_id": "salud-15-009",
-      "materia": "SALUD PUBLICA",
-      "tema": "variables y medicion",
-      "numero_pregunta": 17,
-      "pregunta": "¿Qué significa el cero en una escala de razón?",
-      "respuesta_correcta": "D",
-      "justificacion": "Ausencia del atributo medido; es un cero absoluto.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "94",
-      "pagina_impresa": "19",
-      "dificultad": "medio",
-      "opcion_a": "Clasifica en categorías identificadas por nombres, mutuamente excluyentes.",
-      "opcion_b": "Toma valores aislados, con separaciones que no admiten valores intermedios.",
-      "opcion_c": "Distancias iguales entre valores y un cero arbitrario.",
-      "opcion_d": "Ausencia del atributo medido; es un cero absoluto."
-    },
-    {
-      "content_id": "salud-15-010",
-      "materia": "SALUD PUBLICA",
-      "tema": "variables y medicion",
-      "numero_pregunta": 18,
-      "pregunta": "¿Qué escala permite comparar tanto intervalos como razones?",
-      "respuesta_correcta": "D",
-      "justificacion": "La escala de razón.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "94",
-      "pagina_impresa": "19",
-      "dificultad": "medio",
-      "opcion_a": "La atención prenatal.",
-      "opcion_b": "El coeficiente de variación.",
-      "opcion_c": "Etiquetas de orden, no cantidades para operar aritméticamente.",
-      "opcion_d": "La escala de razón."
-    },
-    {
-      "content_id": "salud-15-011",
-      "materia": "SALUD PUBLICA",
-      "tema": "variables y medicion",
-      "numero_pregunta": 19,
-      "pregunta": "¿A qué escala pertenecen longitud, peso y dinero según el texto?",
-      "respuesta_correcta": "B",
-      "justificacion": "Escala de razón.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "94",
-      "pagina_impresa": "19",
-      "dificultad": "medio",
-      "opcion_a": "Ordinal.",
-      "opcion_b": "Escala de razón.",
-      "opcion_c": "Mediante magnitudes numéricas.",
-      "opcion_d": "Independientes, dependientes e intervinientes."
+      "justificacion": "La puntuación es el resultado que la hipótesis busca explicar. La duración de la intervención actúa como variable independiente en esa relación.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+      "paginas_pdf": "72",
+      "pagina_impresa": "65",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "Educación en Salud",
+          "section": "Variables según su posición en la hipótesis",
+          "page": 72,
+          "printed": 65,
+          "marks": [
+            [
+              0.1154,
+              0.3567,
+              0.1417,
+              0.0168
+            ],
+            [
+              0.2828,
+              0.3833,
+              0.1428,
+              0.0168
+            ],
+            [
+              0.1351,
+              0.3567,
+              0.122,
+              0.0168
+            ],
+            [
+              0.2805,
+              0.3567,
+              0.1187,
+              0.0168
+            ]
+          ]
+        }
+      ],
+      "source": {
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-14"
+      },
+      "opcion_a": "Variable dependiente.",
+      "opcion_b": "Variable independiente.",
+      "opcion_c": "Variable interviniente.",
+      "opcion_d": "Variable de control."
     }
   ]
 }

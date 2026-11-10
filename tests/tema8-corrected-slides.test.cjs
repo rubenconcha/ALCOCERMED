@@ -1,9 +1,7 @@
 const {test}=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),{execFileSync}=require('node:child_process');
 const paper=require('../api/_evaluations/morfo-08.json'),bank=require('../api/_game-practice/bank.json'),source=require('../api/_flashcards/sources/morfo.json'),audit=require('../quality/tema8-slide-alignment.json');
 const baseline=file=>JSON.parse(execFileSync('git',['show','36d7444:'+file],{encoding:'utf8',maxBuffer:25*1024*1024}));
-test('Only skeleton practice changes; tissues and every other topic remain intact',()=>{
- assert.deepEqual(require('../api/_evaluations/morfo-05.json'),baseline('api/_evaluations/morfo-05.json'));
- assert.deepEqual(require('../api/_evaluations/morfo-07.json'),baseline('api/_evaluations/morfo-07.json'));
+test('The skeleton slide update does not change flashcards or games from other topics',()=>{
  assert.deepEqual(source.chapters.filter(c=>c.number!==8),baseline('api/_flashcards/sources/morfo.json').chapters.filter(c=>c.number!==8));
  assert.deepEqual(bank.filter(c=>c.id!=='morfo-08'),baseline('api/_game-practice/bank.json').filter(c=>c.id!=='morfo-08'));
 });

@@ -5,519 +5,481 @@
   "topic": "metodos y tecnicas basicas en biologia celular",
   "title": "Cómo se estudian las células. Métodos y técnicas básicas en biología celular",
   "number": 2,
-  "count": 30,
-  "duration": 30,
+  "count": 9,
+  "duration": 9,
   "source": "Biología celular biomédica",
   "questions": [
     {
-      "content_id": "bio-02-001",
+      "content_id": "evaluacion:medicina-oficial-biologia-02-intermedio-1",
       "materia": "BIOLOGIA CELULAR",
       "tema": "metodos y tecnicas basicas en biologia celular",
       "numero_pregunta": 1,
-      "pregunta": "¿Qué es el límite de resolución de un microscopio?",
-      "respuesta_correcta": "B",
-      "justificacion": "La distancia mínima entre dos puntos que permite distinguirlos por separado.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "58",
-      "pagina_impresa": "58",
+      "pregunta": "Hay pocas copias de un fragmento conocido. Antes de analizarlo se desea multiplicarlo selectivamente usando cebadores.\n¿Qué opción corresponde al caso?",
+      "respuesta_correcta": "A",
+      "justificacion": "La PCR amplifica repetidamente un segmento específico de ADN para generar muchas copias.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+      "paginas_pdf": "78",
+      "pagina_impresa": "",
       "dificultad": "medio",
-      "opcion_a": "La capacidad de no responder contra antígenos propios o sin señales de peligro.",
-      "opcion_b": "La distancia mínima entre dos puntos que permite distinguirlos por separado.",
-      "opcion_c": "Moléculas circulares de ADN extracromosómico, menores que el cromosoma.",
-      "opcion_d": "Regiones cortas del axón sin aislamiento de mielina entre segmentos sucesivos."
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Cómo se estudian las células. Métodos y técnicas básicas en biología celular · PCR",
+          "page": 78,
+          "printed": null,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-02",
+        "chapterNumber": 2,
+        "chapter": "Cómo se estudian las células. Métodos y técnicas básicas en biología celular",
+        "section": "PCR",
+        "printedPages": [],
+        "pdfPages": [
+          78
+        ]
+      },
+      "opcion_a": "Reacción en cadena de la polimerasa (PCR)",
+      "opcion_b": "Hibridación in situ fluorescente (FISH)",
+      "opcion_c": "Secuenciación de ADN",
+      "opcion_d": "ELISA"
     },
     {
-      "content_id": "bio-02-002",
+      "content_id": "evaluacion:medicina-oficial-biologia-02-intermedio-2",
       "materia": "BIOLOGIA CELULAR",
       "tema": "metodos y tecnicas basicas en biologia celular",
       "numero_pregunta": 2,
-      "pregunta": "¿Cuál es el límite de resolución del microscopio óptico convencional?",
+      "pregunta": "La muestra ya contiene suficiente ADN. Ahora interesa leer en qué orden están sus bases, no aumentar el número de copias.\n¿Qué opción corresponde al caso?",
       "respuesta_correcta": "C",
-      "justificacion": "Aproximadamente 0,2 μm.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "58",
-      "pagina_impresa": "58",
+      "justificacion": "La secuenciación determina en qué orden se encuentran los nucleótidos del ADN.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+      "paginas_pdf": "83",
+      "pagina_impresa": "",
       "dificultad": "medio",
-      "opcion_a": "Los T CD4+ reguladores.",
-      "opcion_b": "260 nm.",
-      "opcion_c": "Aproximadamente 0,2 μm.",
-      "opcion_d": "Manosa-6-fosfato, M6P."
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Cómo se estudian las células. Métodos y técnicas básicas en biología celular · Secuenciación",
+          "page": 83,
+          "printed": null,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-02",
+        "chapterNumber": 2,
+        "chapter": "Cómo se estudian las células. Métodos y técnicas básicas en biología celular",
+        "section": "Secuenciación",
+        "printedPages": [],
+        "pdfPages": [
+          83
+        ]
+      },
+      "opcion_a": "Reacción en cadena de la polimerasa (PCR)",
+      "opcion_b": "ELISA",
+      "opcion_c": "Secuenciación de ADN",
+      "opcion_d": "Hibridación in situ fluorescente (FISH)"
     },
     {
-      "content_id": "bio-02-003",
+      "content_id": "evaluacion:medicina-oficial-biologia-02-intermedio-3",
       "materia": "BIOLOGIA CELULAR",
       "tema": "metodos y tecnicas basicas en biologia celular",
       "numero_pregunta": 3,
-      "pregunta": "¿Qué microscopía permite observar células vivas sin colorantes no vitales?",
-      "respuesta_correcta": "C",
-      "justificacion": "La de contraste de fases.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "60",
-      "pagina_impresa": "60",
+      "pregunta": "Se busca una región cromosómica concreta sin perder su ubicación en la célula. La señal se detectará por fluorescencia de una sonda complementaria.\n¿Qué opción corresponde al caso?",
+      "respuesta_correcta": "D",
+      "justificacion": "La FISH usa una sonda marcada con un fluorocromo para localizar una secuencia complementaria en la preparación.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+      "paginas_pdf": "85",
+      "pagina_impresa": "",
       "dificultad": "medio",
-      "opcion_a": "Para detener la división en metafase.",
-      "opcion_b": "La catalasa.",
-      "opcion_c": "La de contraste de fases.",
-      "opcion_d": "La expresión de miles de genes."
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Cómo se estudian las células. Métodos y técnicas básicas en biología celular · Hibridación in situ",
+          "page": 85,
+          "printed": null,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-02",
+        "chapterNumber": 2,
+        "chapter": "Cómo se estudian las células. Métodos y técnicas básicas en biología celular",
+        "section": "Hibridación in situ",
+        "printedPages": [],
+        "pdfPages": [
+          85
+        ]
+      },
+      "opcion_a": "Secuenciación de ADN",
+      "opcion_b": "Reacción en cadena de la polimerasa (PCR)",
+      "opcion_c": "ELISA",
+      "opcion_d": "Hibridación in situ fluorescente (FISH)"
     },
     {
-      "content_id": "bio-02-004",
+      "content_id": "evaluacion:medicina-oficial-biologia-02-intermedio-4",
       "materia": "BIOLOGIA CELULAR",
       "tema": "metodos y tecnicas basicas en biologia celular",
       "numero_pregunta": 4,
-      "pregunta": "¿Cómo se compara la longitud de onda emitida por un fluorocromo con la de excitación?",
-      "respuesta_correcta": "C",
-      "justificacion": "La emitida es mayor.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "61",
-      "pagina_impresa": "61",
+      "pregunta": "En vez de estudiar ADN, el laboratorio necesita medir una proteína en un extracto mediante reconocimiento inmunológico y detección enzimática.\n¿Qué opción corresponde al caso?",
+      "respuesta_correcta": "D",
+      "justificacion": "El ELISA emplea reconocimiento por anticuerpos para detectar una proteína en una muestra.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+      "paginas_pdf": "103",
+      "pagina_impresa": "",
       "dificultad": "medio",
-      "opcion_a": "Hematoxilina-eosina.",
-      "opcion_b": "Ácido fosfotúngstico.",
-      "opcion_c": "La emitida es mayor.",
-      "opcion_d": "El termociclador."
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Cómo se estudian las células. Métodos y técnicas básicas en biología celular · ELISA",
+          "page": 103,
+          "printed": null,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-02",
+        "chapterNumber": 2,
+        "chapter": "Cómo se estudian las células. Métodos y técnicas básicas en biología celular",
+        "section": "ELISA",
+        "printedPages": [],
+        "pdfPages": [
+          103
+        ]
+      },
+      "opcion_a": "Reacción en cadena de la polimerasa (PCR)",
+      "opcion_b": "Hibridación in situ fluorescente (FISH)",
+      "opcion_c": "Secuenciación de ADN",
+      "opcion_d": "ELISA"
     },
     {
-      "content_id": "bio-02-005",
+      "content_id": "evaluacion:medicina-oficial-biologia-02-ampliacion-01-umss",
       "materia": "BIOLOGIA CELULAR",
       "tema": "metodos y tecnicas basicas en biologia celular",
       "numero_pregunta": 5,
-      "pregunta": "¿Qué utiliza el microscopio electrónico como fuente de iluminación?",
-      "respuesta_correcta": "B",
-      "justificacion": "Un haz de electrones acelerados.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "63",
-      "pagina_impresa": "63",
-      "dificultad": "medio",
-      "opcion_a": "El anticuerpo secundario.",
-      "opcion_b": "Un haz de electrones acelerados.",
-      "opcion_c": "Un efecto tridimensional.",
-      "opcion_d": "Óptica: parafina. Electrónica: resinas."
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Para observar células vivas sin recurrir a una tinción no vital, puede emplearse contraste de fases.\n2. En fluorescencia, la luz que emite el fluorocromo tiene una longitud de onda menor que la de excitación.",
+      "respuesta_correcta": "A",
+      "justificacion": "1. Correcta. Esta técnica vuelve visibles diferencias ópticas de la muestra sin exigir esa tinción.\n2. Incorrecta. La emisión se produce a una longitud de onda mayor que la de excitación.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+      "paginas_pdf": "60, 61",
+      "pagina_impresa": "",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Cómo se estudian las células. Métodos y técnicas básicas en biología celular · Microscopía óptica / Fluorescencia",
+          "page": 60,
+          "printed": null,
+          "marks": []
+        },
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Cómo se estudian las células. Métodos y técnicas básicas en biología celular · Microscopía óptica / Fluorescencia",
+          "page": 61,
+          "printed": null,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-02",
+        "chapterNumber": 2,
+        "chapter": "Cómo se estudian las células. Métodos y técnicas básicas en biología celular",
+        "section": "Microscopía óptica / Fluorescencia",
+        "printedPages": [],
+        "pdfPages": [
+          60,
+          61
+        ],
+        "statements": [
+          {
+            "pdfPage": 60,
+            "printedPage": null,
+            "section": "Microscopía óptica",
+            "cardId": "bio-02-003"
+          },
+          {
+            "pdfPage": 61,
+            "printedPage": null,
+            "section": "Fluorescencia",
+            "cardId": "bio-02-004"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "Solo la afirmación 1 es correcta.",
+        "B": "1. Correcta. Esta técnica vuelve visibles diferencias ópticas de la muestra sin exigir esa tinción. 2. Incorrecta. La emisión se produce a una longitud de onda mayor que la de excitación.",
+        "C": "2. Incorrecta. La emisión se produce a una longitud de onda mayor que la de excitación.",
+        "D": "1. Correcta. Esta técnica vuelve visibles diferencias ópticas de la muestra sin exigir esa tinción."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "bio-02-006",
+      "content_id": "evaluacion:medicina-oficial-biologia-02-ampliacion-02-umss",
       "materia": "BIOLOGIA CELULAR",
       "tema": "metodos y tecnicas basicas en biologia celular",
       "numero_pregunta": 6,
-      "pregunta": "¿Cómo se ven las zonas electrodensas y electrolúcidas?",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. En una imagen electrónica de transmisión, las zonas electrodensas dejan pasar más electrones y aparecen claras.\n2. En una inmunotinción indirecta, el anticuerpo secundario puede portar el marcador que permite localizar al primario.",
       "respuesta_correcta": "B",
-      "justificacion": "Electrodensas: oscuras. Electrolúcidas: claras.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "64",
-      "pagina_impresa": "64",
-      "dificultad": "medio",
-      "opcion_a": "Desnaturalización → hibridación → extensión.",
-      "opcion_b": "Electrodensas: oscuras. Electrolúcidas: claras.",
-      "opcion_c": "Un haz de electrones acelerados.",
-      "opcion_d": "Óptica: parafina. Electrónica: resinas."
+      "justificacion": "1. Incorrecta. Las regiones electrodensas dispersan más electrones y se ven oscuras.\n2. Correcta. El primario reconoce el antígeno y el secundario marcado reconoce al primario.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+      "paginas_pdf": "64, 71",
+      "pagina_impresa": "",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Cómo se estudian las células. Métodos y técnicas básicas en biología celular · Microscopía electrónica / Inmunohistoquímica",
+          "page": 64,
+          "printed": null,
+          "marks": []
+        },
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Cómo se estudian las células. Métodos y técnicas básicas en biología celular · Microscopía electrónica / Inmunohistoquímica",
+          "page": 71,
+          "printed": null,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-02",
+        "chapterNumber": 2,
+        "chapter": "Cómo se estudian las células. Métodos y técnicas básicas en biología celular",
+        "section": "Microscopía electrónica / Inmunohistoquímica",
+        "printedPages": [],
+        "pdfPages": [
+          64,
+          71
+        ],
+        "statements": [
+          {
+            "pdfPage": 64,
+            "printedPage": null,
+            "section": "Microscopía electrónica",
+            "cardId": "bio-02-006"
+          },
+          {
+            "pdfPage": 71,
+            "printedPage": null,
+            "section": "Inmunohistoquímica",
+            "cardId": "bio-02-013"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. Las regiones electrodensas dispersan más electrones y se ven oscuras. 2. Correcta. El primario reconoce el antígeno y el secundario marcado reconoce al primario.",
+        "B": "Solo la afirmación 2 es correcta.",
+        "C": "1. Incorrecta. Las regiones electrodensas dispersan más electrones y se ven oscuras.",
+        "D": "2. Correcta. El primario reconoce el antígeno y el secundario marcado reconoce al primario."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "bio-02-009",
+      "content_id": "evaluacion:medicina-oficial-biologia-02-ampliacion-03-umss",
       "materia": "BIOLOGIA CELULAR",
       "tema": "metodos y tecnicas basicas en biologia celular",
       "numero_pregunta": 7,
-      "pregunta": "¿Cuál es el orden del procesamiento histológico básico?",
-      "respuesta_correcta": "A",
-      "justificacion": "Fijación → inclusión → corte → tinción.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "68",
-      "pagina_impresa": "68",
-      "dificultad": "medio",
-      "opcion_a": "Fijación → inclusión → corte → tinción.",
-      "opcion_b": "Interrumpe la adición de nuevos nucleótidos.",
-      "opcion_c": "Núcleos y restos de células sin fragmentar.",
-      "opcion_d": "Determinar el orden de sus nucleótidos."
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. En un ciclo de PCR, los cebadores se aparean con sus secuencias diana después de separar las cadenas de ADN.\n2. En la secuenciación de Sanger, incorporar un didesoxirribonucleótido detiene la elongación de esa cadena.",
+      "respuesta_correcta": "C",
+      "justificacion": "1. Correcta. La hibridación sigue a la desnaturalización y precede a la extensión.\n2. Correcta. El nucleótido incorporado no permite formar el siguiente enlace de la cadena.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+      "paginas_pdf": "78, 84",
+      "pagina_impresa": "",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Cómo se estudian las células. Métodos y técnicas básicas en biología celular · PCR / Secuenciación",
+          "page": 78,
+          "printed": null,
+          "marks": []
+        },
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Cómo se estudian las células. Métodos y técnicas básicas en biología celular · PCR / Secuenciación",
+          "page": 84,
+          "printed": null,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-02",
+        "chapterNumber": 2,
+        "chapter": "Cómo se estudian las células. Métodos y técnicas básicas en biología celular",
+        "section": "PCR / Secuenciación",
+        "printedPages": [],
+        "pdfPages": [
+          78,
+          84
+        ],
+        "statements": [
+          {
+            "pdfPage": 78,
+            "printedPage": null,
+            "section": "PCR",
+            "cardId": "bio-02-017"
+          },
+          {
+            "pdfPage": 84,
+            "printedPage": null,
+            "section": "Secuenciación",
+            "cardId": "bio-02-022"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "2. Correcta. El nucleótido incorporado no permite formar el siguiente enlace de la cadena.",
+        "B": "1. Correcta. La hibridación sigue a la desnaturalización y precede a la extensión.",
+        "C": "Ambas afirmaciones son correctas.",
+        "D": "1. Correcta. La hibridación sigue a la desnaturalización y precede a la extensión. 2. Correcta. El nucleótido incorporado no permite formar el siguiente enlace de la cadena."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "bio-02-010",
+      "content_id": "evaluacion:medicina-oficial-biologia-02-ampliacion-04-umss",
       "materia": "BIOLOGIA CELULAR",
       "tema": "metodos y tecnicas basicas en biologia celular",
       "numero_pregunta": 8,
-      "pregunta": "¿Para qué se fija un tejido antes de observarlo?",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Para escoger una sonda de FISH basta conocer el número total de cromosomas, aun sin saber qué región se busca.\n2. La hibridación genómica comparada detecta una translocación equilibrada porque esta incrementa la cantidad total de ADN.",
       "respuesta_correcta": "D",
-      "justificacion": "Para frenar su degradación y preservar su estructura.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "68",
-      "pagina_impresa": "68",
-      "dificultad": "medio",
-      "opcion_a": "Una proteína en un fluido o extracto de tejido.",
-      "opcion_b": "Amplificar exponencialmente un segmento específico de ADN.",
-      "opcion_c": "Una secuencia específica de ácidos nucleicos en un tejido.",
-      "opcion_d": "Para frenar su degradación y preservar su estructura."
+      "justificacion": "1. Incorrecta. La sonda debe reconocer una secuencia de la región que se pretende localizar.\n2. Incorrecta. Los reordenamientos equilibrados no producen ganancias ni pérdidas que detecte esa comparación.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+      "paginas_pdf": "96, 97",
+      "pagina_impresa": "",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Cómo se estudian las células. Métodos y técnicas básicas en biología celular · Citogenética",
+          "page": 96,
+          "printed": null,
+          "marks": []
+        },
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Cómo se estudian las células. Métodos y técnicas básicas en biología celular · Citogenética",
+          "page": 97,
+          "printed": null,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-02",
+        "chapterNumber": 2,
+        "chapter": "Cómo se estudian las células. Métodos y técnicas básicas en biología celular",
+        "section": "Citogenética",
+        "printedPages": [],
+        "pdfPages": [
+          96,
+          97
+        ],
+        "statements": [
+          {
+            "pdfPage": 96,
+            "printedPage": null,
+            "section": "Citogenética",
+            "cardId": "bio-02-029"
+          },
+          {
+            "pdfPage": 97,
+            "printedPage": null,
+            "section": "Citogenética",
+            "cardId": "bio-02-030"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. La sonda debe reconocer una secuencia de la región que se pretende localizar.",
+        "B": "2. Incorrecta. Los reordenamientos equilibrados no producen ganancias ni pérdidas que detecte esa comparación.",
+        "C": "1. Incorrecta. La sonda debe reconocer una secuencia de la región que se pretende localizar. 2. Incorrecta. Los reordenamientos equilibrados no producen ganancias ni pérdidas que detecte esa comparación.",
+        "D": "Ninguna afirmación es correcta."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "bio-02-012",
+      "content_id": "evaluacion:banco-verificado:biologia-02:resolucion",
       "materia": "BIOLOGIA CELULAR",
       "tema": "metodos y tecnicas basicas en biologia celular",
       "numero_pregunta": 9,
-      "pregunta": "¿Cuál es la tinción más utilizada en diagnóstico anatomopatológico?",
-      "respuesta_correcta": "A",
-      "justificacion": "Hematoxilina-eosina.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "70",
-      "pagina_impresa": "70",
-      "dificultad": "medio",
-      "opcion_a": "Hematoxilina-eosina.",
-      "opcion_b": "La emitida es mayor.",
-      "opcion_c": "El termociclador.",
-      "opcion_d": "Ácido fosfotúngstico."
-    },
-    {
-      "content_id": "bio-02-013",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "metodos y tecnicas basicas en biologia celular",
-      "numero_pregunta": 10,
-      "pregunta": "¿Qué anticuerpo lleva el marcador en la inmunohistoquímica indirecta?",
-      "respuesta_correcta": "A",
-      "justificacion": "El anticuerpo secundario.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "71",
-      "pagina_impresa": "71",
-      "dificultad": "medio",
-      "opcion_a": "El anticuerpo secundario.",
-      "opcion_b": "Un efecto tridimensional.",
-      "opcion_c": "Un fluorocromo.",
-      "opcion_d": "Un único epítopo."
-    },
-    {
-      "content_id": "bio-02-014",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "metodos y tecnicas basicas en biologia celular",
-      "numero_pregunta": 11,
-      "pregunta": "¿A qué longitud de onda se mide la absorbancia para cuantificar ácidos nucleicos?",
-      "respuesta_correcta": "D",
-      "justificacion": "260 nm.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "76",
-      "pagina_impresa": "76",
-      "dificultad": "medio",
-      "opcion_a": "8 y 10.",
-      "opcion_b": "GATA-3.",
-      "opcion_c": "Aproximadamente 0,2 μm.",
-      "opcion_d": "260 nm."
-    },
-    {
-      "content_id": "bio-02-015",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "metodos y tecnicas basicas en biologia celular",
-      "numero_pregunta": 12,
-      "pregunta": "¿Qué enzima une los fragmentos de ADN durante la clonación?",
-      "respuesta_correcta": "C",
-      "justificacion": "La ADN ligasa.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "77",
-      "pagina_impresa": "77",
-      "dificultad": "medio",
-      "opcion_a": "Taq polimerasa.",
-      "opcion_b": "Un fluorocromo.",
-      "opcion_c": "La ADN ligasa.",
-      "opcion_d": "El termociclador."
-    },
-    {
-      "content_id": "bio-02-016",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "metodos y tecnicas basicas en biologia celular",
-      "numero_pregunta": 13,
-      "pregunta": "¿Qué permite hacer la PCR?",
+      "pregunta": "Se duplica la ampliación de una imagen, pero dos puntos cercanos siguen apareciendo como uno. ¿Qué propiedad habría que mejorar para distinguirlos?",
       "respuesta_correcta": "B",
-      "justificacion": "Amplificar exponencialmente un segmento específico de ADN.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "78",
-      "pagina_impresa": "78",
-      "dificultad": "medio",
-      "opcion_a": "Una proteína en un fluido o extracto de tejido.",
-      "opcion_b": "Amplificar exponencialmente un segmento específico de ADN.",
-      "opcion_c": "Una secuencia específica de ácidos nucleicos en un tejido.",
-      "opcion_d": "Para frenar su degradación y preservar su estructura."
-    },
-    {
-      "content_id": "bio-02-017",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "metodos y tecnicas basicas en biologia celular",
-      "numero_pregunta": 14,
-      "pregunta": "¿Cuál es el orden de las etapas de un ciclo de PCR?",
-      "respuesta_correcta": "A",
-      "justificacion": "Desnaturalización → hibridación → extensión.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "78",
-      "pagina_impresa": "78",
-      "dificultad": "medio",
-      "opcion_a": "Desnaturalización → hibridación → extensión.",
-      "opcion_b": "Óptica: parafina. Electrónica: resinas.",
-      "opcion_c": "Electrodensas: oscuras. Electrolúcidas: claras.",
-      "opcion_d": "Un haz de electrones acelerados."
-    },
-    {
-      "content_id": "bio-02-020",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "metodos y tecnicas basicas en biologia celular",
-      "numero_pregunta": 15,
-      "pregunta": "¿En qué se basa la huella genética para identificar individuos?",
-      "respuesta_correcta": "D",
-      "justificacion": "En polimorfismos de su ADN.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "81",
-      "pagina_impresa": "81",
-      "dificultad": "medio",
-      "opcion_a": "En metafase.",
-      "opcion_b": "En las células de Leydig.",
-      "opcion_c": "En el extremo C-terminal.",
-      "opcion_d": "En polimorfismos de su ADN."
-    },
-    {
-      "content_id": "bio-02-021",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "metodos y tecnicas basicas en biologia celular",
-      "numero_pregunta": 16,
-      "pregunta": "¿Qué significa secuenciar ADN?",
-      "respuesta_correcta": "C",
-      "justificacion": "Determinar el orden de sus nucleótidos.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "83",
-      "pagina_impresa": "83",
-      "dificultad": "medio",
-      "opcion_a": "Fijación → inclusión → corte → tinción.",
-      "opcion_b": "Núcleos y restos de células sin fragmentar.",
-      "opcion_c": "Determinar el orden de sus nucleótidos.",
-      "opcion_d": "Interrumpe la adición de nuevos nucleótidos."
-    },
-    {
-      "content_id": "bio-02-022",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "metodos y tecnicas basicas en biologia celular",
-      "numero_pregunta": 17,
-      "pregunta": "¿Qué efecto tiene incorporar un didesoxirribonucleótido en la secuenciación de Sanger?",
-      "respuesta_correcta": "C",
-      "justificacion": "Interrumpe la adición de nuevos nucleótidos.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "84",
-      "pagina_impresa": "84",
-      "dificultad": "medio",
-      "opcion_a": "FSC: tamaño celular. SSC: complejidad interna.",
-      "opcion_b": "Núcleos y restos de células sin fragmentar.",
-      "opcion_c": "Interrumpe la adición de nuevos nucleótidos.",
-      "opcion_d": "Con el acortamiento progresivo de los telómeros."
-    },
-    {
-      "content_id": "bio-02-023",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "metodos y tecnicas basicas en biologia celular",
-      "numero_pregunta": 18,
-      "pregunta": "¿Qué permite localizar la hibridación in situ?",
-      "respuesta_correcta": "D",
-      "justificacion": "Una secuencia específica de ácidos nucleicos en un tejido.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "84",
-      "pagina_impresa": "84",
-      "dificultad": "medio",
-      "opcion_a": "Una proteína en un fluido o extracto de tejido.",
-      "opcion_b": "Amplificar exponencialmente un segmento específico de ADN.",
-      "opcion_c": "Para frenar su degradación y preservar su estructura.",
-      "opcion_d": "Una secuencia específica de ácidos nucleicos en un tejido."
-    },
-    {
-      "content_id": "bio-02-024",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "metodos y tecnicas basicas en biologia celular",
-      "numero_pregunta": 19,
-      "pregunta": "¿Qué tipo de marcador distingue a la técnica FISH?",
-      "respuesta_correcta": "C",
-      "justificacion": "Un fluorocromo.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "85",
-      "pagina_impresa": "85",
-      "dificultad": "medio",
-      "opcion_a": "La ADN ligasa.",
-      "opcion_b": "Taq polimerasa.",
-      "opcion_c": "Un fluorocromo.",
-      "opcion_d": "El anticuerpo secundario."
-    },
-    {
-      "content_id": "bio-02-025",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "metodos y tecnicas basicas en biologia celular",
-      "numero_pregunta": 20,
-      "pregunta": "¿Qué distingue a la terapia génica ex vivo de la in vivo?",
-      "respuesta_correcta": "A",
-      "justificacion": "Ex vivo: modifica tejidos aislados y luego los reimplanta. In vivo: actúa directamente en el individuo.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "87",
-      "pagina_impresa": "87",
-      "dificultad": "medio",
-      "opcion_a": "Ex vivo: modifica tejidos aislados y luego los reimplanta. In vivo: actúa directamente en el individuo.",
-      "opcion_b": "Reordenaciones equilibradas sin cambio en la cantidad de material genómico.",
-      "opcion_c": "Conocer la región genética a estudiar para elegir la sonda.",
-      "opcion_d": "De células, tejidos u órganos tomados directamente de un paciente o animal."
-    },
-    {
-      "content_id": "bio-02-026",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "metodos y tecnicas basicas en biologia celular",
-      "numero_pregunta": 21,
-      "pregunta": "¿Qué permite estudiar un microarray de expresión en un solo ensayo?",
-      "respuesta_correcta": "B",
-      "justificacion": "La expresión de miles de genes.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "89",
-      "pagina_impresa": "89",
-      "dificultad": "medio",
-      "opcion_a": "Para detener la división en metafase.",
-      "opcion_b": "La expresión de miles de genes.",
-      "opcion_c": "Una proteína en un fluido o extracto de tejido.",
-      "opcion_d": "Amplificar exponencialmente un segmento específico de ADN."
-    },
-    {
-      "content_id": "bio-02-027",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "metodos y tecnicas basicas en biologia celular",
-      "numero_pregunta": 22,
-      "pregunta": "¿En qué fase se estudian los cromosomas mediante citogenética convencional?",
-      "respuesta_correcta": "A",
-      "justificacion": "En metafase.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "94",
-      "pagina_impresa": "94",
-      "dificultad": "medio",
-      "opcion_a": "En metafase.",
-      "opcion_b": "En la fase S.",
-      "opcion_c": "En paquiteno.",
-      "opcion_d": "En polimorfismos de su ADN."
-    },
-    {
-      "content_id": "bio-02-028",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "metodos y tecnicas basicas en biologia celular",
-      "numero_pregunta": 23,
-      "pregunta": "¿Para qué se añade colchicina al preparar un cariotipo?",
-      "respuesta_correcta": "C",
-      "justificacion": "Para detener la división en metafase.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "94",
-      "pagina_impresa": "94",
-      "dificultad": "medio",
-      "opcion_a": "Una proteína en un fluido o extracto de tejido.",
-      "opcion_b": "Para frenar su degradación y preservar su estructura.",
-      "opcion_c": "Para detener la división en metafase.",
-      "opcion_d": "La expresión de miles de genes."
-    },
-    {
-      "content_id": "bio-02-031",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "metodos y tecnicas basicas en biologia celular",
-      "numero_pregunta": 24,
-      "pregunta": "¿Qué reconoce un anticuerpo monoclonal?",
-      "respuesta_correcta": "A",
-      "justificacion": "Un único epítopo.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "101",
-      "pagina_impresa": "101",
-      "dificultad": "medio",
-      "opcion_a": "Un único epítopo.",
-      "opcion_b": "El anticuerpo secundario.",
-      "opcion_c": "Taq polimerasa.",
-      "opcion_d": "El termociclador."
-    },
-    {
-      "content_id": "bio-02-032",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "metodos y tecnicas basicas en biologia celular",
-      "numero_pregunta": 25,
-      "pregunta": "¿Qué permite cuantificar un ELISA?",
-      "respuesta_correcta": "A",
-      "justificacion": "Una proteína en un fluido o extracto de tejido.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "103",
-      "pagina_impresa": "103",
-      "dificultad": "medio",
-      "opcion_a": "Una proteína en un fluido o extracto de tejido.",
-      "opcion_b": "Una secuencia específica de ácidos nucleicos en un tejido.",
-      "opcion_c": "La expresión de miles de genes.",
-      "opcion_d": "Amplificar exponencialmente un segmento específico de ADN."
-    },
-    {
-      "content_id": "bio-02-033",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "metodos y tecnicas basicas en biologia celular",
-      "numero_pregunta": 26,
-      "pregunta": "¿Qué indican FSC y SSC en citometría de flujo?",
-      "respuesta_correcta": "B",
-      "justificacion": "FSC: tamaño celular. SSC: complejidad interna.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "107",
-      "pagina_impresa": "107",
-      "dificultad": "medio",
-      "opcion_a": "Con el acortamiento progresivo de los telómeros.",
-      "opcion_b": "FSC: tamaño celular. SSC: complejidad interna.",
-      "opcion_c": "Interrumpe la adición de nuevos nucleótidos.",
-      "opcion_d": "Núcleos y restos de células sin fragmentar."
-    },
-    {
-      "content_id": "bio-02-034",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "metodos y tecnicas basicas en biologia celular",
-      "numero_pregunta": 27,
-      "pregunta": "¿De dónde procede un cultivo primario?",
-      "respuesta_correcta": "C",
-      "justificacion": "De células, tejidos u órganos tomados directamente de un paciente o animal.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "110",
-      "pagina_impresa": "110",
-      "dificultad": "medio",
-      "opcion_a": "Conocer la región genética a estudiar para elegir la sonda.",
-      "opcion_b": "Reordenaciones equilibradas sin cambio en la cantidad de material genómico.",
-      "opcion_c": "De células, tejidos u órganos tomados directamente de un paciente o animal.",
-      "opcion_d": "Fragmentos del retículo endoplasmático y de la membrana."
-    },
-    {
-      "content_id": "bio-02-035",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "metodos y tecnicas basicas en biologia celular",
-      "numero_pregunta": 28,
-      "pregunta": "¿Con qué cambio cromosómico se relaciona la senescencia de células normales en cultivo?",
-      "respuesta_correcta": "C",
-      "justificacion": "Con el acortamiento progresivo de los telómeros.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "111",
-      "pagina_impresa": "111",
-      "dificultad": "medio",
-      "opcion_a": "Interrumpe la adición de nuevos nucleótidos.",
-      "opcion_b": "FSC: tamaño celular. SSC: complejidad interna.",
-      "opcion_c": "Con el acortamiento progresivo de los telómeros.",
-      "opcion_d": "Núcleos y restos de células sin fragmentar."
-    },
-    {
-      "content_id": "bio-02-036",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "metodos y tecnicas basicas en biologia celular",
-      "numero_pregunta": 29,
-      "pregunta": "¿Qué estructuras sedimentan primero en una centrifugación diferencial?",
-      "respuesta_correcta": "B",
-      "justificacion": "Núcleos y restos de células sin fragmentar.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "114",
-      "pagina_impresa": "114",
-      "dificultad": "medio",
-      "opcion_a": "FSC: tamaño celular. SSC: complejidad interna.",
-      "opcion_b": "Núcleos y restos de células sin fragmentar.",
-      "opcion_c": "Interrumpe la adición de nuevos nucleótidos.",
-      "opcion_d": "Fijación → inclusión → corte → tinción."
-    },
-    {
-      "content_id": "bio-02-037",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "metodos y tecnicas basicas en biologia celular",
-      "numero_pregunta": 30,
-      "pregunta": "¿Qué contiene la fracción microsómica?",
-      "respuesta_correcta": "B",
-      "justificacion": "Fragmentos del retículo endoplasmático y de la membrana.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "114",
-      "pagina_impresa": "114",
-      "dificultad": "medio",
-      "opcion_a": "Conocer la región genética a estudiar para elegir la sonda.",
-      "opcion_b": "Fragmentos del retículo endoplasmático y de la membrana.",
-      "opcion_c": "Reordenaciones equilibradas sin cambio en la cantidad de material genómico.",
-      "opcion_d": "De células, tejidos u órganos tomados directamente de un paciente o animal."
+      "justificacion": "Ampliar una imagen aumenta su tamaño aparente. Resolver detalles exige distinguir puntos más próximos, lo que requiere reducir el límite de resolución.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+      "paginas_pdf": "58",
+      "pagina_impresa": "58",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Capítulo 2 · Microscopía · Poder de resolución",
+          "page": 58,
+          "printed": 58,
+          "marks": [
+            [
+              0.6242,
+              0.1,
+              0.1711,
+              0.0198
+            ],
+            [
+              0.298,
+              0.7008,
+              0.1408,
+              0.0172
+            ]
+          ]
+        }
+      ],
+      "source": {
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-02"
+      },
+      "opcion_a": "La distancia entre los puntos de la muestra, reduciéndola aún más.",
+      "opcion_b": "El poder de resolución, reduciendo la distancia mínima distinguible.",
+      "opcion_c": "El poder de resolución, aumentando la distancia mínima distinguible.",
+      "opcion_d": "La ampliación, manteniendo la misma distancia mínima distinguible."
     }
   ]
 }

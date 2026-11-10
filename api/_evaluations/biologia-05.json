@@ -5,519 +5,502 @@
   "topic": "macrotransporte a traves de la membrana plasmatica",
   "title": "Macrotransporte a través de la membrana plasmática: endocitosis y exocitosis",
   "number": 5,
-  "count": 30,
-  "duration": 30,
+  "count": 9,
+  "duration": 9,
   "source": "Biología celular biomédica",
   "questions": [
     {
-      "content_id": "bio-05-001",
+      "content_id": "evaluacion:medicina-oficial-biologia-05-intermedio-1",
       "materia": "BIOLOGIA CELULAR",
       "tema": "macrotransporte a traves de la membrana plasmatica",
       "numero_pregunta": 1,
-      "pregunta": "¿Qué cambio de la membrana inicia la endocitosis?",
-      "respuesta_correcta": "D",
-      "justificacion": "Una invaginación que forma vesículas.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "217",
-      "pagina_impresa": "217",
+      "pregunta": "Una imagen muestra una cubierta proteica sobre una invaginación endocítica. Se busca la proteína que forma la cubierta, no el conector con el receptor.\n¿Qué opción corresponde al caso?",
+      "respuesta_correcta": "B",
+      "justificacion": "La clatrina forma el revestimiento. La adaptina contribuye a vincularlo con el receptor.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+      "paginas_pdf": "218",
+      "pagina_impresa": "",
       "dificultad": "medio",
-      "opcion_a": "Residuos de ácido siálico.",
-      "opcion_b": "La acetilcolinesterasa.",
-      "opcion_c": "Cuando llevan GTP unido.",
-      "opcion_d": "Una invaginación que forma vesículas."
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Macrotransporte a través de la membrana plasmática: endocitosis y exocitosis · Endocitosis mediada por receptor",
+          "page": 218,
+          "printed": null,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-05",
+        "chapterNumber": 5,
+        "chapter": "Macrotransporte a través de la membrana plasmática: endocitosis y exocitosis",
+        "section": "Endocitosis mediada por receptor",
+        "printedPages": [],
+        "pdfPages": [
+          218
+        ]
+      },
+      "opcion_a": "Proteínas SNARE",
+      "opcion_b": "Clatrina",
+      "opcion_c": "Complejo adaptina",
+      "opcion_d": "Dinamina"
     },
     {
-      "content_id": "bio-05-002",
+      "content_id": "evaluacion:medicina-oficial-biologia-05-intermedio-2",
       "materia": "BIOLOGIA CELULAR",
       "tema": "macrotransporte a traves de la membrana plasmatica",
       "numero_pregunta": 2,
-      "pregunta": "¿La pinocitosis es un proceso ocasional o continuo?",
-      "respuesta_correcta": "B",
-      "justificacion": "Continuo; ocurre en prácticamente todas las células eucariotas.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "217",
-      "pagina_impresa": "217",
+      "pregunta": "La cubierta puede ensamblarse, pero el receptor no se recluta a ella. Se investiga el elemento que normalmente enlaza ambos.\n¿Qué opción corresponde al caso?",
+      "respuesta_correcta": "A",
+      "justificacion": "El complejo adaptina conecta la zona citosólica de receptores de carga con el revestimiento de clatrina.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+      "paginas_pdf": "221",
+      "pagina_impresa": "",
       "dificultad": "medio",
-      "opcion_a": "Pueden liberar rápidamente neurotransmisor al llegar el potencial de acción.",
-      "opcion_b": "Continuo; ocurre en prácticamente todas las células eucariotas.",
-      "opcion_c": "Concentran las vesículas cerca de la membrana diana y activan las SNARE.",
-      "opcion_d": "Una vesícula se fusiona con la membrana y libera su contenido al exterior."
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Macrotransporte a través de la membrana plasmática: endocitosis y exocitosis · Cubierta vesicular",
+          "page": 221,
+          "printed": null,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-05",
+        "chapterNumber": 5,
+        "chapter": "Macrotransporte a través de la membrana plasmática: endocitosis y exocitosis",
+        "section": "Cubierta vesicular",
+        "printedPages": [],
+        "pdfPages": [
+          221
+        ]
+      },
+      "opcion_a": "Complejo adaptina",
+      "opcion_b": "Dinamina",
+      "opcion_c": "Clatrina",
+      "opcion_d": "Proteínas SNARE"
     },
     {
-      "content_id": "bio-05-003",
+      "content_id": "evaluacion:medicina-oficial-biologia-05-intermedio-3",
       "materia": "BIOLOGIA CELULAR",
       "tema": "macrotransporte a traves de la membrana plasmatica",
       "numero_pregunta": 3,
-      "pregunta": "¿Qué proteína reviste las vesículas de la endocitosis mediada por receptor clásica?",
-      "respuesta_correcta": "C",
-      "justificacion": "Clatrina.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "218",
-      "pagina_impresa": "218",
+      "pregunta": "La invaginación ya está cubierta y cargada. Se estudia la proteína que permite separar el cuello de la vesícula de la membrana.\n¿Qué opción corresponde al caso?",
+      "respuesta_correcta": "D",
+      "justificacion": "La dinamina actúa en el cuello de la invaginación y facilita la separación de la vesícula.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+      "paginas_pdf": "222",
+      "pagina_impresa": "",
       "dificultad": "medio",
-      "opcion_a": "Las SNARE.",
-      "opcion_b": "La caveolina.",
-      "opcion_c": "Clatrina.",
-      "opcion_d": "La dinamina."
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Macrotransporte a través de la membrana plasmática: endocitosis y exocitosis · Separación vesicular",
+          "page": 222,
+          "printed": null,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-05",
+        "chapterNumber": 5,
+        "chapter": "Macrotransporte a través de la membrana plasmática: endocitosis y exocitosis",
+        "section": "Separación vesicular",
+        "printedPages": [],
+        "pdfPages": [
+          222
+        ]
+      },
+      "opcion_a": "Clatrina",
+      "opcion_b": "Proteínas SNARE",
+      "opcion_c": "Complejo adaptina",
+      "opcion_d": "Dinamina"
     },
     {
-      "content_id": "bio-05-004",
+      "content_id": "evaluacion:medicina-oficial-biologia-05-intermedio-4",
       "materia": "BIOLOGIA CELULAR",
       "tema": "macrotransporte a traves de la membrana plasmatica",
       "numero_pregunta": 4,
-      "pregunta": "¿Qué ocurre con los receptores de LDL después de separarse de su carga?",
-      "respuesta_correcta": "D",
-      "justificacion": "Regresan en vesículas a la membrana plasmática.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "219",
-      "pagina_impresa": "219",
+      "pregunta": "La vesícula ya se aproxima a su destino. Se busca el conjunto de proteínas de ambas membranas que se acopla para que estas se fusionen.\n¿Qué opción corresponde al caso?",
+      "respuesta_correcta": "A",
+      "justificacion": "Las SNARE de la vesícula y de la membrana diana se acoplan durante el proceso de fusión.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+      "paginas_pdf": "238",
+      "pagina_impresa": "",
       "dificultad": "medio",
-      "opcion_a": "Reduce la sensibilidad al factor de crecimiento.",
-      "opcion_b": "Una invaginación que forma vesículas.",
-      "opcion_c": "Una ATPasa de protones de tipo V.",
-      "opcion_d": "Regresan en vesículas a la membrana plasmática."
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Macrotransporte a través de la membrana plasmática: endocitosis y exocitosis · Fusión vesicular",
+          "page": 238,
+          "printed": null,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-05",
+        "chapterNumber": 5,
+        "chapter": "Macrotransporte a través de la membrana plasmática: endocitosis y exocitosis",
+        "section": "Fusión vesicular",
+        "printedPages": [],
+        "pdfPages": [
+          238
+        ]
+      },
+      "opcion_a": "Proteínas SNARE",
+      "opcion_b": "Complejo adaptina",
+      "opcion_c": "Dinamina",
+      "opcion_d": "Clatrina"
     },
     {
-      "content_id": "bio-05-005",
+      "content_id": "evaluacion:medicina-oficial-biologia-05-ampliacion-01-umss",
       "materia": "BIOLOGIA CELULAR",
       "tema": "macrotransporte a traves de la membrana plasmatica",
       "numero_pregunta": 5,
-      "pregunta": "¿Qué receptor está alterado en la hipercolesterolemia familiar descrita?",
-      "respuesta_correcta": "C",
-      "justificacion": "El receptor de LDL.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "220",
-      "pagina_impresa": "220",
-      "dificultad": "medio",
-      "opcion_a": "Clatrina.",
-      "opcion_b": "El complejo adaptina.",
-      "opcion_c": "El receptor de LDL.",
-      "opcion_d": "Un cuerpo residual."
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Después de liberar su LDL, los receptores de LDL se destinan necesariamente a degradación junto con la carga.\n2. Una ATPasa de protones tipo V ayuda a acidificar la luz del endosoma.",
+      "respuesta_correcta": "B",
+      "justificacion": "1. Incorrecta. Los receptores pueden reciclarse a la membrana tras separarse de la carga.\n2. Correcta. Transporta protones al interior y contribuye a reducir el pH.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+      "paginas_pdf": "219, 222",
+      "pagina_impresa": "",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Macrotransporte a través de la membrana plasmática: endocitosis y exocitosis · Captación de LDL / Endosomas",
+          "page": 219,
+          "printed": null,
+          "marks": []
+        },
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Macrotransporte a través de la membrana plasmática: endocitosis y exocitosis · Captación de LDL / Endosomas",
+          "page": 222,
+          "printed": null,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-05",
+        "chapterNumber": 5,
+        "chapter": "Macrotransporte a través de la membrana plasmática: endocitosis y exocitosis",
+        "section": "Captación de LDL / Endosomas",
+        "printedPages": [],
+        "pdfPages": [
+          219,
+          222
+        ],
+        "statements": [
+          {
+            "pdfPage": 219,
+            "printedPage": null,
+            "section": "Captación de LDL",
+            "cardId": "bio-05-004"
+          },
+          {
+            "pdfPage": 222,
+            "printedPage": null,
+            "section": "Endosomas",
+            "cardId": "bio-05-008"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. Los receptores pueden reciclarse a la membrana tras separarse de la carga. 2. Correcta. Transporta protones al interior y contribuye a reducir el pH.",
+        "B": "Solo la afirmación 2 es correcta.",
+        "C": "1. Incorrecta. Los receptores pueden reciclarse a la membrana tras separarse de la carga.",
+        "D": "2. Correcta. Transporta protones al interior y contribuye a reducir el pH."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "bio-05-006",
+      "content_id": "evaluacion:medicina-oficial-biologia-05-ampliacion-02-umss",
       "materia": "BIOLOGIA CELULAR",
       "tema": "macrotransporte a traves de la membrana plasmatica",
       "numero_pregunta": 6,
-      "pregunta": "¿Qué complejo conecta el receptor de carga con la clatrina?",
-      "respuesta_correcta": "C",
-      "justificacion": "El complejo adaptina.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "221",
-      "pagina_impresa": "221",
-      "dificultad": "medio",
-      "opcion_a": "Cuando llevan GTP unido.",
-      "opcion_b": "Un cuerpo residual.",
-      "opcion_c": "El complejo adaptina.",
-      "opcion_d": "La acetilcolinesterasa."
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. En el endosoma temprano pueden separarse componentes endocitados que seguirán destinos diferentes.\n2. Si una carga ingresa por un lado de un epitelio y se libera por el otro, la ruta termina por reciclaje al mismo dominio.",
+      "respuesta_correcta": "A",
+      "justificacion": "1. Correcta. Este compartimento actúa como estación de clasificación.\n2. Incorrecta. El traslado entre dominios de la membrana se denomina transcitosis.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+      "paginas_pdf": "223, 224",
+      "pagina_impresa": "",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Macrotransporte a través de la membrana plasmática: endocitosis y exocitosis · Endosomas / Transcitosis",
+          "page": 223,
+          "printed": null,
+          "marks": []
+        },
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Macrotransporte a través de la membrana plasmática: endocitosis y exocitosis · Endosomas / Transcitosis",
+          "page": 224,
+          "printed": null,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-05",
+        "chapterNumber": 5,
+        "chapter": "Macrotransporte a través de la membrana plasmática: endocitosis y exocitosis",
+        "section": "Endosomas / Transcitosis",
+        "printedPages": [],
+        "pdfPages": [
+          223,
+          224
+        ],
+        "statements": [
+          {
+            "pdfPage": 223,
+            "printedPage": null,
+            "section": "Endosomas",
+            "cardId": "bio-05-010"
+          },
+          {
+            "pdfPage": 224,
+            "printedPage": null,
+            "section": "Transcitosis",
+            "cardId": "bio-05-011"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "Solo la afirmación 1 es correcta.",
+        "B": "1. Correcta. Este compartimento actúa como estación de clasificación. 2. Incorrecta. El traslado entre dominios de la membrana se denomina transcitosis.",
+        "C": "2. Incorrecta. El traslado entre dominios de la membrana se denomina transcitosis.",
+        "D": "1. Correcta. Este compartimento actúa como estación de clasificación."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "bio-05-007",
+      "content_id": "evaluacion:medicina-oficial-biologia-05-ampliacion-03-umss",
       "materia": "BIOLOGIA CELULAR",
       "tema": "macrotransporte a traves de la membrana plasmatica",
       "numero_pregunta": 7,
-      "pregunta": "¿Qué GTPasa estrangula el cuello de la vesícula endocítica?",
-      "respuesta_correcta": "A",
-      "justificacion": "La dinamina.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "222",
-      "pagina_impresa": "222",
-      "dificultad": "medio",
-      "opcion_a": "La dinamina.",
-      "opcion_b": "Las SNARE.",
-      "opcion_c": "Con protones.",
-      "opcion_d": "Clatrina."
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. La exposición de fosfatidilserina puede ayudar a reconocer una célula apoptótica para retirarla.\n2. Las proteínas Rab ayudan a acercar vesículas a su membrana diana antes de la fusión.",
+      "respuesta_correcta": "C",
+      "justificacion": "1. Correcta. Este fosfolípido expuesto actúa como señal de reconocimiento.\n2. Correcta. Sus efectores coordinan el acercamiento y facilitan la acción de las SNARE.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+      "paginas_pdf": "231, 238",
+      "pagina_impresa": "",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Macrotransporte a través de la membrana plasmática: endocitosis y exocitosis · Fagocitosis / Fusión vesicular",
+          "page": 231,
+          "printed": null,
+          "marks": []
+        },
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Macrotransporte a través de la membrana plasmática: endocitosis y exocitosis · Fagocitosis / Fusión vesicular",
+          "page": 238,
+          "printed": null,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-05",
+        "chapterNumber": 5,
+        "chapter": "Macrotransporte a través de la membrana plasmática: endocitosis y exocitosis",
+        "section": "Fagocitosis / Fusión vesicular",
+        "printedPages": [],
+        "pdfPages": [
+          231,
+          238
+        ],
+        "statements": [
+          {
+            "pdfPage": 231,
+            "printedPage": null,
+            "section": "Fagocitosis",
+            "cardId": "bio-05-017"
+          },
+          {
+            "pdfPage": 238,
+            "printedPage": null,
+            "section": "Fusión vesicular",
+            "cardId": "bio-05-024"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "2. Correcta. Sus efectores coordinan el acercamiento y facilitan la acción de las SNARE.",
+        "B": "1. Correcta. Este fosfolípido expuesto actúa como señal de reconocimiento.",
+        "C": "Ambas afirmaciones son correctas.",
+        "D": "1. Correcta. Este fosfolípido expuesto actúa como señal de reconocimiento. 2. Correcta. Sus efectores coordinan el acercamiento y facilitan la acción de las SNARE."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "bio-05-008",
+      "content_id": "evaluacion:medicina-oficial-biologia-05-ampliacion-04-umss",
       "materia": "BIOLOGIA CELULAR",
       "tema": "macrotransporte a traves de la membrana plasmatica",
       "numero_pregunta": 8,
-      "pregunta": "¿Qué bomba acidifica el interior de los endosomas?",
-      "respuesta_correcta": "A",
-      "justificacion": "Una ATPasa de protones de tipo V.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "222",
-      "pagina_impresa": "222",
-      "dificultad": "medio",
-      "opcion_a": "Una ATPasa de protones de tipo V.",
-      "opcion_b": "Regresan en vesículas a la membrana plasmática.",
-      "opcion_c": "Reduce la sensibilidad al factor de crecimiento.",
-      "opcion_d": "Una invaginación que forma vesículas."
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. La acetilcolinesterasa vesicular funciona como el sensor de Ca²⁺ que dispara la exocitosis sináptica.\n2. La hidrólisis de acetilcolina produce noradrenalina y acetato en la hendidura.",
+      "respuesta_correcta": "D",
+      "justificacion": "1. Incorrecta. En la vesícula, el sensor de Ca²⁺ descrito es la sinaptotagmina.\n2. Incorrecta. La acetilcolinesterasa produce colina y acetato.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+      "paginas_pdf": "242, 244",
+      "pagina_impresa": "",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Macrotransporte a través de la membrana plasmática: endocitosis y exocitosis · Sinapsis / Sinapsis neuromuscular",
+          "page": 242,
+          "printed": null,
+          "marks": []
+        },
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Macrotransporte a través de la membrana plasmática: endocitosis y exocitosis · Sinapsis / Sinapsis neuromuscular",
+          "page": 244,
+          "printed": null,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-05",
+        "chapterNumber": 5,
+        "chapter": "Macrotransporte a través de la membrana plasmática: endocitosis y exocitosis",
+        "section": "Sinapsis / Sinapsis neuromuscular",
+        "printedPages": [],
+        "pdfPages": [
+          242,
+          244
+        ],
+        "statements": [
+          {
+            "pdfPage": 242,
+            "printedPage": null,
+            "section": "Sinapsis",
+            "cardId": "bio-05-025"
+          },
+          {
+            "pdfPage": 244,
+            "printedPage": null,
+            "section": "Sinapsis neuromuscular",
+            "cardId": "bio-05-029"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. En la vesícula, el sensor de Ca²⁺ descrito es la sinaptotagmina.",
+        "B": "2. Incorrecta. La acetilcolinesterasa produce colina y acetato.",
+        "C": "1. Incorrecta. En la vesícula, el sensor de Ca²⁺ descrito es la sinaptotagmina. 2. Incorrecta. La acetilcolinesterasa produce colina y acetato.",
+        "D": "Ninguna afirmación es correcta."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "bio-05-009",
+      "content_id": "evaluacion:banco-verificado:biologia-05:endocitosis",
       "materia": "BIOLOGIA CELULAR",
       "tema": "macrotransporte a traves de la membrana plasmatica",
       "numero_pregunta": 9,
-      "pregunta": "¿Qué endosomas tienen el pH más ácido: tempranos o tardíos?",
+      "pregunta": "Una depresión endocítica ya tiene su revestimiento de clatrina, pero sigue unida a la membrana por un cuello. ¿Qué proteína actúa directamente en la separación de la vesícula?",
       "respuesta_correcta": "D",
-      "justificacion": "Los tardíos.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "222",
-      "pagina_impresa": "222",
-      "dificultad": "medio",
-      "opcion_a": "Con protones.",
-      "opcion_b": "La dinamina.",
-      "opcion_c": "La caveolina.",
-      "opcion_d": "Los tardíos."
-    },
-    {
-      "content_id": "bio-05-010",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "macrotransporte a traves de la membrana plasmatica",
-      "numero_pregunta": 10,
-      "pregunta": "¿Qué función cumplen los endosomas tempranos respecto de la carga endocitada?",
-      "respuesta_correcta": "B",
-      "justificacion": "Clasificarla para sus destinos posteriores.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "223",
-      "pagina_impresa": "223",
-      "dificultad": "medio",
-      "opcion_a": "La transcitosis.",
-      "opcion_b": "Clasificarla para sus destinos posteriores.",
-      "opcion_c": "Fosfatidilserina.",
-      "opcion_d": "Aumentar la superficie de absorción."
-    },
-    {
-      "content_id": "bio-05-011",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "macrotransporte a traves de la membrana plasmatica",
-      "numero_pregunta": 11,
-      "pregunta": "¿Qué ruta permite que una vesícula endocitada llegue a otro dominio de membrana?",
-      "respuesta_correcta": "A",
-      "justificacion": "La transcitosis.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "224",
-      "pagina_impresa": "224",
-      "dificultad": "medio",
-      "opcion_a": "La transcitosis.",
-      "opcion_b": "Clasificarla para sus destinos posteriores.",
-      "opcion_c": "El complejo TOM.",
-      "opcion_d": "Fosfatidilserina."
-    },
-    {
-      "content_id": "bio-05-012",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "macrotransporte a traves de la membrana plasmatica",
-      "numero_pregunta": 12,
-      "pregunta": "¿Qué transporta la transferrina en la sangre?",
-      "respuesta_correcta": "B",
-      "justificacion": "Hierro.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "225",
-      "pagina_impresa": "225",
-      "dificultad": "medio",
-      "opcion_a": "Opsoninas.",
-      "opcion_b": "Hierro.",
-      "opcion_c": "Las SNARE.",
-      "opcion_d": "Clatrina."
-    },
-    {
-      "content_id": "bio-05-013",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "macrotransporte a traves de la membrana plasmatica",
-      "numero_pregunta": 13,
-      "pregunta": "¿Qué efecto tiene la disminución de receptores por endocitosis?",
-      "respuesta_correcta": "D",
-      "justificacion": "Reduce la sensibilidad al factor de crecimiento.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "225",
-      "pagina_impresa": "225",
-      "dificultad": "medio",
-      "opcion_a": "Regresan en vesículas a la membrana plasmática.",
-      "opcion_b": "Una ATPasa de protones de tipo V.",
-      "opcion_c": "Una invaginación que forma vesículas.",
-      "opcion_d": "Reduce la sensibilidad al factor de crecimiento."
-    },
-    {
-      "content_id": "bio-05-014",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "macrotransporte a traves de la membrana plasmatica",
-      "numero_pregunta": 14,
-      "pregunta": "¿Cuál es la proteína principal de las cavéolas?",
-      "respuesta_correcta": "A",
-      "justificacion": "La caveolina.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "226",
-      "pagina_impresa": "226",
-      "dificultad": "medio",
-      "opcion_a": "La caveolina.",
-      "opcion_b": "Las SNARE.",
-      "opcion_c": "La sinaptotagmina.",
-      "opcion_d": "Clatrina."
-    },
-    {
-      "content_id": "bio-05-015",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "macrotransporte a traves de la membrana plasmatica",
-      "numero_pregunta": 15,
-      "pregunta": "¿En qué orgánulo se sintetiza la caveolina?",
-      "respuesta_correcta": "B",
-      "justificacion": "En el retículo endoplasmático rugoso.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "227",
-      "pagina_impresa": "227",
-      "dificultad": "medio",
-      "opcion_a": "En las células de Leydig.",
-      "opcion_b": "En el retículo endoplasmático rugoso.",
-      "opcion_c": "En su extremo N-terminal.",
-      "opcion_d": "En polimorfismos de su ADN."
-    },
-    {
-      "content_id": "bio-05-016",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "macrotransporte a traves de la membrana plasmatica",
-      "numero_pregunta": 16,
-      "pregunta": "¿Cómo se llaman las moléculas que favorecen la fagocitosis de una partícula?",
-      "respuesta_correcta": "C",
-      "justificacion": "Opsoninas.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "231",
-      "pagina_impresa": "231",
-      "dificultad": "medio",
+      "justificacion": "La clatrina forma el revestimiento de la depresión. La dinamina se reúne alrededor del cuello y favorece la separación de la vesícula.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+      "paginas_pdf": "218, 222",
+      "pagina_impresa": "218, 222",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Capítulo 5 · Endocitosis mediada por receptor",
+          "page": 218,
+          "printed": 218,
+          "marks": [
+            [
+              0.6909,
+              0.0765,
+              0.0651,
+              0.0198
+            ],
+            [
+              0.0082,
+              0.147,
+              0.0627,
+              0.0197
+            ]
+          ]
+        },
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Capítulo 5 · Endocitosis mediada por receptor",
+          "page": 222,
+          "printed": 222,
+          "marks": [
+            [
+              0.1415,
+              0.1,
+              0.0824,
+              0.0198
+            ],
+            [
+              0.669,
+              0.1235,
+              0.0801,
+              0.0197
+            ]
+          ]
+        }
+      ],
+      "source": {
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-05"
+      },
       "opcion_a": "Clatrina.",
-      "opcion_b": "La dinamina.",
-      "opcion_c": "Opsoninas.",
-      "opcion_d": "Las SNARE."
-    },
-    {
-      "content_id": "bio-05-017",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "macrotransporte a traves de la membrana plasmatica",
-      "numero_pregunta": 17,
-      "pregunta": "¿Qué fosfolípido expuesto permite reconocer células apoptóticas?",
-      "respuesta_correcta": "D",
-      "justificacion": "Fosfatidilserina.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "231",
-      "pagina_impresa": "231",
-      "dificultad": "medio",
-      "opcion_a": "La transcitosis.",
-      "opcion_b": "Clasificarla para sus destinos posteriores.",
-      "opcion_c": "El complejo TOM.",
-      "opcion_d": "Fosfatidilserina."
-    },
-    {
-      "content_id": "bio-05-018",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "macrotransporte a traves de la membrana plasmatica",
-      "numero_pregunta": 18,
-      "pregunta": "¿Qué estructura queda al final de la digestión lisosómica con material no eliminado?",
-      "respuesta_correcta": "A",
-      "justificacion": "Un cuerpo residual.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "232",
-      "pagina_impresa": "232",
-      "dificultad": "medio",
-      "opcion_a": "Un cuerpo residual.",
-      "opcion_b": "El receptor de LDL.",
-      "opcion_c": "Acetato y colina.",
-      "opcion_d": "La sinaptotagmina."
-    },
-    {
-      "content_id": "bio-05-019",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "macrotransporte a traves de la membrana plasmatica",
-      "numero_pregunta": 19,
-      "pregunta": "¿En qué consiste la exocitosis?",
-      "respuesta_correcta": "B",
-      "justificacion": "Una vesícula se fusiona con la membrana y libera su contenido al exterior.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "235",
-      "pagina_impresa": "235",
-      "dificultad": "medio",
-      "opcion_a": "Continuo; ocurre en prácticamente todas las células eucariotas.",
-      "opcion_b": "Una vesícula se fusiona con la membrana y libera su contenido al exterior.",
-      "opcion_c": "Pueden liberar rápidamente neurotransmisor al llegar el potencial de acción.",
-      "opcion_d": "Concentran las vesículas cerca de la membrana diana y activan las SNARE."
-    },
-    {
-      "content_id": "bio-05-020",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "macrotransporte a traves de la membrana plasmatica",
-      "numero_pregunta": 20,
-      "pregunta": "¿Qué diferencia a la exocitosis constitutiva de la regulada?",
-      "respuesta_correcta": "C",
-      "justificacion": "La constitutiva es continua en todas las células; la regulada ocurre en células secretoras especializadas.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "235",
-      "pagina_impresa": "235",
-      "dificultad": "medio",
-      "opcion_a": "Una vesícula se fusiona con la membrana y libera su contenido al exterior.",
-      "opcion_b": "Concentran las vesículas cerca de la membrana diana y activan las SNARE.",
-      "opcion_c": "La constitutiva es continua en todas las células; la regulada ocurre en células secretoras especializadas.",
-      "opcion_d": "Pueden liberar rápidamente neurotransmisor al llegar el potencial de acción."
-    },
-    {
-      "content_id": "bio-05-021",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "macrotransporte a traves de la membrana plasmatica",
-      "numero_pregunta": 21,
-      "pregunta": "¿Dónde se procesan las sustancias antes de almacenarse en vesículas secretoras?",
-      "respuesta_correcta": "C",
-      "justificacion": "En el aparato de Golgi, tras sintetizarse en el retículo endoplasmático.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "236",
-      "pagina_impresa": "236",
-      "dificultad": "medio",
-      "opcion_a": "En las germinales; los ovocitos haploides contienen un X activo.",
-      "opcion_b": "Entre el epitelio y el tejido conjuntivo subyacente.",
-      "opcion_c": "En el aparato de Golgi, tras sintetizarse en el retículo endoplasmático.",
-      "opcion_d": "En el plano ecuatorial, perpendicular al huso."
-    },
-    {
-      "content_id": "bio-05-022",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "macrotransporte a traves de la membrana plasmatica",
-      "numero_pregunta": 22,
-      "pregunta": "¿Qué nucleótido activa las pequeñas proteínas G del tráfico vesicular?",
-      "respuesta_correcta": "D",
-      "justificacion": "Cuando llevan GTP unido.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "237",
-      "pagina_impresa": "237",
-      "dificultad": "medio",
-      "opcion_a": "La acetilcolinesterasa.",
-      "opcion_b": "La caveolina.",
-      "opcion_c": "La sinaptotagmina.",
-      "opcion_d": "Cuando llevan GTP unido."
-    },
-    {
-      "content_id": "bio-05-023",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "macrotransporte a traves de la membrana plasmatica",
-      "numero_pregunta": 23,
-      "pregunta": "¿Qué proteínas complementarias permiten fusionar una vesícula con su membrana diana?",
-      "respuesta_correcta": "A",
-      "justificacion": "Las SNARE.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "238",
-      "pagina_impresa": "238",
-      "dificultad": "medio",
-      "opcion_a": "Las SNARE.",
-      "opcion_b": "La dinamina.",
-      "opcion_c": "La caveolina.",
-      "opcion_d": "Clatrina."
-    },
-    {
-      "content_id": "bio-05-024",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "macrotransporte a traves de la membrana plasmatica",
-      "numero_pregunta": 24,
-      "pregunta": "¿Qué hacen Rab y sus efectores antes de la fusión?",
-      "respuesta_correcta": "A",
-      "justificacion": "Concentran las vesículas cerca de la membrana diana y activan las SNARE.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "238",
-      "pagina_impresa": "238",
-      "dificultad": "medio",
-      "opcion_a": "Concentran las vesículas cerca de la membrana diana y activan las SNARE.",
-      "opcion_b": "Pueden liberar rápidamente neurotransmisor al llegar el potencial de acción.",
-      "opcion_c": "Una vesícula se fusiona con la membrana y libera su contenido al exterior.",
-      "opcion_d": "Continuo; ocurre en prácticamente todas las células eucariotas."
-    },
-    {
-      "content_id": "bio-05-025",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "macrotransporte a traves de la membrana plasmatica",
-      "numero_pregunta": 25,
-      "pregunta": "¿Qué proteína vesicular actúa como sensor de Ca2+ en la exocitosis sináptica?",
-      "respuesta_correcta": "A",
-      "justificacion": "La sinaptotagmina.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "242",
-      "pagina_impresa": "242",
-      "dificultad": "medio",
-      "opcion_a": "La sinaptotagmina.",
-      "opcion_b": "La acetilcolinesterasa.",
-      "opcion_c": "Cuando llevan GTP unido.",
-      "opcion_d": "La caveolina."
-    },
-    {
-      "content_id": "bio-05-026",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "macrotransporte a traves de la membrana plasmatica",
-      "numero_pregunta": 26,
-      "pregunta": "¿Qué ventaja tienen las vesículas sinápticas ya ancladas en estado de prefusión?",
-      "respuesta_correcta": "B",
-      "justificacion": "Pueden liberar rápidamente neurotransmisor al llegar el potencial de acción.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "242",
-      "pagina_impresa": "242",
-      "dificultad": "medio",
-      "opcion_a": "Una vesícula se fusiona con la membrana y libera su contenido al exterior.",
-      "opcion_b": "Pueden liberar rápidamente neurotransmisor al llegar el potencial de acción.",
-      "opcion_c": "Concentran las vesículas cerca de la membrana diana y activan las SNARE.",
-      "opcion_d": "Continuo; ocurre en prácticamente todas las células eucariotas."
-    },
-    {
-      "content_id": "bio-05-027",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "macrotransporte a traves de la membrana plasmatica",
-      "numero_pregunta": 27,
-      "pregunta": "¿Con qué ion intercambia neurotransmisores el transportador de la vesícula sináptica?",
-      "respuesta_correcta": "D",
-      "justificacion": "Con protones.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "244",
-      "pagina_impresa": "244",
-      "dificultad": "medio",
-      "opcion_a": "Las SNARE.",
-      "opcion_b": "Clatrina.",
-      "opcion_c": "La dinamina.",
-      "opcion_d": "Con protones."
-    },
-    {
-      "content_id": "bio-05-028",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "macrotransporte a traves de la membrana plasmatica",
-      "numero_pregunta": 28,
-      "pregunta": "¿Qué enzima degrada la acetilcolina en la hendidura sináptica?",
-      "respuesta_correcta": "D",
-      "justificacion": "La acetilcolinesterasa.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "244",
-      "pagina_impresa": "244",
-      "dificultad": "medio",
-      "opcion_a": "Cuando llevan GTP unido.",
-      "opcion_b": "Con protones.",
-      "opcion_c": "La sinaptotagmina.",
-      "opcion_d": "La acetilcolinesterasa."
-    },
-    {
-      "content_id": "bio-05-029",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "macrotransporte a traves de la membrana plasmatica",
-      "numero_pregunta": 29,
-      "pregunta": "¿Qué productos genera la hidrólisis de acetilcolina?",
-      "respuesta_correcta": "C",
-      "justificacion": "Acetato y colina.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "244",
-      "pagina_impresa": "244",
-      "dificultad": "medio",
-      "opcion_a": "El receptor de LDL.",
-      "opcion_b": "La sinaptotagmina.",
-      "opcion_c": "Acetato y colina.",
-      "opcion_d": "Un cuerpo residual."
-    },
-    {
-      "content_id": "bio-05-030",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "macrotransporte a traves de la membrana plasmatica",
-      "numero_pregunta": 30,
-      "pregunta": "¿Qué molécula reconoce la hemaglutinina del virus de la gripe en la superficie celular?",
-      "respuesta_correcta": "A",
-      "justificacion": "Residuos de ácido siálico.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "248",
-      "pagina_impresa": "248",
-      "dificultad": "medio",
-      "opcion_a": "Residuos de ácido siálico.",
-      "opcion_b": "Cuando llevan GTP unido.",
-      "opcion_c": "El complejo adaptina.",
-      "opcion_d": "La acetilcolinesterasa."
+      "opcion_b": "Adaptina.",
+      "opcion_c": "Receptor de carga.",
+      "opcion_d": "Dinamina."
     }
   ]
 }

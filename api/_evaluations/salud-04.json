@@ -5,213 +5,477 @@
   "topic": "niveles de prevencion",
   "title": "Niveles de prevención",
   "number": 4,
-  "count": 12,
-  "duration": 12,
+  "count": 9,
+  "duration": 9,
   "source": "Educación en Salud e Investigación · Curso Básico 2025-2026",
   "questions": [
     {
-      "content_id": "salud-04-010",
+      "content_id": "evaluacion:medicina-oficial-salud-04-intermedio-1",
       "materia": "SALUD PUBLICA",
       "tema": "niveles de prevencion",
       "numero_pregunta": 1,
-      "pregunta": "¿Frente a qué problema surge la prevención cuaternaria?",
-      "respuesta_correcta": "A",
-      "justificacion": "Medicalización excesiva, sobreutilización de tecnología y riesgos de iatrogenia.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "6",
-      "pagina_impresa": "5",
+      "pregunta": "Una campaña actúa sobre un factor de riesgo en personas que todavía no han desarrollado la enfermedad.\n¿Qué opción corresponde al caso?",
+      "respuesta_correcta": "B",
+      "justificacion": "La prevención primaria actúa sobre riesgos antes de que aparezca la enfermedad.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+      "paginas_pdf": "19",
+      "pagina_impresa": "18",
       "dificultad": "medio",
-      "opcion_a": "Medicalización excesiva, sobreutilización de tecnología y riesgos de iatrogenia.",
-      "opcion_b": "Cuando hay vacíos de conocimiento o dificultades que requieren una respuesta científica.",
-      "opcion_c": "Prevención: riesgos de enfermedades concretas. Promoción: determinantes de salud y bienestar integral.",
-      "opcion_d": "Concretar su alcance teórico-conceptual y centrarlo en una parte de la realidad."
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Niveles de prevención · niveles de prevencion",
+          "page": 19,
+          "printed": 18,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-04",
+        "chapterNumber": 4,
+        "chapter": "Niveles de prevención",
+        "section": "niveles de prevencion",
+        "printedPages": [
+          18
+        ],
+        "pdfPages": [
+          19
+        ]
+      },
+      "opcion_a": "Prevención cuaternaria",
+      "opcion_b": "Prevención primaria",
+      "opcion_c": "Prevención secundaria",
+      "opcion_d": "Prevención terciaria"
     },
     {
-      "content_id": "salud-04-001",
+      "content_id": "evaluacion:medicina-oficial-salud-04-intermedio-2",
       "materia": "SALUD PUBLICA",
       "tema": "niveles de prevencion",
       "numero_pregunta": 2,
-      "pregunta": "¿Cuál es el objetivo de la prevención primaria?",
+      "pregunta": "Se ofrece un tamizaje para identificar la enfermedad en fases tempranas, antes de esperar a que cause complicaciones.\n¿Qué opción corresponde al caso?",
       "respuesta_correcta": "D",
-      "justificacion": "Evitar la aparición de la enfermedad actuando sobre factores de riesgo.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
+      "justificacion": "La prevención secundaria busca encontrar y tratar una enfermedad en una etapa temprana.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
       "paginas_pdf": "19",
       "pagina_impresa": "18",
       "dificultad": "medio",
-      "opcion_a": "Fijar objetivos numéricos nacionales y monitorear el progreso global.",
-      "opcion_b": "Disminuir complicaciones, secuelas y discapacidad de una enfermedad establecida.",
-      "opcion_c": "Detectar temprano y tratar oportunamente para limitar la progresión de la enfermedad.",
-      "opcion_d": "Evitar la aparición de la enfermedad actuando sobre factores de riesgo."
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Niveles de prevención · niveles de prevencion",
+          "page": 19,
+          "printed": 18,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-04",
+        "chapterNumber": 4,
+        "chapter": "Niveles de prevención",
+        "section": "niveles de prevencion",
+        "printedPages": [
+          18
+        ],
+        "pdfPages": [
+          19
+        ]
+      },
+      "opcion_a": "Prevención terciaria",
+      "opcion_b": "Prevención cuaternaria",
+      "opcion_c": "Prevención primaria",
+      "opcion_d": "Prevención secundaria"
     },
     {
-      "content_id": "salud-04-002",
+      "content_id": "evaluacion:medicina-oficial-salud-04-intermedio-3",
       "materia": "SALUD PUBLICA",
       "tema": "niveles de prevencion",
       "numero_pregunta": 3,
-      "pregunta": "¿Qué nivel de prevención corresponde a la vacunación?",
-      "respuesta_correcta": "D",
-      "justificacion": "Prevención primaria.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
+      "pregunta": "Una persona ya tiene una enfermedad y participa en rehabilitación para reducir su limitación funcional.\n¿Qué opción corresponde al caso?",
+      "respuesta_correcta": "C",
+      "justificacion": "La rehabilitación de personas con una enfermedad establecida busca reducir secuelas y discapacidad.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
       "paginas_pdf": "19",
       "pagina_impresa": "18",
       "dificultad": "medio",
-      "opcion_a": "Avedis Donabedian.",
-      "opcion_b": "Marco teórico.",
-      "opcion_c": "Cambios sostenibles.",
-      "opcion_d": "Prevención primaria."
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Niveles de prevención · niveles de prevencion",
+          "page": 19,
+          "printed": 18,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-04",
+        "chapterNumber": 4,
+        "chapter": "Niveles de prevención",
+        "section": "niveles de prevencion",
+        "printedPages": [
+          18
+        ],
+        "pdfPages": [
+          19
+        ]
+      },
+      "opcion_a": "Prevención secundaria",
+      "opcion_b": "Prevención cuaternaria",
+      "opcion_c": "Prevención terciaria",
+      "opcion_d": "Prevención primaria"
     },
     {
-      "content_id": "salud-04-003",
+      "content_id": "evaluacion:medicina-oficial-salud-04-intermedio-4",
       "materia": "SALUD PUBLICA",
       "tema": "niveles de prevencion",
       "numero_pregunta": 4,
-      "pregunta": "¿Qué nivel de prevención corresponde al control del tabaquismo y uso de agua segura?",
-      "respuesta_correcta": "B",
-      "justificacion": "Prevención primaria.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
+      "pregunta": "El equipo revisa si un procedimiento innecesario puede hacer más daño que beneficio. La acción consiste en evitar ese daño.\n¿Qué opción corresponde al caso?",
+      "respuesta_correcta": "A",
+      "justificacion": "La prevención cuaternaria busca evitar el daño de intervenciones innecesarias, incluidos el sobrediagnóstico y el sobretratamiento.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
       "paginas_pdf": "19",
       "pagina_impresa": "18",
       "dificultad": "medio",
-      "opcion_a": "Avedis Donabedian.",
-      "opcion_b": "Prevención primaria.",
-      "opcion_c": "Marco teórico.",
-      "opcion_d": "Las marcas de clase."
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Niveles de prevención · niveles de prevencion",
+          "page": 19,
+          "printed": 18,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-04",
+        "chapterNumber": 4,
+        "chapter": "Niveles de prevención",
+        "section": "niveles de prevencion",
+        "printedPages": [
+          18
+        ],
+        "pdfPages": [
+          19
+        ]
+      },
+      "opcion_a": "Prevención cuaternaria",
+      "opcion_b": "Prevención terciaria",
+      "opcion_c": "Prevención primaria",
+      "opcion_d": "Prevención secundaria"
     },
     {
-      "content_id": "salud-04-004",
+      "content_id": "evaluacion:medicina-oficial-salud-04-ampliacion-01-umss",
       "materia": "SALUD PUBLICA",
       "tema": "niveles de prevencion",
       "numero_pregunta": 5,
-      "pregunta": "¿Cuál es el objetivo de la prevención secundaria?",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Aplicar una vacuna antes de que se manifieste una enfermedad se clasifica como prevención secundaria porque protege frente a un riesgo identificado.\n2. Un programa de medición de presión para detectar hipertensión en personas sin diagnóstico es un ejemplo de prevención secundaria.",
       "respuesta_correcta": "B",
-      "justificacion": "Detectar temprano y tratar oportunamente para limitar la progresión de la enfermedad.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
+      "justificacion": "1. Incorrecta. La vacunación es primaria porque busca evitar que aparezca la enfermedad.\n2. Correcta. Es un tamizaje que busca detectar el problema de forma temprana.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
       "paginas_pdf": "19",
       "pagina_impresa": "18",
-      "dificultad": "medio",
-      "opcion_a": "Evitar la aparición de la enfermedad actuando sobre factores de riesgo.",
-      "opcion_b": "Detectar temprano y tratar oportunamente para limitar la progresión de la enfermedad.",
-      "opcion_c": "Disminuir complicaciones, secuelas y discapacidad de una enfermedad establecida.",
-      "opcion_d": "Para identificar datos definidos como ausentes y excluirlos de la mayoría de cálculos."
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Niveles de prevención · niveles de prevencion",
+          "page": 19,
+          "printed": 18,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-04",
+        "chapterNumber": 4,
+        "chapter": "Niveles de prevención",
+        "section": "niveles de prevencion",
+        "printedPages": [
+          18
+        ],
+        "pdfPages": [
+          19
+        ],
+        "statements": [
+          {
+            "pdfPage": 19,
+            "printedPage": 18,
+            "section": "niveles de prevencion",
+            "cardId": "salud-04-002"
+          },
+          {
+            "pdfPage": 19,
+            "printedPage": 18,
+            "section": "niveles de prevencion",
+            "cardId": "salud-04-005"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. La vacunación es primaria porque busca evitar que aparezca la enfermedad. 2. Correcta. Es un tamizaje que busca detectar el problema de forma temprana.",
+        "B": "Solo la afirmación 2 es correcta.",
+        "C": "1. Incorrecta. La vacunación es primaria porque busca evitar que aparezca la enfermedad.",
+        "D": "2. Correcta. Es un tamizaje que busca detectar el problema de forma temprana."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "salud-04-005",
+      "content_id": "evaluacion:medicina-oficial-salud-04-ampliacion-02-umss",
       "materia": "SALUD PUBLICA",
       "tema": "niveles de prevencion",
       "numero_pregunta": 6,
-      "pregunta": "¿Qué nivel de prevención corresponde al tamizaje de hipertensión y citología cervical?",
-      "respuesta_correcta": "C",
-      "justificacion": "Prevención secundaria.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. La rehabilitación después de un infarto corresponde a prevención terciaria.\n2. La reinserción social de una persona con un trastorno mental establecido se clasifica como tamizaje secundario.",
+      "respuesta_correcta": "A",
+      "justificacion": "1. Correcta. Actúa después del evento para limitar sus consecuencias y recuperar función.\n2. Incorrecta. Se orienta a rehabilitación e integración, objetivos de la prevención terciaria.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
       "paginas_pdf": "19",
       "pagina_impresa": "18",
-      "dificultad": "medio",
-      "opcion_a": "Marco teórico.",
-      "opcion_b": "Avedis Donabedian.",
-      "opcion_c": "Prevención secundaria.",
-      "opcion_d": "Tabla de contingencia."
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Niveles de prevención · niveles de prevencion",
+          "page": 19,
+          "printed": 18,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-04",
+        "chapterNumber": 4,
+        "chapter": "Niveles de prevención",
+        "section": "niveles de prevencion",
+        "printedPages": [
+          18
+        ],
+        "pdfPages": [
+          19
+        ],
+        "statements": [
+          {
+            "pdfPage": 19,
+            "printedPage": 18,
+            "section": "niveles de prevencion",
+            "cardId": "salud-04-007"
+          },
+          {
+            "pdfPage": 19,
+            "printedPage": 18,
+            "section": "niveles de prevencion",
+            "cardId": "salud-04-008"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "Solo la afirmación 1 es correcta.",
+        "B": "1. Correcta. Actúa después del evento para limitar sus consecuencias y recuperar función. 2. Incorrecta. Se orienta a rehabilitación e integración, objetivos de la prevención terciaria.",
+        "C": "2. Incorrecta. Se orienta a rehabilitación e integración, objetivos de la prevención terciaria.",
+        "D": "1. Correcta. Actúa después del evento para limitar sus consecuencias y recuperar función."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "salud-04-006",
+      "content_id": "evaluacion:medicina-oficial-salud-04-ampliacion-03-umss",
       "materia": "SALUD PUBLICA",
       "tema": "niveles de prevencion",
       "numero_pregunta": 7,
-      "pregunta": "¿Cuál es el objetivo de la prevención terciaria?",
-      "respuesta_correcta": "A",
-      "justificacion": "Disminuir complicaciones, secuelas y discapacidad de una enfermedad establecida.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "19",
-      "pagina_impresa": "18",
-      "dificultad": "medio",
-      "opcion_a": "Disminuir complicaciones, secuelas y discapacidad de una enfermedad establecida.",
-      "opcion_b": "Evitar la aparición de la enfermedad actuando sobre factores de riesgo.",
-      "opcion_c": "Para conservar el orden correcto y evitar el orden alfabético de las etiquetas.",
-      "opcion_d": "Detectar temprano y tratar oportunamente para limitar la progresión de la enfermedad."
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Evitar una intervención innecesaria que podría causar daño corresponde al propósito de la prevención cuaternaria.\n2. Facilitar el uso de agua segura para evitar que aparezcan enfermedades es una medida de prevención primaria.",
+      "respuesta_correcta": "C",
+      "justificacion": "1. Correcta. Busca reducir la medicalización excesiva y los riesgos de iatrogenia.\n2. Correcta. La medida reduce la exposición antes de que se presente la enfermedad.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+      "paginas_pdf": "6, 19",
+      "pagina_impresa": "5, 18",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Niveles de prevención · niveles de prevencion",
+          "page": 6,
+          "printed": 5,
+          "marks": []
+        },
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Niveles de prevención · niveles de prevencion",
+          "page": 19,
+          "printed": 18,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-04",
+        "chapterNumber": 4,
+        "chapter": "Niveles de prevención",
+        "section": "niveles de prevencion",
+        "printedPages": [
+          5,
+          18
+        ],
+        "pdfPages": [
+          6,
+          19
+        ],
+        "statements": [
+          {
+            "pdfPage": 6,
+            "printedPage": 5,
+            "section": "niveles de prevencion",
+            "cardId": "salud-04-010"
+          },
+          {
+            "pdfPage": 19,
+            "printedPage": 18,
+            "section": "niveles de prevencion",
+            "cardId": "salud-04-003"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "2. Correcta. La medida reduce la exposición antes de que se presente la enfermedad.",
+        "B": "1. Correcta. Busca reducir la medicalización excesiva y los riesgos de iatrogenia.",
+        "C": "Ambas afirmaciones son correctas.",
+        "D": "1. Correcta. Busca reducir la medicalización excesiva y los riesgos de iatrogenia. 2. Correcta. La medida reduce la exposición antes de que se presente la enfermedad."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "salud-04-007",
+      "content_id": "evaluacion:medicina-oficial-salud-04-ampliacion-04-umss",
       "materia": "SALUD PUBLICA",
       "tema": "niveles de prevencion",
       "numero_pregunta": 8,
-      "pregunta": "¿Qué nivel de prevención corresponde a la rehabilitación después de un infarto?",
-      "respuesta_correcta": "A",
-      "justificacion": "Prevención terciaria.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "19",
-      "pagina_impresa": "18",
-      "dificultad": "medio",
-      "opcion_a": "Prevención terciaria.",
-      "opcion_b": "Asimetría y curtosis.",
-      "opcion_c": "Avedis Donabedian.",
-      "opcion_d": "Marco teórico."
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. La promoción se limita a personas predispuestas a una enfermedad concreta, del mismo modo que la prevención dirigida a riesgos específicos.\n2. La prevención de enfermedades se dirige exclusivamente a quienes ya presentan una patología diagnosticada.",
+      "respuesta_correcta": "D",
+      "justificacion": "1. Incorrecta. La promoción se orienta al bienestar y a los determinantes de salud de manera amplia.\n2. Incorrecta. También puede dirigirse a personas o grupos con riesgo antes de que exista diagnóstico.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+      "paginas_pdf": "20",
+      "pagina_impresa": "19",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Niveles de prevención · niveles de prevencion",
+          "page": 20,
+          "printed": 19,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-04",
+        "chapterNumber": 4,
+        "chapter": "Niveles de prevención",
+        "section": "niveles de prevencion",
+        "printedPages": [
+          19
+        ],
+        "pdfPages": [
+          20
+        ],
+        "statements": [
+          {
+            "pdfPage": 20,
+            "printedPage": 19,
+            "section": "niveles de prevencion",
+            "cardId": "salud-04-011"
+          },
+          {
+            "pdfPage": 20,
+            "printedPage": 19,
+            "section": "niveles de prevencion",
+            "cardId": "salud-04-012"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. La promoción se orienta al bienestar y a los determinantes de salud de manera amplia.",
+        "B": "2. Incorrecta. También puede dirigirse a personas o grupos con riesgo antes de que exista diagnóstico.",
+        "C": "1. Incorrecta. La promoción se orienta al bienestar y a los determinantes de salud de manera amplia. 2. Incorrecta. También puede dirigirse a personas o grupos con riesgo antes de que exista diagnóstico.",
+        "D": "Ninguna afirmación es correcta."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "salud-04-008",
+      "content_id": "evaluacion:banco-verificado:salud-04:prevencion",
       "materia": "SALUD PUBLICA",
       "tema": "niveles de prevencion",
       "numero_pregunta": 9,
-      "pregunta": "¿Qué nivel de prevención corresponde a la reinserción social en salud mental?",
-      "respuesta_correcta": "B",
-      "justificacion": "Prevención terciaria.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "19",
-      "pagina_impresa": "18",
-      "dificultad": "medio",
-      "opcion_a": "Cambios sostenibles.",
-      "opcion_b": "Prevención terciaria.",
-      "opcion_c": "Genética, edad y sexo.",
-      "opcion_d": "Avedis Donabedian."
-    },
-    {
-      "content_id": "salud-04-009",
-      "materia": "SALUD PUBLICA",
-      "tema": "niveles de prevencion",
-      "numero_pregunta": 10,
-      "pregunta": "¿Qué busca la prevención cuaternaria?",
-      "respuesta_correcta": "B",
-      "justificacion": "Evitar intervenciones innecesarias o iatrogénicas, sobrediagnóstico y sobretratamiento.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "19",
-      "pagina_impresa": "18",
-      "dificultad": "medio",
-      "opcion_a": "Reducir la malnutrición infantil y promover la seguridad alimentaria en la primera infancia.",
-      "opcion_b": "Evitar intervenciones innecesarias o iatrogénicas, sobrediagnóstico y sobretratamiento.",
-      "opcion_c": "Adquirir conocimientos, desarrollar actitudes y adoptar prácticas saludables.",
-      "opcion_d": "Se divide la población en estratos y se seleccionan elementos aleatoriamente dentro de cada uno."
-    },
-    {
-      "content_id": "salud-04-011",
-      "materia": "SALUD PUBLICA",
-      "tema": "niveles de prevencion",
-      "numero_pregunta": 11,
-      "pregunta": "¿En qué se centra la prevención y en qué la promoción de la salud?",
-      "respuesta_correcta": "B",
-      "justificacion": "Prevención: riesgos de enfermedades concretas. Promoción: determinantes de salud y bienestar integral.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "20",
-      "pagina_impresa": "19",
-      "dificultad": "medio",
-      "opcion_a": "Comunicación, educación, legislación, medidas fiscales, cambio organizativo y desarrollo comunitario.",
-      "opcion_b": "Prevención: riesgos de enfermedades concretas. Promoción: determinantes de salud y bienestar integral.",
-      "opcion_c": "Actuar sobre las causas sociales de la enfermedad y garantizar oportunidades de bienestar para todos.",
-      "opcion_d": "Medicalización excesiva, sobreutilización de tecnología y riesgos de iatrogenia."
-    },
-    {
-      "content_id": "salud-04-012",
-      "materia": "SALUD PUBLICA",
-      "tema": "niveles de prevencion",
-      "numero_pregunta": 12,
-      "pregunta": "¿A quién se dirige principalmente la prevención de la enfermedad?",
+      "pregunta": "Un programa realiza tamizaje en personas sin síntomas para encontrar una enfermedad que podría estar presente. ¿Qué criterio determina que la intervención sea secundaria?",
       "respuesta_correcta": "C",
-      "justificacion": "A personas o grupos en riesgo o con predisposición a patologías concretas.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "20",
-      "pagina_impresa": "19",
-      "dificultad": "medio",
-      "opcion_a": "A la niñez y grupos de riesgo, mediante vacunación universal.",
-      "opcion_b": "Por qué conviene realizarla, sus beneficios y la utilidad de los resultados.",
-      "opcion_c": "A personas o grupos en riesgo o con predisposición a patologías concretas.",
-      "opcion_d": "Durante la recolección de datos o en otras etapas de la investigación."
+      "justificacion": "La clasificación depende del objetivo. El tamizaje intenta detectar precozmente una enfermedad que puede estar presente, mientras que la prevención primaria intenta evitar su aparición.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+      "paginas_pdf": "19",
+      "pagina_impresa": "18",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "Educación en Salud",
+          "section": "Niveles de prevención",
+          "page": 19,
+          "printed": 18,
+          "marks": [
+            [
+              0.396,
+              0.3293,
+              0.0894,
+              0.0168
+            ],
+            [
+              0.5901,
+              0.2247,
+              0.1536,
+              0.0168
+            ],
+            [
+              0.5407,
+              0.3553,
+              0.0799,
+              0.0168
+            ]
+          ]
+        }
+      ],
+      "source": {
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-04"
+      },
+      "opcion_a": "Busca recuperar la función una vez que la enfermedad deja secuelas.",
+      "opcion_b": "Busca crear entornos que favorezcan la salud de toda la población.",
+      "opcion_c": "Busca detectar una enfermedad ya iniciada antes de que progrese.",
+      "opcion_d": "Busca evitar que aparezca la enfermedad reduciendo la exposición al riesgo."
     }
   ]
 }

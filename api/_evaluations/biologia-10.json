@@ -5,519 +5,487 @@
   "topic": "reticulo endoplasmatico golgi y lisosomas",
   "title": "Sistema de endomembranas celulares: retículo endoplasmático, aparato de Golgi y lisosomas",
   "number": 10,
-  "count": 30,
-  "duration": 30,
+  "count": 9,
+  "duration": 9,
   "source": "Biología celular biomédica",
   "questions": [
     {
-      "content_id": "bio-10-001",
+      "content_id": "evaluacion:medicina-oficial-biologia-10-intermedio-1",
       "materia": "BIOLOGIA CELULAR",
       "tema": "reticulo endoplasmatico golgi y lisosomas",
       "numero_pregunta": 1,
-      "pregunta": "¿Qué caracteriza morfológicamente al RER?",
-      "respuesta_correcta": "D",
-      "justificacion": "Cisternas y túbulos con ribosomas adheridos.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "423",
-      "pagina_impresa": "423",
+      "pregunta": "La carga sale del retículo y se dirige hacia el Golgi. Se pide identificar la cubierta de la vesícula de ida.\n¿Qué opción corresponde al caso?",
+      "respuesta_correcta": "B",
+      "justificacion": "COPII recubre las vesículas que llevan carga del retículo endoplasmático al Golgi.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+      "paginas_pdf": "443",
+      "pagina_impresa": "",
       "dificultad": "medio",
-      "opcion_a": "KDEL, situada en el extremo carboxilo terminal.",
-      "opcion_b": "Glucosilación, fragmentación y formación de puentes disulfuro.",
-      "opcion_c": "El REL no tiene ribosomas adosados.",
-      "opcion_d": "Cisternas y túbulos con ribosomas adheridos."
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Sistema de endomembranas celulares: retículo endoplasmático, aparato de Golgi y lisosomas · Tráfico vesicular",
+          "page": 443,
+          "printed": null,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-10",
+        "chapterNumber": 10,
+        "chapter": "Sistema de endomembranas celulares: retículo endoplasmático, aparato de Golgi y lisosomas",
+        "section": "Tráfico vesicular",
+        "printedPages": [],
+        "pdfPages": [
+          443
+        ]
+      },
+      "opcion_a": "COPI",
+      "opcion_b": "COPII",
+      "opcion_c": "Manosa-6-fosfato",
+      "opcion_d": "KDEL"
     },
     {
-      "content_id": "bio-10-002",
+      "content_id": "evaluacion:medicina-oficial-biologia-10-intermedio-2",
       "materia": "BIOLOGIA CELULAR",
       "tema": "reticulo endoplasmatico golgi y lisosomas",
       "numero_pregunta": 2,
-      "pregunta": "¿En qué células está especialmente desarrollado el RER?",
-      "respuesta_correcta": "B",
-      "justificacion": "En células con elevada síntesis proteica.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "423",
-      "pagina_impresa": "423",
+      "pregunta": "Una vesícula sale del Golgi y retorna al retículo. Se pregunta por la cubierta, no por la secuencia de la proteína recuperada.\n¿Qué opción corresponde al caso?",
+      "respuesta_correcta": "A",
+      "justificacion": "COPI interviene en el transporte de retorno del Golgi hacia el retículo endoplasmático.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+      "paginas_pdf": "443",
+      "pagina_impresa": "",
       "dificultad": "medio",
-      "opcion_a": "En su extremo N-terminal.",
-      "opcion_b": "En células con elevada síntesis proteica.",
-      "opcion_c": "En la hemimembrana citoplasmática o P.",
-      "opcion_d": "Desde la cara cis hacia la trans."
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Sistema de endomembranas celulares: retículo endoplasmático, aparato de Golgi y lisosomas · Tráfico vesicular",
+          "page": 443,
+          "printed": null,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-10",
+        "chapterNumber": 10,
+        "chapter": "Sistema de endomembranas celulares: retículo endoplasmático, aparato de Golgi y lisosomas",
+        "section": "Tráfico vesicular",
+        "printedPages": [],
+        "pdfPages": [
+          443
+        ]
+      },
+      "opcion_a": "COPI",
+      "opcion_b": "COPII",
+      "opcion_c": "KDEL",
+      "opcion_d": "Manosa-6-fosfato"
     },
     {
-      "content_id": "bio-10-003",
+      "content_id": "evaluacion:medicina-oficial-biologia-10-intermedio-3",
       "materia": "BIOLOGIA CELULAR",
       "tema": "reticulo endoplasmatico golgi y lisosomas",
       "numero_pregunta": 3,
-      "pregunta": "¿A qué corresponden los grumos basófilos de hepatocitos y neuronas?",
-      "respuesta_correcta": "B",
-      "justificacion": "A acúmulos de RER o ribosomas libres.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "424",
-      "pagina_impresa": "424",
+      "pregunta": "Una proteína soluble del retículo escapó al Golgi. Se identifica su señal carboxiloterminal de recuperación, no la cubierta vesicular.\n¿Qué opción corresponde al caso?",
+      "respuesta_correcta": "D",
+      "justificacion": "KDEL es una señal carboxiloterminal que permite recuperar proteínas solubles residentes del retículo.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+      "paginas_pdf": "443",
+      "pagina_impresa": "",
       "dificultad": "medio",
-      "opcion_a": "Desde el centrómero hacia el telómero.",
-      "opcion_b": "A acúmulos de RER o ribosomas libres.",
-      "opcion_c": "Por interacción homófila con otras NCAM.",
-      "opcion_d": "Sobre la propia célula que la secreta."
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Sistema de endomembranas celulares: retículo endoplasmático, aparato de Golgi y lisosomas · Retención en el RER",
+          "page": 443,
+          "printed": null,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-10",
+        "chapterNumber": 10,
+        "chapter": "Sistema de endomembranas celulares: retículo endoplasmático, aparato de Golgi y lisosomas",
+        "section": "Retención en el RER",
+        "printedPages": [],
+        "pdfPages": [
+          443
+        ]
+      },
+      "opcion_a": "COPI",
+      "opcion_b": "COPII",
+      "opcion_c": "Manosa-6-fosfato",
+      "opcion_d": "KDEL"
     },
     {
-      "content_id": "bio-10-004",
+      "content_id": "evaluacion:medicina-oficial-biologia-10-intermedio-4",
       "materia": "BIOLOGIA CELULAR",
       "tema": "reticulo endoplasmatico golgi y lisosomas",
       "numero_pregunta": 4,
-      "pregunta": "¿Dónde se encuentra el péptido señal de muchas proteínas destinadas al RER?",
-      "respuesta_correcta": "A",
-      "justificacion": "En su extremo N-terminal.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "425",
-      "pagina_impresa": "425",
+      "pregunta": "Una enzima que degradará sustratos en el lisosoma pasa por Golgi. Se busca la marca de destino incorporada a la enzima.\n¿Qué opción corresponde al caso?",
+      "respuesta_correcta": "D",
+      "justificacion": "La manosa-6-fosfato funciona como señal de destino para hidrolasas ácidas dirigidas al lisosoma.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+      "paginas_pdf": "440",
+      "pagina_impresa": "",
       "dificultad": "medio",
-      "opcion_a": "En su extremo N-terminal.",
-      "opcion_b": "En la cara citosólica.",
-      "opcion_c": "En el citosol.",
-      "opcion_d": "En células con elevada síntesis proteica."
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Sistema de endomembranas celulares: retículo endoplasmático, aparato de Golgi y lisosomas · Destino lisosómico",
+          "page": 440,
+          "printed": null,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-10",
+        "chapterNumber": 10,
+        "chapter": "Sistema de endomembranas celulares: retículo endoplasmático, aparato de Golgi y lisosomas",
+        "section": "Destino lisosómico",
+        "printedPages": [],
+        "pdfPages": [
+          440
+        ]
+      },
+      "opcion_a": "COPI",
+      "opcion_b": "COPII",
+      "opcion_c": "KDEL",
+      "opcion_d": "Manosa-6-fosfato"
     },
     {
-      "content_id": "bio-10-005",
+      "content_id": "evaluacion:medicina-oficial-biologia-10-ampliacion-01-umss",
       "materia": "BIOLOGIA CELULAR",
       "tema": "reticulo endoplasmatico golgi y lisosomas",
       "numero_pregunta": 5,
-      "pregunta": "¿Qué partícula reconoce la señal de entrada al RER?",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. La partícula de reconocimiento de la señal puede dirigir hacia el RER la síntesis de una proteína con el péptido apropiado.\n2. En la N-glucosilación del RER, el oligosacárido se une a la serina de la secuencia Asn-X-Ser/Thr.",
       "respuesta_correcta": "A",
-      "justificacion": "La partícula de reconocimiento de la señal, PRS.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "426",
-      "pagina_impresa": "426",
-      "dificultad": "medio",
-      "opcion_a": "La partícula de reconocimiento de la señal, PRS.",
-      "opcion_b": "El secundario está digiriendo o ya ha digerido sustratos.",
-      "opcion_c": "Escisión de bases (BER) y de nucleótidos (NER).",
-      "opcion_d": "Asparagina de una secuencia Asn-X-Ser/Thr."
+      "justificacion": "1. Correcta. La partícula reconoce el péptido señal y ayuda a acercar el ribosoma al retículo.\n2. Incorrecta. El receptor del oligosacárido es la asparagina de esa secuencia.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+      "paginas_pdf": "426, 429",
+      "pagina_impresa": "",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Sistema de endomembranas celulares: retículo endoplasmático, aparato de Golgi y lisosomas · Importación al RER / N-glucosilación",
+          "page": 426,
+          "printed": null,
+          "marks": []
+        },
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Sistema de endomembranas celulares: retículo endoplasmático, aparato de Golgi y lisosomas · Importación al RER / N-glucosilación",
+          "page": 429,
+          "printed": null,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-10",
+        "chapterNumber": 10,
+        "chapter": "Sistema de endomembranas celulares: retículo endoplasmático, aparato de Golgi y lisosomas",
+        "section": "Importación al RER / N-glucosilación",
+        "printedPages": [],
+        "pdfPages": [
+          426,
+          429
+        ],
+        "statements": [
+          {
+            "pdfPage": 426,
+            "printedPage": null,
+            "section": "Importación al RER",
+            "cardId": "bio-10-005"
+          },
+          {
+            "pdfPage": 429,
+            "printedPage": null,
+            "section": "N-glucosilación",
+            "cardId": "bio-10-008"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "Solo la afirmación 1 es correcta.",
+        "B": "1. Correcta. La partícula reconoce el péptido señal y ayuda a acercar el ribosoma al retículo. 2. Incorrecta. El receptor del oligosacárido es la asparagina de esa secuencia.",
+        "C": "2. Incorrecta. El receptor del oligosacárido es la asparagina de esa secuencia.",
+        "D": "1. Correcta. La partícula reconoce el péptido señal y ayuda a acercar el ribosoma al retículo."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "bio-10-006",
+      "content_id": "evaluacion:medicina-oficial-biologia-10-ampliacion-02-umss",
       "materia": "BIOLOGIA CELULAR",
       "tema": "reticulo endoplasmatico golgi y lisosomas",
       "numero_pregunta": 6,
-      "pregunta": "¿Qué ocurre con el péptido señal durante la entrada de una proteína soluble al RER?",
-      "respuesta_correcta": "A",
-      "justificacion": "Una peptidasa lo corta.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "426",
-      "pagina_impresa": "426",
-      "dificultad": "medio",
-      "opcion_a": "Una peptidasa lo corta.",
-      "opcion_b": "Un ambiente oxidante.",
-      "opcion_c": "Dolicol-difosfato.",
-      "opcion_d": "BiP, calnexina y calreticulina."
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. El ambiente del RER facilita puentes disulfuro porque favorece que los grupos tiol permanezcan reducidos.\n2. BiP y otras chaperonas del RER contribuyen a retener proteínas cuyo plegamiento todavía no es adecuado.",
+      "respuesta_correcta": "B",
+      "justificacion": "1. Incorrecta. Un ambiente oxidante favorece la formación de los enlaces disulfuro.\n2. Correcta. Forman parte del control de calidad previo a la salida del retículo.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+      "paginas_pdf": "429",
+      "pagina_impresa": "",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Sistema de endomembranas celulares: retículo endoplasmático, aparato de Golgi y lisosomas · Plegamiento en el RER",
+          "page": 429,
+          "printed": null,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-10",
+        "chapterNumber": 10,
+        "chapter": "Sistema de endomembranas celulares: retículo endoplasmático, aparato de Golgi y lisosomas",
+        "section": "Plegamiento en el RER",
+        "printedPages": [],
+        "pdfPages": [
+          429
+        ],
+        "statements": [
+          {
+            "pdfPage": 429,
+            "printedPage": null,
+            "section": "Plegamiento en el RER",
+            "cardId": "bio-10-010"
+          },
+          {
+            "pdfPage": 429,
+            "printedPage": null,
+            "section": "Plegamiento en el RER",
+            "cardId": "bio-10-011"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. Un ambiente oxidante favorece la formación de los enlaces disulfuro. 2. Correcta. Forman parte del control de calidad previo a la salida del retículo.",
+        "B": "Solo la afirmación 2 es correcta.",
+        "C": "1. Incorrecta. Un ambiente oxidante favorece la formación de los enlaces disulfuro.",
+        "D": "2. Correcta. Forman parte del control de calidad previo a la salida del retículo."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "bio-10-007",
+      "content_id": "evaluacion:medicina-oficial-biologia-10-ampliacion-03-umss",
       "materia": "BIOLOGIA CELULAR",
       "tema": "reticulo endoplasmatico golgi y lisosomas",
       "numero_pregunta": 7,
-      "pregunta": "¿Qué modificaciones proteicas pueden ocurrir en el RER?",
-      "respuesta_correcta": "B",
-      "justificacion": "Glucosilación, fragmentación y formación de puentes disulfuro.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "428",
-      "pagina_impresa": "428",
-      "dificultad": "medio",
-      "opcion_a": "Cisternas y túbulos con ribosomas adheridos.",
-      "opcion_b": "Glucosilación, fragmentación y formación de puentes disulfuro.",
-      "opcion_c": "Macroautofagia, microautofagia y autofagia mediada por chaperonas.",
-      "opcion_d": "KDEL, situada en el extremo carboxilo terminal."
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Una proteína que atraviesa la pila del Golgi madura desde la cara cis hacia la trans.\n2. La red trans-Golgi participa en la salida de vesículas con enzimas dirigidas al compartimento lisosómico.",
+      "respuesta_correcta": "C",
+      "justificacion": "1. Correcta. La entrada y la salida se organizan en caras distintas.\n2. Correcta. En esta región se clasifican cargas que se enviarán a destinos distintos.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+      "paginas_pdf": "437, 440",
+      "pagina_impresa": "",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Sistema de endomembranas celulares: retículo endoplasmático, aparato de Golgi y lisosomas · Aparato de Golgi / Destino lisosómico",
+          "page": 437,
+          "printed": null,
+          "marks": []
+        },
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Sistema de endomembranas celulares: retículo endoplasmático, aparato de Golgi y lisosomas · Aparato de Golgi / Destino lisosómico",
+          "page": 440,
+          "printed": null,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-10",
+        "chapterNumber": 10,
+        "chapter": "Sistema de endomembranas celulares: retículo endoplasmático, aparato de Golgi y lisosomas",
+        "section": "Aparato de Golgi / Destino lisosómico",
+        "printedPages": [],
+        "pdfPages": [
+          437,
+          440
+        ],
+        "statements": [
+          {
+            "pdfPage": 437,
+            "printedPage": null,
+            "section": "Aparato de Golgi",
+            "cardId": "bio-10-018"
+          },
+          {
+            "pdfPage": 440,
+            "printedPage": null,
+            "section": "Destino lisosómico",
+            "cardId": "bio-10-021"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "2. Correcta. En esta región se clasifican cargas que se enviarán a destinos distintos.",
+        "B": "1. Correcta. La entrada y la salida se organizan en caras distintas.",
+        "C": "Ambas afirmaciones son correctas.",
+        "D": "1. Correcta. La entrada y la salida se organizan en caras distintas. 2. Correcta. En esta región se clasifican cargas que se enviarán a destinos distintos."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "bio-10-008",
+      "content_id": "evaluacion:medicina-oficial-biologia-10-ampliacion-04-umss",
       "materia": "BIOLOGIA CELULAR",
       "tema": "reticulo endoplasmatico golgi y lisosomas",
       "numero_pregunta": 8,
-      "pregunta": "¿Sobre qué aminoácido se transfiere el oligosacárido en la N-glucosilación del RER?",
-      "respuesta_correcta": "B",
-      "justificacion": "Asparagina de una secuencia Asn-X-Ser/Thr.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "429",
-      "pagina_impresa": "429",
-      "dificultad": "medio",
-      "opcion_a": "Abre sus canales y lo libera al citosol.",
-      "opcion_b": "Asparagina de una secuencia Asn-X-Ser/Thr.",
-      "opcion_c": "El secundario está digiriendo o ya ha digerido sustratos.",
-      "opcion_d": "La partícula de reconocimiento de la señal, PRS."
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Un pH cercano a 7,4 es el ambiente habitual de la luz lisosómica en el texto.\n2. La crinofagia consiste en secretar los gránulos intactos para que se degraden fuera de la célula.",
+      "respuesta_correcta": "D",
+      "justificacion": "1. Incorrecta. El lisosoma mantiene un pH ácido, de alrededor de 5.\n2. Incorrecta. Es la digestión de los propios gránulos secretores dentro del sistema lisosómico.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+      "paginas_pdf": "445, 447",
+      "pagina_impresa": "",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Sistema de endomembranas celulares: retículo endoplasmático, aparato de Golgi y lisosomas · Lisosomas / Autofagia",
+          "page": 445,
+          "printed": null,
+          "marks": []
+        },
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Sistema de endomembranas celulares: retículo endoplasmático, aparato de Golgi y lisosomas · Lisosomas / Autofagia",
+          "page": 447,
+          "printed": null,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-10",
+        "chapterNumber": 10,
+        "chapter": "Sistema de endomembranas celulares: retículo endoplasmático, aparato de Golgi y lisosomas",
+        "section": "Lisosomas / Autofagia",
+        "printedPages": [],
+        "pdfPages": [
+          445,
+          447
+        ],
+        "statements": [
+          {
+            "pdfPage": 445,
+            "printedPage": null,
+            "section": "Lisosomas",
+            "cardId": "bio-10-025"
+          },
+          {
+            "pdfPage": 447,
+            "printedPage": null,
+            "section": "Autofagia",
+            "cardId": "bio-10-028"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. El lisosoma mantiene un pH ácido, de alrededor de 5.",
+        "B": "2. Incorrecta. Es la digestión de los propios gránulos secretores dentro del sistema lisosómico.",
+        "C": "1. Incorrecta. El lisosoma mantiene un pH ácido, de alrededor de 5. 2. Incorrecta. Es la digestión de los propios gránulos secretores dentro del sistema lisosómico.",
+        "D": "Ninguna afirmación es correcta."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "bio-10-009",
+      "content_id": "evaluacion:banco-verificado:biologia-10:rer",
       "materia": "BIOLOGIA CELULAR",
       "tema": "reticulo endoplasmatico golgi y lisosomas",
       "numero_pregunta": 9,
-      "pregunta": "¿Qué lípido sostiene el oligosacárido precursor en la membrana del RER?",
-      "respuesta_correcta": "D",
-      "justificacion": "Dolicol-difosfato.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "429",
-      "pagina_impresa": "429",
-      "dificultad": "medio",
-      "opcion_a": "Una peptidasa lo corta.",
-      "opcion_b": "Un ambiente oxidante.",
-      "opcion_c": "α-galactosidasa A.",
-      "opcion_d": "Dolicol-difosfato."
-    },
-    {
-      "content_id": "bio-10-010",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "reticulo endoplasmatico golgi y lisosomas",
-      "numero_pregunta": 10,
-      "pregunta": "¿Qué ambiente favorece los puentes disulfuro en el RER?",
-      "respuesta_correcta": "C",
-      "justificacion": "Un ambiente oxidante.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "429",
-      "pagina_impresa": "429",
-      "dificultad": "medio",
-      "opcion_a": "Una peptidasa lo corta.",
-      "opcion_b": "BiP, calnexina y calreticulina.",
-      "opcion_c": "Un ambiente oxidante.",
-      "opcion_d": "Dolicol-difosfato."
-    },
-    {
-      "content_id": "bio-10-011",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "reticulo endoplasmatico golgi y lisosomas",
-      "numero_pregunta": 11,
-      "pregunta": "¿Qué chaperonas del RER ayudan a retener proteínas incompletamente plegadas?",
-      "respuesta_correcta": "C",
-      "justificacion": "BiP, calnexina y calreticulina.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "429",
-      "pagina_impresa": "429",
-      "dificultad": "medio",
-      "opcion_a": "Un ambiente oxidante.",
-      "opcion_b": "Dolicol-difosfato.",
-      "opcion_c": "BiP, calnexina y calreticulina.",
-      "opcion_d": "Una peptidasa lo corta."
-    },
-    {
-      "content_id": "bio-10-012",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "reticulo endoplasmatico golgi y lisosomas",
-      "numero_pregunta": 12,
-      "pregunta": "¿Qué significa UPR?",
+      "pregunta": "Una cadena proteica naciente expone su péptido señal para el retículo endoplasmático rugoso. ¿Qué componente lo reconoce antes de que se corte?",
       "respuesta_correcta": "A",
-      "justificacion": "Respuesta ante proteínas mal plegadas.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "430",
-      "pagina_impresa": "430",
-      "dificultad": "medio",
-      "opcion_a": "Respuesta ante proteínas mal plegadas.",
-      "opcion_b": "Una peptidasa lo corta.",
-      "opcion_c": "Mitocondrias y retículo endoplasmático liso.",
-      "opcion_d": "BiP, calnexina y calreticulina."
-    },
-    {
-      "content_id": "bio-10-013",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "reticulo endoplasmatico golgi y lisosomas",
-      "numero_pregunta": 13,
-      "pregunta": "¿Qué chaperona actúa como sensor para inducir la UPR?",
-      "respuesta_correcta": "A",
-      "justificacion": "BiP.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "431",
-      "pagina_impresa": "431",
-      "dificultad": "medio",
-      "opcion_a": "BiP.",
-      "opcion_b": "Dictiosomas.",
-      "opcion_c": "COPI.",
-      "opcion_d": "Dolicol-difosfato."
-    },
-    {
-      "content_id": "bio-10-014",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "reticulo endoplasmatico golgi y lisosomas",
-      "numero_pregunta": 14,
-      "pregunta": "¿Qué rasgo diferencia al REL del RER respecto de los ribosomas?",
-      "respuesta_correcta": "B",
-      "justificacion": "El REL no tiene ribosomas adosados.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "432",
-      "pagina_impresa": "432",
-      "dificultad": "medio",
-      "opcion_a": "Cisternas y túbulos con ribosomas adheridos.",
-      "opcion_b": "El REL no tiene ribosomas adosados.",
-      "opcion_c": "De la red trans-Golgi o TGN.",
-      "opcion_d": "KDEL, situada en el extremo carboxilo terminal."
-    },
-    {
-      "content_id": "bio-10-015",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "reticulo endoplasmatico golgi y lisosomas",
-      "numero_pregunta": 15,
-      "pregunta": "¿En qué cara del REL se sintetizan los lípidos?",
-      "respuesta_correcta": "B",
-      "justificacion": "En la cara citosólica.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "434",
-      "pagina_impresa": "434",
-      "dificultad": "medio",
-      "opcion_a": "En células con elevada síntesis proteica.",
-      "opcion_b": "En la cara citosólica.",
-      "opcion_c": "En su extremo N-terminal.",
-      "opcion_d": "En la médula ósea."
-    },
-    {
-      "content_id": "bio-10-016",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "reticulo endoplasmatico golgi y lisosomas",
-      "numero_pregunta": 16,
-      "pregunta": "¿Qué dos orgánulos participan en la síntesis de hormonas esteroideas?",
-      "respuesta_correcta": "A",
-      "justificacion": "Mitocondrias y retículo endoplasmático liso.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "435",
-      "pagina_impresa": "435",
-      "dificultad": "medio",
-      "opcion_a": "Mitocondrias y retículo endoplasmático liso.",
-      "opcion_b": "BiP, calnexina y calreticulina.",
-      "opcion_c": "Respuesta ante proteínas mal plegadas.",
-      "opcion_d": "Una peptidasa lo corta."
-    },
-    {
-      "content_id": "bio-10-017",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "reticulo endoplasmatico golgi y lisosomas",
-      "numero_pregunta": 17,
-      "pregunta": "¿Qué almacena el retículo sarcoplásmico?",
-      "respuesta_correcta": "C",
-      "justificacion": "Ca2+, cuya liberación desencadena la contracción.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "436",
-      "pagina_impresa": "436",
-      "dificultad": "medio",
-      "opcion_a": "Alrededor de 5.",
-      "opcion_b": "Mantener baja la concentración citoplasmática de Ca2+.",
-      "opcion_c": "Ca2+, cuya liberación desencadena la contracción.",
-      "opcion_d": "Manosa-6-fosfato, M6P."
-    },
-    {
-      "content_id": "bio-10-018",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "reticulo endoplasmatico golgi y lisosomas",
-      "numero_pregunta": 18,
-      "pregunta": "¿En qué dirección maduran las proteínas a través del Golgi?",
-      "respuesta_correcta": "B",
-      "justificacion": "Desde la cara cis hacia la trans.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "437",
-      "pagina_impresa": "437",
-      "dificultad": "medio",
-      "opcion_a": "En células con elevada síntesis proteica.",
-      "opcion_b": "Desde la cara cis hacia la trans.",
-      "opcion_c": "En su extremo N-terminal.",
-      "opcion_d": "Hacia el interior, lejos del agua."
-    },
-    {
-      "content_id": "bio-10-019",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "reticulo endoplasmatico golgi y lisosomas",
-      "numero_pregunta": 19,
-      "pregunta": "¿Cómo se llaman las unidades estructurales del aparato de Golgi?",
-      "respuesta_correcta": "B",
-      "justificacion": "Dictiosomas.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "437",
-      "pagina_impresa": "437",
-      "dificultad": "medio",
-      "opcion_a": "α-galactosidasa A.",
-      "opcion_b": "Dictiosomas.",
-      "opcion_c": "COPII.",
-      "opcion_d": "Dolicol-difosfato."
-    },
-    {
-      "content_id": "bio-10-020",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "reticulo endoplasmatico golgi y lisosomas",
-      "numero_pregunta": 20,
-      "pregunta": "¿Qué marca dirige las hidrolasas ácidas hacia los lisosomas?",
-      "respuesta_correcta": "B",
-      "justificacion": "Manosa-6-fosfato, M6P.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "440",
-      "pagina_impresa": "440",
-      "dificultad": "medio",
-      "opcion_a": "Alrededor de 5.",
-      "opcion_b": "Manosa-6-fosfato, M6P.",
-      "opcion_c": "Los linfocitos T CD4+.",
-      "opcion_d": "Ca2+, cuya liberación desencadena la contracción."
-    },
-    {
-      "content_id": "bio-10-021",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "reticulo endoplasmatico golgi y lisosomas",
-      "numero_pregunta": 21,
-      "pregunta": "¿De qué región del Golgi salen las vesículas con enzimas lisosómicas?",
-      "respuesta_correcta": "C",
-      "justificacion": "De la red trans-Golgi o TGN.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "440",
-      "pagina_impresa": "440",
-      "dificultad": "medio",
-      "opcion_a": "KDEL, situada en el extremo carboxilo terminal.",
-      "opcion_b": "Cisternas y túbulos con ribosomas adheridos.",
-      "opcion_c": "De la red trans-Golgi o TGN.",
-      "opcion_d": "El REL no tiene ribosomas adosados."
-    },
-    {
-      "content_id": "bio-10-022",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "reticulo endoplasmatico golgi y lisosomas",
-      "numero_pregunta": 22,
-      "pregunta": "¿Qué cubierta lleva las vesículas del RER al Golgi?",
-      "respuesta_correcta": "C",
-      "justificacion": "COPII.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "443",
-      "pagina_impresa": "443",
-      "dificultad": "medio",
-      "opcion_a": "Dolicol-difosfato.",
-      "opcion_b": "Dictiosomas.",
-      "opcion_c": "COPII.",
-      "opcion_d": "BiP."
-    },
-    {
-      "content_id": "bio-10-023",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "reticulo endoplasmatico golgi y lisosomas",
-      "numero_pregunta": 23,
-      "pregunta": "¿Qué cubierta participa en el retorno del Golgi al RER?",
-      "respuesta_correcta": "B",
-      "justificacion": "COPI.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "443",
-      "pagina_impresa": "443",
-      "dificultad": "medio",
-      "opcion_a": "Dictiosomas.",
-      "opcion_b": "COPI.",
-      "opcion_c": "Dolicol-difosfato.",
-      "opcion_d": "Un ambiente oxidante."
-    },
-    {
-      "content_id": "bio-10-024",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "reticulo endoplasmatico golgi y lisosomas",
-      "numero_pregunta": 24,
-      "pregunta": "¿Qué señal recupera proteínas solubles residentes del RER?",
-      "respuesta_correcta": "C",
-      "justificacion": "KDEL, situada en el extremo carboxilo terminal.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "443",
-      "pagina_impresa": "443",
-      "dificultad": "medio",
-      "opcion_a": "Cisternas y túbulos con ribosomas adheridos.",
-      "opcion_b": "El REL no tiene ribosomas adosados.",
-      "opcion_c": "KDEL, situada en el extremo carboxilo terminal.",
-      "opcion_d": "Glucosilación, fragmentación y formación de puentes disulfuro."
-    },
-    {
-      "content_id": "bio-10-025",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "reticulo endoplasmatico golgi y lisosomas",
-      "numero_pregunta": 25,
-      "pregunta": "¿Qué pH tiene aproximadamente el interior de un lisosoma?",
-      "respuesta_correcta": "D",
-      "justificacion": "Alrededor de 5.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "445",
-      "pagina_impresa": "445",
-      "dificultad": "medio",
-      "opcion_a": "Manosa-6-fosfato, M6P.",
-      "opcion_b": "25 nm.",
-      "opcion_c": "Ca2+, cuya liberación desencadena la contracción.",
-      "opcion_d": "Alrededor de 5."
-    },
-    {
-      "content_id": "bio-10-026",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "reticulo endoplasmatico golgi y lisosomas",
-      "numero_pregunta": 26,
-      "pregunta": "¿Qué enzima es marcador universal de lisosomas?",
-      "respuesta_correcta": "B",
-      "justificacion": "La fosfatasa ácida.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "445",
-      "pagina_impresa": "445",
-      "dificultad": "medio",
-      "opcion_a": "Un ambiente oxidante.",
-      "opcion_b": "La fosfatasa ácida.",
-      "opcion_c": "Dolicol-difosfato.",
-      "opcion_d": "α-galactosidasa A."
-    },
-    {
-      "content_id": "bio-10-027",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "reticulo endoplasmatico golgi y lisosomas",
-      "numero_pregunta": 27,
-      "pregunta": "¿Qué distingue al lisosoma secundario del primario?",
-      "respuesta_correcta": "A",
-      "justificacion": "El secundario está digiriendo o ya ha digerido sustratos.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "445",
-      "pagina_impresa": "445",
-      "dificultad": "medio",
-      "opcion_a": "El secundario está digiriendo o ya ha digerido sustratos.",
-      "opcion_b": "La partícula de reconocimiento de la señal, PRS.",
-      "opcion_c": "Cambia la expresión génica sin cambiar la secuencia de nucleótidos.",
-      "opcion_d": "Asparagina de una secuencia Asn-X-Ser/Thr."
-    },
-    {
-      "content_id": "bio-10-028",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "reticulo endoplasmatico golgi y lisosomas",
-      "numero_pregunta": 28,
-      "pregunta": "¿Qué es la crinofagia?",
-      "respuesta_correcta": "B",
-      "justificacion": "La digestión de los propios gránulos de secreción de la célula.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "447",
-      "pagina_impresa": "447",
-      "dificultad": "medio",
-      "opcion_a": "Un aumento del número de copias que eleva su dosis génica.",
-      "opcion_b": "La digestión de los propios gránulos de secreción de la célula.",
-      "opcion_c": "La cubierta de residuos de azúcar de la superficie celular.",
-      "opcion_d": "Un par de cromosomas homólogos formado por cuatro cromátidas."
-    },
-    {
-      "content_id": "bio-10-029",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "reticulo endoplasmatico golgi y lisosomas",
-      "numero_pregunta": 29,
-      "pregunta": "¿Qué tres formas de autofagia describe el texto?",
-      "respuesta_correcta": "B",
-      "justificacion": "Macroautofagia, microautofagia y autofagia mediada por chaperonas.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "448",
-      "pagina_impresa": "448",
-      "dificultad": "medio",
-      "opcion_a": "Glucosilación, fragmentación y formación de puentes disulfuro.",
-      "opcion_b": "Macroautofagia, microautofagia y autofagia mediada por chaperonas.",
-      "opcion_c": "Cisternas y túbulos con ribosomas adheridos.",
-      "opcion_d": "KDEL, situada en el extremo carboxilo terminal."
-    },
-    {
-      "content_id": "bio-10-030",
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "reticulo endoplasmatico golgi y lisosomas",
-      "numero_pregunta": 30,
-      "pregunta": "¿Qué enzima falta en la enfermedad de Fabry?",
-      "respuesta_correcta": "C",
-      "justificacion": "α-galactosidasa A.",
-      "fuente": "Biología celular biomédica",
-      "paginas_pdf": "450",
-      "pagina_impresa": "450",
-      "dificultad": "medio",
-      "opcion_a": "La fosfatasa ácida.",
-      "opcion_b": "Dolicol-difosfato.",
-      "opcion_c": "α-galactosidasa A.",
-      "opcion_d": "Un ambiente oxidante."
+      "justificacion": "Calvo sitúa primero el reconocimiento del péptido por la partícula de reconocimiento de la señal. Después intervienen su receptor y el sistema de translocación. El corte lo realiza la peptidasa señal.",
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+      "paginas_pdf": "425, 426",
+      "pagina_impresa": "425, 426",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Capítulo 10 · Entrada de proteínas al retículo endoplasmático",
+          "page": 425,
+          "printed": 425,
+          "marks": [
+            [
+              0.5497,
+              0.8351,
+              0.1127,
+              0.0197
+            ]
+          ]
+        },
+        {
+          "slug": "biologia-celular",
+          "label": "Calvo",
+          "section": "Capítulo 10 · Entrada de proteínas al retículo endoplasmático",
+          "page": 426,
+          "printed": 426,
+          "marks": [
+            [
+              0.1464,
+              0.303,
+              0.2096,
+              0.0198
+            ],
+            [
+              0.6902,
+              0.8167,
+              0.1834,
+              0.0172
+            ]
+          ]
+        }
+      ],
+      "source": {
+        "document": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015",
+        "topicId": "biologia-10"
+      },
+      "opcion_a": "La partícula de reconocimiento de la señal.",
+      "opcion_b": "La peptidasa que elimina la señal.",
+      "opcion_c": "El receptor de la partícula en la membrana del retículo.",
+      "opcion_d": "El canal por el que se transloca la cadena."
     }
   ]
 }

@@ -5,383 +5,487 @@
   "topic": "muestreo",
   "title": "Muestreo",
   "number": 16,
-  "count": 22,
-  "duration": 22,
+  "count": 9,
+  "duration": 9,
   "source": "Educación en Salud e Investigación · Curso Básico 2025-2026",
   "questions": [
     {
-      "content_id": "salud-17-001",
+      "content_id": "evaluacion:medicina-oficial-salud-16-intermedio-1",
       "materia": "SALUD PUBLICA",
       "tema": "muestreo",
       "numero_pregunta": 1,
-      "pregunta": "¿Cuáles son los dos grandes tipos de muestreo?",
-      "respuesta_correcta": "D",
-      "justificacion": "Probabilístico y no probabilístico.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
+      "pregunta": "Se numera a todos los estudiantes y se sortean individualmente 60 nombres, sin separarlos en subgrupos ni recorrer la lista a intervalos fijos.\n¿Qué opción corresponde al caso?",
+      "respuesta_correcta": "A",
+      "justificacion": "El muestreo aleatorio simple realiza un sorteo entre unidades individuales de la población.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
       "paginas_pdf": "98",
       "pagina_impresa": "23",
       "dificultad": "medio",
-      "opcion_a": "Descriptiva e inferencial.",
-      "opcion_b": "Mesocúrtica, leptocúrtica y platicúrtica.",
-      "opcion_c": "Media aritmética, mediana y moda.",
-      "opcion_d": "Probabilístico y no probabilístico."
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Muestreo · muestreo",
+          "page": 98,
+          "printed": 23,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-16",
+        "chapterNumber": 16,
+        "chapter": "Muestreo",
+        "section": "muestreo",
+        "printedPages": [
+          23
+        ],
+        "pdfPages": [
+          98
+        ]
+      },
+      "opcion_a": "Muestreo aleatorio simple",
+      "opcion_b": "Muestreo sistemático",
+      "opcion_c": "Muestreo por conglomerados",
+      "opcion_d": "Muestreo estratificado"
     },
     {
-      "content_id": "salud-17-002",
+      "content_id": "evaluacion:medicina-oficial-salud-16-intermedio-2",
       "materia": "SALUD PUBLICA",
       "tema": "muestreo",
       "numero_pregunta": 2,
-      "pregunta": "¿Cómo se seleccionan los elementos en el muestreo aleatorio simple?",
+      "pregunta": "En una lista se elige al azar un punto de inicio, el 3. Después se seleccionan los registros 8, 13, 18 y así sucesivamente.\n¿Qué opción corresponde al caso?",
       "respuesta_correcta": "B",
-      "justificacion": "Se numeran los elementos y se eligen mediante un mecanismo aleatorio.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "98",
-      "pagina_impresa": "23",
+      "justificacion": "Tras elegir el punto de inicio al azar, el muestreo sistemático avanza con un intervalo fijo.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+      "paginas_pdf": "99",
+      "pagina_impresa": "24",
       "dificultad": "medio",
-      "opcion_a": "Se elige un inicio aleatorio y después cada k elementos.",
-      "opcion_b": "Se numeran los elementos y se eligen mediante un mecanismo aleatorio.",
-      "opcion_c": "Se seleccionan grupos típicos según criterios del investigador.",
-      "opcion_d": "Es poco útil para poblaciones muy grandes."
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Muestreo · muestreo",
+          "page": 99,
+          "printed": 24,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-16",
+        "chapterNumber": 16,
+        "chapter": "Muestreo",
+        "section": "muestreo",
+        "printedPages": [
+          24
+        ],
+        "pdfPages": [
+          99
+        ]
+      },
+      "opcion_a": "Muestreo por conglomerados",
+      "opcion_b": "Muestreo sistemático",
+      "opcion_c": "Muestreo aleatorio simple",
+      "opcion_d": "Muestreo estratificado"
     },
     {
-      "content_id": "salud-17-003",
+      "content_id": "evaluacion:medicina-oficial-salud-16-intermedio-3",
       "materia": "SALUD PUBLICA",
       "tema": "muestreo",
       "numero_pregunta": 3,
-      "pregunta": "¿Qué limitación práctica tiene el muestreo aleatorio simple?",
+      "pregunta": "Se divide al alumnado por año y se seleccionan estudiantes al azar en cada año para que todos estén representados.\n¿Qué opción corresponde al caso?",
       "respuesta_correcta": "B",
-      "justificacion": "Es poco útil para poblaciones muy grandes.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "98",
-      "pagina_impresa": "23",
+      "justificacion": "En el muestreo estratificado se toman unidades de cada estrato para que todos los grupos estén representados.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+      "paginas_pdf": "99",
+      "pagina_impresa": "24",
       "dificultad": "medio",
-      "opcion_a": "Se elige un inicio aleatorio y después cada k elementos.",
-      "opcion_b": "Es poco útil para poblaciones muy grandes.",
-      "opcion_c": "Se seleccionan grupos típicos según criterios del investigador.",
-      "opcion_d": "Se numeran los elementos y se eligen mediante un mecanismo aleatorio."
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Muestreo · muestreo",
+          "page": 99,
+          "printed": 24,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-16",
+        "chapterNumber": 16,
+        "chapter": "Muestreo",
+        "section": "muestreo",
+        "printedPages": [
+          24
+        ],
+        "pdfPages": [
+          99
+        ]
+      },
+      "opcion_a": "Muestreo aleatorio simple",
+      "opcion_b": "Muestreo estratificado",
+      "opcion_c": "Muestreo sistemático",
+      "opcion_d": "Muestreo por conglomerados"
     },
     {
-      "content_id": "salud-17-004",
+      "content_id": "evaluacion:medicina-oficial-salud-16-intermedio-4",
       "materia": "SALUD PUBLICA",
       "tema": "muestreo",
       "numero_pregunta": 4,
-      "pregunta": "¿Cómo se seleccionan elementos en el muestreo sistemático?",
+      "pregunta": "Entre 30 escuelas se sortean cuatro y se estudia a todo el alumnado de las cuatro escuelas seleccionadas.\n¿Qué opción corresponde al caso?",
       "respuesta_correcta": "C",
-      "justificacion": "Se elige un inicio aleatorio y después cada k elementos.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "99",
-      "pagina_impresa": "24",
+      "justificacion": "En el muestreo por conglomerados, la selección inicial se realiza entre grupos, como las escuelas.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+      "paginas_pdf": "101",
+      "pagina_impresa": "26",
       "dificultad": "medio",
-      "opcion_a": "Se numeran los elementos y se eligen mediante un mecanismo aleatorio.",
-      "opcion_b": "Es poco útil para poblaciones muy grandes.",
-      "opcion_c": "Se elige un inicio aleatorio y después cada k elementos.",
-      "opcion_d": "Se seleccionan grupos típicos según criterios del investigador."
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Muestreo · muestreo",
+          "page": 101,
+          "printed": 26,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-16",
+        "chapterNumber": 16,
+        "chapter": "Muestreo",
+        "section": "muestreo",
+        "printedPages": [
+          26
+        ],
+        "pdfPages": [
+          101
+        ]
+      },
+      "opcion_a": "Muestreo sistemático",
+      "opcion_b": "Muestreo aleatorio simple",
+      "opcion_c": "Muestreo por conglomerados",
+      "opcion_d": "Muestreo estratificado"
     },
     {
-      "content_id": "salud-17-005",
+      "content_id": "evaluacion:medicina-oficial-salud-16-ampliacion-01-umss",
       "materia": "SALUD PUBLICA",
       "tema": "muestreo",
       "numero_pregunta": 5,
-      "pregunta": "¿Cómo se calcula el intervalo k del muestreo sistemático?",
-      "respuesta_correcta": "D",
-      "justificacion": "k = N/n: tamaño poblacional dividido entre tamaño muestral.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Si una población tiene 600 unidades y la muestra debe incluir 60, el intervalo de muestreo sistemático es 0,1.\n2. Si el intervalo sistemático es de 10 unidades, puede sortearse el primer elemento entre las posiciones 1 y 10.",
+      "respuesta_correcta": "B",
+      "justificacion": "1. Incorrecta. Se divide el tamaño poblacional por el muestral. El intervalo es 600/60 = 10.\n2. Correcta. El punto de arranque se elige al azar entre 1 y k.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
       "paginas_pdf": "99",
       "pagina_impresa": "24",
-      "dificultad": "medio",
-      "opcion_a": "Seleccionar la misma cantidad de elementos en todos los estratos.",
-      "opcion_b": "Grupos o unidades colectivas completos, de forma aleatoria.",
-      "opcion_c": "La periodicidad coincidente con el intervalo de selección.",
-      "opcion_d": "k = N/n: tamaño poblacional dividido entre tamaño muestral."
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Muestreo · muestreo",
+          "page": 99,
+          "printed": 24,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-16",
+        "chapterNumber": 16,
+        "chapter": "Muestreo",
+        "section": "muestreo",
+        "printedPages": [
+          24
+        ],
+        "pdfPages": [
+          99
+        ],
+        "statements": [
+          {
+            "pdfPage": 99,
+            "printedPage": 24,
+            "section": "muestreo",
+            "cardId": "salud-17-005"
+          },
+          {
+            "pdfPage": 99,
+            "printedPage": 24,
+            "section": "muestreo",
+            "cardId": "salud-17-006"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. Se divide el tamaño poblacional por el muestral. El intervalo es 600/60 = 10. 2. Correcta. El punto de arranque se elige al azar entre 1 y k.",
+        "B": "Solo la afirmación 2 es correcta.",
+        "C": "1. Incorrecta. Se divide el tamaño poblacional por el muestral. El intervalo es 600/60 = 10.",
+        "D": "2. Correcta. El punto de arranque se elige al azar entre 1 y k."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "salud-17-006",
+      "content_id": "evaluacion:medicina-oficial-salud-16-ampliacion-02-umss",
       "materia": "SALUD PUBLICA",
       "tema": "muestreo",
       "numero_pregunta": 6,
-      "pregunta": "¿Entre qué valores se elige el punto inicial del muestreo sistemático?",
-      "respuesta_correcta": "B",
-      "justificacion": "Entre 1 y k, al azar.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "99",
-      "pagina_impresa": "24",
-      "dificultad": "medio",
-      "opcion_a": "Q₁ = P₂₅; Q₃ = P₇₅.",
-      "opcion_b": "Entre 1 y k, al azar.",
-      "opcion_c": "100 %, salvo pequeñas diferencias por redondeo.",
-      "opcion_d": "Que 11 personas tardaron como máximo 55 minutos."
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Una lista cuyo patrón se repite cada 10 posiciones puede sesgar una selección sistemática que también avance de 10 en 10.\n2. La asignación proporcional exige elegir el mismo número de personas de cada estrato aunque sus tamaños difieran.",
+      "respuesta_correcta": "A",
+      "justificacion": "1. Correcta. El intervalo puede seleccionar siempre la misma posición del patrón repetido.\n2. Incorrecta. La asignación proporcional respeta el tamaño relativo de cada estrato. La simple usa la misma cantidad.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+      "paginas_pdf": "99, 100",
+      "pagina_impresa": "24, 25",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Muestreo · muestreo",
+          "page": 99,
+          "printed": 24,
+          "marks": []
+        },
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Muestreo · muestreo",
+          "page": 100,
+          "printed": 25,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-16",
+        "chapterNumber": 16,
+        "chapter": "Muestreo",
+        "section": "muestreo",
+        "printedPages": [
+          24,
+          25
+        ],
+        "pdfPages": [
+          99,
+          100
+        ],
+        "statements": [
+          {
+            "pdfPage": 99,
+            "printedPage": 24,
+            "section": "muestreo",
+            "cardId": "salud-17-007"
+          },
+          {
+            "pdfPage": 100,
+            "printedPage": 25,
+            "section": "muestreo",
+            "cardId": "salud-17-012"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "Solo la afirmación 1 es correcta.",
+        "B": "1. Correcta. El intervalo puede seleccionar siempre la misma posición del patrón repetido. 2. Incorrecta. La asignación proporcional respeta el tamaño relativo de cada estrato. La simple usa la misma cantidad.",
+        "C": "2. Incorrecta. La asignación proporcional respeta el tamaño relativo de cada estrato. La simple usa la misma cantidad.",
+        "D": "1. Correcta. El intervalo puede seleccionar siempre la misma posición del patrón repetido."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "salud-17-007",
+      "content_id": "evaluacion:medicina-oficial-salud-16-ampliacion-03-umss",
       "materia": "SALUD PUBLICA",
       "tema": "muestreo",
       "numero_pregunta": 7,
-      "pregunta": "¿Qué característica de la población puede sesgar el muestreo sistemático?",
-      "respuesta_correcta": "B",
-      "justificacion": "La periodicidad coincidente con el intervalo de selección.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "99",
-      "pagina_impresa": "24",
-      "dificultad": "medio",
-      "opcion_a": "Grupos o unidades colectivas completos, de forma aleatoria.",
-      "opcion_b": "La periodicidad coincidente con el intervalo de selección.",
-      "opcion_c": "k = N/n: tamaño poblacional dividido entre tamaño muestral.",
-      "opcion_d": "Seleccionar la misma cantidad de elementos en todos los estratos."
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Si el padrón omite viviendas que forman parte de la población, puede haber error de cobertura.\n2. Si algunas viviendas sorteadas no contestan, puede haber error de no respuesta.",
+      "respuesta_correcta": "C",
+      "justificacion": "1. Correcta. Las viviendas omitidas no tienen oportunidad de entrar en la muestra.\n2. Correcta. Se seleccionaron las unidades, pero no se obtuvieron sus datos.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+      "paginas_pdf": "102, 103",
+      "pagina_impresa": "27, 28",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Muestreo · muestreo",
+          "page": 102,
+          "printed": 27,
+          "marks": []
+        },
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Muestreo · muestreo",
+          "page": 103,
+          "printed": 28,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-16",
+        "chapterNumber": 16,
+        "chapter": "Muestreo",
+        "section": "muestreo",
+        "printedPages": [
+          27,
+          28
+        ],
+        "pdfPages": [
+          102,
+          103
+        ],
+        "statements": [
+          {
+            "pdfPage": 102,
+            "printedPage": 27,
+            "section": "muestreo",
+            "cardId": "salud-17-016"
+          },
+          {
+            "pdfPage": 103,
+            "printedPage": 28,
+            "section": "muestreo",
+            "cardId": "salud-17-017"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "2. Correcta. Se seleccionaron las unidades, pero no se obtuvieron sus datos.",
+        "B": "1. Correcta. Las viviendas omitidas no tienen oportunidad de entrar en la muestra.",
+        "C": "Ambas afirmaciones son correctas.",
+        "D": "1. Correcta. Las viviendas omitidas no tienen oportunidad de entrar en la muestra. 2. Correcta. Se seleccionaron las unidades, pero no se obtuvieron sus datos."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "salud-17-008",
+      "content_id": "evaluacion:medicina-oficial-salud-16-ampliacion-04-umss",
       "materia": "SALUD PUBLICA",
       "tema": "muestreo",
       "numero_pregunta": 8,
-      "pregunta": "¿Cómo se realiza el muestreo estratificado?",
-      "respuesta_correcta": "C",
-      "justificacion": "Se divide la población en estratos y se seleccionan elementos aleatoriamente dentro de cada uno.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "99",
-      "pagina_impresa": "24",
-      "dificultad": "medio",
-      "opcion_a": "Se numeran los elementos y se eligen mediante un mecanismo aleatorio.",
-      "opcion_b": "Se seleccionan grupos típicos según criterios del investigador.",
-      "opcion_c": "Se divide la población en estratos y se seleccionan elementos aleatoriamente dentro de cada uno.",
-      "opcion_d": "Se elige un inicio aleatorio y después cada k elementos."
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Completar cuotas seleccionando a los primeros disponibles equivale a un muestreo estratificado con selección aleatoria.\n2. En el muestreo de bola de nieve, cada participante se selecciona de un padrón completo y de forma independiente de los demás.",
+      "respuesta_correcta": "D",
+      "justificacion": "1. Incorrecta. Las cuotas así completadas carecen de selección aleatoria dentro del grupo.\n2. Incorrecta. Los primeros participantes facilitan el contacto con otras personas de la misma población.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+      "paginas_pdf": "104",
+      "pagina_impresa": "29",
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "UMSS",
+          "section": "Muestreo · muestreo",
+          "page": 104,
+          "printed": 29,
+          "marks": []
+        }
+      ],
+      "source": {
+        "collection": "medicina-oficial",
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-16",
+        "chapterNumber": 16,
+        "chapter": "Muestreo",
+        "section": "muestreo",
+        "printedPages": [
+          29
+        ],
+        "pdfPages": [
+          104
+        ],
+        "statements": [
+          {
+            "pdfPage": 104,
+            "printedPage": 29,
+            "section": "muestreo",
+            "cardId": "salud-17-020"
+          },
+          {
+            "pdfPage": 104,
+            "printedPage": 29,
+            "section": "muestreo",
+            "cardId": "salud-17-022"
+          }
+        ]
+      },
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. Las cuotas así completadas carecen de selección aleatoria dentro del grupo.",
+        "B": "2. Incorrecta. Los primeros participantes facilitan el contacto con otras personas de la misma población.",
+        "C": "1. Incorrecta. Las cuotas así completadas carecen de selección aleatoria dentro del grupo. 2. Incorrecta. Los primeros participantes facilitan el contacto con otras personas de la misma población.",
+        "D": "Ninguna afirmación es correcta."
+      },
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta"
     },
     {
-      "content_id": "salud-17-009",
+      "content_id": "evaluacion:banco-verificado:salud-16:muestreo",
       "materia": "SALUD PUBLICA",
       "tema": "muestreo",
       "numero_pregunta": 9,
-      "pregunta": "¿Qué garantiza el muestreo estratificado respecto a los estratos definidos?",
-      "respuesta_correcta": "B",
-      "justificacion": "Que todos estén representados en la muestra.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
+      "pregunta": "En un muestreo sistemático se quieren seleccionar 40 registros entre 600. Tras elegir el inicio al azar, ¿cada cuántos registros se toma uno según la fórmula del compendio?",
+      "respuesta_correcta": "C",
+      "justificacion": "El intervalo se calcula dividiendo el tamaño poblacional entre el tamaño muestral. En este caso, 600 dividido entre 40 da 15.",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
       "paginas_pdf": "99",
       "pagina_impresa": "24",
-      "dificultad": "medio",
-      "opcion_a": "La proporción o porcentaje de una categoría.",
-      "opcion_b": "Que todos estén representados en la muestra.",
-      "opcion_c": "Combina métodos probabilísticos en etapas sucesivas.",
-      "opcion_d": "Las cuotas se completan sin selección aleatoria."
-    },
-    {
-      "content_id": "salud-17-010",
-      "materia": "SALUD PUBLICA",
-      "tema": "muestreo",
-      "numero_pregunta": 10,
-      "pregunta": "¿Qué es la afijación en muestreo estratificado?",
-      "respuesta_correcta": "D",
-      "justificacion": "La distribución de los elementos que se muestrearán en cada estrato.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "100",
-      "pagina_impresa": "25",
-      "dificultad": "medio",
-      "opcion_a": "Omitir elementos de la población, impidiendo que puedan entrar en la muestra.",
-      "opcion_b": "La variación aleatoria entre posibles muestras de una población.",
-      "opcion_c": "Un enunciado o solución probable que debe confirmarse con los hechos.",
-      "opcion_d": "La distribución de los elementos que se muestrearán en cada estrato."
-    },
-    {
-      "content_id": "salud-17-011",
-      "materia": "SALUD PUBLICA",
-      "tema": "muestreo",
-      "numero_pregunta": 11,
-      "pregunta": "¿Qué caracteriza a la afijación simple?",
-      "respuesta_correcta": "D",
-      "justificacion": "Seleccionar la misma cantidad de elementos en todos los estratos.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "100",
-      "pagina_impresa": "25",
-      "dificultad": "medio",
-      "opcion_a": "Grupos o unidades colectivas completos, de forma aleatoria.",
-      "opcion_b": "k = N/n: tamaño poblacional dividido entre tamaño muestral.",
-      "opcion_c": "La variación o desviación típica de cada estrato.",
-      "opcion_d": "Seleccionar la misma cantidad de elementos en todos los estratos."
-    },
-    {
-      "content_id": "salud-17-012",
-      "materia": "SALUD PUBLICA",
-      "tema": "muestreo",
-      "numero_pregunta": 12,
-      "pregunta": "¿Qué caracteriza a la afijación proporcional?",
-      "respuesta_correcta": "B",
-      "justificacion": "Seleccionar en cada estrato una cantidad proporcional a su tamaño poblacional.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "100",
-      "pagina_impresa": "25",
-      "dificultad": "medio",
-      "opcion_a": "Los primeros participantes facilitan el contacto con otros de la misma población.",
-      "opcion_b": "Seleccionar en cada estrato una cantidad proporcional a su tamaño poblacional.",
-      "opcion_c": "Preguntas mal formuladas o influencia del entrevistador sobre las respuestas.",
-      "opcion_d": "La variación o desviación típica de cada estrato."
-    },
-    {
-      "content_id": "salud-17-013",
-      "materia": "SALUD PUBLICA",
-      "tema": "muestreo",
-      "numero_pregunta": 13,
-      "pregunta": "¿Qué añade la afijación óptima respecto a la proporcional?",
-      "respuesta_correcta": "C",
-      "justificacion": "La variación o desviación típica de cada estrato.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "100",
-      "pagina_impresa": "25",
-      "dificultad": "medio",
-      "opcion_a": "Grupos o unidades colectivas completos, de forma aleatoria.",
-      "opcion_b": "Seleccionar en cada estrato una cantidad proporcional a su tamaño poblacional.",
-      "opcion_c": "La variación o desviación típica de cada estrato.",
-      "opcion_d": "La periodicidad coincidente con el intervalo de selección."
-    },
-    {
-      "content_id": "salud-17-014",
-      "materia": "SALUD PUBLICA",
-      "tema": "muestreo",
-      "numero_pregunta": 14,
-      "pregunta": "¿Qué se selecciona inicialmente en el muestreo por conglomerados?",
-      "respuesta_correcta": "B",
-      "justificacion": "Grupos o unidades colectivas completos, de forma aleatoria.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "101",
-      "pagina_impresa": "26",
-      "dificultad": "medio",
-      "opcion_a": "La periodicidad coincidente con el intervalo de selección.",
-      "opcion_b": "Grupos o unidades colectivas completos, de forma aleatoria.",
-      "opcion_c": "k = N/n: tamaño poblacional dividido entre tamaño muestral.",
-      "opcion_d": "Seleccionar la misma cantidad de elementos en todos los estratos."
-    },
-    {
-      "content_id": "salud-17-015",
-      "materia": "SALUD PUBLICA",
-      "tema": "muestreo",
-      "numero_pregunta": 15,
-      "pregunta": "¿Qué diferencia al muestreo polietápico?",
-      "respuesta_correcta": "C",
-      "justificacion": "Combina métodos probabilísticos en etapas sucesivas.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "101",
-      "pagina_impresa": "26",
-      "dificultad": "medio",
-      "opcion_a": "Las cuotas se completan sin selección aleatoria.",
-      "opcion_b": "Ausencia de diferencia entre los valores comparados.",
-      "opcion_c": "Combina métodos probabilísticos en etapas sucesivas.",
-      "opcion_d": "Que todos estén representados en la muestra."
-    },
-    {
-      "content_id": "salud-17-016",
-      "materia": "SALUD PUBLICA",
-      "tema": "muestreo",
-      "numero_pregunta": 16,
-      "pregunta": "¿Qué es el error de cobertura?",
-      "respuesta_correcta": "A",
-      "justificacion": "Omitir elementos de la población, impidiendo que puedan entrar en la muestra.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "102",
-      "pagina_impresa": "27",
-      "dificultad": "medio",
-      "opcion_a": "Omitir elementos de la población, impidiendo que puedan entrar en la muestra.",
-      "opcion_b": "Una cualidad, propiedad o característica que puede tomar distintos valores.",
-      "opcion_c": "La variación aleatoria entre posibles muestras de una población.",
-      "opcion_d": "La distribución de los elementos que se muestrearán en cada estrato."
-    },
-    {
-      "content_id": "salud-17-018",
-      "materia": "SALUD PUBLICA",
-      "tema": "muestreo",
-      "numero_pregunta": 17,
-      "pregunta": "¿Qué es el error de muestreo?",
-      "respuesta_correcta": "D",
-      "justificacion": "La variación aleatoria entre posibles muestras de una población.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "103",
-      "pagina_impresa": "28",
-      "dificultad": "medio",
-      "opcion_a": "Omitir elementos de la población, impidiendo que puedan entrar en la muestra.",
-      "opcion_b": "La distribución de los elementos que se muestrearán en cada estrato.",
-      "opcion_c": "La que explica, condiciona o determina cambios en la dependiente.",
-      "opcion_d": "La variación aleatoria entre posibles muestras de una población."
-    },
-    {
-      "content_id": "salud-17-019",
-      "materia": "SALUD PUBLICA",
-      "tema": "muestreo",
-      "numero_pregunta": 18,
-      "pregunta": "¿Con qué se relaciona el error de medición?",
-      "respuesta_correcta": "D",
-      "justificacion": "Preguntas mal formuladas o influencia del entrevistador sobre las respuestas.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "103",
-      "pagina_impresa": "28",
-      "dificultad": "medio",
-      "opcion_a": "Seleccionar en cada estrato una cantidad proporcional a su tamaño poblacional.",
-      "opcion_b": "Grupos o unidades colectivas completos, de forma aleatoria.",
-      "opcion_c": "Los primeros participantes facilitan el contacto con otros de la misma población.",
-      "opcion_d": "Preguntas mal formuladas o influencia del entrevistador sobre las respuestas."
-    },
-    {
-      "content_id": "salud-17-020",
-      "materia": "SALUD PUBLICA",
-      "tema": "muestreo",
-      "numero_pregunta": 19,
-      "pregunta": "¿Qué distingue al muestreo por cuotas del estratificado?",
-      "respuesta_correcta": "C",
-      "justificacion": "Las cuotas se completan sin selección aleatoria.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "104",
-      "pagina_impresa": "29",
-      "dificultad": "medio",
-      "opcion_a": "Combina métodos probabilísticos en etapas sucesivas.",
-      "opcion_b": "Que todos estén representados en la muestra.",
-      "opcion_c": "Las cuotas se completan sin selección aleatoria.",
-      "opcion_d": "Σ(valor × frecuencia absoluta) ÷ total de datos."
-    },
-    {
-      "content_id": "salud-17-021",
-      "materia": "SALUD PUBLICA",
-      "tema": "muestreo",
-      "numero_pregunta": 20,
-      "pregunta": "¿Cómo se eligen participantes en el muestreo intencional?",
-      "respuesta_correcta": "D",
-      "justificacion": "Se seleccionan grupos típicos según criterios del investigador.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "104",
-      "pagina_impresa": "29",
-      "dificultad": "medio",
-      "opcion_a": "Es poco útil para poblaciones muy grandes.",
-      "opcion_b": "Se numeran los elementos y se eligen mediante un mecanismo aleatorio.",
-      "opcion_c": "Se elige un inicio aleatorio y después cada k elementos.",
-      "opcion_d": "Se seleccionan grupos típicos según criterios del investigador."
-    },
-    {
-      "content_id": "salud-17-022",
-      "materia": "SALUD PUBLICA",
-      "tema": "muestreo",
-      "numero_pregunta": 21,
-      "pregunta": "¿Cómo funciona el muestreo de bola de nieve?",
-      "respuesta_correcta": "C",
-      "justificacion": "Los primeros participantes facilitan el contacto con otros de la misma población.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "104",
-      "pagina_impresa": "29",
-      "dificultad": "medio",
-      "opcion_a": "Seleccionar en cada estrato una cantidad proporcional a su tamaño poblacional.",
-      "opcion_b": "Grupos o unidades colectivas completos, de forma aleatoria.",
-      "opcion_c": "Los primeros participantes facilitan el contacto con otros de la misma población.",
-      "opcion_d": "Preguntas mal formuladas o influencia del entrevistador sobre las respuestas."
-    },
-    {
-      "content_id": "salud-17-023",
-      "materia": "SALUD PUBLICA",
-      "tema": "muestreo",
-      "numero_pregunta": 22,
-      "pregunta": "¿Para qué poblaciones resulta útil el muestreo de bola de nieve?",
-      "respuesta_correcta": "A",
-      "justificacion": "Aquellas cuya existencia se conoce, pero cuyos integrantes no están identificados.",
-      "fuente": "Educación en Salud e Investigación · Curso Básico 2025-2026",
-      "paginas_pdf": "104",
-      "pagina_impresa": "29",
-      "dificultad": "medio",
-      "opcion_a": "Aquellas cuya existencia se conoce, pero cuyos integrantes no están identificados.",
-      "opcion_b": "Detectar temprano y tratar oportunamente para limitar la progresión de la enfermedad.",
-      "opcion_c": "Disminuir complicaciones, secuelas y discapacidad de una enfermedad establecida.",
-      "opcion_d": "Para conservar el orden correcto y evitar el orden alfabético de las etiquetas."
+      "dificultad": "dificil",
+      "lecturas_comentario": [
+        {
+          "slug": "educacion-salud",
+          "label": "Educación en Salud",
+          "section": "Muestreo aleatorio y sistemático",
+          "page": 99,
+          "printed": 24,
+          "marks": [
+            [
+              0.4707,
+              0.106,
+              0.1243,
+              0.0192
+            ],
+            [
+              0.35,
+              0.1464,
+              0.1302,
+              0.0192
+            ],
+            [
+              0.2663,
+              0.3102,
+              0.0904,
+              0.0175
+            ]
+          ]
+        }
+      ],
+      "source": {
+        "document": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026",
+        "topicId": "salud-16"
+      },
+      "opcion_a": "Cada 40 registros.",
+      "opcion_b": "Cada 60 registros.",
+      "opcion_c": "Cada 15 registros.",
+      "opcion_d": "Cada 24 registros."
     }
   ]
 }
