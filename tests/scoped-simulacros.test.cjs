@@ -34,3 +34,33 @@ test('scoped full questions require active paid/admin access; raw source path is
  assert.equal((await call('paid',{ready:true,premium:true},'../../config')).status,404);
  assert.ok(require('../vercel.json').rewrites.some(r=>r.source==='/api/_simulations/:path*'));
 });
+
+test('the general review serves sourced explanations for both archived and authored questions', async () => {
+ const archive = require('../api/_past_exams/commentaries.json');
+ for (const entry of catalog.entries.filter(entry => entry.curatedId)) {
+  const response = await call('paid', {ready:true,premium:true}, entry.curatedId);
+  assert.equal(response.status, 200);
+  const { questions } = JSON.parse(response.body);
+  const original = require('../api/_simulations/' + entry.curatedId + '.json').questions;
+  for (const [i, question] of questions.entries()) {
+   const before = original[i];
+   assert.equal(question.id, before.id);
+   assert.equal(question.pregunta, before.pregunta);
+   assert.deepEqual(question.respuestas_aceptadas, before.respuestas_aceptadas);
+   assert.ok(question.justificacion?.trim(), question.id);
+   const supported = !before.source_question_id || archive[before.source_question_id].references.length;
+   if (supported) assert.ok(question.lecturas_comentario?.length, question.id);
+   else assert.equal(question.lecturas_comentario, undefined);
+  }
+  if (entry.curatedId === 'partial-first') {
+   const second = questions[1];
+   assert.equal(second.id, '2025-2026-1-2');
+   assert.match(second.justificacion, /cloro representa el 0,15 %/);
+   const [reference] = second.lecturas_comentario;
+   assert.deepEqual([reference.slug, reference.printed, reference.page], ['morfofuncion',44,72]);
+   assert.ok(reference.marks.length);
+   const last = questions.at(-1);
+   assert.deepEqual(last.lecturas_comentario.map(ref => ref.page), [61,62]);
+  }
+ }
+});

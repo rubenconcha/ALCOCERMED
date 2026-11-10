@@ -14,10 +14,10 @@ function formatReference({ book, section, pdf, printed }) {
         .filter(Boolean).join(' · ');
 }
 
-function withCommentary(question) {
-    const comment = comments[question.id];
+function withCommentary(question, sourceId = question.id) {
+    const comment = comments[sourceId];
     if (!comment) return question;
-    const citations = anchors[question.id];
+    const citations = anchors[sourceId];
     return {
         ...question,
         justificacion: comment.text,

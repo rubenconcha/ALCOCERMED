@@ -2,6 +2,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const { validate } = require('../simulation-scope.js');
 const catalog = require('../content/simulacros-catalog.json');
+const withGeneralReview = require('./_simulations/general-review.cjs');
 const scopes = new Map([['semana2-testb-virtual','semana2-testb-virtual'],['mini-foundations','mini-foundations'],['partial-first','first'],['partial-second','second'],...['9','10'].map(n=>['partial-first-'+n,'first']),...['11','12'].map(n=>['partial-second-'+n,'second']),...['3','4','5','6','8','13','14'].map(n=>['final-'+n,'final'])]);
 const week3Id = 'semana3-grupo-virtual-2';
 scopes.set(week3Id, week3Id);
@@ -90,6 +91,9 @@ module.exports = async function handler(req, res) {
     else if (prepa.has(id)) paper = await loadPrepa(id);
     else paper = JSON.parse(await fs.promises.readFile(file, 'utf8'));
     if (paper.id !== id || !validate(paper, scopes.get(id), prepa.get(id))) return res.status(503).end();
+    if (['first', 'second', 'final'].includes(paper.scope)) {
+      paper.questions = paper.questions.map(withGeneralReview);
+    }
     res.setHeader('Content-Type', 'application/json; charset=utf-8');
     return res.status(200).end(JSON.stringify(paper));
   } catch (_) { return res.status(503).end(); }

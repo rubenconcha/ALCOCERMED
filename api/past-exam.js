@@ -40,6 +40,6 @@ module.exports = async function handler(req, res) {
     res.setHeader('Content-Type', pattern ? 'image/webp' : 'application/json; charset=utf-8');
     if (pattern) return res.status(200).end(bytes);
     const { missingNumbers, excludedQuestions, ...paper } = JSON.parse(bytes);
-    return res.status(200).end(JSON.stringify({ ...paper, questions: paper.questions.map(withCommentary) }));
+    return res.status(200).end(JSON.stringify({ ...paper, questions: paper.questions.map(question => withCommentary(question)) }));
   } catch (_) { return res.status(404).end(); }
 };

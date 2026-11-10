@@ -1,6 +1,6 @@
-const CACHE_NAME = 'alcocermed-main-v188-banco-oficial';
+const CACHE_NAME = 'alcocermed-main-v189-comentarios-simulacros';
 const APP_SHELL = [
-    './student-results.js?v=7',
+    './student-results.js?v=8',
     './student-results.css?v=1',
     './question-review.js?v=13',
     './suficiencia-core.js?v=12',
