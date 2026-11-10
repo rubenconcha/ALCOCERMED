@@ -1704,9 +1704,10 @@ window.addEventListener('campus-access-change', function () {
 });
 
 async function readBancoCourse(owner, ids) {
+    const free = CampusAccess.isFree();
     const { data } = await getSupabase().auth.getSession();
     const session = data?.session;
-    if (!owner || session?.user?.id !== owner || !session.access_token || CampusAccess.isFree()) {
+    if (!owner || session?.user?.id !== owner || !session.access_token) {
         throw new Error('Vuelve a iniciar sesión para abrir el banco.');
     }
     const headers = { Authorization: 'Bearer ' + session.access_token };
@@ -1717,7 +1718,7 @@ async function readBancoCourse(owner, ids) {
         options.body = JSON.stringify({ ids });
     }
     const response = await fetch('/api/banco', options);
-    if (!response.ok || currentUser?.id !== owner || CampusAccess.isFree()) {
+    if (!response.ok || currentUser?.id !== owner || CampusAccess.isFree() !== free) {
         if (response.status === 409) bancoIndexRequest = null;
         throw Object.assign(new Error('No pudimos cargar las preguntas del banco.'), { status: response.status });
     }
@@ -1725,20 +1726,15 @@ async function readBancoCourse(owner, ids) {
 }
 
 function fetchBancoCourseIndex(owner) {
-    if (bancoIndexRequest?.owner === owner && bancoIndexRequest.expires > Date.now()) return bancoIndexRequest.promise;
-    const request = { owner, expires: Infinity };
+    const free = CampusAccess.isFree();
+    if (bancoIndexRequest?.owner === owner && bancoIndexRequest.free === free &&
+        bancoIndexRequest.expires > Date.now()) return bancoIndexRequest.promise;
+    const request = { owner, free, expires: Infinity };
     request.promise = readBancoCourse(owner).then(({ groups }) => {
         request.expires = Date.now() + 120_000;
         return groups.flatMap(({ materia, tema, dificultad, ids }) =>
             ids.map(bankIndexId => ({ materia, tema, dificultad, bankIndexId })));
     }).catch(error => {
-        if ((error.status === 404 || error.status === 503) && currentUser?.id === owner && !CampusAccess.isFree()) {
-            request.expires = Date.now() + 30_000;
-            return fetchAllBancoQuestions().catch(fallbackError => {
-                if (bancoIndexRequest === request) bancoIndexRequest = null;
-                throw fallbackError;
-            });
-        }
         if (bancoIndexRequest === request) bancoIndexRequest = null;
         throw error;
     });
@@ -1778,8 +1774,8 @@ async function fetchBancoSuficiencia(owner) {
 // ──────────────────────────────────────────────
 window.warmBancoCatalog = function () {
     const owner = currentUser?.id;
-    if (!owner || CampusAccess.isFree()) return;
-    Promise.allSettled([fetchBancoCourseIndex(owner), fetchBancoSuficiencia(owner)]);
+    if (!owner) return;
+    Promise.allSettled([fetchBancoCourseIndex(owner), CampusAccess.isFree() ? [] : fetchBancoSuficiencia(owner)]);
 };
 
 window.openBanco = async function (filter) {
@@ -1892,7 +1888,7 @@ async function loadBancoMaterias() {
             menu.innerHTML = '<div class="banco-loading-opts">Sin materias disponibles</div>';
         }
     }
-    const catalogues = [free ? freePracticeRows() : fetchBancoCourseIndex(owner), free ? [] : fetchBancoSuficiencia(owner)];
+    const catalogues = [fetchBancoCourseIndex(owner), free ? [] : fetchBancoSuficiencia(owner)];
     await Promise.all(catalogues.map(async (pending, index) => {
         try { results[index] = { status: 'fulfilled', value: await pending }; }
         catch (_) { results[index] = { status: 'rejected' }; }
@@ -2053,7 +2049,7 @@ function sortBancoTopics(materia, topics) {
 }
 
 function bancoMateriaRows(materia) {
-    const rows = CampusAccess.isFree() ? freePracticeRows() : bancoState.courseIndex.concat(bancoState.suficiencia);
+    const rows = bancoState.courseIndex.concat(bancoState.suficiencia);
     return rows.filter(row => campo(row, 'materia') === materia);
 }
 // Fin del orden de capítulos del banco.
@@ -2224,6 +2220,7 @@ window.startBanco = async function () {
     const sufficiencyIds = chosen.filter(q => q.sufficiencyId).map(q => q.sufficiencyId);
     if (courseIds.length || sufficiencyIds.length) {
         const owner = currentUser?.id;
+        const free = CampusAccess.isFree();
         const request = bancoMateriaRequest;
         const start = document.getElementById('banco-start-btn');
         if (start.disabled) return;
@@ -2234,7 +2231,7 @@ window.startBanco = async function () {
                 courseIds.length ? readBancoCourse(owner, courseIds) : { questions: [] },
                 sufficiencyIds.length ? window.Sufficiency.readQuestions(sufficiencyIds) : { questions: [] },
             ]);
-            if (request !== bancoMateriaRequest || currentUser?.id !== owner || CampusAccess.isFree() ||
+            if (request !== bancoMateriaRequest || currentUser?.id !== owner || CampusAccess.isFree() !== free ||
                 currentCampusScreen !== 'banco-screen' || bancoState.allPreguntas !== rows) return;
             const courseRows = new Map(courseIds.map((id, index) => [id, course.questions[index]]));
             const sufficiencyRows = new Map(pack.questions.map(q => [q.id, {
@@ -2657,17 +2654,11 @@ window.selectBancoDificultad = async function (nivel) {
 //           intentos, errores, ultima_vez (timestamp)
 // ──────────────────────────────────────────────
 async function registrarRespuestaBanco(preguntaRow, acerto) {
-    if (!currentUser) return;
-    if (!campo(preguntaRow, 'id')) return; // la práctica gratuita local no tiene fila en el banco de pago
+    if (!currentUser || CampusAccess.isFree()) return;
+    const pregId = campo(preguntaRow, 'id');
+    if (!pregId) return;
     try {
         var client = getSupabase();
-
-        // campo() maneja columnas en MAYUSCULAS o minusculas
-        var pregId = campo(preguntaRow, 'id');
-        if (!pregId) {
-            console.warn('[BancoTracking] pregunta sin id, no se registra');
-            return;
-        }
 
         var pregTexto = (campo(preguntaRow, 'pregunta') || '').substring(0, 200);
         var materia   = campo(preguntaRow, 'materia') || '';
@@ -2795,7 +2786,7 @@ async function loadPreguntasDificiles() {
         }
 
         // Guardar IDs para el botón "practicar"
-        bancoState._preguntasDificilesIds = conErrores.map(function (r) { return r.pregunta_id; }); // stored as-is (uuid string)
+        bancoState._preguntasDificiles = conErrores;
         if (practicarBtn) practicarBtn.style.display = 'flex';
 
     } catch (e) {
@@ -2809,20 +2800,31 @@ async function loadPreguntasDificiles() {
 // PRACTICAR PREGUNTAS DIFÍCILES
 // ──────────────────────────────────────────────
 window.practicarPreguntasDificiles = async function () {
-    const ids = bancoState._preguntasDificilesIds;
+    const attempts = bancoState._preguntasDificiles;
     const owner = currentUser?.id;
-    if (!ids?.length || !owner || CampusAccess.isFree()) return;
+    if (!attempts?.length || !owner || CampusAccess.isFree()) return;
 
     try {
-        const questions = await fetchAllBancoQuestions();
-        if (currentUser?.id !== owner || currentCampusScreen !== 'banco-screen' || CampusAccess.isFree()) return;
-        const idsStr = new Set(ids.map(String));
-        const rows = questions.filter(row => idsStr.has(String(campo(row, 'id'))));
-
-        if (rows.length === 0) {
-            showToast('⚠ no se encontraron las preguntas en la base de datos', 'error');
+        const index = await fetchBancoCourseIndex(owner);
+        const indexedIds = new Set(index.map(row => row.bankIndexId));
+        const selected = new Set();
+        for (const { pregunta_id, materia, tema } of attempts) {
+            const id = 'lib:' + pregunta_id;
+            if (indexedIds.has(id)) {
+                selected.add(id);
+                continue;
+            }
+            const replacement = index.find(row => !selected.has(row.bankIndexId) &&
+                normalizeDbText(row.materia) === normalizeDbText(materia) &&
+                normalizeDbText(row.tema) === normalizeDbText(tema));
+            if (replacement) selected.add(replacement.bankIndexId);
+        }
+        if (!selected.size) {
+            showToast('No hay preguntas de repaso disponibles para esos temas.', 'error');
             return;
         }
+        const { questions: rows } = await readBancoCourse(owner, [...selected]);
+        if (currentUser?.id !== owner || currentCampusScreen !== 'banco-screen' || CampusAccess.isFree()) return;
 
         // Configurar banco con estas preguntas
         bancoState.selectedMateria = 'seguimiento personalizado';
@@ -2833,7 +2835,7 @@ window.practicarPreguntasDificiles = async function () {
         bancoState.answers = bancoState.preguntas.map(function () { return { selected: null }; });
 
         document.getElementById('bq-materia').textContent = '🧠 seguimiento personalizado';
-        document.getElementById('bq-tema').textContent = 'preguntas que más te costaron';
+        document.getElementById('bq-tema').textContent = 'repaso de tus errores';
         document.getElementById('bq-total').textContent = bancoState.preguntas.length;
         document.getElementById('bq-result').classList.add('hidden');
 

@@ -1,4 +1,4 @@
-const CACHE_NAME = 'alcocermed-main-v187-revision-temas';
+const CACHE_NAME = 'alcocermed-main-v188-banco-oficial';
 const APP_SHELL = [
     './student-results.js?v=7',
     './student-results.css?v=1',
@@ -45,7 +45,7 @@ const APP_SHELL = [
     './flashcard-approved.css?v=6',
     './assets/fonts/outfit-900.woff2',
     './flashcard-workspace.js?v=20261109-foco',
-    './script.js?v=20261110-temas',
+    './script.js?v=20261110-banco',
     './campus-login.js?v=2',
     './campus-catalogs.js?v=2',
     './campus-exam-engine.js?v=2',

@@ -81,7 +81,7 @@ def from_medicine(entry, paper, pdf, anchors, explanations, editor):
                             list(dict.fromkeys(tuple(mark) for mark in locations[page])))
                   for page in pages]
     prepared = {**entry, **editor.get(entry['id'], {}), 'id': 'evaluacion:' + entry['id'], 'references': references}
-    if entry['difficulty'] == 'intermedio':
+    if entry['difficulty'] in ('facil', 'intermedio'):
         prepared['comentarios_opciones'] = {letter: explanations[choice]
                                           for letter, choice in zip('ABCD', entry['options'], strict=True)}
     return prepared
@@ -160,7 +160,7 @@ def source_locations(entry, cards, concepts, mini):
 
     source = entry['source']
     topic = source['topicId']
-    if entry['difficulty'] == 'intermedio':
+    if entry['difficulty'] in ('facil', 'intermedio'):
         index = int(entry['id'].rsplit('-', 1)[-1]) - 1
         card_id, _, _, _, _, *override = concepts[topic][index]
         card = cards[card_id]

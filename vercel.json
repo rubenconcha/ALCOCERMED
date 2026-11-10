@@ -9,9 +9,6 @@
     "api/mindmap.js": {
       "includeFiles": "api/_mindmaps/**"
     },
-    "api/banco.js": {
-      "includeFiles": "api/_mindmaps/{morfo_18_sangre__*,morfo_16_organos_sentidos__*}.json"
-    },
     "api/atlas.js": {
       "includeFiles": "api/_atlas/**"
     },
@@ -284,6 +281,11 @@
     {
       "source": "/musculos-interactivos.html",
       "destination": "/atlas-anatomico",
+      "permanent": false
+    },
+    {
+      "source": "/api/_banco/:path*",
+      "destination": "/api/banco",
       "permanent": false
     },
     {

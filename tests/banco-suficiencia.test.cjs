@@ -11,7 +11,7 @@ const source = fs.readFileSync(require.resolve('../script.js'), 'utf8');
 const banco = source.slice(source.indexOf('let bancoState ='), source.indexOf('var simState ='));
 const bank = { ...base, questions: base.questions.concat(guides) };
 const existing = [{ id: 7, MATERIA: 'MORFOFUNCION', TEMA: 'el sistema oseo', DIFICULTAD: 'facil' }];
-const course = { groups: [{ materia: 'MORFOFUNCION', tema: 'el sistema oseo', dificultad: 'facil', ids: ['db:7'] }] };
+const course = { groups: [{ materia: 'MORFOFUNCION', tema: 'el sistema oseo', dificultad: 'facil', ids: ['lib:-7'] }] };
 
 function fixture() {
     const nodes = new Map();
@@ -123,8 +123,12 @@ test('free and expired access cannot keep private Sufficiency questions; the cou
     resolve({ ok: true, json: async () => bank });
     await pending;
     assert.equal(state.suficiencia.length, 0);
-    context.fetch = async () => { requests.push('unexpected'); throw new Error('unexpected request'); };
+    context.fetch = async url => {
+        requests.push(url);
+        assert.equal(url, '/api/banco');
+        return { ok: true, json: async () => course };
+    };
     await context.loadBancoMaterias();
-    assert.equal(requests.length, 0);
+    assert.deepEqual(requests, ['/api/banco']);
     assert.equal(context.bancoMateriaRows('MORFOFUNCION').length, 1);
 });
