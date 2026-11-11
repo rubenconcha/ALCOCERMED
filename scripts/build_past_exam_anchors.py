@@ -235,6 +235,27 @@ def explicit_boxes(page, reference):
     return list(dict.fromkeys(boxes))
 
 
+def collect_assertion_marks(comment, book, document, assertions):
+    references = {f"{ref['book']}{ref['pdf']}": ref for ref in comment["references"]}
+    for claim, marks in zip(comment["afirmaciones"], assertions, strict=True):
+        for key, focus in claim["pasajes"].items():
+            if not key.startswith(book):
+                continue
+            reference = references[key]
+            page = document[reference["pdf"] - 1]
+            boxes = explicit_boxes(page, {**reference, "focus": focus})
+            marks[key] = relative_boxes(boxes, page.rect.width, page.rect.height)
+
+
+def combine_assertion_marks(assertions):
+    marks_by_page = {}
+    for passages in assertions:
+        for page, boxes in passages.items():
+            marks = marks_by_page.setdefault(page, [])
+            marks.extend(box for box in boxes if box not in marks)
+    return {**marks_by_page, "incisos": assertions}
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("sources", type=Path, help="Private referencias-oficiales directory")
@@ -254,6 +275,10 @@ def main():
             if ref.get("focus"):
                 pinned[ref["book"]].append((qid, ref))
     exact = {}
+    verified = {
+        qid: [{} for _ in comment["afirmaciones"]]
+        for qid, comment in comments.items() if comment.get("afirmaciones")
+    }
     frequency = Counter()
     for book, entry in zip("BSM", entries, strict=True):
         filename = args.sources / entry["archivo"]
@@ -266,9 +291,14 @@ def main():
             for qid, ref in pinned[book]:
                 page = document[ref["pdf"] - 1]
                 exact[qid, book, ref["pdf"]] = explicit_boxes(page, ref)
+            for qid, marks in verified.items():
+                collect_assertion_marks(comments[qid], book, document, marks)
     importance = {term: math.log1p(len(pages) / count) for term, count in frequency.items()}
     results = {}
     for qid, comment in comments.items():
+        if qid in verified:
+            results[qid] = combine_assertion_marks(verified[qid])
+            continue
         question = questions[qid]
         anchors = {}
         candidate_pages = []
@@ -324,7 +354,8 @@ def main():
                           for key, value in results.items()) + "\n}\n",
         encoding="utf-8",
     )
-    print(f"{len(results)} questions with marks; {sum(map(len, results.values()))} cited pages with marks")
+    marked_pages = sum(len(row) - ("incisos" in row) for row in results.values())
+    print(f"{len(results)} questions with marks; {marked_pages} cited pages with marks")
     missing = [qid for qid, c in comments.items() if c["references"] and qid not in results]
     print(f"{len(missing)} cited questions without text matches: " + ", ".join(missing))
 

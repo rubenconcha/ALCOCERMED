@@ -248,8 +248,8 @@ window.finalizarSimulacro = function () {
         simState.preguntas.forEach(function (q, i) {
             const selected = simState.answers[i].selected;
             const accepted = simAcceptedAnswerIndices(q);
-            const disputedKey = historical && q.clave_en_discrepancia;
             const review = { ...QuestionReview.commentaryData(q, campo), selected, accepted };
+            const disputedKey = historical && (q.clave_en_discrepancia || review.teaching?.clave);
             const isCorrect = accepted.includes(selected);
             const unanswered = selected === null;
 
@@ -286,7 +286,7 @@ window.finalizarSimulacro = function () {
                 questionSide.append(passage);
             }
             questionSide.append(QuestionReview.showOptions(review, disputedKey ? 'Clave original' : undefined));
-            layout.append(questionSide, QuestionReview.showCommentary(review, { compactSource: historical }));
+            layout.append(questionSide, QuestionReview.showCommentary(review, { compactSource: historical, showTeachingKey: historical }));
             item.append(header, layout);
             reviewList.append(item);
         });

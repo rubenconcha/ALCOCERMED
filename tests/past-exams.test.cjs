@@ -52,7 +52,7 @@ test('cada pregunta histórica tiene un comentario y las referencias distinguen 
         }
         const enriched = withCommentary(question);
         assert.equal(enriched.justificacion, text, question.id);
-        assert.equal(enriched.lectura_revision, 3);
+        assert.equal(enriched.lectura_revision, 4);
         const readings = enriched.lecturas_comentario || [];
         assert.equal(readings.length > 0, references.length > 0, question.id);
         for (const { slug, section, page, printed, marks } of readings) {
@@ -261,7 +261,7 @@ test('el desglose aplica filtros, conserva las claves originales y protege las p
         assert.equal(filtered.count, 1);
         const original = require('../api/_past_exams/2025-2026-1.json').questions[0];
         const { justificacion, fuente_comentario, lecturas_comentario, lectura_revision, ...originalFields } = filtered.questions[0].question;
-        assert.equal(lectura_revision, 3);
+        assert.equal(lectura_revision, 4);
         assert.equal(lecturas_comentario[0].slug, 'morfofuncion');
         assert.deepEqual(originalFields, original);
         assert.match(justificacion, /geniogloso/i);
@@ -297,9 +297,27 @@ test('el desglose aplica filtros, conserva las claves originales y protege las p
         assert.deepEqual(spinalQuestions.get('2022-2023-1-52').respuestas_aceptadas, ['E']);
         assert.equal(spinalQuestions.get('2022-2023-1-52').clave_en_discrepancia, true);
         assert.equal(spinalQuestions.get('2024-2025-3-73').clave_en_discrepancia, true);
-        assert.deepEqual(spinalQuestions.get('2024-2025-3-24').lecturas_comentario.map(ref => ref.page), [532, 533]);
+        const reflex = spinalQuestions.get('2024-2025-3-24').revision_docente;
+        assert.deepEqual(reflex.clave, { estado: 'sin_confirmar', opciones: [] });
+        assert.deepEqual(reflex.afirmaciones.map(item => [item.estado, item.lecturas.map(ref => ref.page)]),
+            [['incorrecta', [533]], ['contraste', [532, 533]]]);
         assert.deepEqual(spinalQuestions.get('2024-2025-1-64').lecturas_comentario.map(ref => ref.page), [535]);
-        assert.match(spinalQuestions.get('2025-2026-1-62').justificacion, /axilar.*deltoides y el redondo menor/);
+        assert.match(spinalQuestions.get('2025-2026-1-62').revision_docente.afirmaciones[2].comentario, /deltoides y redondo menor al nervio axilar/);
+        const start = spinalQuestions.get('2022-2023-1-52').revision_docente;
+        assert.deepEqual(start.clave, { estado: 'sin_alternativa', opciones: [] });
+        assert.deepEqual(start.afirmaciones.map(item => item.estado), ['incorrecta', 'correcta', 'correcta']);
+        assert.equal(start.afirmaciones[1].lecturas[0].page, 518);
+        assert.equal(start.afirmaciones[2].lecturas[0].page, 519);
+        const surface = spinalQuestions.get('2023-2024-1-68');
+        assert.deepEqual(surface.respuestas_aceptadas, ['A']);
+        assert.deepEqual(surface.revision_docente.clave, { estado: 'confirmada', opciones: ['E'] });
+        assert.ok(surface.revision_docente.afirmaciones.every(item => item.estado === 'incorrecta'));
+        const claims = spine.flatMap(row => row.question.revision_docente.afirmaciones);
+        assert.equal(claims.length, 103);
+        assert.ok(claims.every(claim => claim.lecturas.length && claim.lecturas.every(ref =>
+            ref.printed === ref.page - 28 && ref.marks.length)));
+        const lateral = spinalQuestions.get('2025-2026-2-18').revision_docente.afirmaciones;
+        assert.notDeepEqual(lateral[0].lecturas[0].marks, lateral[1].lecturas[0].marks);
         assert.equal(spinalQuestions.has('2021-1-27'), false);
         const emptyTopic = (await request({ subjects: 'salud', topics: 'salud-03' })).body;
         assert.equal(emptyTopic.count, 0);

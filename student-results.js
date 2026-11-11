@@ -181,7 +181,7 @@
   const type = kind(row);
   if (!items || !token || !['examenes', 'simulacros'].includes(type)) return items;
   const isPast = type === 'examenes';
-  const needsUpdate = item => !(item.reference_revision >= 3) && (
+  const needsUpdate = item => !(item.reference_revision >= 4) && (
    isPast || /^20\d{2}-(?:20\d{2}-)?[123]-\d{1,3}$/.test(item.id) ||
    !item.references?.length && (item.pdf_page || /^Examen pasado\b/i.test(item.source || ''))
   );
@@ -237,17 +237,21 @@
     if(!items.length)questions.append(el('p','No hay preguntas en esta categoría.'));
     items.forEach((q,i)=>{
      const card=el('article',null,'eval-section-card sr-question qr-container '+q.status);
-     card.append(el('small','Pregunta '+(q.number||i+1)+' · '+states[q.status]));
+     const historicalKey = kind(row) === 'examenes' && q.teaching?.clave;
+     const status = historicalKey && ['correct','wrong'].includes(q.status)
+      ? (q.status === 'correct' ? 'Coincide con la clave histórica' : 'La clave histórica marca otra opción')
+      : states[q.status];
+     card.append(el('small','Pregunta '+(q.number||i+1)+' · '+status));
      const layout=el('div',null,'qr-layout');
      const question=el('div',null,'qr-question');
      question.append(el('h3',q.question||'Enunciado no guardado'));
      if(q.passage)question.append(el('p',q.passage,'sr-passage'));
      const review={...q,accepted:q.key?q.accepted:[]};
      if(row.local||String(q.id).startsWith('suficiencia:'))review.source='';
-     question.append(root.QuestionReview.showOptions(review));
+     question.append(root.QuestionReview.showOptions(review, historicalKey ? 'Clave histórica' : undefined));
      if(q.status==='unanswered')question.append(el('p','No respondiste esta pregunta.'));
      if(q.status==='unknown')question.append(el('p','No hay clave o detalle válido suficiente para calificar esta respuesta.'));
-     layout.append(question,root.QuestionReview.showCommentary(review));
+     layout.append(question,root.QuestionReview.showCommentary(review,{showTeachingKey:Boolean(historicalKey)}));
      card.append(layout);
      questions.append(card);
     });

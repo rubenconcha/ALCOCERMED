@@ -65,11 +65,18 @@ window.createPastExamBreakdown = function (request, scope) {
         if (topicPicker.open) renderTopics();
     }
 
+    function expectedAnswers(question) {
+        const key = question.revision_docente?.clave;
+        return key ? key.opciones.map(letter => 'ABCDE'.indexOf(letter)) : simAcceptedAnswerIndices(question);
+    }
+
     function renderQuestion(focus = false) {
         const row = data.questions[cursor];
         const question = row.question;
         const state = answers.get(question.id);
-        const accepted = simAcceptedAnswerIndices(question);
+        const key = question.revision_docente?.clave;
+        const accepted = expectedAnswers(question);
+        const reviewOnly = key && !accepted.length;
         const ordinal = (data.page - 1) * data.pageSize + cursor + 1;
         const checked = Boolean(state?.checked);
         const topic = data.topics.find(item => item.id === row.topic);
@@ -78,7 +85,7 @@ window.createPastExamBreakdown = function (request, scope) {
             node('span', String(question.numero_original), 'past-question-badge'));
         $('past-question-stem').textContent = question.pregunta;
         const options = $('past-answer-options');
-        options.replaceChildren(node('legend', 'Elige una alternativa'));
+        options.replaceChildren(node('legend', reviewOnly ? 'Alternativas del examen' : 'Elige una alternativa'));
         for (const [position, letter] of [...'ABCDE'].entries()) {
             const content = question['opcion_' + letter.toLowerCase()];
             if (!content) continue;
@@ -88,7 +95,7 @@ window.createPastExamBreakdown = function (request, scope) {
             radio.name = 'past-answer';
             radio.value = position;
             radio.checked = state?.selected === position;
-            radio.disabled = checked;
+            radio.disabled = checked || Boolean(reviewOnly);
             radio.onchange = () => {
                 answers.set(question.id, { selected: position });
                 $('past-check-answer').disabled = !accepted.length;
@@ -101,16 +108,19 @@ window.createPastExamBreakdown = function (request, scope) {
             options.append(label);
         }
         const check = $('past-check-answer');
-        check.textContent = checked ? 'Volver a responder' : 'Comprobar respuesta';
+        check.textContent = reviewOnly ? (checked ? 'Cerrar revisión' : 'Revisar incisos')
+            : (checked ? 'Volver a responder' : 'Comprobar respuesta');
         check.classList.toggle('is-retry', checked);
-        check.disabled = !accepted.length || state?.selected == null;
+        check.disabled = !reviewOnly && (!accepted.length || state?.selected == null);
         const feedback = $('past-answer-feedback');
         feedback.hidden = !checked;
         const correct = checked && accepted.includes(state.selected);
         feedback.classList.toggle('is-correct', correct);
-        feedback.classList.toggle('is-incorrect', checked && !correct);
+        feedback.classList.toggle('is-incorrect', checked && !correct && !reviewOnly);
         if (checked) {
-            const result = question.clave_en_discrepancia
+            const result = reviewOnly
+                ? QuestionReview.bookKeyMessage(key)
+                : !key && question.clave_en_discrepancia
                 ? (correct ? 'Coincide con la clave original.' : 'La clave original marca otra opción.')
                 : (correct ? 'Respuesta correcta.' : 'Revisa tu respuesta.');
             feedback.replaceChildren(node('strong', result));
@@ -120,7 +130,9 @@ window.createPastExamBreakdown = function (request, scope) {
             : {};
         $('past-commentary').replaceChildren(QuestionReview.showCommentary(commentary, {
             compactSource: true,
-            lockedMessage: checked ? '' : accepted.length
+            lockedMessage: checked ? '' : reviewOnly
+                ? 'Abre la revisión para ver qué dice Saladin de cada inciso.'
+                : accepted.length
                 ? 'Comprueba tu respuesta para ver el comentario.'
                 : 'Selecciona otra pregunta para continuar.',
         }));
@@ -138,9 +150,12 @@ window.createPastExamBreakdown = function (request, scope) {
             const attempt = answers.get(item.question.id);
             let status = 'Pendiente';
             if (attempt?.checked) {
-                const correct = simAcceptedAnswerIndices(item.question).includes(attempt.selected);
-                number.classList.add(correct ? 'is-correct' : 'is-incorrect');
-                status = correct ? 'Correcta' : 'Incorrecta';
+                const expected = expectedAnswers(item.question);
+                if (expected.length) {
+                    const correct = expected.includes(attempt.selected);
+                    number.classList.add(correct ? 'is-correct' : 'is-incorrect');
+                    status = correct ? 'Correcta' : 'Incorrecta';
+                } else status = 'Revisada';
             }
             number.setAttribute('aria-label', 'Pregunta ' + position + ' de los resultados. Original ' +
                 item.question.numero_original + ' · ' + item.year + ' · ' + item.type + ' · ' + status);
@@ -313,10 +328,15 @@ window.createPastExamBreakdown = function (request, scope) {
     };
     $('past-answer-form').onsubmit = event => {
         event.preventDefault();
-        const id = data.questions[cursor].question.id;
+        const question = data?.questions[cursor]?.question;
+        if (!question) return;
+        const id = question.id;
         const answer = answers.get(id);
         if (answer?.checked) answers.delete(id);
         else if (answer) answer.checked = true;
+        else if (question.revision_docente?.clave && !expectedAnswers(question).length) {
+            answers.set(id, { checked: true });
+        }
         renderQuestion();
         $('past-check-answer').focus({ preventScroll: Boolean(assigned) });
     };

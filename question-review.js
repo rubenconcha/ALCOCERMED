@@ -44,6 +44,11 @@
    ...(q.passage?.text ? {passage: q.passage.text} : {}),
   }))};
  }
+ function bookKeyMessage(key) {
+  if (key.opciones.length) return 'Alternativa según Saladin · ' + key.opciones.join(', ');
+  return key.estado === 'sin_alternativa' ? 'Ninguna alternativa coincide con el texto.'
+   : 'El texto no permite confirmar una alternativa completa.';
+ }
  function inspect(payload){
   if(!payload||payload.version!==1||!Array.isArray(payload.items))return null;
   return payload.items.map(q=>{
@@ -52,7 +57,7 @@
    return {...q,status:!valid?'unknown':q.selected===null?'unanswered':q.accepted.includes(q.selected)?'correct':'wrong'};
   });
  }
- root.QuestionReview={snapshot,inspect,commentaryData};
+ root.QuestionReview={snapshot,inspect,commentaryData,bookKeyMessage};
  if(typeof module!=='undefined'&&module.exports)module.exports=root.QuestionReview;
  if(typeof document==='undefined')return;
  const el=(tag,value,cls)=>{const node=document.createElement(tag);if(value!=null)node.textContent=value;if(cls)node.className=cls;return node;};
@@ -115,9 +120,9 @@
   }
  }
 
- function showReferences(references) {
-  const block = el('section', null, 'qr-reading qr-source-reading');
-  block.append(el('h5', 'Fuente oficial', 'qr-subheading'));
+ function showReferences(references, inline = false) {
+  const block = el(inline ? 'div' : 'section', null, inline ? 'qr-source-reading' : 'qr-reading qr-source-reading');
+  if (!inline) block.append(el('h5', 'Fuente oficial', 'qr-subheading'));
   const byBook = new Map();
   for (const reference of references) {
    if (!byBook.has(reference.slug)) byBook.set(reference.slug, new Map());
@@ -147,18 +152,22 @@
   return block;
  }
 
- function showTeaching(teaching) {
+ function showTeaching(teaching, showKey) {
   const content = el('div', null, 'qr-teaching');
   if (teaching.concepto) content.append(el('h5', 'Idea clave', 'qr-subheading'), el('p', teaching.concepto, 'qr-commentary-copy'));
+  if (showKey && teaching.clave) content.append(el('p', bookKeyMessage(teaching.clave), 'qr-commentary-copy'));
   const list = el('ol', null, 'qr-reasons qr-teaching-claims');
-  teaching.afirmaciones.forEach(({ estado, comentario }, index) => {
+  teaching.afirmaciones.forEach(({ estado, comentario, lecturas }, index) => {
    const row = el('li', null, 'qr-reason');
    const label = el('div', null, 'qr-reason-label');
-   const state = { correcta: 'Correcta', incorrecta: 'Incorrecta', contraste: 'Revisar con el texto' }[estado];
+   const state = teaching.clave
+    ? { correcta: 'Correcto', incorrecta: 'Incorrecto', contraste: 'Sin confirmar' }[estado]
+    : { correcta: 'Correcta', incorrecta: 'Incorrecta', contraste: 'Revisar con el texto' }[estado];
    if (estado === 'correcta') row.classList.add('is-correct');
    if (estado === 'incorrecta') row.classList.add('is-wrong');
-   label.append(el('strong', 'Afirmación ' + (index + 1)), el('span', state, 'qr-reason-state'));
+   label.append(el('strong', (teaching.clave ? 'Inciso ' : 'Afirmación ') + (index + 1)), el('span', state, 'qr-reason-state'));
    row.append(label, el('p', comentario, 'qr-commentary-copy'));
+   if (lecturas?.length && typeof root.loadCampusAssets === 'function') row.append(showReferences(lecturas, true));
    list.append(row);
   });
   content.append(list);
@@ -179,7 +188,7 @@
   return content;
  }
 
- function showCommentary(review, { lockedMessage, workedSolution, sourceNote, compactSource = false, bankMode = false, openReading } = {}) {
+ function showCommentary(review, { lockedMessage, workedSolution, sourceNote, compactSource = false, bankMode = false, openReading, showTeachingKey = false } = {}) {
   const panel = el('section', null, 'qr-commentary');
   const heading = el('h4', null, 'qr-commentary-title');
   const icon = el('i', null, 'far fa-comment-alt');
@@ -193,7 +202,7 @@
    return panel;
   }
 
-  if (review.teaching) panel.append(showTeaching(review.teaching));
+  if (review.teaching) panel.append(showTeaching(review.teaching, showTeachingKey));
 
   const { options = [], selected, accepted = [], option_explanations = [], source, printed_page, pdf_page, reading } = review;
   const explanation = studentComment(review.explanation);
@@ -250,7 +259,9 @@
   if (reading) panel.append(showReading(reading, openReading));
 
   const linkedSource = review.references?.length && typeof root.loadCampusAssets === 'function';
-  if (linkedSource) panel.append(showReferences(review.references));
+  if (linkedSource) {
+   if (!review.teaching?.afirmaciones?.some(claim => claim.lecturas?.length)) panel.append(showReferences(review.references));
+  }
   else if (source && !(compactSource && fromPattern)) {
    const reference = el(compactSource ? 'details' : 'div', null, compactSource ? 'qr-reference qr-reference-compact' : 'qr-reference');
    const label = compactSource ? 'Fuente oficial' : fromPattern ? 'Origen de la clave' : reading ? 'Bibliografía oficial' : 'Fuente del comentario';

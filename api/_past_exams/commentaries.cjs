@@ -20,16 +20,27 @@ function withCommentary(question, sourceId = question.id) {
     const marksByPage = anchors[sourceId] || {};
     const sourcesByPage = new Map(comment.references.map(ref => [ref.book + ref.pdf, ref]));
     const citations = Object.keys(marksByPage).map(key => sourcesByPage.get(key)).filter(Boolean);
+    function readings(marks = {}) {
+        return Object.entries(marks).flatMap(([key, boxes]) => {
+            const ref = sourcesByPage.get(key);
+            if (!ref || !boxes.length) return [];
+            const { slug, label } = books[ref.book];
+            return [{ slug, label, section: ref.section, page: ref.pdf, printed: ref.printed, marks: boxes }];
+        });
+    }
     return {
         ...question,
         justificacion: comment.text,
         fuente_comentario: citations.map(formatReference).join(' / '),
-        lectura_revision: 3,
-        ...(citations.length ? {
-            lecturas_comentario: citations.map(({ book, section, pdf, printed }) => {
-                const { slug, label } = books[book];
-                return { slug, label, section, page: pdf, printed, marks: marksByPage[book + pdf] };
-            }),
+        lectura_revision: 4,
+        ...(citations.length ? { lecturas_comentario: readings(marksByPage) } : {}),
+        ...(comment.afirmaciones?.length ? {
+            revision_docente: {
+                clave: comment.clave,
+                afirmaciones: comment.afirmaciones.map(({ estado, comentario }, i) => ({
+                    estado, comentario, lecturas: readings(marksByPage.incisos?.[i]),
+                })),
+            },
         } : {}),
         ...(comment.status === 'd' ? { clave_en_discrepancia: true } : {}),
     };

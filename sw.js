@@ -1,8 +1,8 @@
-const CACHE_NAME = 'alcocermed-main-v191-medula-espinal';
+const CACHE_NAME = 'alcocermed-main-v192-incisos-medula';
 const APP_SHELL = [
-    './student-results.js?v=10',
+    './student-results.js?v=11',
     './student-results.css?v=1',
-    './question-review.js?v=14',
+    './question-review.js?v=15',
     './suficiencia-core.js?v=12',
     './suficiencia.js?v=17',
     './suficiencia.css?v=9',
@@ -48,7 +48,7 @@ const APP_SHELL = [
     './script.js?v=20261110-banco',
     './campus-login.js?v=2',
     './campus-catalogs.js?v=2',
-    './campus-exam-engine.js?v=2',
+    './campus-exam-engine.js?v=3',
     './topic-evaluations.js?v=20261110-revision2',
     './topic-evaluations.css?v=6',
     './recuperar.html',
@@ -114,7 +114,7 @@ const APP_SHELL = [
     './sufficiency-practice-content.js?v=2',
     './sufficiency-practice.js?v=3',
     './past-exams.js?v=15',
-    './past-exam-breakdown.js?v=9',
+    './past-exam-breakdown.js?v=10',
     './past-exams.css?v=7',
     './content/past-exams/catalog.json?v=examenes-umss',
 ];
