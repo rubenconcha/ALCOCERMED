@@ -177,29 +177,38 @@
    return { ...item, teaching, source, printed_page, pdf_page };
   });
  }
- async function loadGeneralReview(items, row, token) {
-  if (!items || !token || kind(row) !== 'simulacros') return items;
-  const title = attemptTitle(row);
-  const exam = root.CampusCatalogs?.simulations?.entries.find(entry =>
-   entry.title === title && ['first', 'second', 'final'].includes(entry.scope));
-  if (!exam?.curatedId || !items.some(item => !item.references?.length &&
-   (item.pdf_page || /^Examen pasado\b/i.test(item.source || '')))) return items;
+ async function refreshSavedExplanations(items, row, token) {
+  const type = kind(row);
+  if (!items || !token || !['examenes', 'simulacros'].includes(type)) return items;
+  const isPast = type === 'examenes';
+  const needsUpdate = item => !(item.reference_revision >= 2) && (
+   isPast || /^20\d{2}-(?:20\d{2}-)?[123]-\d{1,3}$/.test(item.id) ||
+   !item.references?.length && (item.pdf_page || /^Examen pasado\b/i.test(item.source || ''))
+  );
+  if (!items.some(needsUpdate)) return items;
   try {
-   const response = await fetch('/api/simulation?id=' + encodeURIComponent(exam.curatedId), {
+   const title = attemptTitle(row);
+   const id = isPast
+    ? (await root.loadPastExamCatalog()).exams.find(exam => exam.title === title)?.id
+    : root.CampusCatalogs?.simulations?.entries.find(entry =>
+       entry.title === title && ['first', 'second', 'final'].includes(entry.scope))?.curatedId;
+   if (!id) return items;
+   const endpoint = isPast ? '/api/past-exam' : '/api/simulation';
+   const response = await fetch(endpoint + '?id=' + encodeURIComponent(id), {
     headers: { Authorization: 'Bearer ' + token }, cache: 'no-store', signal: AbortSignal.timeout(8000)
    });
    if (!response.ok) return items;
    const paper = await response.json();
-   if (paper.id !== exam.curatedId || !Array.isArray(paper.questions)) return items;
+   if (paper.id !== id || !Array.isArray(paper.questions)) return items;
    const questions = new Map(paper.questions.map(q => [q.id, q]));
    return items.map(item => {
     const q = questions.get(item.id);
-    if (!q || item.references?.length || q.pregunta !== item.question) return item;
+    if (!q || !needsUpdate(item) || q.pregunta !== item.question || !item.key) return item;
     const { options, ...comment } = root.QuestionReview.commentaryData(q, (question, key) => question[key]);
-    const key = 'ABCDE'.indexOf(q.respuesta_correcta);
-    if (!item.key || item.accepted.length !== 1 || item.accepted[0] !== key ||
+    const accepted = new Set(simAcceptedAnswerIndices(q));
+    if (accepted.size !== new Set(item.accepted).size || !item.accepted.every(key => accepted.has(key)) ||
      options.length !== item.options.length || !options.every((option, i) => option === item.options[i])) return item;
-    return { ...item, ...comment };
+    return { ...item, ...comment, references: comment.references };
    });
   } catch (_) { return items; }
  }
@@ -215,7 +224,7 @@
    if(!missing&&(res.data?.user_id!==account||String(res.data?.id)!==String(row.id)))throw Error('Este intento no está disponible para tu cuenta.');
    const record={...row,question_review:missing?null:res.data.question_review},s=summary(record);
    s.items=await loadPrepaTeaching(s.items,live?.access_token);
-   s.items=await loadGeneralReview(s.items,row,live?.access_token);
+   s.items=await refreshSavedExplanations(s.items,row,live?.access_token);
    if(!valid())return;
    detail.replaceChildren(close,el('h2',attemptTitle(row,'Resultado')));
    const stats=el('div',null,'eval-metrics-grid');[['correct','Aciertos'],['wrong','Errores'],['omitted','Omitidas'],['unknown','Sin clave / detalle incompleto']].forEach(([key,label])=>stats.append(metric(label,s[key]??'No registrado')));detail.append(stats);drawAnalysis([record],detail);

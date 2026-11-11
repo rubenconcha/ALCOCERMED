@@ -52,10 +52,13 @@ test('cada pregunta histórica tiene un comentario y las referencias distinguen 
         }
         const enriched = withCommentary(question);
         assert.equal(enriched.justificacion, text, question.id);
-        assert.deepEqual((enriched.lecturas_comentario || []).map(r => [r.slug, r.section, r.page, r.printed]),
-            references.map(r => [readerSlugs[r.book], r.section, r.pdf, r.printed]), question.id);
-        if (references.length) assert.ok(enriched.lecturas_comentario.some(r => r.marks?.length), question.id);
-        for (const { marks = [] } of enriched.lecturas_comentario || []) {
+        assert.equal(enriched.lectura_revision, 2);
+        const readings = enriched.lecturas_comentario || [];
+        assert.equal(readings.length > 0, references.length > 0, question.id);
+        for (const { slug, section, page, printed, marks } of readings) {
+            assert.ok(references.some(ref => readerSlugs[ref.book] === slug && ref.section === section &&
+                ref.pdf === page && ref.printed === printed), question.id);
+            assert.ok(marks?.length, question.id);
             for (const [x, y, w, h] of marks) {
                 assert.ok(x >= 0 && y >= 0 && w > 0 && h > 0 && x + w <= 1.0001 && y + h <= 1.0001, question.id);
             }
@@ -73,7 +76,10 @@ test('cada pregunta histórica tiene un comentario y las referencias distinguen 
     });
     assert.equal(marks.length, 3);
     const capsule = withCommentary(questions.find(question => question.id === '2025-2026-1-29'));
-    assert.deepEqual(capsule.lecturas_comentario.map(ref => [ref.page, ref.marks.length]), [[42, 3], [43, 3]]);
+    assert.deepEqual(capsule.lecturas_comentario.map(ref => ref.page), [42, 43]);
+    const angiotensin = withCommentary(questions.find(question => question.id === '2021-1-1'));
+    assert.deepEqual(angiotensin.lecturas_comentario.map(ref => [ref.page, ref.printed]), [[670, 642], [937, 909]]);
+    assert.match(angiotensin.justificacion, /hipotálamo.*\n.*angiotensina II.*sed.*vasoconstricción/);
 });
 
 test('el cronómetro de exámenes pasados permite responder después de 100 minutos y conserva el cierre de simulacros', () => {
@@ -212,16 +218,16 @@ test('el índice temático se alinea con la numeración histórica y las fuentes
             assert.equal(indexed[n - 1], null);
         }
     }
-    assert.equal(tagged, 1424);
+    assert.equal(tagged, 1490);
     for (const topic of Object.values(thematicIndex.topics)) {
         assert.ok(thematicIndex.sources[topic.subject]);
         assert.ok(thematicIndex.sources[topic.source || topic.subject]);
-        assert.ok(topic.section && topic.title && topic.pdfPage > 0);
+        assert.ok(topic.section && topic.title && (topic.pdfPage === null || topic.pdfPage > 0));
         assert.ok(topic.printedPage === null || topic.printedPage > 0);
     }
     assert.equal(thematicIndex.exams['2025-2026-1'][0], 'morfo-10');
     assert.equal(thematicIndex.exams['2025-2026-3'][90], 'salud-16');
-    assert.equal(thematicIndex.exams['2021-1'][89], 'salud');
+    assert.equal(thematicIndex.exams['2021-1'][89], 'salud-30');
     assert.equal(thematicIndex.topics['morfo-08'].pdfPage, 261);
     assert.equal(thematicIndex.topics['morfo-08'].printedPage, 233);
 });
@@ -254,7 +260,8 @@ test('el desglose aplica filtros, conserva las claves originales y protege las p
             topics: 'morfo-10', search: 'músculo geniogloso' })).body;
         assert.equal(filtered.count, 1);
         const original = require('../api/_past_exams/2025-2026-1.json').questions[0];
-        const { justificacion, fuente_comentario, lecturas_comentario, ...originalFields } = filtered.questions[0].question;
+        const { justificacion, fuente_comentario, lecturas_comentario, lectura_revision, ...originalFields } = filtered.questions[0].question;
+        assert.equal(lectura_revision, 2);
         assert.equal(lecturas_comentario[0].slug, 'morfofuncion');
         assert.deepEqual(originalFields, original);
         assert.match(justificacion, /geniogloso/i);
@@ -266,8 +273,18 @@ test('el desglose aplica filtros, conserva las claves originales y protege las p
         assert.ok(freeBlood.questions.every(row => row.topic === 'morfo-18' && row.year === catalog.freeYear));
         premium = true;
         const blood = (await request(studyTopic)).body;
-        assert.equal(blood.count, 41);
+        assert.equal(blood.count, 45);
         assert.ok(blood.questions.every(row => row.topic === 'morfo-18'));
+        const barrier = { search: 'barrera hematoencefálica', subjects: 'morfo' };
+        const nervousTissue = (await request({ ...barrier, topics: 'morfo-12' })).body;
+        assert.equal(nervousTissue.count, 0);
+        const brain = (await request({ ...barrier, topics: 'morfo-14' })).body;
+        const bloodBrain = brain.questions.find(row => row.question.id === '2024-2025-3-8');
+        assert.ok(bloodBrain);
+        assert.deepEqual(bloodBrain.question.lecturas_comentario.map(ref => [ref.page, ref.printed]), [[549, 521]]);
+        assert.match(bloodBrain.question.justificacion, /endoteliales.*\n.*ependimarias/);
+        const hormonal = (await request({ topics: 'morfo-17', search: 'angiotensina II neurohipófisis' })).body;
+        assert.deepEqual(hormonal.questions.map(row => row.question.id), ['2021-1-1']);
         const emptyTopic = (await request({ subjects: 'salud', topics: 'salud-03' })).body;
         assert.equal(emptyTopic.count, 0);
         assert.deepEqual(emptyTopic.questions, []);
@@ -277,7 +294,7 @@ test('el desglose aplica filtros, conserva las claves originales y protege las p
         assert.equal(available.available, 1491);
         assert.equal(available.requested, false);
         const unconfirmed = (await request({ unconfirmed: '1', page: '999' })).body;
-        assert.equal(unconfirmed.count, 67);
+        assert.equal(unconfirmed.count, 1);
         assert.equal(unconfirmed.page, unconfirmed.pages);
         assert.ok(unconfirmed.questions.every(row => !row.topic));
         const cross = (await request({ subjects: 'biologia', topics: 'biologia-19' })).body;

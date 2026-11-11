@@ -17,16 +17,18 @@ function formatReference({ book, section, pdf, printed }) {
 function withCommentary(question, sourceId = question.id) {
     const comment = comments[sourceId];
     if (!comment) return question;
-    const citations = anchors[sourceId];
+    const marksByPage = anchors[sourceId] || {};
+    const sourcesByPage = new Map(comment.references.map(ref => [ref.book + ref.pdf, ref]));
+    const citations = Object.keys(marksByPage).map(key => sourcesByPage.get(key)).filter(Boolean);
     return {
         ...question,
         justificacion: comment.text,
-        fuente_comentario: comment.references.map(formatReference).join(' / '),
-        ...(comment.references.length ? {
-            lecturas_comentario: comment.references.map(({ book, section, pdf, printed }) => {
+        fuente_comentario: citations.map(formatReference).join(' / '),
+        lectura_revision: 2,
+        ...(citations.length ? {
+            lecturas_comentario: citations.map(({ book, section, pdf, printed }) => {
                 const { slug, label } = books[book];
-                const marks = citations?.[book + pdf];
-                return { slug, label, section, page: pdf, printed, ...(marks ? { marks } : {}) };
+                return { slug, label, section, page: pdf, printed, marks: marksByPage[book + pdf] };
             }),
         } : {}),
         ...(comment.status === 'd' ? { clave_en_discrepancia: true } : {}),

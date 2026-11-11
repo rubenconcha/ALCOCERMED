@@ -1,7 +1,7 @@
 """Find cited terms in the exact official PDF editions for the past exam reader."""
 
 import argparse
-from collections import Counter
+from collections import Counter, defaultdict
 import hashlib
 import json
 import math
@@ -29,11 +29,24 @@ IGNORE = set("""
     tener tipo tipos total frente trata presenta razon medida define
     solamente asi esta estas este estos eso esas esos siendo suele suelen
     importante importancia traves sufre permite interviene participa
+    libro textos consultados bibliografia oficial historial historica menciona
+    hallado dato datos especifico especifica concreta contexto presentada
 """.split())
+SHORT_TERMS = {"adn", "rna", "arn", "atp", "adp", "adh", "eca", "ods", "lcr", "bhe", "igg", "igm", "iga"}
 
-# The labels of Calvo's Fig. 1-4 are part of the figure image on page 42.
+# Calvo's figures have labels embedded in images with no PDF text layer.
 FIGURE_TERMS = {
-    ("B", 42): {"capsula": [(14, 184, 40, 193), (18, 265, 45, 274), (18, 391, 45, 399)]}
+    ("B", 42): {"capsula": [(14, 184, 40, 193), (18, 265, 45, 274), (18, 391, 45, 399)]},
+    ("B", 387): {
+        "alanina": [(56, 375, 85, 383)],
+        "leucina": [(141, 375, 171, 383)],
+        "isoleucina": [(185, 375, 216, 383)],
+        "metionina": [(97, 436, 134, 443)],
+        "fenilalanina": [(142, 436, 182, 443)],
+        "serina": [(14, 499, 42, 507)],
+        "treonina": [(55, 499, 86, 507)],
+        "tirosina": [(97, 499, 129, 507)],
+    },
 }
 FOCUS_TERMS = {
     "2025-2026-1-29": {"capsula", "glucocaliz"},
@@ -67,25 +80,105 @@ def normalize(word):
         if not unicodedata.combining(char)
     )
     word = re.sub(r"[^a-z]", "", word)
-    if len(word) < 4 or word in IGNORE:
+    if (len(word) < 4 and word not in SHORT_TERMS) or word in IGNORE:
         return ""
     if len(word) > 5 and word.endswith(("as", "es", "os", "is")):
         return word[:-1]
     return word
 
 
-def tokens(text):
-    return {term for word in re.findall(r"[^\W\d_]+", text) if (term := normalize(word))}
+def words_in(text):
+    joined = re.sub(r"(?<=\w)-\s*\n\s*(?=\w)", "", text)
+    return [term for word in re.findall(r"[^\W\d_]+(?:[-‐‑–][^\W\d_]+)*", joined) if (term := normalize(word))]
 
 
 def read_page(page, extra_terms):
-    words = {}
-    for x0, y0, x1, y1, word, *_ in page.get_text("words"):
+    words = defaultdict(list)
+    blocks = defaultdict(lambda: defaultdict(list))
+    for x0, y0, x1, y1, word, block, line, _ in page.get_text("words"):
         term = normalize(word)
         if term and 0 <= x0 < x1 <= page.rect.width and 0 <= y0 < y1 <= page.rect.height:
-            words.setdefault(term, []).append((x0, y0, x1, y1))
+            rect = (x0, y0, x1, y1)
+            words[term].append(rect)
+            if .038 * page.rect.height < y0 and y1 < .98 * page.rect.height:
+                blocks[block][line].append((term, rect))
     words.update(extra_terms)
-    return words, page.rect.width, page.rect.height
+    windows = []
+    for block in blocks.values():
+        lines = list(block.values())
+        for first in range(len(lines)):
+            window = [entry for line in lines[first:first + 3] for entry in line]
+            if len(window) < 2:
+                continue
+            terms = [term for term, _ in window]
+            windows.append((set(terms), set(zip(terms, terms[1:])), window))
+    return words, windows, page.rect.width, page.rect.height
+
+
+def targets(question, comment):
+    stem = question["pregunta"]
+    # A sequence starting at 1 distinguishes assertions from a decimal or
+    # an incidental number within a question.
+    pieces = re.split(r"(?<![\w.])([1-5])(?:\.\s*[-–]?\s*|[)-]\s*)(?=\D)", stem)
+    split = len(pieces) >= 5 and pieces[1::2] == [str(i) for i in range(1, len(pieces) // 2 + 1)]
+    title = set(words_in(pieces[0])) if split else set()
+    if split:
+        statements = pieces[2::2]
+    else:
+        accepted = question.get("respuestas_aceptadas", [])
+        options = " ".join(question.get("opcion_" + key.lower()) or "" for key in accepted if key)
+        statements = [stem + " " + options]
+    explanation = [
+        words_in(part) for part in re.split(r"(?<=[.!?])\s+(?=[A-ZÁÉÍÓÚÑ0-9])|\n", comment)
+        if not re.search(r"(?:los textos|el compendio|los pasajes|las páginas|la bibliograf[ií]a)\b.{0,85}"
+                         r"\bno (?:detalla|incluye|contiene|permite|desarrolla|presenta|proporciona|establece|reproduce|dan?|expone)",
+                         part, flags=re.I)
+    ]
+    all_explanation = {term for part in explanation for term in part}
+    for statement in statements:
+        words = words_in(statement)
+        key = set(words)
+        pairs = set(zip(words, words[1:]))
+        if not key:
+            continue
+        # The explanation often supplies the corrected term for a false assertion.
+        related = max(explanation, key=lambda part: len(key.intersection(part)), default=[])
+        if len(key.intersection(related)) < 2 and split:
+            related = []
+        support = set(related) if split else all_explanation
+        pairs.update(zip(related, related[1:]))
+        yield key, support, title, all_explanation, pairs
+
+
+def passage(target, windows, importance):
+    statement, supporting, title, explanation, phrases = target
+    best = None
+    for terms, pairs, words in windows:
+        direct = terms & statement
+        corrected = terms & supporting
+        shared = direct & corrected
+        exact_pairs = phrases & pairs
+        subject = terms & title
+        if len(direct | corrected) < 2 and not (direct and subject - direct):
+            continue
+        if not direct and len(corrected) < 3:
+            continue
+        weight = sum(importance[word] for word in direct | corrected)
+        weight += .7 * sum(importance[word] for word in shared)
+        weight += .32 * sum(importance[word] for word in subject - direct - corrected)
+        weight += .14 * sum(importance[word] for word in (terms & explanation) - direct - corrected)
+        weight += 1.35 * sum(min(importance[a], importance[b]) for a, b in exact_pairs)
+        if best and weight <= best[0]:
+            continue
+        phrase_terms = {term for pair in exact_pairs for term in pair}
+        ranked = sorted(direct | corrected | subject, key=lambda word: (
+            word in phrase_terms, word in shared, word in direct or word in corrected, importance[word], word
+        ), reverse=True)
+        boxes = [next(rect for term, rect in words if term == word) for word in ranked[:6]]
+        if boxes:
+            # The reader scrolls to the first rectangle.
+            best = weight, boxes
+    return best
 
 
 def cited_boxes(terms, question_terms, focus, frequency, page_count, words):
@@ -131,6 +224,17 @@ def relative_boxes(boxes, width, height):
     ]
 
 
+def explicit_boxes(page, reference):
+    boxes = []
+    image_labels = FIGURE_TERMS.get((reference["book"], reference["pdf"]), {})
+    for phrase in reference["focus"]:
+        hits = image_labels.get(normalize(phrase)) or page.search_for(phrase)
+        if not hits:
+            raise ValueError(f"Passage missing from {reference['book']} PDF {reference['pdf']}: {phrase}")
+        boxes.extend(tuple(rect) for rect in hits[:3])
+    return list(dict.fromkeys(boxes))
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("sources", type=Path, help="Private referencias-oficiales directory")
@@ -144,6 +248,12 @@ def main():
     }
     cited = {(r["book"], r["pdf"]) for c in comments.values() for r in c["references"]}
     pages = {}
+    pinned = defaultdict(list)
+    for qid, comment in comments.items():
+        for ref in comment["references"]:
+            if ref.get("focus"):
+                pinned[ref["book"]].append((qid, ref))
+    exact = {}
     frequency = Counter()
     for book, entry in zip("BSM", entries, strict=True):
         filename = args.sources / entry["archivo"]
@@ -153,26 +263,62 @@ def main():
             for key in sorted(key for key in cited if key[0] == book):
                 pages[key] = read_page(document[key[1] - 1], FIGURE_TERMS.get(key, {}))
                 frequency.update(pages[key][0].keys())
+            for qid, ref in pinned[book]:
+                page = document[ref["pdf"] - 1]
+                exact[qid, book, ref["pdf"]] = explicit_boxes(page, ref)
+    importance = {term: math.log1p(len(pages) / count) for term, count in frequency.items()}
     results = {}
     for qid, comment in comments.items():
         question = questions[qid]
-        terms = tokens(comment["text"])
-        question_terms = tokens(" ".join([question["pregunta"]] + [
-            question.get("opcion_" + letter) or "" for letter in "abcde"
-        ]))
-        focus = FOCUS_TERMS.get(qid, set())
         anchors = {}
+        candidate_pages = []
         for ref in comment["references"]:
             key = (ref["book"], ref["pdf"])
-            words, width, height = pages[key]
-            if key == ("S", 9) and qid in ODS_QUESTIONS:
+            words, _, _, _ = pages[key]
+            if ref.get("focus"):
+                boxes = exact[qid, *key]
+            elif key == ("S", 9) and qid in ODS_QUESTIONS:
                 boxes = [ODS_TILES[goal] for goal in ODS_QUESTIONS[qid]]
+            elif qid in FOCUS_TERMS:
+                boxes = cited_boxes(set(), set(), FOCUS_TERMS[qid], frequency, len(pages), words)
             else:
-                boxes = cited_boxes(terms, question_terms, focus, frequency, len(pages), words)
+                candidate_pages.append(key)
+                continue
             if boxes:
-                anchors[f"{key[0]}{key[1]}"] = relative_boxes(boxes, width, height)
+                anchors[key] = boxes
+        # Select the best localized source for each assertion independently,
+        # then open the strongest passage before any supporting pages.
+        matches = []
+        for target in targets(question, comment["text"]):
+            candidates = [
+                (key, result) for key in candidate_pages
+                if (result := passage(target, pages[key][1], importance))
+            ]
+            if candidates:
+                matches.append(max(candidates, key=lambda candidate: candidate[1][0]))
+        matches.sort(key=lambda match: match[1][0], reverse=True)
+        minimum_score = min(12, matches[0][1][0] * .5) if matches else 0
+        for key, (score, boxes) in matches:
+            if key not in anchors and score < minimum_score:
+                continue
+            marks = anchors.setdefault(key, [])
+            marks.extend(box for box in boxes if box not in marks)
+        if not anchors:
+            # Tables can have one cell per PDF block. Require terms that occur
+            # near one another on a cited page before using a wider search.
+            stem = set(words_in(question["pregunta"]))
+            explanation = set(words_in(comment["text"]))
+            for key in candidate_pages:
+                words, _, _, _ = pages[key]
+                boxes = cited_boxes(explanation, stem, set(), frequency, len(pages), words)
+                if len(boxes) >= 2:
+                    anchors[key] = boxes
+                    break
         if anchors:
-            results[qid] = anchors
+            results[qid] = {
+                f"{key[0]}{key[1]}": relative_boxes(boxes, pages[key][2], pages[key][3])
+                for key, boxes in anchors.items()
+            }
     (EXAMS / "reading-anchors.json").write_text(
         "{\n" + ",\n".join(json.dumps(key) + ":" + json.dumps(value, separators=(",", ":"))
                           for key, value in results.items()) + "\n}\n",

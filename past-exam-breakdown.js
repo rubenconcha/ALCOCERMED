@@ -72,7 +72,8 @@ window.createPastExamBreakdown = function (request, scope) {
         const accepted = simAcceptedAnswerIndices(question);
         const ordinal = (data.page - 1) * data.pageSize + cursor + 1;
         const checked = Boolean(state?.checked);
-        $('past-question-meta').textContent = row.type + ' · ' + row.year;
+        const topic = data.topics.find(item => item.id === row.topic);
+        $('past-question-meta').textContent = [row.type, row.year, topic?.title].filter(Boolean).join(' · ');
         $('past-question-title').replaceChildren(document.createTextNode('Pregunta '),
             node('span', String(question.numero_original), 'past-question-badge'));
         $('past-question-stem').textContent = question.pregunta;

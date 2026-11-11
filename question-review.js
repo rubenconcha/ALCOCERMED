@@ -11,6 +11,7 @@
   const comments = read(q, 'comentarios_opciones');
   const reading = read(q, 'banco_lectura');
   const references = read(q, 'lecturas_comentario');
+  const referenceRevision = read(q, 'lectura_revision');
   const teaching = read(q, 'revision_docente');
   const option_explanations = options.map((_, i) => String(comments?.['ABCDE'[i]] || '').trim());
   const blocks = explanation.split(/\n\s*\n/);
@@ -26,6 +27,7 @@
    pdf_page: String(read(q, 'paginas_pdf') || ''),
    ...(reading?.title ? { reading } : {}),
    ...(Array.isArray(references) && references.length ? { references } : {}),
+   ...(Number.isInteger(referenceRevision) ? { reference_revision: referenceRevision } : {}),
    ...(teaching?.afirmaciones?.length ? { teaching } : {}),
   };
  }
@@ -122,9 +124,9 @@
    byBook.get(reference.slug).set(reference.page, reference);
   }
   for (const pages of byBook.values()) {
-   const citations = [...pages.values()].sort((a, b) => a.page - b.page);
-   const { slug, label } = citations[0];
-   const page = (citations.find(reference => reference.marks?.length) || citations[0]).page;
+   const inReviewOrder = [...pages.values()];
+   const { slug, label, page } = inReviewOrder.find(reference => reference.marks?.length) || inReviewOrder[0];
+   const citations = inReviewOrder.sort((a, b) => a.page - b.page);
    const printed = citations.map(reference => reference.printed).filter(Boolean);
    const digital = citations.map(reference => reference.page);
    const sameNumbers = citations.every(reference => reference.printed === reference.page);

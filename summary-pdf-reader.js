@@ -79,6 +79,7 @@
             this.highlightedEntries = new Set();
             this.zoom = 1;
             this.currentPage = 1;
+            this.focusedPage = null;
             this.host.classList.add('summary-pdf-reader');
             const toolbar = document.createElement('div');
             toolbar.className = 'summary-pdf-toolbar';
@@ -143,6 +144,12 @@
             this.pages.setAttribute('aria-label', `Páginas del ${this.label}. Desliza para leer.`);
             this.host.replaceChildren(this.pages);
             (toolbarHost || this.host).prepend(toolbar);
+            const resumeScrolling = () => { this.focusedPage = null; };
+            this.pages.addEventListener('wheel', resumeScrolling, { passive: true });
+            this.pages.addEventListener('pointerdown', resumeScrolling, { passive: true });
+            this.pages.addEventListener('keydown', event => {
+                if (['ArrowUp', 'ArrowDown', 'PageUp', 'PageDown', 'Home', 'End', ' '].includes(event.key)) resumeScrolling();
+            });
             this.pages.addEventListener('scroll', () => {
                 if (!this.scrollFrame) this.scrollFrame = requestAnimationFrame(() => {
                     this.scrollFrame = null;
@@ -249,9 +256,16 @@
         goToPage(number, focus = false) {
             const page = this.entriesByPage.get(number);
             if (!page) return;
+            this.focusedPage = focus && this.selection ? number : null;
+            this.positionPage(page, focus);
+            this.currentPage = page.number;
+            this.updateControls();
+        }
+
+        positionPage(page, focus) {
             const box = page.el.getBoundingClientRect();
             const view = this.pages.getBoundingClientRect();
-            const mark = focus && this.highlights.get(number)?.[0];
+            const mark = focus && this.highlights.get(page.number)?.[0];
             const context = Math.min(200, this.pages.clientHeight * .27);
             const offset = mark ? Math.max(0, mark[1] * box.height - context) : 0;
             this.pages.scrollTop += box.top - view.top - 12 + offset;
@@ -262,8 +276,6 @@
                     this.pages.scrollLeft += left - view.left - this.pages.clientWidth * .25;
                 }
             }
-            this.currentPage = page.number;
-            this.updateControls();
         }
 
         layout() {
@@ -345,7 +357,12 @@
                 canvas.style.width = viewport.width + 'px'; canvas.style.height = viewport.height + 'px';
                 canvas.setAttribute('role', 'img');
                 canvas.setAttribute('aria-label', `${entry.label} del ${this.label}`);
-                entry.el.style.height = viewport.height + 'px';
+                const measuredHeight = viewport.height + 'px';
+                if (entry.el.style.height !== measuredHeight) {
+                    entry.el.style.height = measuredHeight;
+                    const target = this.entriesByPage.get(this.focusedPage);
+                    if (target) this.positionPage(target, true);
+                }
                 entry.task = page.render({ canvasContext: canvas.getContext('2d', { alpha: false }), viewport,
                     transform: [density, 0, 0, density, 0, 0] });
                 await entry.task.promise;
@@ -396,7 +413,7 @@
         }
 
         updateCurrentPage() {
-            if (!this.entries.length) return;
+            if (!this.entries.length || this.focusedPage !== null) return;
             const top = this.pages.getBoundingClientRect().top + 30;
             let first = 0, last = this.entries.length;
             while (first < last) {
@@ -454,6 +471,7 @@
             this.book?.destroy();
             this.book = null; this.cover = null;
             this.selection = null;
+            this.focusedPage = null;
             this.highlights.clear();
             this.entries = [];
             this.entriesByPage.clear();
