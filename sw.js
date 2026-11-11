@@ -1,6 +1,6 @@
-const CACHE_NAME = 'alcocermed-main-v190-referencias-examenes';
+const CACHE_NAME = 'alcocermed-main-v191-medula-espinal';
 const APP_SHELL = [
-    './student-results.js?v=9',
+    './student-results.js?v=10',
     './student-results.css?v=1',
     './question-review.js?v=14',
     './suficiencia-core.js?v=12',

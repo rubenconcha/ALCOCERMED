@@ -181,7 +181,7 @@
   const type = kind(row);
   if (!items || !token || !['examenes', 'simulacros'].includes(type)) return items;
   const isPast = type === 'examenes';
-  const needsUpdate = item => !(item.reference_revision >= 2) && (
+  const needsUpdate = item => !(item.reference_revision >= 3) && (
    isPast || /^20\d{2}-(?:20\d{2}-)?[123]-\d{1,3}$/.test(item.id) ||
    !item.references?.length && (item.pdf_page || /^Examen pasado\b/i.test(item.source || ''))
   );

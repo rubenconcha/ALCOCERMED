@@ -52,7 +52,7 @@ test('cada pregunta histórica tiene un comentario y las referencias distinguen 
         }
         const enriched = withCommentary(question);
         assert.equal(enriched.justificacion, text, question.id);
-        assert.equal(enriched.lectura_revision, 2);
+        assert.equal(enriched.lectura_revision, 3);
         const readings = enriched.lecturas_comentario || [];
         assert.equal(readings.length > 0, references.length > 0, question.id);
         for (const { slug, section, page, printed, marks } of readings) {
@@ -261,7 +261,7 @@ test('el desglose aplica filtros, conserva las claves originales y protege las p
         assert.equal(filtered.count, 1);
         const original = require('../api/_past_exams/2025-2026-1.json').questions[0];
         const { justificacion, fuente_comentario, lecturas_comentario, lectura_revision, ...originalFields } = filtered.questions[0].question;
-        assert.equal(lectura_revision, 2);
+        assert.equal(lectura_revision, 3);
         assert.equal(lecturas_comentario[0].slug, 'morfofuncion');
         assert.deepEqual(originalFields, original);
         assert.match(justificacion, /geniogloso/i);
@@ -285,6 +285,22 @@ test('el desglose aplica filtros, conserva las claves originales y protege las p
         assert.match(bloodBrain.question.justificacion, /endoteliales.*\n.*ependimarias/);
         const hormonal = (await request({ topics: 'morfo-17', search: 'angiotensina II neurohipófisis' })).body;
         assert.deepEqual(hormonal.questions.map(row => row.question.id), ['2021-1-1']);
+        const spineFilter = { subjects: 'morfo', topics: 'morfo-13' };
+        const spineFirst = (await request(spineFilter)).body;
+        const spineLast = (await request({ ...spineFilter, page: '2' })).body;
+        const spine = [...spineFirst.questions, ...spineLast.questions];
+        assert.equal(spineFirst.count, 41);
+        assert.equal(spine.length, 41);
+        const spinalQuestions = new Map(spine.map(row => [row.question.id, row.question]));
+        assert.ok(spine.every(row => row.topic === 'morfo-13' && row.question.lecturas_comentario.length &&
+            row.question.lecturas_comentario.every(ref => ref.slug === 'morfofuncion' && ref.marks.length)));
+        assert.deepEqual(spinalQuestions.get('2022-2023-1-52').respuestas_aceptadas, ['E']);
+        assert.equal(spinalQuestions.get('2022-2023-1-52').clave_en_discrepancia, true);
+        assert.equal(spinalQuestions.get('2024-2025-3-73').clave_en_discrepancia, true);
+        assert.deepEqual(spinalQuestions.get('2024-2025-3-24').lecturas_comentario.map(ref => ref.page), [532, 533]);
+        assert.deepEqual(spinalQuestions.get('2024-2025-1-64').lecturas_comentario.map(ref => ref.page), [535]);
+        assert.match(spinalQuestions.get('2025-2026-1-62').justificacion, /axilar.*deltoides y el redondo menor/);
+        assert.equal(spinalQuestions.has('2021-1-27'), false);
         const emptyTopic = (await request({ subjects: 'salud', topics: 'salud-03' })).body;
         assert.equal(emptyTopic.count, 0);
         assert.deepEqual(emptyTopic.questions, []);

@@ -24,7 +24,7 @@ function withCommentary(question, sourceId = question.id) {
         ...question,
         justificacion: comment.text,
         fuente_comentario: citations.map(formatReference).join(' / '),
-        lectura_revision: 2,
+        lectura_revision: 3,
         ...(citations.length ? {
             lecturas_comentario: citations.map(({ book, section, pdf, printed }) => {
                 const { slug, label } = books[book];
