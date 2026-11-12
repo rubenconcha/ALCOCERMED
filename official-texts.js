@@ -29,6 +29,7 @@
     const downloadButton = $('official-texts-download');
     const readerDownloadStatus = $('official-texts-reader-download-status');
     const resourceUrl = text => '/api/texto-oficial?materia=' + text.slug;
+    const freeAccount = () => window.CampusAccess?.isFree() === true;
     let reader, current, requestedPage, requestedCitations, loaded, releaseTimer, revision = 0, opening, previewUrl, bookCoverUrl, inlineHome;
 
     async function authorization() {
@@ -53,7 +54,8 @@
     }
 
     async function prepareBook(text, headers, signal, page, citations, getReader) {
-        const response = await fetch(resourceUrl(text) + '&vista=portada', { method: citations ? 'HEAD' : 'GET', headers, signal });
+        const free = freeAccount();
+        const response = await fetch(resourceUrl(text) + '&vista=portada', { method: citations || free ? 'HEAD' : 'GET', headers, signal });
         if (!response.ok) return false;
         const grant = response.headers.get('X-Official-Reader');
         if (grant) headers['X-Official-Reader'] = grant;
@@ -61,7 +63,17 @@
         if (starts[0] !== 1 || !starts.every((page, i) => Number.isInteger(page) && page <= text.pages && (!i || page > starts[i - 1]))) return false;
         if (signal.aborted) return false;
         let cover;
-        if (!citations) {
+        const sample = response.headers.get('X-Official-Preview-Pages');
+        if (sample !== null) {
+            const available = new Set(sample.split(',').map(Number).filter(number => findPage(text.slug, number)));
+            citations = citations ? citations.filter(ref => available.has(ref.page)) : [...available].slice(0, 2).map(page => ({ page }));
+            if (!citations.length) return false;
+            if (!citations.some(ref => ref.page === page)) page = citations[0].page;
+            showCitations(citations);
+            downloadButton.hidden = true;
+        } else if (free) {
+            return false;
+        } else if (!citations) {
             const blob = await response.blob();
             if (signal.aborted) return false;
             previewUrl = URL.createObjectURL(blob);
@@ -135,12 +147,13 @@
         requestedPage = page;
         requestedCitations = citations;
         showCitations(citations);
-        downloadButton.hidden = Boolean(citations);
+        const free = freeAccount();
+        downloadButton.hidden = free || Boolean(citations);
         $('official-texts-reader-title').textContent = text.title;
         readerDownloadStatus.hidden = true;
         fallback.hidden = true;
         if (!dialog.open) dialog.showModal();
-        if (loaded === text) {
+        if (!free && loaded === text) {
             reader.setReading(citations, returningToBook ? text.coverPage ?? 1 : page);
             return;
         }
@@ -165,20 +178,21 @@
             const ready = await prepareBook(text, headers, signal, initialPage, citations, getReader).catch(() => false);
             if (signal.aborted) return;
             if (!ready) {
+                if (free) throw new Error('Muestra no disponible');
                 await getReader();
                 if (!signal.aborted) await openFullReader(text, headers, signal, initialPage, citations);
             }
             if (version !== revision || !dialog.open) return;
             controller.abort();
             clearPreview();
-            loaded = text;
+            loaded = free ? null : text;
             toolbar.inert = pages.inert = citationsBar.inert = false;
             status.hidden = true;
         } catch (_) {
             if (version !== revision || !dialog.open) return;
             reader?.destroy();
             status.textContent = citations ? 'No pudimos abrir las páginas indicadas. Puedes reintentar.'
-                : 'No pudimos abrir el PDF. Puedes reintentar o consultar la publicación oficial.';
+                : 'No pudimos abrir la lectura. Puedes reintentar.';
             fallback.hidden = false;
         }
     }
@@ -232,7 +246,7 @@
         const open = document.createElement('button');
         open.type = 'button';
         open.className = 'btn-primary';
-        open.textContent = 'Leer en el campus';
+        open.textContent = freeAccount() ? 'Leer muestra' : 'Leer en el campus';
         open.setAttribute('aria-label', 'Leer ' + text.title + ' en el campus');
         open.setAttribute('data-campus-load', 'reader');
         open.onclick = () => read(text);
@@ -242,14 +256,17 @@
         save.textContent = 'Descargar PDF';
         save.setAttribute('aria-label', 'Descargar ' + text.title);
         save.onclick = () => download(text, save, $('official-texts-download-status'));
-        actions.append(open, save);
+        actions.append(open);
+        if (!freeAccount()) actions.append(save);
         article.append(illustration, subject, heading, credit, detail, actions);
         return article;
     }
 
-    $('official-texts-grid').replaceChildren(...texts.map(card));
+    const render = () => $('official-texts-grid').replaceChildren(...texts.map(card));
+    render();
+    window.addEventListener?.('campus-access-change', () => { window.OfficialTexts.close(); render(); });
     $('official-texts-close').onclick = () => dialog.close();
-    downloadButton.onclick = () => { if (current && !requestedCitations) return download(current, downloadButton, readerDownloadStatus); };
+    downloadButton.onclick = () => { if (current && !requestedCitations && !freeAccount()) return download(current, downloadButton, readerDownloadStatus); };
     $('official-texts-retry').onclick = () => { if (current) read(current, requestedPage, requestedCitations); };
     dialog.addEventListener('close', () => {
         if (dialog.open) return;

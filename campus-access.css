@@ -3,4 +3,5 @@
 .registration-page .register-choice-copy{color:#52677e;font-size:14px;line-height:1.5;margin:0 0 20px}.registration-page .auth-separator{font-size:14px;font-weight:700;color:#2c5c78;margin:16px 0}.registration-page .login-btn{line-height:1.25}.registration-page .auth-links{margin-top:20px}
 
 [data-premium-only][hidden]{display:none!important}
+[data-atlas-access][hidden],[data-free-lock][hidden]{display:none!important}
 .sidebar .campus-lock-badge{display:inline-flex;align-items:center;justify-content:center;margin-left:auto;padding:6px 7px;border-radius:8px;background:#f2a62928;color:#ffd078;font-size:13px}

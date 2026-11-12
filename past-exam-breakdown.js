@@ -228,6 +228,8 @@ window.createPastExamBreakdown = function (request, scope) {
                 if (recent.size > 12) recent.delete(recent.keys().next().value);
             }
             data = result;
+            const sampleYear = $('past-sample-year');
+            if (sampleYear) sampleYear.textContent = result.sampleYear ? ' · ' + result.sampleYear : '';
             if (!assigned) updatePickerLabels();
             status.textContent = '';
             const count = data.requested ? data.count : data.available;

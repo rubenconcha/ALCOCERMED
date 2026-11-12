@@ -6,14 +6,19 @@
  let catalogPromise,entries=[],selection,launchPending=false;
  const launch=$('sim-start-btn').closest('.entrance-launch');
  const normalize=v=>String(v||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().trim();
- const locked=e=>!e.demo&&!e.free&&CampusAccess.isFree();
+ const locked=e=>!e.demo&&CampusAccess.isFree();
+ const available=()=>CampusAccess.isFree()
+  ? entries.filter(e=>e.demo).map(e=>({...e,...window.CampusPreviewPolicy.simulation}))
+  : entries;
  function render(){
+  const free=CampusAccess.isFree();
   const query=normalize(search.value),scope=partial.value;
   topic.disabled=kind.value==='general';
   topic.closest('label').hidden=topic.disabled;
   partial.disabled=kind.value==='topic';
   partial.closest('label').hidden=partial.disabled;
-  const visible=entries.filter(e=>{
+  const visible=available().filter(e=>{
+   if(free)return true;
    if(kind.value && (kind.value==='topic')!==isTopic(e))return false;
    if(topic.value && !e.topics?.some(t=>t.id===topic.value))return false;
    if(scope && !(scope==='mini-foundations'?e.kind==='mini':(e.stage||e.scope)===scope))return false;
@@ -22,7 +27,7 @@
   list.replaceChildren();
   for(const e of visible){
    const card=document.createElement('article');card.id='entrance-'+e.key;card.dataset.examKey=e.key;card.className='sim-library-card';
-   const tag=document.createElement('span');tag.className='sim-library-stage';tag.textContent=e.demo ? e.type + ' · Muestra gratuita' : e.type;
+   const tag=document.createElement('span');tag.className='sim-library-stage';tag.textContent=e.type;
    const title=document.createElement('h3');title.textContent=e.title;
    const metrics=document.createElement('p');metrics.textContent=(e.questionCount||100)+' preguntas · '+e.minutes+' minutos';
    const button=document.createElement('button');button.type='button';button.className='btn-primary';button.textContent=locked(e)?'Desbloquear':'Elegir simulacro →';button.setAttribute('aria-label','Elegir '+e.title+' · '+e.type);button.disabled=launchPending;
@@ -35,7 +40,7 @@
  }
  function updateTopics(){
   const selected=topic.value;
-  const topics=new Map(entries.flatMap(e=>(e.topics||[]).map(t=>[t.id,t.label])));
+  const topics=new Map(available().flatMap(e=>(e.topics||[]).map(t=>[t.id,t.label])));
   topic.replaceChildren(new Option('Todos los temas',''));
   const options=[...topics].sort((a,b)=>Number(a[0].split('-').at(-1))-Number(b[0].split('-').at(-1)));
   for(const [id,label] of options)topic.add(new Option(label,id));
@@ -115,7 +120,7 @@
    if(!opening)return;
    await opening;
    if(currentCampusScreen!=='simulacro-screen')return;
-   const entry=entries.find(e=>e.key===key);
+   const entry=available().find(e=>e.key===key);
    if(!entry)return showToast('No encontramos el simulacro solicitado.','info');
    window.EntranceLibrary.reveal(entry);
    select(entry,false);
@@ -139,5 +144,5 @@
   render();
  });
  partial.addEventListener('change',render);
- window.addEventListener('campus-access-change',()=>{if(selection&&locked(selection))resetSelection();if(entries.length)render();});
+ window.addEventListener('campus-access-change',()=>{if(selection)resetSelection();if(entries.length){updateTopics();render();}});
 })();

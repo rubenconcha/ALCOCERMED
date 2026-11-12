@@ -18,7 +18,7 @@ from build_medicine import BOOKS, assertion_question
 ROOT = Path(__file__).resolve().parents[2]
 SIM = ROOT / 'api/_simulations'
 CATALOGUE = ROOT / 'content/simulacros-catalog.json'
-DEMO = ROOT / 'content/simulacros_demo_2026.json'
+DEMO = ROOT / 'api/_simulations/demo-2026.json'
 AUDIT = ROOT / 'quality/simulation-composition-audit.json'
 SUBJECTS = {'morfofuncion': 'MORFOFUNCION', 'biologia-celular': 'BIOLOGIA CELULAR', 'educacion-salud': 'SALUD PUBLICA'}
 TOPIC_BOUNDS = {

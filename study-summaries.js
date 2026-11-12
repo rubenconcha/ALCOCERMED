@@ -58,10 +58,11 @@
 
     const normalize = value => value.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
     const isLocked = item => !item.free && (!window.CampusAccess || CampusAccess.isFree());
+    const availableSummaries = () => summaries.filter(item => !isLocked(item));
 
     function fillTopics() {
         const previous = topic.value;
-        const available = summaries.filter(item => !subject.value || item.subject === subject.value);
+        const available = availableSummaries().filter(item => !subject.value || item.subject === subject.value);
         topic.replaceChildren(new Option('Todos los temas', ''));
         available.forEach(item => topic.add(new Option(`${item.topic} · ${item.title}`, item.file)));
         topic.value = available.some(item => item.file === previous) ? previous : '';
@@ -103,7 +104,7 @@
 
     function render() {
         const query = normalize(search.value.trim());
-        const visible = summaries.filter(item =>
+        const visible = availableSummaries().filter(item =>
             (!subject.value || item.subject === subject.value) &&
             (!topic.value || item.file === topic.value) &&
             (!query || normalize(`${item.subject} ${item.topic} ${item.title}`).includes(query))
@@ -205,7 +206,7 @@
         pendingRequest = null;
         reader?.destroy();
     });
-    window.addEventListener('campus-access-change', () => { clearPdfCache(); render(); });
+    window.addEventListener('campus-access-change', () => { clearPdfCache(); fillTopics(); render(); });
     window.addEventListener('pagehide', clearPdfCache);
     fillTopics();
     render();

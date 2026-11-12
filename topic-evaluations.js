@@ -17,7 +17,10 @@
     async function render() {
         const data = await catalog();
         if (currentCampusScreen !== 'evaluacion-screen') return;
-        const requested = topicId ? data.exams.find(exam => exam.id === topicId) : null;
+        const free = window.CampusAccess?.isFree();
+        const policy = window.CampusPreviewPolicy;
+        const available = free ? data.exams.filter(exam => policy.evaluationIds.includes(exam.id)) : data.exams;
+        const requested = topicId ? available.find(exam => exam.id === topicId) : null;
         if (requested) {
             subjectFilter.value = requested.subject;
             topicFilter.value = requested.title;
@@ -26,7 +29,7 @@
         const chapter = /^(?:tema|capitulo)\s+(\d+)$/.exec(query);
         const exams = topicId
             ? (requested ? [requested] : [])
-            : data.exams.filter(exam => (!subjectFilter.value || subjectFilter.value === exam.subject) &&
+            : available.filter(exam => (!subjectFilter.value || subjectFilter.value === exam.subject) &&
                 (chapter ? exam.number === Number(chapter[1]) :
                     normalize([exam.title, exam.topic, exam.subjectLabel, exam.source, exam.number && 'Tema ' + exam.number].filter(Boolean).join(' ')).includes(query)));
         const grid = $('topic-eval-grid'); grid.replaceChildren();
@@ -37,11 +40,12 @@
             const eyebrow = document.createElement('span'); eyebrow.className = 'entrance-eyebrow';
             eyebrow.textContent = exam.subjectLabel + (exam.id.startsWith('suf-') ? ' · Suficiencia académica' : exam.number ? ' · Tema ' + exam.number : '');
             const title = document.createElement('h3'); title.textContent = exam.title;
-            const count = document.createElement('p'); count.textContent = questionCount(exam.count) + ' · ' + minutes(exam.duration);
+            const count = document.createElement('p');
+            count.textContent = questionCount(free ? policy.evaluationCount : exam.count) + ' · ' + minutes(free ? policy.evaluationCount : exam.duration);
             const note = document.createElement('p'); note.className = 'past-card-note';
             note.textContent = exam.source ? exam.source + ' · Fuente por pregunta al finalizar.' : 'Revisa tus respuestas al finalizar.';
             const button = document.createElement('button'); button.type='button';button.className='btn-primary';
-            button.textContent = window.CampusAccess?.isFree() ? 'Desbloquear evaluación' : 'Realizar evaluación →';
+            button.textContent = 'Realizar evaluación →';
             button.addEventListener('click', () => start(exam, button));
             card.append(eyebrow,title,count,note,button);grid.append(card);
         });
@@ -62,10 +66,12 @@
     };
     async function start(exam, button, assigned) {
         if (loading) return;
-        if (!window.CampusAccess || CampusAccess.isFree()) return window.CampusAccess?.unlock();
+        if (!window.CampusAccess) return;
+        const free = CampusAccess.isFree();
+        if (free && (assigned || !window.CampusPreviewPolicy.evaluationIds.includes(exam.id))) return CampusAccess.unlock();
         const number=++request, account=currentUser?.id;
         const label = button.textContent;
-        const isCurrent = () => number === request && account === currentUser?.id && !CampusAccess.isFree()
+        const isCurrent = () => number === request && account === currentUser?.id && CampusAccess.isFree() === free
             && (assigned ? assigned.isCurrent() : currentCampusScreen === 'evaluacion-screen');
         loading=number;button.disabled=true;button.textContent='Preparando evaluación…';
         try {
@@ -85,7 +91,8 @@
             // Catalog metadata can be older than the paper during a release.
             if (paper.id !== exam.id || paper.subject !== exam.subject || paper.topic !== exam.topic ||
                 !Number.isInteger(paper.duration) || paper.duration <= 0 || !Number.isInteger(paper.count) ||
-                paper.count <= 0 || paper.questions?.length !== paper.count) {
+                paper.count <= 0 || paper.questions?.length !== paper.count ||
+                (free && paper.count !== window.CampusPreviewPolicy.evaluationCount)) {
                 throw new Error('El contenido recibido no corresponde a este tema.');
             }
             if ($('sim-passage')?.dataset?.passage) renderPracticePassage('sim', null);
@@ -105,7 +112,7 @@
         finally {
             if (loading === number) loading = 0;
             button.disabled = false;
-            button.textContent = CampusAccess.isFree() ? 'Desbloquear evaluación' : label;
+            button.textContent = label;
         }
     }
     const returnToSelection=window.returnToExamSelection;
@@ -146,7 +153,10 @@
         startAssigned: start,
     };
     window.addEventListener('campus-access-change', () => {
-        if (CampusAccess.isFree()) clear();
+        if (CampusAccess.isFree()) {
+            topicId = subjectFilter.value = topicFilter.value = '';
+            clear();
+        }
         else { ++request; loading = 0; }
         if (currentCampusScreen === 'evaluacion-screen') render().catch(() => {});
     });

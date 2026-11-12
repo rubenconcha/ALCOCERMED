@@ -1,9 +1,9 @@
-const CACHE_NAME = 'alcocermed-juegos-v117-soporte';
+const CACHE_NAME = 'alcocermed-juegos-v118-muestra';
 const ASSETS_TO_CACHE = [
     './game-rounds.js?v=1',
     './game-practice.js?v=20261021-visual5b',
     './game-question-images.js?v=1',
-    './app.js?v=2026111204',
+    './app.js?v=2026111205',
     './styles.css?v=87',
     '/juegos/logo-ben-carson-160.webp',
     './assets/preguntas-apoyo/mano-muneca.svg',
@@ -52,10 +52,10 @@ const ASSETS_TO_CACHE = [
     './sentidos-imagenes.js?v=1',
     './relacionar.js?v=2',
     './acceso-noche.js?v=1',
-    './game-access.js?v=2',
+    './game-access.js?v=3',
     './premium-game-images.js?v=6',
     './quiz-copy.js?v=1',
-    './tejido-nervioso.js?v=15',
+    './tejido-nervioso.js?v=16',
 ];
 
 const STATIC_ASSETS = new Set(ASSETS_TO_CACHE.map(asset => new URL(asset, self.location.origin + '/juegos/').href));

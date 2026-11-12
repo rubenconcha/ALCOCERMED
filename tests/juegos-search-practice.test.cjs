@@ -17,10 +17,10 @@ const memory=new Map();global.sessionStorage={getItem:k=>memory.get(k)||null,set
 const handler=require('../api/game-practice.js');
 async function request(req){const res={code:0,headers:{},setHeader(k,v){this.headers[k]=v},status(n){this.code=n;return this},end(body){this.body=body;return this}};await handler(req,res);return res;}
 (async()=>{
- let calls=0;global.fetch=async(url,opts)=>{calls++;return {ok:true,status:200,json:async()=>url.includes('/rpc/')?true:[sample]}};
+ let calls=0;global.fetch=async(url)=>{calls++;return {ok:true,status:200,json:async()=>url.includes('/rpc/campus_access')?{ready:true,premium:true}:[sample]}};
  assert.equal((await request({method:'GET',query:{id:sample.id},headers:{}})).code,401);assert.equal(calls,0);
  let res=await request({method:'GET',query:{id:sample.id},headers:{authorization:'Bearer fixture'}});assert.equal(res.code,200);assert.equal(JSON.parse(res.body).questions.length,extra.length);assert.equal(res.headers['Cache-Control'],'private, no-store');
- global.fetch=async()=>({ok:true,json:async()=>false});res=await request({method:'GET',query:{id:sample.id},headers:{authorization:'Bearer fixture'}});assert.equal(res.code,403);assert(!res.body);
+ global.fetch=async()=>({ok:true,json:async()=>({ready:true,premium:false})});res=await request({method:'GET',query:{id:sample.id},headers:{authorization:'Bearer fixture'}});assert.equal(res.code,403);assert(!res.body);
  global.fetch=async()=>{throw Error('offline')};res=await request({method:'GET',query:{id:sample.id},headers:{authorization:'Bearer fixture'}});assert.equal(res.code,503);
  let apiCalls=0;global.fetch=async()=>{apiCalls++;return {ok:true,json:async()=>({questions:extra})}};const client={auth:{getSession:async()=>({data:{session:{access_token:'fixture'}}})}};
  const loaded=await practice.load(client,sample,original,'code',false);assert.equal(loaded.length,extra.length);global.fetch=async()=>{throw Error('reload offline')};assert.deepEqual(await practice.load(client,sample,original,'code',true),loaded);assert.equal(apiCalls,1);

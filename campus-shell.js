@@ -182,13 +182,15 @@
         today = current;
         selectedDate = today;
         month = monthOffset(today, 0);
-        plan = data.buildSample(today);
+        if (!window.CampusAccess?.isFree()) {
+            plan = data.buildSample(today);
+            renderMonth();
+            renderDay();
+        }
         if (savedMood && savedMood.date !== today) {
             savedMood = null;
             if (userId) storage(moodKey(), null);
         }
-        renderMonth();
-        renderDay();
         paintMood();
     }
 
@@ -232,7 +234,7 @@
     }
 
     function openNotices() {
-        const notices = [...byId('campus-notice-list').children].map(item => item.cloneNode(true));
+        const notices = [...byId('campus-notice-list').children].filter(item => !item.hidden).map(item => item.cloneNode(true));
         byId('campus-notices-dialog-list').replaceChildren(...notices);
         byId('campus-notice-search').value = '';
         byId('campus-notices-empty').hidden = true;

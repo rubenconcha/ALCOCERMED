@@ -1,69 +1,27 @@
-"""Build the limited public sample from the existing student UI and game engines.
-
-No authentication code, database client, user state, or private content is included.
-Run again after changing the corresponding production components.
-"""
+"""Refresh the public flashcards from the campus markup and the five existing questions."""
 from pathlib import Path
 import re
 
 ROOT = Path(__file__).resolve().parents[1]
-html = (ROOT / 'index.html').read_text(encoding='utf-8')
-js = (ROOT / 'script.js').read_text(encoding='utf-8')
+STUDY = re.compile(r'<section id="study-area"[^>]*>.*?</section>', re.S)
+MARKUP = ROOT / 'muestra.html'
+ENGINE = ROOT / 'sample-engine.js'
 
-def between(source, start, end):
-    first = source.index(start)
-    return source[first:source.index(end, first)]
+campus = (ROOT / 'campus.html').read_text(encoding='utf-8')
+study = STUDY.search(campus).group()
+markup = MARKUP.read_text(encoding='utf-8')
+markup = STUDY.sub(lambda _: study, markup, count=1)
+for name in ('styles.css', 'student-white.css', 'campus-theme.css'):
+    asset = re.compile(re.escape(name) + r'\?v=[^"]+')
+    markup = asset.sub(asset.search(campus).group(), markup, count=1)
+MARKUP.write_text(markup, encoding='utf-8')
 
-def section(identifier):
-    return re.search(r'<section id="' + identifier + r'".*?</section>', html, re.S).group()
-
-study = section('study-area')
-quiz = section('game-quiz')
-hangman = section('game-hangman')
-lightbox = between(html, '<div id="mm-lightbox"', '</main>').strip()
-lightbox = lightbox.replace('class="mm-lb-close"', 'class="mm-lb-close" aria-label="Cerrar mapa"')
-
-page = '''<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>AlcocerMed · Muestra de la plataforma</title>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<link rel="stylesheet" href="styles.css?v=23"><link rel="stylesheet" href="commerce.css?v=1"><link rel="stylesheet" href="student-white.css?v=2"><link rel="stylesheet" href="campus-theme.css?v=3"><link rel="stylesheet" href="sample-shell.css?v=4">
-</head><body class="sample-page"><nav class="sample-tabs" aria-label="Herramientas de la muestra"><button data-screen="study-area" aria-pressed="true"><span class="sample-tool-art"><img class="study-art" src="/assets/study-art/cards.png" alt="" aria-hidden="true" width="80" height="80"></span><span class="sample-tool-copy"><strong>Flashcards</strong><small>Responde y gira la tarjeta</small></span><span class="sample-tool-meta">5 tarjetas</span></button><button data-screen="sample-maps" aria-pressed="false"><span class="sample-tool-art"><img class="study-art" src="/assets/study-art/map.png" alt="" aria-hidden="true" width="80" height="80"></span><span class="sample-tool-copy"><strong>Mapas mentales</strong><small>Amplía el mapa de la célula</small></span><span class="sample-tool-meta">1 mapa completo</span></button><button data-screen="game-quiz" aria-pressed="false"><span class="sample-tool-art"><img class="study-art" src="/assets/study-art/quiz.png" alt="" aria-hidden="true" width="80" height="80"></span><span class="sample-tool-copy"><strong>Quiz relámpago</strong><small>Resuelve el quiz con tiempo</small></span><span class="sample-tool-meta">5 preguntas</span></button><a class="sample-game-link" href="/juegos/?demo=1" target="_top"><span class="sample-tool-art"><img class="study-art" src="/assets/study-art/word.png" alt="" aria-hidden="true" width="80" height="80"></span><span class="sample-tool-copy"><strong>Juega</strong><small>Entra a la demo de Juegos</small></span><span class="sample-tool-meta">Cuenta demo · con código ↗</span></a></nav><div class="sample-context"><span>EXPLORA BIOLOGÍA CELULAR</span><p>Elige una herramienta y empieza. Puedes cambiar cuando quieras.</p></div><main id="sample-content">
-'''+study+quiz+hangman+'''
-<section id="sample-maps" class="hidden"><div class="game-header"><h2><i class="fas fa-project-diagram"></i> mapas mentales</h2></div><p class="sample-caption">Abre el mapa para ampliarlo, igual que dentro de la plataforma.</p><div id="mm-grid" class="mm-grid"></div></section>
-<section id="sample-finished" class="hidden sample-finished"><h2>Terminaste la muestra de flashcards.</h2><p>Prueba los Juegos o vuelve a repasar estas cinco tarjetas.</p><button class="btn-primary" onclick="resetFlashcards()">Repetir flashcards</button><button class="btn-back-game" onclick="selectSample('game-quiz')">Probar el quiz</button></section>
-'''+lightbox+'''</main><script src="sample-engine.js?v=2"></script><script src="sample-runtime.js?v=1"></script></body></html>'''
-(ROOT / 'muestra.html').write_text(page, encoding='utf-8')
-
-# Game data and engines come from the actual application, rather than separate imitations.
-questions = between(js, 'const QUIZ_QUESTIONS = [', 'const HANGMAN_WORDS = [')
-question_rows = re.findall(r'^\s*\{ q:.*$', questions, re.M)[:5]
-words = between(js, 'const HANGMAN_WORDS = [', 'let quizQuestions = []')
-word_rows = re.findall(r'^\s*\{ word:.*$', words, re.M)[:3]
-engine = '// Generated by tools/build_public_sample.py from the student platform.\n'
-engine += 'const QUIZ_QUESTIONS = [\n' + '\n'.join(question_rows) + '\n];\n'
-engine += 'const HANGMAN_WORDS = [\n' + '\n'.join(word_rows) + '\n];\n'
-engine += between(js, 'function shuffleArray(', 'let _supabase')
-engine += 'let gamesPlayed = 0;\n'
-# The public sample shares the live renderer, but starts only its five local
-# questions. The paid campus loader must never be copied into this page.
-engine += between(js, 'let quizQuestions = []', 'function quizQuestionFromBanco')
-engine += '''window.startQuiz = function () {
-    const available = QUIZ_QUESTIONS.filter(q => !selectedGameSubject || q.subject === selectedGameSubject);
-    quizQuestions = shuffleArray(available.slice()).slice(0, 5);
-    quizIndex = 0;
-    quizScore = 0;
-    quizAnswered = false;
-    document.getElementById('quiz-result').classList.add('hidden');
-    document.getElementById('quiz-feedback').classList.add('hidden');
-    document.getElementById('quiz-score').textContent = quizScore;
-    document.getElementById('quiz-qtotal').textContent = quizQuestions.length;
-    gamesPlayed++;
-    renderQuizQuestion();
-};
-\n'''
-engine += between(js, 'function renderQuizQuestion()', 'let hmWord =')
-engine += between(js, 'let hmWord =', 'let _toastTimer =')
-engine += between(js, 'function renderMmGrid()', 'function updateIntocStats()')
-engine += between(js, 'window.openMmLightbox =', '// Cerrar sidebar en mobile')
-(ROOT / 'sample-engine.js').write_text(engine, encoding='utf-8')
-print('Built sample from production flashcard, quiz, hangman and map UI.')
+script = (ROOT / 'script.js').read_text(encoding='utf-8')
+questions = re.search(r'const QUIZ_QUESTIONS = \[(.*?)\n\];', script, re.S).group(1)
+rows = re.findall(r'^    \{ q:.*$', questions, re.M)[:5]
+declaration = 'const SAMPLE_FLASHCARDS = [\n' + '\n'.join(rows) + '\n];'
+engine = ENGINE.read_text(encoding='utf-8')
+ENGINE.write_text(
+    re.sub(r'const SAMPLE_FLASHCARDS = \[.*?\n\];', lambda _: declaration, engine, count=1, flags=re.S),
+    encoding='utf-8',
+)

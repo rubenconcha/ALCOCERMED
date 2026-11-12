@@ -141,19 +141,17 @@ test('el servidor verifica la sesión y el plan antes de entregar preguntas o pa
         for (const exam of catalog.exams) {
             const questionResponse = await run(exam.id);
             const patternResponse = await run(exam.id, 'valid', '1');
-            const expected = exam.year === catalog.freeYear ? 200 : 403;
-            assert.equal(questionResponse.code, expected, exam.id + ' questions');
-            assert.equal(patternResponse.code, expected, exam.id + ' pattern');
-            if (expected === 200) {
-                const paper = JSON.parse(questionResponse.bytes);
-                assert.equal(paper.questions.length, exam.count);
-                assert.equal(paper.type, exam.type);
-                assert.equal('missingNumbers' in paper || 'excludedQuestions' in paper, false);
-            }
+            assert.equal(questionResponse.code, 403, exam.id + ' questions');
+            assert.equal(patternResponse.code, 403, exam.id + ' pattern');
         }
         global.fetch = async () => ({ ok: true, json: async () => ({ ready: true, premium: true }) });
         for (const exam of catalog.exams) {
-            assert.equal((await run(exam.id)).code, 200);
+            const questionResponse = await run(exam.id);
+            assert.equal(questionResponse.code, 200);
+            const paper = JSON.parse(questionResponse.bytes);
+            assert.equal(paper.questions.length, exam.count);
+            assert.equal(paper.type, exam.type);
+            assert.equal('missingNumbers' in paper || 'excludedQuestions' in paper, false);
             const pattern = await run(exam.id, 'valid', '1');
             assert.equal(pattern.code, 200); assert.equal(pattern.headers['Content-Type'], 'image/webp');
         }
@@ -162,7 +160,7 @@ test('el servidor verifica la sesión y el plan antes de entregar preguntas o pa
     } finally { global.fetch = originalFetch; }
 });
 
-test('la cuenta gratuita ve tres exámenes abiertos de la última gestión y doce con candado que llevan a planes', async () => {
+test('la cuenta gratuita abre la muestra y el plan vigente muestra los quince exámenes completos', async () => {
     function element() {
         return { children: [], value: '', options: [{}], events: {}, className: '',
             append(...children) { this.children.push(...children); this.options.push(...children); },
@@ -171,35 +169,33 @@ test('la cuenta gratuita ve tres exámenes abiertos de la última gestión y doc
     }
     const elements = new Map();
     const get = id => { if (!elements.has(id)) elements.set(id, element()); return elements.get(id); };
-    let free = true, planVisits = 0;
+    let free = true, topicsVisible = false;
     const context = {
-        window: { addEventListener() {} },
+        window: { addEventListener() {}, createPastExamBreakdown: () => ({
+            resetFilters() {}, show(value) { topicsVisible = value; },
+        }) },
         document: { getElementById: get, createElement: element, createTextNode: text => ({ textContent: text }) },
         fetch: async () => ({ ok: true, json: async () => catalog }),
-        CampusAccess: { isFree: () => free, unlock: () => { planVisits++; } },
+        CampusAccess: { isFree: () => free, unlock: () => assert.fail('La muestra debe abrir directamente') },
         currentUser: { id: 'student' }, simState: { timerInterval: null },
         sessionStorage: { getItem: () => null }, showScreen() {},
         URL: { revokeObjectURL() {} }, AbortSignal
     };
     vm.runInNewContext(fs.readFileSync('past-exams.js', 'utf8'), context);
     await context.window.openPastExams();
+    assert.equal(topicsVisible, true);
+    assert.equal(get('past-grid').children.length, 0);
+    assert.equal(get('past-exam-cards').hidden, true);
+    free = false;
+    await context.window.openPastExams(false);
     const cards = get('past-grid').children;
     assert.equal(cards.length, 15);
-    const locked = cards.filter(card => card.className.includes('past-card-locked'));
-    assert.equal(locked.length, 12);
-    assert.equal(locked[0].children[0].children[1].children[0].className, 'fas fa-lock');
-    locked[0].children.at(-1).events.click();
-    assert.equal(planVisits, 1);
-    const latest = cards.filter(card => !card.className.includes('past-card-locked'));
-    assert.equal(latest.length, 3);
-    latest[0].children.at(-1).events.click();
+    assert.equal(cards.filter(card => card.className.includes('past-card-locked')).length, 0);
+    cards[0].children.at(-1).events.click();
     assert.match(get('past-detail-title').textContent, /2025–2026/);
     assert.equal(get('past-start').textContent, 'Comenzar examen');
     assert.equal(elements.has('past-source-notes'), false);
     assert.doesNotMatch(JSON.stringify(cards), /observaciones del documento|en el Word original/i);
-    free = false;
-    await context.window.openPastExams();
-    assert.equal(get('past-grid').children.filter(card => card.className.includes('past-card-locked')).length, 0);
 });
 
 test('el índice temático se alinea con la numeración histórica y las fuentes oficiales', () => {
@@ -252,10 +248,18 @@ test('el desglose aplica filtros, conserva las claves originales y protege las p
         assert.deepEqual(locked.questions, []);
         assert.deepEqual(locked.topics, []);
         const free = (await request({ all: '1', page: '2' })).body;
-        assert.equal(free.available, 298);
-        assert.equal(free.page, 2);
-        assert.equal(free.questions.length, 24);
+        assert.equal(free.available, 6);
+        assert.equal(free.page, 1);
+        assert.equal(free.sampleYear, catalog.freeYear);
+        assert.equal(free.questions.length, 6);
         assert.ok(free.questions.every(row => row.year === catalog.freeYear));
+        assert.equal(free.subjects.length, 3);
+        for (const { id } of free.subjects) {
+            const subject = (await request({ subjects: id })).body;
+            assert.deepEqual(subject.questions, free.questions.filter(row => row.subject === id));
+            assert.equal(subject.count, 2);
+            assert.ok(subject.questions.every(row => row.question.lecturas_comentario?.length));
+        }
         const filtered = (await request({ year: catalog.freeYear, type: 'Primer parcial', subjects: 'morfo',
             topics: 'morfo-10', search: 'músculo geniogloso' })).body;
         assert.equal(filtered.count, 1);
@@ -269,8 +273,7 @@ test('el desglose aplica filtros, conserva las claves originales y protege las p
         assert.equal(filtered.questions[0].topic, 'morfo-10');
         const studyTopic = { subjects: 'morfo', topics: 'morfo-18' };
         const freeBlood = (await request(studyTopic)).body;
-        assert.equal(freeBlood.count, 8);
-        assert.ok(freeBlood.questions.every(row => row.topic === 'morfo-18' && row.year === catalog.freeYear));
+        assert.deepEqual(freeBlood.questions, free.questions.filter(row => row.topic === 'morfo-18'));
         premium = true;
         const blood = (await request(studyTopic)).body;
         assert.equal(blood.count, 45);

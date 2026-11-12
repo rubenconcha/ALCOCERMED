@@ -67,7 +67,8 @@ test('paid catalogue requires a ready authenticated membership; free users recei
  const denied=server({ready:false});await denied.run();assert.equal(denied.response.code,403);
  const unavailable=server({status:503});await unavailable.run();assert.equal(unavailable.response.code,503);
  const paid=server();await paid.run();assert.equal(paid.response.body.cards.length,2);assert.equal(paid.response.headers['Cache-Control'],'private, no-store');
- const free=server({premium:false});await free.run();assert.equal(free.response.body.cards.length,1);assert.equal(free.response.body.catalog[1].locked,true);
+ const free=server({premium:false});await free.run();assert.equal(free.response.body.cards.length,1);
+ assert.deepEqual(Array.from(free.response.body.catalog, item=>item.tema),['anatomia']);
  assert.equal(free.response.body.cards[0].evidence,undefined);
 });
 test('topic requests return only the requested deck and apply free access to that deck',async()=>{
@@ -77,7 +78,7 @@ test('topic requests return only the requested deck and apply free access to tha
  const free=server({premium:false});await free.run({materia:'MORFOFUNCION',tema:'anatomia'});
  assert.deepEqual(Array.from(free.response.body.cards, card=>card.id),[row.id]);
  const locked=server({premium:false});await locked.run({materia:'MORFOFUNCION',tema:'hueso'});
- assert.equal(locked.response.body.cards.length,0);assert.equal(locked.response.body.catalog[0].locked,true);
+ assert.equal(locked.response.body.cards.length,0);assert.equal(locked.response.body.catalog.length,0);
  const missing=server();await missing.run({tema:'anatomia'});assert.equal(missing.response.code,400);
 });
 test('main loader replaces database flashcards and never calls the old supplemental merge',async()=>{

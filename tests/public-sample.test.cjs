@@ -5,12 +5,11 @@ const path = require('node:path');
 const read = file => fs.readFileSync(path.join(__dirname, '..', file), 'utf8');
 test('sample uses exact production tool markup and shared visual styles', () => {
   const app = read('campus.html'), sample = read('muestra.html');
-  for (const id of ['study-area', 'game-quiz', 'game-hangman']) {
-    const section = app.match(new RegExp(`<section id="${id}"[\\s\\S]*?</section>`))[0];
-    assert.ok(sample.includes(section), `${id} must match the actual platform`);
-  }
-  for (const file of ['styles.css?v=37', 'student-white.css?v=2', 'campus-theme.css?v=3']) {
-    assert.ok(sample.includes(file)); assert.ok(app.includes(file));
+  const section = app.match(/<section id="study-area"[\s\S]*?<\/section>/)[0];
+  assert.ok(sample.includes(section));
+  for (const file of ['styles.css', 'student-white.css', 'campus-theme.css']) {
+    const asset = app.split('"').find(value => value.startsWith(file + '?v='));
+    assert.ok(asset && sample.includes(asset), file);
   }
 });
 test('public sample contains no auth, database, persistence or ranking code', () => {
@@ -20,11 +19,10 @@ test('public sample contains no auth, database, persistence or ranking code', ()
   assert.doesNotMatch(html, /src="(?:script|config|device_guard)\.js/);
   assert.ok(fs.existsSync(path.join(__dirname, '..', 'mapas mentales/lacelula.png')));
 });
-test('sample uses the production game renderers without the paid question loader', () => {
-  const source = read('script.js'), sample = read('sample-engine.js');
-  const quiz = source.slice(source.indexOf('function renderQuizQuestion()'), source.indexOf('let hmWord ='));
-  const hangman = source.slice(source.indexOf('let hmWord ='), source.indexOf('let _toastTimer ='));
-  assert.ok(sample.includes(quiz)); assert.ok(sample.includes(hangman));
-  assert.doesNotMatch(sample, /fetchAllBancoQuestions|quizQuestionFromBanco/);
+test('the public sample offers flashcards and a map and leaves games for paid plans', () => {
+  const html = read('muestra.html');
+  assert.match(html, /id="study-area"/);
+  assert.match(html, /id="sample-maps"/);
+  assert.doesNotMatch(html + read('sample-engine.js') + read('sample-runtime.js'), /startQuiz|startHangman|game-quiz|game-hangman|\/juegos\//);
 });
 

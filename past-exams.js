@@ -1,6 +1,6 @@
 'use strict';
 (() => {
-    let catalogPromise, selected, patternUrl, freeYear, scopeOwner;
+    let catalogPromise, selected, patternUrl, scopeOwner;
     let loading = false, topicsMode = false, opening = false, openRequest = 0;
     let breakdown, modeRequest = 0;
     const examCache = new Map();
@@ -8,14 +8,9 @@
     const readableError = () => 'No se pudo cargar el examen. Intenta de nuevo.';
 
     async function catalog() {
-        if (window.loadPastExamCatalog) {
-            const data = await window.loadPastExamCatalog();
-            freeYear = data.freeYear;
-            return data;
-        }
+        if (window.loadPastExamCatalog) return window.loadPastExamCatalog();
         if (!catalogPromise) catalogPromise = fetch('/content/past-exams/catalog.json?v=examenes-umss')
             .then(response => { if (!response.ok) throw new Error(readableError()); return response.json(); })
-            .then(data => { freeYear = data.freeYear; return data; })
             .catch(error => { catalogPromise = null; throw error; });
         return catalogPromise;
     }
@@ -41,7 +36,7 @@
         await window.loadCampusAssets?.('past-topics');
         return breakdown ||= window.createPastExamBreakdown?.((filters, signal) => requestExam('desglose', false, filters, signal), scope);
     }
-    const isLocked = exam => CampusAccess.isFree() && exam.year !== freeYear;
+    const isLocked = () => CampusAccess.isFree();
     function prepareExam(exam) {
         const key = (currentUser?.id || '') + ':' + exam.id;
         const cached = examCache.get(key);
@@ -101,6 +96,7 @@
         $('past-back-label').textContent = 'Volver';
     }
     async function showMode(enabled, filter) {
+        enabled = Boolean(enabled || CampusAccess.isFree());
         const mode = ++modeRequest;
         if (enabled) {
             try {
@@ -122,6 +118,7 @@
         breakdown?.show(topicsMode);
     }
     function showFullExams() {
+        if (CampusAccess.isFree()) return showMode(true);
         $('past-status').textContent = '';
         renderList().catch(error => { $('past-status').textContent = error.message; });
     }
@@ -143,6 +140,12 @@
         showList();
         $('past-status').textContent = '';
         try {
+            if (CampusAccess.isFree()) {
+                $('past-year').value = '';
+                $('past-type').value = '';
+                await showMode(true, {});
+                return;
+            }
             const data = await catalog();
             if (!isCurrent()) return;
             if ($('past-year').options.length === 1) [...new Set(data.exams.map(exam => exam.year))].reverse().forEach(year => {
@@ -209,6 +212,7 @@
     };
     window.showPastExamPattern = async function () {
         if (simState.mode !== 'pasado' || !simState.finalized) return;
+        if (CampusAccess.isFree()) return CampusAccess.unlock();
         const button = $('past-pattern-button'); button.disabled = true;
         const examId = simState.pastExamId;
         try {

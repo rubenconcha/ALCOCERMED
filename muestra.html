@@ -1,8 +1,8 @@
 <!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>AlcocerMed · Muestra de la plataforma</title>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/vendor/font-awesome-6.4.0/css/all.min.css">
-<link rel="stylesheet" href="styles.css?v=37"><link rel="stylesheet" href="commerce.css?v=1"><link rel="stylesheet" href="student-white.css?v=2"><link rel="stylesheet" href="campus-theme.css?v=3"><link rel="stylesheet" href="sample-shell.css?v=4">
-</head><body class="sample-page"><nav class="sample-tabs" aria-label="Herramientas de la muestra"><button data-screen="study-area" aria-pressed="true"><span class="sample-tool-art"><img class="study-art" src="/assets/study-art/cards.webp" alt="" aria-hidden="true" width="80" height="80"></span><span class="sample-tool-copy"><strong>Flashcards</strong><small>Responde y gira la tarjeta</small></span><span class="sample-tool-meta">5 tarjetas</span></button><button data-screen="sample-maps" aria-pressed="false"><span class="sample-tool-art"><img class="study-art" src="/assets/study-art/map.webp" alt="" aria-hidden="true" width="80" height="80"></span><span class="sample-tool-copy"><strong>Mapas mentales</strong><small>Amplía el mapa de la célula</small></span><span class="sample-tool-meta">1 mapa completo</span></button><button data-screen="game-quiz" aria-pressed="false"><span class="sample-tool-art"><img class="study-art" src="/assets/study-art/quiz.webp" alt="" aria-hidden="true" width="80" height="80"></span><span class="sample-tool-copy"><strong>Quiz relámpago</strong><small>Resuelve el quiz con tiempo</small></span><span class="sample-tool-meta">5 preguntas</span></button><a class="sample-game-link" href="/juegos/?demo=1" target="_top"><span class="sample-tool-art"><img class="study-art" src="/assets/study-art/word.webp" alt="" aria-hidden="true" width="80" height="80"></span><span class="sample-tool-copy"><strong>Juega</strong><small>Entra a la demo de Juegos</small></span><span class="sample-tool-meta">Cuenta demo · con código ↗</span></a></nav><div class="sample-context"><span>EXPLORA BIOLOGÍA CELULAR</span><p>Elige una herramienta y empieza. Puedes cambiar cuando quieras.</p></div><main id="sample-content">
+<link rel="stylesheet" href="styles.css?v=46"><link rel="stylesheet" href="commerce.css?v=1"><link rel="stylesheet" href="student-white.css?v=2"><link rel="stylesheet" href="campus-theme.css?v=4"><link rel="stylesheet" href="sample-shell.css?v=5">
+</head><body class="sample-page"><nav class="sample-tabs" aria-label="Herramientas de la muestra"><button data-screen="study-area" aria-pressed="true"><span class="sample-tool-art"><img class="study-art" src="/assets/study-art/cards.webp" alt="" aria-hidden="true" width="80" height="80"></span><span class="sample-tool-copy"><strong>Flashcards</strong><small>Responde y gira la tarjeta</small></span><span class="sample-tool-meta">5 tarjetas</span></button><button data-screen="sample-maps" aria-pressed="false"><span class="sample-tool-art"><img class="study-art" src="/assets/study-art/map.webp" alt="" aria-hidden="true" width="80" height="80"></span><span class="sample-tool-copy"><strong>Mapas mentales</strong><small>Amplía el mapa de la célula</small></span><span class="sample-tool-meta">1 mapa completo</span></button></nav><div class="sample-context"><span>EXPLORA BIOLOGÍA CELULAR</span><p>Elige una herramienta y empieza. Puedes cambiar cuando quieras.</p></div><main id="sample-content">
 <section id="study-area" class="study-area hidden">
             <div class="study-mobile-header">
                 <button class="btn-back-game" onclick="backToStudyTopics()"><i class="fas fa-arrow-left"></i> temas</button>
@@ -10,11 +10,17 @@
                     <span id="current-subject" class="study-subject-pill">flashcards</span>
                     <h2 id="card-tema-name">elige un tema</h2>
                 </div>
+                <button id="flashcard-settings-toggle" type="button" aria-expanded="false" aria-controls="flashcard-settings">Ajustes</button>
             </div>
 
-            <div class="study-progress-row">
-                <div class="card-counter">tarjeta <span id="card-num">1</span> de <span id="card-total">0</span></div>
+            <div class="study-topic-overview" id="study-topic-message" role="status"></div>
+            <div class="flashcard-controls" id="flashcard-settings" hidden>
+                <div class="flashcard-control-row"><label>Sesión<select id="flashcard-mode"><option value="due">Repaso programado</option><option value="all">Explorar todas</option></select></label><label>Subtema<select id="flashcard-subtopic"><option value="">Todos los subtemas</option></select></label><button id="flashcard-shuffle" type="button">Mezclar</button></div>
             </div>
+            <div class="study-progress-row">
+                <div class="card-counter"><span id="flashcard-session-label">Repaso de hoy</span> · tarjeta <span id="card-num">1</span> de <span id="card-total">0</span></div>
+            </div>
+            <div class="flashcard-progress" aria-hidden="true"><span id="flashcard-progress-fill"></span></div><p id="flashcard-context"></p>
 
             <div class="card-container">
                 <div class="card" id="card">
@@ -44,86 +50,8 @@
                     </div>
                 </div>
             </div>
-        </section><section id="game-quiz" class="game-section hidden">
-            <div class="game-header">
-                <button class="btn-back-game" onclick="goBack()"><i class="fas fa-arrow-left"></i> volver</button>
-                <h2><i class="fas fa-bolt"></i> quiz relámpago</h2>
-            </div>
-            <div class="quiz-wrapper">
-                <div class="quiz-top-bar">
-                    <div class="quiz-score-box"><i class="fas fa-star"></i> <span id="quiz-score">0</span> pts</div>
-                    <div class="quiz-timer-box" id="quiz-timer-box">
-                        <i class="fas fa-clock"></i> <span id="quiz-timer">15</span>s
-                    </div>
-                    <div class="quiz-q-count"><span id="quiz-qnum">1</span> / <span id="quiz-qtotal">10</span></div>
-                </div>
-                <div class="quiz-question-card">
-                    <p class="quiz-subject-tag" id="quiz-subject-tag">biología celular</p>
-                    <p class="quiz-question-text" id="quiz-question-text">cargando pregunta...</p>
-                </div>
-                <div class="quiz-options" id="quiz-options"></div>
-                <div id="quiz-feedback" class="quiz-feedback hidden"></div>
-                <div id="quiz-result" class="quiz-result hidden">
-                    <div class="quiz-result-inner">
-                        <div class="result-emoji" id="result-emoji">🎉</div>
-                        <h3 id="result-title">¡excelente!</h3>
-                        <p id="result-score-text"></p>
-                        <button class="btn-primary" onclick="startQuiz()" style="margin-top:20px;">jugar de
-                            nuevo</button>
-                        <button class="btn-back-game" onclick="goHome()"
-                            style="margin-top:10px;display:block;text-align:center;">volver al inicio</button>
-                    </div>
-                </div>
-            </div>
-        </section><section id="game-hangman" class="game-section hidden">
-            <div class="game-header">
-                <button class="btn-back-game" onclick="goBack()"><i class="fas fa-arrow-left"></i> volver</button>
-                <h2><i class="fas fa-brain"></i> ahorcado médico</h2>
-            </div>
-            <div class="hangman-wrapper">
-                <div class="hangman-top">
-                    <div class="hangman-figure" id="hangman-figure">
-                        <svg viewBox="0 0 120 160" class="hangman-svg">
-                            <!-- Horca -->
-                            <line x1="10" y1="150" x2="110" y2="150" stroke="currentColor" stroke-width="4"
-                                stroke-linecap="round" />
-                            <line x1="30" y1="150" x2="30" y2="10" stroke="currentColor" stroke-width="4"
-                                stroke-linecap="round" />
-                            <line x1="30" y1="10" x2="75" y2="10" stroke="currentColor" stroke-width="4"
-                                stroke-linecap="round" />
-                            <line x1="75" y1="10" x2="75" y2="30" stroke="currentColor" stroke-width="4"
-                                stroke-linecap="round" />
-                            <!-- Figura (oculta por clases) -->
-                            <circle class="hm-part hm-head" cx="75" cy="42" r="12" fill="none" stroke="currentColor"
-                                stroke-width="3" />
-                            <line class="hm-part hm-body" x1="75" y1="54" x2="75" y2="100" stroke="currentColor"
-                                stroke-width="3" stroke-linecap="round" />
-                            <line class="hm-part hm-larm" x1="75" y1="65" x2="50" y2="85" stroke="currentColor"
-                                stroke-width="3" stroke-linecap="round" />
-                            <line class="hm-part hm-rarm" x1="75" y1="65" x2="100" y2="85" stroke="currentColor"
-                                stroke-width="3" stroke-linecap="round" />
-                            <line class="hm-part hm-lleg" x1="75" y1="100" x2="52" y2="128" stroke="currentColor"
-                                stroke-width="3" stroke-linecap="round" />
-                            <line class="hm-part hm-rleg" x1="75" y1="100" x2="98" y2="128" stroke="currentColor"
-                                stroke-width="3" stroke-linecap="round" />
-                        </svg>
-                    </div>
-                    <div class="hangman-info">
-                        <div class="hm-category-tag" id="hm-category">biología celular</div>
-                        <div class="hm-hint" id="hm-hint">pista: ...</div>
-                        <div class="hm-word" id="hm-word"></div>
-                        <div class="hm-errors">errores: <span id="hm-errors">0</span> / 6</div>
-                    </div>
-                </div>
-                <div class="hm-keyboard" id="hm-keyboard"></div>
-                <div id="hm-result" class="hm-result hidden">
-                    <p id="hm-result-text"></p>
-                    <button class="btn-primary" onclick="startHangman()" style="margin-top:14px;">otra palabra</button>
-                </div>
-            </div>
-        </section>
-<section id="sample-maps" class="hidden"><div class="game-header"><h2><i class="fas fa-project-diagram"></i> mapas mentales</h2></div><p class="sample-caption">Abre el mapa para ampliarlo, igual que dentro de la plataforma.</p><div id="mm-grid" class="mm-grid"></div></section>
-<section id="sample-finished" class="hidden sample-finished"><h2>Terminaste la muestra de flashcards.</h2><p>Prueba los Juegos o vuelve a repasar estas cinco tarjetas.</p><button class="btn-primary" onclick="resetFlashcards()">Repetir flashcards</button><button class="btn-back-game" onclick="selectSample('game-quiz')">Probar el quiz</button></section>
+        </section><section id="sample-maps" class="hidden"><div class="game-header"><h2><i class="fas fa-project-diagram"></i> mapas mentales</h2></div><p class="sample-caption">Abre el mapa para ampliarlo, igual que dentro de la plataforma.</p><div id="mm-grid" class="mm-grid"></div></section>
+<section id="sample-finished" class="hidden sample-finished"><h2>Terminaste la muestra de flashcards.</h2><p>Repasa estas cinco tarjetas o consulta el mapa de la célula.</p><button class="btn-primary" onclick="resetFlashcards()">Repetir flashcards</button><button class="btn-back-game" onclick="selectSample('sample-maps')">Abrir mapa mental</button></section>
 <div id="mm-lightbox" class="mm-lightbox hidden" onclick="closeMmLightbox(event)">
             <button class="mm-lb-close" aria-label="Cerrar mapa" onclick="closeMmLightbox()"><i class="fas fa-times"></i></button>
             <div class="mm-lb-inner">
@@ -137,4 +65,4 @@
                     </a>
                 </div>
             </div>
-        </div></main><script src="sample-engine.js?v=2"></script><script src="sample-runtime.js?v=2"></script></body></html>
+        </div></main><script src="sample-engine.js?v=3"></script><script src="sample-runtime.js?v=3"></script></body></html>

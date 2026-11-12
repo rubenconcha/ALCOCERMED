@@ -9,7 +9,7 @@ var ADMIN_EMAIL = 'pichon4488@gmail.com';
 
 /** Evento masivo: registro automático con cuenta individual 24h */
 var DEMO_EVENT = {
-    enabled: true,
+    enabled: false,
     accessCode: 'BENCARSON2026',
     resultsStartAt: '2026-05-26T15:23:21.000Z',
     emailDomain: 'demo.alcocermed.app',
@@ -1063,9 +1063,7 @@ async function initAuth() {
         (!topic && urlParams.get('docente') === '1')) {
         try {
             await loadGameAssets('class');
-            if (nervousClassMode) initNervousClass();
-        } catch (error) { showLoginError(error.message); }
-        return;
+        } catch (error) { showLoginError(error.message); return; }
     }
     if (urlParams.get('debug') === 'true' && ['localhost', '127.0.0.1', '[::1]'].includes(location.hostname)) {
         console.log('Debug mode active - Bypassing real login');
@@ -1177,6 +1175,8 @@ function showLogin() {
     var passEl = document.getElementById('login-password');
     if (emailEl) emailEl.value = '';
     if (passEl) passEl.value = '';
+    const plan = document.getElementById('game-plan-link');
+    if (plan) plan.hidden = true;
     hideLoginError();
     if (typeof configureNightLogin === 'function') configureNightLogin();
 }
@@ -1223,11 +1223,17 @@ function enterApp() {
                 }
                 if (gameDeviceEntry !== entry || currentUser) return;
                 showLogin();
-                if (typeof nervousClassMode !== 'undefined' && nervousClassMode) {
-                    var classError = document.getElementById('class-error');
-                    if (classError) classError.textContent = message;
-                } else { showLoginError(message); }
+                showLoginError(message);
                 if (result.code === 'DEVICE_LIMIT') DeviceGuard.showDeviceLimit?.(deviceEmail, result.limit, result.supportRequired);
+                return;
+            }
+            const paid = result.access?.ready ? GameAccess.isPaid(result.access) : await GameAccess.check(deviceClient);
+            if (gameDeviceEntry !== entry || currentUser?.id !== deviceUserId || gameAuthSessionId !== sessionId) return;
+            if (paid !== true) {
+                DEMO_ACCESS_ONLY = true;
+                showLogin();
+                showLoginError(paid === false ? 'Juegos está disponible con un plan activo.' : 'No pudimos comprobar tu plan. Vuelve a intentarlo.');
+                document.getElementById('game-plan-link').hidden = paid !== false;
                 return;
             }
             gameVerifiedDeviceUserId = deviceUserId;
@@ -1237,7 +1243,10 @@ function enterApp() {
         return entry.promise;
     }
     if (typeof nervousClassMode !== "undefined" && nervousClassMode) {
-        DeviceGuard.startChecking(getSupabase(), handleLogout, sessionId);
+        DEMO_ACCESS_ONLY = false;
+        if (deviceEmail !== ADMIN_EMAIL) DeviceGuard.startChecking(getSupabase(), handleLogout, sessionId);
+        if (sentidosTeacherMode && deviceEmail === ADMIN_EMAIL) return initSentidosTeacher();
+        initNervousClass();
         showNervousClass();
         return;
     }
@@ -1246,18 +1255,7 @@ function enterApp() {
 
     var email = (currentUser.email || '').toLowerCase().trim();
     isAdmin = (email === ADMIN_EMAIL);
-    DEMO_ACCESS_ONLY = !isAdmin;
-    var accessUserId = currentUser.id;
-    if (!isAdmin && !isDemoGuestUser(currentUser)) {
-        GameAccess.verify(getSupabase()).then(function(paid) {
-            if (!currentUser || currentUser.id !== accessUserId) return;
-            DEMO_ACCESS_ONLY = !paid;
-            if (currentPage === 'jugar') {
-                if (exploreCurrentSubject) loadSubjectEvaluations(exploreCurrentSubject);
-                else loadExploreSubjects();
-            }
-        });
-    }
+    DEMO_ACCESS_ONLY = false;
 
     var name = currentUser.user_metadata && currentUser.user_metadata.full_name
         ? currentUser.user_metadata.full_name
@@ -1442,7 +1440,7 @@ function setLoginMode(mode) {
     var tabVirtual = document.getElementById('login-tab-virtual');
     var tabDemo = document.getElementById('login-tab-demo');
     var footer = document.getElementById('login-footer-text');
-    var isDemo = mode === 'demo';
+    var isDemo = mode === 'demo' && DEMO_EVENT.enabled;
     var isVirtual = mode === 'virtual';
     if (existingForm) existingForm.classList.toggle('hidden', isDemo || isVirtual);
     if (virtualForm) virtualForm.classList.toggle('hidden', !isVirtual);
@@ -2694,11 +2692,10 @@ function isDemoEvaluation(ev) {
 }
 
 function canAccessEvaluation(ev) {
+    if (!currentUser || DEMO_ACCESS_ONLY) return false;
     if (typeof nervousClassMode !== "undefined" && nervousClassMode) return !!ev && nervousClassIds.indexOf(ev.id) !== -1;
-    if (isAdmin) return true;
-    if (typeof isNightClassUser === 'function' && isNightClassUser(currentUser)) return isNightClassOpen();
-    if (isDemoGuestUser(currentUser)) return isDemoEvaluation(ev);
-    return !DEMO_ACCESS_ONLY || isDemoEvaluation(ev);
+    if (!isAdmin && typeof isNightClassUser === 'function' && isNightClassUser(currentUser)) return isNightClassOpen();
+    return true;
 }
 
 /**
@@ -6566,6 +6563,7 @@ async function handleLogout(reason) {
     gameVerifiedDeviceSessionId = null;
     setGameSession(null);
     isAdmin = false;
+    DEMO_ACCESS_ONLY = true;
     showLogin();
     setLoginLoading(true);
     try {

@@ -31,7 +31,7 @@ module.exports = async function handler(req, res) {
       res.setHeader('Content-Type', 'application/json; charset=utf-8');
       return res.status(200).end(JSON.stringify(content));
     }
-    if (!access.premium && exams.get(id).year !== catalog.freeYear) return res.status(403).end();
+    if (!access.premium) return res.status(403).end();
   } catch (_) { return res.status(503).end(); }
   const pattern = query.pattern === '1';
   const file = path.join(process.cwd(), 'api', '_past_exams', id + (pattern ? '-pattern.webp' : '.json'));

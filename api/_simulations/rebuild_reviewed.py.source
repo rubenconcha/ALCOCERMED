@@ -56,7 +56,7 @@ aliases={
 for sub,names in aliases.items():
     for i,name in enumerate(names,1):topic_map[(sub,norm(name))]=i
 
-demo=read('content/simulacros_demo_2026.json')
+demo=read('api/_simulations/demo-2026.json')
 demo.pop('mini',None)
 distractors=read('quality/simulation-demo-distractors.json')
 for i,q in enumerate(demo['full'][:80],1):
@@ -67,7 +67,7 @@ for i,q in enumerate(demo['full'][:80],1):
     q['coverage']={'subject':q['materia'],'chapter':topic_map[(q['materia'],norm(q['tema']))],'curriculum':'bibliography'}
     q['review']='Distractores revisados en el contexto de la pregunta; respuesta y fuente del material suministrado conservadas.'
 demo['full'][80:]=build_health(4,health_reference,digest)
-write('content/simulacros_demo_2026.json',demo)
+write('api/_simulations/demo-2026.json',demo)
 
 def finish(paper):
     rows=paper['questions']

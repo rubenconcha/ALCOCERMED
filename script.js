@@ -43,6 +43,7 @@ window.openCampusRequestedSimulation = () => window.EntranceLibrary ? window.Ent
 const openSufficiencyPractice = openCampusFeature('sufficiency', () => window.Sufficiency.open(), 'suficiencia-screen');
 window.openSufficiency = () => CampusAccess.isFree() ? CampusAccess.unlock() : openSufficiencyPractice();
 window.openStudyCalendar = (date, activityId) => {
+    if (CampusAccess.isFree()) return;
     const calendar = window.CampusCalendar;
     calendar.setUser(currentUser.id);
     if (!date || !calendar.openDate(date, activityId)) calendar.open();
@@ -76,6 +77,10 @@ function resetCampusStudy() {
     if (window.FlashcardWorkspace) FlashcardWorkspace.clear();
     verifiedCampusUserId = null;
     verifiedCampusSessionId = null;
+    if (typeof mmState !== 'undefined') {
+        mmState.catalogReady = false;
+        mmState.allMapas = [];
+    }
     if (flashcardReviewTimer) clearTimeout(flashcardReviewTimer);
     flashcardReviewTimer = null;
     flashcardTopicCards = [];
@@ -289,6 +294,10 @@ const tips = [
 let currentCampusScreen = 'home-screen';
 const campusScreenHistory = [];
 function showScreen(screenId, fromBack) {
+    if (window.CampusAccess?.permits?.(screenId) === false) {
+        if (screenId !== 'study-calendar-screen') CampusAccess.unlock();
+        return false;
+    }
     if (screenId !== 'suficiencia-screen' && window.Sufficiency?.beforeLeave() === false) return false;
     if (screenId !== 'simulacro-screen' && typeof simState !== 'undefined' && simState && simState.timerInterval) {
         if (!confirm('Hay un examen en curso. ¿Deseas salir y descartar las respuestas?')) return false;
@@ -441,9 +450,7 @@ window.toggleMenu = async function (asignatura) {
         submenu.innerHTML = '';
 
         if (temas.size === 0) {
-            submenu.innerHTML = '';
-            if (CampusAccess.isFree()) await CampusAccess.appendLocks(submenu, asignatura);
-            else submenu.innerHTML = '<li><span class="loading">sin temas aún</span></li>';
+            submenu.innerHTML = '<li><span class="loading">sin temas aún</span></li>';
             return;
         }
 
@@ -459,8 +466,6 @@ window.toggleMenu = async function (asignatura) {
             li.appendChild(a);
             submenu.appendChild(li);
         });
-        await CampusAccess.appendLocks(submenu, asignatura);
-
     } catch (e) {
         console.error('Error cargando temas de flashcards:', e);
         submenu.innerHTML = '<li><span class="loading" style="color:#f87171;">error: ' + e.message + '</span></li>';
@@ -1022,12 +1027,13 @@ function resourceChooser(tool, names, select, description) {
     return true;
 }
 window.openGameMenu = function () {
+    if (CampusAccess.isFree()) return CampusAccess.unlock();
     const games = [
         { name: 'Quiz relámpago', description: 'Responde contra reloj con preguntas de las tres materias.', action: () => openGame('quiz') },
         { name: 'Ahorcado médico', description: 'Adivina conceptos de Morfofunción, Biología celular y Salud.', action: () => openGame('hangman') },
-        { name: 'Juegos por materias', description: 'Entra a AlcocerMed Juegos: evaluaciones, ranking y demos por materia.', action: () => { window.location.href = '/juegos/'; } }
+        { name: 'Juegos por materias', description: 'Practica con evaluaciones y consulta el ranking por materia.', action: () => { window.location.href = '/juegos/'; } }
     ];
-    if (!resourceChooser('Juegos', games.map(game => game.name), name => games.find(game => game.name === name).action(), 'Tres formas de practicar. Si tienes una cuenta gratuita, podrás jugar las versiones demo.')) return;
+    if (!resourceChooser('Juegos', games.map(game => game.name), name => games.find(game => game.name === name).action(), 'Elige cómo quieres practicar.')) return;
     document.querySelectorAll('#resource-options button').forEach((button, index) => {
         const game = games[index];
         if (index === 2) {
@@ -3585,6 +3591,7 @@ window.switchIntocTab = function (tab) {
 };
 
 async function loadMapasMentales() {
+    const owner = currentUser?.id;
     if (mmState.catalogReady) {
         populateMmMaterias();
         populateMmTemas();
@@ -3672,8 +3679,13 @@ async function loadMapasMentales() {
             { titulo: 'Estadística con Excel', materia: 'Educación para la Salud', url_imagen: 'mapas mentales/salud_26_estadistica_excel.png', descripcion: 'preparar, herramienta, selección, resultados. PDF pp. 191–200 de Educación en Salud e Investigación.', fecha: new Date().toISOString() },
             { titulo: 'Estadística con SPSS', materia: 'Educación para la Salud', url_imagen: 'mapas mentales/salud_27_estadistica_spss.png', descripcion: 'preparar, ingresar, revisar, analizar. PDF pp. 201–232 de Educación en Salud e Investigación.', fecha: new Date().toISOString() }
         ];
+        const sampleCounts = new Map();
         localMapas.forEach(function(m){
-            m.acceso_gratis=true;m.tema=m.titulo;
+            const matter = normalizeDbText(m.materia);
+            const count = sampleCounts.get(matter) || 0;
+            m.acceso_gratis = count < 2;
+            sampleCounts.set(matter, count + 1);
+            m.tema = m.titulo;
             var restricted=/\/(morfo_16_organos_sentidos|morfo_18_sangre)\.png$/.exec(m.url_imagen);
             if(restricted){
                 m.id=restricted[1];m.general=true;m.premium=true;m.acceso_gratis=false;
@@ -3688,8 +3700,14 @@ async function loadMapasMentales() {
             updateIntocStats();
             filterMapas();
         }
+        if (CampusAccess.isFree()) {
+            mmState.catalogReady = true;
+            renderMaps(localMapas.filter(map => map.acceso_gratis));
+            return;
+        }
         renderMaps(localMapas);
         await window.loadMindmapCatalog();
+        if (currentUser?.id !== owner || CampusAccess.isFree()) return;
         const maps = localMapas.concat(window.MINDMAP_PREMIUM_CATALOG.filter(map => !map.curated && map.section !== 'intocables'));
         mmState.catalogReady = true;
         if (currentCampusScreen === 'intocables-screen') renderMaps(maps);

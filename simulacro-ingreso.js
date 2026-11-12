@@ -12,10 +12,12 @@
     };
     const subjects = ['MORFOFUNCION', 'BIOLOGIA CELULAR', 'SALUD PUBLICA'];
     let selected = 'full';
-    let demoPromise;
     let prepared;
     let launchRequest = 0;
-    const formatFor = key => formats[key] || window.EntranceLibrary?.format(key);
+    const formatFor = key => {
+        const format = formats[key] || window.EntranceLibrary?.format(key);
+        return format?.demo && CampusAccess.isFree() ? { ...format, ...window.CampusPreviewPolicy.simulation, preview: true } : format;
+    };
     const requiresPlan = format => !format.demo && !format.free;
 
     const normalized = value => String(value || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').trim().toUpperCase();
@@ -24,13 +26,6 @@
         /^[A-E]$/.test(normalized(campo(row, 'respuesta_correcta'))) &&
         String(campo(row, 'opcion_' + normalized(campo(row, 'respuesta_correcta')).toLowerCase()) || '').trim() &&
         ['a', 'b', 'c', 'd'].every(letter => String(campo(row, 'opcion_' + letter) || '').trim());
-
-    async function demoQuestions() {
-        if (!demoPromise) demoPromise = fetch('/content/simulacros_demo_2026.json?v=3', { cache: 'no-cache' })
-            .then(response => { if (!response.ok) throw new Error('No se pudo cargar el simulacro de prueba.'); return response.json(); })
-            .catch(error => { demoPromise = null; throw error; });
-        return demoPromise;
-    }
 
     function verifyDistribution(rows, format) {
         const total = format.split.reduce((sum, count) => sum + count, 0);
@@ -42,15 +37,18 @@
     }
 
     async function loadQuestions(format) {
-        if (format.curatedId) {
+        if (format.curatedId || format.demo) {
+            const id = format.demo ? 'demo-2026' : format.curatedId;
             const session=(await getSupabase().auth.getSession()).data.session;
             if(!session?.access_token)throw new Error('Vuelve a iniciar sesión.');
-            const response=await fetch('/api/simulation?id='+encodeURIComponent(format.curatedId),{headers:{Authorization:'Bearer '+session.access_token},cache:'no-store',signal:AbortSignal.timeout(15000)});
+            const response=await fetch('/api/simulation?id='+encodeURIComponent(id),{headers:{Authorization:'Bearer '+session.access_token},cache:'no-store',signal:AbortSignal.timeout(15000)});
             if(response.status===403)throw Object.assign(new Error('Esta prueba requiere acceso.'),{status:403});
             if(!response.ok)throw new Error('No pudimos abrir este simulacro. Reintenta.');
             const paper=await response.json(),current=(await getSupabase().auth.getSession()).data.session;
-            if(current?.access_token!==session.access_token||CampusAccess.isFree())throw new Error('Tu sesión cambió. Vuelve a abrir el simulacro.');
-            if(paper.id!==format.curatedId||!SimulationScope.validate(paper,format.scope,format))throw new Error('El contenido no corresponde al parcial elegido.');
+            if(current?.access_token!==session.access_token||CampusAccess.isFree()!==Boolean(format.preview))throw new Error('Tu sesión cambió. Vuelve a abrir el simulacro.');
+            if(paper.id!==id||Boolean(paper.preview)!==Boolean(format.preview)||
+                (!format.preview&&!SimulationScope.validate(paper,format.scope,format)))throw new Error('El contenido no corresponde al simulacro elegido.');
+            if (format.demo) verifyDistribution(paper.questions, format);
             return paper.questions;
         }
         if (format.pastId) {
@@ -64,13 +62,6 @@
             if(current?.access_token!==session.access_token || (requiresPlan(format)&&CampusAccess.isFree())) throw new Error('Tu sesión cambió. Vuelve a abrir el examen.');
             if(paper.id!==format.pastId || paper.type!==format.type || paper.duration!==100 || paper.questions?.length!==100 || new Set(paper.questions.map(q=>q.numero_original)).size!==100 || paper.questions.some(q=>!q.pregunta||!['a','b','c','d'].every(l=>q['opcion_'+l])||!q.respuestas_aceptadas?.length)) throw new Error('No pudimos abrir este simulacro. Intenta de nuevo.');
             return paper.questions;
-        }
-        if (format.demo) {
-            const bank = await demoQuestions();
-            const rows = bank.full;
-            verifyDistribution(rows, format);
-            if(!SimulationScope.validate({scope:'final',duration:100,questions:rows},'final'))throw new Error('El simulacro no cumple la distribución 50/30/20 o el temario.');
-            return rows;
         }
         if (CampusAccess.isFree()) { CampusAccess.unlock(); return null; }
         if (format.depthSet) {
@@ -183,7 +174,7 @@
         }
     };
 
-    window.addEventListener?.('campus-access-change', () => { prepared = null; });
+    window.addEventListener?.('campus-access-change', () => { prepared = null; ++launchRequest; });
 
     window.renderEntranceBreakdown = function () {
         const root = document.getElementById('sim-subject-breakdown');

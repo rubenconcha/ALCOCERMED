@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="commerce.css?v=1">
     <link rel="stylesheet" href="student-white.css?v=2">
     <link rel="stylesheet" href="campus-theme.css?v=4">
-    <link rel="stylesheet" href="campus-access.css?v=2">
+    <link rel="stylesheet" href="campus-access.css?v=3">
     <link rel="stylesheet" href="login-polish.css?v=3">
     <link rel="stylesheet" href="campus-preview.css?v=3">
 
@@ -34,7 +34,8 @@
     <script defer src="platform-polish.js?v=1"></script>
     <script defer src="config.js"></script>
     <script defer src="device_guard.js?v=12"></script>
-    <script defer src="campus-access.js?v=11"></script>
+    <script defer src="campus-access.js?v=12"></script>
+    <script defer src="campus-preview-policy.js?v=1"></script>
     <script defer src="campus-login.js?v=5"></script>
 </head>
 
@@ -198,7 +199,7 @@
                         <span class="nav-label">Inicio</span>
                     </a>
                 </li>
-                <li class="nav-item nav-item-simple" id="nav-study-calendar">
+                <li class="nav-item nav-item-simple" id="nav-study-calendar" data-premium-only hidden>
                     <a data-campus-screen="study-calendar-screen" href="/campus?seccion=calendario" data-campus-load="calendar" onclick="openStudyCalendar(); return false;" aria-label="Calendario" data-tooltip="calendario">
                         <span class="nav-icon"><svg class="sidebar-tool-icon" aria-hidden="true"><use href="/assets/calendar-icons.svg#calendar"></use></svg></span>
                         <span class="nav-label">Calendario</span>
@@ -280,7 +281,7 @@
 
                     </a>
                 </li>
-                <li class="nav-item nav-item-simple" id="nav-atlas">
+                <li class="nav-item nav-item-simple" id="nav-atlas" data-atlas-access hidden>
                     <a data-campus-screen="atlas-screen" href="/campus?seccion=atlas" data-campus-load="atlas" onclick="openAtlas(); return false;" aria-label="Atlas anatómico" data-tooltip="atlas anatómico">
                         <span class="nav-icon nav-icon-atlas"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 28V7a3 3 0 0 1 3-3h18v24H8a3 3 0 0 1 0-6h18M9 4v18"/><path d="M18 11c-1-3-5-3-5 1 0 3 5 6 5 6s5-3 5-6c0-4-4-4-5-1Z"/></svg></span>
                         <span class="nav-label">Atlas anatómico</span>
@@ -356,7 +357,7 @@
             </ul>
         </details>
 
-        <details class="campus-nav-group nav-section">
+        <details class="campus-nav-group nav-section" data-premium-only hidden>
             <summary aria-label="Juegos"><span class="nav-icon"><svg aria-hidden="true" focusable="false"><use href="/assets/calendar-icons.svg#game"></use></svg></span><span class="nav-label">Juegos</span><span class="campus-nav-chevron" aria-hidden="true"></span></summary>
             <ul class="nav-links">
 
@@ -452,7 +453,7 @@
         </div>
         <div class="campus-mood-status" id="campus-mood-status" hidden><p id="campus-mood-message" aria-live="polite"></p><button type="button" class="campus-link-button" id="campus-mood-clear">Quitar selección</button></div>
       </section>
-      <section class="campus-box campus-day-preview" aria-labelledby="campus-day-preview-title">
+      <section class="campus-box campus-day-preview" aria-labelledby="campus-day-preview-title" data-premium-only hidden>
         <div class="campus-box-heading"><h2 id="campus-day-preview-title">Planificación diaria</h2><button type="button" id="campus-open-calendar" class="campus-link-button">Ver calendario</button></div>
         <p class="campus-example-label">Plan de práctica de muestra</p>
         <div class="campus-day-preview-layout">
@@ -478,14 +479,14 @@
     <aside class="campus-box campus-notices" aria-labelledby="campus-notices-title">
       <div class="campus-box-heading"><h2 id="campus-notices-title">Avisos del campus</h2><button type="button" class="campus-link-button" data-campus-notices>Ver todos</button></div>
       <div id="campus-notice-list" class="campus-notice-list">
-        <details open><summary><span>Calendario de estudio</span><small>Planificación</small></summary><p>Consulta un plan de práctica de muestra. Puedes abrir el cronograma de cada día y marcar las actividades que completes.</p><button type="button" class="campus-link-button" data-campus-action="calendar">Abrir calendario</button></details>
-        <details><summary><span>Textos oficiales</span><small>Biblioteca</small></summary><p>Abre los materiales oficiales del campus para leerlos dentro de la plataforma o descargarlos cuando estén disponibles.</p><button type="button" class="campus-link-button" data-campus-action="texts">Ver textos</button></details>
+        <details open data-premium-only hidden><summary><span>Calendario de estudio</span><small>Planificación</small></summary><p>Consulta un plan de práctica de muestra. Puedes abrir el cronograma de cada día y marcar las actividades que completes.</p><button type="button" class="campus-link-button" data-campus-action="calendar">Abrir calendario</button></details>
+        <details><summary><span>Textos oficiales</span><small>Biblioteca</small></summary><p>Consulta la bibliografía oficial de Medicina dentro del campus.</p><button type="button" class="campus-link-button" data-campus-action="texts">Ver textos</button></details>
         <details><summary><span>Práctica de suficiencia</span><small>Ejercicios</small></summary><p>Encuentra ejercicios por materia y consulta tus respuestas al finalizar.</p><button type="button" class="campus-link-button" data-campus-action="practice">Abrir práctica</button></details>
       </div>
     </aside>
   </div>
   <div class="dashboard-columns"><div class="dashboard-main">
-<div id="free-account-banner" class="free-account-banner" hidden><small>TU CUENTA GRATUITA</small><h2>Entra y empieza a estudiar.</h2><p>Prueba las herramientas del campus. Dentro de cada sección encontrarás material para comenzar y verás un candado en el contenido reservado para los planes.</p></div>
+<div id="free-account-banner" class="free-account-banner" hidden><small>TU CUENTA GRATUITA</small><h2>Tu muestra de estudio</h2><p>Practica con una selección de temas, un simulacro breve y preguntas de la última gestión.</p><a href="/planes?desde=campus#planes">Ver planes</a></div>
 
     <section class="dashboard-launch" aria-labelledby="dashboard-launch-title"><div class="dashboard-launch-heading"><div><span class="dashboard-eyebrow">TU ESPACIO DE ESTUDIO</span><h2 id="dashboard-launch-title">¿Qué vas a estudiar hoy?</h2></div></div>
       <div class="dashboard-activity-grid">
@@ -495,7 +496,7 @@
         <button class="dashboard-activity dashboard-activity-navy" data-campus-load="simulations" onclick="openCampusSimulations()"><img src="/assets/study-art/quiz.webp" alt="" loading="lazy" decoding="async"><span><strong>Simulacros</strong><small>Resuelve un examen con tiempo</small></span></button>
       </div>
     </section>
-    <div class="dashboard-more"><button onclick="openGameMenu()"><img src="/assets/study-art/word.webp" alt="" loading="lazy" decoding="async"><span><strong>Aprende jugando</strong><small>Quiz, ahorcado y Juegos por materias</small></span><span class="dashboard-more-arrow" aria-hidden="true">→</span></button><button onclick="openStudentResults()"><svg class="study-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg?v=3#progress"></use></svg><span><strong>Mis resultados</strong><small>Consulta tu historial y métricas</small></span><span aria-hidden="true">→</span></button></div>
+    <div class="dashboard-more"><button onclick="openGameMenu()" data-premium-only hidden><img src="/assets/study-art/word.webp" alt="" loading="lazy" decoding="async"><span><strong>Aprende jugando</strong><small>Quiz, ahorcado y Juegos por materias</small></span><span class="dashboard-more-arrow" aria-hidden="true">→</span></button><button onclick="openStudentResults()"><svg class="study-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg?v=3#progress"></use></svg><span><strong>Mis resultados</strong><small>Consulta tu historial y métricas</small></span><span aria-hidden="true">→</span></button></div>
   </div><aside class="dashboard-progress" aria-label="Tu progreso"><div class="dashboard-progress-heading"><span>TU AVANCE</span><h2>Tu progreso</h2></div>        <!-- ══ MI PROGRESO ══ -->
         <div class="nav-section progress-section">
             <span class="section-title">MI PROGRESO</span>
@@ -892,14 +893,15 @@
                     <button id="past-back" type="button" class="past-hero-back" onclick="pastExamsBack()"><span aria-hidden="true">←</span><span id="past-back-label">Volver</span></button>
                     <p class="past-eyebrow">Preparatoria Ben Carson · Medicina UMSS</p>
                     <h2>Exámenes pasados</h2>
-                    <p>Resuelve un examen completo o practica preguntas originales por materia y tema.</p>
+                    <p data-premium-only hidden>Resuelve un examen completo o practica preguntas originales por materia y tema.</p>
+                    <p data-free-lock hidden>Dos preguntas por asignatura de la última gestión<span id="past-sample-year"></span>.</p>
                 </div>
                 <div class="past-hero-art" aria-hidden="true"><img src="/assets/study-art/past-exams.webp" alt="" width="256" height="256" loading="lazy"></div>
             </header>
             <p id="past-status" role="status" aria-live="polite"></p>
             <div id="past-list">
                 <div class="past-list-bar">
-                    <div class="past-mode" role="group" aria-label="Vista de exámenes pasados">
+                    <div class="past-mode" role="group" aria-label="Vista de exámenes pasados" data-premium-only hidden>
                         <button id="past-mode-exams" type="button" aria-pressed="true" aria-controls="past-exam-cards"><svg aria-hidden="true"><use href="/assets/study-tools.svg?v=3#exam"></use></svg> Exámenes completos</button>
                         <button id="past-mode-topics" type="button" aria-pressed="false" aria-controls="past-breakdown"><svg aria-hidden="true"><use href="/assets/study-tools.svg?v=3#map"></use></svg> Preguntas por tema</button>
                     </div>
@@ -908,8 +910,8 @@
                 </div>
                 <div id="past-filters" class="past-filters">
                     <div class="past-filter-fields">
-                        <label for="past-year">Gestión<select id="past-year"><option value="">Todas las gestiones</option></select></label>
-                        <label for="past-type">Examen<select id="past-type"><option value="">Todos los exámenes</option><option>Primer parcial</option><option>Segundo parcial</option><option>Examen final</option></select></label>
+                        <label for="past-year" data-premium-only hidden>Gestión<select id="past-year"><option value="">Todas las gestiones</option></select></label>
+                        <label for="past-type" data-premium-only hidden>Examen<select id="past-type"><option value="">Todos los exámenes</option><option>Primer parcial</option><option>Segundo parcial</option><option>Examen final</option></select></label>
                         <div class="past-breakdown-pickers" id="past-breakdown-pickers" hidden>
                             <details class="past-picker" id="past-subject-picker">
                                 <summary>
@@ -950,7 +952,7 @@
                             <button type="submit" class="past-action">Buscar</button>
                         </div>
                         <div class="past-filter-footer">
-                            <label class="past-check-line"><input type="checkbox" id="past-unconfirmed"> Preguntas sin tema asignado</label>
+                            <label class="past-check-line" data-premium-only hidden><input type="checkbox" id="past-unconfirmed"> Preguntas sin tema asignado</label>
                             <button type="button" id="past-reset-filters" class="past-text-button">Limpiar filtros</button>
                         </div>
                     </form>
@@ -1021,18 +1023,19 @@
                     <div>
                         <span class="entrance-eyebrow">PREPARATORIA BEN CARSON · MEDICINA</span>
                         <h2 class="sim-title">Simulacros de ingreso</h2>
-                        <p class="sim-subtitle">Elige un simulacro general o practica un tema. Revisa tus respuestas al terminar.</p>
+                        <p class="sim-subtitle" data-premium-only hidden>Elige un simulacro general o practica un tema. Revisa tus respuestas al terminar.</p>
+                        <p class="sim-subtitle" data-free-lock hidden>Resuelve la prueba de muestra y revisa tus respuestas al terminar.</p>
                     </div>
                 </div>
 
-                <div class="sim-library-filters">
+                <div class="sim-library-filters" data-premium-only hidden>
                     <label for="sim-library-search">Buscar simulacro<input id="sim-library-search" type="search" placeholder="Ej. Sangre o Simulacro 3" autocomplete="off"></label>
                     <label for="sim-library-kind">Tipo de simulacro<select id="sim-library-kind"><option value="">Todos</option><option value="general">Generales</option><option value="topic">Por tema</option></select></label>
                     <label for="sim-library-topic">Tema<select id="sim-library-topic"><option value="">Todos los temas</option></select></label>
                     <label for="sim-library-scope">Parcial<select id="sim-library-scope"><option value="">Todos los parciales</option><option value="first">Primer parcial</option><option value="second">Segundo parcial</option><option value="final">Examen final</option><option value="mini-foundations">Minisimulacros</option></select></label>
                     <p id="sim-library-status" role="status" aria-live="polite"></p>
                 </div>
-                <div class="sim-library-tools">
+                <div class="sim-library-tools" data-premium-only hidden>
                     <button type="button" class="campus-secondary sim-library-practice" data-campus-load="sufficiency" onclick="openSufficiency()">Práctica por materia y tema</button>
                 </div>
                 <div id="sim-library-list" class="entrance-choices" role="group" aria-label="Simulacros disponibles"></div>
@@ -1494,7 +1497,7 @@
                 <div class="itc-hero-copy"><span class="itc-eyebrow">INTOCABLES</span><h1 id="itc-title">Comprende. Conecta. Domina.</h1><p>Láminas ilustradas, explicaciones y fichas esenciales para estudiar a fondo.</p><div class="itc-hero-actions"><a href="#itc-coleccion" class="itc-primary">Explorar material <span aria-hidden="true">→</span></a><button type="button" class="itc-secondary" onclick="openMindMaps()">Ver mapas mentales</button></div></div>
                 <img class="itc-hero-art" src="/assets/study-art/intocables-hero.webp" width="1080" height="810" alt="" loading="lazy" decoding="async">
             </div>
-            <nav id="itc-formats" class="itc-formats" aria-label="Formato de estudio"><button type="button" data-format="sheets" aria-pressed="true">Láminas ilustradas</button><button type="button" data-format="cards" aria-pressed="false">Fichas esenciales</button></nav>
+            <nav id="itc-formats" class="itc-formats" aria-label="Formato de estudio"><button type="button" data-format="sheets" aria-pressed="true" data-premium-only hidden>Láminas ilustradas</button><button type="button" data-format="cards" aria-pressed="false">Fichas esenciales</button></nav>
             <div id="itc-coleccion" class="itc-collection"><div class="itc-collection-head"><div><span class="itc-eyebrow">COLECCIÓN</span><h2>Elige qué repasar</h2></div><p id="itc-count" aria-live="polite"></p></div>
                 <div class="itc-controls"><div id="itc-subjects" class="itc-subjects" aria-label="Filtrar por materia"></div><label class="itc-search"><span aria-hidden="true">⌕</span><input id="itc-search" type="search" placeholder="Buscar lámina, concepto o tema" autocomplete="off" aria-label="Buscar lámina, concepto o tema"></label><select id="itc-topic" aria-label="Filtrar por tema"><option value="">Todos los temas</option></select></div>
                 <div id="itc-status" class="itc-status" role="status" hidden></div><div id="itc-grid" class="itc-grid"></div>
@@ -1633,7 +1636,7 @@
                         <option>Acceso a mi cuenta</option>
                         <option>Material de estudio</option>
                         <option>Simulacros y evaluaciones</option>
-                        <option>Calendario y actividades</option>
+                        <option data-premium-only hidden>Calendario y actividades</option>
                         <option>Otra consulta</option>
                     </select>
                 </label>
@@ -1723,26 +1726,26 @@
         <script data-campus-assets="campus" src="campus-section-tracking.js?v=1"></script>
         <script data-campus-assets="campus" src="question-review.js?v=15"></script>
         <script data-campus-assets="campus" src="study-media.js?v=20261021-visual5b"></script>
-        <script data-campus-assets="campus" src="script.js?v=20261112-acceso2"></script>
+        <script data-campus-assets="campus" src="script.js?v=20261112-muestra"></script>
         <script data-campus-assets="campus" src="study-assessments.js?v=2"></script>
         <script data-campus-assets="campus" src="study-calendar-data.js?v=7"></script>
-        <script data-campus-assets="campus" src="campus-shell.js?v=4"></script>
+        <script data-campus-assets="campus" src="campus-shell.js?v=5"></script>
         <script data-campus-assets="campus" src="student-results.js?v=11"></script>
         <link rel="stylesheet" data-campus-assets="campus-extra simulations" href="simulacro-library.css?v=7">
         <link rel="stylesheet" data-campus-assets="campus past evaluations entrance-attempt" href="past-exams.css?v=7">
         <link rel="stylesheet" data-campus-assets="campus-extra evaluations" href="topic-evaluations.css?v=6">
         <link rel="stylesheet" data-campus-assets="campus-extra atlas" href="campus-atlas.css?v=5">
         <link rel="stylesheet" data-campus-assets="sufficiency" href="suficiencia.css?v=9">
-        <script data-campus-assets="campus flashcards" src="student-library.js?v=11"></script>
+        <script data-campus-assets="campus flashcards" src="student-library.js?v=12"></script>
         <script data-campus-assets="campus flashcard-deck" src="flashcard-workspace.js?v=20261109-foco"></script>
         <script data-campus-assets="calendar-pdf" src="study-calendar-pdf.js?v=2"></script>
         <script data-campus-assets="campus calendar" src="study-calendar.js?v=14"></script>
-        <script data-campus-assets="past-topics" src="past-exam-breakdown.js?v=10"></script>
-        <script data-campus-assets="campus-extra past evaluations entrance-attempt" src="past-exams.js?v=15"></script>
+        <script data-campus-assets="past-topics" src="past-exam-breakdown.js?v=11"></script>
+        <script data-campus-assets="campus-extra past evaluations entrance-attempt" src="past-exams.js?v=16"></script>
         <script data-campus-assets="entrance-attempt" src="simulation-scope.js?v=11"></script>
-        <script data-campus-assets="entrance-attempt" src="simulacro-ingreso.js?v=14"></script>
-        <script data-campus-assets="campus-extra simulations" src="simulacro-library.js?v=10"></script>
-        <script data-campus-assets="campus-extra evaluations" src="topic-evaluations.js?v=20261110-revision2"></script>
+        <script data-campus-assets="entrance-attempt" src="simulacro-ingreso.js?v=15"></script>
+        <script data-campus-assets="campus-extra simulations" src="simulacro-library.js?v=11"></script>
+        <script data-campus-assets="campus-extra evaluations" src="topic-evaluations.js?v=20261112-muestra"></script>
         <script data-campus-assets="campus-extra atlas" src="campus-atlas.js?v=12"></script>
         <script data-campus-assets="sufficiency" src="suficiencia-core.js?v=12"></script>
         <script data-campus-assets="sufficiency" src="suficiencia.js?v=17"></script>
@@ -1757,12 +1760,12 @@
         <script data-campus-assets="maps" src="mindmap-premium.js?v=3"></script>
         <script data-campus-assets="maps" src="mindmap-practice.js?v=20261021-visual5b"></script>
         <script data-campus-assets="maps" src="mindmap-viewer.js?v=20"></script>
-        <script data-campus-assets="campus-extra intocables maps" src="intocables-hub.js?v=5"></script>
+        <script data-campus-assets="campus-extra intocables maps" src="intocables-hub.js?v=6"></script>
         <script data-campus-assets="reader" src="summary-pdf-reader.js?v=10"></script>
-        <script data-campus-assets="campus texts" src="official-texts.js?v=13"></script>
+        <script data-campus-assets="campus texts" src="official-texts.js?v=14"></script>
         <script data-campus-assets="practice" src="sufficiency-practice-content.js?v=2"></script>
-        <script data-campus-assets="practice" src="sufficiency-practice.js?v=3"></script>
-        <script data-campus-assets="campus-extra summaries" src="study-summaries.js?v=20261109-apertura"></script>
+        <script data-campus-assets="practice" src="sufficiency-practice.js?v=4"></script>
+        <script data-campus-assets="campus-extra summaries" src="study-summaries.js?v=20261112-muestra"></script>
     </template>
 </body>
 

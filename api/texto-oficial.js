@@ -4,6 +4,7 @@ const { Readable } = require('node:stream');
 const { pipeline } = require('node:stream/promises');
 const { createHmac, timingSafeEqual } = require('node:crypto');
 const books = require('./_official_texts/segments.json');
+const samplePages = require('./_official_texts/sample-pages.cjs');
 
 const subjects = new Set(['morfofuncion', 'biologia-celular', 'educacion-salud']);
 const library = 'https://ln3dltv3md2wx5wh.private.blob.vercel-storage.com/umss/curso-basico-2025-2026/';
@@ -13,7 +14,7 @@ const downloadLifetime = 120;
 const readerLifetime = 300;
 
 function signature(secret, subject, expires, reader) {
-    const scope = reader ? 'lector-oficial:' : 'texto-oficial:';
+    const scope = reader ? 'lector-oficial-v2:' : 'texto-oficial-v2:';
     return createHmac('sha256', secret).update(scope + subject + ':' + expires).digest('base64url');
 }
 
@@ -30,16 +31,17 @@ function issueGrant(secret, subject, reader) {
 }
 
 async function authorize(header) {
-    if (typeof header !== 'string' || !/^Bearer [\w.-]+$/i.test(header)) return 401;
+    if (typeof header !== 'string' || !/^Bearer [\w.-]+$/i.test(header)) return { status: 401 };
     const access = await fetch(campusAccess, {
         method: 'POST',
         headers: { apikey: anonKey, Authorization: header, 'Content-Type': 'application/json' },
         body: '{}',
         signal: AbortSignal.timeout(8000),
     });
-    if (access.status === 401 || access.status === 403) return access.status;
-    if (!access.ok) return 503;
-    return (await access.json()).ready === true ? 200 : 403;
+    if (access.status === 401 || access.status === 403) return { status: access.status };
+    if (!access.ok) return { status: 503 };
+    const data = await access.json();
+    return { status: data.ready === true ? 200 : 403, premium: data.premium === true };
 }
 
 module.exports = async function handler(req, res) {
@@ -79,12 +81,28 @@ module.exports = async function handler(req, res) {
     const secret = process.env.BLOB_READ_WRITE_TOKEN;
     const download = !view && req.method !== 'POST' && validGrant(secret, subject, req.query.descarga);
     const reading = Boolean(view) && req.method !== 'POST' && validGrant(secret, subject, req.headers['x-official-reader'], true);
+    const starts = Object.keys(book.segments);
+    let availablePages;
     try {
         if (!download && !reading) {
             const access = await authorize(req.headers.authorization);
-            if (access !== 200) {
-                res.statusCode = access;
+            if (access.status !== 200) {
+                res.statusCode = access.status;
                 return res.end();
+            }
+            if (!access.premium) {
+                if (!cover && !segmented) {
+                    res.statusCode = 403;
+                    return res.end();
+                }
+                availablePages = (await samplePages())[subject];
+                if (segmented) {
+                    const end = Number(starts[starts.indexOf(start) + 1]) || Infinity;
+                    if (!availablePages.some(page => page >= Number(start) && page < end)) {
+                        res.statusCode = 403;
+                        return res.end();
+                    }
+                }
             }
         }
     } catch (_) {
@@ -133,8 +151,9 @@ module.exports = async function handler(req, res) {
         res.setHeader('Content-Type', contentType);
         res.setHeader('Content-Disposition', `${download ? 'attachment' : 'inline'}; filename="UMSS-2025-2026-${subject}.${extension}"`);
         if (cover) {
-            res.setHeader('X-Official-Reader', reading ? req.headers['x-official-reader'] : issueGrant(secret, subject, true));
-            res.setHeader('X-Official-Page-Starts', Object.keys(book.segments).join(','));
+            if (availablePages) res.setHeader('X-Official-Preview-Pages', availablePages.join(','));
+            else res.setHeader('X-Official-Reader', reading ? req.headers['x-official-reader'] : issueGrant(secret, subject, true));
+            res.setHeader('X-Official-Page-Starts', starts.join(','));
         }
         for (const header of segment ? ['Content-Length'] : ['Accept-Ranges', 'Content-Length', 'Content-Range']) {
             const value = pdf.headers.get(header);

@@ -39,33 +39,23 @@
         const query = normalizeDbText(search.value);
         const visible = topics.filter(topic => normalizeDbText(topic.name).includes(query));
         list.replaceChildren();
-        status.textContent = visible.length ? (window.CampusAccess?.isFree() ? 'Los temas con candado se desbloquean con un plan.' : 'Elige un tema para comenzar tu repaso.') : 'No se encontraron temas. Prueba otra búsqueda o materia.';
+        status.textContent = visible.length ? 'Elige un tema para comenzar tu repaso.' : 'No se encontraron temas. Prueba otra búsqueda o materia.';
         visible.forEach(topic => {
             const row = document.createElement('article');
-            row.className = topic.locked ? 'library-topic-row is-locked' : 'library-topic-row';
+            row.className = 'library-topic-row';
             const title = document.createElement('strong');
             title.textContent = topic.name.charAt(0).toLocaleUpperCase('es') + topic.name.slice(1);
-            if (topic.locked) {
-                const icon = document.createElement('span');
-                icon.className = 'library-topic-lock-icon';
-                icon.innerHTML = '<i class="fas fa-lock" aria-hidden="true"></i> Bloqueado';
-                title.append(icon);
-            }
-            const action = document.createElement(topic.locked ? 'a' : 'button');
-            action.className = topic.locked ? 'library-topic-action is-locked' : 'library-topic-action';
-            action.textContent = topic.locked ? 'Desbloquear →' : 'Empezar';
-            action.setAttribute('aria-label', topic.locked ? `Ver planes para desbloquear ${topic.name}` : `Empezar ${topic.name}`);
-            if (topic.locked) action.href = '/planes?desde=campus#planes';
-            else {
-                action.type = 'button';
-                action.addEventListener('click', () => openTopic(topic));
-            }
+            const action = document.createElement('button');
+            action.className = 'library-topic-action';
+            action.textContent = 'Empezar';
+            action.setAttribute('aria-label', `Empezar ${topic.name}`);
+            action.type = 'button';
+            action.addEventListener('click', () => openTopic(topic));
             const info = document.createElement('div');
             info.className = 'library-topic-info';
             const count = document.createElement('span');
-            count.className = 'library-topic-count' + (!topic.locked && topic.count < 10 ? ' is-small' : '');
-            count.textContent = topic.locked ? 'Requiere un plan vigente'
-                : topic.pending ? 'Tarjetas de repaso' : topic.count + ' tarjetas en el tema' + (topic.count < 10 ? ' · colección breve' : '');
+            count.className = 'library-topic-count' + (topic.count < 10 ? ' is-small' : '');
+            count.textContent = topic.count + ' tarjetas en el tema' + (topic.count < 10 ? ' · colección breve' : '');
             info.append(title, count);
             row.append(info, action);
             list.append(row);
@@ -83,17 +73,21 @@
         const belongs = row => normalizeDbText(row.materia) === normalizeDbText(value);
         const free = CampusAccess.isFree();
         const index = window.CampusCatalogs.flashcards.filter(belongs);
-        topics = index.map(row => ({ name: row.tema, count: row.count, pending: free }));
+        topics = free ? [] : index.map(row => ({ name: row.tema, count: row.count }));
         renderTopics();
-        if (free) CampusAccess.catalog().then(policy => {
-            if (token !== request || !CampusAccess.isFree()) return;
-            const counts = new Map(policy.filter(belongs).map(row => [normalizeDbText(row.tema), Number(row.free_count)]));
-            topics = index.map(row => {
-                const count = Math.min(row.count, counts.get(normalizeDbText(row.tema)) || 0);
-                return { name: row.tema, count, locked: !count };
+        if (free) {
+            status.textContent = 'Cargando los temas de muestra…';
+            return CampusAccess.catalog().then(policy => {
+                if (token !== request || !CampusAccess.isFree()) return;
+                const counts = new Map(policy.filter(belongs).map(row => [normalizeDbText(row.tema), Number(row.free_count)]));
+                topics = index.map(row => ({
+                    name: row.tema, count: Math.min(row.count, counts.get(normalizeDbText(row.tema)) || 0)
+                })).filter(topic => topic.count > 0).slice(0, 2);
+                renderTopics();
+            }).catch(() => {
+                if (token === request) status.textContent = 'No pudimos cargar la muestra. Vuelve a elegir la materia.';
             });
-            renderTopics();
-        }).catch(() => {});
+        }
     }
 
     async function openTopic(topic) {
@@ -110,8 +104,7 @@
         area.setAttribute('aria-busy', 'true');
         document.getElementById('current-subject').textContent = matter.toLowerCase().replace(/^salud pública$|^salud publica$/, 'educación para la salud');
         document.getElementById('card-tema-name').textContent = topic.name;
-        document.getElementById('study-topic-message').textContent = topic.pending
-            ? 'Repaso por tema' : 'Repaso por tema · ' + topic.count + ' tarjetas';
+        document.getElementById('study-topic-message').textContent = 'Repaso por tema · ' + topic.count + ' tarjetas';
         try {
             const [cards] = await Promise.all([OfficialFlashcards.load(matter, topic.name), window.loadCampusAssets('flashcard-deck')]);
             if (!isCurrent()) return;

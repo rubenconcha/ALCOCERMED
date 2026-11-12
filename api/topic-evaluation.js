@@ -2,6 +2,7 @@ const fs = require('node:fs/promises');
 const path = require('node:path');
 const catalog = require('../content/topic-evaluations/catalog.json');
 const sufficiency = require('./_evaluations/suficiencia.cjs');
+const { evaluationIds, evaluationCount } = require('../campus-preview-policy.js');
 const ids = new Set(catalog.exams.map(exam => exam.id));
 const supabaseUrl = 'https://asnwhddmurstzmghuyin.supabase.co';
 // Same public project key and paid campus boundary as the other exam endpoints.
@@ -31,9 +32,13 @@ module.exports = async function handler(req, res) {
     });
     if (!response.ok) return res.status(response.status === 401 ? 401 : 503).end();
     const access = await response.json();
-    if (!access?.ready || !access.premium || (access.expires_at && Date.parse(access.expires_at) <= Date.now())) return res.status(403).end();
+    if (!access?.ready) return res.status(403).end();
+    const premium = access.premium && (!access.expires_at || Date.parse(access.expires_at) > Date.now());
+    if (!premium && !evaluationIds.includes(id)) return res.status(403).end();
     const paper = isCourse ? JSON.parse(await fs.readFile(path.join(__dirname,'_evaluations',id+'.json'),'utf8')) : sufficiency.paper(id);
     if (paper.id !== id || paper.questions.length !== paper.count) return res.status(503).end();
-    return json(paper);
+    return json(premium ? paper : {
+      ...paper, count: evaluationCount, duration: evaluationCount, questions: paper.questions.slice(0, evaluationCount),
+    });
   } catch (_) { return res.status(503).end(); }
 };

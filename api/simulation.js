@@ -3,6 +3,7 @@ const path = require('node:path');
 const { validate } = require('../simulation-scope.js');
 const catalog = require('../content/simulacros-catalog.json');
 const withGeneralReview = require('./_simulations/general-review.cjs');
+const demoPaper = require('./_simulations/demo.cjs');
 const scopes = new Map([['semana2-testb-virtual','semana2-testb-virtual'],['mini-foundations','mini-foundations'],['partial-first','first'],['partial-second','second'],...['9','10'].map(n=>['partial-first-'+n,'first']),...['11','12'].map(n=>['partial-second-'+n,'second']),...['3','4','5','6','8','13','14'].map(n=>['final-'+n,'final'])]);
 const week3Id = 'semana3-grupo-virtual-2';
 scopes.set(week3Id, week3Id);
@@ -70,7 +71,7 @@ module.exports = async function handler(req, res) {
   res.setHeader('X-Robots-Tag', 'noindex');
   if (req.method !== 'GET') return res.status(405).end();
   const id = typeof req.query.id === 'string' ? req.query.id : '';
-  if (!scopes.has(id)) return res.status(404).end();
+  if (id !== 'demo-2026' && !scopes.has(id)) return res.status(404).end();
   const token = /^Bearer\s+(.+)$/i.exec(req.headers.authorization || '')?.[1];
   if (!token) return res.status(401).end();
   const headers = { apikey: anonKey, Authorization: `Bearer ${token}` };
@@ -82,6 +83,12 @@ module.exports = async function handler(req, res) {
     if (!response.ok) return res.status(response.status === 401 ? 401 : 503).end();
     const access = await response.json();
     if (!access?.ready) return res.status(403).end();
+    if (id === 'demo-2026') {
+      const paper = demoPaper(Boolean(access.premium));
+      if (access.premium && !validate(paper, 'final')) return res.status(503).end();
+      res.setHeader('Content-Type', 'application/json; charset=utf-8');
+      return res.status(200).end(JSON.stringify(paper));
+    }
     if (!access.premium) return res.status(403).end();
   } catch (_) { return res.status(503).end(); }
   try {

@@ -27,11 +27,12 @@ window.IntocablesHub = (() => {
    observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){observer.unobserve(e.target);fetchCover(e.target.dataset.coverId);}}),{rootMargin:'240px'});document.querySelectorAll('[data-cover-id]').forEach(el=>observer.observe(el));
   }else imgs.forEach(img=>fetchCover(img.dataset.sheetId));
  }
- function topics(){const names=[...new Set(catalogue.filter(i=>i.kind===format&&(!subject||i.materia===subject)).map(i=>i.tema))];$('itc-topic').innerHTML='<option value="">Todos los temas</option>'+names.map(n=>`<option value="${esc(n)}">${esc(n)}</option>`).join('');$('itc-topic').value=topic;}
+ const available=()=>catalogue.filter(i=>!window.CampusAccess?.isFree()||i.acceso_gratis);
+ function topics(){const names=[...new Set(available().filter(i=>i.kind===format&&(!subject||i.materia===subject)).map(i=>i.tema))];$('itc-topic').innerHTML='<option value="">Todos los temas</option>'+names.map(n=>`<option value="${esc(n)}">${esc(n)}</option>`).join('');$('itc-topic').value=names.includes(topic)?topic:'';topic=$('itc-topic').value;}
  function status(m){$('itc-status').hidden=!m;$('itc-status').textContent=m||'';}
  function render(){
   $('itc-subjects').innerHTML=['Todas',...subjects].map((n,i)=>{const v=i?n:'';return `<button type="button" data-subject="${esc(v)}" class="${subject===v?'active':''}" aria-pressed="${subject===v}">${esc(n)}</button>`;}).join('');topics();
-  const filtered=catalogue.filter(i=>i.kind===format&&(!subject||i.materia===subject)&&(!topic||i.tema===topic)&&normal([i.titulo,i.tema,i.materia].join(' ')).includes(normal(query)));
+  const filtered=available().filter(i=>i.kind===format&&(!subject||i.materia===subject)&&(!topic||i.tema===topic)&&normal([i.titulo,i.tema,i.materia].join(' ')).includes(normal(query)));
   $('itc-count').textContent=filtered.length+' '+(format==='sheets'?'láminas':'fichas');
   $('itc-grid').innerHTML=filtered.length?filtered.map(i=>{const locked=!i.acceso_gratis&&window.CampusAccess?.isFree(),sheet=i.kind==='sheets';
    const cover=sheet?`<span class="itc-sheet-cover" data-cover-id="${esc(i.id)}"><span class="itc-cover-placeholder"><img src="/assets/campus-study-brand.webp" alt=""><span>${locked?'Lámina protegida':'Lámina ilustrada'}</span></span><img data-sheet-id="${esc(i.id)}" alt="Vista de ${esc(i.titulo)}" hidden></span>`:'';
@@ -39,6 +40,8 @@ window.IntocablesHub = (() => {
   showCovers().catch(()=>{});
  }
  async function load(){const current=++requestId;status('');try{
+  if(window.CampusAccess?.isFree())format='cards';
+  $('itc-formats').querySelectorAll('button').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.format===format)));
   if(!catalogue.length)catalogue=window.CampusCatalogs?.intocables||[];
   if(!catalogue.length){const [response]=await Promise.all([fetch('/content/intocables_catalogo_2026.json'),window.loadMindmapCatalog?.()]);if(!response.ok)throw Error();const cards=await response.json();catalogue=cards.map(i=>({...i,kind:'cards'})).concat((window.MINDMAP_PREMIUM_CATALOG||[]).filter(m=>m.curated||m.section==='intocables').map((m,i)=>({...m,kind:'sheets',tema:m.id.startsWith('morfo_18_sangre__')?'Sangre':m.tema,orden:i+1,original:m})));}
   if(current!==requestId)return;render();if(format==='sheets'){status('');return;}

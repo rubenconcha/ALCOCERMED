@@ -56,7 +56,8 @@ module.exports = async function handler(req, res) {
             used.set(group, count + 1);
             return count < (freeCounts.get(group) || 0);
         });
-        const catalog = library.catalog.filter(topic => !key || topicKey(topic) === key).map(topic => {
+        const catalog = library.catalog.filter(topic => (!key || topicKey(topic) === key) &&
+            (premium || freeCounts.get(topicKey(topic)) > 0)).map(topic => {
             const free_count = Math.min(topic.count, freeCounts.get(topicKey(topic)) || 0);
             return { ...topic, free_count, locked: !premium && !free_count };
         });

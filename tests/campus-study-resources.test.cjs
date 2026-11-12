@@ -194,7 +194,7 @@ test('the PDF relay checks campus access, streams private PDFs and grants one sh
         headers: { 'Content-Type': 'application/octet-stream', 'Content-Length': '5', 'Content-Range': 'bytes 0-4/2830038' },
     });
     let upstream = blobResponse;
-    let ready = true;
+    let ready = true, premium = true;
     const secret = 'test-blob-key';
     const module = { exports: {} };
     vm.runInNewContext(read('api/texto-oficial.js'), {
@@ -202,7 +202,7 @@ test('the PDF relay checks campus access, streams private PDFs and grants one sh
         process: { env: { SUPABASE_ANON_KEY: 'test-anon-key', BLOB_READ_WRITE_TOKEN: secret } },
         fetch: async (url, options) => {
             calls.push([new URL(url), options]);
-            if (new URL(url).pathname.endsWith('/rpc/campus_access')) return Response.json({ ready });
+            if (new URL(url).pathname.endsWith('/rpc/campus_access')) return Response.json({ ready, premium });
             return upstream();
         },
     });
@@ -292,6 +292,15 @@ test('the PDF relay checks campus access, streams private PDFs and grants one sh
     const rejected = await request('morfofuncion', { authorization });
     assert.equal(rejected.status, 502);
     assert.equal(rejected.body, '');
+    premium = false;
+    assert.equal((await request('morfofuncion', { method: 'POST', authorization })).status, 403);
+    assert.equal((await request('morfofuncion', { view: 'lector', authorization })).status, 403);
+    assert.equal((await request('morfofuncion', { ...segmentParams, authorization })).status, 403);
+    upstream = () => new Response('webp', { headers: { 'Content-Type': 'image/webp' } });
+    const sample = await request('morfofuncion', { method: 'HEAD', view: 'portada', authorization });
+    assert.equal(sample.status, 200);
+    assert.equal(sample.headers['X-Official-Reader'], undefined);
+    assert.ok(sample.headers['X-Official-Preview-Pages'].split(',').includes('72'));
 });
 
 test('campus navigation and app shell include both sections with current asset versions', () => {

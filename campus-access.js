@@ -3,6 +3,12 @@ window.CampusAccess = (() => {
     let state = { premium: false, ready: false };
     let catalogPromise;
     const isFree = () => !state.premium;
+    const canUseAtlas = () => state.atlas ?? Boolean(state.premium);
+    function updateAtlasLinks() {
+        document.querySelectorAll('[data-atlas-access]').forEach(el => { el.hidden = !canUseAtlas(); });
+    }
+    const permits = screen => screen === 'atlas-screen' ? canUseAtlas()
+        : !['study-calendar-screen', 'game-quiz', 'game-hangman'].includes(screen) || !isFree();
     function unlock() {
         try {
             const mapsScreen = document.getElementById('intocables-screen');
@@ -33,30 +39,27 @@ window.CampusAccess = (() => {
         document.getElementById('free-account-banner').hidden = !isFree();
         document.querySelectorAll('[data-premium-label]').forEach(el => { el.hidden = !isFree(); });
         document.querySelectorAll('[data-premium-only]').forEach(el => { el.hidden = isFree(); });
+        updateAtlasLinks();
         document.querySelectorAll('[data-free-lock]').forEach(el => { el.hidden = !isFree(); });
         window.dispatchEvent(new Event('campus-access-change'));
+        if (access.ready && !access.premium && typeof access.atlas !== 'boolean' && typeof getSupabase === 'function') {
+            Promise.resolve(getSupabase().rpc('campus_atlas_access')).then(({ data, error }) => {
+                if (state !== access || error || data?.allowed !== true) return;
+                state = { ...access, atlas: true };
+                updateAtlasLinks();
+            }).catch(() => {});
+        }
         return state;
     }
     async function catalog() {
         if (!catalogPromise) catalogPromise = getSupabase().rpc('campus_catalog').then(({data,error}) => {
-            if(error) { catalogPromise=null; throw error; } return data || [];
+            if(error) { catalogPromise=null; throw error; }
+            return (data || []).filter(topic => !isFree() || Number(topic.free_count) > 0);
         });
         return catalogPromise;
     }
-    async function appendLocks(container, subject) {
-        if (!isFree()) return;
-        try {
-            const topics = (await catalog()).filter(t => normalizeDbText(t.materia) === normalizeDbText(subject) && !Number(t.free_count));
-            topics.forEach(topic => {
-                const li=document.createElement('li'), link=document.createElement('a');
-                link.href='/planes?desde=campus'; link.className='campus-topic-lock'; link.textContent='🔒 '+topic.tema;
-                link.addEventListener('click', event => { event.preventDefault(); unlock(); });
-                li.append(link); container.append(li);
-            });
-        } catch (_) { /* Existing sample remains usable when catalogue is unavailable. */ }
-    }
     async function resolve(client) { return apply(await check(client)); }
-    return { check, apply, resolve, isFree, unlock, catalog, appendLocks };
+    return { check, apply, resolve, isFree, permits, unlock, catalog };
 })();
 
 window.continueWithGoogle = async function(button) {

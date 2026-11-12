@@ -9,9 +9,10 @@ module.exports=async function(req,res){
  const token=/^Bearer\s+(.+)$/i.exec(req.headers.authorization||'')?.[1];if(!token)return res.status(401).end();
  const headers={apikey:anonKey,Authorization:'Bearer '+token,'Content-Type':'application/json'};
  try{
-  const access=await fetch(base+'/rest/v1/rpc/campus_game_access',{method:'POST',headers,body:JSON.stringify({p_id:id}),signal:AbortSignal.timeout(8000)});
+  const access=await fetch(base+'/rest/v1/rpc/campus_access',{method:'POST',headers,body:'{}',signal:AbortSignal.timeout(8000)});
   if(!access.ok)return res.status(access.status===401?401:503).end();
-  if((await access.json())!==true)return res.status(403).end();
+  const plan=await access.json();
+  if(!plan?.ready||!plan.premium)return res.status(403).end();
   const response=await fetch(base+'/rest/v1/evaluaciones?select=id,titulo,tema,codigo,asignatura&id=eq.'+id+'&publicado=eq.true',{headers,signal:AbortSignal.timeout(8000)});
   if(!response.ok)return res.status(response.status===401?401:503).end();
   const rows=await response.json();if(!Array.isArray(rows)||rows.length!==1)return res.status(403).end();

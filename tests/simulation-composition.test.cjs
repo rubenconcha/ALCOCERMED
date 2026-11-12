@@ -1,6 +1,6 @@
 const {test}=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),scope=require('../simulation-scope.js');
 const catalog={entries:require('../content/simulacros-catalog.json').entries.filter(e=>e.kind!=='mini'&&e.scope!=='prepa')};
-const demo=require('../content/simulacros_demo_2026.json');
+const demo=require('../api/_simulations/demo-2026.json');
 const archives=new Map();
 for(const f of fs.readdirSync('api/_past_exams').filter(f=>f.endsWith('.json'))){const p=JSON.parse(fs.readFileSync('api/_past_exams/'+f,'utf8'));for(const q of p.questions||[])archives.set(q.id,q);}
 const normalize=s=>String(s).normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]/g,'');
@@ -43,6 +43,33 @@ test('health scope follows last-year partials and originals remain archival refe
 test('catalog cards contain only stage, title, metrics and start control',()=>{
  const js=fs.readFileSync('simulacro-library.js','utf8');assert.ok(!js.includes('sim-library-description'));assert.ok(!js.includes('sim-library-access'));assert.ok(js.includes('card.append(tag,title,metrics,button)'));
  const entry=fs.readFileSync('simulacro-ingreso.js','utf8');assert.ok(entry.includes("curatedId: 'final-8'"));assert.ok(!entry.includes('fetchAllBancoQuestions()'));
+});
+
+test('la muestra solo entrega diez preguntas a cuentas gratuitas con navegador autorizado', async t => {
+ const handle = require('../api/simulation.js');
+ let access = {ready:true,premium:false};
+ t.mock.method(global, 'fetch', async () => Response.json(access));
+ async function request(id, authorization = 'Bearer test') {
+  const result = {};
+  await handle({method:'GET',query:{id},headers:{authorization}}, {
+   setHeader() {}, status(status) {result.status=status;return this;},
+   end(body) {result.paper=body&&JSON.parse(body);},
+  });
+  return result;
+ }
+ assert.equal((await request('demo-2026','')).status,401);
+ assert.equal((await request('final-8')).status,403);
+ const {paper} = await request('demo-2026');
+ assert.equal(paper.duration,10);
+ assert.equal(paper.preview,true);
+ assert.deepEqual(['MORFOFUNCION','BIOLOGIA CELULAR','SALUD PUBLICA'].map(m => paper.questions.filter(q=>q.materia===m).length),[4,3,3]);
+ access={ready:false,premium:false};
+ assert.equal((await request('demo-2026')).status,403);
+ access={ready:true,premium:true};
+ const full=(await request('demo-2026')).paper;
+ assert.equal(full.duration,100);
+ assert.equal(full.questions.length,100);
+ assert.equal(full.preview,false);
 });
 
 test('expansion adds six materially different models across all three stages',()=>{

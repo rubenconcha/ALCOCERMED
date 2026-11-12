@@ -97,17 +97,17 @@ test('subject selection never starts a deck and returning preserves topic choice
   h.window.openStudyLibrary();
   assert.equal(h.ids['library-topics-panel'].hidden, true);
 });
-test('free access lists topics, then marks premium topics and opens only the allowed cards', async () => {
+test('free access lists only the two available topics and opens their cards', async () => {
   const access = { isFree: () => true, catalog: async () => [
     { ...morfo('Anatomía'), free_count: 3 }, { ...morfo('Química'), free_count: 2 }, { ...morfo('Histología'), free_count: 0 },
   ] };
   const h = setup({ catalog: [morfo('Anatomía'), morfo('Química'), morfo('Histología')], access, load: async () => [{ id: 1 }] });
   h.buttons[0].click();
-  assert.equal(h.ids['library-topics'].children.length, 3);
   await Promise.resolve();
   const rows = h.ids['library-topics'].children;
+  assert.equal(rows.length, 2);
+  assert.deepEqual(rows.map(row => row.children[0].children[0].textContent), ['Anatomía', 'Química']);
   assert.equal(rows[0].children[1].textContent, 'Empezar');
-  assert.equal(rows[2].children[1].href, '/planes?desde=campus#planes');
   await openFirst(h);
   assert.equal(h.starts.length, 1);
   assert.equal(h.starts[0][2].length, 1);

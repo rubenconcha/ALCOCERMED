@@ -21,6 +21,9 @@
     "api/topic-evaluation.js": {
       "includeFiles": "api/_evaluations/**"
     },
+    "api/texto-oficial.js": {
+      "includeFiles": "api/_past_exams/20*.json"
+    },
     "api/game-practice.js": {
       "includeFiles": "api/_game-practice/**"
     },

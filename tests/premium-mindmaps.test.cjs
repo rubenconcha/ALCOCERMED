@@ -6,18 +6,27 @@ const catalog=require('../content/mindmaps-premium-catalog.json');
 const script=fs.readFileSync('script.js','utf8');
 const handler=require('../api/mindmap.js');
 
-test('77 general maps are free; Sangre and Sentidos and all detailed maps require a plan',async()=>{
+test('the free catalogue shows two maps per subject and a plan opens the complete library',async()=>{
  const start=script.indexOf('async function loadMapasMentales()'),end=script.indexOf('function populateMmMaterias()',start);
- const ctx={mmState:{},currentCampusScreen:'intocables-screen',async loadMindmapCatalog(){ctx.MINDMAP_PREMIUM_CATALOG=catalog;},setMmState(){},populateMmMaterias(){},populateMmTemas(){},updateIntocStats(){},filterMapas(){},console};ctx.window=ctx;
+ let free=false;
+ const ctx={mmState:{},currentUser:{id:'fixture'},CampusAccess:{isFree:()=>free},normalizeDbText: value=>value.toLowerCase(),
+ currentCampusScreen:'intocables-screen',async loadMindmapCatalog(){ctx.MINDMAP_PREMIUM_CATALOG=catalog;},setMmState(){},populateMmMaterias(){},populateMmTemas(){},updateIntocStats(){},filterMapas(){},console};ctx.window=ctx;
  vm.runInNewContext(script.slice(start,end),ctx);await ctx.loadMapasMentales();
  assert.equal(ctx.mmState.allMapas.length,79+catalog.filter(m=>!m.curated&&m.section!=='intocables').length);
  assert.ok(ctx.mmState.allMapas.every(m=>!m.curated&&m.section!=='intocables'));
  assert.ok(catalog.filter(m=>m.curated).every(m=>m.section==='intocables'&&m.format==='illustrated-sheet'));
- const general=ctx.mmState.allMapas.filter(m=>!m.premium||m.general);assert.equal(general.length,79);assert.equal(general.filter(m=>m.acceso_gratis).length,77);assert.equal(general.filter(m=>m.general&&m.premium&&!m.acceso_gratis).length,2);
+ const general=ctx.mmState.allMapas.filter(m=>!m.premium||m.general);assert.equal(general.length,79);assert.equal(general.filter(m=>m.acceso_gratis).length,6);assert.equal(general.filter(m=>m.general&&m.premium&&!m.acceso_gratis).length,2);
  for(const m of general){const key=m.general?m.id+'.png':m.url_imagen.split('/').pop(),details=catalog.filter(d=>d.parent_key===key);assert.ok(details.length>=6,key);assert.ok(details.every(d=>d.premium&&!d.acceso_gratis));}
  const topicStart=script.indexOf('function mmTopicKey('),topicEnd=script.indexOf('function populateMmTemas',topicStart);
  ctx.campo=(m,k)=>m[k];vm.runInNewContext(script.slice(topicStart,topicEnd),ctx);
  assert.equal(ctx.mmTopicKey(general[0]),ctx.mmTopicKey(catalog[0]));
+ free=true;ctx.mmState.catalogReady=false;
+ await ctx.loadMapasMentales();
+ const visible=ctx.mmState.allMapas;
+ assert.equal(visible.length,6);
+ const counts=new Map();
+ visible.forEach(map=>counts.set(map.materia,(counts.get(map.materia)||0)+1));
+ assert.deepEqual([...counts.values()],[2,2,2]);
 });
 
 async function call({id=catalog[0].id,format='json',token,method='GET',access,revision,status=200,fail=false}){

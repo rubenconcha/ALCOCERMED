@@ -7,6 +7,9 @@
     const session = $('practice-session');
     const subject = $('practice-subject');
     const kind = $('practice-kind');
+    const sampleIds = new Set(['medicion-neonatal', 'conversiones-rapidas']);
+    const availableExercises = () => window.CampusAccess?.isFree()
+        ? exercises.filter(exercise => sampleIds.has(exercise.id)) : exercises;
 
     function element(tag, text, className) {
         const node = document.createElement(tag);
@@ -57,7 +60,7 @@
     }
 
     function renderCatalog() {
-        const visible = exercises.filter(exercise =>
+        const visible = availableExercises().filter(exercise =>
             (!subject.value || exercise.subject === subject.value) &&
             (!kind.value || exercise.kind === kind.value)
         );
@@ -243,15 +246,22 @@
     };
 
     $('practice-reference-groups').replaceChildren(...reference.map(referenceGroup));
-    for (const [filter, field] of [[subject, 'subject'], [kind, 'kind']]) {
-        const values = [...new Set(exercises.map(exercise => exercise[field]))].sort((a, b) => a.localeCompare(b, 'es'));
-        for (const value of values) filter.add(new Option(value, value));
-        filter.addEventListener('change', renderCatalog);
+    function renderFilters() {
+        for (const [filter, field] of [[subject, 'subject'], [kind, 'kind']]) {
+            const current = filter.value;
+            const values = [...new Set(availableExercises().map(exercise => exercise[field]))].sort((a, b) => a.localeCompare(b, 'es'));
+            filter.replaceChildren(filter.options[0], ...values.map(value => new Option(value, value)));
+            if (values.includes(current)) filter.value = current;
+        }
     }
+    subject.addEventListener('change', renderCatalog);
+    kind.addEventListener('change', renderCatalog);
+    window.addEventListener?.('campus-access-change', () => { resetSession(); renderFilters(); renderCatalog(); });
+    renderFilters();
     renderCatalog();
     window.SufficiencyPractice = {
         openExercise(id) {
-            const exercise = exercises.find(item => item.id === id);
+            const exercise = availableExercises().find(item => item.id === id);
             if (!exercise) return;
             if (!session.hidden && session.dataset.exercise === id) {
                 session.querySelector('h3').focus();
