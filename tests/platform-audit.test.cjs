@@ -61,7 +61,7 @@ test('una comprobación repetida de la misma sesión conserva la sección del ca
   await context.enterApp({ id: 'student-1' });
 });
 
-test('la verificación paralela no abre el campus si se rechaza el dispositivo', async () => {
+test('un dispositivo rechazado no abre el campus ni consulta los permisos de estudio', async () => {
   const source = fs.readFileSync('campus-login.js', 'utf8');
   const start = source.indexOf('let campusEntry = null;');
   const end = source.indexOf('/** handleLogin */', start);
@@ -79,10 +79,48 @@ test('la verificación paralela no abre el campus si se rechaza el dispositivo',
   };
   vm.runInNewContext(source.slice(start, end), context);
   const entry = context.enterApp(student);
-  assert.deepEqual(events, ['check']);
+  assert.deepEqual(events, []);
   finishDevice({ ok: false, code: 'DEVICE_LIMIT', error: 'Dispositivo bloqueado' });
   await entry;
-  assert.deepEqual(events, ['check', 'sign-out', 'Dispositivo bloqueado']);
+  assert.deepEqual(events, ['sign-out', 'Dispositivo bloqueado']);
+});
+
+test('al volver al navegador, una sesión desplazada se cierra una sola vez', async () => {
+  const handlers = new Map();
+  const events = {
+    addEventListener: (name, fn) => handlers.set(name, fn),
+    removeEventListener: (name, fn) => {
+      if (handlers.get(name) === fn) handlers.delete(name);
+    }
+  };
+  const context = {
+    window: events, document: { ...events, visibilityState: 'visible' },
+    localStorage: { getItem: () => 'qa-pc' },
+    setInterval: () => 1, clearInterval() {}, console
+  };
+  vm.runInNewContext(fs.readFileSync('device_guard.js', 'utf8'), context);
+  let calls = 0, kicked = 0, finish;
+  const client = {
+    rpc(name, args) {
+      assert.equal(name, 'check_device_active');
+      assert.equal(args.p_device_id, 'qa-pc');
+      calls++;
+      return new Promise(resolve => { finish = resolve; });
+    }
+  };
+  context.DeviceGuard.startChecking(client, () => { kicked++; });
+  const first = handlers.get('focus')();
+  await handlers.get('visibilitychange')();
+  assert.equal(calls, 1);
+  context.DeviceGuard.startChecking(client, () => { kicked++; });
+  finish({ data: { active: false } });
+  await first;
+  assert.equal(kicked, 0);
+  const current = handlers.get('pageshow')();
+  finish({ data: { active: false } });
+  await current;
+  assert.equal(kicked, 1);
+  assert.equal(handlers.size, 0);
 });
 
 test('los archivos precargados coinciden con las versiones actuales de campus y juegos', () => {

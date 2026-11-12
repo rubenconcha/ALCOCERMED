@@ -1210,10 +1210,7 @@ function enterApp() {
         return gameDeviceEntry;
     }
     if (typeof nervousClassMode !== "undefined" && nervousClassMode) {
-        DeviceGuard.startChecking(getSupabase(), function(reason) {
-            alert('🔒 Sesión cerrada: ' + reason);
-            handleLogout();
-        });
+        DeviceGuard.startChecking(getSupabase(), handleLogout);
         showNervousClass();
         return;
     }
@@ -1285,10 +1282,7 @@ function enterApp() {
     // ═══ DEVICE GUARD: entrada verificada antes de mostrar Juegos ═══
     if (typeof DeviceGuard !== 'undefined' && !isAdmin) {
         var client = getSupabase();
-        DeviceGuard.startChecking(client, function(reason) {
-            alert('🔒 Sesión cerrada: ' + reason);
-            handleLogout();
-        });
+        DeviceGuard.startChecking(client, handleLogout);
     }
 
     // Verificar si hay un código en la URL (desde QR)
@@ -6540,23 +6534,19 @@ function loadStudentResults() {
 
 // ═══ LOGOUT ═══
 
-function handleLogout() {
+async function handleLogout(reason) {
     if (typeof DeviceGuard !== 'undefined') DeviceGuard.stopChecking();
     gameVerifiedDeviceUserId = null;
-    var client = getSupabase();
-    if (client) {
-        client.auth.signOut({ scope: 'local' }).then(function() {
-            currentUser = null;
-            isAdmin = false;
-            showLogin();
-        }).catch(function(e) {
-            console.error('Logout error:', e);
-            currentUser = null;
-            isAdmin = false;
-            showLogin();
-        });
-    } else {
-        showLogin();
+    currentUser = null;
+    isAdmin = false;
+    showLogin();
+    try {
+        await getSupabase()?.auth.signOut({ scope: 'local' });
+    } catch (error) {
+        console.error('Logout error:', error);
+    }
+    if (!currentUser && typeof reason === 'string') {
+        showLoginError(reason);
     }
 }
 

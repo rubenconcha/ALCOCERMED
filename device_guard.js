@@ -1,15 +1,13 @@
 // ═══════════════════════════════════════════════════════
 // DEVICE GUARD — Control de dispositivos AlcocerMed
-// Máximo 2 navegadores autorizados por estudiante.
+// El servidor autoriza el navegador y valida su sesión.
 // Compartido entre página principal y /juegos
 // ═══════════════════════════════════════════════════════
 
 var DeviceGuard = (function() {
     var STORAGE_KEY = 'alcocer_device_id';
     var CHECK_INTERVAL = 10000; // Verificar cada 10 segundos
-    var _checkTimer = null;
-    var _supabaseClient = null;
-    var _onKicked = null;
+    var monitor = null;
 
     // Generar o recuperar ID único de este dispositivo
     function getDeviceId() {
@@ -41,8 +39,6 @@ var DeviceGuard = (function() {
 
     // Activar este dispositivo después del login
     function activateDevice(supabaseClient, userEmail) {
-        _supabaseClient = supabaseClient;
-
         var deviceId;
         try { deviceId = getDeviceId(); }
         catch (_) { return Promise.resolve({ ok: false, error: 'Permite el almacenamiento de este navegador para registrar tu dispositivo.' }); }
@@ -58,10 +54,10 @@ var DeviceGuard = (function() {
             }
             var data = result.data;
             if (!data || data.ok !== true) {
-                if (data && data.code === 'DEVICE_LIMIT') showDeviceLimit(supabaseClient, userEmail, data.limit);
+                if (data && data.code === 'DEVICE_LIMIT') showDeviceLimit(userEmail, data.limit);
                 return { ok: false, error: data && data.code === 'DEVICE_LIMIT' ? 'Confirma tu correo para usar este navegador.' : 'No pudimos verificar este navegador. Vuelve a intentarlo.', code: data && data.code };
             }
-            return { ok: true, limit: data && data.limit, registered: data && data.registered };
+            return { ok: true, limit: data.limit, registered: data.registered, access: data.access };
         }).catch(function(err) {
             console.error('activate_device catch:', err);
             return { ok: false, error: 'Error de conexión al verificar dispositivo' };
@@ -69,63 +65,62 @@ var DeviceGuard = (function() {
     }
 
     // Verificar que este dispositivo sigue activo
-    function checkStillActive() {
-        if (!_supabaseClient) return;
-
+    async function checkStillActive() {
+        var active = monitor;
+        if (!active || active.pending || document.visibilityState === 'hidden') return;
         var deviceId;
         try { deviceId = getDeviceId(); }
         catch (_) {
             stopChecking();
-            if (typeof _onKicked === 'function') _onKicked('Permite el almacenamiento de este navegador para continuar.');
+            active.onKicked?.('Permite el almacenamiento de este navegador para continuar.');
             return;
         }
-
-        _supabaseClient.rpc('check_device_active', {
-            p_device_id: deviceId
-        }).then(function(result) {
+        active.pending = true;
+        try {
+            var result = await active.client.rpc('check_device_active', { p_device_id: deviceId });
+            if (monitor !== active) return;
             if (result.error) {
                 console.warn('check_device error:', result.error);
-                return;
-            }
-            var data = result.data;
-            if (data && data.active === false) {
-                console.warn('Dispositivo desactivado:', data.reason);
+            } else if (result.data && result.data.active === false) {
                 stopChecking();
-                if (typeof _onKicked === 'function') {
-                    _onKicked('Tu cuenta se abrió en otro navegador. Vuelve a iniciar sesión.');
-                }
+                active.onKicked?.('Tu cuenta se abrió en otro navegador. Vuelve a iniciar sesión.');
             }
-        }).catch(function(err) {
-            console.warn('check_device catch:', err);
-        });
+        } catch (error) {
+            console.warn('check_device catch:', error);
+        } finally {
+            active.pending = false;
+        }
     }
 
     // Iniciar verificación periódica
     function startChecking(supabaseClient, onKickedCallback) {
-        _supabaseClient = supabaseClient;
-        _onKicked = onKickedCallback;
         stopChecking();
-        _checkTimer = setInterval(checkStillActive, CHECK_INTERVAL);
+        monitor = { client: supabaseClient, onKicked: onKickedCallback,
+            timer: setInterval(checkStillActive, CHECK_INTERVAL), pending: false };
+        document.addEventListener('visibilitychange', checkStillActive);
+        window.addEventListener('pageshow', checkStillActive);
+        window.addEventListener('focus', checkStillActive);
     }
 
     // Detener verificación
     function stopChecking() {
-        if (_checkTimer) {
-            clearInterval(_checkTimer);
-            _checkTimer = null;
-        }
+        if (!monitor) return;
+        clearInterval(monitor.timer);
+        monitor = null;
+        document.removeEventListener('visibilitychange', checkStillActive);
+        window.removeEventListener('pageshow', checkStillActive);
+        window.removeEventListener('focus', checkStillActive);
     }
 
-    function showDeviceLimit(client, email, limit) {
+    function showDeviceLimit(email, limit) {
         var previous = document.getElementById('device-limit-dialog');
         if (previous) previous.remove();
         var dialog = document.createElement('dialog');
         dialog.id = 'device-limit-dialog'; dialog.className = 'device-limit-dialog';
         dialog.setAttribute('aria-labelledby', 'device-limit-title');
-        dialog.innerHTML = '<h2 id="device-limit-title">Ya usas tu cuenta en 2 dispositivos</h2><p>¿Cambiaste de celular o de navegador? Confirma tu correo con un código de 6 dígitos para reemplazar uno.</p><button type="button" class="device-limit-send">Cambiar con código</button><button type="button" class="device-limit-cancel">Volver</button><p class="device-limit-status" role="status" aria-live="polite"></p>';
-        dialog.querySelector('h2').textContent = limit === 1 ? 'Tu cuenta permite un solo dispositivo' : 'Ya usas tu cuenta en 2 dispositivos';
+        dialog.innerHTML = '<h2 id="device-limit-title">Ya tienes un dispositivo autorizado</h2><p>Confirma tu correo con un código de 6 dígitos para autorizar este navegador. Al confirmar, se cerrará el acceso del navegador que reemplaces.</p><button type="button" class="device-limit-send">Cambiar con código</button><button type="button" class="device-limit-cancel">Volver</button>';
+        if (limit > 1) dialog.querySelector('h2').textContent = 'Alcanzaste el límite de dispositivos';
         var send = dialog.querySelector('.device-limit-send');
-        var message = dialog.querySelector('.device-limit-status');
         dialog.querySelector('.device-limit-cancel').onclick = function () { dialog.close(); };
         send.onclick = function () {
             try { sessionStorage.setItem('alcocer_device_change_email', email || ''); }

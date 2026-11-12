@@ -19,8 +19,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
-      - name: Check device email code flow
-        run: node tests/device-email-code.test.cjs
+      - name: Check device authorization and email code flow
+        run: node --test tests/device-email-code.test.cjs tests/platform-audit.test.cjs
       - name: Check sufficiency exam bank and student flow
         run: node --test tests/suficiencia.test.cjs tests/suficiencia-levels.test.cjs tests/suficiencia-medicina.test.cjs
       - name: Check Sufficiency questions in the question bank

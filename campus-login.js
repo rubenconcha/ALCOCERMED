@@ -192,8 +192,9 @@ async function initAuth() {
                 currentUser = session.user;
                 setTimeout(function () { enterApp(currentUser); }, 0);
             } else if (event === 'SIGNED_OUT') {
+                const wasSignedIn = currentUser !== null;
                 currentUser = null;
-                showLoginScreen();
+                if (wasSignedIn) showLoginScreen();
             }
         });
     } catch (e) {
@@ -216,10 +217,10 @@ function showLoginScreen() {
 let campusEntry = null;
 let verifiedCampusUserId = null;
 async function verifyCampusDevice(client, user) {
-    if (!user.email || ADMIN_EMAILS.includes(user.email.toLowerCase())) return;
+    if (user.email && ADMIN_EMAILS.includes(user.email.toLowerCase())) return;
     if (typeof DeviceGuard === 'undefined') throw new Error('No pudimos verificar tus dispositivos. Recarga la página.');
     const device = await DeviceGuard.activateDevice(client, user.email);
-    if (device.ok) return;
+    if (device.ok) return device.access?.ready === true ? device.access : null;
     if (device.code === 'DEVICE_LIMIT' && currentUser?.id === user.id) {
         await client.auth.signOut({ scope: 'local' });
         if (currentUser?.id === user.id) currentUser = null;
@@ -235,9 +236,8 @@ function enterApp(user) {
     entry.promise = (async function () {
         try {
             const client = getSupabase();
-            const [, access] = await Promise.all([
-                verifyCampusDevice(client, user),
-                CampusAccess.check(client),
+            const [access] = await Promise.all([
+                verifyCampusDevice(client, user).then(access => access || CampusAccess.check(client)),
                 window.loadCampusAssets('campus'),
             ]);
             if (campusEntry !== entry || currentUser?.id !== user.id) return;

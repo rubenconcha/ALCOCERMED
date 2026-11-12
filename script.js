@@ -158,8 +158,8 @@ function enterVerifiedApp(user) {
     if (typeof DeviceGuard !== 'undefined' && user && user.email && !_isAdmin) {
         var dgClient = getSupabase();
         DeviceGuard.startChecking(dgClient, function(reason) {
-            alert('🔒 Sesión cerrada: ' + reason);
             window.handleLogout();
+            showLoginError(reason);
         });
     }
 }

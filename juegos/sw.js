@@ -1,9 +1,9 @@
-const CACHE_NAME = 'alcocermed-juegos-v114-carga';
+const CACHE_NAME = 'alcocermed-juegos-v115-dispositivo';
 const ASSETS_TO_CACHE = [
     './game-rounds.js?v=1',
     './game-practice.js?v=20261021-visual5b',
     './game-question-images.js?v=1',
-    './app.js?v=20261109-carga',
+    './app.js?v=20261112-dispositivo',
     './styles.css?v=87',
     '/juegos/logo-ben-carson-160.webp',
     './assets/preguntas-apoyo/mano-muneca.svg',
@@ -45,7 +45,7 @@ const ASSETS_TO_CACHE = [
     '/assets/fonts/inter/inter.css?v=1',
     '/assets/fonts/inter/latin.woff2',
     '/assets/fonts/inter/latin-ext.woff2',
-    '../device_guard.js?v=9',
+    '../device_guard.js?v=10',
     '/device-limit.css?v=1',
     './tejido-nervioso-imagenes.js?v=5',
     './encefalo-native-data.js?v=1',

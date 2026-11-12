@@ -1,4 +1,4 @@
-const CACHE_NAME = 'alcocermed-main-v192-incisos-medula';
+const CACHE_NAME = 'alcocermed-main-v193-dispositivo';
 const APP_SHELL = [
     './student-results.js?v=11',
     './student-results.css?v=1',
@@ -36,7 +36,7 @@ const APP_SHELL = [
     './campus-preview.css?v=3',
     './platform-polish.js?v=1',
     './config.js',
-    './device_guard.js?v=9',
+    './device_guard.js?v=10',
     './campus-access.js?v=10',
     './official-flashcards.js?v=2',
     './study-depth.js?v=20',
@@ -45,8 +45,8 @@ const APP_SHELL = [
     './flashcard-approved.css?v=6',
     './assets/fonts/outfit-900.woff2',
     './flashcard-workspace.js?v=20261109-foco',
-    './script.js?v=20261110-banco',
-    './campus-login.js?v=2',
+    './script.js?v=20261112-dispositivo',
+    './campus-login.js?v=3',
     './campus-catalogs.js?v=2',
     './campus-exam-engine.js?v=3',
     './topic-evaluations.js?v=20261110-revision2',

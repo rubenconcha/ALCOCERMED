@@ -61,6 +61,8 @@
     verified=false;el('verification').hidden=false;el('account').hidden=true;showCodeForm(user.email);status('La verificación venció. Pide un código nuevo.',true);
    }else if(code==='CHANGE_COOLDOWN'){
     showCooldown(response.data.next_change_at);
+   }else if(code==='DEVICE_CHANGED'){
+    el('retry').hidden=false;status('El dispositivo autorizado cambió. Vuelve a comprobarlo.',true);
    }else{status('No se pudo cambiar el navegador. Vuelve a intentarlo.',true);}
    return;
   }
@@ -122,7 +124,8 @@
  });
  el('retry').onclick=async()=>{
   if(busy||!verified)return;busy=true;el('retry').disabled=true;
-  try{await afterVerification();el('retry').hidden=true;}catch(error){status(failure(error),true);}finally{busy=false;el('retry').disabled=false;}
+  el('retry').hidden=true;
+  try{await afterVerification();}catch(error){el('retry').hidden=false;status(failure(error),true);}finally{busy=false;el('retry').disabled=false;}
  };
  async function init(){
   try{
