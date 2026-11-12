@@ -227,7 +227,7 @@ async function verifyCampusDevice(client, user) {
     const device = await DeviceGuard.activateDevice(client, user.email, false);
     if (device.ok) return device.access?.ready === true ? device.access : null;
     throw Object.assign(new Error(device.error || 'No pudimos verificar este dispositivo.'), {
-        code: device.code, limit: device.limit,
+        code: device.code, limit: device.limit, supportRequired: device.supportRequired,
     });
 }
 function enterApp(user, sessionId = currentCampusSessionId) {
@@ -260,7 +260,7 @@ function enterApp(user, sessionId = currentCampusSessionId) {
             }
             showLoginScreen();
             showLoginError(error.message);
-            if (error.code === 'DEVICE_LIMIT') DeviceGuard.showDeviceLimit?.(user.email, error.limit);
+            if (error.code === 'DEVICE_LIMIT') DeviceGuard.showDeviceLimit?.(user.email, error.limit, error.supportRequired);
         } finally { if (campusEntry === entry) campusEntry = null; }
     })();
     return entry.promise;

@@ -1,9 +1,9 @@
-const CACHE_NAME = 'alcocermed-juegos-v116-acceso';
+const CACHE_NAME = 'alcocermed-juegos-v117-soporte';
 const ASSETS_TO_CACHE = [
     './game-rounds.js?v=1',
     './game-practice.js?v=20261021-visual5b',
     './game-question-images.js?v=1',
-    './app.js?v=2026111202',
+    './app.js?v=2026111204',
     './styles.css?v=87',
     '/juegos/logo-ben-carson-160.webp',
     './assets/preguntas-apoyo/mano-muneca.svg',
@@ -45,7 +45,7 @@ const ASSETS_TO_CACHE = [
     '/assets/fonts/inter/inter.css?v=1',
     '/assets/fonts/inter/latin.woff2',
     '/assets/fonts/inter/latin-ext.woff2',
-    '../device_guard.js?v=11',
+    '../device_guard.js?v=12',
     '/device-limit.css?v=1',
     './tejido-nervioso-imagenes.js?v=5',
     './encefalo-native-data.js?v=1',

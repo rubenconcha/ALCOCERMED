@@ -7,6 +7,8 @@
 var DeviceGuard = (function() {
     var STORAGE_KEY = 'alcocer_device_id';
     var RETURN_KEY = 'alcocer_device_change_return';
+    var SUPPORT_NUMBER = '64840819';
+    var SUPPORT_URL = 'https://wa.me/591' + SUPPORT_NUMBER;
     var CHECK_INTERVAL = 10000; // Verificar cada 10 segundos
     var monitor = null;
 
@@ -82,9 +84,11 @@ var DeviceGuard = (function() {
             var data = result.data;
             if (!data || data.ok !== true) {
                 var code = data?.code;
-                if (code === 'DEVICE_LIMIT' && promptOnLimit) showDeviceLimit(userEmail, data.limit);
-                return { ok: false, limit: data?.limit, code: code, error: code === 'DEVICE_LIMIT'
-                    ? 'Confirma tu correo para usar este navegador.'
+                var supportRequired = data?.support_required === true;
+                if (code === 'DEVICE_LIMIT' && promptOnLimit) showDeviceLimit(userEmail, data.limit, supportRequired);
+                return { ok: false, limit: data?.limit, code: code, supportRequired: supportRequired, error: code === 'DEVICE_LIMIT'
+                    ? (supportRequired ? 'Comunícate con soporte al ' + SUPPORT_NUMBER + ' para cambiar de dispositivo.'
+                        : 'Confirma tu correo para usar este navegador.')
                     : code === 'NOT_AUTHENTICATED' ? 'Tu sesión venció. Vuelve a iniciar sesión.'
                     : 'No pudimos verificar este navegador. Vuelve a intentarlo.' };
             }
@@ -152,20 +156,26 @@ var DeviceGuard = (function() {
         window.removeEventListener('focus', checkStillActive);
     }
 
-    function showDeviceLimit(email, limit) {
+    function showDeviceLimit(email, limit, supportRequired) {
         var previous = document.getElementById('device-limit-dialog');
         if (previous) previous.remove();
         var dialog = document.createElement('dialog');
         dialog.id = 'device-limit-dialog'; dialog.className = 'device-limit-dialog';
         dialog.setAttribute('aria-labelledby', 'device-limit-title');
-        dialog.innerHTML = '<h2 id="device-limit-title">Ya tienes un dispositivo autorizado</h2><p>Confirma tu correo con un código de 6 dígitos para autorizar este navegador. Al confirmar, se cerrará el acceso del navegador que reemplaces.</p><button type="button" class="device-limit-send">Cambiar con código</button><button type="button" class="device-limit-cancel">Volver</button>';
-        if (limit > 1) dialog.querySelector('h2').textContent = 'Alcanzaste el límite de dispositivos';
+        dialog.innerHTML = supportRequired
+            ? '<h2 id="device-limit-title">Ya cambiaste de dispositivo</h2><p>Comunícate con soporte al ' + SUPPORT_NUMBER + ' para cambiar de dispositivo nuevamente.</p><button type="button" class="device-limit-send">Abrir WhatsApp</button><button type="button" class="device-limit-cancel">Volver</button>'
+            : '<h2 id="device-limit-title">Ya tienes un dispositivo autorizado</h2><p>Confirma tu correo con un código de 6 dígitos para autorizar este navegador. Al confirmar, se cerrará el acceso del navegador que reemplaces.</p><button type="button" class="device-limit-send">Cambiar con código</button><button type="button" class="device-limit-cancel">Volver</button>';
+        if (!supportRequired && limit > 1) dialog.querySelector('h2').textContent = 'Alcanzaste el límite de dispositivos';
         var send = dialog.querySelector('.device-limit-send');
         dialog.querySelector('.device-limit-cancel').onclick = function () {
             if (typeof dialog.close === 'function') dialog.close();
             else dialog.remove();
         };
         send.onclick = function () {
+            if (supportRequired) {
+                window.open(SUPPORT_URL, '_blank', 'noopener,noreferrer');
+                return;
+            }
             try {
                 sessionStorage.setItem('alcocer_device_change_email', email || '');
                 sessionStorage.setItem(RETURN_KEY, deviceChangeReturn(location.pathname + location.search));

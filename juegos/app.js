@@ -1227,7 +1227,7 @@ function enterApp() {
                     var classError = document.getElementById('class-error');
                     if (classError) classError.textContent = message;
                 } else { showLoginError(message); }
-                if (result.code === 'DEVICE_LIMIT') DeviceGuard.showDeviceLimit?.(deviceEmail, result.limit);
+                if (result.code === 'DEVICE_LIMIT') DeviceGuard.showDeviceLimit?.(deviceEmail, result.limit, result.supportRequired);
                 return;
             }
             gameVerifiedDeviceUserId = deviceUserId;

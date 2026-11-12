@@ -26,7 +26,7 @@
  }
  function showCodeForm(email){
   sentEmail=email;el('email').readOnly=true;el('code-form').hidden=false;el('send').className='secondary';
-  el('title').textContent='Escribe tu código';el('intro').textContent='Al confirmarlo, este navegador ocupará el lugar del anterior.';
+  el('title').textContent='Escribe tu código';el('intro').textContent='Ingresa los 6 dígitos que enviamos a tu correo.';
  }
  async function deadline(promise){
   let timer;try{return await Promise.race([promise,new Promise((_,reject)=>{timer=setTimeout(()=>reject(new Error('connection_timeout')),12000);})]);}finally{clearTimeout(timer);}
@@ -40,10 +40,11 @@
   el('verification').hidden=true;el('account').hidden=true;el('retry').hidden=true;
   el('title').textContent='Estamos iniciando tu sesión';el('intro').textContent='Un momento, estamos autorizando este navegador.';
  }
- function showCooldown(value){
+ function showSupport(){
   el('verification').hidden=true;el('account').hidden=true;el('retry').hidden=true;
-  el('title').textContent='Ya cambiaste de navegador';el('intro').textContent='Puedes hacer un cambio cada 7 días.';
-  status('Podrás hacer otro cambio el '+date(value)+'.',true);
+  el('title').textContent='Ya cambiaste de dispositivo';el('intro').textContent='Para autorizar otro dispositivo, comunícate con soporte.';
+  el('support').hidden=false;status('');
+  if(resendTimer!==null){clearInterval(resendTimer);resendTimer=null;}
  }
  function requestNewCode(){
   verified=false;el('verification').hidden=false;el('account').hidden=true;el('retry').hidden=true;
@@ -66,8 +67,8 @@
    const code=response.data?.code;
    if(code==='EMAIL_VERIFICATION_REQUIRED'||code==='NOT_AUTHENTICATED'){
     requestNewCode();
-   }else if(code==='CHANGE_COOLDOWN'){
-    showCooldown(response.data.next_change_at);
+   }else if(code==='SUPPORT_REQUIRED'||code==='CHANGE_COOLDOWN'){
+    showSupport();
    }else if(code==='DEVICE_CHANGED'){
     el('retry').hidden=false;status('El dispositivo autorizado cambió. Vuelve a comprobarlo.',true);
    }else{el('retry').hidden=false;status('No se pudo cambiar el navegador. Vuelve a intentarlo.',true);}
@@ -82,10 +83,11 @@
   if(response.error)throw response.error;
   const state=response.data;
   if(state.devices.some(d=>d.device_id===currentId)){finish();return;}
-  if(!state.can_replace){showCooldown(state.next_change_at);return;}
   if(!state.devices.length){
    const activated=await DeviceGuard.activateDevice(client,user.email);if(!activated.ok)throw new Error(activated.error);finish();return;
   }
+  // La respuesta anterior incluía la fecha de un cambio aunque ya hubiera vencido el plazo.
+  if(!state.can_replace||state.next_change_at){showSupport();return;}
   // Transfer the only slot after email verification; keep the other slot on two-browser accounts.
   if(state.devices.length===1){await replace(state.devices[0]);return;}
   el('title').textContent='¿Cuál quieres reemplazar?';el('intro').textContent='Ese navegador dejará de tener acceso. El otro seguirá funcionando.';

@@ -1,4 +1,4 @@
-const CACHE_NAME = 'alcocermed-main-v194-acceso';
+const CACHE_NAME = 'alcocermed-main-v195-soporte';
 const APP_SHELL = [
     './student-results.js?v=11',
     './student-results.css?v=1',
@@ -36,7 +36,7 @@ const APP_SHELL = [
     './campus-preview.css?v=3',
     './platform-polish.js?v=1',
     './config.js',
-    './device_guard.js?v=11',
+    './device_guard.js?v=12',
     './campus-access.js?v=11',
     './official-flashcards.js?v=2',
     './study-depth.js?v=20',
@@ -46,7 +46,7 @@ const APP_SHELL = [
     './assets/fonts/outfit-900.woff2',
     './flashcard-workspace.js?v=20261109-foco',
     './script.js?v=20261112-acceso2',
-    './campus-login.js?v=4',
+    './campus-login.js?v=5',
     './campus-catalogs.js?v=2',
     './campus-exam-engine.js?v=3',
     './topic-evaluations.js?v=20261110-revision2',
