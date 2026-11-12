@@ -66,7 +66,9 @@ window.continueWithGoogle = async function(button) {
         await ensureSupabaseSdk();
         const client=getSupabase();
         const access=await client.rpc('campus_access');
-        if(access.error || !access.data?.ready) throw new Error('El registro está en preparación. Prueba la muestra mientras tanto.');
+        if(access.error || (!access.data?.ready && access.data?.code !== 'DEVICE_LIMIT')) {
+            throw new Error('No pudimos comprobar el acceso. Intenta de nuevo.');
+        }
         const response=await fetch(SUPABASE_URL+'/auth/v1/settings',{headers:{apikey:SUPABASE_KEY}});
         if(!response.ok) throw new Error('No pudimos conectar. Intenta de nuevo.');
         const settings=await response.json();

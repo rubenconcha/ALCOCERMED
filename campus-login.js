@@ -137,6 +137,14 @@ function getSupabase() {
 // ══════════════════════════════════════════════
 
 let currentUser = null;
+let currentCampusSessionId = null;
+let verifiedCampusSessionId = null;
+let campusSigningOut = false;
+
+function setCampusSession(session) {
+    currentUser = session?.user || null;
+    currentCampusSessionId = typeof DeviceGuard !== 'undefined' ? DeviceGuard.getSessionId?.(session) ?? null : null;
+}
 
 // Si la URL contiene logout=1, forzar showLoginScreen apenas cargue
 if (new URLSearchParams(window.location.search).get("logout") === "1") {
@@ -166,12 +174,23 @@ async function initAuth() {
         await ensureSupabaseSdk();
         var client = getSupabase();
         if (!client) throw new Error('Supabase client failed to initialize');
+        client.auth.onAuthStateChange(function (event, session) {
+            if (event === 'SIGNED_IN' && session?.user && !campusSigningOut) {
+                setCampusSession(session);
+                const sessionId = currentCampusSessionId;
+                setTimeout(() => enterApp(session.user, sessionId), 0);
+            } else if (event === 'SIGNED_OUT') {
+                const wasSignedIn = currentUser !== null;
+                setCampusSession(null);
+                if (wasSignedIn) showLoginScreen();
+            }
+        });
         var res = await client.auth.getSession();
-        var session = res.data.session;
+        var session = res.data?.session;
 
         if (session?.user && !currentUser) {
             if (login) login.inert = true;
-            currentUser = session.user;
+            setCampusSession(session);
             await enterApp(currentUser);
         }
     } catch (e) {
@@ -185,24 +204,10 @@ async function initAuth() {
         if (login) login.inert = false;
     }
 
-    try {
-        getSupabase().auth.onAuthStateChange(function (event, session) {
-            if (event === 'INITIAL_SESSION') return;
-            if (event === 'SIGNED_IN' && session && session.user) {
-                currentUser = session.user;
-                setTimeout(function () { enterApp(currentUser); }, 0);
-            } else if (event === 'SIGNED_OUT') {
-                const wasSignedIn = currentUser !== null;
-                currentUser = null;
-                if (wasSignedIn) showLoginScreen();
-            }
-        });
-    } catch (e) {
-        console.warn('No se pudo registrar auth listener:', e.message);
-    }
 }
 
 function showLoginScreen() {
+    if (typeof DeviceGuard !== 'undefined') DeviceGuard.stopChecking();
     window.CampusStudy?.reset();
     document.body.classList.add('login-active');
     var loginScreen = document.getElementById('login-screen');
@@ -219,34 +224,43 @@ let verifiedCampusUserId = null;
 async function verifyCampusDevice(client, user) {
     if (user.email && ADMIN_EMAILS.includes(user.email.toLowerCase())) return;
     if (typeof DeviceGuard === 'undefined') throw new Error('No pudimos verificar tus dispositivos. Recarga la página.');
-    const device = await DeviceGuard.activateDevice(client, user.email);
+    const device = await DeviceGuard.activateDevice(client, user.email, false);
     if (device.ok) return device.access?.ready === true ? device.access : null;
-    if (device.code === 'DEVICE_LIMIT' && currentUser?.id === user.id) {
-        await client.auth.signOut({ scope: 'local' });
-        if (currentUser?.id === user.id) currentUser = null;
-    }
-    throw new Error(device.error || 'No pudimos verificar este dispositivo.');
+    throw Object.assign(new Error(device.error || 'No pudimos verificar este dispositivo.'), {
+        code: device.code, limit: device.limit,
+    });
 }
-function enterApp(user) {
-    if (!user || currentUser?.id !== user.id) return Promise.resolve();
-    if (verifiedCampusUserId === user?.id && !document.body.classList.contains('login-active')) return Promise.resolve();
-    if (campusEntry?.owner === user.id) return campusEntry.promise;
-    const entry = { owner: user.id };
+function enterApp(user, sessionId = currentCampusSessionId) {
+    const isCurrent = () => currentUser?.id === user?.id && currentCampusSessionId === sessionId;
+    if (!user || !isCurrent() || campusSigningOut) return Promise.resolve();
+    if (verifiedCampusUserId === user.id && verifiedCampusSessionId === sessionId &&
+        !document.body.classList.contains('login-active')) return Promise.resolve();
+    if (campusEntry?.owner === user.id && campusEntry.sessionId === sessionId) return campusEntry.promise;
+    if (verifiedCampusUserId) showLoginScreen();
+    const entry = { owner: user.id, sessionId };
     campusEntry = entry;
     entry.promise = (async function () {
+        let client;
         try {
-            const client = getSupabase();
+            client = getSupabase();
             const [access] = await Promise.all([
                 verifyCampusDevice(client, user).then(access => access || CampusAccess.check(client)),
                 window.loadCampusAssets('campus'),
             ]);
-            if (campusEntry !== entry || currentUser?.id !== user.id) return;
+            if (campusEntry !== entry || !isCurrent()) return;
             window.CampusStudy.activate(user, access);
+            verifiedCampusSessionId = sessionId;
         } catch (error) {
-            if (campusEntry === entry) {
-                showLoginScreen();
-                showLoginError(error.message);
+            if (campusEntry !== entry || !isCurrent()) return;
+            if (client && (error.code === 'DEVICE_LIMIT' || error.code === 'NOT_AUTHENTICATED')) {
+                setCampusSession(null);
+                try { await client.auth.signOut({ scope: 'local' }); }
+                catch (signOutError) { console.warn('signOut:', signOutError); }
+                if (campusEntry !== entry || currentUser) return;
             }
+            showLoginScreen();
+            showLoginError(error.message);
+            if (error.code === 'DEVICE_LIMIT') DeviceGuard.showDeviceLimit?.(user.email, error.limit);
         } finally { if (campusEntry === entry) campusEntry = null; }
     })();
     return entry.promise;
@@ -254,6 +268,7 @@ function enterApp(user) {
 /** handleLogin */
 window.handleLogin = async function (e) {
     e.preventDefault();
+    if (campusSigningOut) return;
     hideLoginError();
 
     var email = document.getElementById('login-email').value.trim();
@@ -279,7 +294,7 @@ window.handleLogin = async function (e) {
             return;
         }
 
-        currentUser = result.data.user;
+        setCampusSession(result.data.session);
         await enterApp(currentUser);
     } catch (err) {
         console.error('Error de login:', err);

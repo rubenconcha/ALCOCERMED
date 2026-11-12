@@ -49,10 +49,11 @@ for (const [file, prefix] of [['sw.js', 'alcocermed-main-'], ['juegos/sw.js', 'a
 
 test('una comprobación repetida de la misma sesión conserva la sección del campus', async () => {
   const source = fs.readFileSync('campus-login.js', 'utf8');
-  const start = source.indexOf('function enterApp(user)');
+  const start = source.indexOf('function enterApp(');
   const end = source.indexOf('/** handleLogin */', start);
   const context = {
     verifiedCampusUserId: 'student-1', currentUser: { id: 'student-1' },
+    currentCampusSessionId: 'session-1', verifiedCampusSessionId: 'session-1', campusSigningOut: false,
     document: { body: { classList: { contains: () => false } } },
     Promise
   };
@@ -69,9 +70,14 @@ test('un dispositivo rechazado no abre el campus ni consulta los permisos de est
   const events = [];
   let finishDevice;
   const context = {
-    currentUser: student, ADMIN_EMAILS: [],
+    currentUser: student, currentCampusSessionId: 'session-1', verifiedCampusUserId: null,
+    campusSigningOut: false, ADMIN_EMAILS: [],
+    setCampusSession() { context.currentUser = null; context.currentCampusSessionId = null; },
     getSupabase: () => ({ auth: { signOut: async () => { events.push('sign-out'); } } }),
-    DeviceGuard: { activateDevice: () => new Promise(resolve => { finishDevice = resolve; }) },
+    DeviceGuard: {
+      activateDevice: () => new Promise(resolve => { finishDevice = resolve; }),
+      showDeviceLimit(email) { events.push(email); }
+    },
     CampusAccess: { check: async () => { events.push('check'); return { ready: true }; }, apply: () => events.push('apply') },
     showLoginScreen() {},
     showLoginError(message) { events.push(message); },
@@ -82,7 +88,30 @@ test('un dispositivo rechazado no abre el campus ni consulta los permisos de est
   assert.deepEqual(events, []);
   finishDevice({ ok: false, code: 'DEVICE_LIMIT', error: 'Dispositivo bloqueado' });
   await entry;
-  assert.deepEqual(events, ['sign-out', 'Dispositivo bloqueado']);
+  assert.deepEqual(events, ['sign-out', 'Dispositivo bloqueado', student.email]);
+});
+
+test('una respuesta anterior de la misma cuenta no puede cerrar la nueva sesión', async () => {
+  const source = fs.readFileSync('campus-login.js', 'utf8');
+  const student = { id: 'student-1', email: 'student@example.invalid' };
+  const requests = [];
+  let entries = 0;
+  const context = {
+    currentUser: student, currentCampusSessionId: 'session-1', verifiedCampusUserId: null,
+    verifiedCampusSessionId: null, campusSigningOut: false, ADMIN_EMAILS: [],
+    getSupabase: () => ({ auth: { signOut: () => assert.fail('cerró la sesión nueva') } }),
+    DeviceGuard: { activateDevice: () => new Promise(resolve => requests.push(resolve)) },
+    window: { loadCampusAssets: async () => {}, CampusStudy: { activate() { entries++; } } },
+  };
+  vm.runInNewContext(source.slice(source.indexOf('let campusEntry = null;'), source.indexOf('/** handleLogin */')), context);
+  const oldEntry = context.enterApp(student);
+  context.currentCampusSessionId = 'session-2';
+  const newEntry = context.enterApp(student);
+  requests[0]({ ok: false, code: 'DEVICE_LIMIT' });
+  requests[1]({ ok: true, access: { ready: true } });
+  await Promise.all([oldEntry, newEntry]);
+  assert.equal(entries, 1);
+  assert.equal(context.verifiedCampusSessionId, 'session-2');
 });
 
 test('al volver al navegador, una sesión desplazada se cierra una sola vez', async () => {
@@ -133,22 +162,32 @@ test('los archivos precargados coinciden con las versiones actuales de campus y 
   }
 });
 
-test('volver a la ventana de Juegos no reinicia una partida por SIGNED_IN repetido', () => {
+test('volver a Juegos conserva la partida y un cambio de sesión vuelve a verificar', () => {
   const source = fs.readFileSync('juegos/app.js', 'utf8').replace(/\r\n/g, '\n');
   const start = source.indexOf('    client.auth.onAuthStateChange(function(event, session)');
   const end = source.indexOf('\n}\n', start);
   let listener, entries = 0;
+  const scheduled = [];
   const context = {
     client: { auth: { onAuthStateChange: fn => { listener = fn; } } },
-    currentUser: { id: 'student-1' },
+    currentUser: { id: 'student-1' }, gameAuthSessionId: 'session-1', gameSigningOut: false,
+    setGameSession(session) {
+      context.currentUser = session.user;
+      context.gameAuthSessionId = session.id;
+    },
     isDemoGuestExpired: () => false,
+    setTimeout: fn => scheduled.push(fn),
     document: { getElementById: () => ({ classList: { contains: () => false } }) },
     enterApp: () => { entries++; }
   };
   vm.runInNewContext(source.slice(start, end), context);
-  listener('SIGNED_IN', { user: { id: 'student-1' } });
+  listener('SIGNED_IN', { user: { id: 'student-1' }, id: 'session-1' });
+  assert.equal(scheduled.length, 0);
+  listener('SIGNED_IN', { user: { id: 'student-1' }, id: 'session-2' });
+  assert.equal(scheduled.length, 1);
+  listener('SIGNED_IN', { user: { id: 'student-2' }, id: 'session-3' });
   assert.equal(entries, 0);
-  listener('SIGNED_IN', { user: { id: 'student-2' } });
+  for (const verify of scheduled) verify();
   assert.equal(entries, 1);
 });
 

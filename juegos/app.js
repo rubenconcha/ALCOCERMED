@@ -1067,7 +1067,7 @@ async function initAuth() {
         } catch (error) { showLoginError(error.message); }
         return;
     }
-    if (urlParams.get('debug') === 'true') {
+    if (urlParams.get('debug') === 'true' && ['localhost', '127.0.0.1', '[::1]'].includes(location.hostname)) {
         console.log('Debug mode active - Bypassing real login');
         currentUser = {
             id: 'mock-admin-id',
@@ -1096,7 +1096,8 @@ async function initAuth() {
                 }, 200);
                 return;
             }
-            currentUser = result.data.session.user;
+            if (currentUser) return;
+            setGameSession(result.data.session);
             enterApp();
         } else {
             showLogin();
@@ -1107,19 +1108,26 @@ async function initAuth() {
     });
 
     client.auth.onAuthStateChange(function(event, session) {
-        if (event === 'SIGNED_IN' && session) {
-            if (isDemoGuestExpired(session.user)) {
-                client.auth.signOut({ scope: 'local' });
-                return;
-            }
+        if (event === 'SIGNED_IN' && session?.user && !gameSigningOut) {
             const sameAccount = currentUser && currentUser.id === session.user.id;
-            currentUser = session.user;
-            if (!sameAccount || document.getElementById('app-shell').classList.contains('hidden')) enterApp();
+            const previousSessionId = gameAuthSessionId;
+            setGameSession(session);
+            const sessionId = gameAuthSessionId;
+            const demoExpired = isDemoGuestExpired(session.user);
+            if (demoExpired || !sameAccount || previousSessionId !== sessionId ||
+                document.getElementById('app-shell').classList.contains('hidden')) {
+                setTimeout(function() {
+                    if (currentUser?.id !== session.user.id || gameAuthSessionId !== sessionId || gameSigningOut) return;
+                    if (demoExpired) handleLogout('Tu cuenta demo expiró. Usa una cuenta activa para entrar.');
+                    else enterApp();
+                }, 0);
+            }
         } else if (event === 'SIGNED_OUT') {
             teardownAvatarRealtime();
             if (typeof DeviceGuard !== 'undefined') DeviceGuard.stopChecking();
             gameVerifiedDeviceUserId = null;
-            currentUser = null;
+            gameVerifiedDeviceSessionId = null;
+            setGameSession(null);
             isAdmin = false;
             DEMO_ACCESS_ONLY = true;
             showLogin();
@@ -1174,43 +1182,62 @@ function showLogin() {
 }
 
 var gameVerifiedDeviceUserId = null;
+var gameVerifiedDeviceSessionId = null;
+var gameAuthSessionId = null;
 var gameDeviceEntry = null;
+var gameSigningOut = false;
+
+function setGameSession(session) {
+    currentUser = session?.user || null;
+    gameAuthSessionId = typeof DeviceGuard !== 'undefined' ? DeviceGuard.getSessionId?.(session) ?? null : null;
+}
 
 function enterApp() {
-    if (!currentUser) return;
+    if (!currentUser || gameSigningOut) return;
     var deviceEmail = (currentUser.email || '').toLowerCase().trim();
     var deviceUserId = currentUser.id;
-    if (deviceEmail !== ADMIN_EMAIL && gameVerifiedDeviceUserId !== deviceUserId) {
-        if (gameDeviceEntry) return gameDeviceEntry;
+    var sessionId = gameAuthSessionId;
+    if (deviceEmail !== ADMIN_EMAIL && (gameVerifiedDeviceUserId !== deviceUserId ||
+        gameVerifiedDeviceSessionId !== sessionId)) {
+        if (gameDeviceEntry?.owner === deviceUserId && gameDeviceEntry.sessionId === sessionId) return gameDeviceEntry.promise;
         if (typeof DeviceGuard === 'undefined') {
             showLogin();
             showLoginError('No pudimos verificar tus dispositivos. Recarga la página.');
             return;
         }
+        if (!document.getElementById('app-shell').classList.contains('hidden')) {
+            DeviceGuard.stopChecking();
+            showLogin();
+        }
         var deviceClient = getSupabase();
-        gameDeviceEntry = DeviceGuard.activateDevice(deviceClient, deviceEmail).then(function(result) {
-            if (!currentUser || currentUser.id !== deviceUserId) return;
+        var entry = { owner: deviceUserId, sessionId: sessionId };
+        gameDeviceEntry = entry;
+        entry.promise = DeviceGuard.activateDevice(deviceClient, deviceEmail, false).then(async function(result) {
+            if (gameDeviceEntry !== entry || currentUser?.id !== deviceUserId || gameAuthSessionId !== sessionId) return;
             if (!result.ok) {
                 var message = result.error || 'No pudimos verificar este dispositivo.';
-                var finish = result.code === 'DEVICE_LIMIT'
-                    ? deviceClient.auth.signOut({ scope: 'local' })
-                    : Promise.resolve();
-                return finish.catch(function() {}).then(function() {
-                    currentUser = null;
-                    showLogin();
-                    if (typeof nervousClassMode !== 'undefined' && nervousClassMode) {
-                        var classError = document.getElementById('class-error');
-                        if (classError) classError.textContent = message;
-                    } else { showLoginError(message); }
-                });
+                setGameSession(null);
+                if (result.code === 'DEVICE_LIMIT' || result.code === 'NOT_AUTHENTICATED') {
+                    try { await deviceClient.auth.signOut({ scope: 'local' }); }
+                    catch (error) { console.warn('Logout error:', error); }
+                }
+                if (gameDeviceEntry !== entry || currentUser) return;
+                showLogin();
+                if (typeof nervousClassMode !== 'undefined' && nervousClassMode) {
+                    var classError = document.getElementById('class-error');
+                    if (classError) classError.textContent = message;
+                } else { showLoginError(message); }
+                if (result.code === 'DEVICE_LIMIT') DeviceGuard.showDeviceLimit?.(deviceEmail, result.limit);
+                return;
             }
             gameVerifiedDeviceUserId = deviceUserId;
+            gameVerifiedDeviceSessionId = sessionId;
             return enterApp();
-        }).finally(function() { gameDeviceEntry = null; });
-        return gameDeviceEntry;
+        }).finally(function() { if (gameDeviceEntry === entry) gameDeviceEntry = null; });
+        return entry.promise;
     }
     if (typeof nervousClassMode !== "undefined" && nervousClassMode) {
-        DeviceGuard.startChecking(getSupabase(), handleLogout);
+        DeviceGuard.startChecking(getSupabase(), handleLogout, sessionId);
         showNervousClass();
         return;
     }
@@ -1282,7 +1309,7 @@ function enterApp() {
     // ═══ DEVICE GUARD: entrada verificada antes de mostrar Juegos ═══
     if (typeof DeviceGuard !== 'undefined' && !isAdmin) {
         var client = getSupabase();
-        DeviceGuard.startChecking(client, handleLogout);
+        DeviceGuard.startChecking(client, handleLogout, sessionId);
     }
 
     // Verificar si hay un código en la URL (desde QR)
@@ -1755,6 +1782,7 @@ function initLoginScreenUi() {
 function handleLogin(e) {
     if (typeof isNightClassOpen === 'function' && isNightClassOpen() && !nightAccountMode) return enterNightClass(e);
     if (e) e.preventDefault();
+    if (gameSigningOut) return;
     hideLoginError();
 
     var emailField = document.getElementById('login-email');
@@ -1788,9 +1816,7 @@ function handleLogin(e) {
     client.auth.signInWithPassword({
         email: email,
         password: password
-    }).then(function(result) {
-        setLoginLoading(false);
-
+    }).then(async function(result) {
         if (result.error) {
             console.error('Login error:', result.error.message, result.error);
             var msg = 'Credenciales incorrectas';
@@ -1812,20 +1838,18 @@ function handleLogin(e) {
 
         if (result.data && result.data.user) {
             if (isDemoGuestExpired(result.data.user)) {
-                showLoginError('Tu cuenta demo expiró (24 h). Pide una nueva al profesor o usa tu cuenta regular.');
-                client.auth.signOut({ scope: 'local' });
+                await handleLogout('Tu cuenta demo expiró (24 h). Pide una nueva al profesor o usa tu cuenta regular.');
                 return;
             }
-            currentUser = result.data.user;
-            enterApp();
+            setGameSession(result.data.session);
+            await enterApp();
         } else {
             showLoginError('Respuesta inesperada del servidor. Intenta de nuevo.');
         }
     }).catch(function(err) {
-        setLoginLoading(false);
         console.error('Login catch error:', err);
         showLoginError('Error de conexión. Verifica tu internet e intenta de nuevo.');
-    });
+    }).finally(function() { setLoginLoading(false); });
 }
 
 // Make handleLogin globally accessible
@@ -6535,15 +6559,23 @@ function loadStudentResults() {
 // ═══ LOGOUT ═══
 
 async function handleLogout(reason) {
+    if (gameSigningOut) return;
+    gameSigningOut = true;
     if (typeof DeviceGuard !== 'undefined') DeviceGuard.stopChecking();
     gameVerifiedDeviceUserId = null;
-    currentUser = null;
+    gameVerifiedDeviceSessionId = null;
+    setGameSession(null);
     isAdmin = false;
     showLogin();
+    setLoginLoading(true);
     try {
-        await getSupabase()?.auth.signOut({ scope: 'local' });
+        var result = await getSupabase()?.auth.signOut({ scope: 'local' });
+        if (result?.error) console.warn('Logout error:', result.error);
     } catch (error) {
         console.error('Logout error:', error);
+    } finally {
+        gameSigningOut = false;
+        setLoginLoading(false);
     }
     if (!currentUser && typeof reason === 'string') {
         showLoginError(reason);

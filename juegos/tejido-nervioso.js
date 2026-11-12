@@ -60,13 +60,13 @@ function initNervousClass() {
         await sb.auth.signOut({ scope: 'local' });
         clearSelfSession();
         sessionStorage.removeItem('alcocer_nervioso_owner');
-        currentUser = null; showLogin();
+        setGameSession(null); showLogin();
         document.getElementById('class-name').focus();
     };
     sb.auth.getSession().then(function(result) {
         var user = result.data && result.data.session && result.data.session.user;
         if (user && user.user_metadata && user.user_metadata.class_topic === nervousClassTopic) {
-            currentUser = user; enterApp();
+            setGameSession(result.data.session); enterApp();
         }
     }).catch(function() { showLogin(); });
 }
@@ -138,7 +138,7 @@ async function enterNervousClassByName(event) {
         });
         if (result.error) throw new Error('No se pudo crear tu entrada. Espera un momento e inténtalo otra vez.');
         if (!result.data || !result.data.session) throw new Error('No se pudo iniciar la sesión. Avísale al profesor.');
-        currentUser = result.data.user; enterApp();
+        setGameSession(result.data.session); enterApp();
     } catch (err) {
         error.textContent = err.message || 'No hay conexión. Intenta nuevamente.';
     } finally { button.disabled = false; button.textContent = 'Entrar'; }

@@ -75,6 +75,7 @@ function resetCampusStudy() {
     if (window.OfficialFlashcards) OfficialFlashcards.clear();
     if (window.FlashcardWorkspace) FlashcardWorkspace.clear();
     verifiedCampusUserId = null;
+    verifiedCampusSessionId = null;
     if (flashcardReviewTimer) clearTimeout(flashcardReviewTimer);
     flashcardReviewTimer = null;
     flashcardTopicCards = [];
@@ -157,10 +158,7 @@ function enterVerifiedApp(user) {
     var _isAdmin = Boolean(user && user.email && ADMIN_EMAILS.includes(user.email.toLowerCase()));
     if (typeof DeviceGuard !== 'undefined' && user && user.email && !_isAdmin) {
         var dgClient = getSupabase();
-        DeviceGuard.startChecking(dgClient, function(reason) {
-            window.handleLogout();
-            showLoginError(reason);
-        });
+        DeviceGuard.startChecking(dgClient, window.handleLogout, currentCampusSessionId);
     }
 }
 
@@ -200,34 +198,30 @@ async function restoreCampusAfterPlans() {
 
 /** handleLogin */
 /** handleLogout */
-window.handleLogout = function() {
-        // 0. Detener verificación de dispositivo
-    if (typeof DeviceGuard !== 'undefined') DeviceGuard.stopChecking();
-
-    // 1. Limpiar datos locales inmediatamente
-    // Conservar las fechas de repaso, separadas por cuenta, al cerrar sesión.
-    Object.keys(localStorage).forEach(function (key) {
-        if (key !== 'alcocer_device_id' && !key.startsWith('srs_v2_')) localStorage.removeItem(key);
-    });
-    sessionStorage.clear();
-
-    // 2. Intentar cerrar sesión en Supabase
-    try {
-        getSupabase().auth.signOut({ scope: 'local' });
-    } catch(e) {
-        console.warn('signOut:', e);
-    }
-
-    // 3. Reset estado local
-    currentUser = null;
-
-    // 4. Mostrar pantalla de login instantáneamente (evita el parpadeo de recarga)
+window.handleLogout = async function(reason) {
+    if (campusSigningOut) return;
+    campusSigningOut = true;
+    setCampusSession(null);
     showLoginScreen();
-
-    // 5. Limpiar la URL (opcional, para estética)
+    setLoginLoading(true);
     try {
-        history.replaceState({}, document.title, window.location.origin + window.location.pathname);
-    } catch (e) {}
+        const { error } = await getSupabase().auth.signOut({ scope: 'local' });
+        if (error) console.warn('signOut:', error);
+    } catch (error) {
+        console.warn('signOut:', error);
+    } finally {
+        try {
+            // Conservar el navegador autorizado y las fechas de repaso por cuenta.
+            Object.keys(localStorage).forEach(function (key) {
+                if (key !== 'alcocer_device_id' && !key.startsWith('srs_v2_')) localStorage.removeItem(key);
+            });
+            sessionStorage.clear();
+            history.replaceState({}, document.title, window.location.origin + window.location.pathname);
+        } catch (_) { /* El almacenamiento puede estar bloqueado en este navegador. */ }
+        campusSigningOut = false;
+        setLoginLoading(false);
+        if (typeof reason === 'string') showLoginError(reason);
+    }
 };
 
 

@@ -110,21 +110,32 @@ test('una doble pulsación no califica dos tarjetas', () => {
     assert.equal(h.context.currentIndex, 1);
 });
 
-test('cerrar sesión conserva las fechas de repaso y elimina la sesión de acceso', () => {
+test('cerrar sesión revoca el token antes de limpiarlo y conserva las fechas de repaso', async () => {
     const stored = {
         alcocer_device_id: 'device-one', srs_v2_student_one_card_1: '1800000060000',
         'sb-auth-token': 'session', other: 'temporary'
     };
     const localStorage = { ...stored };
     Object.defineProperty(localStorage, 'removeItem', { value: key => delete localStorage[key] });
+    let finishLogout;
     const context = vm.createContext({
         window: { location: { origin: 'https://alcocermed.com', pathname: '/campus' } },
-        localStorage, sessionStorage: { clear() {} }, currentUser: { id: 'student-one' },
-        getSupabase: () => ({ auth: { signOut() {} } }), showLoginScreen() {},
+        localStorage, sessionStorage: { clear() {} }, currentUser: { id: 'student-one' }, campusSigningOut: false,
+        setCampusSession() { context.currentUser = null; },
+        getSupabase: () => ({ auth: { signOut(options) {
+            assert.equal(options.scope, 'local');
+            assert.equal(localStorage['sb-auth-token'], 'session');
+            return new Promise(resolve => { finishLogout = resolve; });
+        } } }),
+        showLoginScreen() {}, setLoginLoading() {},
         history: { replaceState() {} }, document: { title: 'Campus' }
     });
     vm.runInContext(source.slice(source.indexOf('window.handleLogout ='), source.indexOf('function campo(row, nombre)')), context);
-    context.window.handleLogout();
+    const logout = context.window.handleLogout();
+    assert.equal(context.currentUser, null);
+    assert.equal(localStorage['sb-auth-token'], 'session');
+    finishLogout({});
+    await logout;
     assert.equal(localStorage.srs_v2_student_one_card_1, stored.srs_v2_student_one_card_1);
     assert.equal(localStorage.alcocer_device_id, stored.alcocer_device_id);
     assert.equal(localStorage['sb-auth-token'], undefined);

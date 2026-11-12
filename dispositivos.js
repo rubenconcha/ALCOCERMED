@@ -1,20 +1,20 @@
 (function () {
  'use strict';
  const el=id=>document.getElementById(id);
- let client,user,state,currentId,initializing=true,busy=false,verified=false,sentEmail='',resendAt=0,resendTimer=null,sendBlocked=false;
+ let client,user,currentId,returnTo='/campus',initializing=true,busy=false,verified=false,sentEmail='',resendAt=0,resendTimer=null;
  function status(text,error=false){el('status').textContent=text;el('status').dataset.error=String(error);}
  function date(value){return new Date(value).toLocaleString('es-BO',{dateStyle:'short',timeStyle:'short'});}
  function failure(error,verifying=false){
-  if(error?.code==='over_email_send_rate_limit')return 'Se alcanzó el límite de envíos de correo. Esperar un minuto no lo resuelve. Pide ayuda a la preparatoria.';
   if(error?.status===429||/rate|too many/i.test(error?.message||''))return verifying?'Demasiados intentos de verificación. Espera unos minutos antes de volver a probar.':'Por ahora no podemos enviar otro código. Espera unos minutos o pide ayuda a la preparatoria.';
   if(error?.code==='email_address_not_authorized'||/not authorized|smtp|sending.*email/i.test(error?.message||''))return 'El envío de correos no está disponible. Contacta con la preparatoria.';
+  if(error?.code==='otp_disabled')return 'El ingreso con código está deshabilitado. Contacta con la preparatoria.';
   if(verifying&&(error?.code==='otp_expired'||error?.status===403))return 'El código es incorrecto o venció. Revísalo o pide uno nuevo.';
   return 'No se pudo completar la solicitud. Revisa tu conexión e inténtalo de nuevo.';
  }
  function updateResend(){
   const seconds=Math.max(0,Math.ceil((resendAt-Date.now())/1000));
-  el('send').disabled=initializing||busy||seconds>0||sendBlocked;
-  el('send').textContent=sendBlocked?'Envío temporalmente no disponible':seconds?'Reenviar en '+seconds+' s':sentEmail?'Reenviar código':'Enviar código';
+  el('send').disabled=initializing||busy||seconds>0;
+  el('send').textContent=seconds?'Reenviar en '+seconds+' s':sentEmail?'Reenviar código':'Enviar código';
   if(!seconds&&resendTimer!==null){clearInterval(resendTimer);resendTimer=null;}
  }
  function rememberRequest(email,sent){
@@ -31,6 +31,10 @@
  async function deadline(promise){
   let timer;try{return await Promise.race([promise,new Promise((_,reject)=>{timer=setTimeout(()=>reject(new Error('connection_timeout')),12000);})]);}finally{clearTimeout(timer);}
  }
+ function verificationFetch(url,options){
+  const signal=options?.signal||AbortSignal.timeout?.(12000);
+  return fetch(url,{...options,signal});
+ }
  function rpc(name,args){return deadline(client.rpc(name,args));}
  function preparingAccess(){
   el('verification').hidden=true;el('account').hidden=true;el('retry').hidden=true;
@@ -41,15 +45,18 @@
   el('title').textContent='Ya cambiaste de navegador';el('intro').textContent='Puedes hacer un cambio cada 7 días.';
   status('Podrás hacer otro cambio el '+date(value)+'.',true);
  }
- function freshEmail(session){
-  try{const claims=JSON.parse(atob(session.access_token.split('.')[1].replace(/-/g,'+').replace(/_/g,'/')));const now=Date.now()/1000;return claims.amr?.some(a=>a.method==='otp'&&a.timestamp>=now-600&&a.timestamp<=now+30)===true;}catch(_){return false;}
+ function requestNewCode(){
+  verified=false;el('verification').hidden=false;el('account').hidden=true;el('retry').hidden=true;
+  el('code').value='';showCodeForm(user.email);
+  status('La verificación venció. Pide un código nuevo.',true);
  }
  function finish(){
   el('verification').hidden=true;el('account').hidden=true;el('success').hidden=false;
   el('title').textContent='Listo, ya puedes entrar';el('intro').textContent='Este navegador está autorizado.';status('');el('retry').hidden=true;
   if(resendTimer!==null){clearInterval(resendTimer);resendTimer=null;}
-  try{sessionStorage.removeItem('alcocer_device_change_email');sessionStorage.removeItem('alcocer_code_request');}catch(_){}
-  location.replace('/campus');
+  el('enter').href=returnTo;
+  try{sessionStorage.removeItem('alcocer_device_change_email');sessionStorage.removeItem('alcocer_code_request');sessionStorage.removeItem('alcocer_device_change_return');}catch(_){}
+  location.replace(returnTo);
  }
  async function replace(device){
   status('Autorizando este navegador…');
@@ -57,20 +64,23 @@
   if(response.error)throw response.error;
   if(!response.data?.ok){
    const code=response.data?.code;
-   if(code==='EMAIL_VERIFICATION_REQUIRED'){
-    verified=false;el('verification').hidden=false;el('account').hidden=true;showCodeForm(user.email);status('La verificación venció. Pide un código nuevo.',true);
+   if(code==='EMAIL_VERIFICATION_REQUIRED'||code==='NOT_AUTHENTICATED'){
+    requestNewCode();
    }else if(code==='CHANGE_COOLDOWN'){
     showCooldown(response.data.next_change_at);
    }else if(code==='DEVICE_CHANGED'){
     el('retry').hidden=false;status('El dispositivo autorizado cambió. Vuelve a comprobarlo.',true);
-   }else{status('No se pudo cambiar el navegador. Vuelve a intentarlo.',true);}
+   }else{el('retry').hidden=false;status('No se pudo cambiar el navegador. Vuelve a intentarlo.',true);}
    return;
   }
   finish();
  }
  async function afterVerification(){
   preparingAccess();
-  const response=await rpc('campus_my_devices');if(response.error)throw response.error;state=response.data;
+  const response=await rpc('campus_my_devices');
+  if(response.error?.code==='42501'||response.status===401){requestNewCode();return;}
+  if(response.error)throw response.error;
+  const state=response.data;
   if(state.devices.some(d=>d.device_id===currentId)){finish();return;}
   if(!state.can_replace){showCooldown(state.next_change_at);return;}
   if(!state.devices.length){
@@ -95,7 +105,6 @@
  }
  el('send-form').addEventListener('submit',async event=>{
   event.preventDefault();if(initializing||busy)return;
-  if(sendBlocked)return;
   if(Date.now()<resendAt){updateResend();status('Ya solicitaste un código. Puedes escribirlo mientras termina la cuenta regresiva.');return;}
   const email=el('email').value.trim().toLowerCase();if(!email||!el('email').checkValidity())return;
   busy=true;el('send').disabled=true;status('Enviando código…');
@@ -108,7 +117,13 @@
    if(match&&(error?.status===429||/security|request/i.test(error?.message||''))){
     showCodeForm(email);startCooldown(Math.max(1,Math.min(3600,Number(match[1]))));rememberRequest(email,true);
     status('Ya se solicitó un código. Revisa tu correo y espera la cuenta regresiva antes de pedir otro.');
-   }else{if(error?.code==='over_email_send_rate_limit')sendBlocked=true;status(failure(error),true);}
+   }else if(error?.code==='over_email_send_rate_limit'){
+    showCodeForm(email);startCooldown(60);rememberRequest(email,true);
+    status('El servicio limitó los envíos. Si ya tienes un código, puedes escribirlo. Si no, vuelve a intentar más tarde.',true);
+   }else if(error?.name==='AuthRetryableFetchError'){
+    showCodeForm(email);rememberRequest(email,true);
+    status('No pudimos confirmar el envío. Si te llega un código, escríbelo aquí. También puedes volver a pedirlo.',true);
+   }else{status(failure(error),true);}
   }finally{busy=false;updateResend();}
  });
  el('code-form').addEventListener('submit',async event=>{
@@ -118,18 +133,21 @@
   try{
    const result=await client.auth.verifyOtp({email:sentEmail,token,type:'email'});if(result.error)throw result.error;
    user=result.data?.user;
-   if(!user||user.email?.toLowerCase()!==sentEmail||!freshEmail(result.data.session))throw new Error('verification_failed');
+   // Supabase comprueba la vigencia. La hora del navegador no decide si el código es válido.
+   if(!user||user.email?.toLowerCase()!==sentEmail||!result.data?.session)throw new Error('verification_failed');
    verified=true;el('code').value='';el('verification').hidden=true;await afterVerification();
-  }catch(error){if(verified){el('retry').hidden=false;el('title').textContent='No pudimos terminar el ingreso';}status(failure(error,!verified),true);}finally{busy=false;el('verify').disabled=false;}
+  }catch(error){if(verified){el('retry').hidden=false;el('title').textContent='No pudimos terminar el ingreso';}status(failure(error,!verified),true);}finally{busy=false;el('verify').disabled=false;updateResend();}
  });
  el('retry').onclick=async()=>{
   if(busy||!verified)return;busy=true;el('retry').disabled=true;
   el('retry').hidden=true;
-  try{await afterVerification();}catch(error){el('retry').hidden=false;status(failure(error),true);}finally{busy=false;el('retry').disabled=false;}
+  try{await afterVerification();}catch(error){el('retry').hidden=false;status(failure(error),true);}finally{busy=false;el('retry').disabled=false;updateResend();}
  };
  async function init(){
   try{
-   currentId=DeviceGuard.getDeviceId();const cfg=window.ALCOCER_CONFIG;client=window.supabase.createClient(cfg.SUPABASE_URL,cfg.SUPABASE_KEY);
+   currentId=DeviceGuard.getDeviceId();returnTo=DeviceGuard.deviceChangeReturn?.()||'/campus';el('back').href=returnTo;
+   const cfg=window.ALCOCER_CONFIG;
+   client=window.supabase.createClient(cfg.SUPABASE_URL,cfg.SUPABASE_KEY,{global:{fetch:verificationFetch}});
    let pending='',saved=null;
    try{pending=sessionStorage.getItem('alcocer_device_change_email')||'';saved=JSON.parse(sessionStorage.getItem('alcocer_code_request')||'null');}catch(_){}
    el('email').value=pending;
@@ -148,7 +166,7 @@
      const active=await rpc('check_device_active',{p_device_id:currentId});
      if(active.error)throw active.error;
      if(active.data?.active===true){finish();return;}
-     if(freshEmail(session)){verified=true;await afterVerification();return;}
+     if(DeviceGuard.hasEmailProof?.(session)){verified=true;await afterVerification();return;}
     }
    }
    status('');

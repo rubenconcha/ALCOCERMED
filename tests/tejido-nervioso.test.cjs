@@ -16,13 +16,18 @@ function setup(topic, ready = true) {
     document: { getElementById: get },
     sessionStorage: { getItem: k => storage.get(k) ?? null, setItem: (k,v) => storage.set(k,v), removeItem: k => storage.delete(k) },
     DEMO_EVENT: { emailDomain: 'example.test' },
+    setGameSession: session => { ctx.currentUser = session?.user ?? null; },
     enterApp: () => state.entered++, clearSelfSession: () => state.cleared++,
     restoreSelfStudy: (...args) => state.restored.push(args), navigateTo: (...args) => state.navigation.push(args),
     sb: { from(table) { assert.equal(table, 'evaluaciones'); return { select(field) { assert.equal(field, 'id'); return {
       in(field, ids) { assert.equal(field, 'id'); state.requested = Array.from(ids); return {
         async eq(field, value) { assert.equal(field, 'publicado'); assert.equal(value, true); return { data: ready ? ids.map(id => ({id})) : [] }; }
       }; }
-    }; } }; }, auth: { async signUp(args) { state.signups.push(args); return { data: { user: { id: 'student-1', user_metadata: args.options.data }, session: {} } }; } } }
+    }; } }; }, auth: { async signUp(args) {
+      state.signups.push(args);
+      const user = { id: 'student-1', user_metadata: args.options.data };
+      return { data: { user, session: { user } } };
+    } } }
   });
   vm.runInContext(source, ctx);
   const button = {};

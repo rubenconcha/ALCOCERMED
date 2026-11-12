@@ -6,6 +6,7 @@
 
 var DeviceGuard = (function() {
     var STORAGE_KEY = 'alcocer_device_id';
+    var RETURN_KEY = 'alcocer_device_change_return';
     var CHECK_INTERVAL = 10000; // Verificar cada 10 segundos
     var monitor = null;
 
@@ -37,8 +38,34 @@ var DeviceGuard = (function() {
         return 'Navegador · ' + browser;
     }
 
+    function sessionClaims(session) {
+        try {
+            return JSON.parse(atob(session.access_token.split('.')[1].replace(/-/g, '+').replace(/_/g, '/')));
+        } catch (_) { return {}; }
+    }
+
+    function getSessionId(session) {
+        return sessionClaims(session).session_id || null;
+    }
+
+    function hasEmailProof(session) {
+        var amr = sessionClaims(session).amr;
+        return Array.isArray(amr) && amr.some(function (method) { return method?.method === 'otp'; });
+    }
+
+    function deviceChangeReturn(value) {
+        try {
+            var target = new URL(value || sessionStorage.getItem(RETURN_KEY), location.origin);
+            if (target.origin === location.origin &&
+                (/^\/campus(?:\.html)?$/.test(target.pathname) || /^\/juegos(?:\/|$)/.test(target.pathname))) {
+                return target.pathname + target.search;
+            }
+        } catch (_) {}
+        return '/campus';
+    }
+
     // Activar este dispositivo después del login
-    function activateDevice(supabaseClient, userEmail) {
+    function activateDevice(supabaseClient, userEmail, promptOnLimit = true) {
         var deviceId;
         try { deviceId = getDeviceId(); }
         catch (_) { return Promise.resolve({ ok: false, error: 'Permite el almacenamiento de este navegador para registrar tu dispositivo.' }); }
@@ -54,8 +81,12 @@ var DeviceGuard = (function() {
             }
             var data = result.data;
             if (!data || data.ok !== true) {
-                if (data && data.code === 'DEVICE_LIMIT') showDeviceLimit(userEmail, data.limit);
-                return { ok: false, error: data && data.code === 'DEVICE_LIMIT' ? 'Confirma tu correo para usar este navegador.' : 'No pudimos verificar este navegador. Vuelve a intentarlo.', code: data && data.code };
+                var code = data?.code;
+                if (code === 'DEVICE_LIMIT' && promptOnLimit) showDeviceLimit(userEmail, data.limit);
+                return { ok: false, limit: data?.limit, code: code, error: code === 'DEVICE_LIMIT'
+                    ? 'Confirma tu correo para usar este navegador.'
+                    : code === 'NOT_AUTHENTICATED' ? 'Tu sesión venció. Vuelve a iniciar sesión.'
+                    : 'No pudimos verificar este navegador. Vuelve a intentarlo.' };
             }
             return { ok: true, limit: data.limit, registered: data.registered, access: data.access };
         }).catch(function(err) {
@@ -79,12 +110,21 @@ var DeviceGuard = (function() {
         try {
             var result = await active.client.rpc('check_device_active', { p_device_id: deviceId });
             if (monitor !== active) return;
-            if (result.error) {
+            if (result.error && result.status !== 401) {
                 console.warn('check_device error:', result.error);
-            } else if (result.data && result.data.active === false) {
-                stopChecking();
-                active.onKicked?.('Tu cuenta se abrió en otro navegador. Vuelve a iniciar sesión.');
+                return;
             }
+            if (result.status !== 401 && result.data?.active !== false) return;
+            // Una respuesta de una sesión anterior no debe cerrar la que acaba de entrar.
+            if (active.sessionId) {
+                var sessionResult = await active.client.auth.getSession();
+                var session = sessionResult.data?.session;
+                if (monitor !== active || (session && getSessionId(session) !== active.sessionId)) return;
+            }
+            stopChecking();
+            active.onKicked?.(result.status === 401 || result.data?.reason === 'No autenticado'
+                ? 'Tu sesión venció. Vuelve a iniciar sesión.'
+                : 'Tu cuenta se abrió en otro navegador. Vuelve a iniciar sesión.');
         } catch (error) {
             console.warn('check_device catch:', error);
         } finally {
@@ -93,9 +133,9 @@ var DeviceGuard = (function() {
     }
 
     // Iniciar verificación periódica
-    function startChecking(supabaseClient, onKickedCallback) {
+    function startChecking(supabaseClient, onKickedCallback, sessionId) {
         stopChecking();
-        monitor = { client: supabaseClient, onKicked: onKickedCallback,
+        monitor = { client: supabaseClient, onKicked: onKickedCallback, sessionId: sessionId,
             timer: setInterval(checkStillActive, CHECK_INTERVAL), pending: false };
         document.addEventListener('visibilitychange', checkStillActive);
         window.addEventListener('pageshow', checkStillActive);
@@ -121,20 +161,32 @@ var DeviceGuard = (function() {
         dialog.innerHTML = '<h2 id="device-limit-title">Ya tienes un dispositivo autorizado</h2><p>Confirma tu correo con un código de 6 dígitos para autorizar este navegador. Al confirmar, se cerrará el acceso del navegador que reemplaces.</p><button type="button" class="device-limit-send">Cambiar con código</button><button type="button" class="device-limit-cancel">Volver</button>';
         if (limit > 1) dialog.querySelector('h2').textContent = 'Alcanzaste el límite de dispositivos';
         var send = dialog.querySelector('.device-limit-send');
-        dialog.querySelector('.device-limit-cancel').onclick = function () { dialog.close(); };
+        dialog.querySelector('.device-limit-cancel').onclick = function () {
+            if (typeof dialog.close === 'function') dialog.close();
+            else dialog.remove();
+        };
         send.onclick = function () {
-            try { sessionStorage.setItem('alcocer_device_change_email', email || ''); }
+            try {
+                sessionStorage.setItem('alcocer_device_change_email', email || '');
+                sessionStorage.setItem(RETURN_KEY, deviceChangeReturn(location.pathname + location.search));
+            }
             catch (_) { /* The email can also be entered on the verification page. */ }
             location.assign('/dispositivos.html');
         };
         dialog.addEventListener('close', function () { dialog.remove(); });
-        document.body.appendChild(dialog); dialog.showModal();
+        document.body.appendChild(dialog);
+        if (typeof dialog.showModal === 'function') dialog.showModal();
+        else dialog.setAttribute('open', '');
     }
 
     // API pública
     return {
         getDeviceId: getDeviceId,
         getDeviceName: getDeviceName,
+        getSessionId: getSessionId,
+        hasEmailProof: hasEmailProof,
+        deviceChangeReturn: deviceChangeReturn,
+        showDeviceLimit: showDeviceLimit,
         activateDevice: activateDevice,
         startChecking: startChecking,
         stopChecking: stopChecking
