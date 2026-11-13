@@ -8,6 +8,7 @@ window.AdminSubscriptions = (() => {
   const list = document.getElementById('section-suscripciones');
   const table = document.getElementById('subscriptions-rows');
   const listStatus = document.getElementById('subscriptions-status');
+  const listFeedback = document.getElementById('subscriptions-feedback');
   const search = document.getElementById('subscriptions-search');
   const filter = document.getElementById('subscriptions-state');
   const dialog = document.getElementById('subscription-confirm');
@@ -89,8 +90,21 @@ window.AdminSubscriptions = (() => {
       badge.textContent = label;
       badge.className = 'tag ' + style;
       status.append(badge);
+      const actions = cell('');
+      actions.className = 'subscription-actions';
+      if (row.email && ['active', 'scheduled'].includes(row.status)) {
+        const label = row.scope === 'videos' ? 'solo videos' : 'suscripción completa';
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.className = 'btn btn-sm subscription-row-remove';
+        button.textContent = 'Quitar';
+        button.setAttribute('aria-label', 'Quitar ' + label + ' de ' + row.email);
+        button.disabled = Boolean(pendingWrite);
+        button.addEventListener('click', () => confirmRemoval(row.email, row.scope, label));
+        actions.append(button);
+      }
       tr.append(student, cell(access), cell(formatDate(row.starts_on)),
-        cell(row.ends_on ? formatDate(row.ends_on) : 'Sin vencimiento'), status);
+        cell(row.ends_on ? formatDate(row.ends_on) : 'Sin vencimiento'), status, actions);
       body.append(tr);
     }
     table.replaceChildren(body);
@@ -134,6 +148,9 @@ window.AdminSubscriptions = (() => {
     for (const form of forms) {
       form.querySelector('button[type="submit"]').disabled = saving;
     }
+    for (const button of table.querySelectorAll('.subscription-row-remove')) {
+      button.disabled = saving;
+    }
   }
 
   function confirmChange(title, message, label, action, removing = false) {
@@ -159,7 +176,7 @@ window.AdminSubscriptions = (() => {
     if (!currentAdmin || pendingWrite) return;
     const write = { admin: currentAdmin };
     pendingWrite = write;
-    const status = form.querySelector('.subscription-feedback');
+    const status = form ? form.querySelector('.subscription-feedback') : listFeedback;
     setSaving(true);
     feedback(status, 'Guardando…');
     const isCurrent = () => pendingWrite === write && write.admin === currentAdmin;
@@ -167,8 +184,10 @@ window.AdminSubscriptions = (() => {
       const { data, error } = await getSupabase().rpc(rpc, values);
       if (!isCurrent()) return;
       if (error) throw error;
-      form.reset();
-      if (form !== removal) resetDates(form);
+      if (form) {
+        form.reset();
+        if (form !== removal) resetDates(form);
+      }
       feedback(status, successMessage(data), 'success');
       if (list.classList.contains('active')) load();
     } catch (error) {
@@ -207,17 +226,20 @@ window.AdminSubscriptions = (() => {
     });
   }
 
+  function confirmRemoval(email, scope, label, form = null) {
+    const note = scope === 'videos' ? ' Un plan completo vigente seguirá incluyendo videoclases.' : '';
+    confirmChange('Confirmar baja', 'Quitar ' + label + ' de ' + email + '. El cambio se aplica de inmediato.' + note,
+      'Quitar acceso', () => save(form, 'campus_admin_remove_subscription', { p_email: email, p_scope: scope }, result =>
+        result?.full || result?.videos ? 'Acceso quitado para ' + email + '.'
+          : email + ' no tiene ese acceso vigente ni programado.'), true);
+  }
+
   removal.addEventListener('submit', event => {
     event.preventDefault();
-    if (!currentAdmin || pendingWrite) return;
     const email = removal.elements.email.value.trim();
     const scope = removal.elements.scope.value;
     const label = removal.elements.scope.selectedOptions[0].textContent.toLowerCase();
-    const note = scope === 'videos' ? ' Un plan completo vigente seguirá incluyendo videoclases.' : '';
-    confirmChange('Confirmar baja', 'Quitar ' + label + ' de ' + email + '. El cambio se aplica de inmediato.' + note,
-      'Quitar acceso', () => save(removal, 'campus_admin_remove_subscription', { p_email: email, p_scope: scope }, result =>
-        result?.full || result?.videos ? 'Acceso quitado para ' + email + '.'
-          : email + ' no tiene ese acceso vigente ni programado.'), true);
+    confirmRemoval(email, scope, label, removal);
   });
 
   function clear() {
@@ -229,6 +251,7 @@ window.AdminSubscriptions = (() => {
     rows = null;
     table.replaceChildren();
     feedback(listStatus, '');
+    feedback(listFeedback, '');
     list.removeAttribute('aria-busy');
     search.value = filter.value = '';
     for (const form of forms) {

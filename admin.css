@@ -1069,7 +1069,7 @@ tr:hover td {
 .subscription-card .subscription-note { margin-top: 8px; font-size: 0.77rem; }
 .subscription-card .subscription-feedback:not(:empty) { margin-top: 10px; }
 .subscription-card .subscription-feedback:empty { margin: 0; }
-.subscription-feedback[data-tone="success"] { color: #166534; }
+.subscription-feedback[data-tone="success"], .subscription-list-status[data-tone="success"] { color: #166534; }
 .subscription-feedback[data-tone="error"], .subscription-list-status[data-tone="error"] { color: #a61c16; }
 
 .subscription-list-header { gap: 12px; flex-wrap: wrap; }
@@ -1077,12 +1077,18 @@ tr:hover td {
 .subscription-filters { display: flex; gap: 10px; flex-wrap: wrap; }
 .subscription-filter { display: grid; gap: 5px; }
 .subscription-list-status { padding: 11px 20px; }
+#subscriptions-feedback:empty { padding: 0; }
 .subscription-table td { text-transform: none; }
 .subscription-table td:first-child { min-width: 200px; overflow-wrap: anywhere; }
 .subscription-table .tag { white-space: nowrap; text-transform: none; }
 .subscription-table .tag-success { color: #166534; }
 .subscription-table .tag-info { color: #1d4ed8; }
 .subscription-table .tag-danger { color: #a61c16; }
+.subscription-table .subscription-actions { text-align: right; }
+.subscription-row-remove { background: #b42318; color: #fff; text-transform: none; }
+.subscription-row-remove:hover:not(:disabled) { background: #912018; }
+.subscription-row-remove:focus-visible { outline: 2px solid #912018; outline-offset: 2px; }
+.subscription-row-remove:disabled { opacity: 0.65; cursor: wait; }
 
 .subscription-confirm {
   margin: auto;
