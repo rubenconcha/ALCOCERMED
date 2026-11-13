@@ -115,8 +115,24 @@ window.openMmLightbox = function (m) {
     document.getElementById('mm-lb-title').textContent = campo(m, 'titulo') || '';
     document.getElementById('mm-lb-materia').textContent = (campo(m, 'materia') || '').toLowerCase();
     document.getElementById('mm-lb-desc').textContent = campo(m, 'descripcion') || '';
-    var dlLink = document.getElementById('mm-lb-download');
-    if (dlLink) dlLink.href = urlImg;
+    var download = document.getElementById('mm-lb-download');
+    var status = document.getElementById('mm-lb-download-status');
+    download.disabled = !urlImg;
+    status.hidden = true;
+    download.onclick = async function downloadMap() {
+        const isCurrent = () => !lb.classList.contains('hidden') && download.onclick === downloadMap;
+        download.disabled = true;
+        status.textContent = 'Preparando descarga…';
+        status.hidden = false;
+        try {
+            await MindmapDownload.save(urlImg, 'la-celula-Prepa-Ben-Carson.png', isCurrent);
+            if (isCurrent()) status.hidden = true;
+        } catch (_) {
+            if (isCurrent()) status.textContent = 'No pudimos descargar el mapa. Vuelve a intentarlo.';
+        } finally {
+            if (isCurrent()) download.disabled = false;
+        }
+    };
     lb.classList.remove('hidden');
     document.body.style.overflow = 'hidden';
 };

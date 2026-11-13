@@ -35,12 +35,6 @@
       (window.MINDMAP_ASSETS ||= {})[id + '.json'] = payload.assets;
       return payload;
     },
-    async download(map) {
-      const blob = await request(map.id, 'image');
-      const url = URL.createObjectURL(blob), link = document.createElement('a');
-      link.href = url; link.download = map.id + '-Prepa-Ben-Carson.webp';
-      document.body.appendChild(link); link.click(); link.remove();
-      setTimeout(() => URL.revokeObjectURL(url), 60000);
-    }
+    image: map => request(map.id, 'image')
   };
 })();

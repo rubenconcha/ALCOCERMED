@@ -1,6 +1,6 @@
 /* Native concept map. Original raster maps are used only for downloads. */
 (function () {
- var activeMap=null,objectUrl=null,sourceImage=null,previousFocus=null,previousOverflow='',token=0;
+ var activeMap=null,previousFocus=null,previousOverflow='',token=0;
  var zoom=1,selectedBranch=0,branchOpen=[],showAllMobile=false,wired=false,fitPending=false;
  var illustratedView=false;
  var colors=['#429243','#267dd0','#8c59b0','#e58929','#209caa','#d76387'];
@@ -11,7 +11,6 @@
  function assetsFor(map){return (window.MINDMAP_ASSETS||{})[fileFor(map)]||{};}
  function labelsFor(map){var detailed=detailsFor(map);return detailed?detailed.map(function(section){return section.title;}):window.MINDMAP_BRANCH_LABELS[fileFor(map)]||[];}
  function el(tag,cls,text){var node=document.createElement(tag);node.className=cls;if(text)node.textContent=text;return node;}
- function release(){if(objectUrl)URL.revokeObjectURL(objectUrl);objectUrl=null;if(sourceImage){sourceImage.onload=null;sourceImage.onerror=null;sourceImage.src='';sourceImage=null;}}
  function redraw(){
   var tree=$('mm-tree'),svg=tree.querySelector('.mm-concept-lines');if(!svg||!tree.offsetWidth)return;
   var rect=tree.getBoundingClientRect(),scale=rect.width/tree.offsetWidth,width=tree.offsetWidth,height=tree.offsetHeight;
@@ -108,6 +107,23 @@
    group.appendChild(children);tree.appendChild(group);var tab=el('button','mm-topic-tab',label);tab.type='button';tab.dataset.branch=index;tab.style.setProperty('--branch-color',colors[index]);tab.addEventListener('click',function(){selectBranch(index);});nav.appendChild(tab);
   });update();fit();var layoutToken=token;if(document.fonts)document.fonts.ready.then(function(){if(activeMap===map&&layoutToken===token)fit();});
  }
+ async function download(){
+  var map=activeMap,button=$('mm-lb-download'),revision=token;
+  if(!map||button.disabled)return;
+  var isCurrent=function(){return token===revision;},status=$('mm-lb-status');
+  var asset=assetsFor(map),premium=field(map,'premium'),stem=premium?map.id:fileFor(map).replace(/\.[^.]+$/,'');
+  var filename=(!premium&&asset.filename)||stem+'-Prepa-Ben-Carson.webp';
+  button.disabled=true;status.textContent='Preparando descarga…';
+  try{
+   var source=premium?await MindmapPremium.image(map):asset.download||field(map,'url_imagen')||field(map,'url_image');
+   await MindmapDownload.save(source,filename,isCurrent);
+   if(isCurrent())status.textContent='';
+  }catch(error){
+   if(isCurrent())status.textContent=error.status===403?error.message:'No pudimos descargar el mapa. Vuelve a intentarlo.';
+  }finally{
+   if(isCurrent())button.disabled=false;
+  }
+ }
  function wire(){
   if(wired)return;wired=true;
   var visualToggle=el('button','mm-visual-toggle','Ver mapa ilustrado');visualToggle.type='button';visualToggle.id='mm-visual-toggle';visualToggle.hidden=true;
@@ -117,7 +133,7 @@
   $('mm-branch-all').addEventListener('click',function(){setAll(true);});$('mm-branch-none').addEventListener('click',function(){setAll(false);});
   $('mm-tools-toggle').addEventListener('click',function(){var bar=$('mm-lightbox').querySelector('.mm-branch-bar'),open=!bar.classList.contains('is-expanded');bar.classList.toggle('is-expanded',open);$('mm-tools-toggle').setAttribute('aria-expanded',String(open));fit();});
   $('mm-true-fullscreen').addEventListener('click',function(){var viewer=$('mm-lightbox');if(document.fullscreenElement===viewer)document.exitFullscreen();else if(viewer.requestFullscreen)viewer.requestFullscreen().catch(function(){});});
-  $('mm-lb-download').addEventListener('click',async function(){if(field(activeMap,'premium')){var button=$('mm-lb-download');button.disabled=true;try{await MindmapPremium.download(activeMap);}catch(error){$('mm-lb-status').textContent=error.message;}finally{if(activeMap)button.disabled=false;}return;}if(!objectUrl&&!detailsFor(activeMap))return;var asset=assetsFor(activeMap),link=el('a','');link.href=detailsFor(activeMap)?asset.download||'/assets/mindmaps/encefalo/mapa-completo.png?v=2':objectUrl;link.download=detailsFor(activeMap)?asset.filename||'Encefalo-y-pares-craneales-Ben-Carson.png':fileFor(activeMap).replace(/\.[^.]+$/,'')+'-prepa-ben-carson.webp';document.body.appendChild(link);link.click();link.remove();});
+  $('mm-lb-download').addEventListener('click',download);
   var stage=document.querySelector('.mm-lb-stage'),pan=null;
   stage.addEventListener('wheel',function(event){if(!event.ctrlKey)return;event.preventDefault();setZoom(zoom+(event.deltaY<0?.1:-.1),true);},{passive:false});
   stage.addEventListener('pointerdown',function(event){if((window.MindmapPractice&&MindmapPractice.isOpen())||event.target.closest('summary,details')||event.pointerType!=='mouse'||event.button!==0||event.target.closest('button'))return;pan={id:event.pointerId,x:event.clientX,y:event.clientY,left:stage.scrollLeft,top:stage.scrollTop};stage.setPointerCapture(event.pointerId);stage.classList.add('is-panning');});
@@ -140,13 +156,12 @@
    if(event.key==='Tab'){var buttons=Array.from($('mm-lightbox').querySelectorAll('button:not(:disabled),summary')).filter(function(node){return node.offsetWidth&&node.offsetHeight;});var first=buttons[0],last=buttons[buttons.length-1];if(event.shiftKey&&document.activeElement===first){event.preventDefault();last.focus();}else if(!event.shiftKey&&document.activeElement===last){event.preventDefault();first.focus();}}
   });
  }
- function watermark(source){return new Promise(function(resolve,reject){var canvas=document.createElement('canvas');canvas.width=source.naturalWidth;canvas.height=source.naturalHeight;var context=canvas.getContext('2d');context.drawImage(source,0,0);var size=Math.round(canvas.width*.075);context.font='800 '+size+'px Arial';var width=context.measureText('PREPA BEN CARSON').width;if(width>canvas.width*.8){size=Math.round(size*canvas.width*.8/width);context.font='800 '+size+'px Arial';}context.textAlign='center';context.textBaseline='middle';context.fillStyle='rgba(28,69,108,.08)';context.fillText('PREPA BEN CARSON',canvas.width/2,canvas.height/2);canvas.toBlob(function(blob){if(blob)resolve(URL.createObjectURL(blob));else reject(new Error('Descarga no disponible'));},'image/webp',.95);});}
  window.openMmLightbox=async function(map){
   if(window.MindmapPractice)MindmapPractice.reset();
   if(window.CampusAccess&&CampusAccess.isFree()&&!field(map,'acceso_gratis'))return openMmUnlockDialog(map);if(!$('mm-lightbox'))return;
   var loadingRevision=++token;
   if(!activeMap){previousFocus=document.activeElement;previousOverflow=document.body.style.overflow;}
-  wire();release();activeMap=map;illustratedView=false;
+  wire();activeMap=map;illustratedView=false;
   $('mm-lightbox').classList.remove('hidden','mm-show-illustrated');$('mm-visual-toggle').hidden=true;
   document.body.style.overflow='hidden';branchOpen=[];
   $('mm-tree').replaceChildren();$('mm-branch-shortcuts').replaceChildren();$('mm-lb-title').textContent=field(map,'titulo')||'Mapa mental';
@@ -162,14 +177,13 @@
    return;
   }
   if(loadingRevision!==token)return;
-  selectedBranch=0;showAllMobile=false;branchOpen=labelsFor(map).map(function(_,i){return detailsFor(map)?startsWithContent(map)&&i===0:i===0;});var current=loadingRevision;
+  selectedBranch=0;showAllMobile=false;branchOpen=labelsFor(map).map(function(_,i){return detailsFor(map)?startsWithContent(map)&&i===0:i===0;});
   $('mm-lb-materia').textContent=field(map,'materia')||'';$('mm-lb-status').textContent='';
   $('mm-lb-download').title=field(map,'curated')?'Descargar lámina ilustrada con logo':'Descargar mapa';
   build(map);window.CampusTracking?.record(map.section==='intocables'?'intocables':'mapas','opened',field(map,'materia'),field(map,'tema'),String(field(map,'id')||field(map,'titulo')));if(window.MindmapPractice)MindmapPractice.mount(assetsFor(map).practice);$('mm-visual-toggle').hidden=!assetsFor(map).illustrated;if(assetsFor(map).illustrated)showIllustrated(true);
-  if(detailsFor(map)){$('mm-lb-download').disabled=false;return;}
-  var source=new Image();sourceImage=source;source.crossOrigin='anonymous';source.onload=function(){if(current!==token)return;try{watermark(source).then(function(url){if(current!==token){URL.revokeObjectURL(url);return;}objectUrl=url;$('mm-lb-download').disabled=false;}).catch(function(){if(current===token)$('mm-lb-status').textContent='La descarga no está disponible en este momento.';});}catch(_){if(current===token)$('mm-lb-status').textContent='La descarga no está disponible en este momento.';}};source.onerror=function(){if(current===token)$('mm-lb-status').textContent='La descarga no está disponible en este momento.';};source.src=field(map,'url_imagen')||field(map,'url_image')||'';
+  $('mm-lb-download').disabled=!(field(map,'premium')||assetsFor(map).download||fileFor(map));
  };
- window.closeMmLightbox=function(){if(window.MindmapPractice)MindmapPractice.reset();if(!activeMap)return;++token;activeMap=null;illustratedView=false;$('mm-lightbox').classList.remove('mm-show-illustrated');$('mm-lightbox').classList.add('hidden');document.body.style.overflow=previousOverflow;if(document.fullscreenElement===$('mm-lightbox'))document.exitFullscreen().catch(function(){});$('mm-tree').replaceChildren();$('mm-branch-shortcuts').replaceChildren();release();if(previousFocus&&previousFocus.isConnected)previousFocus.focus();};
+ window.closeMmLightbox=function(){if(window.MindmapPractice)MindmapPractice.reset();if(!activeMap)return;++token;activeMap=null;illustratedView=false;$('mm-lightbox').classList.remove('mm-show-illustrated');$('mm-lightbox').classList.add('hidden');document.body.style.overflow=previousOverflow;if(document.fullscreenElement===$('mm-lightbox'))document.exitFullscreen().catch(function(){});$('mm-tree').replaceChildren();$('mm-branch-shortcuts').replaceChildren();if(previousFocus&&previousFocus.isConnected)previousFocus.focus();};
  var requestedMapOpened=false;
  window.openRequestedMindmap=async function(){
   var requested=new URLSearchParams(location.search).get('mapa');if(requestedMapOpened||!requested)return;
