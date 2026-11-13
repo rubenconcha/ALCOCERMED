@@ -1088,7 +1088,10 @@ tr:hover td {
 .subscription-row-remove { background: #b42318; color: #fff; text-transform: none; }
 .subscription-row-remove:hover:not(:disabled) { background: #912018; }
 .subscription-row-remove:focus-visible { outline: 2px solid #912018; outline-offset: 2px; }
-.subscription-row-remove:disabled { opacity: 0.65; cursor: wait; }
+.subscription-row-add { background: #18763b; color: #fff; text-transform: none; }
+.subscription-row-add:hover:not(:disabled) { background: #126030; }
+.subscription-row-add:focus-visible { outline: 2px solid #126030; outline-offset: 2px; }
+.subscription-actions .btn:disabled { opacity: 0.65; cursor: wait; }
 
 .subscription-confirm {
   margin: auto;
@@ -1103,6 +1106,8 @@ tr:hover td {
 .subscription-confirm p { margin: 9px 0 18px; overflow-wrap: anywhere; line-height: 1.5; text-transform: none; }
 .subscription-confirm-actions { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 8px; }
 .subscription-confirm-actions .btn { text-transform: none; }
+.subscription-reactivate-dates { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-bottom: 16px; }
+.subscription-confirm .subscription-feedback:empty { margin: 0; }
 
 @media (max-width: 1040px) {
   .subscription-fields { grid-template-columns: repeat(2, minmax(0, 1fr)); }

@@ -15,6 +15,11 @@ window.AdminSubscriptions = (() => {
   const dialogTitle = document.getElementById('subscription-confirm-title');
   const dialogMessage = document.getElementById('subscription-confirm-message');
   const dialogButton = document.getElementById('subscription-confirm-button');
+  const reactivate = document.getElementById('subscription-reactivate');
+  const reactivateForm = reactivate.querySelector('form');
+  const reactivateStudent = document.getElementById('subscription-reactivate-student');
+  const reactivateBack = reactivateForm.querySelector('button[type="button"]');
+  const reactivateSubmit = reactivateForm.querySelector('button[type="submit"]');
   const statuses = {
     active: ['Vigente', 'tag-success'],
     scheduled: ['Programada', 'tag-info'],
@@ -31,6 +36,7 @@ window.AdminSubscriptions = (() => {
   let listRequest = 0;
   let pendingWrite = null;
   let confirmedAction = null;
+  let reactivationTarget = null;
 
   function todayInBolivia() {
     const date = new Intl.DateTimeFormat('en-CA', {
@@ -51,6 +57,13 @@ window.AdminSubscriptions = (() => {
 
   function resetDates(form) {
     form.elements.start.value = todayInBolivia();
+  }
+
+  function datesInOrder(form) {
+    if (form.elements.end.value >= form.elements.start.value) return true;
+    feedback(form.querySelector('.subscription-feedback'), 'La fecha de fin debe ser igual o posterior a la de inicio.', 'error');
+    form.elements.end.focus();
+    return false;
   }
 
   function messageFor(error, fallback) {
@@ -92,15 +105,19 @@ window.AdminSubscriptions = (() => {
       status.append(badge);
       const actions = cell('');
       actions.className = 'subscription-actions';
-      if (row.email && ['active', 'scheduled'].includes(row.status)) {
+      if (row.email && ['active', 'scheduled', 'cancelled'].includes(row.status)) {
         const label = row.scope === 'videos' ? 'solo videos' : 'suscripción completa';
+        const adding = row.status === 'cancelled';
         const button = document.createElement('button');
         button.type = 'button';
-        button.className = 'btn btn-sm subscription-row-remove';
-        button.textContent = 'Quitar';
-        button.setAttribute('aria-label', 'Quitar ' + label + ' de ' + row.email);
+        button.className = 'btn btn-sm ' + (adding ? 'subscription-row-add' : 'subscription-row-remove');
+        button.textContent = adding ? 'Agregar' : 'Quitar';
+        button.setAttribute('aria-label', button.textContent + ' ' + label + ' de ' + row.email);
         button.disabled = Boolean(pendingWrite);
-        button.addEventListener('click', () => confirmRemoval(row.email, row.scope, label));
+        button.addEventListener('click', () => {
+          if (adding) openReactivation(row, label);
+          else confirmRemoval(row.email, row.scope, label);
+        });
         actions.append(button);
       }
       tr.append(student, cell(access), cell(formatDate(row.starts_on)),
@@ -148,9 +165,11 @@ window.AdminSubscriptions = (() => {
     for (const form of forms) {
       form.querySelector('button[type="submit"]').disabled = saving;
     }
-    for (const button of table.querySelectorAll('.subscription-row-remove')) {
+    for (const button of table.querySelectorAll('.subscription-actions button')) {
       button.disabled = saving;
     }
+    reactivateBack.disabled = saving;
+    reactivateSubmit.disabled = saving;
   }
 
   function confirmChange(title, message, label, action, removing = false) {
@@ -186,9 +205,11 @@ window.AdminSubscriptions = (() => {
       if (error) throw error;
       if (form) {
         form.reset();
-        if (form !== removal) resetDates(form);
+        if (form === activation || form === videos) resetDates(form);
       }
-      feedback(status, successMessage(data), 'success');
+      const adding = form === reactivateForm;
+      if (adding) reactivate.close();
+      feedback(adding ? listFeedback : status, successMessage(data), 'success');
       if (list.classList.contains('active')) load();
     } catch (error) {
       if (isCurrent()) feedback(status, messageFor(error, 'No pudimos guardar el cambio. Vuelve a intentarlo.'), 'error');
@@ -200,29 +221,57 @@ window.AdminSubscriptions = (() => {
     }
   }
 
+  function saveSubscription(form, email, scope, start, end) {
+    save(form, 'campus_admin_save_subscription', {
+      p_email: email, p_scope: scope, p_start: start, p_end: end,
+    }, result => (result?.status === 'scheduled' ? 'Acceso programado' :
+      result?.status === 'expired' ? 'Período vencido guardado' : 'Acceso activado') +
+      ' para ' + email + ' del ' + formatDate(start) + ' al ' + formatDate(end) + '.');
+  }
+
+  function openReactivation(row, label) {
+    if (!currentAdmin || pendingWrite || reactivate.open) return;
+    const today = todayInBolivia();
+    const previousEnd = row.ends_on?.slice(0, 10) || '';
+    reactivationTarget = { email: row.email, scope: row.scope, admin: currentAdmin };
+    reactivateStudent.textContent = row.email + ' · ' + label;
+    reactivateForm.elements.start.value = today;
+    reactivateForm.elements.end.min = today;
+    reactivateForm.elements.end.value = previousEnd >= today ? previousEnd : '';
+    feedback(reactivateForm.querySelector('.subscription-feedback'), '');
+    reactivate.showModal();
+  }
+
+  reactivateBack.addEventListener('click', () => reactivate.close());
+  reactivate.addEventListener('cancel', event => {
+    if (pendingWrite) event.preventDefault();
+  });
+  reactivate.addEventListener('close', () => {
+    reactivationTarget = null;
+    reactivateStudent.textContent = '';
+  });
+  reactivateForm.addEventListener('submit', event => {
+    event.preventDefault();
+    const target = reactivationTarget;
+    if (!target || target.admin !== currentAdmin || pendingWrite || !datesInOrder(reactivateForm)) return;
+    const start = reactivateForm.elements.start.value;
+    const end = reactivateForm.elements.end.value;
+    saveSubscription(reactivateForm, target.email, target.scope, start, end);
+  });
+
   for (const [form, scope] of [[activation, 'full'], [videos, 'videos']]) {
     resetDates(form);
     form.addEventListener('submit', event => {
       event.preventDefault();
-      if (!currentAdmin || pendingWrite) return;
+      if (!currentAdmin || pendingWrite || !datesInOrder(form)) return;
       const email = form.elements.email.value.trim();
       const start = form.elements.start.value;
       const end = form.elements.end.value;
-      if (end < start) {
-        feedback(form.querySelector('.subscription-feedback'), 'La fecha de fin debe ser igual o posterior a la de inicio.', 'error');
-        form.elements.end.focus();
-        return;
-      }
       const access = scope === 'full' ? 'acceso completo' : 'acceso solo a videos';
       const dates = 'del ' + formatDate(start) + ' al ' + formatDate(end);
       confirmChange('Confirmar activación', 'Guardar ' + access + ' para ' + email + ' ' + dates +
-        '. Se reemplazarán las fechas anteriores de este acceso.', 'Confirmar activación', () => {
-        save(form, 'campus_admin_save_subscription', {
-          p_email: email, p_scope: scope, p_start: start, p_end: end,
-        }, result => (result?.status === 'scheduled' ? 'Acceso programado' :
-          result?.status === 'expired' ? 'Período vencido guardado' : 'Acceso activado') +
-          ' para ' + email + ' ' + dates + '.');
-      });
+        '. Se reemplazarán las fechas anteriores de este acceso.', 'Confirmar activación',
+        () => saveSubscription(form, email, scope, start, end));
     });
   }
 
@@ -247,6 +296,10 @@ window.AdminSubscriptions = (() => {
     pendingWrite = null;
     confirmedAction = null;
     if (dialog.open) dialog.close();
+    reactivationTarget = null;
+    if (reactivate.open) reactivate.close();
+    reactivateStudent.textContent = '';
+    reactivateForm.reset();
     setSaving(false);
     rows = null;
     table.replaceChildren();

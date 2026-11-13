@@ -8,7 +8,7 @@
     <script defer src="/assets/vendor/supabase.js?v=2.118.0"></script>
     <link href="/assets/mindmaps/fonts/outfit.css?v=3" rel="stylesheet">
     <link rel="stylesheet" href="/assets/vendor/font-awesome-6.4.0/css/all.min.css" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="admin.css?v=3">
+    <link rel="stylesheet" href="admin.css?v=4">
     <link rel="stylesheet" href="admin-topic-results.css?v=5">
 </head>
 <body>
@@ -506,7 +506,23 @@
     </form>
 </dialog>
 
+<dialog id="subscription-reactivate" class="subscription-confirm" aria-labelledby="subscription-reactivate-title" aria-describedby="subscription-reactivate-student">
+    <form method="dialog">
+        <h2 id="subscription-reactivate-title">Agregar suscripción</h2>
+        <p id="subscription-reactivate-student"></p>
+        <div class="subscription-fields subscription-reactivate-dates">
+            <label>Fecha de inicio <input name="start" type="date" max="9999-12-30" required></label>
+            <label>Fecha de finalización <input name="end" type="date" max="9999-12-30" required autofocus></label>
+        </div>
+        <p class="subscription-feedback" role="status"></p>
+        <div class="subscription-confirm-actions">
+            <button class="btn btn-secondary" type="button">Volver</button>
+            <button class="btn subscription-row-add" type="submit">Agregar acceso</button>
+        </div>
+    </form>
+</dialog>
+
 <script defer src="config.js"></script>
-<script defer src="admin.js?v=7"></script><script defer src="question-review.js?v=3"></script><script defer src="admin-topic-results.js?v=5"></script><script defer src="admin-subject-errors.js?v=1"></script><script defer src="admin-flashcard-topics.js?v=1"></script><script defer src="admin-section-tracking.js?v=5"></script><script defer src="membership-admin.js?v=6"></script>
+<script defer src="admin.js?v=7"></script><script defer src="question-review.js?v=3"></script><script defer src="admin-topic-results.js?v=5"></script><script defer src="admin-subject-errors.js?v=1"></script><script defer src="admin-flashcard-topics.js?v=1"></script><script defer src="admin-section-tracking.js?v=5"></script><script defer src="membership-admin.js?v=7"></script>
 </body>
 </html>
