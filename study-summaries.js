@@ -95,7 +95,7 @@
         detail.textContent = `${item.pages} páginas · PDF`;
         const button = document.createElement('button');
         button.type = 'button';
-        button.textContent = locked ? 'Ver planes →' : 'Leer PDF →';
+        button.textContent = locked ? 'Solicitar acceso →' : 'Leer PDF →';
         button.addEventListener('click', () => locked ? CampusAccess.unlock() : openSummary(item));
         body.append(label, title, detail, button);
         article.append(preview, body);

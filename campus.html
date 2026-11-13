@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex, nofollow">
     <title>AlcocerMed | Tu plataforma de estudio · Prepa Ben Carson</title>
-    <meta name="description" content="Flashcards, preguntas, simulacros y mapas mentales para tu preparación en Medicina. Accede a tu cuenta o descubre los planes de AlcocerMed.">
+    <meta name="description" content="Inicia sesión en AlcocerMed para acceder a tu material de estudio o inscríbete al curso por WhatsApp.">
     <meta name="theme-color" content="#ff8c00">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
@@ -34,9 +34,9 @@
     <script defer src="platform-polish.js?v=1"></script>
     <script defer src="config.js"></script>
     <script defer src="device_guard.js?v=12"></script>
-    <script defer src="campus-access.js?v=13"></script>
+    <script defer src="campus-access.js?v=14"></script>
     <script defer src="campus-preview-policy.js?v=1"></script>
-    <script defer src="campus-login.js?v=5"></script>
+    <script defer src="campus-login.js?v=6"></script>
 </head>
 
 <body class="login-active campus-shell">
@@ -81,14 +81,15 @@
                 <p class="login-subtitle">Ingresa a tu espacio de estudio.</p>
             </div>
 
-            <button type="button" class="campus-google" onclick="continueWithGoogle(this)"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M21.6 12.23c0-.71-.06-1.39-.18-2.05H12v3.88h5.38a4.6 4.6 0 0 1-2 3.02v2.51h3.24c1.9-1.75 2.98-4.32 2.98-7.36z"/><path fill="#34A853" d="M12 22c2.7 0 4.96-.9 6.62-2.41l-3.24-2.51c-.9.6-2.05.96-3.38.96-2.61 0-4.83-1.76-5.62-4.13H3.03v2.59A10 10 0 0 0 12 22z"/><path fill="#FBBC05" d="M6.38 13.91a6 6 0 0 1 0-3.82V7.5H3.03a10 10 0 0 0 0 9l3.35-2.59z"/><path fill="#EA4335" d="M12 5.96c1.47 0 2.79.5 3.83 1.5l2.87-2.88A9.64 9.64 0 0 0 12 2a10 10 0 0 0-8.97 5.5l3.35 2.59C7.17 7.72 9.39 5.96 12 5.96z"/></svg>Continuar con Google</button><p id="google-status" class="auth-status" role="status" aria-live="polite"></p><div class="auth-separator">o entra con tu correo</div><!-- Formulario -->
+            <button type="button" class="campus-google" onclick="continueWithGoogle(this)"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M21.6 12.23c0-.71-.06-1.39-.18-2.05H12v3.88h5.38a4.6 4.6 0 0 1-2 3.02v2.51h3.24c1.9-1.75 2.98-4.32 2.98-7.36z"/><path fill="#34A853" d="M12 22c2.7 0 4.96-.9 6.62-2.41l-3.24-2.51c-.9.6-2.05.96-3.38.96-2.61 0-4.83-1.76-5.62-4.13H3.03v2.59A10 10 0 0 0 12 22z"/><path fill="#FBBC05" d="M6.38 13.91a6 6 0 0 1 0-3.82V7.5H3.03a10 10 0 0 0 0 9l3.35-2.59z"/><path fill="#EA4335" d="M12 5.96c1.47 0 2.79.5 3.83 1.5l2.87-2.88A9.64 9.64 0 0 0 12 2a10 10 0 0 0-8.97 5.5l3.35 2.59C7.17 7.72 9.39 5.96 12 5.96z"/></svg>Continuar con Google</button><p id="google-status" class="auth-status" role="status" aria-live="polite"></p>
+            <div class="auth-separator">o entra con tu contraseña</div>
             <form id="login-form" class="login-form" onsubmit="handleLogin(event)">
                 <div class="login-field">
                     <label class="login-label" for="login-email">
-                        <svg class="login-icon" aria-hidden="true"><use href="#login-envelope"></use></svg> Correo electrónico
+                        <svg class="login-icon" aria-hidden="true"><use href="#login-envelope"></use></svg> Correo o usuario
                     </label>
-                    <input type="email" id="login-email" class="login-input" placeholder="tu@correo.com" required pattern="[^\s@]+@[^\s@]+\.[^\s@]+"
-                        autocomplete="email">
+                    <input type="text" id="login-email" class="login-input" placeholder="Correo o usuario asignado" required
+                        autocomplete="username" inputmode="email" autocapitalize="none" spellcheck="false">
                 </div>
 
                 <div class="login-field">
@@ -115,7 +116,7 @@
 
                 <!-- Botón -->
                 <button type="submit" class="login-btn" id="login-btn">
-                    <span id="login-btn-text"><svg class="login-icon" aria-hidden="true"><use href="#login-sign-in-alt"></use></svg> ingresar</span>
+                    <span id="login-btn-text"><svg class="login-icon" aria-hidden="true"><use href="#login-sign-in-alt"></use></svg> Iniciar sesión</span>
                     <span id="login-btn-loading" class="hidden">
                         <svg class="login-icon login-icon-spin" aria-hidden="true"><use href="#login-spinner"></use></svg> verificando...
                     </span>
@@ -123,7 +124,7 @@
             </form>
 
             <div class="login-assistance">
-                <a href="/planes">Quiero suscribirme</a>
+                <a href="https://wa.me/59177921731" target="_blank" rel="noopener noreferrer">Inscríbete al curso por WhatsApp</a>
                 <a href="https://wa.me/59173752688?text=Hola%2C%20necesito%20ayuda%20para%20ingresar%20a%20AlcocerMed" target="_blank" rel="noopener noreferrer">Necesito ayuda para ingresar</a>
             </div>
 
@@ -486,7 +487,7 @@
     </aside>
   </div>
   <div class="dashboard-columns"><div class="dashboard-main">
-<div id="free-account-banner" class="free-account-banner" hidden><small>TU CUENTA GRATUITA</small><h2>Tu muestra de estudio</h2><p>Practica con una selección de temas, un simulacro breve y preguntas de la última gestión.</p><a href="/planes?desde=campus#planes">Ver planes</a></div>
+<div id="free-account-banner" class="free-account-banner" hidden><small>TU CUENTA GRATUITA</small><h2>Tu muestra de estudio</h2><p>Practica con una selección de temas, un simulacro breve y preguntas de la última gestión.</p><a href="https://wa.me/59177921731" target="_blank" rel="noopener noreferrer">Inscríbete al curso por WhatsApp</a></div>
 
     <section class="dashboard-launch" aria-labelledby="dashboard-launch-title"><div class="dashboard-launch-heading"><div><span class="dashboard-eyebrow">TU ESPACIO DE ESTUDIO</span><h2 id="dashboard-launch-title">¿Qué vas a estudiar hoy?</h2></div></div>
       <div class="dashboard-activity-grid">
@@ -1680,12 +1681,22 @@
             <div class="mm-unlock-content">
                 <span class="mm-unlock-kicker">MAPA MENTAL</span>
                 <h2 id="mm-unlock-title">Mapa mental</h2>
-                <button type="button" class="mm-unlock-cta" onclick="confirmMmUnlock()">Desbloquea este contenido inscribiéndote a un plan <i class="fas fa-arrow-right" aria-hidden="true"></i></button>
+                <button type="button" class="mm-unlock-cta" onclick="confirmMmUnlock()">Solicitar acceso <i class="fas fa-arrow-right" aria-hidden="true"></i></button>
                 <button type="button" class="mm-unlock-later" onclick="closeMmUnlockDialog()">Seguir viendo mapas</button>
             </div>
         </div>
     </dialog>
 
+    <dialog id="campus-unlock" class="campus-dialog" aria-labelledby="campus-unlock-title">
+        <form method="dialog" class="campus-dialog-inner">
+            <header><h2 id="campus-unlock-title">Solicitar acceso</h2></header>
+            <p>Escríbenos por WhatsApp para inscribirte y acceder a este contenido.</p>
+            <footer>
+                <button type="submit" class="campus-secondary" autofocus>Volver</button>
+                <a class="campus-primary" href="https://wa.me/59177921731" target="_blank" rel="noopener noreferrer">Inscríbete al curso por WhatsApp</a>
+            </footer>
+        </form>
+    </dialog>
 
     <dialog class="campus-dialog" id="campus-mood-dialog" aria-labelledby="campus-mood-dialog-title">
         <form method="dialog" class="campus-dialog-inner">
@@ -1740,7 +1751,7 @@
         <script data-campus-assets="campus flashcard-deck" src="flashcard-workspace.js?v=20261109-foco"></script>
         <script data-campus-assets="calendar-pdf" src="study-calendar-pdf.js?v=2"></script>
         <script data-campus-assets="campus calendar" src="study-calendar.js?v=14"></script>
-        <script data-campus-assets="past-topics" src="past-exam-breakdown.js?v=11"></script>
+        <script data-campus-assets="past-topics" src="past-exam-breakdown.js?v=12"></script>
         <script data-campus-assets="campus-extra past evaluations entrance-attempt" src="past-exams.js?v=16"></script>
         <script data-campus-assets="entrance-attempt" src="simulation-scope.js?v=11"></script>
         <script data-campus-assets="entrance-attempt" src="simulacro-ingreso.js?v=15"></script>
@@ -1766,7 +1777,7 @@
         <script data-campus-assets="campus texts" src="official-texts.js?v=14"></script>
         <script data-campus-assets="practice" src="sufficiency-practice-content.js?v=2"></script>
         <script data-campus-assets="practice" src="sufficiency-practice.js?v=4"></script>
-        <script data-campus-assets="campus-extra summaries" src="study-summaries.js?v=20261112-muestra"></script>
+        <script data-campus-assets="campus-extra summaries" src="study-summaries.js?v=20261113-inscripcion"></script>
     </template>
 </body>
 

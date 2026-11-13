@@ -1,4 +1,4 @@
-const CACHE_NAME = 'alcocermed-main-v199-videoclases';
+const CACHE_NAME = 'alcocermed-main-v200-inscripcion';
 const APP_SHELL = [
     './student-results.js?v=11',
     './student-results.css?v=1',
@@ -8,8 +8,6 @@ const APP_SHELL = [
     './suficiencia.css?v=9',
     './campus',
     './campus.html',
-    './index.html',
-    './ventas.html',
     './assets/study-tools.svg',
     './assets/study-art/cards.webp',
     './assets/study-art/map.webp',
@@ -37,7 +35,7 @@ const APP_SHELL = [
     './platform-polish.js?v=1',
     './config.js',
     './device_guard.js?v=12',
-    './campus-access.js?v=13',
+    './campus-access.js?v=14',
     './campus-preview-policy.js?v=1',
     './official-flashcards.js?v=2',
     './study-depth.js?v=20',
@@ -47,7 +45,7 @@ const APP_SHELL = [
     './assets/fonts/outfit-900.woff2',
     './flashcard-workspace.js?v=20261109-foco',
     './script.js?v=20261113-videoclases',
-    './campus-login.js?v=5',
+    './campus-login.js?v=6',
     './campus-catalogs.js?v=2',
     './campus-exam-engine.js?v=3',
     './topic-evaluations.js?v=20261112-muestra',
@@ -84,7 +82,7 @@ const APP_SHELL = [
     './simulacro-library.js?v=11',
     './simulacro-library.css?v=7',
     './student-library.js?v=12',
-    './study-summaries.js?v=20261112-muestra',
+    './study-summaries.js?v=20261113-inscripcion',
     './summary-pdf-reader.js?v=10',
     './summary-pdf-reader.css?v=5',
     './campus-study-resources.css?v=8',
@@ -117,13 +115,13 @@ const APP_SHELL = [
     './sufficiency-practice-content.js?v=2',
     './sufficiency-practice.js?v=4',
     './past-exams.js?v=16',
-    './past-exam-breakdown.js?v=11',
+    './past-exam-breakdown.js?v=12',
     './past-exams.css?v=7',
     './content/past-exams/catalog.json?v=examenes-umss',
 ];
 
 const BOOTSTRAP = new Set([
-    './campus', './campus.html', './index.html', './ventas.html', './config.js',
+    './campus', './campus.html', './config.js',
     './styles.css', './campus-shell.css', './campus-login.js', './assets/calendar-icons.svg',
 ]);
 const staticUrls = new Set(APP_SHELL
@@ -177,7 +175,7 @@ self.addEventListener('fetch', function (event) {
                 return caches.match(request).then(function (cached) {
                     if (cached) return cached;
                     if (request.mode === 'navigate') {
-                        return caches.match(url.pathname === '/' || url.pathname === '/planes' ? './index.html' : './campus.html');
+                        return caches.match('./campus.html');
                     }
                     return undefined;
                 });

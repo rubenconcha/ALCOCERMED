@@ -19,7 +19,6 @@ const nodes = {
   'explorar-eval-list': { innerHTML: '', style: {} }
 };
 const h1 = { innerHTML: '' };
-const saved = new Map();
 const subjects = [
   { name: 'MORFOFUNCION', color: '#EF4444', emoji: 'M' },
   { name: 'BIOLOGIA CELULAR', color: '#3B82F6', emoji: 'BC' },
@@ -51,18 +50,12 @@ const context = vm.createContext({
   canAccessEvaluation: ev => ev.codigo.startsWith('DEMO'),
   adjustColor: () => '#A00000',
   escapeHtml: value => String(value).replace(/&/g, '&amp;').replace(/</g, '&lt;'),
-  sessionStorage: { setItem: (key, value) => saved.set(key, value) },
-  clearSelfSession: () => saved.delete('alcocer_quiz_code'),
-  navigateTo: (page, skipPush, replaceCurrent) => {
-    assert.equal(page, 'jugar');
-    assert.equal(skipPush, true);
-    assert.equal(replaceCurrent, true);
-  },
   Promise
 });
 
 vm.runInContext(functionSource('renderSubjectMissions', 'loadExploreSubjects'), context);
-vm.runInContext(functionSource('rememberSubjectPlanReturn', 'startSelfStudy'), context);
+vm.runInContext('var gameCatalogRows = null; var gameCatalogPromise = null; var gameSearchQuery = "";', context);
+vm.runInContext(functionSource('updateGameFilterContext', 'startSelfStudy'), context);
 context.renderSubjectMissions(nodes['explorar-subject-grid']);
 assert.equal((nodes['explorar-subject-grid'].innerHTML.match(/class="explorar-subject-card/g) || []).length, 3);
 
@@ -79,11 +72,9 @@ assert.equal((nodes['explorar-subject-grid'].innerHTML.match(/class="explorar-su
     assert.match(html, /startSelfStudy\('demo-id',1\)/, 'The original quiz engine opens the demo');
     assert.match(html, /JUGAR DEMO/);
     assert.match(html, /Tema completo/);
-    assert.match(html, /Desbloquear/);
-    assert.match(html, /href="\/planes\?desde=campus#planes"/);
+    assert.match(html, /Solicitar acceso por WhatsApp/);
+    assert.match(html, /href="https:\/\/wa\.me\/59177921731" target="_blank"/);
     assert.doesNotMatch(html, /Partida de muestra|Cinco preguntas más|startSubjectMiniGame/);
-    context.rememberSubjectPlanReturn(subject.name);
-    assert.deepEqual(JSON.parse(saved.get('alcocer_plan_return')), { screen: 'juegos', subject: subject.name });
   }
 
   rows = [];

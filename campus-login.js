@@ -271,11 +271,13 @@ window.handleLogin = async function (e) {
     if (campusSigningOut) return;
     hideLoginError();
 
-    var email = document.getElementById('login-email').value.trim();
-    var password = document.getElementById('login-password').value;
+    const identifier = document.getElementById('login-email').value.trim();
+    const password = document.getElementById('login-password').value;
 
-    if (!email || !password) { showLoginError('completa todos los campos'); return; }
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { showLoginError('formato de correo inválido'); return; }
+    if (!identifier || !password) { showLoginError('completa todos los campos'); return; }
+    // Las cuentas asignadas por la prepa usan el dominio prepa.com.
+    const email = /^[a-z0-9][a-z0-9._-]*$/i.test(identifier) ? identifier.toLowerCase() + '@prepa.com' : identifier;
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { showLoginError('escribe tu correo completo o tu usuario asignado'); return; }
     if (password.length < 6) { showLoginError('la contraseña debe tener al menos 6 caracteres'); return; }
 
     setLoginLoading(true);
@@ -286,8 +288,8 @@ window.handleLogin = async function (e) {
         var result = await client.auth.signInWithPassword({ email: email, password: password });
 
         if (result.error) {
-            var msg = 'credenciales incorrectas. verifica tu correo y contraseña.';
-            if (result.error.message.indexOf('Invalid login') !== -1) msg = 'correo o contraseña incorrectos.';
+            var msg = 'verifica tu correo o usuario y tu contraseña.';
+            if (result.error.message.indexOf('Invalid login') !== -1) msg = 'los datos de ingreso son incorrectos.';
             else if (result.error.message.indexOf('Email not confirmed') !== -1) msg = 'confirma tu correo antes de ingresar.';
             else if (result.error.message.indexOf('Too many requests') !== -1) msg = 'demasiados intentos. espera unos minutos.';
             showLoginError(msg);

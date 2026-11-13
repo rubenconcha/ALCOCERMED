@@ -12,26 +12,6 @@ function storage(initial = {}) {
   };
 }
 
-test('al elegir un plan desde mapas se recuerda materia, búsqueda y posición', () => {
-  const sessionStorage = storage();
-  const elements = {
-    'intocables-screen': { classList: { contains: () => false } },
-    'mm-search-input': { value: 'mitocondrias' }
-  };
-  const window = {
-    location: { href: '' },
-    mmState: { currentTab: 'mapas', selectedMateria: 'Biología Celular' },
-    scrollY: 420
-  };
-  const context = { window, sessionStorage, document: { getElementById: id => elements[id] } };
-  vm.runInNewContext(fs.readFileSync('campus-access.js', 'utf8'), context);
-  window.CampusAccess.unlock();
-  assert.equal(window.location.href, '/planes?desde=campus');
-  assert.deepEqual(JSON.parse(sessionStorage.getItem('alcocer_plan_return')), {
-    screen: 'mapas', materia: 'Biología Celular', tema: null, search: 'mitocondrias', scrollY: 420
-  });
-});
-
 test('el enlace de planes dice volver a mapas mentales cuando corresponde', async () => {
   const sessionStorage = storage({ alcocer_plan_return: JSON.stringify({ screen: 'mapas' }) });
   const backLink = { href: '/', textContent: '', setAttribute(name, value) { this[name] = value; } };

@@ -235,8 +235,8 @@ window.createPastExamBreakdown = function (request, scope) {
             const count = data.requested ? data.count : data.available;
             if (total) total.textContent = count + (count === 1 ? ' pregunta' : ' preguntas') + (data.requested ? '' : ' disponibles');
             if (data.locked) {
-                empty('Gestión reservada', 'Elige una gestión disponible o consulta los planes para practicar esta selección.',
-                    'Consultar planes', () => CampusAccess.unlock());
+                empty('Gestión reservada', 'Elige una gestión disponible o solicita acceso para practicar esta selección.',
+                    'Solicitar acceso', () => CampusAccess.unlock());
             } else if (!data.requested) {
                 empty('Elige qué quieres practicar', 'Selecciona la gestión, el parcial, una materia o un tema. También puedes buscar por texto.',
                     'Ver todas las preguntas disponibles', () => { showAll = true; load(); });

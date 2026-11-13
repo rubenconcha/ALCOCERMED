@@ -1232,7 +1232,7 @@ function enterApp() {
             if (paid !== true) {
                 DEMO_ACCESS_ONLY = true;
                 showLogin();
-                showLoginError(paid === false ? 'Juegos está disponible con un plan activo.' : 'No pudimos comprobar tu plan. Vuelve a intentarlo.');
+                showLoginError(paid === false ? 'Juegos está disponible con una inscripción activa.' : 'No pudimos comprobar tu acceso. Vuelve a intentarlo.');
                 document.getElementById('game-plan-link').hidden = paid !== false;
                 return;
             }
@@ -3475,15 +3475,6 @@ function updateShowcasePodium(entries) {
     }
 }
 
-function rememberSubjectPlanReturn(subject) {
-    clearSelfSession();
-    quizData = null;
-    // Si el navegador vuelve desde planes, también debe encontrar Juegos en el historial.
-    navigateTo('jugar', true, true);
-    try { sessionStorage.setItem('alcocer_plan_return', JSON.stringify({ screen: 'juegos', subject: subject })); }
-    catch (e) { /* El enlace a planes sigue funcionando sin almacenamiento. */ }
-}
-
 var gameCatalogRows = null;
 var gameCatalogPromise = null;
 var gameSearchQuery = '';
@@ -3595,7 +3586,7 @@ function loadSubjectEvaluations(subject) {
                 if (isLocked) html += '<span class="locked-access-badge"><i class="fas fa-lock"></i> BLOQUEADO</span>';
                 html += '</div></div>';
                 if (isLocked) {
-                    html += '<a class="explorar-btn-study explorar-btn-locked" href="/planes?desde=campus#planes" onclick="rememberSubjectPlanReturn(\'' + subject + '\')" style="font-size:0.82rem;padding:12px 18px;border-radius:16px;font-weight:800;letter-spacing:0.02em;max-width:220px;line-height:1.25"><i class="fas fa-lock"></i> Desbloquear</a>';
+                    html += '<a class="explorar-btn-study explorar-btn-locked" href="https://wa.me/59177921731" target="_blank" rel="noopener noreferrer" style="font-size:0.82rem;padding:12px 18px;border-radius:16px;font-weight:800;letter-spacing:0.02em;max-width:220px;line-height:1.25"><i class="fas fa-lock"></i> Solicitar acceso por WhatsApp</a>';
                 } else {
                     var round = GameRounds.existingRound(ev);
                     html += '<div class="game-round-actions">';

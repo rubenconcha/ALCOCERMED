@@ -4,7 +4,7 @@ const fs = require('node:fs');
 const vm = require('node:vm');
 
 function worker(file) {
-  const events = {}, writes = [], deleted = [];
+  const events = {}, writes = [], deleted = [], matches = [];
   let response = { ok: true, status: 200, type: 'basic', headers: { get: () => '' }, clone: () => ({}) };
   const context = {
     self: { location: { origin: 'https://alcocermed.com' }, addEventListener: (name, fn) => { events[name] = fn; }, skipWaiting() {}, clients: { claim() {} } },
@@ -12,12 +12,18 @@ function worker(file) {
       keys: async () => ['alcocermed-main-old', 'alcocermed-juegos-old', 'another-app'],
       delete: async key => { deleted.push(key); },
       open: async () => ({ put: async req => { writes.push(req.url); } }),
-      match: async () => undefined
+      match: async key => {
+        matches.push(key);
+        return key === './campus.html' ? { campus: true } : undefined;
+      }
     },
-    fetch: async () => response, URL
+    fetch: async () => {
+      if (!response) throw new Error('offline');
+      return response;
+    }, URL
   };
   vm.runInNewContext(fs.readFileSync(file, 'utf8'), context);
-  return { events, writes, deleted, response: value => { response = value; } };
+  return { events, writes, deleted, matches, response: value => { response = value; } };
 }
 
 for (const [file, prefix] of [['sw.js', 'alcocermed-main-'], ['juegos/sw.js', 'alcocermed-juegos-']]) {
@@ -191,17 +197,18 @@ test('volver a Juegos conserva la partida y un cambio de sesión vuelve a verifi
   assert.equal(entries, 1);
 });
 
-test('desbloquear desde Resúmenes recuerda esa sección', () => {
-  let saved;
-  const context = {
-    currentCampusScreen: 'resumenes-screen',
-    window: { location: {} }, document: { getElementById: () => null },
-    sessionStorage: { setItem: (key, value) => { saved = JSON.parse(value); } }
-  };
-  vm.runInNewContext(fs.readFileSync('campus-access.js', 'utf8'), context);
-  context.window.CampusAccess.unlock();
-  assert.equal(saved.screen, 'resumenes-screen');
-  assert.equal(context.window.location.href, '/planes?desde=campus');
+test('sin conexión, el inicio y los enlaces antiguos a planes usan la pantalla de ingreso', async () => {
+  const w = worker('sw.js');
+  w.response(null);
+  for (const path of ['/', '/planes?desde=campus']) {
+    let completion;
+    w.events.fetch({
+      request: { url: 'https://alcocermed.com' + path, method: 'GET', mode: 'navigate' },
+      respondWith: promise => { completion = promise; }
+    });
+    assert.deepEqual(await completion, { campus: true });
+  }
+  assert.deepEqual(w.matches.filter(key => typeof key === 'string'), ['./campus.html', './campus.html']);
 });
 
 test('volver desde planes a Resúmenes abre el listado, sin enviarlo al inicio', async () => {

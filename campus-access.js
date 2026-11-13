@@ -14,22 +14,9 @@ window.CampusAccess = (() => {
         return !['study-calendar-screen', 'game-quiz', 'game-hangman'].includes(screen) || !isFree();
     }
     function unlock() {
-        try {
-            const mapsScreen = document.getElementById('intocables-screen');
-            const viewingMaps = mapsScreen && !mapsScreen.classList.contains('hidden') &&
-                (!window.mmState || window.mmState.currentTab === 'mapas');
-            const state = viewingMaps ? {
-                screen: 'mapas',
-                materia: window.mmState?.selectedMateria || null,
-                tema: window.mmState?.selectedTema || null,
-                search: document.getElementById('mm-search-input')?.value || '',
-                scrollY: window.scrollY || 0
-            } : { screen: typeof currentCampusScreen === 'string'
-                ? ({'study-area': 'study-library', 'game-quiz': 'resource-browser', 'game-hangman': 'resource-browser'}[currentCampusScreen] || currentCampusScreen)
-                : 'inicio' };
-            sessionStorage.setItem('alcocer_plan_return', JSON.stringify(state));
-        } catch (_) { /* La navegación al plan debe funcionar aunque el navegador limite el almacenamiento. */ }
-        window.location.href = '/planes?desde=campus';
+        const dialog = document.getElementById('campus-unlock');
+        if (!dialog) return;
+        if (!dialog.open) dialog.showModal();
     }
     async function check(client) {
         const { data, error } = await client.rpc('campus_access');
@@ -90,7 +77,7 @@ window.continueWithGoogle = async function(button) {
         const response=await fetch(SUPABASE_URL+'/auth/v1/settings',{headers:{apikey:SUPABASE_KEY}});
         if(!response.ok) throw new Error('No pudimos conectar. Intenta de nuevo.');
         const settings=await response.json();
-        if(!settings.external?.google) throw new Error('Google todavía no está habilitado. Puedes registrarte con tu correo y contraseña.');
+        if(!settings.external?.google) throw new Error('Google todavía no está habilitado. Entra con tu correo o usuario y contraseña.');
         const {error}=await client.auth.signInWithOAuth({provider:'google',options:{redirectTo:location.origin+'/campus',queryParams:{prompt:'select_account'}}});
         if(error) throw error;
     } catch(error) { output.textContent=error.message; button.disabled=false; }

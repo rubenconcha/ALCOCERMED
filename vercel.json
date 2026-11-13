@@ -244,10 +244,6 @@
       "destination": "/api/past-exam?id=invalid"
     },
     {
-      "source": "/",
-      "destination": "/ventas.html"
-    },
-    {
       "source": "/campus",
       "destination": "/campus.html"
     },
@@ -258,14 +254,6 @@
     {
       "source": "/registro",
       "destination": "/registro.html"
-    },
-    {
-      "source": "/planes",
-      "destination": "/ventas.html"
-    },
-    {
-      "source": "/propedeutico",
-      "destination": "/ventas.html"
     },
     {
       "source": "/admin",
@@ -281,6 +269,31 @@
     }
   ],
   "redirects": [
+    {
+      "source": "/",
+      "destination": "/campus",
+      "permanent": false
+    },
+    {
+      "source": "/planes",
+      "destination": "/campus",
+      "permanent": false
+    },
+    {
+      "source": "/propedeutico",
+      "destination": "/campus",
+      "permanent": false
+    },
+    {
+      "source": "/index.html",
+      "destination": "/campus",
+      "permanent": false
+    },
+    {
+      "source": "/ventas.html",
+      "destination": "/campus",
+      "permanent": false
+    },
     {
       "source": "/musculos-interactivos.html",
       "destination": "/atlas-anatomico",
