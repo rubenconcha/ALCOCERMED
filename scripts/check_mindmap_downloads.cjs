@@ -10,13 +10,13 @@ const campus=fs.readFileSync(path.join(root,'campus.html'),'utf8'),markup=campus
 (async()=>{const browser=await p.launch({executablePath:process.env.MINDMAP_CHROME||'C:/Program Files/Google/Chrome/Application/chrome.exe',headless:true,args:['--no-sandbox']});try{
  const page=await browser.newPage(),errors=[];page.on('pageerror',e=>errors.push(e.message));await page.setRequestInterception(true);
  page.on('request',r=>{
-  const pathname=new URL(r.url()).pathname;
+  const url=new URL(r.url()),pathname=url.pathname;
   if(pathname==='/qa-downloads')return r.respond({contentType:'text/html',body:`<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="/assets/mindmaps/fonts/outfit.css"><link rel="stylesheet" href="/mindmap-viewer.css"></head><body>${markup}<script>window.CampusAccess={isFree:()=>false};</script><script src="/mindmap-branch-labels.js"></script><script src="/mindmap-content.js"></script><script src="/mindmap-detailed-content.js"></script><script src="/mindmap-download.js"></script><script src="/mindmap-viewer.js"></script></body></html>`});
-  if(pathname==='/mindmap-detailed-content.js'||pathname.startsWith('/assets/mindmaps/complete/')){
-   const contentType=pathname.endsWith('.png')?'image/png':'application/javascript';
-   return r.respond({contentType,body:fs.readFileSync(path.join(root,pathname))});
-  }
-  return r.continue();
+  if(url.origin!==new URL(base).origin)return r.abort();
+  const asset=path.resolve(root,'.'+decodeURIComponent(pathname));
+  if(!asset.startsWith(root+path.sep)||!fs.existsSync(asset)||!fs.statSync(asset).isFile())return r.respond({status:404,body:''});
+  const types={'.js':'application/javascript','.css':'text/css','.png':'image/png','.webp':'image/webp','.woff2':'font/woff2','.ttf':'font/ttf'};
+  return r.respond({contentType:types[path.extname(asset)]||'application/octet-stream',body:fs.readFileSync(asset)});
  });
  await page.setViewport({width:1440,height:1000});await page.goto(base+'/qa-downloads');
  await page.waitForFunction(()=>window.MINDMAP_CONTENT&&window.MINDMAP_ASSETS&&window.MindmapDownload&&window.openMmLightbox);
