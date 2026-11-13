@@ -1,4 +1,4 @@
-const CACHE_NAME = 'alcocermed-main-v197-mapas';
+const CACHE_NAME = 'alcocermed-main-v198-mapas';
 const APP_SHELL = [
     './student-results.js?v=11',
     './student-results.css?v=1',
@@ -58,7 +58,8 @@ const APP_SHELL = [
     './mindmap-branch-labels.js?v=20261021-visual5b',
     './mindmap-content.js?v=3',
     './mindmap-premium-catalog.js?v=20261021-visual5b',
-    './mindmap-download.js?v=1',
+    './mindmap-download.js?v=2',
+    './assets/mindmaps/encefalo/logo.webp',
     './mindmap-premium.js?v=4',
     './mindmap-detailed-content.js?v=20261021-visual5b',
     './mindmap-practice.js?v=20261021-visual5b',

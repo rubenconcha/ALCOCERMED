@@ -30,16 +30,24 @@ const campus=fs.readFileSync(path.join(root,'campus.html'),'utf8'),markup=campus
   const result=fs.readFileSync(file),original=fs.readFileSync(path.join(root,a.download.split('?')[0]));
   const width=original.readUInt32BE(16),height=original.readUInt32BE(20);
   assert.equal(result.readUInt32BE(16),width,key);
-  assert.equal(result.readUInt32BE(20),height+2*Math.round(width*.018),key);
+  assert.equal(result.readUInt32BE(20),height+3*Math.round(width*.018),key);
   const footer=await page.evaluate(async (data,height)=>{
    const image=new Image();image.src='data:image/png;base64,'+data;await image.decode();
    const canvas=document.createElement('canvas');canvas.width=image.width;canvas.height=image.height-height;
    const context=canvas.getContext('2d');context.drawImage(image,0,-height);
    const pixels=context.getImageData(0,0,canvas.width,canvas.height).data;
-   return pixels.some((value,i)=>i%4===0&&value===65&&pixels[i+1]===97&&pixels[i+2]===131);
+   let text=0,red=0,blue=0,gold=0;
+   for(let i=0;i<pixels.length;i+=4){
+    const r=pixels[i],g=pixels[i+1],b=pixels[i+2];
+    if(r===65&&g===97&&b===131)text++;
+    if(r>190&&g<60&&b<75)red++;
+    if(r<75&&g>50&&g<125&&b>135)blue++;
+    if(r>230&&g>160&&g<230&&b<140)gold++;
+   }
+   return {text,red,blue,gold};
   },result.toString('base64'),height);
-  assert.equal(footer,true,key);
-  console.log('Downloaded full map with readable footer: '+key);
+  assert.ok(Object.values(footer).every(count=>count>20),JSON.stringify({key,footer}));
+  console.log('Downloaded full map with the school logo and readable footer: '+key);
  }
  assert.deepEqual(errors,[]);
 }finally{await browser.close()}})().catch(e=>{console.error(e);process.exit(1)});
