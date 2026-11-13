@@ -5,3 +5,21 @@ test('verified current subscription unlocks resources',async()=>{const t=setup({
 test('access errors never unlock a new account',async()=>{const t=setup({error:{message:'offline'}});await assert.rejects(t.access.resolve(t.client));assert.ok(t.access.isFree())});
 test('locked content goes to plans',()=>{const t=setup({});t.access.unlock();assert.equal(t.location.href,'/planes?desde=campus')});
 test('signup does not claim a paid role; Google requests account selection',()=>{const s=fs.readFileSync('registration.js','utf8');assert.doesNotMatch(s,/premium\s*:|role\s*:/);assert.match(fs.readFileSync('campus-access.js','utf8'),/prompt:'select_account'/)});
+
+test('a videos-only entitlement opens videoclases while full campus features stay restricted', async () => {
+  const t = setup({ data: { ready: true, premium: false, atlas: false, videos: true } });
+  await t.access.resolve(t.client);
+  assert.equal(t.access.permits('videoclases-screen'), true);
+  assert.equal(t.access.isFree(), true);
+  for (const screen of ['atlas-screen', 'game-quiz', 'game-hangman', 'study-calendar-screen']) {
+    assert.equal(t.access.permits(screen), false);
+  }
+  assert.equal(await t.access.refresh({ rpc: async () => ({
+    data: { ready: true, premium: false, atlas: false, videos: false },
+  }) }, () => false), false);
+  assert.equal(t.access.permits('videoclases-screen'), true);
+  await t.access.refresh({ rpc: async () => ({
+    data: { ready: true, premium: false, atlas: false, videos: false },
+  }) }, () => true);
+  assert.equal(t.access.permits('videoclases-screen'), false);
+});

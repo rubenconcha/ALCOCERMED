@@ -4,11 +4,15 @@ window.CampusAccess = (() => {
     let catalogPromise;
     const isFree = () => !state.premium;
     const canUseAtlas = () => state.atlas ?? Boolean(state.premium);
+    const canUseVideos = () => state.videos ?? Boolean(state.premium);
     function updateAtlasLinks() {
         document.querySelectorAll('[data-atlas-access]').forEach(el => { el.hidden = !canUseAtlas(); });
     }
-    const permits = screen => screen === 'atlas-screen' ? canUseAtlas()
-        : !['study-calendar-screen', 'game-quiz', 'game-hangman'].includes(screen) || !isFree();
+    function permits(screen) {
+        if (screen === 'atlas-screen') return canUseAtlas();
+        if (screen === 'videoclases-screen') return canUseVideos();
+        return !['study-calendar-screen', 'game-quiz', 'game-hangman'].includes(screen) || !isFree();
+    }
     function unlock() {
         try {
             const mapsScreen = document.getElementById('intocables-screen');
@@ -36,8 +40,11 @@ window.CampusAccess = (() => {
         state = access;
         catalogPromise = null;
         document.body.classList.toggle('campus-free', Boolean(isFree()));
-        document.getElementById('free-account-banner').hidden = !isFree();
-        document.querySelectorAll('[data-premium-label]').forEach(el => { el.hidden = !isFree(); });
+        const banner = document.getElementById('free-account-banner');
+        banner.hidden = !isFree();
+        const accessLabel = banner.querySelector?.('small');
+        if (accessLabel) accessLabel.textContent = canUseVideos() ? 'TUS VIDEOCLASES ESTÁN ACTIVAS' : 'TU CUENTA GRATUITA';
+        document.querySelectorAll('[data-premium-label]').forEach(el => { el.hidden = canUseVideos(); });
         document.querySelectorAll('[data-premium-only]').forEach(el => { el.hidden = isFree(); });
         updateAtlasLinks();
         document.querySelectorAll('[data-free-lock]').forEach(el => { el.hidden = !isFree(); });
@@ -59,7 +66,15 @@ window.CampusAccess = (() => {
         return catalogPromise;
     }
     async function resolve(client) { return apply(await check(client)); }
-    return { check, apply, resolve, isFree, permits, unlock, catalog };
+
+    async function refresh(client, isCurrent) {
+        const access = await check(client);
+        if (!isCurrent()) return false;
+        if (['ready', 'premium', 'atlas', 'videos', 'expires_at'].some(key => access[key] !== state[key])) apply(access);
+        return true;
+    }
+
+    return { check, apply, resolve, refresh, isFree, canUseVideos, permits, unlock, catalog };
 })();
 
 window.continueWithGoogle = async function(button) {

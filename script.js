@@ -3260,6 +3260,7 @@ var vcState = {
     filteredVideos: [],
     selectedMateria: null,
     catalog: null,
+    playRequest: 0,
     stopMeasurement: null
 };
 
@@ -3324,6 +3325,7 @@ function measureVideoPlayback(frame, url) {
 }
 
 function clearVideoclases() {
+    ++vcState.playRequest;
     const modal = document.getElementById('vc-modal');
     if (modal && !modal.classList.contains('hidden')) window.closeVcModal();
     vcState.catalog = null;
@@ -3336,11 +3338,32 @@ function clearVideoclases() {
 }
 
 window.addEventListener('campus-access-change', () => {
-    if (CampusAccess.isFree()) clearVideoclases();
+    if (CampusAccess.canUseVideos()) return;
+    clearVideoclases();
+    if (currentCampusScreen === 'videoclases-screen') {
+        showScreen('home-screen', true);
+        showToast('Tu acceso a las videoclases ya no está activo.', 'error');
+    }
 });
 
-window.openVideoclases = function () {
-    if (CampusAccess.isFree()) return CampusAccess.unlock();
+async function verifyVideoclasesAccess(sameVisit) {
+    const owner = currentUser?.id;
+    const session = currentCampusSessionId;
+    const isCurrent = () => currentUser?.id === owner && currentCampusSessionId === session && sameVisit();
+    if (!owner) return false;
+    try {
+        if (!await CampusAccess.refresh(getSupabase(), isCurrent) || !isCurrent()) return false;
+        if (CampusAccess.canUseVideos()) return true;
+        CampusAccess.unlock();
+    } catch (error) {
+        if (isCurrent()) showToast(error.message || 'No pudimos verificar tu acceso a las videoclases.', 'error');
+    }
+    return false;
+}
+
+window.openVideoclases = async function () {
+    const visit = window.campusNavigationRequest;
+    if (!await verifyVideoclasesAccess(() => window.campusNavigationRequest === visit)) return;
     if (showScreen('videoclases-screen') === false) return;
     closeMobileSidebar();
     loadVideoclases();
@@ -3349,7 +3372,7 @@ window.openVideoclases = function () {
 async function loadVideoclases() {
     const start = performance.now();
     const owner = currentUser?.id;
-    if (!owner || CampusAccess.isFree()) return;
+    if (!owner || !CampusAccess.canUseVideos()) return;
     const cached = vcState.catalog;
     if (cached?.owner === owner && (!cached.expires || cached.expires > Date.now())) {
         if (cached.expires) measureVideoLoad('catalogo-cache', start);
@@ -3362,7 +3385,7 @@ async function loadVideoclases() {
     if (!vcState.allVideos.length) setVcState('pending');
     try {
         const res = await getSupabase().from('videoclases').select('*').order('MATERIA', { ascending: true });
-        if (request !== vcState.catalog || currentUser?.id !== owner || CampusAccess.isFree()) return;
+        if (request !== vcState.catalog || currentUser?.id !== owner || !CampusAccess.canUseVideos()) return;
         if (res.error) throw res.error;
         vcState.allVideos = res.data || [];
         populateVcMaterias();
@@ -3371,7 +3394,7 @@ async function loadVideoclases() {
         warmVideoPlayer();
         request.expires = Date.now() + 60_000;
     } catch (e) {
-        if (request !== vcState.catalog || currentUser?.id !== owner || CampusAccess.isFree()) return;
+        if (request !== vcState.catalog || currentUser?.id !== owner || !CampusAccess.canUseVideos()) return;
         vcState.catalog = null;
         if (!vcState.allVideos.length) setVcState('error');
         console.warn('[Videoclases] Error:', e.message);
@@ -3498,8 +3521,11 @@ function getEmbedUrl(url) {
 // Alias para retrocompatibilidad
 var getYtEmbedUrl = getEmbedUrl;
 
-window.openVcModal = function (v) {
-    if (CampusAccess.isFree()) return;
+window.openVcModal = async function (v) {
+    const visit = window.campusNavigationRequest;
+    const playback = ++vcState.playRequest;
+    if (!await verifyVideoclasesAccess(() => currentCampusScreen === 'videoclases-screen' &&
+        window.campusNavigationRequest === visit && playback === vcState.playRequest)) return;
     var modal = document.getElementById('vc-modal');
     if (!modal) return;
     document.getElementById('vc-modal-title').textContent = campo(v, 'titulo') || '';

@@ -98,6 +98,7 @@ async function adminLogout() {
   }
   currentAdmin = null;
   window.QuestionReview?.clear(); window.AdminTopicResults?.clear(); window.AdminSectionTracking?.clear();
+  window.AdminSubscriptions?.clear();
   cachedData = { devices: [], sims: [], banco: [], videos: [], estudiantes: [], userMap: {}, errors: [] };
   document.getElementById('admin-login-screen').classList.remove('hidden');
   document.getElementById('admin-app').style.display = 'none';
@@ -136,6 +137,7 @@ function showAdminApp() {
 const SECTION_TITLES = {
   dashboard: ['dashboard', 'resumen general de la plataforma'],
   estudiantes: ['estudiantes', 'seguimiento individual de cada alumno'],
+  suscripciones: ['suscripciones', 'consulta las fechas y el estado de cada acceso'],
   simulacros: ['historial de resultados', 'resultados y rendimiento de exámenes'],
   evaluaciones: ['evaluaciones', 'seguimiento por tema y por estudiante'],
   videoclases: ['videoclases', 'tracking de visualización de contenido'],
@@ -154,6 +156,7 @@ function showSection(id) {
   const [title, subtitle] = SECTION_TITLES[id] || [id, ''];
   setText('page-title', title);
   setText('page-subtitle', subtitle);
+  document.querySelector('.content-scroll')?.scrollTo(0, 0);
 
   renderCurrentSection(id);
 }
@@ -178,6 +181,7 @@ async function refreshAdminData() {
 function renderCurrentSection(section) {
   if (section === 'dashboard') renderDashboard();
   else if (section === 'estudiantes') renderEstudiantes(cachedData.estudiantes);
+  else if (section === 'suscripciones') window.AdminSubscriptions?.load();
   else if (section === 'simulacros') renderSimulacros(cachedData.sims);
   else if (section === 'evaluaciones') { renderEvaluaciones(cachedData.banco); window.AdminTopicResults?.render(); window.AdminSectionTracking?.render(); }
   else if (section === 'videoclases') renderVideoclases(cachedData.videos);
