@@ -21,16 +21,28 @@
    ids.add(q.id);stems.add(stem);return true;
   });
  }
- function validateWeek3(paper, scope){
+ function validateVirtualWeekly(paper, scope, prefix){
   if(paper?.id!==scope||paper.scope!==scope||paper.duration!==50||paper.total_points!==50||paper.questions?.length!==50)return false;
   return paper.questions.every((q,i)=>{
    const n=i+1, count=n<=30?3:2, letters=count===3?'ABCDE':'ABCD';
    const biology=(n>=21&&n<=30)||n>=41, subject=biology?'BIOLOGIA CELULAR':'MORFOFUNCION';
    const statements=Array.from(String(q.pregunta||'').matchAll(/^([123])\. .+/gm),match=>Number(match[1]));
-   return q.id===`semana3-virtual-${n}`&&q.numero_pregunta===n&&q.numero_original===n&&q.materia===subject&&Boolean(q.tema)&&q.puntos===1&&
+   return q.id===`${prefix}-${n}`&&q.numero_pregunta===n&&q.numero_original===n&&q.materia===subject&&Boolean(q.tema)&&q.puntos===1&&
     statements.length===count&&statements.every((number,j)=>number===j+1)&&
     [...letters].every(l=>Boolean(q['opcion_'+l.toLowerCase()]))&&(count===3||!q.opcion_e)&&
     [...letters].includes(q.respuesta_correcta)&&q.respuestas_aceptadas?.length===1&&q.respuestas_aceptadas[0]===q.respuesta_correcta;
+  });
+ }
+ function validateWeek4(paper, scope){
+  if(!validateVirtualWeekly(paper,scope,'semana4-virtual'))return false;
+  return paper.questions.every((q,i)=>{
+   const count=i<30?3:2;
+   const options=count===3?['1 es correcto','2 es correcto','3 es correcto','Todos son correctos','Ninguno es correcto']:['1 es correcto','2 es correcto','Ambos son correctos','Ninguno es correcto'];
+   const combinations=count===3?['100','010','001','111','000']:['10','01','11','00'];
+   if(i===29){options[3]='2 y 3 son correctos';combinations[3]='011';}
+   return Array.isArray(q.truth_values)&&q.truth_values.length===count&&q.truth_values.every(v=>typeof v==='boolean')&&
+    options.every((text,j)=>q['opcion_'+'abcde'[j]]===text)&&
+    combinations['ABCDE'.indexOf(q.respuesta_correcta)]===q.truth_values.map(Number).join('');
   });
  }
  function isAssertionQuestion(q){
@@ -87,7 +99,8 @@
  function validate(paper,scope,format){
   if(scope==='prepa')return validatePrepa(paper,format);
   if(scope==='semana2-testb-virtual')return validateWeek2(paper);
-  if(scope==='semana3-grupo-virtual-2')return validateWeek3(paper,scope);
+  if(scope==='semana3-grupo-virtual-2')return validateVirtualWeekly(paper,scope,'semana3-virtual');
+  if(scope==='semana4-grupo-virtual-2')return validateWeek4(paper,scope);
   const mini=scope==='mini-foundations',total=mini?50:100;
   const rule=rules[scope];if(!rule||paper.scope!==scope||paper.duration!==total||paper.questions?.length!==total)return false;
   if(mini&&(paper.questions.filter(q=>q.coverage?.subject==='MORFOFUNCION'&&q.coverage.chapter===1).length!==15||paper.questions.filter(q=>q.coverage?.subject==='MORFOFUNCION'&&q.coverage.chapter===8).length!==15))return false;

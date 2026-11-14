@@ -30,7 +30,7 @@ function updateSimTimerDisplay() {
 }
 
 function isWeeklySimQuestion(q) {
-    return /^semana(?:2-testb|3-virtual)-/.test(q.id || '');
+    return /^semana(?:2-testb|[34]-virtual)-/.test(q.id || '');
 }
 
 function renderSimQuestion() {

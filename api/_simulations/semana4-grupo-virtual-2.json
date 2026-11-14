@@ -1,0 +1,1224 @@
+{
+  "id": "semana4-grupo-virtual-2",
+  "scope": "semana4-grupo-virtual-2",
+  "title": "Simulacro Semana 4 – Grupo Virtual 2",
+  "duration": 50,
+  "total_points": 50,
+  "source": {
+    "file": "GRUPO VIRTUAL 2- EXAMEN SEMANA 4PATRON.docx",
+    "sha256": "059432eecf2c8ae68f0e003e81ffe1badefc315955581bcd2c16b41837997d07"
+  },
+  "questions": [
+    {
+      "id": "semana4-virtual-1",
+      "numero_pregunta": 1,
+      "numero_original": 1,
+      "pregunta": "En relación con los siguientes enunciados:\n1. La médula espinal tiene un núcleo central de materia gris que parece una mariposa o una H.\n2. Un nervio raquídeo se ramifica en raíz posterior (dorsal) y anterior (ventral).\n3. La raíz posterior lleva fibras nerviosas sensitivas, que entran en el asta posterior de la médula y a veces hacen sinapsis con una interneurona.",
+      "opcion_a": "1 es correcto",
+      "opcion_b": "2 es correcto",
+      "opcion_c": "3 es correcto",
+      "opcion_d": "Todos son correctos",
+      "opcion_e": "Ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "truth_values": [
+        true,
+        true,
+        true
+      ],
+      "justificacion": "Clave D según el patrón docente. El enunciado 1 es correcto. El enunciado 2 es correcto. El enunciado 3 es correcto.",
+      "puntos": 1,
+      "dificultad": "medio",
+      "materia": "MORFOFUNCION",
+      "tema": "Sistema nervioso"
+    },
+    {
+      "id": "semana4-virtual-2",
+      "numero_pregunta": 2,
+      "numero_original": 2,
+      "pregunta": "Son Vías Medulares Ascendentes:\n1. Fascículo grácil, Fascículo cuneiforme, Espinotalámica, Espinorreticular, vías espinocerebelares posterior y anterior.\n2. Vías corticoespinales, vía tectospinal, vía espinotalámica.\n3. Fascículo grácil, Fascículo cuneiforme, Vías corticoespinales, vía tectospinal.",
+      "opcion_a": "1 es correcto",
+      "opcion_b": "2 es correcto",
+      "opcion_c": "3 es correcto",
+      "opcion_d": "Todos son correctos",
+      "opcion_e": "Ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "truth_values": [
+        true,
+        false,
+        false
+      ],
+      "justificacion": "Clave A según el patrón docente. El enunciado 1 es correcto. El enunciado 2 es incorrecto. El enunciado 3 es incorrecto.",
+      "puntos": 1,
+      "dificultad": "medio",
+      "materia": "MORFOFUNCION",
+      "tema": "Sistema nervioso"
+    },
+    {
+      "id": "semana4-virtual-3",
+      "numero_pregunta": 3,
+      "numero_original": 3,
+      "pregunta": "Respecto al Nervio occipital menor es cierto:\n1. Inerva el tercio superior de la superficie medial del oído externo, piel posterior al oído, cuello posterolateral.\n2. Inerva la mayor parte del oído externo, región mastoidea.\n3. Inerva el tercio inferior de la superficie medial del oído externo, piel anterior al oído, cuello posterolateral.",
+      "opcion_a": "1 es correcto",
+      "opcion_b": "2 es correcto",
+      "opcion_c": "3 es correcto",
+      "opcion_d": "Todos son correctos",
+      "opcion_e": "Ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "truth_values": [
+        true,
+        false,
+        false
+      ],
+      "justificacion": "Clave A según el patrón docente. El enunciado 1 es correcto. El enunciado 2 es incorrecto. El enunciado 3 es incorrecto.",
+      "puntos": 1,
+      "dificultad": "medio",
+      "materia": "MORFOFUNCION",
+      "tema": "Sistema nervioso"
+    },
+    {
+      "id": "semana4-virtual-4",
+      "numero_pregunta": 4,
+      "numero_original": 4,
+      "pregunta": "En relación con los siguientes enunciados:\n1. Nervio auricular menor inerva la mayor parte del oído externo, región mastoidea.\n2. Nervio cervical transverso inerva el cuello anterior y lateral, parte inferior del mentón.\n3. Nervio frénico inerva diafragma, pleura y peritoneo.",
+      "opcion_a": "1 es correcto",
+      "opcion_b": "2 es correcto",
+      "opcion_c": "3 es correcto",
+      "opcion_d": "Todos son correctos",
+      "opcion_e": "Ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "truth_values": [
+        false,
+        true,
+        false
+      ],
+      "justificacion": "Clave B según el patrón docente. El enunciado 1 es incorrecto. El enunciado 2 es correcto. El enunciado 3 es incorrecto.",
+      "puntos": 1,
+      "dificultad": "medio",
+      "materia": "MORFOFUNCION",
+      "tema": "Sistema nervioso"
+    },
+    {
+      "id": "semana4-virtual-5",
+      "numero_pregunta": 5,
+      "numero_original": 5,
+      "pregunta": "En relación con los siguientes enunciados:\n1. Músculos deltoides y redondo mayor esta inervado por nervio axilar.\n2. El músculo braquial, bíceps braquial y coracobraquial estan inervados por nervio musculocutáneo.\n3. Algunos flexores del antebrazo; abductor del pulgar; grupo hipotenar estan inervado por el nervio cubital.",
+      "opcion_a": "1 es correcto",
+      "opcion_b": "2 es correcto",
+      "opcion_c": "3 es correcto",
+      "opcion_d": "Todos son correctos",
+      "opcion_e": "Ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "truth_values": [
+        false,
+        true,
+        false
+      ],
+      "justificacion": "Clave B según el patrón docente. El enunciado 1 es incorrecto. El enunciado 2 es correcto. El enunciado 3 es incorrecto.",
+      "puntos": 1,
+      "dificultad": "medio",
+      "materia": "MORFOFUNCION",
+      "tema": "Sistema nervioso"
+    },
+    {
+      "id": "semana4-virtual-6",
+      "numero_pregunta": 6,
+      "numero_original": 6,
+      "pregunta": "En relación con los siguientes enunciados:\n1. El plexo lumbar se forma a partir de las ramas anteriores de los nervios L1 a L4 y algunas fibras de T12.\n2. Piel de las regiones abdominal anterior y glútea posterolateral estan inervadas por nervio iliohipogástrico.\n3. Músculos iliaco, pectíneo, cuadríceps femoral y sartorio estan inervadas por nervio crural.",
+      "opcion_a": "1 es correcto",
+      "opcion_b": "2 es correcto",
+      "opcion_c": "3 es correcto",
+      "opcion_d": "Todos son correctos",
+      "opcion_e": "Ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "truth_values": [
+        true,
+        true,
+        true
+      ],
+      "justificacion": "Clave D según el patrón docente. El enunciado 1 es correcto. El enunciado 2 es correcto. El enunciado 3 es correcto.",
+      "puntos": 1,
+      "dificultad": "medio",
+      "materia": "MORFOFUNCION",
+      "tema": "Sistema nervioso"
+    },
+    {
+      "id": "semana4-virtual-7",
+      "numero_pregunta": 7,
+      "numero_original": 7,
+      "pregunta": "En relación con los siguientes enunciados:\n1. Piel del muslo anterior medio; escroto en hombres; labios menores en mujeres inervado por nervio genitofemoral.\n2. Piel del muslo medial superior; escroto y raíz del pene en hombres; labios mayores en mujeres por nervio ilioinguinal.\n3. Piel del muslo medial, articulaciones de la cadera y el tobillo esta inervado por nervio obturador.",
+      "opcion_a": "1 es correcto",
+      "opcion_b": "2 es correcto",
+      "opcion_c": "3 es correcto",
+      "opcion_d": "Todos son correctos",
+      "opcion_e": "Ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "truth_values": [
+        false,
+        true,
+        false
+      ],
+      "justificacion": "Clave B según el patrón docente. El enunciado 1 es incorrecto. El enunciado 2 es correcto. El enunciado 3 es incorrecto.",
+      "puntos": 1,
+      "dificultad": "medio",
+      "materia": "MORFOFUNCION",
+      "tema": "Sistema nervioso"
+    },
+    {
+      "id": "semana4-virtual-8",
+      "numero_pregunta": 8,
+      "numero_original": 8,
+      "pregunta": "En relación con los siguientes enunciados:\n1. El plexo sacro está formado por las ramas anteriores de los nervios L4, L5 y S1 a S4.\n2. El plexo coccígeo está formado a partir de las ramas posteriores de los nervios S4, S5 y Co.\n3. El nervio ciático mayor pasa a través de la muesca ciática menor de la pelvis.",
+      "opcion_a": "1 es correcto",
+      "opcion_b": "2 es correcto",
+      "opcion_c": "3 es correcto",
+      "opcion_d": "Todos son correctos",
+      "opcion_e": "Ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "truth_values": [
+        true,
+        false,
+        false
+      ],
+      "justificacion": "Clave A según el patrón docente. El enunciado 1 es correcto. El enunciado 2 es incorrecto. El enunciado 3 es incorrecto.",
+      "puntos": 1,
+      "dificultad": "medio",
+      "materia": "MORFOFUNCION",
+      "tema": "Sistema nervioso"
+    },
+    {
+      "id": "semana4-virtual-9",
+      "numero_pregunta": 9,
+      "numero_original": 9,
+      "pregunta": "En relación con los siguientes enunciados:\n1. El nervio ciático mayor se extiende por todo el muslo y termina en la fosa ilíaca.\n2. En la fosa poplítea, el nervio ciático mayor diverge en los nervios ciáticos poplíteos interno y externo.\n3. El nervio ciático poplíteo interno se divide en los nervios tibial anterior y musculocutáneo de la pierna.",
+      "opcion_a": "1 es correcto",
+      "opcion_b": "2 es correcto",
+      "opcion_c": "3 es correcto",
+      "opcion_d": "Todos son correctos",
+      "opcion_e": "Ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "truth_values": [
+        false,
+        true,
+        false
+      ],
+      "justificacion": "Clave B según el patrón docente. El enunciado 1 es incorrecto. El enunciado 2 es correcto. El enunciado 3 es incorrecto.",
+      "puntos": 1,
+      "dificultad": "medio",
+      "materia": "MORFOFUNCION",
+      "tema": "Sistema nervioso"
+    },
+    {
+      "id": "semana4-virtual-10",
+      "numero_pregunta": 10,
+      "numero_original": 10,
+      "pregunta": "En relación con los siguientes enunciados:\n1. Todos los nervios raquídeos, sin excepción alguna, reciben información sensitiva de un área específica llamada dermatoma.\n2. Los mapas de dermatomas son exactos porque estas regiones cutáneas nunca se superponen en sus bordes.\n3. Es necesario cortar o anestesiar tres nervios raquídeos sucesivos para producir una pérdida total de sensibilidad de un dermatoma.",
+      "opcion_a": "1 es correcto",
+      "opcion_b": "2 es correcto",
+      "opcion_c": "3 es correcto",
+      "opcion_d": "Todos son correctos",
+      "opcion_e": "Ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "truth_values": [
+        false,
+        false,
+        true
+      ],
+      "justificacion": "Clave C según el patrón docente. El enunciado 1 es incorrecto. El enunciado 2 es incorrecto. El enunciado 3 es correcto.",
+      "puntos": 1,
+      "dificultad": "medio",
+      "materia": "MORFOFUNCION",
+      "tema": "Sistema nervioso"
+    },
+    {
+      "id": "semana4-virtual-11",
+      "numero_pregunta": 11,
+      "numero_original": 11,
+      "pregunta": "En relación con los siguientes enunciados:\n1. Los reflejos requieren estimulación: no son acciones espontáneas, sino respuestas a información sensitiva.\n2. Los reflejos son rápidos: por lo general requieren pocas interneuronas o ninguna y una demora sináptica mínima.\n3. Los reflejos son estereotipados: ocurren casi de la misma manera todas las veces.",
+      "opcion_a": "1 es correcto",
+      "opcion_b": "2 es correcto",
+      "opcion_c": "3 es correcto",
+      "opcion_d": "Todos son correctos",
+      "opcion_e": "Ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "truth_values": [
+        true,
+        true,
+        true
+      ],
+      "justificacion": "Clave D según el patrón docente. El enunciado 1 es correcto. El enunciado 2 es correcto. El enunciado 3 es correcto.",
+      "puntos": 1,
+      "dificultad": "medio",
+      "materia": "MORFOFUNCION",
+      "tema": "Sistema nervioso"
+    },
+    {
+      "id": "semana4-virtual-12",
+      "numero_pregunta": 12,
+      "numero_original": 12,
+      "pregunta": "En relación con los siguientes enunciados:\n1. Los receptores viscerales en la piel, los músculos y los tendones inician el arco reflejo somático.\n2. Las fibras nerviosas aferentes transportan impulsos motores directamente a los músculos.\n3. El centro de integración de un arco reflejo siempre carece de interneuronas.",
+      "opcion_a": "1 es correcto",
+      "opcion_b": "2 es correcto",
+      "opcion_c": "3 es correcto",
+      "opcion_d": "Todos son correctos",
+      "opcion_e": "Ninguno es correcto",
+      "respuesta_correcta": "E",
+      "respuestas_aceptadas": [
+        "E"
+      ],
+      "truth_values": [
+        false,
+        false,
+        false
+      ],
+      "justificacion": "Clave E según el patrón docente. El enunciado 1 es incorrecto. El enunciado 2 es incorrecto. El enunciado 3 es incorrecto.",
+      "puntos": 1,
+      "dificultad": "medio",
+      "materia": "MORFOFUNCION",
+      "tema": "Sistema nervioso"
+    },
+    {
+      "id": "semana4-virtual-13",
+      "numero_pregunta": 13,
+      "numero_original": 13,
+      "pregunta": "En relación con los siguientes enunciados:\n1. Los husos musculares son propiorreceptores especializados para vigilar la posición y el movimiento de las partes del cuerpo.\n2. Los músculos largos con movimientos amplios y poco finos tienen la mayor concentración de husos musculares.\n3. Un huso muscular contiene exclusivamente fibras nerviosas y carece de fibras musculares modificadas.",
+      "opcion_a": "1 es correcto",
+      "opcion_b": "2 es correcto",
+      "opcion_c": "3 es correcto",
+      "opcion_d": "Todos son correctos",
+      "opcion_e": "Ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "truth_values": [
+        true,
+        false,
+        false
+      ],
+      "justificacion": "Clave A según el patrón docente. El enunciado 1 es correcto. El enunciado 2 es incorrecto. El enunciado 3 es incorrecto.",
+      "puntos": 1,
+      "dificultad": "medio",
+      "materia": "MORFOFUNCION",
+      "tema": "Sistema nervioso"
+    },
+    {
+      "id": "semana4-virtual-14",
+      "numero_pregunta": 14,
+      "numero_original": 14,
+      "pregunta": "En relación con los siguientes enunciados:\n1. Las fibras intrafusales tienen sarcómeros y gran capacidad contráctil a lo largo de toda su extensión media.\n2. Las fibras de bolsa nuclear son más gruesas y tienen muchos núcleos agrupados en la región media.\n3. Las fibras extrafusales son las células musculares modificadas que se ubican dentro de la cápsula del huso.",
+      "opcion_a": "1 es correcto",
+      "opcion_b": "2 es correcto",
+      "opcion_c": "3 es correcto",
+      "opcion_d": "Todos son correctos",
+      "opcion_e": "Ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "truth_values": [
+        false,
+        true,
+        false
+      ],
+      "justificacion": "Clave B según el patrón docente. El enunciado 1 es incorrecto. El enunciado 2 es correcto. El enunciado 3 es incorrecto.",
+      "puntos": 1,
+      "dificultad": "medio",
+      "materia": "MORFOFUNCION",
+      "tema": "Sistema nervioso"
+    },
+    {
+      "id": "semana4-virtual-15",
+      "numero_pregunta": 15,
+      "numero_original": 15,
+      "pregunta": "En relación con los siguientes enunciados:\n1. Las motoneuronas alfa son de diámetro pequeño e inervan exclusivamente las fibras extrafusales del huso muscular.\n2. Las fibras aferentes secundarias (grupo II) responden mucho más rápido a la velocidad del acortamiento muscular que las primarias.\n3. La fibra aferente primaria es larga, rápida y muy sensible a pequeños cambios en la longitud muscular.",
+      "opcion_a": "1 es correcto",
+      "opcion_b": "2 es correcto",
+      "opcion_c": "3 es correcto",
+      "opcion_d": "Todos son correctos",
+      "opcion_e": "Ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "truth_values": [
+        false,
+        false,
+        true
+      ],
+      "justificacion": "Clave C según el patrón docente. El enunciado 1 es incorrecto. El enunciado 2 es incorrecto. El enunciado 3 es correcto.",
+      "puntos": 1,
+      "dificultad": "medio",
+      "materia": "MORFOFUNCION",
+      "tema": "Sistema nervioso"
+    },
+    {
+      "id": "semana4-virtual-16",
+      "numero_pregunta": 16,
+      "numero_original": 16,
+      "pregunta": "En relación con los siguientes enunciados:\n1. El reflejo rotuliano es un claro ejemplo de arco reflejo polisináptico.\n2. En el reflejo osteotendinoso de la rodilla existen múltiples interneuronas entre la fibra aferente y la motoneurona.\n3. Los reflejos miotáticos excitan simultáneamente a los músculos antagonistas para generar una mayor fuerza articular.",
+      "opcion_a": "1 es correcto",
+      "opcion_b": "2 es correcto",
+      "opcion_c": "3 es correcto",
+      "opcion_d": "Todos son correctos",
+      "opcion_e": "Ninguno es correcto",
+      "respuesta_correcta": "E",
+      "respuestas_aceptadas": [
+        "E"
+      ],
+      "truth_values": [
+        false,
+        false,
+        false
+      ],
+      "justificacion": "Clave E según el patrón docente. El enunciado 1 es incorrecto. El enunciado 2 es incorrecto. El enunciado 3 es incorrecto.",
+      "puntos": 1,
+      "dificultad": "medio",
+      "materia": "MORFOFUNCION",
+      "tema": "Sistema nervioso"
+    },
+    {
+      "id": "semana4-virtual-17",
+      "numero_pregunta": 17,
+      "numero_original": 17,
+      "pregunta": "En relación con los siguientes enunciados:\n1. El reflejo de extensión cruzada emplea un arco reflejo ipsolateral para mantener el centro de gravedad.\n2. En la extremidad contralateral a la lesión, se produce la relajación de los extensores y contracción de los flexores.\n3. El reflejo de extensión cruzada extiende la extremidad opuesta permitiendo mantener el equilibrio al retirar la pierna afectada.",
+      "opcion_a": "1 es correcto",
+      "opcion_b": "2 es correcto",
+      "opcion_c": "3 es correcto",
+      "opcion_d": "Todos son correctos",
+      "opcion_e": "Ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "truth_values": [
+        false,
+        false,
+        true
+      ],
+      "justificacion": "Clave C según el patrón docente. El enunciado 1 es incorrecto. El enunciado 2 es incorrecto. El enunciado 3 es correcto.",
+      "puntos": 1,
+      "dificultad": "medio",
+      "materia": "MORFOFUNCION",
+      "tema": "Sistema nervioso"
+    },
+    {
+      "id": "semana4-virtual-18",
+      "numero_pregunta": 18,
+      "numero_original": 18,
+      "pregunta": "En relación con los siguientes enunciados:\n1. Los órganos tendinosos son propiorreceptores localizados en un tendón cerca de su unión con el músculo.\n2. Un órgano tendinoso consta de un haz encapsulado de pequeñas fibras colagenosas sueltas y una o más fibras nerviosas.\n3. El reflejo osteotendinoso actúa inhibiendo a las motoneuronas alfa para moderar la contracción muscular antes de que ocurra un desgarre.",
+      "opcion_a": "1 es correcto",
+      "opcion_b": "2 es correcto",
+      "opcion_c": "3 es correcto",
+      "opcion_d": "Todos son correctos",
+      "opcion_e": "Ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "truth_values": [
+        true,
+        true,
+        true
+      ],
+      "justificacion": "Clave D según el patrón docente. El enunciado 1 es correcto. El enunciado 2 es correcto. El enunciado 3 es correcto.",
+      "puntos": 1,
+      "dificultad": "medio",
+      "materia": "MORFOFUNCION",
+      "tema": "Sistema nervioso"
+    },
+    {
+      "id": "semana4-virtual-19",
+      "numero_pregunta": 19,
+      "numero_original": 19,
+      "pregunta": "En relación con los siguientes enunciados:\n1. La transección total de la médula espinal produce instantáneamente un cuadro de parálisis espástica.\n2. En sus primeros días, el síndrome de choque medular se caracteriza por una marcada hiperreflexia somática.\n3. El choque neurogénico eleva la presión arterial sistólica del paciente a niveles superiores a los 300 mmHg.",
+      "opcion_a": "1 es correcto",
+      "opcion_b": "2 es correcto",
+      "opcion_c": "3 es correcto",
+      "opcion_d": "Todos son correctos",
+      "opcion_e": "Ninguno es correcto",
+      "respuesta_correcta": "E",
+      "respuestas_aceptadas": [
+        "E"
+      ],
+      "truth_values": [
+        false,
+        false,
+        false
+      ],
+      "justificacion": "Clave E según el patrón docente. El enunciado 1 es incorrecto. El enunciado 2 es incorrecto. El enunciado 3 es incorrecto.",
+      "puntos": 1,
+      "dificultad": "medio",
+      "materia": "MORFOFUNCION",
+      "tema": "Sistema nervioso"
+    },
+    {
+      "id": "semana4-virtual-20",
+      "numero_pregunta": 20,
+      "numero_original": 20,
+      "pregunta": "En relación con los siguientes enunciados:\n1. En la enfermedad de Parkinson los primeros signos es la pérdida de memoria, en especial de hechos recientes.\n2. La enfermedad de Alzheimer es una pérdida progresiva de la función motora que empieza a los 50 o 60 años de edad.\n3. La enfermedad de Parkinson se debe a la degeneración de las neuronas que liberan dopamina en una porción del cerebro a la que se denomina sustancia negra.",
+      "opcion_a": "1 es correcto",
+      "opcion_b": "2 es correcto",
+      "opcion_c": "3 es correcto",
+      "opcion_d": "Todos son correctos",
+      "opcion_e": "Ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "truth_values": [
+        false,
+        false,
+        true
+      ],
+      "justificacion": "Clave C según el patrón docente. El enunciado 1 es incorrecto. El enunciado 2 es incorrecto. El enunciado 3 es correcto.",
+      "puntos": 1,
+      "dificultad": "medio",
+      "materia": "MORFOFUNCION",
+      "tema": "Sistema nervioso"
+    },
+    {
+      "id": "semana4-virtual-21",
+      "numero_pregunta": 21,
+      "numero_original": 21,
+      "pregunta": "En relación con los siguientes enunciados:\n1. Diabetes insípida es la nefrógena, es congénita, aparece cuando se producen mutaciones en el gen que codifica para el receptor de la hormona ADH.\n2. El cuadro general implica poliuria o exceso de orina muy diluida.\n3. Diabetes mellitus, donde la orina es «dulce» debido a la gran eliminación de glucosa.",
+      "opcion_a": "1 es correcto",
+      "opcion_b": "2 es correcto",
+      "opcion_c": "3 es correcto",
+      "opcion_d": "Todos son correctos",
+      "opcion_e": "Ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "truth_values": [
+        true,
+        true,
+        true
+      ],
+      "justificacion": "Clave D según el patrón docente. El enunciado 1 es correcto. El enunciado 2 es correcto. El enunciado 3 es correcto.",
+      "puntos": 1,
+      "dificultad": "medio",
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Membrana plasmática y transporte"
+    },
+    {
+      "id": "semana4-virtual-22",
+      "numero_pregunta": 22,
+      "numero_original": 22,
+      "pregunta": "En relación con los siguientes enunciados:\n1. La captación de dicha cantidad de agua, la denominada oferta distal depende de la presencia (regulable) de los canales de AQP2 en la membrana apical, lo que depende a su vez de la acción de la hormona antidiurética.\n2. La ADH es una hormona producida en los núcleos supraóptico y ventricular del hipotálamo.\n3. La ADH es reconocida por receptores presentes en la membrana apical de las células de los conductos colectores, donde regula la absorción de agua procedente del filtrado glomerular.",
+      "opcion_a": "1 es correcto",
+      "opcion_b": "2 es correcto",
+      "opcion_c": "3 es correcto",
+      "opcion_d": "Todos son correctos",
+      "opcion_e": "Ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "truth_values": [
+        true,
+        false,
+        false
+      ],
+      "justificacion": "Clave A según el patrón docente. El enunciado 1 es correcto. El enunciado 2 es incorrecto. El enunciado 3 es incorrecto.",
+      "puntos": 1,
+      "dificultad": "medio",
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Membrana plasmática y transporte"
+    },
+    {
+      "id": "semana4-virtual-23",
+      "numero_pregunta": 23,
+      "numero_original": 23,
+      "pregunta": "En relación con los siguientes enunciados:\n1. La AQP se trata de un complejo dimerico compuesto por dos canales de agua.\n2. Cada monómero consta de 6 hojas beta transmembrana con una secuencia conservada de aminoácidos en tándem, la cual incluye secuencias aminoacídicas «asparragina-prolina-alanina» (NPA)\n3. Las AQP son canales esenciales para el intercambio de agua, la regulación osmótica del medio interno y la absorción de agua a nivel intestinal y renal.",
+      "opcion_a": "1 es correcto",
+      "opcion_b": "2 es correcto",
+      "opcion_c": "3 es correcto",
+      "opcion_d": "Todos son correctos",
+      "opcion_e": "Ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "truth_values": [
+        false,
+        false,
+        true
+      ],
+      "justificacion": "Clave C según el patrón docente. El enunciado 1 es incorrecto. El enunciado 2 es incorrecto. El enunciado 3 es correcto.",
+      "puntos": 1,
+      "dificultad": "medio",
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Membrana plasmática y transporte"
+    },
+    {
+      "id": "semana4-virtual-24",
+      "numero_pregunta": 24,
+      "numero_original": 24,
+      "pregunta": "En relación con los siguientes enunciados:\n1. Canales mecanosensibles, abundan en los mecanorreceptores de la piel y en los cilios de las células ciliadas del oído interno.\n2. Canales quimiosensibles se regulan mediante la unión de un ligando al canal y son fundamentales en la transmisión sináptica.\n3. Cuando la acetilcolina se une al sitio específico en los canales de Na+ de la membrana de la célula postsináptica, estos se abren y permiten la entrada de dicho ión, generando la despolarización de la membrana.",
+      "opcion_a": "1 es correcto",
+      "opcion_b": "2 es correcto",
+      "opcion_c": "3 es correcto",
+      "opcion_d": "Todos son correctos",
+      "opcion_e": "Ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "truth_values": [
+        true,
+        true,
+        true
+      ],
+      "justificacion": "Clave D según el patrón docente. El enunciado 1 es correcto. El enunciado 2 es correcto. El enunciado 3 es correcto.",
+      "puntos": 1,
+      "dificultad": "medio",
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Membrana plasmática y transporte"
+    },
+    {
+      "id": "semana4-virtual-25",
+      "numero_pregunta": 25,
+      "numero_original": 25,
+      "pregunta": "En relación con los siguientes enunciados:\n1. Cuando la concentración extracelular de solutos disminuye ejemplo debido a dilución, convirtiéndose en una solución hipotónica.\n2. Solución hipotónica, el agua difunde osmóticamente hacia el interior de las células.\n3. Solución hipotónica haciendo que se hinchen y pudiendo provocar así la rotura de la membrana y, por lo tanto, causando lisis celular.",
+      "opcion_a": "1 es correcto",
+      "opcion_b": "2 es correcto",
+      "opcion_c": "3 es correcto",
+      "opcion_d": "Todos son correctos",
+      "opcion_e": "Ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "truth_values": [
+        true,
+        true,
+        true
+      ],
+      "justificacion": "Clave D según el patrón docente. El enunciado 1 es correcto. El enunciado 2 es correcto. El enunciado 3 es correcto.",
+      "puntos": 1,
+      "dificultad": "medio",
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Membrana plasmática y transporte"
+    },
+    {
+      "id": "semana4-virtual-26",
+      "numero_pregunta": 26,
+      "numero_original": 26,
+      "pregunta": "En relación con los siguientes enunciados:\n1. Membrana no permeable a solutos, en este caso, el agua pasará del compartimento B al A.\n2. Los solutos son permeables a la membrana y se mueven según el gradiente de concentración.\n3. En la ósmosis, la membrana no es permeable a los solutos y el agua se mueve desde el lado con menos concentración de solutos al de mayor concentración.",
+      "opcion_a": "1 es correcto",
+      "opcion_b": "2 es correcto",
+      "opcion_c": "3 es correcto",
+      "opcion_d": "Todos son correctos",
+      "opcion_e": "Ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "truth_values": [
+        true,
+        true,
+        true
+      ],
+      "justificacion": "Clave D según el patrón docente. El enunciado 1 es correcto. El enunciado 2 es correcto. El enunciado 3 es correcto.",
+      "puntos": 1,
+      "dificultad": "medio",
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Membrana plasmática y transporte"
+    },
+    {
+      "id": "semana4-virtual-27",
+      "numero_pregunta": 27,
+      "numero_original": 27,
+      "pregunta": "En relación con los siguientes enunciados:\n1. Los canales de membrana permiten el paso de moléculas de pequeño tamaño y carga apropiada.\n2. Los canales iónicos llevan a cabo un transporte lento de determinados iones.\n3. La estructura proteica del interior del poro está formada por aminoácidos de cadena lateral hidrófila que permiten el paso no selectivo",
+      "opcion_a": "1 es correcto",
+      "opcion_b": "2 es correcto",
+      "opcion_c": "3 es correcto",
+      "opcion_d": "Todos son correctos",
+      "opcion_e": "Ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "truth_values": [
+        true,
+        false,
+        false
+      ],
+      "justificacion": "Clave A según el patrón docente. El enunciado 1 es correcto. El enunciado 2 es incorrecto. El enunciado 3 es incorrecto.",
+      "puntos": 1,
+      "dificultad": "medio",
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Membrana plasmática y transporte"
+    },
+    {
+      "id": "semana4-virtual-28",
+      "numero_pregunta": 28,
+      "numero_original": 28,
+      "pregunta": "En relación con los siguientes enunciados:\n1. La permeabilidad mide la velocidad a la que una sustancia atraviesa la membrana.\n2. Una alta proporción de colesterol confiere a la membrana una menor permeabilidad y una menor coherencia mecánica para que sea una barrera más eficaz.\n3. La membrana de las células epiteliales de la rama ascendente del asa de Henle posee una composición con niveles elevados de glicerol.",
+      "opcion_a": "1 es correcto",
+      "opcion_b": "2 es correcto",
+      "opcion_c": "3 es correcto",
+      "opcion_d": "Todos son correctos",
+      "opcion_e": "Ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "truth_values": [
+        true,
+        false,
+        false
+      ],
+      "justificacion": "Clave A según el patrón docente. El enunciado 1 es correcto. El enunciado 2 es incorrecto. El enunciado 3 es incorrecto.",
+      "puntos": 1,
+      "dificultad": "medio",
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Membrana plasmática y transporte"
+    },
+    {
+      "id": "semana4-virtual-29",
+      "numero_pregunta": 29,
+      "numero_original": 29,
+      "pregunta": "En relación con los siguientes enunciados:\n1. La banda 4.2, que media la unión anquirina-banda 3, actúan como elementos moduladores.\n2. Para anclar el citoesqueleto a la membrana, la proteína banda 3 y la glucoforina, se asocian a la espectrina a través de la anquirina y la proteína banda 4.1, respectivamente.\n3. La proteína banda 3 es una proteína integral de paso múltiple formada por dos cadenas polipeptídicas o monómeros (de 929 aa y 100 kDa).",
+      "opcion_a": "1 es correcto",
+      "opcion_b": "2 es correcto",
+      "opcion_c": "3 es correcto",
+      "opcion_d": "Todos son correctos",
+      "opcion_e": "Ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "truth_values": [
+        true,
+        true,
+        true
+      ],
+      "justificacion": "Clave D según el patrón docente. El enunciado 1 es correcto. El enunciado 2 es correcto. El enunciado 3 es correcto.",
+      "puntos": 1,
+      "dificultad": "medio",
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Membrana plasmática y transporte"
+    },
+    {
+      "id": "semana4-virtual-30",
+      "numero_pregunta": 30,
+      "numero_original": 30,
+      "pregunta": "En relación con los siguientes enunciados:\n1. La glucoforina es una proteína integral de paso único (de 131 aa y 30 Da).\n2. Se orienta en la bicapa de manera que su extremo Hidrófilo- carboxi-terminal (C-terminal) se encuentra en la cara citosólica de la membrana.\n3. La esferocitosis hereditaria es el déficit o alteración de la anquirina, la espectrina ALFA o la espectrina BETA (35-65°/o ), seguido de las proteínas banda 3 o banda 4.2  (15-30°/o).",
+      "opcion_a": "1 es correcto",
+      "opcion_b": "2 es correcto",
+      "opcion_c": "3 es correcto",
+      "opcion_d": "2 y 3 son correctos",
+      "opcion_e": "Ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "truth_values": [
+        false,
+        true,
+        true
+      ],
+      "justificacion": "Clave D según el patrón docente. El enunciado 1 es incorrecto. El enunciado 2 es correcto. El enunciado 3 es correcto. La opción D se ajustó a «2 y 3 son correctos» para representar la combinación marcada en el documento.",
+      "puntos": 1,
+      "dificultad": "medio",
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Membrana plasmática y transporte",
+      "adaptation": "Corrección autorizada por el docente: opción D = 2 y 3 son correctos; se conservan los enunciados y las marcas del patrón."
+    },
+    {
+      "id": "semana4-virtual-31",
+      "numero_pregunta": 31,
+      "numero_original": 31,
+      "pregunta": "Es cierto sobre Neuropéptidos:\n1. Sustancia P inhiben la movilidad intestinal.\n2. Colecistocinina suprime el apetito.",
+      "opcion_a": "1 es correcto",
+      "opcion_b": "2 es correcto",
+      "opcion_c": "Ambos son correctos",
+      "opcion_d": "Ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "truth_values": [
+        false,
+        true
+      ],
+      "justificacion": "Clave B según el patrón docente. El enunciado 1 es incorrecto. El enunciado 2 es correcto.",
+      "puntos": 1,
+      "dificultad": "medio",
+      "materia": "MORFOFUNCION",
+      "tema": "Sistema nervioso"
+    },
+    {
+      "id": "semana4-virtual-32",
+      "numero_pregunta": 32,
+      "numero_original": 32,
+      "pregunta": "En relación con los siguientes enunciados:\n1. El nervio glúteo superior inerva los músculos glúteo menor, glúteo medio y el tensor de la fascia lata.\n2. El nervio pudendo proporciona inervación exclusivamente a la piel y músculos de la fosa poplítea y pierna posterior.",
+      "opcion_a": "1 es correcto",
+      "opcion_b": "2 es correcto",
+      "opcion_c": "Ambos son correctos",
+      "opcion_d": "Ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "truth_values": [
+        true,
+        false
+      ],
+      "justificacion": "Clave A según el patrón docente. El enunciado 1 es correcto. El enunciado 2 es incorrecto.",
+      "puntos": 1,
+      "dificultad": "medio",
+      "materia": "MORFOFUNCION",
+      "tema": "Sistema nervioso"
+    },
+    {
+      "id": "semana4-virtual-33",
+      "numero_pregunta": 33,
+      "numero_original": 33,
+      "pregunta": "En relación con los siguientes enunciados:\n1. Los reflejos somáticos pueden ocurrir perfectamente aunque la médula espinal se haya cortado por completo del encéfalo.\n2. Tomar conciencia del estímulo desencadenante es una parte fisiológica fundamental y necesaria del propio reflejo somático.",
+      "opcion_a": "1 es correcto",
+      "opcion_b": "2 es correcto",
+      "opcion_c": "Ambos son correctos",
+      "opcion_d": "Ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "truth_values": [
+        true,
+        false
+      ],
+      "justificacion": "Clave A según el patrón docente. El enunciado 1 es correcto. El enunciado 2 es incorrecto.",
+      "puntos": 1,
+      "dificultad": "medio",
+      "materia": "MORFOFUNCION",
+      "tema": "Sistema nervioso"
+    },
+    {
+      "id": "semana4-virtual-34",
+      "numero_pregunta": 34,
+      "numero_original": 34,
+      "pregunta": "En relación con los siguientes enunciados:\n1. Todo arco reflejo medular necesita obligatoriamente de la participación de al menos una interneurona.\n2. Cuantas más interneuronas incluya un centro de integración, más complejo es el procesamiento, pero mayor es la demora sináptica.",
+      "opcion_a": "1 es correcto",
+      "opcion_b": "2 es correcto",
+      "opcion_c": "Ambos son correctos",
+      "opcion_d": "Ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "truth_values": [
+        false,
+        true
+      ],
+      "justificacion": "Clave B según el patrón docente. El enunciado 1 es incorrecto. El enunciado 2 es correcto.",
+      "puntos": 1,
+      "dificultad": "medio",
+      "materia": "MORFOFUNCION",
+      "tema": "Sistema nervioso"
+    },
+    {
+      "id": "semana4-virtual-35",
+      "numero_pregunta": 35,
+      "numero_original": 35,
+      "pregunta": "En relación con los siguientes enunciados:\n1. Sin los reflejos miotáticos mediando la estabilización articular, los movimientos voluntarios de una persona tenderían a ser espasmódicos.\n2. El reflejo de estiramiento actúa mediante un mecanismo aislado que retroalimenta de forma exclusiva a un único músculo a la vez.",
+      "opcion_a": "1 es correcto",
+      "opcion_b": "2 es correcto",
+      "opcion_c": "Ambos son correctos",
+      "opcion_d": "Ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "truth_values": [
+        true,
+        false
+      ],
+      "justificacion": "Clave A según el patrón docente. El enunciado 1 es correcto. El enunciado 2 es incorrecto.",
+      "puntos": 1,
+      "dificultad": "medio",
+      "materia": "MORFOFUNCION",
+      "tema": "Sistema nervioso"
+    },
+    {
+      "id": "semana4-virtual-36",
+      "numero_pregunta": 36,
+      "numero_original": 36,
+      "pregunta": "En relación con los siguientes enunciados:\n1. Un arco reflejo contralateral es aquel donde la información sensitiva ingresa y la señal motora se emite en el mismo lado de la médula.\n2. Un arco reflejo intersegmentario ocurre cuando la entrada sensitiva y la salida motora involucran diferentes segmentos de la médula espinal.",
+      "opcion_a": "1 es correcto",
+      "opcion_b": "2 es correcto",
+      "opcion_c": "Ambos son correctos",
+      "opcion_d": "Ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "truth_values": [
+        false,
+        true
+      ],
+      "justificacion": "Clave B según el patrón docente. El enunciado 1 es incorrecto. El enunciado 2 es correcto.",
+      "puntos": 1,
+      "dificultad": "medio",
+      "materia": "MORFOFUNCION",
+      "tema": "Sistema nervioso"
+    },
+    {
+      "id": "semana4-virtual-37",
+      "numero_pregunta": 37,
+      "numero_original": 37,
+      "pregunta": "En relación con los siguientes enunciados:\n1. La ciática es una patología dolorosa generada exclusivamente por la dislocación aguda de la articulación de la cadera.\n2. El síndrome de Guillain-Barré es un trastorno medular por infarto vascular que cursa sin afectación ni desmielinización de los nervios",
+      "opcion_a": "1 es correcto",
+      "opcion_b": "2 es correcto",
+      "opcion_c": "Ambos son correctos",
+      "opcion_d": "Ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "truth_values": [
+        false,
+        false
+      ],
+      "justificacion": "Clave D según el patrón docente. El enunciado 1 es incorrecto. El enunciado 2 es incorrecto.",
+      "puntos": 1,
+      "dificultad": "medio",
+      "materia": "MORFOFUNCION",
+      "tema": "Sistema nervioso"
+    },
+    {
+      "id": "semana4-virtual-38",
+      "numero_pregunta": 38,
+      "numero_original": 38,
+      "pregunta": "Es cierto en relacion a los Neurotransmisores:\n1. GABA el neurotransmisor inhibitorio más común en la médula espinal.\n2. Dopamina participa en la elevación del humor y el control de los músculos estriados.",
+      "opcion_a": "1 es correcto",
+      "opcion_b": "2 es correcto",
+      "opcion_c": "Ambos son correctos",
+      "opcion_d": "Ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "truth_values": [
+        false,
+        true
+      ],
+      "justificacion": "Clave B según el patrón docente. El enunciado 1 es incorrecto. El enunciado 2 es correcto.",
+      "puntos": 1,
+      "dificultad": "medio",
+      "materia": "MORFOFUNCION",
+      "tema": "Sistema nervioso"
+    },
+    {
+      "id": "semana4-virtual-39",
+      "numero_pregunta": 39,
+      "numero_original": 39,
+      "pregunta": "En relación con los siguientes enunciados:\n1. La memoria declarativa es la retención de acontecimientos y hechos que se pueden poner en palabras.\n2. La memoria procedimental es la retención de habilidades motoras.",
+      "opcion_a": "1 es correcto",
+      "opcion_b": "2 es correcto",
+      "opcion_c": "Ambos son correctos",
+      "opcion_d": "Ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "truth_values": [
+        true,
+        true
+      ],
+      "justificacion": "Clave C según el patrón docente. El enunciado 1 es correcto. El enunciado 2 es correcto.",
+      "puntos": 1,
+      "dificultad": "medio",
+      "materia": "MORFOFUNCION",
+      "tema": "Sistema nervioso"
+    },
+    {
+      "id": "semana4-virtual-40",
+      "numero_pregunta": 40,
+      "numero_original": 40,
+      "pregunta": "En relación con los siguientes enunciados:\n1. La histamina es secretada por las plaquetas sanguíneas y las células intestinales.\n2. La histamina es un potente vasodilatador, participa en los estados de sueño y alerta.",
+      "opcion_a": "1 es correcto",
+      "opcion_b": "2 es correcto",
+      "opcion_c": "Ambos son correctos",
+      "opcion_d": "Ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "truth_values": [
+        false,
+        false
+      ],
+      "justificacion": "Clave D según el patrón docente. El enunciado 1 es incorrecto. El enunciado 2 es incorrecto.",
+      "puntos": 1,
+      "dificultad": "medio",
+      "materia": "MORFOFUNCION",
+      "tema": "Sistema nervioso"
+    },
+    {
+      "id": "semana4-virtual-41",
+      "numero_pregunta": 41,
+      "numero_original": 41,
+      "pregunta": "En relación con los siguientes enunciados:\n1. Las AQP es que permiten el paso de agua, pero impiden el paso de protones.\n2. En los riñones, se filtran cada día en el glomérulo y se reabsorben 180 ml de agua en los conductos renales.",
+      "opcion_a": "1 es correcto",
+      "opcion_b": "2 es correcto",
+      "opcion_c": "Ambos son correctos",
+      "opcion_d": "Ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "truth_values": [
+        true,
+        false
+      ],
+      "justificacion": "Clave A según el patrón docente. El enunciado 1 es correcto. El enunciado 2 es incorrecto.",
+      "puntos": 1,
+      "dificultad": "medio",
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Membrana plasmática y transporte"
+    },
+    {
+      "id": "semana4-virtual-42",
+      "numero_pregunta": 42,
+      "numero_original": 42,
+      "pregunta": "En relación con los siguientes enunciados:\n1. La concentración de solutos suele ser mayor en el interior celular que en el exterior, por lo que el agua tenderá a introducirse en la célula.\n2. Cuando la concentración extracelular de solutos aumenta, ejemplo debido a una pérdida de agua, convirtiéndose en una solución hipotónica.",
+      "opcion_a": "1 es correcto",
+      "opcion_b": "2 es correcto",
+      "opcion_c": "Ambos son correctos",
+      "opcion_d": "Ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "truth_values": [
+        true,
+        false
+      ],
+      "justificacion": "Clave A según el patrón docente. El enunciado 1 es correcto. El enunciado 2 es incorrecto.",
+      "puntos": 1,
+      "dificultad": "medio",
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Membrana plasmática y transporte"
+    },
+    {
+      "id": "semana4-virtual-43",
+      "numero_pregunta": 43,
+      "numero_original": 43,
+      "pregunta": "En relación con los siguientes enunciados:\n1. Difusión del agua es lo que se conoce como ósmosis.\n2. Osmolaridad, cuando la concentración de solutos cambia a ambos lados de la membrana con el fin de diferenciar la concentración en el líquido intra y extracelular.",
+      "opcion_a": "1 es correcto",
+      "opcion_b": "2 es correcto",
+      "opcion_c": "Ambos son correctos",
+      "opcion_d": "Ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "truth_values": [
+        true,
+        false
+      ],
+      "justificacion": "Clave A según el patrón docente. El enunciado 1 es correcto. El enunciado 2 es incorrecto.",
+      "puntos": 1,
+      "dificultad": "medio",
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Membrana plasmática y transporte"
+    },
+    {
+      "id": "semana4-virtual-44",
+      "numero_pregunta": 44,
+      "numero_original": 44,
+      "pregunta": "En relación con los siguientes enunciados:\n1. La permeabilidad de una sustancia depende de las características del soluto, además del espesor y la composición de la membrana.\n2. La permeabilidad es directamente proporcional al cociente de reparto Kr.",
+      "opcion_a": "1 es correcto",
+      "opcion_b": "2 es correcto",
+      "opcion_c": "Ambos son correctos",
+      "opcion_d": "Ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "truth_values": [
+        true,
+        true
+      ],
+      "justificacion": "Clave C según el patrón docente. El enunciado 1 es correcto. El enunciado 2 es correcto.",
+      "puntos": 1,
+      "dificultad": "medio",
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Membrana plasmática y transporte"
+    },
+    {
+      "id": "semana4-virtual-45",
+      "numero_pregunta": 45,
+      "numero_original": 45,
+      "pregunta": "En relación con los siguientes enunciados:\n1. Se han identificado 12 acuaporinas (AQP0-AQP12) en diferentes tejidos.\n2. Se encuentran principalmente en el riñón, siendo también abundantes en eritrocitos, epitelio intestinal, células gliales del cerebro.",
+      "opcion_a": "1 es correcto",
+      "opcion_b": "2 es correcto",
+      "opcion_c": "Ambos son correctos",
+      "opcion_d": "Ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "truth_values": [
+        false,
+        true
+      ],
+      "justificacion": "Clave B según el patrón docente. El enunciado 1 es incorrecto. El enunciado 2 es correcto.",
+      "puntos": 1,
+      "dificultad": "medio",
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Membrana plasmática y transporte"
+    },
+    {
+      "id": "semana4-virtual-46",
+      "numero_pregunta": 46,
+      "numero_original": 46,
+      "pregunta": "En relación con los siguientes enunciados:\n1. Poros o canales de membrana: son canales cuyo interior es hidrófilo.\n2. Permitiendo el paso de solutos sin que haya un cambio de conformación en la proteína.",
+      "opcion_a": "1 es correcto",
+      "opcion_b": "2 es correcto",
+      "opcion_c": "Ambos son correctos",
+      "opcion_d": "Ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "truth_values": [
+        true,
+        true
+      ],
+      "justificacion": "Clave C según el patrón docente. El enunciado 1 es correcto. El enunciado 2 es correcto.",
+      "puntos": 1,
+      "dificultad": "medio",
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Membrana plasmática y transporte"
+    },
+    {
+      "id": "semana4-virtual-47",
+      "numero_pregunta": 47,
+      "numero_original": 47,
+      "pregunta": "En relación con los siguientes enunciados:\n1. Los transportadores catalizan un proceso de transporte de solutos de un lado a otro de la membrana.\n2. En la difusión facilitada, la tasa de transporte aumenta en paralelo al aumento de la concentración del soluto.",
+      "opcion_a": "1 es correcto",
+      "opcion_b": "2 es correcto",
+      "opcion_c": "Ambos son correctos",
+      "opcion_d": "Ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "truth_values": [
+        true,
+        false
+      ],
+      "justificacion": "Clave A según el patrón docente. El enunciado 1 es correcto. El enunciado 2 es incorrecto.",
+      "puntos": 1,
+      "dificultad": "medio",
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Membrana plasmática y transporte"
+    },
+    {
+      "id": "semana4-virtual-48",
+      "numero_pregunta": 48,
+      "numero_original": 48,
+      "pregunta": "En relación con los siguientes enunciados:\n1. El transporte pasivo se denomina difusión simple cuando es un movimiento implica proteínas especializadas de membrana.\n2. Difusión simple cuando está facilitado por proteínas de membrana (canales o proteínas transportadoras).",
+      "opcion_a": "1 es correcto",
+      "opcion_b": "2 es correcto",
+      "opcion_c": "Ambos son correctos",
+      "opcion_d": "Ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "truth_values": [
+        false,
+        false
+      ],
+      "justificacion": "Clave D según el patrón docente. El enunciado 1 es incorrecto. El enunciado 2 es incorrecto.",
+      "puntos": 1,
+      "dificultad": "medio",
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Membrana plasmática y transporte"
+    },
+    {
+      "id": "semana4-virtual-49",
+      "numero_pregunta": 49,
+      "numero_original": 49,
+      "pregunta": "En relación con los siguientes enunciados:\n1. El agua, su concentración a ambos lados de la membrana es esencialmente la misma y, al ser una molécula sin carga, no se ve influida por el potencial de membrana.\n2. El agua difunde desde el lado de menor concentración de solutos al lado de mayor concentración.",
+      "opcion_a": "1 es correcto",
+      "opcion_b": "2 es correcto",
+      "opcion_c": "Ambos son correctos",
+      "opcion_d": "Ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "truth_values": [
+        true,
+        true
+      ],
+      "justificacion": "Clave C según el patrón docente. El enunciado 1 es correcto. El enunciado 2 es correcto.",
+      "puntos": 1,
+      "dificultad": "medio",
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Membrana plasmática y transporte"
+    },
+    {
+      "id": "semana4-virtual-50",
+      "numero_pregunta": 50,
+      "numero_original": 50,
+      "pregunta": "En relación con los siguientes enunciados:\n1. La esferocitosis hereditaria es el déficit o alteración de la anquirina, la espectrina ALFA o la espectrina BETA (35-65°/o ), seguido de las proteínas banda 3 o banda 4.2  (15-30°/o).\n2. Es la membranopatía congénita menos frecuente, con una incidencia de 1 caso por cada 2.000 a 10.000 nacimientos.",
+      "opcion_a": "1 es correcto",
+      "opcion_b": "2 es correcto",
+      "opcion_c": "Ambos son correctos",
+      "opcion_d": "Ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "truth_values": [
+        true,
+        false
+      ],
+      "justificacion": "Clave A según el patrón docente. El enunciado 1 es correcto. El enunciado 2 es incorrecto.",
+      "puntos": 1,
+      "dificultad": "medio",
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Membrana plasmática y transporte"
+    }
+  ]
+}

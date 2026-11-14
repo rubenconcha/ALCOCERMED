@@ -7,6 +7,7 @@ const demoPaper = require('./_simulations/demo.cjs');
 const scopes = new Map([['semana2-testb-virtual','semana2-testb-virtual'],['mini-foundations','mini-foundations'],['partial-first','first'],['partial-second','second'],...['9','10'].map(n=>['partial-first-'+n,'first']),...['11','12'].map(n=>['partial-second-'+n,'second']),...['3','4','5','6','8','13','14'].map(n=>['final-'+n,'final'])]);
 const week3Id = 'semana3-grupo-virtual-2';
 scopes.set(week3Id, week3Id);
+scopes.set('semana4-grupo-virtual-2', 'semana4-grupo-virtual-2');
 const prepa = new Map(catalog.entries.filter(entry => entry.scope === 'prepa').map(entry => [entry.curatedId, entry]));
 for (const id of prepa.keys()) scopes.set(id, 'prepa');
 const prepaStorage = 'https://ln3dltv3md2wx5wh.private.blob.vercel-storage.com/simulacros/preparatoria-v3/';

@@ -162,6 +162,21 @@
       ]
     },
     {
+      "key": "semana4-grupo-virtual-2",
+      "curatedId": "semana4-grupo-virtual-2",
+      "scope": "semana4-grupo-virtual-2",
+      "kind": "mini",
+      "title": "Simulacro Semana 4 – Grupo Virtual 2",
+      "type": "Simulacro Semana 4",
+      "minutes": 50,
+      "questionCount": 50,
+      "split": [
+        30,
+        20,
+        0
+      ]
+    },
+    {
       "key": "prepa-01",
       "curatedId": "prepa-01",
       "scope": "prepa",
@@ -506,5 +521,5 @@
       "stage": "second"
     }
   ],
-  "version": 8
+  "version": 9
 }
