@@ -1,4 +1,4 @@
-const CACHE_NAME = 'alcocermed-main-v200-inscripcion';
+const CACHE_NAME = 'alcocermed-main-v201-semana4';
 const APP_SHELL = [
     './student-results.js?v=11',
     './student-results.css?v=1',
@@ -46,8 +46,8 @@ const APP_SHELL = [
     './flashcard-workspace.js?v=20261109-foco',
     './script.js?v=20261113-videoclases',
     './campus-login.js?v=6',
-    './campus-catalogs.js?v=2',
-    './campus-exam-engine.js?v=3',
+    './campus-catalogs.js?v=3',
+    './campus-exam-engine.js?v=4',
     './topic-evaluations.js?v=20261112-muestra',
     './topic-evaluations.css?v=6',
     './recuperar.html',
@@ -77,7 +77,7 @@ const APP_SHELL = [
     './intocables-sheets.css?v=1',
     './assets/study-art/intocables-hero.webp',
     './study-assessments.js?v=2',
-    './simulation-scope.js?v=11',
+    './simulation-scope.js?v=12',
     './simulacro-ingreso.js?v=15',
     './simulacro-library.js?v=11',
     './simulacro-library.css?v=7',
