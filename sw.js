@@ -1,4 +1,4 @@
-const CACHE_NAME = 'alcocermed-main-v201-semana4';
+const CACHE_NAME = 'alcocermed-main-v202-informacion';
 const APP_SHELL = [
     './student-results.js?v=11',
     './student-results.css?v=1',
@@ -29,6 +29,7 @@ const APP_SHELL = [
     './campus-atlas.css?v=5',
     '/device-limit.css?v=1',
     './campus-home.css?v=5',
+    './campus-information.css?v=1',
     './campus-topics.css?v=4',
     './login-polish.css?v=3',
     './campus-preview.css?v=3',
@@ -44,7 +45,7 @@ const APP_SHELL = [
     './flashcard-approved.css?v=6',
     './assets/fonts/outfit-900.woff2',
     './flashcard-workspace.js?v=20261109-foco',
-    './script.js?v=20261113-videoclases',
+    './script.js?v=20261115-informacion',
     './campus-login.js?v=6',
     './campus-catalogs.js?v=3',
     './campus-exam-engine.js?v=4',

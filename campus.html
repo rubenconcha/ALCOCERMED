@@ -435,6 +435,11 @@
     <span class="campus-course-tag">Medicina · Preparatoria Ben Carson</span>
   </header>
   <div class="campus-home-overview">
+    <aside class="campus-box campus-information-card" aria-labelledby="campus-information-card-title">
+      <div class="campus-information-card-heading"><span class="campus-information-icon" aria-hidden="true"><svg focusable="false"><use href="/assets/calendar-icons.svg#info"></use></svg></span><div><p>ADMISIÓN UMSS · 2027</p><h2 id="campus-information-card-title">Panel informativo</h2></div></div>
+      <p>Todo sobre la convocatoria de Medicina: fechas, inscripción, requisitos, temario y textos.</p>
+      <a class="campus-primary" href="/campus?seccion=informacion" onclick="openCampusInformation(); return false;">Abrir panel informativo <span aria-hidden="true">→</span></a>
+    </aside>
     <div class="campus-home-schedule">
       <section class="campus-box campus-moods" aria-labelledby="campus-moods-title">
         <div class="campus-box-heading">
@@ -586,6 +591,129 @@
         </div>
 
 </aside></div></section>
+<section id="campus-information-screen" class="campus-information hidden" aria-labelledby="campus-information-title">
+  <button type="button" class="campus-back" onclick="goHome()">← Volver al inicio</button>
+  <header class="info-hero campus-box">
+    <p class="info-kicker">MEDICINA UMSS · ADMISIÓN 2027</p>
+    <h1 id="campus-information-title" tabindex="-1">Panel informativo</h1>
+    <p class="info-intro">Tu guía para el Proceso de Suficiencia Académica (PSA). Consulta qué estudiar, cómo inscribirte y qué documentos preparar.</p>
+    <p class="info-source-note">Información de la Facultad de Medicina «Dr. Aurelio Melean». Resolución HCF N.º 199/2026, de 6 de noviembre de 2026. Verificada el <time datetime="2026-11-15">15 de noviembre de 2026</time>.</p>
+    <div class="info-highlights">
+      <div><span>Inscripciones</span><strong>19 nov. — 13 dic.</strong><small>2026 · Registro biográfico e inscripción</small></div>
+      <div><span>Examen PSA</span><strong>19 enero 2027 · 09:00</strong><small>Martes · Duración: 120 minutos</small></div>
+      <div><span>Registro biométrico</span><strong>Hasta el 18 diciembre</strong><small>2026 · Personal y obligatorio</small></div>
+    </div>
+    <div class="info-actions"><a class="campus-primary" href="https://med.umss.edu.bo/wp-content/uploads/2026/11/convocatoria-proceso-de-admision-de-nuevos-estudiantes-carrera-medicina-gestion2027.pdf" target="_blank" rel="noopener noreferrer">Ver convocatoria oficial ↗</a><a class="campus-secondary" href="https://drive.google.com/file/d/1aUsj6775EEEE66Ugvrjof99x363ewc18/view" target="_blank" rel="noopener noreferrer">Ver temario oficial ↗</a></div>
+  </header>
+  <nav class="info-nav" aria-label="Contenido del panel informativo">
+    <a href="#info-fechas">Fechas</a><a href="#info-inscripcion">Inscripción</a><a href="#info-requisitos">Requisitos y costos</a><a href="#info-temario">Temario y textos</a><a href="#info-apoyo">Material de apoyo</a><a href="#info-canales">Canales oficiales</a>
+  </nav>
+
+  <section id="info-fechas" class="campus-box info-section" aria-labelledby="info-fechas-title">
+    <div class="info-section-heading"><span class="info-number" aria-hidden="true">01</span><div><h2 id="info-fechas-title">Fechas que debes tener a mano</h2><p>Todos los horarios corresponden a Bolivia.</p></div></div>
+    <dl class="info-timeline">
+      <div><dt><time datetime="2026-11-19">19 noviembre</time> — <time datetime="2026-12-13">13 diciembre 2026</time></dt><dd><strong>Registro e inscripción</strong><p>Llena el formulario biográfico. Al imprimirlo se emitirá el día y la hora de atención en caja o la habilitación para pago electrónico.</p></dd></div>
+      <div><dt>Hasta el <time datetime="2026-12-18">viernes 18 diciembre 2026</time></dt><dd><strong>Registro biométrico obligatorio</strong><p>Asiste personalmente con tu matrícula de inscripción o comprobante de pago electrónico impreso y tu cédula de identidad original y vigente.</p></dd></div>
+      <div><dt><time datetime="2026-12-23">23 diciembre 2026</time></dt><dd><strong>Lista de postulantes registrados</strong><p>La Facultad publicará la nómina de postulantes correctamente registrados y las recomendaciones para el día de la prueba.</p></dd></div>
+      <div><dt><time datetime="2027-01-19T09:00:00-04:00">Martes 19 enero 2027 · 09:00</time></dt><dd><strong>Examen PSA · 120 minutos</strong><p>El recinto se definirá según el número de inscritos. La convocatoria recomienda llegar media hora antes: planifica tu llegada para las 08:30.</p></dd></div>
+      <div><dt><time datetime="2027-01-19">19 enero 2027</time></dt><dd><strong>Publicación de resultados</strong><p>En la página de la Facultad de Medicina y sus sitios oficiales.</p></dd></div>
+    </dl>
+    <p class="info-callout"><strong>Organiza tu tiempo:</strong> la convocatoria señala que no se ampliarán los plazos de registro e inscripción y que no habrá exámenes rezagados. Revisa los canales oficiales para conocer el recinto y cualquier comunicado posterior.</p>
+    <a class="info-source-link" href="https://med.umss.edu.bo/wp-content/uploads/2026/11/convocatoria-proceso-de-admision-de-nuevos-estudiantes-carrera-medicina-gestion2027.pdf" target="_blank" rel="noopener noreferrer">Fuente: convocatoria oficial, página 1 ↗</a>
+  </section>
+
+  <section id="info-inscripcion" class="campus-box info-section" aria-labelledby="info-inscripcion-title">
+    <div class="info-section-heading"><span class="info-number" aria-hidden="true">02</span><div><h2 id="info-inscripcion-title">Cómo inscribirte</h2><p>Completa el proceso en la UMSS dentro de las fechas de la convocatoria.</p></div></div>
+    <ol class="info-steps">
+      <li><h3>Llena el registro biográfico</h3><p>Ingresa al sistema de postulantes (SISPO / webSISS) del <strong>19 de noviembre al 13 de diciembre de 2026</strong>. Verifica cuidadosamente tus datos: el formulario impreso tiene carácter de declaración jurada.</p><a href="https://websis.umss.edu.bo/serv_postulantes.asp" target="_blank" rel="noopener noreferrer">Abrir sistema de postulantes UMSS ↗</a></li>
+      <li><h3>Espera la validación e imprime el formulario</h3><p>La Facultad realiza la validación, que puede tomar aproximadamente hasta 24 horas. La impresión indica el día y la hora de atención en caja o la habilitación de pago electrónico. La Facultad dispondrá de un punto de ayuda para el llenado biográfico.</p></li>
+      <li><h3>Prepara los documentos y paga la matrícula</h3><p>Reúne los requisitos que correspondan a tu nacionalidad. La caja de la Facultad atiende de <strong>lunes a viernes, de 08:00 a 15:00</strong>. La convocatoria también prevé pago electrónico mediante QR durante el periodo de inscripción. Sigue las indicaciones de tu formulario.</p></li>
+      <li><h3>Realiza tu registro biométrico</h3><p>Es <strong>personal y obligatorio hasta el 18 de diciembre de 2026</strong>. Lleva tu cédula original vigente y la matrícula de inscripción o el comprobante de pago electrónico impreso. La inscripción puede hacerse mediante apoderado; el registro biométrico requiere tu presencia.</p></li>
+      <li><h3>Comprueba tu registro y el lugar del examen</h3><p>Consulta la lista que se publicará el <strong>23 de diciembre</strong> y las recomendaciones oficiales. Antes del examen, confirma el recinto asignado en los canales de la Facultad.</p></li>
+    </ol>
+    <p class="info-callout">La inscripción al PSA se realiza en la <strong>UMSS</strong>. Tu cuenta o inscripción al curso de AlcocerMed / Preparatoria Ben Carson no sustituye ese trámite.</p>
+  </section>
+
+  <section id="info-requisitos" class="campus-box info-section" aria-labelledby="info-requisitos-title">
+    <div class="info-section-heading"><span class="info-number" aria-hidden="true">03</span><div><h2 id="info-requisitos-title">Requisitos y costo de matrícula</h2><p>Para todos: formulario de registro biográfico debidamente llenado y validado por la Facultad.</p></div></div>
+    <div class="info-two-columns">
+      <article class="info-subcard"><h3>Postulantes nacionales</h3><p class="info-price">Bs 1.300 <small>Matrícula del examen PSA</small></p><ul>
+        <li>Fotocopia simple del certificado de nacimiento.</li>
+        <li>Fotocopia simple de la cédula de identidad.</li>
+        <li>Fotocopia del diploma de bachiller.</li>
+      </ul><p><strong>Bachilleres de la gestión 2026:</strong> boletín de notas o certificado emitido por la unidad educativa que acredite estar cursando el último curso de secundaria, con los sellos y firmas correspondientes.</p></article>
+      <article class="info-subcard"><h3>Postulantes extranjeros</h3><p class="info-price">Bs 10.000 <small>Matrícula del examen PSA</small></p><ul>
+        <li>Fotocopia del certificado de equivalencia de notas y/o diploma de bachiller, legalizada por el país de origen y la Cancillería de Bolivia.</li>
+        <li>Fotocopia del pasaporte.</li>
+        <li>Certificado de Registro Judicial de Antecedentes Penales (REJAP) original o equivalente emitido por el país de origen.</li>
+        <li>Certificado médico original en formulario oficial.</li>
+      </ul><p>La convocatoria exige documentación legalizada por el país de origen y la Cancillería de Bolivia.</p></article>
+    </div>
+    <div class="info-folder"><h3>Cómo presentar tu carpeta</h3><p>Entrega la documentación <strong>foliada en el orden de los requisitos</strong>, en un <strong>fólder amarillo con nepaco</strong>. Rotúlalo con:</p><ul><li>Apellidos y nombres.</li><li>Cédula de identidad.</li><li>Carrera: Licenciatura en Medicina.</li></ul></div>
+    <a class="info-source-link" href="https://med.umss.edu.bo/wp-content/uploads/2026/11/convocatoria-proceso-de-admision-de-nuevos-estudiantes-carrera-medicina-gestion2027.pdf" target="_blank" rel="noopener noreferrer">Revisar requisitos completos en la convocatoria ↗</a>
+  </section>
+
+  <section id="info-temario" class="campus-box info-section" aria-labelledby="info-temario-title">
+    <div class="info-section-heading"><span class="info-number" aria-hidden="true">04</span><div><h2 id="info-temario-title">Las siete áreas del examen</h2><p>Abre cada materia para consultar el alcance y su bibliografía.</p></div></div>
+    <p>Esta selección corresponde a la <a href="https://drive.google.com/file/d/1aUsj6775EEEE66Ugvrjof99x363ewc18/view" target="_blank" rel="noopener noreferrer">Lista de contenidos PSA 2027 de Medicina ↗</a>. Los enlaces siguientes llevan a los archivos publicados por la Facultad o el Ministerio de Educación.</p>
+    <div class="info-subjects">
+      <details><summary><span>Morfofunción<small>Saladin · 20 capítulos seleccionados</small></span></summary><div class="info-subject-body">
+        <p><strong>Anatomía y fisiología. La unidad entre forma y función</strong>, Kenneth S. Saladin, <strong>sexta edición</strong>, McGraw-Hill Interamericana.</p>
+        <ul class="info-chapters"><li>Cap. 1 · Temas principales de anatomía y fisiología.</li><li>Cap. 5 · Histología.</li><li>Cap. 6 · Sistema tegumentario.</li><li>Cap. 8 · Sistema óseo.</li><li>Cap. 9 · Articulaciones.</li><li>Cap. 10 · Sistema muscular.</li><li>Cap. 13 · Médula espinal, nervios raquídeos y reflejos somáticos.</li><li>Cap. 14 · Encéfalo y pares craneales.</li><li>Cap. 15 · Sistema nervioso autónomo y reflejos viscerales.</li><li>Cap. 16 · Órganos de los sentidos.</li><li>Cap. 17 · Sistema endocrino.</li><li>Cap. 18 · Aparato circulatorio: sangre.</li><li>Cap. 19 · Aparato circulatorio: corazón.</li><li>Cap. 20 · Vasos sanguíneos y circulación.</li><li>Cap. 21 · Sistemas linfático e inmunitario.</li><li>Cap. 22 · Aparato respiratorio.</li><li>Cap. 23 · Aparato urinario.</li><li>Cap. 25 · Aparato digestivo.</li><li>Cap. 27 · Aparato reproductor masculino.</li><li>Cap. 28 · Aparato reproductor femenino.</li></ul>
+        <a class="campus-secondary" href="https://drive.google.com/file/d/17y9EejXphTS8GSOVJ2-Xzv-8KIbtpBmQ/view" target="_blank" rel="noopener noreferrer">Abrir texto publicado por la UMSS ↗</a>
+      </div></details>
+      <details><summary><span>Biología celular<small>Alfonso Calvo · 14 capítulos seleccionados</small></span></summary><div class="info-subject-body">
+        <p><strong>Biología celular biomédica</strong>, Dr. Alfonso Calvo.</p>
+        <ul class="info-chapters"><li>Cap. 3 · Estructura de la membrana plasmática.</li><li>Cap. 5 · Macrotransporte a través de la membrana plasmática.</li><li>Cap. 6 · Especializaciones de la membrana e interacción con el entorno.</li><li>Cap. 7 · Núcleo: cromatina y conservación de la información genética.</li><li>Cap. 8 · Núcleo: transcripción y maduración del ARN.</li><li>Cap. 9 · Síntesis y modificación de proteínas.</li><li>Cap. 10 · Sistema de endomembranas celulares.</li><li>Cap. 11 · Mitocondrias y peroxisomas.</li><li>Cap. 12 · Citoesqueleto.</li><li>Cap. 13 · Mecanismos de señalización celular.</li><li>Cap. 14 · Ciclo celular y destinos vitales de la célula.</li><li>Cap. 15 · División celular y muerte programada.</li><li>Cap. 17 · Bases celulares de la respuesta inmunitaria.</li><li>Cap. 18 · Células madre y sus aplicaciones terapéuticas.</li></ul>
+        <a class="campus-secondary" href="https://drive.google.com/file/d/1VFAULiAKsCoxq6mpcR29uyYj-InHIIdv/view" target="_blank" rel="noopener noreferrer">Abrir texto publicado por la UMSS ↗</a>
+      </div></details>
+      <details><summary><span>Educación en Salud e Investigación<small>Compendio · Tres partes indicadas por la Facultad</small></span></summary><div class="info-subject-body">
+        <p><strong>Compendio de Educación en Salud e Investigación</strong>, Departamento de Medicina Social y Familiar.</p>
+        <ul><li>Parte I · Educación en Salud: <strong>páginas 2–31</strong>.</li><li>Parte II · Investigación en Salud y Proceso Investigativo: <strong>páginas 32–73</strong>.</li><li>Parte III · Elementos Básicos de Estadística Descriptiva: <strong>páginas 84–189</strong>.</li></ul>
+        <p>Los intervalos se conservan tal como aparecen en el temario oficial.</p>
+        <a class="campus-secondary" href="https://drive.google.com/file/d/1VYlLDQmS5nW1aTCeu4Iw_f7yrCwxkaTV/view" target="_blank" rel="noopener noreferrer">Abrir compendio publicado por la UMSS ↗</a>
+      </div></details>
+      <details><summary><span>Matemáticas<small>Programa del Ministerio · Páginas 38–45</small></span></summary><div class="info-subject-body">
+        <p>El temario remite a las <strong>páginas impresas 38–45</strong> de <em>Planes y programas de Educación Secundaria Comunitaria Productiva 2023</em> (R.M. 1040/2022).</p><p>Consulta allí el contenido por año y trimestre. Es el programa de estudio señalado por la UMSS; los textos de apoyo de la prepa se encuentran en el apartado siguiente.</p>
+        <a class="campus-secondary" href="https://red.minedu.gob.bo/repositorio/fuente/4096.pdf" target="_blank" rel="noopener noreferrer">Abrir programa oficial del Ministerio ↗</a>
+      </div></details>
+      <details><summary><span>Física<small>Programa del Ministerio · Páginas 29–34</small></span></summary><div class="info-subject-body">
+        <p>El temario remite a las <strong>páginas impresas 29–34</strong> de <em>Planes y programas de Educación Secundaria Comunitaria Productiva 2023</em> (R.M. 1040/2022).</p><p>Consulta el programa completo de esas páginas para organizar el estudio por año y trimestre.</p>
+        <a class="campus-secondary" href="https://red.minedu.gob.bo/repositorio/fuente/4096.pdf" target="_blank" rel="noopener noreferrer">Abrir programa oficial del Ministerio ↗</a>
+      </div></details>
+      <details><summary><span>Química<small>Programa del Ministerio · Páginas 34–38</small></span></summary><div class="info-subject-body">
+        <p>El temario remite a las <strong>páginas impresas 34–38</strong> de <em>Planes y programas de Educación Secundaria Comunitaria Productiva 2023</em> (R.M. 1040/2022).</p><p>Consulta el programa completo de esas páginas para organizar el estudio por año y trimestre.</p>
+        <a class="campus-secondary" href="https://red.minedu.gob.bo/repositorio/fuente/4096.pdf" target="_blank" rel="noopener noreferrer">Abrir programa oficial del Ministerio ↗</a>
+      </div></details>
+      <details><summary><span>Comprensión lectora<small>Siete habilidades incluidas en el temario</small></span></summary><div class="info-subject-body">
+        <ul><li>Reconocimiento textual.</li><li>Identificación de información explícita a través de sinónimos y paráfrasis.</li><li>Nivel inferencial.</li><li>Determinación de significados de un texto.</li><li>Síntesis de ideas centrales.</li><li>Identificación de la jerarquía de ideas.</li><li>Función del elemento textual.</li></ul><p>La lista oficial describe estas habilidades sin indicar un libro específico para esta área.</p>
+      </div></details>
+    </div>
+    <div class="info-actions"><a class="campus-secondary" href="https://drive.google.com/drive/folders/1zTsGN213QFJHmzGQL7YeycJKUBPZRSJq" target="_blank" rel="noopener noreferrer">Abrir carpeta bibliográfica oficial UMSS ↗</a></div>
+  </section>
+
+  <section id="info-apoyo" class="campus-box info-section" aria-labelledby="info-apoyo-title">
+    <div class="info-section-heading"><span class="info-number" aria-hidden="true">05</span><div><h2 id="info-apoyo-title">Material de apoyo de la prepa</h2><p>Matemáticas, Física y Química · Preparatoria Ben Carson</p></div></div>
+    <p>Reunimos los seis PDF trabajados para el curso: un texto y un plan de estudio por materia. Los planes reúnen las páginas del programa del Ministerio; los textos son material de apoyo para prepararte. El alcance oficial del PSA es el indicado por la UMSS en el apartado anterior.</p>
+    <div class="info-material-grid">
+      <article class="info-subcard"><h3>Matemáticas</h3><p>Texto de apoyo y plan de estudio.</p><a href="https://drive.google.com/file/d/1MYuD3vvK9tIIBCbyFe1gW0t688ST82KH/view" target="_blank" rel="noopener noreferrer">Abrir texto de Matemáticas ↗</a><a href="https://drive.google.com/file/d/1R3P0K54T5BMrUOMy9Y-eFIhh061PhE6c/view" target="_blank" rel="noopener noreferrer">Abrir plan · págs. 38–45 ↗</a></article>
+      <article class="info-subcard"><h3>Física</h3><p>Texto de apoyo y plan de estudio.</p><a href="https://drive.google.com/file/d/17BTPwx1VEGEYa3pPsrL9mQXahZB1mJk4/view" target="_blank" rel="noopener noreferrer">Abrir texto de Física ↗</a><a href="https://drive.google.com/file/d/1_DTdqfKHGxG0zi_J0Y_aIlNyHAUBDwBg/view" target="_blank" rel="noopener noreferrer">Abrir plan · págs. 29–34 ↗</a></article>
+      <article class="info-subcard"><h3>Química</h3><p>Texto de apoyo y plan de estudio.</p><a href="https://drive.google.com/file/d/1FyNaGKW30jGxT0sOrRdYdFXyRefV8F2R/view" target="_blank" rel="noopener noreferrer">Abrir texto de Química ↗</a><a href="https://drive.google.com/file/d/1ZzKQLzsgqr8wA41viRr3DkXyZIHg6PNs/view" target="_blank" rel="noopener noreferrer">Abrir plan · págs. 34–38 ↗</a></article>
+    </div>
+    <p class="info-source-note">Los PDF se abren en Google Drive en una pestaña nueva. Acceso de lectura sin iniciar sesión, comprobado el 15 de noviembre de 2026.</p>
+    <a class="info-source-link" href="https://drive.google.com/drive/folders/1SNYo9uLhDmKU6NxxMSylue4Cl7l-aEiw" target="_blank" rel="noopener noreferrer">Ver la carpeta completa de la prepa ↗</a>
+  </section>
+
+  <section id="info-canales" class="campus-box info-section" aria-labelledby="info-canales-title">
+    <div class="info-section-heading"><span class="info-number" aria-hidden="true">06</span><div><h2 id="info-canales-title">Sigue la información oficial</h2><p>Consulta aquí las listas, resultados, recinto y nuevos comunicados.</p></div></div>
+    <div class="info-two-columns">
+      <div><h3>Facultad de Medicina UMSS</h3><ul class="info-link-list"><li><a href="https://med.umss.edu.bo/" target="_blank" rel="noopener noreferrer">Página oficial de la Facultad ↗</a></li><li><a href="https://whatsapp.com/channel/0029VbBDbXAF1YlX8yuMO12E" target="_blank" rel="noopener noreferrer">Canal oficial de WhatsApp ↗</a></li><li><a href="https://t.me/PSA_MED_UMMS_27" target="_blank" rel="noopener noreferrer">Canal de Telegram PSA Medicina 2027 ↗</a></li><li><a href="https://drive.google.com/file/d/1pzqVlMbepQkLxYdjWU_M-3MhMKfnb2Zl/view" target="_blank" rel="noopener noreferrer">Documento de canales oficiales, incluido Facebook ↗</a></li></ul></div>
+      <div class="info-contact"><h3>Contacto de la Facultad</h3><p>Av. Aniceto Arce N.º 0371, Cochabamba, Bolivia.</p><p>Teléfonos: <a href="tel:+59144231508">4231508</a> · <a href="tel:+59144232206">4232206</a></p><p>Correo: <a href="mailto:medicina@umss.edu.bo">medicina@umss.edu.bo</a></p><p class="info-source-note">Datos impresos en la convocatoria oficial.</p></div>
+    </div>
+    <p class="info-callout">Este panel organiza la información para estudiantes de AlcocerMed. Para trámites y actualizaciones de la admisión, consulta siempre los documentos y canales de la Facultad.</p>
+  </section>
+  <footer class="info-footer"><span>Fuentes y enlaces revisados el 15 de noviembre de 2026.</span><button type="button" class="campus-back" onclick="goHome()">← Volver al inicio</button></footer>
+</section>
             <section class="study-library campus-browser hidden" id="study-library" aria-labelledby="library-title">
 <div class="home-section-head campus-page-head"><div><p class="library-kicker">FLASHCARDS</p><h2 id="library-title">Elige una materia</h2></div><p id="library-instruction">Selecciona una materia para ver sus temas.</p></div>
 <button id="library-back" class="campus-back" data-campus-load="flashcards" onclick="openStudyLibrary()" hidden>← Materias</button><div id="library-subjects" class="subject-picker" aria-label="Materias">
@@ -1728,6 +1856,7 @@
         <script data-campus-assets="exam-engine entrance-attempt" src="campus-exam-engine.js?v=4"></script>
         <link rel="stylesheet" data-campus-assets="campus" href="campus-navigation.css?v=4">
         <link rel="stylesheet" data-campus-assets="campus" href="campus-home.css?v=5">
+        <link rel="stylesheet" data-campus-assets="campus" href="campus-information.css?v=1">
         <link rel="stylesheet" data-campus-assets="campus" href="campus-topics.css?v=4">
         <link rel="stylesheet" data-campus-assets="campus" href="study-depth.css?v=3">
         <link rel="stylesheet" data-campus-assets="campus" href="study-media.css?v=20261021-visual5c">
@@ -1737,7 +1866,7 @@
         <script data-campus-assets="campus" src="campus-section-tracking.js?v=1"></script>
         <script data-campus-assets="campus" src="question-review.js?v=15"></script>
         <script data-campus-assets="campus" src="study-media.js?v=20261021-visual5b"></script>
-        <script data-campus-assets="campus" src="script.js?v=20261113-videoclases"></script>
+        <script data-campus-assets="campus" src="script.js?v=20261115-informacion"></script>
         <script data-campus-assets="campus" src="study-assessments.js?v=2"></script>
         <script data-campus-assets="campus" src="study-calendar-data.js?v=7"></script>
         <script data-campus-assets="campus" src="campus-shell.js?v=5"></script>

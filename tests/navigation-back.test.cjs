@@ -49,7 +49,7 @@ test('los botones Volver del campus regresan por el recorrido y Volver al inicio
   const end = source.indexOf('function updateHomeStats()', start);
   assert.ok(start >= 0 && end > start);
   const visible = new Set(['home-screen']);
-  const ids = ['home-screen', 'resource-browser', 'game-quiz'];
+  const ids = ['home-screen', 'campus-information-screen', 'resource-browser', 'game-quiz'];
   const elements = Object.fromEntries(ids.map(id => [id, {
     classList: {
       add: () => visible.delete(id),
@@ -73,4 +73,13 @@ test('los botones Volver del campus regresan por el recorrido y Volver al inicio
   context.window.goHome();
   context.window.goBack();
   assert.ok(visible.has('home-screen'));
+  context.window.openCampusInformation();
+  assert.deepEqual([...visible], ['campus-information-screen']);
+  context.window.goBack();
+  assert.deepEqual([...visible], ['home-screen']);
+  context.window.openCampusInformation();
+  context.showScreen('resource-browser');
+  assert.deepEqual([...visible], ['resource-browser']);
+  context.window.goHome();
+  assert.deepEqual([...visible], ['home-screen']);
 });

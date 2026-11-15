@@ -144,6 +144,7 @@ function enterVerifiedApp(user) {
     const section = campusParams.get('seccion');
     if (section === 'atlas' && typeof openAtlas === 'function') openAtlas();
     else if (section === 'textos-oficiales') window.openOfficialTexts();
+    else if (section === 'informacion') window.openCampusInformation();
     else if (section === 'practica-suficiencia') showScreen('sufficiency-practice-screen');
     else if (section === 'calendario') {
         const day = campusParams.get('dia');
@@ -318,7 +319,7 @@ function showScreen(screenId, fromBack) {
     }
     if (screenId !== 'game-quiz' && quizTimer) clearInterval(quizTimer);
     window.scrollTo({top:0,behavior:'instant'});
-    const screens = ['student-results-screen', 'suficiencia-screen', 'home-screen', 'study-library', 'resource-browser', 'study-area', 'game-quiz', 'game-hangman', 'banco-screen', 'simulacro-screen', 'evaluacion-screen', 'videoclases-screen', 'intocables-screen', 'intocables-hub-screen', 'resumenes-screen', 'past-exams-screen', 'atlas-screen', 'official-texts-screen', 'sufficiency-practice-screen', 'study-calendar-screen', 'campus-contact-screen'];
+    const screens = ['student-results-screen', 'suficiencia-screen', 'home-screen', 'campus-information-screen', 'study-library', 'resource-browser', 'study-area', 'game-quiz', 'game-hangman', 'banco-screen', 'simulacro-screen', 'evaluacion-screen', 'videoclases-screen', 'intocables-screen', 'intocables-hub-screen', 'resumenes-screen', 'past-exams-screen', 'atlas-screen', 'official-texts-screen', 'sufficiency-practice-screen', 'study-calendar-screen', 'campus-contact-screen'];
     screens.forEach(function (id) {
         const el = document.getElementById(id);
         if (el) {
@@ -343,6 +344,11 @@ function showScreen(screenId, fromBack) {
 }
 
 window.openOfficialTexts = () => showScreen('official-texts-screen');
+window.openCampusInformation = () => {
+    if (showScreen('campus-information-screen') !== false) {
+        document.getElementById('campus-information-title')?.focus({ preventScroll: true });
+    }
+};
 window.openResumenes = function () {
     showScreen('resumenes-screen');
 };
