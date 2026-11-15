@@ -115,11 +115,13 @@
       "id": "quimica-texto",
       "title": "Química · Texto de apoyo",
       "path": "/documentos/umss-2027/quimica-texto.pdf",
-      "source": "https://drive.google.com/file/d/1FyNaGKW30jGxT0sOrRdYdFXyRefV8F2R/view",
+      "source": "Archivo proporcionado por el propietario",
       "saved": "2026-11-15",
-      "bytes": 10027629,
+      "bytes": 10046056,
       "pages": 134,
-      "sha256": "d0709273125fee332beb96e439a270b43b6bbd58c3ece6311226aecf4a65496c"
+      "sha256": "5894733f8a2f62cf5cc2edcbc24e5c720e9aa96bc6f2de5d87780cddcdce82ed",
+      "sourceFile": "Quimica_Texto (1).pdf",
+      "revision": "5894733f8a2f"
     },
     {
       "id": "quimica-plan",

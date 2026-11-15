@@ -1,4 +1,4 @@
-const CACHE_NAME = 'alcocermed-main-v204-lectura2027';
+const CACHE_NAME = 'alcocermed-main-v205-textos-finales';
 const APP_SHELL = [
     './student-results.js?v=11',
     './student-results.css?v=1',

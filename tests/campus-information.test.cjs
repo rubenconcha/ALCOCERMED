@@ -20,9 +20,9 @@ function setup(load=async()=>{}, open=async()=>{}) {
     }
   };
   vm.runInNewContext(fs.readFileSync('campus-information.js','utf8'),context);
-  function click(slug='temario-oficial',options={}){
+  function click(slug='temario-oficial',options={},query=''){
     let prevented=false;
-    const link={href:`https://www.alcocermed.com/documentos/umss-2027/${slug}.pdf`,dataset:{infoDocument:slug}};
+    const link={href:`https://www.alcocermed.com/documentos/umss-2027/${slug}.pdf${query}`,dataset:{infoDocument:slug}};
     node('campus-information-screen').handlers.click({button:0,target:{closest:()=>link},preventDefault(){prevented=true;},...options});
     return prevented;
   }
@@ -41,20 +41,21 @@ test('los 13 PDF están íntegros y todos los enlaces de lectura usan el alojami
     assert.equal(bytes.length,doc.bytes,doc.id);
     assert.equal(bytes.subarray(0,4).toString(),'%PDF');
     assert.equal(createHash('sha256').update(bytes).digest('hex'),doc.sha256,doc.id);
-    assert.ok(panel.includes('href="'+doc.path+'"'),doc.id);
+    const href=doc.path+(doc.revision?'?v='+doc.revision:'');
+    assert.ok(panel.includes('href="'+href+'"'),doc.id);
   }
 });
 
 test('el documento abre dentro del campus con lectura parcial y descarga local',async()=>{
   const t=setup();
-  assert.equal(t.click(),true);
+  assert.equal(t.click('quimica-texto',{},'?v=5894733f8a2f'),true);
   await flush();
   assert.equal(t.node('campus-information-reader').open,true);
   assert.equal(t.node('info-reader-status').hidden,true);
   const call=t.calls.find(c=>c.url);
-  assert.equal(call.url,'https://www.alcocermed.com/documentos/umss-2027/temario-oficial.pdf');
+  assert.equal(call.url,'https://www.alcocermed.com/documentos/umss-2027/quimica-texto.pdf?v=5894733f8a2f');
   assert.equal(call.options.rangeOnly,true);
-  assert.equal(t.node('info-reader-download').download,'temario-oficial.pdf');
+  assert.equal(t.node('info-reader-download').download,'quimica-texto.pdf');
   assert.equal(t.node('info-reader-native').href,call.url);
   t.context.window.CampusInformation.close();
   assert.equal(t.node('campus-information-reader').open,false);
