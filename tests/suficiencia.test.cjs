@@ -6,11 +6,45 @@ const C = require('../suficiencia-core.js');
 const bank = require('../api/_sufficiency/bank.json');
 const handler = require('../api/suficiencia.js');
 
-test('980 questions, four areas and forty complete readings with page references', () => {
+test('six UMSS 2027 reading papers cover all seven syllabus skills with complete, distinct passages', () => {
+    const papers = bank.levelPapers.filter(p => p.id.startsWith('nivel-lectura-umss2027-'));
+    const expected = new Set(['Reconocimiento textual', 'Información explícita mediante sinónimos y paráfrasis',
+        'Nivel inferencial', 'Determinación de significados de un texto', 'Síntesis de ideas centrales',
+        'Jerarquía de ideas', 'Función del elemento textual']);
+    assert.equal(papers.length, 6);
+    const used = new Set();
+    for (const paper of papers) {
+        const rows = C.select(bank, 'simulacro:' + paper.id, 19);
+        assert.equal(rows.length, 10);
+        assert.equal(new Set(rows.map(q => q.passageId)).size, 2);
+        assert.deepEqual(new Set(rows.map(q => q.topic)), expected);
+        assert.deepEqual(C.grade(rows, Object.fromEntries(rows.map(q => [q.id, q.correct]))), {
+            correct: 10, wrong: 0, skipped: 0, total: 10,
+            subjects: { lectura: { correct: 10, wrong: 0, skipped: 0, total: 10 } }, percent: 100,
+        });
+        const saved = { owner: 'reading-fixture', version: bank.version, area: 'simulacro:' + paper.id,
+            ids: rows.map(q => q.id), answers: { [rows[0].id]: rows[0].correct }, deadline: Date.now() + 60000 };
+        assert.equal(C.restore(saved, bank, 'reading-fixture').answers[rows[0].id], rows[0].correct);
+        assert.equal(C.restore(saved, bank, 'another-account'), null);
+        for (const q of rows) {
+            assert.ok(!used.has(q.id)); used.add(q.id);
+            assert.equal(q.subject, 'lectura');
+            assert.match(q.source.chapter, /^(5|6)\./);
+            assert.equal(q.source.syllabusPdfPage, 2);
+            assert.equal(q.source.original, false);
+            assert.ok(q.source.pdfPages.every(page => page >= 172 && page <= 224));
+        }
+    }
+    assert.equal(used.size, 60);
+    assert.equal(bank.version, 1); // Saved attempts keep their version and original question ids.
+    assert.deepEqual(papers.map(p => p.minutes), [20, 20, 25, 25, 30, 30]);
+});
+
+test('1040 questions, four areas and fifty-two complete readings with page references', () => {
     assert.equal(C.validate(bank), true);
-    assert.equal(bank.questions.length, 980);
-    assert.deepEqual(Object.keys(C.subjects).map(s => bank.questions.filter(q => q.subject === s).length), [260, 260, 260, 200]);
-    assert.equal(bank.passages.length, 40);
+    assert.equal(bank.questions.length, 1040);
+    assert.deepEqual(Object.keys(C.subjects).map(s => bank.questions.filter(q => q.subject === s).length), [260, 260, 260, 260]);
+    assert.equal(bank.passages.length, 52);
     assert.equal(bank.source.institution, 'UMSA');
     assert.equal(bank.source.originalPatternIncluded, false);
     for (const q of bank.questions) {
@@ -123,7 +157,7 @@ test('active subscriber receives validated private bank, with bearer forwarded o
             return { ok: true, json: async () => ({ ready: true, premium: true, expires_at: '2099-01-01' }) };
         };
         const res = response(); await handler({ method: 'GET', headers: { authorization: 'Bearer student-token' }, query: {} }, res);
-        assert.equal(res.code, 200); assert.equal(JSON.parse(res.body).questions.length, 980);
+        assert.equal(res.code, 200); assert.equal(JSON.parse(res.body).questions.length, 1040);
         assert.equal(res.headers['Cache-Control'], 'private, no-store');
         const official = response();
         await handler({ method: 'GET', headers: { authorization: 'Bearer student-token' }, query: { collection: 'umsa-2026' } }, official);
@@ -267,13 +301,13 @@ test('new content is explicit practice with source anchors, not attributed to an
         assert.ok(!/\b(?:NaN|Infinity|undefined|null)\b/.test([q.text, ...q.options, q.explanation].join(' ')));
     }
     assert.equal(new Set(bank.questions.filter(q => q.subject !== 'lectura').map(q => q.text)).size, 780);
-    assert.equal(new Set(bank.passages.map(p => p.text)).size, 40);
+    assert.equal(new Set(bank.passages.map(p => p.text)).size, 52);
     for (const p of bank.passages) {
         assert.ok(p.text.split(/\s+/).length >= 90);
         assert.equal(p.source.author, 'Kenneth S. Saladin');
         assert.deepEqual(p.source.printedPages, p.source.pdfPages.map(n => n - 28));
     }
-    assert.equal(bank.statistics.newPractice, 858);
+    assert.equal(bank.statistics.newPractice, 918);
 });
 
 test('508 generated keys match the independent numerical and symbolic verification across 59 problem families', () => {
@@ -302,9 +336,9 @@ test('paper integrity rejects split texts, unknown questions, repeated identifie
     assert.throws(() => C.select(bank, 'simulacro:missing', 1), /no encontrado/);
 });
 
-test('all 980 questions have beginner lessons and the final answer agrees with the preserved key', () => {
+test('all 1040 questions have beginner lessons and the final answer agrees with the preserved key', () => {
     assert.equal(bank.teachingRevision, 1);
-    assert.equal(bank.questions.length, 980);
+    assert.equal(bank.questions.length, 1040);
     for (const q of bank.questions) {
         const s = q.solution;
         assert.equal(s.level, 'desde-cero', q.id);

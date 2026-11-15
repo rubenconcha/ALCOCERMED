@@ -19,7 +19,7 @@
         return labels[value] || (value.startsWith('texto:') ? bank?.passages.find(p => p.id === value.slice(6))?.title : 'Simulacro');
     };
     const button = (action, text, extra = '') => `<button type="button" class="sf-button ${extra}" data-sf="${action}">${text}</button>`;
-    const header = () => `<div class="banco-header sf-heading"><button type="button" class="btn-back-game" data-sf="topics" aria-label="Volver a simulacros"><i class="fas fa-arrow-left" aria-hidden="true"></i> volver</button><div><h1 class="banco-title"><svg class="study-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg?v=2#bank"></use></svg> Práctica por materia</h1><p class="banco-subtitle">Elige materia y tema. La prueba usa preguntas difíciles y la revisión se abre al terminar.</p></div></div>`;
+    const header = () => `<div class="banco-header sf-heading"><button type="button" class="btn-back-game" data-sf="topics" aria-label="Volver a simulacros"><i class="fas fa-arrow-left" aria-hidden="true"></i> volver</button><div><h1 class="banco-title"><svg class="study-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg?v=2#bank"></use></svg> Práctica por materia</h1><p class="banco-subtitle">${catalogueMode==='config'?'Elige materia y tema. La prueba usa preguntas difíciles y la revisión se abre al terminar.':'Elige un simulacro. Consulta la dificultad y el tiempo de cada prueba; revisa las respuestas al terminar.'}</p></div></div>`;
     function stopClock() { clearInterval(clock); clock = null; }
     function cancelPreparation() {
         if (preparationTimer) clearTimeout(preparationTimer);
@@ -241,10 +241,10 @@
                 return;
             }
             const medicineNotice = hasMedicine ? '' : `<div class="sf-notice" role="status">No pudimos cargar las materias de Medicina. ${button('reload','Volver a cargar')}</div>`;
-            root.innerHTML=header()+configurationControls()+medicineNotice+progressPanel()+`<div class="sf-bank-links">${button('legacy','Ver simulacros anteriores')}${typeof openEntranceLibrary==='function'?button('topics','Simulacros completos y semanales'):''}</div>`;
+            root.innerHTML=header()+configurationControls()+medicineNotice+progressPanel()+`<div class="sf-bank-links">${bank.levelPapers?.some(p=>p.id.startsWith('nivel-lectura-umss2027-'))?button('reading2027','Nuevos simulacros de Lectura · UMSS 2027'):''}${button('legacy','Ver todos los simulacros')}${typeof openEntranceLibrary==='function'?button('topics','Simulacros completos y semanales'):''}</div>`;
         } else {
             root.classList.remove?.('sf-bank-layout');
-            root.innerHTML=header()+`<div class="sf-legacy-heading"><h2>Simulacros anteriores</h2>${button('config','Volver al selector')}</div><div class="sf-catalogue-filter"><label for="sf-area-filter">Materia<select id="sf-area-filter"><option value="integral">Todos</option>${Object.entries(C.subjects).map(([id,name])=>`<option value="${id}" ${area===id?'selected':''}>${name}</option>`).join('')}</select></label><label for="sf-search">Buscar simulacro<input id="sf-search" type="search" placeholder="Nombre o número" value="${esc(catalogueQuery)}"></label><p data-sf-status role="status" aria-live="polite"></p></div><div class="sf-catalogue" data-sf-cards></div><nav class="sf-pagination" data-sf-pagination aria-label="Páginas de simulacros"></nav>`;
+            root.innerHTML=header()+`<div class="sf-legacy-heading"><h2>Simulacros de práctica</h2>${button('config','Volver al selector')}</div><div class="sf-catalogue-filter"><label for="sf-area-filter">Materia<select id="sf-area-filter"><option value="integral">Todos</option>${Object.entries(C.subjects).map(([id,name])=>`<option value="${id}" ${area===id?'selected':''}>${name}</option>`).join('')}</select></label><label for="sf-search">Buscar simulacro<input id="sf-search" type="search" placeholder="Nombre o número" value="${esc(catalogueQuery)}"></label><p data-sf-status role="status" aria-live="polite"></p></div><div class="sf-catalogue" data-sf-cards></div><nav class="sf-pagination" data-sf-pagination aria-label="Páginas de simulacros"></nav>`;
             renderCatalogueCards();
         }
         if(scroll)root.scrollIntoView({block:'start',behavior:'instant'});
@@ -408,6 +408,12 @@
             catalogueMode = 'config';
             catalogue();
             prepareConfiguration();
+            if(attempt&&!attempt.finished)startClock();
+            return;
+        }
+        if (action === 'reading2027') {
+            cancelPreparation();
+            catalogueMode='legacy';area='lectura';cataloguePage=0;catalogueQuery='UMSS 2027';catalogue();
             if(attempt&&!attempt.finished)startClock();
             return;
         }

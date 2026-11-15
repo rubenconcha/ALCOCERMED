@@ -23,5 +23,6 @@ subprocess.run([sys.executable,str(Path(__file__).parent/'teach_steps.py')],chec
 subprocess.run([sys.executable,str(Path(__file__).parent/'build_guided.py')],check=True,cwd=ROOT)
 subprocess.run([sys.executable,str(Path(__file__).parent/'build_beginner.py')],check=True,cwd=ROOT)
 subprocess.run([sys.executable,str(Path(__file__).parent/'build_levels.py')],check=True,cwd=ROOT)
+subprocess.run([sys.executable,str(Path(__file__).parent/'reading_umss_2027.py'),'--source-pdf',str(args.source_pdf.resolve())],check=True,cwd=ROOT)
 
 print('Rebuild complete: original practice, beginner exercises and level papers. Original PDFs unchanged.')

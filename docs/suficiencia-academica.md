@@ -1,5 +1,15 @@
 # Simulacro por materia y nivel
 
+## Lectura comprensiva · PSA Medicina UMSS 2027
+
+Se añadieron seis simulacros de práctica de AlcocerMed, con doce lecturas completas y sesenta preguntas nuevas. Son dos pruebas fáciles de 20 minutos, dos intermedias de 25 y dos difíciles de 30. Cada una contiene diez preguntas, mantiene juntas las cinco preguntas de cada lectura y cubre las siete habilidades de la lista oficial de contenidos PSA 2027 (página PDF 2): reconocimiento textual; información explícita por sinónimos y paráfrasis; inferencia; significados; síntesis; jerarquía de ideas y función de elementos textuales. La dificultad y los tiempos son orientativos de práctica.
+
+Las lecturas son adaptaciones propias de los capítulos 5, Histología, y 6, Sistema tegumentario, de Saladin, sexta edición, incluidos en el temario UMSS 2027. Cada lectura y pregunta conserva sección, página impresa y página PDF. Las analogías añadidas se identifican como didácticas. Las respuestas se justifican con párrafos de la lectura; no requieren información externa al pasaje. No se presentan como preguntas oficiales de admisión.
+
+En Simulacros → Práctica por materia y tema, el botón «Nuevos simulacros de Lectura · UMSS 2027» muestra las seis pruebas. Los textos también aparecen en el selector y en el banco de Lectura comprensiva. El selector general conserva su filtro de dificultad; el acceso directo ofrece las seis pruebas fijas con sus dificultades respectivas. Se conservaron las 980 preguntas, 40 lecturas, 60 simulacros originales y 120 por nivel anteriores, sus claves y sus identificadores. El banco ampliado contiene 1040 preguntas, 52 lecturas y 126 simulacros por nivel, con la misma versión de guardado de intentos.
+
+La trazabilidad está en `api/_sufficiency/reading-umss-2027-audit.json`. Para regenerar solo esta ampliación: `python tools/suficiencia/reading_umss_2027.py --source-pdf RUTA_AL_SALADIN_OFICIAL`. Se comprueba la huella del PDF y la generación es idempotente; `build_all.py` también la incorpora al terminar.
+
 ## Práctica por temas de Medicina
 
 El selector de Simulacro agrupa Morfofunción (29 temas), Biología Celular (18) y Educación en Salud e Investigación (21) bajo «Materias de Medicina». Cada tema ofrece cuatro preguntas de reconocimiento, cuatro de aplicación y dos que comparan situaciones. «Todos los temas» sortea hasta veinte preguntas de la materia y del nivel elegido. Los simulacros completos y semanales se abren desde el enlace inferior.
@@ -24,7 +34,7 @@ Una sola entrada «simulacro» en el menú lateral. El selector reutiliza el for
 
 Los temas numéricos se agrupan por contenido; en lectura cada tema corresponde a un pasaje completo. Se sortean hasta veinte preguntas de la materia, tema y nivel elegidos. Lectura conserva las cinco preguntas de cada texto; Completo toma cinco preguntas por materia e incluye una lectura completa. Los campos elegidos se guardan junto al intento y se validan al restaurarlo. El banco se carga una vez al abrir y los cambios de filtros no vuelven a descargarlo.
 
-## Material
+## Material anterior a la ampliación UMSS 2027
 
 - 980 preguntas distintas: 260 de matemáticas, 260 de física, 260 de química y 200 de lectura.
 - 180 ejercicios básicos nuevos: 60 por materia numérica, en 30 familias. Trabajan conteo, conjuntos sencillos, promedios, operaciones directas, unidades, fórmulas proporcionadas, composición y proporciones químicas elementales.
@@ -37,7 +47,7 @@ Fácil prioriza reconocimiento y una relación directa; intermedio, fórmulas y 
 
 Suficiencia ofrece «Ver resolución paso a paso» durante el intento, con conceptos previos, operaciones, error frecuente, comprobación y respuesta. En lectura se cita la oración y su párrafo. Las prácticas de Medicina ofrecen «Ver explicación». La ayuda conserva la respuesta seleccionada y el tiempo del intento.
 
-Los sesenta simulacros originales y los 120 por nivel conservan sus identificadores; se abren desde «Ver simulacros anteriores». Se conserva también el antiguo inicial para restaurar intentos. La versión del guardado permanece en 1 y el avance se aísla por cuenta en el navegador; no se sincroniza entre dispositivos.
+Los sesenta simulacros originales y los 120 por nivel conservan sus identificadores; se abren desde «Ver todos los simulacros». Se conserva también el antiguo inicial para restaurar intentos. La versión del guardado permanece en 1 y el avance se aísla por cuenta en el navegador; no se sincroniza entre dispositivos.
 
 ## Fuentes y comprobación
 

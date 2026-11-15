@@ -71,7 +71,7 @@ test('uses all four existing Sufficiency subjects with topics, levels, five opti
     const menu = context.document.getElementById('banco-materia-dropdown');
     assert.deepEqual(menu.children.map(g => g['aria-label']), ['Materias de Medicina', 'Suficiencia académica']);
     const counts = Object.fromEntries(Object.values(core.subjects).map(subject => [subject, context.bancoMateriaRows(subject).length]));
-    assert.deepEqual(counts, { 'Matemáticas': 274, 'Física': 272, 'Química': 272, 'Lectura comprensiva': 200 });
+    assert.deepEqual(counts, { 'Matemáticas': 274, 'Física': 272, 'Química': 272, 'Lectura comprensiva': 260 });
     assert.equal(state._cache, existing);
     const q = state.suficiencia.find(q => q.guiaUmsa && q.dificultad === 'medio');
     assert.ok(q);

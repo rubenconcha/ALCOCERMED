@@ -1,0 +1,259 @@
+{
+  "source": {
+    "document": "Anatomía y fisiología: la unidad entre forma y función",
+    "author": "Kenneth S. Saladin",
+    "edition": "6.ª edición",
+    "sha256": "e00074c7105c10052637b1c2a82f2b8959cf7c4cb9a91c4abd058ce958e58148"
+  },
+  "syllabus": {
+    "sha256": "985e76262979ac3d1dc7586097d14ac61c34fe46412d89abb1b2cc7900014fc7",
+    "pdfPage": 2
+  },
+  "practice": "Adaptaciones y preguntas propias de AlcocerMed, no preguntas oficiales de admisión.",
+  "passages": [
+    {
+      "id": "lectura-umss2027-tejidos",
+      "title": "UMSS 2027 · Las células también necesitan organización",
+      "chapter": "5. Histología",
+      "section": "5.1 El estudio de los tejidos; las principales clases de tejidos",
+      "pdfPages": [
+        172
+      ],
+      "printedPages": [
+        144
+      ],
+      "skills": [
+        "Reconocimiento textual",
+        "Información explícita mediante sinónimos y paráfrasis",
+        "Nivel inferencial",
+        "Determinación de significados de un texto",
+        "Síntesis de ideas centrales"
+      ]
+    },
+    {
+      "id": "lectura-umss2027-epitelio",
+      "title": "UMSS 2027 · Una cubierta que depende de su base",
+      "chapter": "5. Histología",
+      "section": "5.2 Tejido epitelial; membrana basal",
+      "pdfPages": [
+        175
+      ],
+      "printedPages": [
+        147
+      ],
+      "skills": [
+        "Síntesis de ideas centrales",
+        "Información explícita mediante sinónimos y paráfrasis",
+        "Nivel inferencial",
+        "Jerarquía de ideas",
+        "Función del elemento textual"
+      ]
+    },
+    {
+      "id": "lectura-umss2027-barrera",
+      "title": "UMSS 2027 · Proteger también es conservar agua",
+      "chapter": "6. El sistema tegumentario",
+      "section": "6.1 Piel y tejido subcutáneo; funciones de la piel",
+      "pdfPages": [
+        209
+      ],
+      "printedPages": [
+        181
+      ],
+      "skills": [
+        "Reconocimiento textual",
+        "Información explícita mediante sinónimos y paráfrasis",
+        "Nivel inferencial",
+        "Determinación de significados de un texto",
+        "Síntesis de ideas centrales"
+      ]
+    },
+    {
+      "id": "lectura-umss2027-renovacion",
+      "title": "UMSS 2027 · Una superficie que se reemplaza",
+      "chapter": "6. El sistema tegumentario",
+      "section": "6.1 Células y capas de la epidermis; la vida de un queratinocito",
+      "pdfPages": [
+        211,
+        212,
+        213
+      ],
+      "printedPages": [
+        183,
+        184,
+        185
+      ],
+      "skills": [
+        "Síntesis de ideas centrales",
+        "Información explícita mediante sinónimos y paráfrasis",
+        "Nivel inferencial",
+        "Jerarquía de ideas",
+        "Función del elemento textual"
+      ]
+    },
+    {
+      "id": "lectura-umss2027-fibras",
+      "title": "UMSS 2027 · Resistir y recuperar la forma",
+      "chapter": "5. Histología",
+      "section": "5.3 Tejido conjuntivo fibroso; fibras y tejido denso",
+      "pdfPages": [
+        182,
+        183,
+        184
+      ],
+      "printedPages": [
+        154,
+        155,
+        156
+      ],
+      "skills": [
+        "Reconocimiento textual",
+        "Información explícita mediante sinónimos y paráfrasis",
+        "Nivel inferencial",
+        "Determinación de significados de un texto",
+        "Síntesis de ideas centrales"
+      ]
+    },
+    {
+      "id": "lectura-umss2027-cartilago",
+      "title": "UMSS 2027 · Una matriz que sostiene y condiciona",
+      "chapter": "5. Histología",
+      "section": "5.3 Cartílago",
+      "pdfPages": [
+        187
+      ],
+      "printedPages": [
+        159
+      ],
+      "skills": [
+        "Síntesis de ideas centrales",
+        "Información explícita mediante sinónimos y paráfrasis",
+        "Nivel inferencial",
+        "Jerarquía de ideas",
+        "Función del elemento textual"
+      ]
+    },
+    {
+      "id": "lectura-umss2027-sudor",
+      "title": "UMSS 2027 · Secreciones que no siguen la misma ruta",
+      "chapter": "6. El sistema tegumentario",
+      "section": "6.3 Glándulas cutáneas; glándulas sudoríparas",
+      "pdfPages": [
+        223,
+        224
+      ],
+      "printedPages": [
+        195,
+        196
+      ],
+      "skills": [
+        "Reconocimiento textual",
+        "Información explícita mediante sinónimos y paráfrasis",
+        "Nivel inferencial",
+        "Determinación de significados de un texto",
+        "Síntesis de ideas centrales"
+      ]
+    },
+    {
+      "id": "lectura-umss2027-sebo",
+      "title": "UMSS 2027 · Una secreción que requiere reemplazo",
+      "chapter": "6. El sistema tegumentario",
+      "section": "6.3 Glándulas cutáneas; glándulas sebáceas",
+      "pdfPages": [
+        223,
+        224
+      ],
+      "printedPages": [
+        195,
+        196
+      ],
+      "skills": [
+        "Síntesis de ideas centrales",
+        "Información explícita mediante sinónimos y paráfrasis",
+        "Nivel inferencial",
+        "Jerarquía de ideas",
+        "Función del elemento textual"
+      ]
+    },
+    {
+      "id": "lectura-umss2027-cortes",
+      "title": "UMSS 2027 · Una imagen plana de una estructura con volumen",
+      "chapter": "5. Histología",
+      "section": "5.1 Interpretación de cortes de tejidos; figuras 5.1 y 5.2",
+      "pdfPages": [
+        173,
+        174
+      ],
+      "printedPages": [
+        145,
+        146
+      ],
+      "skills": [
+        "Reconocimiento textual",
+        "Información explícita mediante sinónimos y paráfrasis",
+        "Nivel inferencial",
+        "Determinación de significados de un texto",
+        "Síntesis de ideas centrales"
+      ]
+    },
+    {
+      "id": "lectura-umss2027-clasificar-piel",
+      "title": "UMSS 2027 · El criterio importa más que el nombre",
+      "chapter": "6. El sistema tegumentario",
+      "section": "6.1 Piel y tejido subcutáneo; piel gruesa y delgada",
+      "pdfPages": [
+        209
+      ],
+      "printedPages": [
+        181
+      ],
+      "skills": [
+        "Síntesis de ideas centrales",
+        "Información explícita mediante sinónimos y paráfrasis",
+        "Nivel inferencial",
+        "Jerarquía de ideas",
+        "Función del elemento textual"
+      ]
+    },
+    {
+      "id": "lectura-umss2027-reserva",
+      "title": "UMSS 2027 · Una reserva puede mantenerse mientras cambia",
+      "chapter": "5. Histología",
+      "section": "5.3 Tejido adiposo; renovación de triglicéridos y preparación histológica",
+      "pdfPages": [
+        184
+      ],
+      "printedPages": [
+        156
+      ],
+      "skills": [
+        "Reconocimiento textual",
+        "Información explícita mediante sinónimos y paráfrasis",
+        "Nivel inferencial",
+        "Determinación de significados de un texto",
+        "Síntesis de ideas centrales"
+      ]
+    },
+    {
+      "id": "lectura-umss2027-reparacion",
+      "title": "UMSS 2027 · Reparar no siempre equivale a restituir",
+      "chapter": "5. Histología",
+      "section": "Reparación tisular; regeneración y fibrosis",
+      "pdfPages": [
+        200,
+        201
+      ],
+      "printedPages": [
+        172,
+        173
+      ],
+      "skills": [
+        "Síntesis de ideas centrales",
+        "Información explícita mediante sinónimos y paráfrasis",
+        "Nivel inferencial",
+        "Jerarquía de ideas",
+        "Función del elemento textual"
+      ]
+    }
+  ]
+}

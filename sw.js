@@ -1,10 +1,10 @@
-const CACHE_NAME = 'alcocermed-main-v203-documentos';
+const CACHE_NAME = 'alcocermed-main-v204-lectura2027';
 const APP_SHELL = [
     './student-results.js?v=11',
     './student-results.css?v=1',
     './question-review.js?v=15',
     './suficiencia-core.js?v=12',
-    './suficiencia.js?v=17',
+    './suficiencia.js?v=18',
     './suficiencia.css?v=9',
     './campus',
     './campus.html',

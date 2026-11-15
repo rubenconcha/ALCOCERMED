@@ -99,7 +99,7 @@ test('every level paper contains only its stated difficulty and complete reading
    assert.equal(bank.passages.find(p=>p.id===id).difficulty,p.difficulty);
   }
  }
- assert.equal(combinations.size,12);assert.equal(coverage.size,980);assert.ok([...coverage.values()].every(n=>n===1));
+ assert.equal(combinations.size,12);assert.equal(coverage.size,1040);assert.ok([...coverage.values()].every(n=>n===1));
  assert.equal(C.select(bank,'simulacro:nivel-matematicas-facil-01',0)[0].id,'basico-matematicas-contar-01');
 });
 
@@ -160,7 +160,10 @@ test('topic practice always uses difficult items and retains the selected subjec
  assert.doesNotMatch(root.innerHTML,/Ver resolución paso a paso|data-sf="help"/);
  click('catalogue');assert.match(root.innerHTML,/value="quimica" selected/);assert.match(root.innerHTML,/value="reacciones" selected/);
  assert.doesNotMatch(root.innerHTML,/data-sf="config-level"|Nivel de dificultad/i);
- click('legacy');assert.match(root.innerHTML,/Simulacros anteriores/);
+ assert.match(root.innerHTML,/Nuevos simulacros de Lectura · UMSS 2027/);
+ click('reading2027');assert.match(root.innerHTML,/value="lectura" selected/);assert.match(root.innerHTML,/value="UMSS 2027"/);
+ click('config');
+ click('legacy');assert.match(root.innerHTML,/Simulacros de práctica/);
  click('config');assert.match(root.innerHTML,/value="quimica" selected/);assert.match(root.innerHTML,/value="reacciones" selected/);
 });
 
