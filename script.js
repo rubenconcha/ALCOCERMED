@@ -61,6 +61,7 @@ function resetCampusStudy() {
     window.StudentResults?.clear();
     window.TopicEvaluations?.clear();
     window.OfficialTexts?.close();
+    window.CampusInformation?.close();
     window.SufficiencyPractice?.reset();
     window.CampusCalendar?.setUser();
     window.CampusShell?.setUser();
@@ -335,6 +336,7 @@ function showScreen(screenId, fromBack) {
         ? 'evaluacion-screen' : screenId;
     window.CampusShell?.screenChanged(navScreen);
     window.CampusPastExams?.screenChanged(screenId === 'past-exams-screen');
+    if (screenId !== 'campus-information-screen') window.CampusInformation?.close();
     if (screenId === 'study-area' && !document.getElementById('study-area')?.hasAttribute?.('data-deck-pending')) refreshFlashcardReviews();
     const group = { 'sufficiency-practice-screen': 'practice', 'resumenes-screen': 'summaries' }[screenId];
     if (group) window.loadCampusAssets?.(group).catch(() => {

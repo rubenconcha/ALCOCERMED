@@ -82,6 +82,31 @@
 .info-link-list a { display: inline-block; padding: 8px 0; }
 .info-contact { padding: 20px; border-radius: var(--shell-radius); background: var(--shell-soft); overflow-wrap: anywhere; }
 .info-footer { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; margin-top: 20px; color: var(--shell-muted); font-size: 12px; }
+.info-document-open { overflow: hidden; }
+.info-reader { width: min(1180px, calc(100vw - 32px)); height: calc(100dvh - 32px); max-width: none; max-height: none; margin: auto; padding: 0; border: 1px solid var(--shell-line); border-radius: 12px; background: var(--shell-panel); color: var(--shell-ink); overflow: hidden; font-family: var(--shell-font); }
+.info-reader[open] { display: flex; flex-direction: column; }
+.info-reader::backdrop { background: #102238b8; }
+.info-reader [hidden] { display: none !important; }
+.info-reader-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; flex: none; padding: 16px 20px 12px; border-bottom: 1px solid var(--shell-line); }
+.info-reader-head > div { min-width: 0; }
+.info-reader-head p { margin: 0 0 5px; color: var(--shell-blue); font-size: 10px; font-weight: 700; letter-spacing: .05em; }
+.info-reader-head h2 { margin: 0; color: var(--shell-ink); font-size: 17px; line-height: 1.4; overflow-wrap: anywhere; }
+.info-reader-head button { flex: none; min-height: 44px; }
+.info-reader-actions { display: flex; flex-wrap: wrap; gap: 8px; flex: none; padding: 10px 20px; }
+.info-reader-actions a { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; text-decoration: none; }
+.info-reader-status { margin: 0; padding: 8px 20px 14px; font-size: 13px; }
+#info-reader-retry { align-self: flex-start; margin: 0 20px 12px; }
+#info-reader-controls { flex: none; }
+#info-reader-pages { flex: 1; min-height: 0; }
+.info-reader :is(a,button,input):focus-visible { outline: 3px solid var(--shell-blue); outline-offset: -3px; }
+@media (max-width: 600px) {
+  .info-reader { width: 100vw; height: 100dvh; border: 0; border-radius: 0; }
+  .info-reader-head { padding: 12px; gap: 10px; }
+  .info-reader-head h2 { font-size: 14px; }
+  .info-reader-actions { padding: 8px 12px; }
+  .info-reader .summary-pdf-toolbar { gap: 4px; padding: 6px; }
+  .info-reader .summary-pdf-toolbar button { padding: 6px 8px; }
+}
 @media (max-width: 980px) {
   .info-highlights { grid-template-columns: 1fr; }
   .info-highlights > div { padding: 14px 16px; }

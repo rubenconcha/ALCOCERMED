@@ -1,0 +1,135 @@
+{
+  "checked": "2026-11-15",
+  "documents": [
+    {
+      "id": "convocatoria-oficial",
+      "title": "Convocatoria oficial · Medicina UMSS 2027",
+      "path": "/documentos/umss-2027/convocatoria-oficial.pdf",
+      "source": "https://med.umss.edu.bo/wp-content/uploads/2026/11/convocatoria-proceso-de-admision-de-nuevos-estudiantes-carrera-medicina-gestion2027.pdf",
+      "saved": "2026-11-15",
+      "bytes": 688377,
+      "pages": 1,
+      "sha256": "ee0cccba045b8738b91eddec788e7715503806f07f6dd68604686f13c3c34c3b"
+    },
+    {
+      "id": "temario-oficial",
+      "title": "Temario oficial · Medicina UMSS 2027",
+      "path": "/documentos/umss-2027/temario-oficial.pdf",
+      "source": "https://drive.google.com/file/d/1aUsj6775EEEE66Ugvrjof99x363ewc18/view",
+      "saved": "2026-11-15",
+      "bytes": 193478,
+      "pages": 2,
+      "sha256": "985e76262979ac3d1dc7586097d14ac61c34fe46412d89abb1b2cc7900014fc7"
+    },
+    {
+      "id": "canales-oficiales",
+      "title": "Canales oficiales · Medicina UMSS",
+      "path": "/documentos/umss-2027/canales-oficiales.pdf",
+      "source": "https://drive.google.com/file/d/1pzqVlMbepQkLxYdjWU_M-3MhMKfnb2Zl/view",
+      "saved": "2026-11-15",
+      "bytes": 243981,
+      "pages": 1,
+      "sha256": "a773a830efee25857e8855f601a1a73a7df8e4419e00f4ef5c914448e3523290"
+    },
+    {
+      "id": "saladin-anatomia-fisiologia",
+      "title": "Saladin · Anatomía y fisiología · Sexta edición",
+      "path": "/documentos/umss-2027/saladin-anatomia-fisiologia.pdf",
+      "source": "https://drive.google.com/file/d/17y9EejXphTS8GSOVJ2-Xzv-8KIbtpBmQ/view",
+      "saved": "2026-11-15",
+      "bytes": 42410570,
+      "pages": 1251,
+      "sha256": "e00074c7105c10052637b1c2a82f2b8959cf7c4cb9a91c4abd058ce958e58148"
+    },
+    {
+      "id": "calvo-biologia-celular",
+      "title": "Alfonso Calvo · Biología celular biomédica",
+      "path": "/documentos/umss-2027/calvo-biologia-celular.pdf",
+      "source": "https://drive.google.com/file/d/1VFAULiAKsCoxq6mpcR29uyYj-InHIIdv/view",
+      "saved": "2026-11-15",
+      "bytes": 17412387,
+      "pages": 829,
+      "sha256": "6a9e9d5f3bada584603d87ef954237ce9f8d5f02f28a16c90b3228bd7328d72b"
+    },
+    {
+      "id": "educacion-salud-investigacion",
+      "title": "Compendio de Educación en Salud e Investigación",
+      "path": "/documentos/umss-2027/educacion-salud-investigacion.pdf",
+      "source": "https://drive.google.com/file/d/1VYlLDQmS5nW1aTCeu4Iw_f7yrCwxkaTV/view",
+      "saved": "2026-11-15",
+      "bytes": 40422766,
+      "pages": 232,
+      "sha256": "9cf0e3c816d8844959ecffb716496abb0820196d2ae70c801dc9520c3df85d84"
+    },
+    {
+      "id": "programa-ministerio",
+      "title": "Programa del Ministerio de Educación · Secundaria 2023",
+      "path": "/documentos/umss-2027/programa-ministerio.pdf",
+      "source": "https://red.minedu.gob.bo/repositorio/fuente/4096.pdf",
+      "saved": "2026-11-15",
+      "bytes": 2161725,
+      "pages": 124,
+      "sha256": "db6edb8293e0a26f5a4f639c86ac56c579379e3ff141433296759816ae935ca6"
+    },
+    {
+      "id": "matematicas-texto",
+      "title": "Matemáticas · Texto de apoyo",
+      "path": "/documentos/umss-2027/matematicas-texto.pdf",
+      "source": "https://drive.google.com/file/d/1MYuD3vvK9tIIBCbyFe1gW0t688ST82KH/view",
+      "saved": "2026-11-15",
+      "bytes": 29816692,
+      "pages": 306,
+      "sha256": "8dc26306ad53f332b3d57143cd0e17a7411e4dd0fedab72e06a077c52b715f9f"
+    },
+    {
+      "id": "matematicas-plan",
+      "title": "Matemáticas · Plan de estudio",
+      "path": "/documentos/umss-2027/matematicas-plan.pdf",
+      "source": "https://drive.google.com/file/d/1R3P0K54T5BMrUOMy9Y-eFIhh061PhE6c/view",
+      "saved": "2026-11-15",
+      "bytes": 3191831,
+      "pages": 8,
+      "sha256": "b61291e12a16cace1bd661570364617ee6899d640f9921536eb8133780996a0e"
+    },
+    {
+      "id": "fisica-texto",
+      "title": "Física · Texto de apoyo",
+      "path": "/documentos/umss-2027/fisica-texto.pdf",
+      "source": "https://drive.google.com/file/d/17BTPwx1VEGEYa3pPsrL9mQXahZB1mJk4/view",
+      "saved": "2026-11-15",
+      "bytes": 14727180,
+      "pages": 126,
+      "sha256": "60542e7008904d1b089da61452077503c035b779b9d50c68b3e359f892da1630"
+    },
+    {
+      "id": "fisica-plan",
+      "title": "Física · Plan de estudio",
+      "path": "/documentos/umss-2027/fisica-plan.pdf",
+      "source": "https://drive.google.com/file/d/1_DTdqfKHGxG0zi_J0Y_aIlNyHAUBDwBg/view",
+      "saved": "2026-11-15",
+      "bytes": 2644707,
+      "pages": 6,
+      "sha256": "1a790fd222060a18d57a9a44977ddec88a4163650668a5611514c7ea1fa892a0"
+    },
+    {
+      "id": "quimica-texto",
+      "title": "Química · Texto de apoyo",
+      "path": "/documentos/umss-2027/quimica-texto.pdf",
+      "source": "https://drive.google.com/file/d/1FyNaGKW30jGxT0sOrRdYdFXyRefV8F2R/view",
+      "saved": "2026-11-15",
+      "bytes": 10027629,
+      "pages": 134,
+      "sha256": "d0709273125fee332beb96e439a270b43b6bbd58c3ece6311226aecf4a65496c"
+    },
+    {
+      "id": "quimica-plan",
+      "title": "Química · Plan de estudio",
+      "path": "/documentos/umss-2027/quimica-plan.pdf",
+      "source": "https://drive.google.com/file/d/1ZzKQLzsgqr8wA41viRr3DkXyZIHg6PNs/view",
+      "saved": "2026-11-15",
+      "bytes": 2480670,
+      "pages": 5,
+      "sha256": "d7ca27c73aae4a4928937d13ce7d94a705d97d5653fbbb3ca86252169e377b50"
+    }
+  ]
+}

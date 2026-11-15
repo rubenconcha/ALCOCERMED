@@ -188,6 +188,23 @@
           "value": "application/vnd.openxmlformats-officedocument.presentationml.presentation"
         }
       ]
+    },
+    {
+      "source": "/documentos/umss-2027/:path*",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow, noarchive"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400, stale-while-revalidate=604800"
+        }
+      ]
     }
   ],
   "rewrites": [
