@@ -1,6 +1,6 @@
 const {test}=require('node:test'); const assert=require('node:assert/strict');const fs=require('node:fs');const vm=require('node:vm');
 function setup(response){const elements=new Map();const el=id=>{if(!elements.has(id))elements.set(id,{hidden:true});return elements.get(id)};const context={window:{location:{href:''},dispatchEvent(){}},document:{body:{classList:{toggle(){}}},getElementById:el,querySelectorAll:()=>[]},Date,Event:class Event{constructor(type){this.type=type}}};vm.createContext(context);vm.runInContext(fs.readFileSync('campus-access.js','utf8'),context);return {access:context.window.CampusAccess,client:{rpc:async()=>response},el,location:context.window.location};}
-test('server-classified free account is locked',async()=>{const t=setup({data:{ready:true,premium:false,expires_at:'2020-01-01T00:00:00Z'}});await t.access.resolve(t.client);assert.ok(t.access.isFree());assert.equal(t.el('free-account-banner').hidden,false)});
+test('server-classified free account cannot enter any campus section',async()=>{const t=setup({data:{ready:true,premium:false,expires_at:'2020-01-01T00:00:00Z'}});await assert.rejects(t.access.resolve(t.client),{code:'PREMIUM_REQUIRED'});assert.ok(t.access.isFree());for(const screen of ['home-screen','flashcards-screen','simulations-screen','atlas-screen','videoclases-screen'])assert.equal(t.access.permits(screen),false)});
 test('verified current subscription unlocks resources',async()=>{const t=setup({data:{ready:true,premium:true,expires_at:'2099-01-01T00:00:00Z'}});await t.access.resolve(t.client);assert.ok(!t.access.isFree());assert.equal(t.el('free-account-banner').hidden,true)});
 test('access errors never unlock a new account',async()=>{const t=setup({error:{message:'offline'}});await assert.rejects(t.access.resolve(t.client));assert.ok(t.access.isFree())});
 test('locked content offers WhatsApp without leaving the current page', () => {
@@ -16,7 +16,7 @@ test('locked content offers WhatsApp without leaving the current page', () => {
 
 test('the public entry and former sales routes lead to the existing login', () => {
   const { redirects, rewrites } = JSON.parse(fs.readFileSync('vercel.json', 'utf8'));
-  for (const route of ['/', '/planes', '/propedeutico', '/index.html', '/ventas.html']) {
+  for (const route of ['/', '/planes', '/propedeutico', '/index.html', '/ventas.html', '/registro', '/registro.html']) {
     assert.equal(redirects.find(redirect => redirect.source === route)?.destination, '/campus', route);
   }
   assert.equal(rewrites.find(rewrite => rewrite.source === '/campus')?.destination, '/campus.html');
@@ -63,20 +63,21 @@ test('password login accepts a full email or a username assigned by the prepa', 
 });
 test('signup does not claim a paid role; Google requests account selection',()=>{const s=fs.readFileSync('registration.js','utf8');assert.doesNotMatch(s,/premium\s*:|role\s*:/);assert.match(fs.readFileSync('campus-access.js','utf8'),/prompt:'select_account'/)});
 
-test('a videos-only entitlement opens videoclases while full campus features stay restricted', async () => {
+test('a videos-only entitlement cannot enter; stale refreshes cannot revoke the next premium session', async () => {
   const t = setup({ data: { ready: true, premium: false, atlas: false, videos: true } });
-  await t.access.resolve(t.client);
-  assert.equal(t.access.permits('videoclases-screen'), true);
+  await assert.rejects(t.access.resolve(t.client), {code:'PREMIUM_REQUIRED'});
+  assert.equal(t.access.permits('videoclases-screen'), false);
   assert.equal(t.access.isFree(), true);
   for (const screen of ['atlas-screen', 'game-quiz', 'game-hangman', 'study-calendar-screen']) {
     assert.equal(t.access.permits(screen), false);
   }
+  t.access.apply({ready:true,premium:true,atlas:true});
   assert.equal(await t.access.refresh({ rpc: async () => ({
     data: { ready: true, premium: false, atlas: false, videos: false },
   }) }, () => false), false);
   assert.equal(t.access.permits('videoclases-screen'), true);
-  await t.access.refresh({ rpc: async () => ({
+  await assert.rejects(t.access.refresh({ rpc: async () => ({
     data: { ready: true, premium: false, atlas: false, videos: false },
-  }) }, () => true);
+  }) }, () => true), {code:'PREMIUM_REQUIRED'});
   assert.equal(t.access.permits('videoclases-screen'), false);
 });

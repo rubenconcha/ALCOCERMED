@@ -209,6 +209,7 @@ async function initAuth() {
 function showLoginScreen() {
     if (typeof DeviceGuard !== 'undefined') DeviceGuard.stopChecking();
     window.CampusStudy?.reset();
+    window.CampusAccess?.reset();
     document.body.classList.add('login-active');
     var loginScreen = document.getElementById('login-screen');
     if (loginScreen) loginScreen.classList.remove('hidden');
@@ -225,7 +226,7 @@ async function verifyCampusDevice(client, user) {
     if (user.email && ADMIN_EMAILS.includes(user.email.toLowerCase())) return;
     if (typeof DeviceGuard === 'undefined') throw new Error('No pudimos verificar tus dispositivos. Recarga la página.');
     const device = await DeviceGuard.activateDevice(client, user.email, false);
-    if (device.ok) return device.access?.ready === true ? device.access : null;
+    if (device.ok) return device.access || null;
     throw Object.assign(new Error(device.error || 'No pudimos verificar este dispositivo.'), {
         code: device.code, limit: device.limit, supportRequired: device.supportRequired,
     });
@@ -248,11 +249,12 @@ function enterApp(user, sessionId = currentCampusSessionId) {
                 window.loadCampusAssets('campus'),
             ]);
             if (campusEntry !== entry || !isCurrent()) return;
+            CampusAccess.requirePremium(access);
             window.CampusStudy.activate(user, access);
             verifiedCampusSessionId = sessionId;
         } catch (error) {
             if (campusEntry !== entry || !isCurrent()) return;
-            if (client && (error.code === 'DEVICE_LIMIT' || error.code === 'NOT_AUTHENTICATED')) {
+            if (client && ['DEVICE_LIMIT', 'NOT_AUTHENTICATED', 'PREMIUM_REQUIRED'].includes(error.code)) {
                 setCampusSession(null);
                 try { await client.auth.signOut({ scope: 'local' }); }
                 catch (signOutError) { console.warn('signOut:', signOutError); }

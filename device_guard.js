@@ -128,6 +128,8 @@ var DeviceGuard = (function() {
             stopChecking();
             active.onKicked?.(result.status === 401 || result.data?.reason === 'No autenticado'
                 ? 'Tu sesión venció. Vuelve a iniciar sesión.'
+                : result.data?.code === 'PREMIUM_REQUIRED'
+                ? 'Necesitas una inscripción Premium completa y vigente para ingresar. Solicita acceso por WhatsApp.'
                 : 'Tu cuenta se abrió en otro navegador. Vuelve a iniciar sesión.');
         } catch (error) {
             console.warn('check_device catch:', error);

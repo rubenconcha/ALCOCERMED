@@ -2,13 +2,18 @@
 window.CampusAccess = (() => {
     let state = { premium: false, ready: false };
     let catalogPromise;
-    const isFree = () => !state.premium;
-    const canUseAtlas = () => state.atlas ?? Boolean(state.premium);
-    const canUseVideos = () => state.videos ?? Boolean(state.premium);
+    function isPremium(access) {
+        return access?.ready === true && access.premium === true && !access.trial &&
+            (access.admin === true || !access.expires_at || Date.parse(access.expires_at) > Date.now());
+    }
+    const isFree = () => !isPremium(state);
+    const canUseAtlas = () => !isFree() && state.atlas === true;
+    const canUseVideos = () => !isFree();
     function updateAtlasLinks() {
         document.querySelectorAll('[data-atlas-access]').forEach(el => { el.hidden = !canUseAtlas(); });
     }
     function permits(screen) {
+        if (isFree()) return false;
         if (screen === 'atlas-screen') return canUseAtlas();
         if (screen === 'videoclases-screen') return canUseVideos();
         return !['study-calendar-screen', 'game-quiz', 'game-hangman'].includes(screen) || !isFree();
@@ -20,48 +25,62 @@ window.CampusAccess = (() => {
     }
     async function check(client) {
         const { data, error } = await client.rpc('campus_access');
-        if (error || !data?.ready) throw new Error('No pudimos verificar tu acceso. Intenta de nuevo.');
-        return data;
+        if (error) throw new Error('No pudimos verificar tu acceso. Intenta de nuevo.');
+        return requirePremium(data);
+    }
+    function requirePremium(access) {
+        if (isPremium(access)) return access;
+        const code = access?.code || (access?.ready ? 'PREMIUM_REQUIRED' : 'ACCESS_UNAVAILABLE');
+        const messages = {
+            PREMIUM_REQUIRED: 'Necesitas una inscripción Premium completa y vigente para ingresar. Solicita acceso por WhatsApp.',
+            NOT_AUTHENTICATED: 'Tu sesión venció. Vuelve a iniciar sesión.',
+            DEVICE_LIMIT: 'Confirma tu correo para usar este navegador.',
+        };
+        throw Object.assign(new Error(messages[code] || 'No pudimos verificar tu acceso. Intenta de nuevo.'), { code });
     }
     function apply(access) {
-        state = access;
+        state = requirePremium(access);
         catalogPromise = null;
-        document.body.classList.toggle('campus-free', Boolean(isFree()));
+        render();
+        return state;
+    }
+    function reset() {
+        state = { premium: false, ready: false };
+        catalogPromise = null;
+        render();
+    }
+    function render() {
+        document.body.classList.toggle('campus-free', false);
         const banner = document.getElementById('free-account-banner');
-        banner.hidden = !isFree();
-        const accessLabel = banner.querySelector?.('small');
-        if (accessLabel) accessLabel.textContent = canUseVideos() ? 'TUS VIDEOCLASES ESTÁN ACTIVAS' : 'TU CUENTA GRATUITA';
+        if (banner) banner.hidden = true;
         document.querySelectorAll('[data-premium-label]').forEach(el => { el.hidden = canUseVideos(); });
         document.querySelectorAll('[data-premium-only]').forEach(el => { el.hidden = isFree(); });
         updateAtlasLinks();
-        document.querySelectorAll('[data-free-lock]').forEach(el => { el.hidden = !isFree(); });
+        document.querySelectorAll('[data-free-lock]').forEach(el => { el.hidden = true; });
         window.dispatchEvent(new Event('campus-access-change'));
-        if (access.ready && !access.premium && typeof access.atlas !== 'boolean' && typeof getSupabase === 'function') {
-            Promise.resolve(getSupabase().rpc('campus_atlas_access')).then(({ data, error }) => {
-                if (state !== access || error || data?.allowed !== true) return;
-                state = { ...access, atlas: true };
-                updateAtlasLinks();
-            }).catch(() => {});
-        }
-        return state;
     }
     async function catalog() {
+        requirePremium(state);
         if (!catalogPromise) catalogPromise = getSupabase().rpc('campus_catalog').then(({data,error}) => {
             if(error) { catalogPromise=null; throw error; }
-            return (data || []).filter(topic => !isFree() || Number(topic.free_count) > 0);
+            requirePremium(state);
+            return data || [];
         });
         return catalogPromise;
     }
     async function resolve(client) { return apply(await check(client)); }
 
     async function refresh(client, isCurrent) {
-        const access = await check(client);
+        const { data: access, error } = await client.rpc('campus_access');
         if (!isCurrent()) return false;
+        if (error) throw new Error('No pudimos verificar tu acceso. Intenta de nuevo.');
+        try { requirePremium(access); }
+        catch (denied) { reset(); throw denied; }
         if (['ready', 'premium', 'atlas', 'videos', 'expires_at'].some(key => access[key] !== state[key])) apply(access);
         return true;
     }
 
-    return { check, apply, resolve, refresh, isFree, canUseVideos, permits, unlock, catalog };
+    return { check, requirePremium, apply, reset, resolve, refresh, isFree, canUseVideos, permits, unlock, catalog };
 })();
 
 window.continueWithGoogle = async function(button) {
@@ -70,10 +89,7 @@ window.continueWithGoogle = async function(button) {
     try {
         await ensureSupabaseSdk();
         const client=getSupabase();
-        const access=await client.rpc('campus_access');
-        if(access.error || (!access.data?.ready && access.data?.code !== 'DEVICE_LIMIT')) {
-            throw new Error('No pudimos comprobar el acceso. Intenta de nuevo.');
-        }
+        // Membership is verified after OAuth identifies the student.
         const response=await fetch(SUPABASE_URL+'/auth/v1/settings',{headers:{apikey:SUPABASE_KEY}});
         if(!response.ok) throw new Error('No pudimos conectar. Intenta de nuevo.');
         const settings=await response.json();

@@ -1,4 +1,4 @@
-const CACHE_NAME = 'alcocermed-main-v205-textos-finales';
+const CACHE_NAME = 'alcocermed-main-v206-solo-premium';
 const APP_SHELL = [
     './student-results.js?v=11',
     './student-results.css?v=1',
@@ -36,8 +36,8 @@ const APP_SHELL = [
     './campus-preview.css?v=3',
     './platform-polish.js?v=1',
     './config.js',
-    './device_guard.js?v=12',
-    './campus-access.js?v=14',
+    './device_guard.js?v=13',
+    './campus-access.js?v=15',
     './campus-preview-policy.js?v=1',
     './official-flashcards.js?v=2',
     './study-depth.js?v=20',
@@ -47,7 +47,7 @@ const APP_SHELL = [
     './assets/fonts/outfit-900.woff2',
     './flashcard-workspace.js?v=20261109-foco',
     './script.js?v=20261115-documentos',
-    './campus-login.js?v=6',
+    './campus-login.js?v=7',
     './campus-catalogs.js?v=3',
     './campus-exam-engine.js?v=4',
     './topic-evaluations.js?v=20261112-muestra',

@@ -1,4 +1,4 @@
-const CACHE_NAME = 'alcocermed-juegos-v119-inscripcion';
+const CACHE_NAME = 'alcocermed-juegos-v120-solo-premium';
 const ASSETS_TO_CACHE = [
     './game-rounds.js?v=1',
     './game-practice.js?v=20261021-visual5b',
@@ -45,14 +45,14 @@ const ASSETS_TO_CACHE = [
     '/assets/fonts/inter/inter.css?v=1',
     '/assets/fonts/inter/latin.woff2',
     '/assets/fonts/inter/latin-ext.woff2',
-    '../device_guard.js?v=12',
+    '../device_guard.js?v=13',
     '/device-limit.css?v=1',
     './tejido-nervioso-imagenes.js?v=5',
     './encefalo-native-data.js?v=1',
     './sentidos-imagenes.js?v=1',
     './relacionar.js?v=2',
     './acceso-noche.js?v=1',
-    './game-access.js?v=3',
+    './game-access.js?v=4',
     './premium-game-images.js?v=6',
     './quiz-copy.js?v=1',
     './tejido-nervioso.js?v=16',

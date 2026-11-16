@@ -7,7 +7,7 @@ window.GameAccess = (() => {
   async function check(client) {
     try {
       const {data, error} = await client.rpc('campus_access');
-      return !error && data?.ready ? isPaid(data) : null;
+      return !error && (data?.ready || data?.code === 'PREMIUM_REQUIRED') ? isPaid(data) : null;
     } catch (_) { return null; }
   }
   async function verify(client) { return (await check(client)) === true; }

@@ -107,6 +107,7 @@ test('una respuesta anterior de la misma cuenta no puede cerrar la nueva sesión
     verifiedCampusSessionId: null, campusSigningOut: false, ADMIN_EMAILS: [],
     getSupabase: () => ({ auth: { signOut: () => assert.fail('cerró la sesión nueva') } }),
     DeviceGuard: { activateDevice: () => new Promise(resolve => requests.push(resolve)) },
+    CampusAccess: { requirePremium: access => { assert.equal(access.premium, true); } },
     window: { loadCampusAssets: async () => {}, CampusStudy: { activate() { entries++; } } },
   };
   vm.runInNewContext(source.slice(source.indexOf('let campusEntry = null;'), source.indexOf('/** handleLogin */')), context);
@@ -114,7 +115,7 @@ test('una respuesta anterior de la misma cuenta no puede cerrar la nueva sesión
   context.currentCampusSessionId = 'session-2';
   const newEntry = context.enterApp(student);
   requests[0]({ ok: false, code: 'DEVICE_LIMIT' });
-  requests[1]({ ok: true, access: { ready: true } });
+  requests[1]({ ok: true, access: { ready: true, premium: true } });
   await Promise.all([oldEntry, newEntry]);
   assert.equal(entries, 1);
   assert.equal(context.verifiedCampusSessionId, 'session-2');
