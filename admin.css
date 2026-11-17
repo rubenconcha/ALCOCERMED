@@ -1209,3 +1209,63 @@ tr:hover td {
   from { transform: translateX(100%); opacity: 0; }
   to { transform: translateX(0); opacity: 1; }
 }
+
+/* Estudiantes registrados: elegir el correo al activar sin escribirlo */
+.registered-students {
+  margin-top: 12px;
+  border-top: 1px solid var(--border-light);
+  padding-top: 10px;
+}
+.registered-students summary {
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-medium);
+  text-transform: none;
+}
+.registered-students summary:focus-visible {
+  outline: 2px solid #bb510c;
+  outline-offset: 2px;
+}
+.registered-note {
+  margin: 8px 0;
+  font-size: 0.77rem;
+  color: var(--text-medium);
+  text-transform: none;
+}
+.registered-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 4px;
+  max-height: 230px;
+  overflow: auto;
+}
+.registered-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 6px 8px;
+  border: 1px solid #eef1f4;
+  border-radius: 8px;
+}
+.registered-list button {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: #147dae;
+  font: inherit;
+  font-size: 0.82rem;
+  text-align: left;
+  overflow-wrap: anywhere;
+  cursor: pointer;
+}
+.registered-list button:hover { text-decoration: underline; }
+.registered-list small {
+  color: #6b7280;
+  font-size: 0.72rem;
+  white-space: nowrap;
+}
+.registered-students #registered-status:empty { margin: 0; }

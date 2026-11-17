@@ -1,0 +1,45 @@
+const { test } = require('node:test');
+const assert = require('node:assert/strict');
+const fs = require('node:fs');
+
+const adminHtml = fs.readFileSync('admin.html', 'utf8');
+const subscriptions = fs.readFileSync('membership-admin.js', 'utf8');
+const adminJs = fs.readFileSync('admin.js', 'utf8');
+
+test('el panel ofrece elegir el correo registrado en lugar de escribirlo', () => {
+  assert.match(adminHtml, /<datalist id="registered-emails"><\/datalist>/);
+  assert.match(adminHtml, /id="registered-students"/);
+  assert.match(adminHtml, /id="registered-students-list"/);
+  assert.match(adminHtml, /id="registered-count"/);
+  const inputs = adminHtml.match(/<input[^>]*name="email"[^>]*>/g) || [];
+  assert.equal(inputs.length, 3);
+  for (const input of inputs) {
+    assert.match(input, /list="registered-emails"/);
+    assert.match(input, /autocomplete="off"/);
+  }
+});
+
+test('los correos registrados se cargan y se muestran para activar con un toque', () => {
+  assert.match(adminJs, /window\.AdminSubscriptions\?\.setRegisteredEmails\?\.\(cachedData\.estudiantes\)/);
+  assert.match(subscriptions, /function setRegisteredEmails\(students\)/);
+  assert.match(subscriptions, /return \{ load, clear, setRegisteredEmails \}/);
+  assert.match(subscriptions, /function fillActivationEmail\(email\)/);
+  assert.match(subscriptions, /function renderRegistered\(\)/);
+  assert.match(subscriptions, /button\.addEventListener\('click', \(\) => fillActivationEmail\(row\.email\)\)/);
+});
+
+test('un correo incompleto se detecta antes de activar y se explica el error', () => {
+  assert.match(subscriptions, /function validEmail\(value\)/);
+  assert.match(subscriptions, /function emailValidated\(form\)/);
+  assert.match(subscriptions, /Debe incluir el dominio completo/);
+  assert.match(subscriptions, /!datesInOrder\(form\) \|\| !emailValidated\(form\)/);
+  assert.match(subscriptions, /if \(!emailValidated\(removal\)\) return;/);
+});
+
+test('si el servidor no encuentra el correo se sugiere el registrado más parecido', () => {
+  assert.match(subscriptions, /function closestRegisteredEmail\(typed\)/);
+  assert.match(subscriptions, /candidate\.split\('@'\)\[0\] === local/);
+  assert.match(subscriptions, /error\?\.code === 'P0002'/);
+  assert.match(subscriptions, /form\.elements\.email\.value = suggestion/);
+  assert.match(subscriptions, /Colocamos el correo registrado más parecido:/);
+});

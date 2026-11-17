@@ -216,6 +216,7 @@ async function loadAllData() {
   cachedData.activity = activity; cachedData.games = games; cachedData.gameCatalog = gameCatalog;
   cachedData.userMap = buildUserMap(directory, cachedData);
   cachedData.estudiantes = buildStudentRows(cachedData);
+  window.AdminSubscriptions?.setRegisteredEmails?.(cachedData.estudiantes);
 
   cachedData.loading = false;
   setText('last-updated', 'actualizado: ' + new Date().toLocaleTimeString());

@@ -20,6 +20,11 @@ window.AdminSubscriptions = (() => {
   const reactivateStudent = document.getElementById('subscription-reactivate-student');
   const reactivateBack = reactivateForm.querySelector('button[type="button"]');
   const reactivateSubmit = reactivateForm.querySelector('button[type="submit"]');
+  const registered = document.getElementById('registered-students');
+  const registeredList = document.getElementById('registered-students-list');
+  const registeredStatus = document.getElementById('registered-status');
+  const registeredCount = document.getElementById('registered-count');
+  const emailSuggestions = document.getElementById('registered-emails');
   const statuses = {
     active: ['Vigente', 'tag-success'],
     scheduled: ['Programada', 'tag-info'],
@@ -33,6 +38,7 @@ window.AdminSubscriptions = (() => {
     lifetime: 'De por vida',
   };
   let rows = null;
+  let directory = [];
   let listRequest = 0;
   let pendingWrite = null;
   let confirmedAction = null;
@@ -70,6 +76,83 @@ window.AdminSubscriptions = (() => {
     if (error?.code === '42501') return 'Esta cuenta no tiene permiso para gestionar suscripciones.';
     if (error?.code === 'P0002' || error?.code === '22023') return error.message;
     return fallback;
+  }
+
+  function normalizedEmail(value) {
+    return String(value || '').trim().toLowerCase();
+  }
+
+  function validEmail(value) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(String(value || '').trim());
+  }
+
+  function closestRegisteredEmail(typed) {
+    const value = normalizedEmail(typed);
+    if (!value) return '';
+    const local = value.split('@')[0];
+    const known = directory.map(row => row.email).filter(Boolean);
+    if (known.some(email => normalizedEmail(email) === value)) return '';
+    return known.find(email => {
+      const candidate = normalizedEmail(email);
+      return candidate.split('@')[0] === local || candidate.startsWith(value) || value.startsWith(candidate);
+    }) || '';
+  }
+
+  function emailValidated(form) {
+    const email = form.elements.email.value.trim();
+    if (validEmail(email)) return true;
+    feedback(form.querySelector('.subscription-feedback'),
+      'El correo parece incompleto. Debe incluir el dominio completo, por ejemplo nombre@gmail.com.', 'error');
+    form.elements.email.focus();
+    return false;
+  }
+
+  function fillActivationEmail(email) {
+    if (!email) return;
+    activation.elements.email.value = email;
+    if (registered?.open) registered.open = false;
+    feedback(activation.querySelector('.subscription-feedback'),
+      'Correo elegido: ' + email + '. Revisa las fechas y pulsa «Activar acceso completo».', 'success');
+    activation.elements.email.focus();
+    activation.scrollIntoView({ block: 'center', behavior: 'smooth' });
+  }
+
+  function renderRegistered() {
+    if (!registeredList || !emailSuggestions) return;
+    const known = directory.filter(row => row.email);
+    emailSuggestions.replaceChildren(...known.map(row => {
+      const option = document.createElement('option');
+      option.value = row.email;
+      if (row.name) option.label = row.name;
+      return option;
+    }));
+    registeredList.replaceChildren(...known.map(row => {
+      const item = document.createElement('li');
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.textContent = row.email;
+      button.title = 'Usar este correo para activar';
+      button.addEventListener('click', () => fillActivationEmail(row.email));
+      item.append(button);
+      if (row.name) {
+        const name = document.createElement('small');
+        name.textContent = row.name;
+        item.append(name);
+      }
+      return item;
+    }));
+    if (registeredCount) registeredCount.textContent = String(known.length);
+    feedback(registeredStatus, known.length ? ''
+      : 'No pudimos cargar los correos registrados. Escribe el correo completo del estudiante.', known.length ? '' : 'error');
+  }
+
+  /* admin.js entrega la lista de estudiantes que ya cargó con admin_list_users. */
+  function setRegisteredEmails(students) {
+    directory = (Array.isArray(students) ? students : []).map(row => ({
+      email: String(row?.email || '').trim(),
+      name: String(row?.name || row?.display || '').trim(),
+    })).filter(row => row.email);
+    renderRegistered();
   }
 
   function cell(text) {
@@ -212,7 +295,20 @@ window.AdminSubscriptions = (() => {
       feedback(adding ? listFeedback : status, successMessage(data), 'success');
       if (list.classList.contains('active')) load();
     } catch (error) {
-      if (isCurrent()) feedback(status, messageFor(error, 'No pudimos guardar el cambio. Vuelve a intentarlo.'), 'error');
+      if (!isCurrent()) return;
+      if (error?.code === 'P0002') {
+        const suggestion = closestRegisteredEmail(values?.p_email);
+        if (suggestion && form) {
+          form.elements.email.value = suggestion;
+          feedback(status, 'Ese correo no está registrado o quedó incompleto. Colocamos el correo registrado más parecido: '
+            + suggestion + '. Revisa las fechas y vuelve a intentar.', 'error');
+        } else {
+          feedback(status, 'Ese correo no está registrado. Elige el correo completo en «Ver estudiantes registrados» '
+            + 'o escríbelo con su dominio completo (por ejemplo @gmail.com).', 'error');
+        }
+      } else {
+        feedback(status, messageFor(error, 'No pudimos guardar el cambio. Vuelve a intentarlo.'), 'error');
+      }
     } finally {
       if (pendingWrite === write) {
         pendingWrite = null;
@@ -263,7 +359,7 @@ window.AdminSubscriptions = (() => {
     resetDates(form);
     form.addEventListener('submit', event => {
       event.preventDefault();
-      if (!currentAdmin || pendingWrite || !datesInOrder(form)) return;
+      if (!currentAdmin || pendingWrite || !datesInOrder(form) || !emailValidated(form)) return;
       const email = form.elements.email.value.trim();
       const start = form.elements.start.value;
       const end = form.elements.end.value;
@@ -285,6 +381,7 @@ window.AdminSubscriptions = (() => {
 
   removal.addEventListener('submit', event => {
     event.preventDefault();
+    if (!emailValidated(removal)) return;
     const email = removal.elements.email.value.trim();
     const scope = removal.elements.scope.value;
     const label = removal.elements.scope.selectedOptions[0].textContent.toLowerCase();
@@ -303,6 +400,11 @@ window.AdminSubscriptions = (() => {
     setSaving(false);
     rows = null;
     table.replaceChildren();
+    directory = [];
+    if (registeredList) registeredList.replaceChildren();
+    if (emailSuggestions) emailSuggestions.replaceChildren();
+    if (registeredCount) registeredCount.textContent = '—';
+    feedback(registeredStatus, '');
     feedback(listStatus, '');
     feedback(listFeedback, '');
     list.removeAttribute('aria-busy');
@@ -316,5 +418,5 @@ window.AdminSubscriptions = (() => {
 
   search.addEventListener('input', render);
   filter.addEventListener('change', render);
-  return { load, clear };
+  return { load, clear, setRegisteredEmails };
 })();

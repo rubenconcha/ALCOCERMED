@@ -8,7 +8,7 @@
     <script defer src="/assets/vendor/supabase.js?v=2.118.0"></script>
     <link href="/assets/mindmaps/fonts/outfit.css?v=3" rel="stylesheet">
     <link rel="stylesheet" href="/assets/vendor/font-awesome-6.4.0/css/all.min.css" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="admin.css?v=4">
+    <link rel="stylesheet" href="admin.css?v=5">
     <link rel="stylesheet" href="admin-topic-results.css?v=5">
 </head>
 <body>
@@ -136,7 +136,7 @@
                         <p>Acceso a la plataforma, juegos, atlas y videoclases.</p>
                         <div class="subscription-fields">
                             <label class="subscription-email">Correo del estudiante
-                                <input id="membership-email" name="email" type="email" placeholder="estudiante@correo.com" required>
+                                <input id="membership-email" name="email" type="email" placeholder="estudiante@correo.com" list="registered-emails" autocomplete="off" required>
                             </label>
                             <label>Fecha de inicio <input name="start" type="date" max="9999-12-30" required></label>
                             <label>Fecha de finalización <input name="end" type="date" max="9999-12-30" required></label>
@@ -144,13 +144,19 @@
                         </div>
                         <p class="subscription-note">El día de finalización está incluido. Se usa la hora de Bolivia.</p>
                         <p class="subscription-feedback" role="status"></p>
+                        <details id="registered-students" class="registered-students">
+                            <summary><i class="fas fa-users" aria-hidden="true"></i> Ver estudiantes registrados (<span id="registered-count">—</span>)</summary>
+                            <p class="registered-note">Toca un correo para completar el campo «Correo del estudiante» sin escribirlo.</p>
+                            <ul id="registered-students-list" class="registered-list"></ul>
+                            <p id="registered-status" class="subscription-feedback" role="status"></p>
+                        </details>
                     </form>
 
                     <form id="membership-removal" class="subscription-card" method="post" aria-labelledby="membership-remove-title">
                         <h2 id="membership-remove-title"><i class="fas fa-circle-minus" aria-hidden="true"></i> Quitar suscripción</h2>
                         <div class="subscription-fields subscription-remove-fields">
                             <label class="subscription-email">Correo del estudiante
-                                <input name="email" type="email" placeholder="estudiante@correo.com" required>
+                                <input name="email" type="email" placeholder="estudiante@correo.com" list="registered-emails" autocomplete="off" required>
                             </label>
                             <label for="membership-remove-scope">Acceso que quieres quitar
                                 <select id="membership-remove-scope" name="scope">
@@ -169,7 +175,7 @@
                         <p>Acceso a la sección Videoclases.</p>
                         <div class="subscription-fields">
                             <label class="subscription-email">Correo del estudiante
-                                <input name="email" type="email" placeholder="estudiante@correo.com" required>
+                                <input name="email" type="email" placeholder="estudiante@correo.com" list="registered-emails" autocomplete="off" required>
                             </label>
                             <label>Fecha de inicio <input name="start" type="date" max="9999-12-30" required></label>
                             <label>Fecha de finalización <input name="end" type="date" max="9999-12-30" required></label>
@@ -522,7 +528,9 @@
     </form>
 </dialog>
 
+<datalist id="registered-emails"></datalist>
+
 <script defer src="config.js"></script>
-<script defer src="admin.js?v=7"></script><script defer src="question-review.js?v=3"></script><script defer src="admin-topic-results.js?v=5"></script><script defer src="admin-subject-errors.js?v=1"></script><script defer src="admin-flashcard-topics.js?v=1"></script><script defer src="admin-section-tracking.js?v=5"></script><script defer src="membership-admin.js?v=7"></script>
+<script defer src="admin.js?v=8"></script><script defer src="question-review.js?v=3"></script><script defer src="admin-topic-results.js?v=5"></script><script defer src="admin-subject-errors.js?v=1"></script><script defer src="admin-flashcard-topics.js?v=1"></script><script defer src="admin-section-tracking.js?v=5"></script><script defer src="membership-admin.js?v=8"></script>
 </body>
 </html>
