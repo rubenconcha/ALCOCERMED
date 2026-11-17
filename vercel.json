@@ -269,6 +269,10 @@
       "destination": "/campus.html"
     },
     {
+      "source": "/registro",
+      "destination": "/registro.html"
+    },
+    {
       "source": "/admin",
       "destination": "/admin.html"
     },
@@ -304,16 +308,6 @@
     },
     {
       "source": "/ventas.html",
-      "destination": "/campus",
-      "permanent": false
-    },
-    {
-      "source": "/registro",
-      "destination": "/campus",
-      "permanent": false
-    },
-    {
-      "source": "/registro.html",
       "destination": "/campus",
       "permanent": false
     },

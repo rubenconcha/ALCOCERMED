@@ -134,7 +134,8 @@ function enterVerifiedApp(user) {
     restoreSidebarState();
     updateHomeStats();
     updateDailyGoalUI();
-    requestAnimationFrame(() => requestAnimationFrame(() => {
+    const campusLimited = CampusAccess.isFree();
+    if (!campusLimited) requestAnimationFrame(() => requestAnimationFrame(() => {
         if (verifiedCampusUserId === user.id) window.loadCampusAssets('campus-extra').catch(() => {});
     }));
     setTimeout(() => {
@@ -142,28 +143,32 @@ function enterVerifiedApp(user) {
     }, 2500);
 
     const campusParams = new URLSearchParams(window.location.search);
-    const section = campusParams.get('seccion');
-    if (section === 'atlas' && typeof openAtlas === 'function') openAtlas();
-    else if (section === 'textos-oficiales') window.openOfficialTexts();
-    else if (section === 'informacion') window.openCampusInformation();
-    else if (section === 'practica-suficiencia') showScreen('sufficiency-practice-screen');
-    else if (section === 'calendario') {
-        const day = campusParams.get('dia');
-        window.openStudyCalendar(day, campusParams.get('actividad') || '');
+    /* Una cuenta registrada sin plan vigente se queda en Inicio: no se abren secciones. */
+    if (!campusLimited) {
+        const section = campusParams.get('seccion');
+        if (section === 'atlas' && typeof openAtlas === 'function') openAtlas();
+        else if (section === 'textos-oficiales') window.openOfficialTexts();
+        else if (section === 'informacion') window.openCampusInformation();
+        else if (section === 'practica-suficiencia') showScreen('sufficiency-practice-screen');
+        else if (section === 'calendario') {
+            const day = campusParams.get('dia');
+            window.openStudyCalendar(day, campusParams.get('actividad') || '');
+        }
+        else if (section === 'simulacros') window.openCampusSimulations();
+        else if (section === 'examenes-pasados') window.openPastExams(campusParams.get('vista') === 'temas');
+        else if (section === 'contacto') showScreen('campus-contact-screen');
+        else if (campusParams.get('simulacro')) window.openCampusRequestedSimulation();
+        else restoreCampusAfterPlans();
+        if (campusParams.has('mapa')) window.loadCampusAssets('maps')
+            .then(() => { if (verifiedCampusUserId === user.id) return window.openRequestedMindmap?.(); })
+            .catch(() => showToast('No pudimos abrir el mapa solicitado.', 'error'));
     }
-    else if (section === 'simulacros') window.openCampusSimulations();
-    else if (section === 'examenes-pasados') window.openPastExams(campusParams.get('vista') === 'temas');
-    else if (section === 'contacto') showScreen('campus-contact-screen');
-    else if (campusParams.get('simulacro')) window.openCampusRequestedSimulation();
-    else restoreCampusAfterPlans();
-    if (campusParams.has('mapa')) window.loadCampusAssets('maps')
-        .then(() => { if (verifiedCampusUserId === user.id) return window.openRequestedMindmap?.(); })
-        .catch(() => showToast('No pudimos abrir el mapa solicitado.', 'error'));
 
 
     // ═══ DEVICE GUARD: ya se verificó antes de mostrar el campus ═══
+    // Las cuentas pendientes de pago solo ven Inicio, así que no se vigila su dispositivo.
     var _isAdmin = Boolean(user && user.email && ADMIN_EMAILS.includes(user.email.toLowerCase()));
-    if (typeof DeviceGuard !== 'undefined' && user && user.email && !_isAdmin) {
+    if (!campusLimited && typeof DeviceGuard !== 'undefined' && user && user.email && !_isAdmin) {
         var dgClient = getSupabase();
         DeviceGuard.startChecking(dgClient, window.handleLogout, currentCampusSessionId);
     }

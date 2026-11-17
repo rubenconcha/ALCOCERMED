@@ -8,7 +8,7 @@ function entryFixture(access) {
   const events=[];
   const student={id:'student',email:'student@example.invalid',user_metadata:{premium:true}};
   const context={
-    window:{dispatchEvent(){},loadCampusAssets:async()=>{},CampusStudy:{activate(user,permissions){events.push('entered');context.CampusAccess.apply(permissions);}}},
+    window:{dispatchEvent(){},loadCampusAssets:async()=>{},CampusStudy:{activate(user,permissions){context.CampusAccess.apply(permissions);events.push('entered');}}},
     document:{body:{classList:{toggle(){},contains:()=>true}},getElementById:()=>null,querySelectorAll:()=>[]},
     Event:class {},Date,currentUser:student,currentCampusSessionId:'session',verifiedCampusSessionId:null,campusSigningOut:false,ADMIN_EMAILS:[],
     DeviceGuard:{activateDevice:async()=>({ok:true,access})},
@@ -29,18 +29,21 @@ for (const [name,access] of Object.entries({
   vencida:{ready:true,premium:true,expires_at:'2020-01-01'},
   prueba:{ready:true,premium:true,trial:true},
   fecha_invalida:{ready:true,premium:true,expires_at:'invalid'},
-  servidor_deniega:{ready:false,premium:false,code:'PREMIUM_REQUIRED'},
-})) test(`ingreso ${name}: se queda en login aunque el dispositivo y metadata indiquen acceso`,async()=>{
+  servidor_pendiente:{ready:false,premium:false,code:'PREMIUM_REQUIRED'},
+})) test(`ingreso ${name}: entra al campus pero solo puede abrir Inicio`,async()=>{
   const f=entryFixture(access);await f.enter();
-  assert.equal(f.events.includes('entered'),false);
-  assert.ok(f.events.includes('signed-out'));
-  assert.ok(f.events.some(e=>e.includes('Premium completa')));
-  assert.equal(f.context.CampusAccess.permits('home-screen'),false);
+  assert.ok(f.events.includes('entered'));
+  assert.equal(f.events.includes('signed-out'),false);
+  assert.equal(f.context.CampusAccess.permits('home-screen'),true);
+  for (const screen of ['study-library','flashcards-screen','banco-screen','past-exams-screen','simulacro-screen','atlas-screen','videoclases-screen','study-calendar-screen']) {
+    assert.equal(f.context.CampusAccess.permits(screen),false,screen);
+  }
 });
 test('Premium vigente entra y el cierre de sesión elimina los permisos anteriores',async()=>{
   const f=entryFixture({ready:true,premium:true,atlas:true,expires_at:'2099-01-01'});await f.enter();
   assert.deepEqual(f.events,['entered']);
   assert.ok(f.context.CampusAccess.permits('home-screen'));
+  assert.ok(f.context.CampusAccess.permits('study-library'));
   f.context.CampusAccess.reset();
   assert.equal(f.context.CampusAccess.permits('home-screen'),false);
   assert.equal(f.context.CampusAccess.canUseVideos(),false);
@@ -50,7 +53,7 @@ test('un fallo al comprobar el acceso nunca activa el campus',async()=>{
   assert.equal(f.events.includes('entered'),false);
   assert.ok(f.events.includes('login'));
 });
-test('Google puede iniciar OAuth sin sesión; la comprobación Premium ocurre después',async()=>{
+test('Google puede iniciar OAuth sin sesión; la comprobación de cuenta ocurre después',async()=>{
   const calls=[];
   const context={window:{},document:{getElementById:()=>({})},ensureSupabaseSdk:async()=>{},
     getSupabase:()=>({rpc:()=>assert.fail('No hay cuenta antes de OAuth'),auth:{signInWithOAuth:async options=>{calls.push(options);return {};}}}),

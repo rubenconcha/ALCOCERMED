@@ -6,17 +6,23 @@ window.CampusAccess = (() => {
         return access?.ready === true && access.premium === true && !access.trial &&
             (access.admin === true || !access.expires_at || Date.parse(access.expires_at) > Date.now());
     }
+    /* A registered account without a paid pass may still open Inicio until it is activated. */
+    function isRegisteredAccess(access) {
+        return access?.ready === true || access?.code === 'PREMIUM_REQUIRED';
+    }
     const isFree = () => !isPremium(state);
+    const isRegistered = () => isRegisteredAccess(state);
     const canUseAtlas = () => !isFree() && state.atlas === true;
     const canUseVideos = () => !isFree();
     function updateAtlasLinks() {
         document.querySelectorAll('[data-atlas-access]').forEach(el => { el.hidden = !canUseAtlas(); });
     }
     function permits(screen) {
-        if (isFree()) return false;
+        if (!isRegisteredAccess(state)) return false;
+        if (isFree()) return screen === 'home-screen';
         if (screen === 'atlas-screen') return canUseAtlas();
         if (screen === 'videoclases-screen') return canUseVideos();
-        return !['study-calendar-screen', 'game-quiz', 'game-hangman'].includes(screen) || !isFree();
+        return true;
     }
     function unlock() {
         const dialog = document.getElementById('campus-unlock');
@@ -26,20 +32,28 @@ window.CampusAccess = (() => {
     async function check(client) {
         const { data, error } = await client.rpc('campus_access');
         if (error) throw new Error('No pudimos verificar tu acceso. Intenta de nuevo.');
-        return requirePremium(data);
+        return validated(data);
     }
-    function requirePremium(access) {
-        if (isPremium(access)) return access;
-        const code = access?.code || (access?.ready ? 'PREMIUM_REQUIRED' : 'ACCESS_UNAVAILABLE');
+    function accessError(access) {
+        const code = access?.code || 'ACCESS_UNAVAILABLE';
         const messages = {
             PREMIUM_REQUIRED: 'Necesitas una inscripción Premium completa y vigente para ingresar. Solicita acceso por WhatsApp.',
             NOT_AUTHENTICATED: 'Tu sesión venció. Vuelve a iniciar sesión.',
             DEVICE_LIMIT: 'Confirma tu correo para usar este navegador.',
         };
-        throw Object.assign(new Error(messages[code] || 'No pudimos verificar tu acceso. Intenta de nuevo.'), { code });
+        return Object.assign(new Error(messages[code] || 'No pudimos verificar tu acceso. Intenta de nuevo.'), { code });
+    }
+    function validated(access) {
+        if (isRegisteredAccess(access)) return access;
+        throw accessError(access);
+    }
+    function requirePremium(access) {
+        if (isPremium(access)) return access;
+        const denied = access?.ready ? { ...access, code: 'PREMIUM_REQUIRED' } : access;
+        throw accessError(denied);
     }
     function apply(access) {
-        state = requirePremium(access);
+        state = validated(access);
         catalogPromise = null;
         render();
         return state;
@@ -49,14 +63,38 @@ window.CampusAccess = (() => {
         catalogPromise = null;
         render();
     }
+    function studentEmail() {
+        try {
+            if (window.CampusStudentEmail) return String(window.CampusStudentEmail);
+            if (typeof currentUser !== 'undefined' && currentUser?.email) return String(currentUser.email);
+        } catch (_) { /* El correo solo se usa para el mensaje de activación. */ }
+        return '';
+    }
+    function renderBanner() {
+        const email = studentEmail();
+        const emailNode = document.getElementById('free-account-email');
+        if (emailNode) emailNode.textContent = email || 'tu correo';
+        const cta = document.getElementById('free-account-whatsapp');
+        if (cta) {
+            const message = email
+                ? 'Hola, me registré en AlcocerMed con el correo ' + email + ' y quiero activar mi cuenta.'
+                : 'Hola, me registré en AlcocerMed y quiero activar mi cuenta.';
+            cta.href = 'https://wa.me/59177921731?text=' + encodeURIComponent(message);
+        }
+    }
     function render() {
-        document.body.classList.toggle('campus-free', false);
+        const pending = isFree() && isRegisteredAccess(state);
+        document.body.classList.toggle('campus-free', pending);
+        document.body.classList.toggle('campus-pending', pending);
         const banner = document.getElementById('free-account-banner');
-        if (banner) banner.hidden = true;
+        if (banner) {
+            banner.hidden = !pending;
+            if (pending) renderBanner();
+        }
         document.querySelectorAll('[data-premium-label]').forEach(el => { el.hidden = canUseVideos(); });
-        document.querySelectorAll('[data-premium-only]').forEach(el => { el.hidden = isFree(); });
+        document.querySelectorAll('[data-premium-only]').forEach(el => { el.hidden = pending; });
         updateAtlasLinks();
-        document.querySelectorAll('[data-free-lock]').forEach(el => { el.hidden = true; });
+        document.querySelectorAll('[data-free-lock]').forEach(el => { el.hidden = !pending; });
         window.dispatchEvent(new Event('campus-access-change'));
     }
     async function catalog() {
@@ -80,7 +118,7 @@ window.CampusAccess = (() => {
         return true;
     }
 
-    return { check, requirePremium, apply, reset, resolve, refresh, isFree, canUseVideos, permits, unlock, catalog };
+    return { check, requirePremium, apply, reset, resolve, refresh, isFree, isRegistered, canUseVideos, permits, unlock, catalog };
 })();
 
 window.continueWithGoogle = async function(button) {

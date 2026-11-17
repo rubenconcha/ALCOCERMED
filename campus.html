@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="commerce.css?v=1">
     <link rel="stylesheet" href="student-white.css?v=2">
     <link rel="stylesheet" href="campus-theme.css?v=4">
-    <link rel="stylesheet" href="campus-access.css?v=3">
+    <link rel="stylesheet" href="campus-access.css?v=4">
     <link rel="stylesheet" href="login-polish.css?v=3">
     <link rel="stylesheet" href="campus-preview.css?v=3">
 
@@ -34,9 +34,9 @@
     <script defer src="platform-polish.js?v=1"></script>
     <script defer src="config.js"></script>
     <script defer src="device_guard.js?v=13"></script>
-    <script defer src="campus-access.js?v=15"></script>
+    <script defer src="campus-access.js?v=16"></script>
     <script defer src="campus-preview-policy.js?v=1"></script>
-    <script defer src="campus-login.js?v=7"></script>
+    <script defer src="campus-login.js?v=8"></script>
 </head>
 
 <body class="login-active campus-shell">
@@ -122,6 +122,8 @@
                     </span>
                 </button>
             </form>
+
+            <p class="login-register">¿Aún no tienes cuenta? <a href="/registro">Regístrate aquí</a></p>
 
             <div class="login-assistance">
                 <a href="https://wa.me/59177921731" target="_blank" rel="noopener noreferrer">Inscríbete al curso por WhatsApp</a>
@@ -434,6 +436,12 @@
     <div><h1>Hola de nuevo, <span id="welcome-name">estudiante</span></h1><p>Tu material de estudio está aquí. Elige qué quieres hacer hoy.</p></div>
     <span class="campus-course-tag">Medicina · Preparatoria Ben Carson</span>
   </header>
+  <div id="free-account-banner" class="free-account-banner" hidden>
+    <small>CUENTA REGISTRADA</small>
+    <h2>Tu inscripción está pendiente</h2>
+    <p>Guardamos tu correo <strong id="free-account-email">tu correo</strong>. Cuando confirmes tu pago activaremos el contenido de todas las secciones. Mientras tanto puedes usar tu Inicio.</p>
+    <a id="free-account-whatsapp" class="campus-primary" href="https://wa.me/59177921731" target="_blank" rel="noopener noreferrer">Activar mi cuenta por WhatsApp</a>
+  </div>
   <div class="campus-home-overview">
     <aside class="campus-box campus-information-card" aria-labelledby="campus-information-card-title">
       <div class="campus-information-card-heading"><span class="campus-information-icon" aria-hidden="true"><svg focusable="false"><use href="/assets/calendar-icons.svg#info"></use></svg></span><div><p>ADMISIÓN UMSS · 2027</p><h2 id="campus-information-card-title">Panel informativo</h2></div></div>
@@ -1876,7 +1884,7 @@
         <script data-campus-assets="campus" src="campus-section-tracking.js?v=1"></script>
         <script data-campus-assets="campus" src="question-review.js?v=15"></script>
         <script data-campus-assets="campus" src="study-media.js?v=20261021-visual5b"></script>
-        <script data-campus-assets="campus" src="script.js?v=20261115-documentos"></script>
+        <script data-campus-assets="campus" src="script.js?v=20261116-registro"></script>
         <script data-campus-assets="campus" src="study-assessments.js?v=2"></script>
         <script data-campus-assets="campus" src="study-calendar-data.js?v=7"></script>
         <script data-campus-assets="campus" src="campus-shell.js?v=5"></script>

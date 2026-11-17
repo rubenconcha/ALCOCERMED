@@ -1,4 +1,4 @@
-const CACHE_NAME = 'alcocermed-main-v206-solo-premium';
+const CACHE_NAME = 'alcocermed-main-v207-registro';
 const APP_SHELL = [
     './student-results.js?v=11',
     './student-results.css?v=1',
@@ -24,7 +24,7 @@ const APP_SHELL = [
     './commerce.css?v=1',
     './student-white.css?v=2',
     './campus-theme.css?v=4',
-    './campus-access.css?v=3',
+    './campus-access.css?v=4',
     './campus-navigation.css?v=4',
     './campus-atlas.css?v=5',
     '/device-limit.css?v=1',
@@ -37,7 +37,7 @@ const APP_SHELL = [
     './platform-polish.js?v=1',
     './config.js',
     './device_guard.js?v=13',
-    './campus-access.js?v=15',
+    './campus-access.js?v=16',
     './campus-preview-policy.js?v=1',
     './official-flashcards.js?v=2',
     './study-depth.js?v=20',
@@ -46,8 +46,8 @@ const APP_SHELL = [
     './flashcard-approved.css?v=6',
     './assets/fonts/outfit-900.woff2',
     './flashcard-workspace.js?v=20261109-foco',
-    './script.js?v=20261115-documentos',
-    './campus-login.js?v=7',
+    './script.js?v=20261116-registro',
+    './campus-login.js?v=8',
     './campus-catalogs.js?v=3',
     './campus-exam-engine.js?v=4',
     './topic-evaluations.js?v=20261112-muestra',

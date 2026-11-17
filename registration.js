@@ -3,18 +3,29 @@ const SUPABASE_KEY=window.ALCOCER_CONFIG.SUPABASE_KEY;
 let registrationClient;
 function ensureSupabaseSdk(){ return window.supabase ? Promise.resolve(window.supabase) : Promise.reject(new Error('No pudimos conectar. Recarga la página.')); }
 function getSupabase(){ return registrationClient || (registrationClient=window.supabase.createClient(SUPABASE_URL,SUPABASE_KEY)); }
+function registrationMessage(error){
+ const message=String(error?.message||'');
+ if(/already registered|already exists|user already/i.test(message))return 'Ese correo ya tiene una cuenta. Entra desde «Iniciar sesión».';
+ if(/rate limit|too many/i.test(message))return 'Demasiados intentos. Espera unos minutos y vuelve a intentarlo.';
+ if(/invalid email|email address/i.test(message))return 'Escribe un correo electrónico válido.';
+ if(/password/i.test(message))return 'La contraseña debe tener al menos 8 caracteres.';
+ return message || 'No pudimos crear la cuenta. Intenta de nuevo.';
+}
 document.getElementById('register-form').addEventListener('submit',async event=>{
  event.preventDefault();
  const button=document.getElementById('register-submit'),status=document.getElementById('register-status');
+ const name=document.getElementById('register-name').value.trim();
+ const email=document.getElementById('register-email').value.trim();
+ const password=document.getElementById('register-password').value;
+ if(!name||!email||!password){status.textContent='Completa todos los campos.';return;}
  button.disabled=true; status.textContent='Creando tu cuenta…';
  try {
   await ensureSupabaseSdk(); const client=getSupabase();
-  const access=await client.rpc('campus_access');
-  if(access.error || !access.data?.ready) throw new Error('El registro está en preparación. Puedes probar la muestra sin registro.');
-  const {data,error}=await client.auth.signUp({email:document.getElementById('register-email').value.trim(),password:document.getElementById('register-password').value,options:{emailRedirectTo:location.origin+'/campus',data:{full_name:document.getElementById('register-name').value.trim()}}});
+  // El registro es libre: solo crea la cuenta y guarda el correo para activarla después.
+  const {data,error}=await client.auth.signUp({email,password,options:{emailRedirectTo:location.origin+'/campus',data:{full_name:name}}});
   if(error) throw error;
   if(data.session) { location.assign('/campus'); return; }
   status.textContent='Revisa tu correo para confirmar la cuenta. Si ya estás registrado, entra desde «Iniciar sesión».';
- } catch(error){status.textContent=error.message || 'No pudimos crear la cuenta. Intenta de nuevo.';}
+ } catch(error){status.textContent=registrationMessage(error);}
  finally{button.disabled=false;}
 });

@@ -5,3 +5,12 @@
 [data-premium-only][hidden]{display:none!important}
 [data-atlas-access][hidden],[data-free-lock][hidden]{display:none!important}
 .sidebar .campus-lock-badge{display:inline-flex;align-items:center;justify-content:center;margin-left:auto;padding:6px 7px;border-radius:8px;background:#f2a62928;color:#ffd078;font-size:13px}
+
+/* Cuenta registrada sin plan vigente: el menú deja solo Inicio y el aviso de activación. */
+body.campus-pending .sidebar .nav-item:not(#nav-inicio){display:none!important}
+body.campus-pending .sidebar .campus-nav-group,
+body.campus-pending .sidebar .campus-nav-contact{display:none!important}
+.login-register{text-align:center;font-size:14px;color:#55697a;margin:14px 0 0}
+.login-register a{color:#2386b6;font-weight:700;text-underline-offset:3px}
+.free-account-banner .campus-primary{display:inline-block}
+

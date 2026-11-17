@@ -249,12 +249,12 @@ function enterApp(user, sessionId = currentCampusSessionId) {
                 window.loadCampusAssets('campus'),
             ]);
             if (campusEntry !== entry || !isCurrent()) return;
-            CampusAccess.requirePremium(access);
+            window.CampusStudentEmail = user.email || '';
             window.CampusStudy.activate(user, access);
             verifiedCampusSessionId = sessionId;
         } catch (error) {
             if (campusEntry !== entry || !isCurrent()) return;
-            if (client && ['DEVICE_LIMIT', 'NOT_AUTHENTICATED', 'PREMIUM_REQUIRED'].includes(error.code)) {
+            if (client && ['DEVICE_LIMIT', 'NOT_AUTHENTICATED'].includes(error.code)) {
                 setCampusSession(null);
                 try { await client.auth.signOut({ scope: 'local' }); }
                 catch (signOutError) { console.warn('signOut:', signOutError); }
