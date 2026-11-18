@@ -1641,15 +1641,24 @@
         <section id="intocables-hub-screen" class="itc-page hidden" aria-labelledby="itc-title">
             <div class="itc-top"><button type="button" class="itc-back" onclick="goBack()"><span aria-hidden="true">←</span> Volver</button><span>PREPARATORIA BEN CARSON · BIBLIOTECA</span></div>
             <div class="itc-hero">
-                <div class="itc-hero-copy"><span class="itc-eyebrow">INTOCABLES</span><h1 id="itc-title">Comprende. Conecta. Domina.</h1><p>Láminas ilustradas, explicaciones y fichas esenciales para estudiar a fondo.</p><div class="itc-hero-actions"><a href="#itc-coleccion" class="itc-primary">Explorar material <span aria-hidden="true">→</span></a><button type="button" class="itc-secondary" onclick="openMindMaps()">Ver mapas mentales</button></div></div>
+                <div class="itc-hero-copy"><span class="itc-eyebrow">INTOCABLES</span><h1 id="itc-title">Comprende. Conecta. Domina.</h1><p>Láminas ilustradas, premoniciones Ben Carson, explicaciones y fichas esenciales para estudiar a fondo.</p><div class="itc-hero-actions"><a href="#itc-coleccion" class="itc-primary">Explorar material <span aria-hidden="true">→</span></a><button type="button" class="itc-secondary" onclick="openMindMaps()">Ver mapas mentales</button></div></div>
                 <img class="itc-hero-art" src="/assets/study-art/intocables-hero.webp" width="1080" height="810" alt="" loading="lazy" decoding="async">
             </div>
-            <nav id="itc-formats" class="itc-formats" aria-label="Formato de estudio"><button type="button" data-format="sheets" aria-pressed="true" data-premium-only hidden>Láminas ilustradas</button><button type="button" data-format="cards" aria-pressed="false">Fichas esenciales</button></nav>
+            <nav id="itc-formats" class="itc-formats" aria-label="Sección de Intocables"><button type="button" data-format="sheets" aria-pressed="true" data-premium-only hidden>Láminas</button><button type="button" data-format="premoniciones" aria-pressed="false" data-premium-only hidden>Premoniciones Ben Carson</button><button type="button" data-format="cards" aria-pressed="false">Fichas esenciales</button></nav>
             <div id="itc-coleccion" class="itc-collection"><div class="itc-collection-head"><div><span class="itc-eyebrow">COLECCIÓN</span><h2>Elige qué repasar</h2></div><p id="itc-count" aria-live="polite"></p></div>
-                <div class="itc-controls"><div id="itc-subjects" class="itc-subjects" aria-label="Filtrar por materia"></div><label class="itc-search"><span aria-hidden="true">⌕</span><input id="itc-search" type="search" placeholder="Buscar lámina, concepto o tema" autocomplete="off" aria-label="Buscar lámina, concepto o tema"></label><select id="itc-topic" aria-label="Filtrar por tema"><option value="">Todos los temas</option></select></div>
+                <div class="itc-controls"><div id="itc-subjects" class="itc-subjects" aria-label="Filtrar por materia"></div><label class="itc-search"><span aria-hidden="true">⌕</span><input id="itc-search" type="search" placeholder="Buscar lámina, premonición o tema" autocomplete="off" aria-label="Buscar lámina, premonición o tema"></label><select id="itc-topic" aria-label="Filtrar por tema"><option value="">Todos los temas</option></select></div>
                 <div id="itc-status" class="itc-status" role="status" hidden></div><div id="itc-grid" class="itc-grid"></div>
             </div>
             <dialog id="itc-dialog" class="itc-dialog" aria-labelledby="itc-dialog-title"><div class="itc-dialog-head"><span id="itc-dialog-kicker"></span><button type="button" id="itc-close" aria-label="Cerrar ficha"><span aria-hidden="true">×</span></button></div><div class="itc-dialog-body"><h2 id="itc-dialog-title"></h2><div class="itc-key"><span>LA IDEA CENTRAL</span><p id="itc-key"></p></div><h3>Para entenderlo</h3><p id="itc-explain"></p><div class="itc-mistake"><strong>Atención a esta confusión</strong><p id="itc-mistake"></p></div><div class="itc-question"><strong>Compruébalo</strong><p id="itc-question"></p><button type="button" id="itc-reveal">Ver respuesta</button><p id="itc-answer" hidden></p></div><small id="itc-source"></small></div></dialog>
+            <dialog id="itc-premonition-dialog" class="itc-dialog itc-premonition-dialog" aria-labelledby="itc-premonition-title">
+                <div class="itc-dialog-head"><span id="itc-premonition-kicker">PREMONICIONES BEN CARSON</span><button type="button" id="itc-premonition-close" aria-label="Cerrar premonición"><span aria-hidden="true">×</span></button></div>
+                <div class="itc-dialog-body">
+                    <h2 id="itc-premonition-title"></h2>
+                    <p class="itc-premonition-subtitle" id="itc-premonition-subtitle"></p>
+                    <ol class="itc-premonition-list" id="itc-premonition-list"></ol>
+                    <p class="itc-premonition-note">Lista de temas preparada por la Preparatoria Ben Carson para orientar tu repaso.</p>
+                </div>
+            </dialog>
         </section>
 
         <!-- ══ INTOCABLES · MAPAS MENTALES ══ -->
@@ -1878,7 +1887,7 @@
         <link rel="stylesheet" data-campus-assets="campus" href="campus-topics.css?v=4">
         <link rel="stylesheet" data-campus-assets="campus" href="study-depth.css?v=3">
         <link rel="stylesheet" data-campus-assets="campus" href="study-media.css?v=20261021-visual5c">
-        <script data-campus-assets="campus" src="campus-catalogs.js?v=3"></script>
+        <script data-campus-assets="campus" src="campus-catalogs.js?v=4"></script>
         <script data-campus-assets="campus" src="official-flashcards.js?v=2"></script>
         <script data-campus-assets="campus" src="study-depth.js?v=20"></script>
         <script data-campus-assets="campus" src="campus-section-tracking.js?v=1"></script>
@@ -1913,14 +1922,14 @@
         <link rel="stylesheet" data-campus-assets="campus calendar" href="study-calendar.css?v=12">
         <link rel="stylesheet" data-campus-assets="campus results" href="student-results.css?v=1">
         <link rel="stylesheet" data-campus-assets="maps" href="mindmap-viewer.css?v=8">
-        <link rel="stylesheet" data-campus-assets="campus-extra intocables maps" href="intocables-sheets.css?v=1">
+        <link rel="stylesheet" data-campus-assets="campus-extra intocables maps" href="intocables-sheets.css?v=2">
         <link rel="stylesheet" data-campus-assets="reader" href="summary-pdf-reader.css?v=5">
         <link rel="stylesheet" data-campus-assets="campus texts practice" href="campus-study-resources.css?v=8">
         <script data-campus-assets="maps" src="mindmap-download.js?v=2"></script>
         <script data-campus-assets="maps" src="mindmap-premium.js?v=4"></script>
         <script data-campus-assets="maps" src="mindmap-practice.js?v=20261021-visual5b"></script>
         <script data-campus-assets="maps" src="mindmap-viewer.js?v=21"></script>
-        <script data-campus-assets="campus-extra intocables maps" src="intocables-hub.js?v=6"></script>
+        <script data-campus-assets="campus-extra intocables maps" src="intocables-hub.js?v=7"></script>
         <script data-campus-assets="reader" src="summary-pdf-reader.js?v=10"></script>
         <script data-campus-assets="campus texts" src="official-texts.js?v=14"></script>
         <script data-campus-assets="practice" src="sufficiency-practice-content.js?v=2"></script>

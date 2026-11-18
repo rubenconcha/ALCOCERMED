@@ -1,4 +1,4 @@
-const CACHE_NAME = 'alcocermed-main-v207-registro';
+const CACHE_NAME = 'alcocermed-main-v208-premoniciones';
 const APP_SHELL = [
     './student-results.js?v=11',
     './student-results.css?v=1',
@@ -48,7 +48,7 @@ const APP_SHELL = [
     './flashcard-workspace.js?v=20261109-foco',
     './script.js?v=20261116-registro',
     './campus-login.js?v=8',
-    './campus-catalogs.js?v=3',
+    './campus-catalogs.js?v=4',
     './campus-exam-engine.js?v=4',
     './topic-evaluations.js?v=20261112-muestra',
     './topic-evaluations.css?v=6',
@@ -75,8 +75,8 @@ const APP_SHELL = [
     '/assets/vendor/font-awesome-6.4.0/webfonts/fa-solid-900.woff2',
     '/assets/vendor/font-awesome-6.4.0/webfonts/fa-v4compatibility.woff2',
 
-    './intocables-hub.js?v=6',
-    './intocables-sheets.css?v=1',
+    './intocables-hub.js?v=7',
+    './intocables-sheets.css?v=2',
     './assets/study-art/intocables-hero.webp',
     './study-assessments.js?v=2',
     './simulation-scope.js?v=12',

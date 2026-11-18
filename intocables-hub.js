@@ -1,8 +1,10 @@
 /* Intocables keeps metadata public and full sheets/lessons behind their existing access checks. */
 window.IntocablesHub = (() => {
- let catalogue=[],lessons=new Map(),subject='',topic='',query='',format='sheets',initialized=false,requestId=0;
+ let catalogue=[],premoniciones=[],lessons=new Map(),subject='',topic='',query='',format='sheets',initialized=false,requestId=0;
+ let premonitionRequest=0;const premonitionContent=new Map();
  let coverRevision=0,coverOwner=null,observer=null;const covers=new Map(),pending=new Set();
  const subjects=['Morfofunción','Biología celular','Educación para la Salud'];
+ const countLabels={sheets:'láminas',premoniciones:'premoniciones',cards:'fichas'};
  const $=id=>document.getElementById(id);
  const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
  const normal=v=>String(v??'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
@@ -28,23 +30,29 @@ window.IntocablesHub = (() => {
   }else imgs.forEach(img=>fetchCover(img.dataset.sheetId));
  }
  const available=()=>catalogue.filter(i=>!window.CampusAccess?.isFree()||i.acceso_gratis);
- function topics(){const names=[...new Set(available().filter(i=>i.kind===format&&(!subject||i.materia===subject)).map(i=>i.tema))];$('itc-topic').innerHTML='<option value="">Todos los temas</option>'+names.map(n=>`<option value="${esc(n)}">${esc(n)}</option>`).join('');$('itc-topic').value=names.includes(topic)?topic:'';topic=$('itc-topic').value;}
+ function pool(){return format==='premoniciones'?premoniciones:available().filter(i=>i.kind===format);}
+ function topics(){const names=[...new Set(pool().filter(i=>!subject||i.materia===subject).map(i=>i.tema))];$('itc-topic').innerHTML='<option value="">Todos los temas</option>'+names.map(n=>`<option value="${esc(n)}">${esc(n)}</option>`).join('');$('itc-topic').value=names.includes(topic)?topic:'';topic=$('itc-topic').value;}
  function status(m){$('itc-status').hidden=!m;$('itc-status').textContent=m||'';}
  function render(){
   $('itc-subjects').innerHTML=['Todas',...subjects].map((n,i)=>{const v=i?n:'';return `<button type="button" data-subject="${esc(v)}" class="${subject===v?'active':''}" aria-pressed="${subject===v}">${esc(n)}</button>`;}).join('');topics();
-  const filtered=available().filter(i=>i.kind===format&&(!subject||i.materia===subject)&&(!topic||i.tema===topic)&&normal([i.titulo,i.tema,i.materia].join(' ')).includes(normal(query)));
-  $('itc-count').textContent=filtered.length+' '+(format==='sheets'?'láminas':'fichas');
-  $('itc-grid').innerHTML=filtered.length?filtered.map(i=>{const locked=!i.acceso_gratis&&window.CampusAccess?.isFree(),sheet=i.kind==='sheets';
+  const filtered=pool().filter(i=>(!subject||i.materia===subject)&&(!topic||i.tema===topic)&&normal([i.titulo,i.tema,i.materia,i.capitulo].join(' ')).includes(normal(query)));
+  $('itc-count').textContent=filtered.length+' '+(countLabels[format]||'material');
+  $('itc-grid').innerHTML=filtered.length?filtered.map(i=>{const locked=!i.acceso_gratis&&window.CampusAccess?.isFree(),sheet=i.kind==='sheets',premon=i.kind==='premoniciones';
    const cover=sheet?`<span class="itc-sheet-cover" data-cover-id="${esc(i.id)}"><span class="itc-cover-placeholder"><img src="/assets/campus-study-brand.webp" alt=""><span>${locked?'Lámina protegida':'Lámina ilustrada'}</span></span><img data-sheet-id="${esc(i.id)}" alt="Vista de ${esc(i.titulo)}" hidden></span>`:'';
-   return `<button type="button" class="itc-card ${sheet?'itc-sheet-card ':''}${locked?'is-locked':''}" data-id="${esc(i.id)}" aria-label="${locked?'Bloqueado: ':''}${esc(i.titulo)}">${cover}<span class="itc-card-top"><span class="itc-number">${sheet?'LÁMINA':String(i.orden).padStart(2,'0')}</span><span class="itc-card-symbol" aria-hidden="true">${locked?'🔒':'↗'}</span></span><span class="itc-card-middle"><span class="itc-card-subject">${esc(i.materia)}</span><strong>${esc(i.titulo)}</strong><span class="itc-card-topic">${esc(i.tema)}</span></span><span class="itc-card-bottom">${locked?'Disponible con un plan':sheet?'Abrir lámina':'Abrir ficha'} <span aria-hidden="true">→</span></span></button>`;}).join(''):'<div class="itc-empty">No hay material con estos filtros. Prueba con otro tema.</div>';
+   const banner=premon?`<span class="itc-premonition-banner" aria-hidden="true"><small>PREMONICIONES</small><strong>CAP. ${esc(i.orden)}</strong><span>BEN CARSON</span></span>`:'';
+   const top=premon?'PREMONICIÓN':sheet?'LÁMINA':String(i.orden).padStart(2,'0');
+   const detail=premon?esc(i.capitulo||'')+(i.count?' · '+esc(i.count)+' temas':''):esc(i.tema);
+   const action=locked?'Disponible con un plan':premon?'Abrir premonición':sheet?'Abrir lámina':'Abrir ficha';
+   return `<button type="button" class="itc-card ${sheet?'itc-sheet-card ':''}${premon?'itc-premonition-card ':''}${locked?'is-locked':''}" data-id="${esc(i.id)}" aria-label="${locked?'Bloqueado: ':''}${esc(i.titulo)}">${cover}${banner}<span class="itc-card-top"><span class="itc-number">${top}</span><span class="itc-card-symbol" aria-hidden="true">${locked?'🔒':'↗'}</span></span><span class="itc-card-middle"><span class="itc-card-subject">${esc(i.materia)}</span><strong>${esc(i.titulo)}</strong><span class="itc-card-topic">${detail}</span></span><span class="itc-card-bottom">${action} <span aria-hidden="true">→</span></span></button>`;}).join(''):'<div class="itc-empty">No hay material con estos filtros. Prueba con otro tema.</div>';
   showCovers().catch(()=>{});
  }
  async function load(){const current=++requestId;status('');try{
   if(window.CampusAccess?.isFree())format='cards';
   $('itc-formats').querySelectorAll('button').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.format===format)));
   if(!catalogue.length)catalogue=window.CampusCatalogs?.intocables||[];
+  if(!premoniciones.length)premoniciones=(window.CampusCatalogs?.premoniciones||[]).map(i=>({...i,kind:'premoniciones',acceso_gratis:false}));
   if(!catalogue.length){const [response]=await Promise.all([fetch('/content/intocables_catalogo_2026.json'),window.loadMindmapCatalog?.()]);if(!response.ok)throw Error();const cards=await response.json();catalogue=cards.map(i=>({...i,kind:'cards'})).concat((window.MINDMAP_PREMIUM_CATALOG||[]).filter(m=>m.curated||m.section==='intocables').map((m,i)=>({...m,kind:'sheets',tema:m.id.startsWith('morfo_18_sangre__')?'Sangre':m.tema,orden:i+1,original:m})));}
-  if(current!==requestId)return;render();if(format==='sheets'){status('');return;}
+  if(current!==requestId)return;render();if(format!=='cards'){status('');return;}
   await ensureSupabaseSdk();const {data,error}=await getSupabase().from('intocables_esenciales').select('*').order('orden');if(error)throw error;if(current!==requestId)return;lessons=new Map((data||[]).map(i=>[i.id,i]));status(lessons.size?'':'Inicia sesión para leer las fichas disponibles.');render();
  }catch(_){if(current===requestId){status('No pudimos cargar este material. Comprueba tu conexión y vuelve a entrar.');render();}}}
  async function openSheet(id){
@@ -57,15 +65,43 @@ window.IntocablesHub = (() => {
    if(meta)return window.openMmLightbox({...meta,section:'intocables',format:'illustrated-sheet'});
   }catch(_){if(currentCampusScreen==='intocables-hub-screen')status('No pudimos abrir la lámina. Vuelve a intentarlo.');}
  }
- function openLesson(id){const meta=catalogue.find(i=>i.id===id);if(!meta)return;if(!meta.acceso_gratis&&window.CampusAccess?.isFree())return window.CampusAccess.unlock();if(meta.kind==='sheets')return openSheet(id);const item=lessons.get(id);if(!item){status('La ficha aún no está disponible. Vuelve a intentarlo.');load();return;}
+ function renderPremonition(item){
+  $('itc-premonition-kicker').textContent='PREMONICIONES BEN CARSON · '+String(item.materia||'').toLocaleUpperCase('es');
+  $('itc-premonition-title').textContent=item.titulo||'Premonición';
+  const count=(item.items||[]).length;
+  $('itc-premonition-subtitle').textContent=[item.capitulo,count?count+' temas':''].filter(Boolean).join(' · ');
+  $('itc-premonition-list').innerHTML=(item.items||[]).map(text=>'<li>'+esc(text)+'</li>').join('');
+ }
+ async function openPremonition(meta){
+  if(window.CampusAccess?.isFree())return window.CampusAccess.unlock();
+  const owner=currentUser?.id,request=++premonitionRequest;status('');
+  try{
+   let item=premonitionContent.get(meta.id);
+   if(!item){
+    await ensureSupabaseSdk();
+    const session=(await getSupabase().auth.getSession()).data.session,token=session?.access_token;
+    if(!token)throw new Error('session');
+    const response=await fetch('/api/premoniciones?id='+encodeURIComponent(meta.id),{headers:{Authorization:'Bearer '+token},cache:'no-store',signal:AbortSignal.timeout(15000)});
+    if(response.status===403){if(request===premonitionRequest&&owner===currentUser?.id&&currentCampusScreen==='intocables-hub-screen')window.CampusAccess.unlock();return;}
+    if(!response.ok)throw new Error('premonicion');
+    item=await response.json();premonitionContent.set(meta.id,item);
+   }
+   if(request!==premonitionRequest||owner!==currentUser?.id||currentCampusScreen!=='intocables-hub-screen')return;
+   renderPremonition(item);
+   $('itc-premonition-dialog').showModal();
+   window.CampusTracking?.record('intocables','opened',item.materia,item.tema,String(meta.id));
+  }catch(_){if(request===premonitionRequest)status('No pudimos abrir esta premonición. Vuelve a intentarlo.');}
+ }
+ function openLesson(id){const meta=catalogue.find(i=>i.id===id)||premoniciones.find(i=>i.id===id);if(!meta)return;if(!meta.acceso_gratis&&window.CampusAccess?.isFree())return window.CampusAccess.unlock();if(meta.kind==='premoniciones')return openPremonition(meta);if(meta.kind==='sheets')return openSheet(id);const item=lessons.get(id);if(!item){status('La ficha aún no está disponible. Vuelve a intentarlo.');load();return;}
   $('itc-dialog-kicker').textContent=item.materia+' · '+item.tema;$('itc-dialog-title').textContent=item.titulo;for(const [id,key] of [['itc-key','clave'],['itc-explain','explicacion'],['itc-mistake','error_comun'],['itc-question','pregunta'],['itc-answer','respuesta']])$(id).textContent=item[key];$('itc-answer').hidden=true;$('itc-reveal').hidden=false;$('itc-source').textContent='Referencia: '+item.fuente;$('itc-dialog').showModal();window.CampusTracking?.record('intocables','opened',item.materia,item.tema,id);
  }
  function init(){if(initialized)return;initialized=true;
   $('itc-formats').addEventListener('click',e=>{const b=e.target.closest('[data-format]');if(!b)return;format=b.dataset.format;topic='';$('itc-formats').querySelectorAll('button').forEach(n=>n.setAttribute('aria-pressed',String(n===b)));load();});
   $('itc-subjects').addEventListener('click',e=>{const b=e.target.closest('[data-subject]');if(b){subject=b.dataset.subject;topic='';render();}});$('itc-topic').addEventListener('change',e=>{topic=e.target.value;render();});$('itc-search').addEventListener('input',e=>{query=e.target.value.trim();render();});$('itc-grid').addEventListener('click',e=>{const b=e.target.closest('[data-id]');if(b)openLesson(b.dataset.id);});
   $('itc-close').onclick=()=>$('itc-dialog').close();$('itc-dialog').onclick=e=>{if(e.target===$('itc-dialog'))$('itc-dialog').close();};$('itc-reveal').onclick=()=>{$('itc-answer').hidden=false;$('itc-reveal').hidden=true;};
-  window.addEventListener('campus-access-change',()=>{++requestId;lessons.clear();clearCovers();$('itc-dialog').close();['itc-key','itc-explain','itc-mistake','itc-question','itc-answer','itc-source'].forEach(id=>$(id).textContent='');if(!$('intocables-hub-screen').classList.contains('hidden'))load();});
-  new MutationObserver(()=>{if($('intocables-hub-screen').classList.contains('hidden'))clearCovers();}).observe($('intocables-hub-screen'),{attributes:true,attributeFilter:['class']});
+  $('itc-premonition-close').onclick=()=>$('itc-premonition-dialog').close();$('itc-premonition-dialog').onclick=e=>{if(e.target===$('itc-premonition-dialog'))$('itc-premonition-dialog').close();};
+  window.addEventListener('campus-access-change',()=>{++requestId;++premonitionRequest;premonitionContent.clear();lessons.clear();clearCovers();$('itc-dialog').close();$('itc-premonition-dialog').close();['itc-key','itc-explain','itc-mistake','itc-question','itc-answer','itc-source'].forEach(id=>$(id).textContent='');if(!$('intocables-hub-screen').classList.contains('hidden'))load();});
+  new MutationObserver(()=>{if($('intocables-hub-screen').classList.contains('hidden')){clearCovers();$('itc-premonition-dialog').close();}}).observe($('intocables-hub-screen'),{attributes:true,attributeFilter:['class']});
  }
  function open(){init();return load();}
  return {open,openSheet};

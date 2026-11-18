@@ -29,6 +29,9 @@
     },
     "api/suficiencia.js": {
       "includeFiles": "api/_sufficiency/**"
+    },
+    "api/premoniciones.js": {
+      "includeFiles": "api/_premoniciones/**"
     }
   },
   "headers": [
@@ -208,6 +211,10 @@
     }
   ],
   "rewrites": [
+    {
+      "source": "/api/_premoniciones/:path*",
+      "destination": "/api/premoniciones?id=invalid"
+    },
     {
       "source": "/api/_sufficiency/:path*",
       "destination": "/api/suficiencia?invalid=1"
