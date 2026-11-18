@@ -1,10 +1,17 @@
 -- Restaurar el dispositivo de un estudiante desde el panel de administración.
 -- Aplicar en Supabase → SQL Editor (una sola vez).
--- Deja sin efecto el navegador autorizado y permite que la cuenta entre desde su
--- dispositivo actual; también devuelve a la cuenta su cambio automático de equipo.
-BEGIN;
-SET LOCAL lock_timeout = '5s';
+--
+-- Este archivo tiene DOS partes:
+--   1) Crea la función que usa el botón "restaurar dispositivo" del panel admin.
+--   2) Restaura ahora mismo a Luiztinta99@gmail.com (Luiztinta99).
+--
+-- Importante: la función solo funciona llamada desde el panel con una sesión de
+-- administrador. No la ejecutes desde el SQL Editor; para una restauración manual
+-- usa las dos sentencias directas de la parte 2.
 
+-- ══════════════════════════════════════════════════════════════════════════
+-- PARTE 1 · Función para el botón del panel de administración
+-- ══════════════════════════════════════════════════════════════════════════
 CREATE OR REPLACE FUNCTION public.campus_admin_reset_devices(p_email text)
 RETURNS jsonb
 LANGUAGE plpgsql SECURITY DEFINER SET search_path = '' AS $$
@@ -21,8 +28,7 @@ BEGIN
   END IF;
 
   SELECT u.id INTO student_id FROM auth.users u
-  WHERE lower(u.email) = lower(btrim(p_email))
-  FOR NO KEY UPDATE;
+  WHERE lower(u.email) = lower(btrim(p_email));
   IF student_id IS NULL THEN
     RAISE EXCEPTION 'El estudiante debe registrarse con ese correo.' USING ERRCODE = 'P0002';
   END IF;
@@ -44,12 +50,11 @@ REVOKE ALL ON FUNCTION public.campus_admin_reset_devices(text) FROM PUBLIC, anon
 GRANT EXECUTE ON FUNCTION public.campus_admin_reset_devices(text) TO authenticated;
 
 NOTIFY pgrst, 'reload schema';
-COMMIT;
 
 -- ══════════════════════════════════════════════════════════════════════════
--- RESTAURACIÓN PUNTUAL SOLICITADA (Luiztinta99@gmail.com)
--- Ejecuta esta parte una sola vez para que la estudiante pueda entrar ya.
--- Si ya no la necesitas, puedes borrar estas dos sentencias antes de ejecutar.
+-- PARTE 2 · Restauración inmediata de Luiztinta99@gmail.com
+-- Ejecuta estas dos sentencias para que la estudiante pueda entrar ya.
+-- (No llaman a la función: se ejecutan directamente con permisos del editor.)
 -- ══════════════════════════════════════════════════════════════════════════
 UPDATE public.device_sessions
 SET is_active = false, auth_session_id = NULL
