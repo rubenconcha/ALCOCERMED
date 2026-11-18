@@ -1269,3 +1269,11 @@ tr:hover td {
   white-space: nowrap;
 }
 .registered-students #registered-status:empty { margin: 0; }
+
+/* Acciones por estudiante: ver progreso y restaurar dispositivo */
+.student-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 6px;
+}

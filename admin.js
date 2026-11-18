@@ -488,7 +488,7 @@ function renderEstudiantes(list) {
       <td><span class="tag tag-warning">${u.bancos}</span></td>
       <td><span class="tag tag-purple">${u.flashcardsKnown ? u.flashcards+' repasos' : 'Sin registro histórico'}</span></td>
       <td>${u.activity > 0 ? '<span class="tag tag-success">activo</span>' : '<span class="tag tag-muted">sin actividad registrada</span>'}</td>
-      <td><button class="btn btn-sm btn-secondary" onclick="window.verDetalleEstudiante('${escapeAttr(u.user_id)}')"><i class="fas fa-eye"></i> ver progreso</button></td>
+      <td><div class="student-actions"><button class="btn btn-sm btn-secondary" onclick="window.verDetalleEstudiante('${escapeAttr(u.user_id)}')"><i class="fas fa-eye"></i> ver progreso</button>${u.email ? `<button class="btn btn-sm btn-secondary" onclick="window.restaurarDispositivo('${escapeAttr(u.email)}')" title="Permite que entre desde su dispositivo actual"><i class="fas fa-mobile-screen"></i> restaurar dispositivo</button>` : ''}</div></td>
     </tr>`).join('');
 }
 
@@ -700,6 +700,26 @@ async function verDetalleEstudiante(userId) {
   showToast('No se pudo cargar el seguimiento. Actualiza la página.', 'error');
 }
 
+async function restaurarDispositivo(email) {
+  const studentEmail = String(email || '').trim();
+  if (!currentAdmin) return;
+  if (!studentEmail) { showToast('Este estudiante no tiene correo visible.', 'error'); return; }
+  if (!confirm('¿Restaurar el dispositivo de ' + studentEmail + '?\n\nSe cerrará el navegador autorizado para que pueda entrar desde su dispositivo actual.')) return;
+  try {
+    const { error } = await getSupabase().rpc('campus_admin_reset_devices', { p_email: studentEmail });
+    if (error) throw error;
+    showToast('Dispositivo restaurado para ' + studentEmail + '. Pídele que vuelva a iniciar sesión.', 'success');
+    refreshAdminData();
+  } catch (error) {
+    const missing = error?.code === 'PGRST202' || /could not find the function/i.test(error?.message || '');
+    const message = error?.code === '42501' ? 'Solo administradores pueden restaurar dispositivos.'
+      : error?.code === 'P0002' ? 'Ese correo no está registrado.'
+      : missing ? 'Falta aplicar el SQL de restauración en Supabase (sql/campus_admin_reset_dispositivos_2026.sql).'
+      : 'No se pudo restaurar el dispositivo. Intenta de nuevo.';
+    showToast(message, 'error');
+  }
+}
+
 function closeModal(e) {
   if (!e || !e.target || e.target.id === 'modal-estudiante' || e.currentTarget?.classList?.contains('modal-close')) {
     const modal = document.getElementById('modal-estudiante');
@@ -815,5 +835,6 @@ window.filterSimulacros = filterSimulacros;
 window.filterEvaluaciones = filterEvaluaciones;
 window.filterVideoclases = filterVideoclases;
 window.verDetalleEstudiante = verDetalleEstudiante;
+window.restaurarDispositivo = restaurarDispositivo;
 window.closeModal = closeModal;
 window.showToast = showToast;

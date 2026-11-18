@@ -46,7 +46,7 @@ jobs:
           node --check campus-exam-engine.js
           node --check admin.js
           node --check membership-admin.js
-          node --test tests/campus-access.test.cjs tests/admin-subscriptions.test.cjs
+          node --test tests/campus-access.test.cjs tests/admin-subscriptions.test.cjs tests/admin-devices.test.cjs
           node --check question-review.js
           node --test tests/question-review.test.cjs
           node --check admin-subject-errors.js
