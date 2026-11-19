@@ -50,6 +50,8 @@ jobs:
           node --check intocables-hub.js
           node --check api/premoniciones.js
           node --test tests/premoniciones.test.cjs
+          node --check registration.js
+          node --test tests/sesion-demo.test.cjs
           node --check question-review.js
           node --test tests/question-review.test.cjs
           node --check admin-subject-errors.js

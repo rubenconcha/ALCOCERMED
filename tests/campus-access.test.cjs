@@ -89,11 +89,12 @@ test('la página de registro crea la cuenta y guarda el correo sin pedir plan', 
   const script = fs.readFileSync('registration.js', 'utf8');
   assert.match(page, /<form id="register-form"/);
   assert.match(page, /id="register-email"/);
-  assert.match(page, /registration\.js\?v=2/);
+  assert.match(page, /registration\.js\?v=3/);
   assert.match(page, /campus-access\.js\?v=16/);
   assert.match(page, /href="\/ingresar"/);
   assert.doesNotMatch(script, /rpc\('campus_access'\)/);
   assert.match(script, /auth\.signUp/);
+  assert.match(script, /signOut\(\{scope:'local'\}\)/);
   assert.match(script, /location\.assign\('\/campus'\)/);
   assert.doesNotMatch(script, /premium\s*:|role\s*:/);
   assert.doesNotMatch(script, /muestra sin registro/);

@@ -3,6 +3,17 @@ const SUPABASE_KEY=window.ALCOCER_CONFIG.SUPABASE_KEY;
 let registrationClient;
 function ensureSupabaseSdk(){ return window.supabase ? Promise.resolve(window.supabase) : Promise.reject(new Error('No pudimos conectar. Recarga la página.')); }
 function getSupabase(){ return registrationClient || (registrationClient=window.supabase.createClient(SUPABASE_URL,SUPABASE_KEY)); }
+const previousSessionCleared = (async function clearPreviousSession(){
+ try {
+  await ensureSupabaseSdk();
+  const client=getSupabase();
+  const {data}=await client.auth.getSession();
+  if(!data?.session) return;
+  await client.auth.signOut({scope:'local'});
+  const status=document.getElementById('register-status');
+  if(status) status.textContent='Cerramos la sesión anterior para que puedas crear una cuenta nueva.';
+ } catch(_){/* El registro sigue funcionando aunque no se pueda cerrar la sesión anterior. */}
+})();
 function registrationMessage(error){
  const message=String(error?.message||'');
  if(/already registered|already exists|user already/i.test(message))return 'Ese correo ya tiene una cuenta. Entra desde «Iniciar sesión».';
@@ -13,6 +24,7 @@ function registrationMessage(error){
 }
 document.getElementById('register-form').addEventListener('submit',async event=>{
  event.preventDefault();
+ await previousSessionCleared;
  const button=document.getElementById('register-submit'),status=document.getElementById('register-status');
  const name=document.getElementById('register-name').value.trim();
  const email=document.getElementById('register-email').value.trim();

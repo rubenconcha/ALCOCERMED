@@ -7,6 +7,13 @@ const CONFIG = window.ALCOCER_CONFIG || {
 const SUPABASE_URL = CONFIG.SUPABASE_URL;
 const SUPABASE_KEY = CONFIG.SUPABASE_KEY;
 const ADMIN_EMAILS = (CONFIG.ADMIN_EMAILS || []).map(function(e) { return String(e).toLowerCase(); });
+const DEMO_LOGIN_NOTICE = 'La cuenta demo de Juegos no abre el campus. Inicia sesión con tu correo de estudiante o regístrate.';
+
+function isDemoGuestUser(user) {
+    if (!user) return false;
+    if (String(user.email || '').toLowerCase().endsWith('@demo.alcocermed.app')) return true;
+    return Boolean(user.user_metadata && user.user_metadata.demo_guest);
+}
 
 let _supabase = null;
 let _supabaseSdkPromise = null;
@@ -177,6 +184,11 @@ async function initAuth() {
         client.auth.onAuthStateChange(function (event, session) {
             if (event === 'SIGNED_IN' && session?.user && !campusSigningOut) {
                 setCampusSession(session);
+                if (isDemoGuestUser(session.user)) {
+                    showLoginScreen();
+                    showLoginNotice(DEMO_LOGIN_NOTICE);
+                    return;
+                }
                 const sessionId = currentCampusSessionId;
                 setTimeout(() => enterApp(session.user, sessionId), 0);
             } else if (event === 'SIGNED_OUT') {
@@ -189,9 +201,12 @@ async function initAuth() {
         var session = res.data?.session;
 
         if (session?.user && !currentUser) {
-            if (login) login.inert = true;
-            setCampusSession(session);
-            await enterApp(currentUser);
+            /* Sin ingreso automático: cada estudiante elige su cuenta al iniciar sesión. */
+            setCampusSession(null);
+            showLoginScreen();
+            showLoginNotice(isDemoGuestUser(session.user)
+                ? DEMO_LOGIN_NOTICE
+                : 'Por seguridad, elige tu cuenta e inicia sesión para continuar.');
         }
     } catch (e) {
         console.error('Error verificando sesión:', e);
@@ -218,6 +233,21 @@ function showLoginScreen() {
     if (emailEl) emailEl.value = '';
     if (passEl) passEl.value = '';
     hideLoginError();
+    hideLoginNotice();
+}
+
+function showLoginNotice(message) {
+    const notice = document.getElementById('login-notice');
+    if (!notice) return;
+    notice.textContent = message || '';
+    notice.hidden = !message;
+}
+
+function hideLoginNotice() {
+    const notice = document.getElementById('login-notice');
+    if (!notice) return;
+    notice.textContent = '';
+    notice.hidden = true;
 }
 
 let campusEntry = null;
@@ -234,6 +264,12 @@ async function verifyCampusDevice(client, user) {
 function enterApp(user, sessionId = currentCampusSessionId) {
     const isCurrent = () => currentUser?.id === user?.id && currentCampusSessionId === sessionId;
     if (!user || !isCurrent() || campusSigningOut) return Promise.resolve();
+    if (String(user.email || '').toLowerCase().endsWith('@demo.alcocermed.app') ||
+        Boolean(user.user_metadata && user.user_metadata.demo_guest)) {
+        showLoginScreen();
+        showLoginNotice('La cuenta demo de Juegos no abre el campus. Inicia sesión con tu correo de estudiante o regístrate.');
+        return Promise.resolve();
+    }
     if (verifiedCampusUserId === user.id && verifiedCampusSessionId === sessionId &&
         !document.body.classList.contains('login-active')) return Promise.resolve();
     if (campusEntry?.owner === user.id && campusEntry.sessionId === sessionId) return campusEntry.promise;

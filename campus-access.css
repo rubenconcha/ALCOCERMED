@@ -13,4 +13,5 @@ body.campus-pending .sidebar .campus-nav-contact{display:none!important}
 .login-register{text-align:center;font-size:14px;color:#55697a;margin:14px 0 0}
 .login-register a{color:#2386b6;font-weight:700;text-underline-offset:3px}
 .free-account-banner .campus-primary{display:inline-block}
+.login-notice{margin:0 0 14px;padding:11px 13px;border-radius:11px;background:#eef7ff;border:1px solid #cfe4f4;color:#1d5a7f;font-size:.85rem;line-height:1.45;text-align:center}
 
