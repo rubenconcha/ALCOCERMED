@@ -3273,7 +3273,7 @@ const BEN_CARSON_5050_LESSON = Object.freeze({
     DESCRIPCION: 'Videoclase de la Preparatoria Ben Carson.',
     MATERIA: 'MORFOFUNCIÓN',
 });
-const BEN_CARSON_5050_PLAYBACK_PATH = '/api/ben-carson-50-50-playback';
+const BEN_CARSON_5050_PLAYBACK_PATH = '/api/flashcards?bc5050_playback=1';
 
 async function getBenCarson5050Playback() {
     const { data, error } = await getSupabase().auth.getSession();

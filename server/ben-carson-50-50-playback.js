@@ -1,4 +1,4 @@
-// Proposed isolated Vercel function: api/ben-carson-50-50-playback.js
+// Protected lesson signer. Routed through the existing /api/flashcards function.
 // No production secrets in source; no service role; no cluster or policy changes.
 const { createHash } = require('node:crypto');
 const SUPABASE = 'https://asnwhddmurstzmghuyin.supabase.co';
@@ -15,7 +15,7 @@ function isAllowedOrigin(origin, env) {
   return env.VERCEL_ENV === 'production' && PRODUCTION_ORIGINS.has(origin);
 }
 const GUID = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
-function createHandler({ fetcher = fetch, env = process.env, now = Date.now } = {}) {
+function createHandler({ fetcher = fetch, env = process.env, now = Date.now, defaultPublishableKey } = {}) {
   return async function playback(req, res) {
     res.setHeader('Cache-Control', 'private, no-store, max-age=0');
     res.setHeader('Vercel-CDN-Cache-Control', 'no-store');
@@ -32,7 +32,7 @@ function createHandler({ fetcher = fetch, env = process.env, now = Date.now } = 
         !/^Bearer [A-Za-z0-9_-]+\.[A-Za-z0-9_-]+\.[A-Za-z0-9_-]+$/.test(bearer)) {
       return send(401, { error: 'sign_in_required' });
     }
-    const key = env.ALCOCERMED_SUPABASE_PUBLISHABLE_KEY || env.SUPABASE_ANON_KEY;
+    const key = env.ALCOCERMED_SUPABASE_PUBLISHABLE_KEY || env.SUPABASE_ANON_KEY || defaultPublishableKey;
     const guid = env.ALCOCERMED_BC5050_BUNNY_VIDEO_GUID;
     const signingKey = env.ALCOCERMED_BC5050_BUNNY_EMBED_TOKEN_KEY;
     if (!key || !GUID.test(guid || '') || !signingKey) {
