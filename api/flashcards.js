@@ -17,6 +17,10 @@ module.exports = async function handler(req, res) {
     res.setHeader('Cache-Control', 'private, no-store');
     res.setHeader('X-Content-Type-Options', 'nosniff');
     res.setHeader('X-Robots-Tag', 'noindex');
+    if (req.method === 'POST' && req.query?.bc5050_playback === '1') {
+        const { createHandler } = require('../server/ben-carson-50-50-playback.js');
+        return createHandler({ defaultPublishableKey: anonKey })(req, res);
+    }
     if (req.method !== 'GET') return res.status(405).end();
     const { materia, tema } = req.query || {};
     const scoped = materia !== undefined || tema !== undefined;
