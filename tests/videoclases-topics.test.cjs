@@ -89,7 +89,7 @@ test('deduplica temas, conserva clases sin tema, combina búsqueda y vuelve a to
   await t.context.loadVideoclases();
   assert.deepEqual(t.calls[0], ['videoclases', '*', 'id', 1, 'MATERIA']);
   assert.deepEqual(t.opts(), ['todos los temas', 'Ángulos de prueba', 'Membrana celular', 'Posición, planos y términos anatómicos', 'sin tema asignado']);
-  assert.deepEqual(t.list(), ['Uno', 'Dos', 'Legado', 'Biología', 'Ben Carson 50/50']);
+  assert.deepEqual(t.list(), ['Uno', 'Dos', 'Legado', 'Biología', 'Temas principales de anatomía y fisiología']);
   t.context.window.selectVcMateria('MORFOFUNCIÓN');
   assert.deepEqual(t.opts(), ['todos los temas', 'Ángulos de prueba', 'Posición, planos y términos anatómicos', 'sin tema asignado']);
   t.selection.value = 'tema:ángulos de prueba';
@@ -141,7 +141,7 @@ test('desautorizar limpia tarjetas y temas, y descarta una carga resuelta despu�
 test('sin tema seleccionado la clase protegida sigue disponible y su flujo no se modifica', async () => {
   const t = harness([]);
   await t.context.loadVideoclases();
-  assert.deepEqual(t.list(), ['Ben Carson 50/50']);
+  assert.deepEqual(t.list(), ['Temas principales de anatomía y fisiología']);
   assert.match(script, /const secured = v === BEN_CARSON_5050_LESSON;/);
   assert.match(script, /const BEN_CARSON_5050_PLAYBACK_PATH = '\/api\/flashcards\?bc5050_playback=1';/);
 });

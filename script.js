@@ -3270,7 +3270,7 @@ window.openEvaluacion = () => showScreen('evaluacion-screen');
 // ══════════════════════════════════════════════════════
 
 const BEN_CARSON_5050_LESSON = Object.freeze({
-    TITULO: 'Ben Carson 50/50',
+    TITULO: 'Temas principales de anatomía y fisiología',
     DESCRIPCION: 'Videoclase de la Preparatoria Ben Carson.',
     MATERIA: 'MORFOFUNCIÓN',
     TEMA: 'Posición, planos y términos anatómicos',

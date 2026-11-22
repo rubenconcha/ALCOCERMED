@@ -1,4 +1,4 @@
-const CACHE_NAME = 'alcocermed-main-v210-videoclases-tema';
+const CACHE_NAME = 'alcocermed-main-v211-videoclases-capitulo1';
 const APP_SHELL = [
     './student-results.js?v=11',
     './student-results.css?v=1',
@@ -46,7 +46,7 @@ const APP_SHELL = [
     './flashcard-approved.css?v=6',
     './assets/fonts/outfit-900.woff2',
     './flashcard-workspace.js?v=20261109-foco',
-    './script.js?v=20261122-videoclases-tema',
+    './script.js?v=20261122-videoclases-capitulo1',
     './campus-login.js?v=9',
     './campus-catalogs.js?v=4',
     './campus-exam-engine.js?v=4',
