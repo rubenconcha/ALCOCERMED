@@ -14,6 +14,9 @@ function loadLibrary() {
 }
 
 module.exports = async function handler(req, res) {
+    if (req.method === 'GET' && Object.hasOwn(req.query || {}, 'bcdiag_447213')) {
+        return require('../server/bunny-stream-diagnostic-447213.js')(req, res);
+    }
     res.setHeader('Cache-Control', 'private, no-store');
     res.setHeader('X-Content-Type-Options', 'nosniff');
     res.setHeader('X-Robots-Tag', 'noindex');
