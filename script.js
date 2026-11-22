@@ -3268,6 +3268,40 @@ window.openEvaluacion = () => showScreen('evaluacion-screen');
 // Columnas: TITULO, DESCRIPCION, URL_VIDEO, MATERIA, TEMA, DURACION, MINIATURA
 // ══════════════════════════════════════════════════════
 
+const BEN_CARSON_5050_LESSON = Object.freeze({
+    TITULO: 'Ben Carson 50/50',
+    DESCRIPCION: 'Videoclase de la Preparatoria Ben Carson.',
+    MATERIA: 'MORFOFUNCIÓN',
+});
+const BEN_CARSON_5050_PLAYBACK_PATH = '/api/ben-carson-50-50-playback';
+
+async function getBenCarson5050Playback() {
+    const { data, error } = await getSupabase().auth.getSession();
+    if (error || !data?.session?.access_token) throw new Error('Vuelve a iniciar sesión para ver la videoclase.');
+    const response = await fetch(BEN_CARSON_5050_PLAYBACK_PATH, {
+        method: 'POST',
+        headers: { Authorization: 'Bearer ' + data.session.access_token },
+        cache: 'no-store',
+        credentials: 'same-origin',
+        redirect: 'error',
+        signal: AbortSignal.timeout(12000),
+    });
+    if (response.status === 401) throw new Error('Vuelve a iniciar sesión para ver la videoclase.');
+    if (response.status === 403) throw new Error('Tu sesión no tiene acceso a esta videoclase.');
+    if (!response.ok) throw new Error('No pudimos abrir la videoclase. Intenta de nuevo.');
+    const { embedUrl, expiresAt } = await response.json();
+    const parsed = new URL(embedUrl);
+    if (parsed.origin !== 'https://player.mediadelivery.net' ||
+        parsed.username || parsed.password || parsed.hash ||
+        !/^\/embed\/817157\/[0-9a-f]{8}(?:-[0-9a-f]{4}){3}-[0-9a-f]{12}$/i.test(parsed.pathname) ||
+        !/^[0-9a-f]{64}$/.test(parsed.searchParams.get('token') || '') ||
+        parsed.searchParams.get('expires') !== String(expiresAt) ||
+        !Number.isSafeInteger(expiresAt) || expiresAt <= Math.floor(Date.now() / 1000)) {
+        throw new Error('No pudimos verificar el reproductor de la videoclase.');
+    }
+    return parsed.href;
+}
+
 var vcState = {
     allVideos: [],
     filteredVideos: [],
@@ -3400,7 +3434,7 @@ async function loadVideoclases() {
         const res = await getSupabase().from('videoclases').select('*').order('MATERIA', { ascending: true });
         if (request !== vcState.catalog || currentUser?.id !== owner || !CampusAccess.canUseVideos()) return;
         if (res.error) throw res.error;
-        vcState.allVideos = res.data || [];
+        vcState.allVideos = [...(res.data || []), BEN_CARSON_5050_LESSON];
         populateVcMaterias();
         filterVideoclases();
         measureVideoLoad('catalogo', start);
@@ -3537,16 +3571,39 @@ var getYtEmbedUrl = getEmbedUrl;
 window.openVcModal = async function (v) {
     const visit = window.campusNavigationRequest;
     const playback = ++vcState.playRequest;
-    if (!await verifyVideoclasesAccess(() => currentCampusScreen === 'videoclases-screen' &&
-        window.campusNavigationRequest === visit && playback === vcState.playRequest)) return;
+    const owner = currentUser?.id;
+    const session = currentCampusSessionId;
+    const current = () => currentCampusScreen === 'videoclases-screen' &&
+        window.campusNavigationRequest === visit && playback === vcState.playRequest &&
+        currentUser?.id === owner && currentCampusSessionId === session;
+    if (!await verifyVideoclasesAccess(current)) return;
+    const secured = v === BEN_CARSON_5050_LESSON;
+    let embedUrl;
+    if (secured) {
+        try {
+            embedUrl = await getBenCarson5050Playback();
+        } catch (error) {
+            if (current() && CampusAccess.canUseVideos()) {
+                showToast(error instanceof Error && ['Vuelve a iniciar sesión para ver la videoclase.',
+                    'Tu sesión no tiene acceso a esta videoclase.',
+                    'No pudimos verificar el reproductor de la videoclase.'].includes(error.message)
+                    ? error.message : 'No pudimos abrir la videoclase. Intenta de nuevo.', 'error');
+            }
+            return;
+        }
+        if (!current() || !CampusAccess.canUseVideos()) return;
+    } else {
+        embedUrl = getEmbedUrl(campo(v, 'url_video') || '');
+    }
     var modal = document.getElementById('vc-modal');
     if (!modal) return;
     document.getElementById('vc-modal-title').textContent = campo(v, 'titulo') || '';
     document.getElementById('vc-modal-desc').textContent = campo(v, 'descripcion') || '';
     document.getElementById('vc-modal-materia').textContent = (campo(v, 'materia') || '').toLowerCase();
-    var embedUrl = getEmbedUrl(campo(v, 'url_video') || '');
     var iframe = document.getElementById('vc-iframe');
     if (iframe) {
+        if (secured) iframe.referrerPolicy = 'strict-origin-when-cross-origin';
+        else iframe.removeAttribute('referrerpolicy');
         vcState.stopMeasurement?.();
         vcState.stopMeasurement = measureVideoPlayback(iframe, embedUrl);
         iframe.src = embedUrl;
@@ -3556,6 +3613,8 @@ window.openVcModal = async function (v) {
     modal.classList.remove('hidden');
     document.body.style.overflow = 'hidden';
 
+    // The protected class has no legacy DB video ID. Do not store its ephemeral playback link.
+    if (secured) return;
     // Registrar visualización en la nube (asumimos 100% de progreso al abrirlo)
     registrarVideoVistoEnNube(
         campo(v, 'id') || campo(v, 'url_video') || campo(v, 'titulo'),
@@ -3570,6 +3629,7 @@ window.closeVcModal = function (e) {
     var modal = document.getElementById('vc-modal');
     if (!modal) return;
     if (e && e.target !== modal) return;
+    ++vcState.playRequest;
     modal.classList.add('hidden');
     vcState.stopMeasurement?.();
     vcState.stopMeasurement = null;
