@@ -45,6 +45,27 @@
     combinations['ABCDE'.indexOf(q.respuesta_correcta)]===q.truth_values.map(Number).join('');
   });
  }
+ function validateWeek5(paper){
+  const scope='semana5';
+  if(paper?.id!==scope||paper.scope!==scope||paper.duration!==50||paper.total_points!==50||paper.questions?.length!==50)return false;
+  const seen=new Map();
+  return paper.questions.every((q,i)=>{
+   const n=i+1,count=n<=20?3:2,letter='ABCDE'.indexOf(q.respuesta_correcta);
+   const subject=n<=10||n>=46?'BIOLOGIA CELULAR':'MORFOFUNCION';
+   const options=count===3?['1 es correcto','2 es correcto','3 es correcto','Todos son correctos','Ninguno es correcto']:['1 es correcto','2 es correcto','Ambos son correctos','Ninguno es correcto'];
+   const patterns=count===3?['100','010','001','111','000']:['10','01','11','00'];
+   const lines=String(q.pregunta||'').split('\n');
+   if(q.id!==scope+'-'+n||q.numero_pregunta!==n||q.numero_original!==n||q.materia!==subject||!q.tema||q.puntos!==1||!q.justificacion||
+    lines.length!==count+1||!lines[0].trim()||!lines.slice(1).every((line,j)=>line.startsWith((j+1)+'. ')&&line.slice(3).trim())||
+    !options.every((text,j)=>q['opcion_'+'abcde'[j]]===text)||(count===2&&q.opcion_e)||
+    !Array.isArray(q.truth_values)||q.truth_values.length!==count||!q.truth_values.every(v=>typeof v==='boolean')||
+    patterns[letter]!==q.truth_values.map(Number).join('')||q.respuestas_aceptadas?.length!==1||q.respuestas_aceptadas[0]!==q.respuesta_correcta)return false;
+   const premises=lines.slice(1).join('\n'),prior=seen.get(premises);
+   // The original teacher paper repeats number 21 at 22. Preserve both numbered positions.
+   if(n===22&&prior!==21||prior!==undefined&&(prior!==21||n!==22))return false;
+   seen.set(premises,n);return true;
+  });
+ }
  function isAssertionQuestion(q){
   const first=String(q.opcion_a||'').toLowerCase().normalize('NFD').replace(/[^a-z0-9]/g,'');
   if(first!=='sololaafirmacion1escorrecta'&&!/^(?:si)?1(?:es)?(?:correct[oa]|incorrect[oa])$/.test(first))return false;
@@ -101,6 +122,7 @@
   if(scope==='semana2-testb-virtual')return validateWeek2(paper);
   if(scope==='semana3-grupo-virtual-2')return validateVirtualWeekly(paper,scope,'semana3-virtual');
   if(scope==='semana4-grupo-virtual-2')return validateWeek4(paper,scope);
+  if(scope==='semana5')return validateWeek5(paper);
   const mini=scope==='mini-foundations',total=mini?50:100;
   const rule=rules[scope];if(!rule||paper.scope!==scope||paper.duration!==total||paper.questions?.length!==total)return false;
   if(mini&&(paper.questions.filter(q=>q.coverage?.subject==='MORFOFUNCION'&&q.coverage.chapter===1).length!==15||paper.questions.filter(q=>q.coverage?.subject==='MORFOFUNCION'&&q.coverage.chapter===8).length!==15))return false;

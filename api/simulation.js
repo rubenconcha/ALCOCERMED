@@ -8,9 +8,10 @@ const scopes = new Map([['semana2-testb-virtual','semana2-testb-virtual'],['mini
 const week3Id = 'semana3-grupo-virtual-2';
 scopes.set(week3Id, week3Id);
 scopes.set('semana4-grupo-virtual-2', 'semana4-grupo-virtual-2');
+scopes.set('semana5', 'semana5');
 const prepa = new Map(catalog.entries.filter(entry => entry.scope === 'prepa').map(entry => [entry.curatedId, entry]));
 for (const id of prepa.keys()) scopes.set(id, 'prepa');
-const prepaStorage = 'https://ln3dltv3md2wx5wh.private.blob.vercel-storage.com/simulacros/preparatoria-v3/';
+const privateSimulationStorage = 'https://ln3dltv3md2wx5wh.private.blob.vercel-storage.com/simulacros/';
 const supabaseUrl = 'https://asnwhddmurstzmghuyin.supabase.co';
 const anonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFzbndoZGRtdXJzdHptZ2h1eWluIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzY1MDcwODAsImV4cCI6MjA5MjA4MzA4MH0.bd3kz5Xji6gQknGVw_M2d80XUTwcKzLyOEqKQwfaTmo';
 
@@ -55,10 +56,10 @@ async function loadWeek3(headers) {
   return { id: week3Id, scope: week3Id, title: format.title, duration: format.minutes, total_points: format.questionCount, questions };
 }
 
-async function loadPrepa(id) {
+async function loadPrivateSimulation(pathname) {
   const token = process.env.BLOB_READ_WRITE_TOKEN;
   if (!token) throw new Error('Private simulation storage unavailable');
-  const response = await fetch(prepaStorage + id + '.json', {
+  const response = await fetch(privateSimulationStorage + pathname, {
     headers: { Authorization: 'Bearer ' + token },
     signal: AbortSignal.timeout(8000)
   });
@@ -96,7 +97,8 @@ module.exports = async function handler(req, res) {
     const file = path.join(process.cwd(), 'api', '_simulations', id + '.json');
     let paper;
     if (id === week3Id) paper = await loadWeek3(headers);
-    else if (prepa.has(id)) paper = await loadPrepa(id);
+    else if (id === 'semana5') paper = await loadPrivateSimulation('semana5.json');
+    else if (prepa.has(id)) paper = await loadPrivateSimulation('preparatoria-v3/' + id + '.json');
     else paper = JSON.parse(await fs.promises.readFile(file, 'utf8'));
     if (paper.id !== id || !validate(paper, scopes.get(id), prepa.get(id))) return res.status(503).end();
     if (['first', 'second', 'final'].includes(paper.scope)) {

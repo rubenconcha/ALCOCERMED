@@ -177,6 +177,21 @@
       ]
     },
     {
+      "key": "semana5",
+      "curatedId": "semana5",
+      "scope": "semana5",
+      "kind": "mini",
+      "title": "Simulacro Semana 5",
+      "type": "Simulacro Semana 5",
+      "minutes": 50,
+      "questionCount": 50,
+      "split": [
+        35,
+        15,
+        0
+      ]
+    },
+    {
       "key": "prepa-01",
       "curatedId": "prepa-01",
       "scope": "prepa",
