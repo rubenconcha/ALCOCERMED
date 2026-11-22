@@ -121,6 +121,44 @@ window.CampusAccess = (() => {
     return { check, requirePremium, apply, reset, resolve, refresh, isFree, isRegistered, canUseVideos, permits, unlock, catalog };
 })();
 
+// Retain the requested exam across Google's fixed, allow-listed /campus callback.
+const googleSimulationReturnKey = 'alcocer_google_return_simulation';
+// The SDK may remove OAuth callback parameters before it raises SIGNED_IN.
+const googleSimulationReturnCallback = (() => {
+    try {
+        const initial = new URL(location.href);
+        const fragment = new URLSearchParams(initial.hash.slice(1));
+        return initial.pathname === '/campus' &&
+            (initial.searchParams.has('code') || fragment.has('access_token'));
+    } catch (_) { return false; }
+})();
+function rememberCampusGoogleSimulation() {
+    try {
+        sessionStorage.removeItem(googleSimulationReturnKey);
+        const current = new URL(location.href);
+        if (current.pathname === '/campus' && !current.searchParams.has('seccion') &&
+            current.searchParams.get('simulacro') === 'semana5') {
+            sessionStorage.setItem(googleSimulationReturnKey, JSON.stringify({ id: 'semana5', at: Date.now() }));
+        }
+    } catch (_) { /* OAuth must work even when storage is not available. */ }
+}
+
+window.restoreCampusGoogleSimulation = function(canUseSimulations) {
+    try {
+        const raw = sessionStorage.getItem(googleSimulationReturnKey);
+        sessionStorage.removeItem(googleSimulationReturnKey);
+        if (!raw || !canUseSimulations || !googleSimulationReturnCallback) return;
+        const pending = JSON.parse(raw);
+        const age = Date.now() - pending.at;
+        if (pending.id !== 'semana5' || !Number.isFinite(age) || age < 0 || age > 15 * 60 * 1000) return;
+        const target = new URL(location.href);
+        if (target.pathname !== '/campus' || target.searchParams.has('seccion') ||
+            target.searchParams.has('simulacro') || target.searchParams.has('mapa')) return;
+        target.searchParams.set('simulacro', pending.id);
+        history.replaceState(history.state, document.title, target);
+    } catch (_) { /* Leave the normal campus landing screen available. */ }
+};
+
 window.continueWithGoogle = async function(button) {
     button.disabled=true;
     const output=document.getElementById('google-status');
@@ -132,7 +170,11 @@ window.continueWithGoogle = async function(button) {
         if(!response.ok) throw new Error('No pudimos conectar. Intenta de nuevo.');
         const settings=await response.json();
         if(!settings.external?.google) throw new Error('Google todavía no está habilitado. Entra con tu correo o usuario y contraseña.');
+        rememberCampusGoogleSimulation();
         const {error}=await client.auth.signInWithOAuth({provider:'google',options:{redirectTo:location.origin+'/campus',queryParams:{prompt:'select_account'}}});
         if(error) throw error;
-    } catch(error) { output.textContent=error.message; button.disabled=false; }
+    } catch(error) {
+        try { sessionStorage.removeItem(googleSimulationReturnKey); } catch (_) {}
+        output.textContent=error.message; button.disabled=false;
+    }
 };

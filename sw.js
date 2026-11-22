@@ -1,4 +1,4 @@
-const CACHE_NAME = 'alcocermed-main-v212-simulacro-semana5';
+const CACHE_NAME = 'alcocermed-main-v213-simulacro-google';
 const APP_SHELL = [
     './student-results.js?v=11',
     './student-results.css?v=1',
@@ -37,7 +37,7 @@ const APP_SHELL = [
     './platform-polish.js?v=1',
     './config.js',
     './device_guard.js?v=13',
-    './campus-access.js?v=16',
+    './campus-access.js?v=17',
     './campus-preview-policy.js?v=1',
     './official-flashcards.js?v=2',
     './study-depth.js?v=20',
@@ -46,7 +46,7 @@ const APP_SHELL = [
     './flashcard-approved.css?v=6',
     './assets/fonts/outfit-900.woff2',
     './flashcard-workspace.js?v=20261109-foco',
-    './script.js?v=20261122-videoclases-capitulo1',
+    './script.js?v=20261122-simulacro-google',
     './campus-login.js?v=9',
     './campus-catalogs.js?v=5',
     './campus-exam-engine.js?v=4',

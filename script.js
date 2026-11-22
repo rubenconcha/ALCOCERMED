@@ -142,6 +142,7 @@ function enterVerifiedApp(user) {
         if (verifiedCampusUserId === user.id) sincronizarPerfilEnNube();
     }, 2500);
 
+    window.restoreCampusGoogleSimulation?.(!campusLimited);
     const campusParams = new URLSearchParams(window.location.search);
     /* Una cuenta registrada sin plan vigente se queda en Inicio: no se abren secciones. */
     if (!campusLimited) {
