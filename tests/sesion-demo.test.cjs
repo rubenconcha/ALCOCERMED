@@ -47,7 +47,8 @@ test('el login muestra el aviso y la versión nueva de los archivos', () => {
   assert.match(html, /campus-login\.js\?v=9/);
   assert.match(html, /campus-access\.css\?v=5/);
   assert.match(fs.readFileSync('campus-access.css', 'utf8'), /\.login-notice\{/);
-  assert.match(sw, /CACHE_NAME = 'alcocermed-main-v209-sesion-demo'/);
+  const cacheVersion = Number(sw.match(/CACHE_NAME = 'alcocermed-main-v(\d+)-[^']+'/)?.[1]);
+  assert.ok(cacheVersion >= 209, 'mantiene una versión de caché igual o más reciente');
   assert.match(sw, /'\.\/campus-login\.js\?v=9'/);
 });
 

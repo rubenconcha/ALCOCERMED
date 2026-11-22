@@ -2218,6 +2218,7 @@ document.addEventListener('click', function (e) {
         const btns = document.querySelectorAll('.banco-select-btn');
         dds.forEach(function (d) { d.classList.add('hidden'); });
         btns.forEach(function (b) { b.classList.remove('open'); });
+        document.getElementById('vc-materia-btn')?.setAttribute('aria-expanded', 'false');
     }
 });
 
@@ -3272,6 +3273,7 @@ const BEN_CARSON_5050_LESSON = Object.freeze({
     TITULO: 'Ben Carson 50/50',
     DESCRIPCION: 'Videoclase de la Preparatoria Ben Carson.',
     MATERIA: 'MORFOFUNCIÓN',
+    TEMA: 'Posición, planos y términos anatómicos',
 });
 const BEN_CARSON_5050_PLAYBACK_PATH = '/api/flashcards?bc5050_playback=1';
 
@@ -3382,6 +3384,14 @@ function clearVideoclases() {
     document.getElementById('vc-grid')?.replaceChildren();
     const matter = document.getElementById('vc-materia-text');
     if (matter) matter.textContent = 'todas las materias';
+    const dropdown = document.getElementById('vc-materia-dropdown');
+    dropdown?.replaceChildren();
+    dropdown?.classList.add('hidden');
+    const button = document.getElementById('vc-materia-btn');
+    button?.classList.remove('open');
+    button?.setAttribute('aria-expanded', 'false');
+    populateVcTemas(true);
+    setVcState('pending');
 }
 
 window.addEventListener('campus-access-change', () => {
@@ -3437,6 +3447,7 @@ async function loadVideoclases() {
         if (res.error) throw res.error;
         vcState.allVideos = [...(res.data || []), BEN_CARSON_5050_LESSON];
         populateVcMaterias();
+        populateVcTemas();
         filterVideoclases();
         measureVideoLoad('catalogo', start);
         warmVideoPlayer();
@@ -3474,6 +3485,44 @@ function populateVcMaterias() {
     });
 }
 
+function getVcTopic(video) {
+    const raw = campo(video, 'tema');
+    return typeof raw === 'string' ? raw.normalize('NFC').trim().replace(/\s+/g, ' ') : '';
+}
+
+function getVcTopicKey(topic) {
+    return topic ? 'tema:' + topic.toLocaleLowerCase('es') : 'sin-tema';
+}
+
+function matchesVcMateria(video) {
+    return !vcState.selectedMateria || campo(video, 'materia') === vcState.selectedMateria;
+}
+
+function populateVcTemas(reset = false) {
+    const select = document.getElementById('vc-tema-select');
+    if (!select) return;
+    const previous = reset ? '' : select.value;
+    const topics = new Map();
+    let hasUntagged = false;
+    for (const video of vcState.allVideos.filter(matchesVcMateria)) {
+        const label = getVcTopic(video);
+        const key = getVcTopicKey(label);
+        if (!label) hasUntagged = true;
+        else if (!topics.has(key)) topics.set(key, label);
+    }
+    const options = [...topics].sort((a, b) => a[1].localeCompare(b[1], 'es'));
+    if (hasUntagged) options.push(['sin-tema', 'sin tema asignado']);
+    options.unshift(['', 'todos los temas']);
+    select.replaceChildren(...options.map(([value, label]) => {
+        const option = document.createElement('option');
+        option.value = value;
+        option.textContent = label;
+        return option;
+    }));
+    select.value = options.some(([value]) => value === previous) ? previous : '';
+    select.disabled = options.length <= 1;
+}
+
 window.toggleVcDropdown = function () {
     var dd = document.getElementById('vc-materia-dropdown');
     var btn = document.getElementById('vc-materia-btn');
@@ -3481,33 +3530,40 @@ window.toggleVcDropdown = function () {
     var isOpen = !dd.classList.contains('hidden');
     dd.classList.toggle('hidden', isOpen);
     btn.classList.toggle('open', !isOpen);
+    btn.setAttribute('aria-expanded', String(!isOpen));
 };
 
 window.selectVcMateria = function (materia) {
+    const changed = vcState.selectedMateria !== materia;
     vcState.selectedMateria = materia;
     var el = document.getElementById('vc-materia-text');
     if (el) el.textContent = materia ? materia.toLowerCase().replace(/^salud p[úu]blica$/, 'educación para la salud') : 'todas las materias';
     var dd = document.getElementById('vc-materia-dropdown');
     var btn = document.getElementById('vc-materia-btn');
     if (dd) dd.classList.add('hidden');
-    if (btn) btn.classList.remove('open');
+    if (btn) {
+        btn.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+    }
+    populateVcTemas(changed);
     filterVideoclases();
 };
 
 window.filterVideoclases = function () {
     var q = ((document.getElementById('vc-search-input') || {}).value || '').toLowerCase();
+    const topic = document.getElementById('vc-tema-select')?.value || '';
     vcState.filteredVideos = vcState.allVideos.filter(function (v) {
-        var matchMat = !vcState.selectedMateria || campo(v, 'materia') === vcState.selectedMateria;
+        const matchTopic = !topic || getVcTopicKey(getVcTopic(v)) === topic;
         var titulo = (campo(v, 'titulo') || '').toLowerCase();
         var desc = (campo(v, 'descripcion') || '').toLowerCase();
         var matchQ = !q || titulo.includes(q) || desc.includes(q);
-        return matchMat && matchQ;
+        return matchesVcMateria(v) && matchTopic && matchQ;
     });
     renderVcGrid();
 };
 
 function renderVcGrid() {
-    setVcState(vcState.filteredVideos.length === 0 ? 'empty' : 'grid');
+    setVcState(vcState.filteredVideos.length ? 'grid' : vcState.allVideos.length ? 'no-results' : 'empty');
     var grid = document.getElementById('vc-grid');
     if (!grid) return;
     const cards = document.createDocumentFragment();
@@ -3515,7 +3571,7 @@ function renderVcGrid() {
         var titulo = campo(v, 'titulo') || 'Sin título';
         var desc = campo(v, 'descripcion') || '';
         var materia = campo(v, 'materia') || '';
-        var tema = campo(v, 'tema') || '';
+        var tema = getVcTopic(v);
         var duracion = campo(v, 'duracion') || '';
         var miniatura = campo(v, 'miniatura') || '';
         var urlVideo = campo(v, 'url_video') || '';
@@ -3537,8 +3593,16 @@ function renderVcGrid() {
             (materia ? '<span class="vc-card-materia">' + materia.toLowerCase().replace(/^salud p[úu]blica$/, 'educación para la salud') + '</span>' : '') +
             '<h3 class="vc-card-title">' + titulo + '</h3>' +
             (desc ? '<p class="vc-card-desc">' + desc + '</p>' : '') +
-            (tema ? '<span class="vc-card-tema"><i class="fas fa-tag"></i> ' + tema.toLowerCase() + '</span>' : '') +
             '</div>';
+        if (tema) {
+            const badge = document.createElement('span');
+            badge.className = 'vc-card-tema';
+            const icon = document.createElement('i');
+            icon.className = 'fas fa-tag';
+            icon.setAttribute('aria-hidden', 'true');
+            badge.append(icon, ' ' + tema.toLocaleLowerCase('es'));
+            card.querySelector('.vc-card-body')?.append(badge);
+        }
         cards.appendChild(card);
     });
     grid.replaceChildren(cards);
@@ -3646,6 +3710,8 @@ function setVcState(state) {
     var empty = document.getElementById('vc-empty');
     if (grid) grid.classList.toggle('hidden', state !== 'grid');
     if (empty) empty.classList.toggle('hidden', state !== 'empty');
+    const noResults = document.getElementById('vc-no-results');
+    if (noResults) noResults.classList.toggle('hidden', state !== 'no-results');
 }
 
 

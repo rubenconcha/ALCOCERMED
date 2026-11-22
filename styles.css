@@ -4879,6 +4879,22 @@ body.sidebar-collapsed .sidebar .nav-item-simple a:hover::before {
     min-width: 200px;
 }
 
+.vc-tema-select {
+    width: 100%;
+    min-height: 44px;
+    padding: 0 10px;
+    border: 1.5px solid #e5e7eb;
+    border-radius: 12px;
+    background: #fff;
+    color: var(--text-dark);
+    font: 600 0.9rem 'Outfit', sans-serif;
+}
+
+.vc-tema-select:focus-visible {
+    outline: 2px solid #238cc1;
+    outline-offset: 2px;
+}
+
 .vc-search-wrap {
     display: flex;
     align-items: center;
@@ -5594,8 +5610,24 @@ body.sidebar-collapsed .sidebar .nav-item-simple a:hover::before {
     }
 
     .vc-filters {
-        flex-direction: column;
-        align-items: stretch;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        align-items: end;
+    }
+
+    .vc-filter-group {
+        min-width: 0;
+    }
+
+    .vc-filters .banco-select-btn span {
+        min-width: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .vc-filters .vc-search-wrap {
+        grid-column: 1 / -1;
     }
 
     .vc-search-wrap {

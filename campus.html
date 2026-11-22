@@ -20,7 +20,7 @@
 
     <style>body.login-active :is(.sidebar,.main-content,.watermark,.overlay){display:none!important}</style>
     <link href="assets/mindmaps/fonts/outfit.css?v=3" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css?v=46">
+    <link rel="stylesheet" href="styles.css?v=47">
     <link rel="stylesheet" href="commerce.css?v=1">
     <link rel="stylesheet" href="student-white.css?v=2">
     <link rel="stylesheet" href="campus-theme.css?v=4">
@@ -1425,18 +1425,24 @@
 
             <div class="vc-filters">
                 <div class="vc-filter-group">
-                    <label class="banco-select-label"><i class="fas fa-book-medical"></i> materia</label>
+                    <label class="banco-select-label" for="vc-materia-btn"><i class="fas fa-book-medical" aria-hidden="true"></i> materia</label>
                     <div class="banco-custom-select">
-                        <button class="banco-select-btn" id="vc-materia-btn" onclick="toggleVcDropdown()">
+                        <button type="button" class="banco-select-btn" id="vc-materia-btn" onclick="toggleVcDropdown()" aria-expanded="false" aria-controls="vc-materia-dropdown">
                             <span id="vc-materia-text">todas las materias</span>
                             <i class="fas fa-chevron-down"></i>
                         </button>
                         <div class="banco-dropdown hidden" id="vc-materia-dropdown"></div>
                     </div>
                 </div>
+                <div class="vc-filter-group">
+                    <label class="banco-select-label" for="vc-tema-select"><i class="fas fa-tag" aria-hidden="true"></i> tema</label>
+                    <select id="vc-tema-select" class="vc-tema-select" onchange="filterVideoclases()" disabled>
+                        <option value="">todos los temas</option>
+                    </select>
+                </div>
                 <div class="vc-search-wrap">
-                    <i class="fas fa-search"></i>
-                    <input type="text" id="vc-search-input" class="vc-search-input" placeholder="buscar videoclase..."
+                    <i class="fas fa-search" aria-hidden="true"></i>
+                    <input type="text" id="vc-search-input" class="vc-search-input" aria-label="Buscar videoclase" placeholder="buscar videoclase..."
                         oninput="filterVideoclases()">
                 </div>
             </div>
@@ -1447,9 +1453,14 @@
             </div>
             <div id="vc-grid" class="vc-grid hidden"></div>
             <div id="vc-empty" class="vc-state-wrap hidden">
-                <i class="fas fa-video-slash"></i>
+                <i class="fas fa-video-slash" aria-hidden="true"></i>
                 <h3>sin videoclases todavía</h3>
                 <p>pronto se publicarán clases grabadas.<br>vuelve más adelante.</p>
+            </div>
+            <div id="vc-no-results" class="vc-state-wrap hidden" role="status">
+                <i class="fas fa-search" aria-hidden="true"></i>
+                <h3>no encontramos videoclases</h3>
+                <p>Prueba con otro tema, materia o búsqueda.</p>
             </div>
 
         </section>
@@ -1895,7 +1906,7 @@
         <script data-campus-assets="campus" src="campus-section-tracking.js?v=1"></script>
         <script data-campus-assets="campus" src="question-review.js?v=15"></script>
         <script data-campus-assets="campus" src="study-media.js?v=20261021-visual5b"></script>
-        <script data-campus-assets="campus" src="script.js?v=20261122-ben-carson-seguro"></script>
+        <script data-campus-assets="campus" src="script.js?v=20261122-videoclases-tema"></script>
         <script data-campus-assets="campus" src="study-assessments.js?v=2"></script>
         <script data-campus-assets="campus" src="study-calendar-data.js?v=7"></script>
         <script data-campus-assets="campus" src="campus-shell.js?v=5"></script>

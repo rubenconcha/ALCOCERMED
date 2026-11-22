@@ -1,4 +1,4 @@
-const CACHE_NAME = 'alcocermed-main-v209-sesion-demo';
+const CACHE_NAME = 'alcocermed-main-v210-videoclases-tema';
 const APP_SHELL = [
     './student-results.js?v=11',
     './student-results.css?v=1',
@@ -20,7 +20,7 @@ const APP_SHELL = [
     './assets/flashcard-icons/bien-smile-3d.png',
     './assets/flashcard-icons/facil-3d.png',
     './manifest.webmanifest',
-    './styles.css?v=46',
+    './styles.css?v=47',
     './commerce.css?v=1',
     './student-white.css?v=2',
     './campus-theme.css?v=4',
@@ -46,7 +46,7 @@ const APP_SHELL = [
     './flashcard-approved.css?v=6',
     './assets/fonts/outfit-900.woff2',
     './flashcard-workspace.js?v=20261109-foco',
-    './script.js?v=20261116-registro',
+    './script.js?v=20261122-videoclases-tema',
     './campus-login.js?v=9',
     './campus-catalogs.js?v=4',
     './campus-exam-engine.js?v=4',

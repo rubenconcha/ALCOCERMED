@@ -92,7 +92,8 @@ test('la ruta queda registrada con sus archivos y bloqueada al acceso directo', 
   assert.deepEqual(vercel.functions['api/premoniciones.js'], { includeFiles: 'api/_premoniciones/**' });
   const rewrite = vercel.rewrites.find(item => item.source === '/api/_premoniciones/:path*');
   assert.equal(rewrite?.destination, '/api/premoniciones?id=invalid');
-  assert.match(sw, /CACHE_NAME = 'alcocermed-main-v209-sesion-demo'/);
+  const cacheVersion = Number(sw.match(/CACHE_NAME = 'alcocermed-main-v(\d+)-[^']+'/)?.[1]);
+  assert.ok(cacheVersion >= 209, 'mantiene una versión de caché igual o más reciente');
   assert.match(sw, /'\.\/intocables-hub\.js\?v=7'/);
   assert.match(sw, /'\.\/intocables-sheets\.css\?v=2'/);
 });
