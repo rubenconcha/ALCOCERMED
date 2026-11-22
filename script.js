@@ -3397,7 +3397,8 @@ async function loadVideoclases() {
     list.setAttribute('aria-busy', 'true');
     if (!vcState.allVideos.length) setVcState('pending');
     try {
-        const res = await getSupabase().from('videoclases').select('*').order('MATERIA', { ascending: true });
+        // Retire the legacy video with a broken source without deleting its record.
+        const res = await getSupabase().from('videoclases').select('*').neq('id', 1).order('MATERIA', { ascending: true });
         if (request !== vcState.catalog || currentUser?.id !== owner || !CampusAccess.canUseVideos()) return;
         if (res.error) throw res.error;
         vcState.allVideos = res.data || [];
