@@ -27,7 +27,6 @@
     let today = '';
     let selectedDate = '';
     let month = '';
-    let plan = new Map();
     let pendingMood = null;
     let savedMood = null;
 
@@ -151,8 +150,7 @@
             return;
         }
         const week = Math.floor((date.getTime() - Date.parse(course.start + 'T00:00:00Z')) / 604800000);
-        note.textContent = group.location + ' · Semana ' + (week + 1) + ' · Hora de Bolivia';
-        if (data.virtualStudy(selectedDate, groupId).length) return;
+        note.textContent = 'Horario oficial · ' + group.location + ' · Semana ' + (week + 1) + ' · Hora de Bolivia';
         group.days[day].forEach((subject, slot) => {
             const isMfq = extraSubjects.has(subject);
             const isVirtualException = isMfq && course.virtualMfq.includes(selectedDate);
@@ -177,8 +175,8 @@
         renderHomeClasses();
         byId('campus-plan-date').textContent = data.formatDay(selectedDate);
         const guided = data.virtualStudy(selectedDate, homeGroup.value);
-        byId('campus-plan-preview-label').textContent = guided.length ? 'Estudio sugerido · Grupo Virtual' : 'Plan de práctica de muestra';
-        const activities = (guided.length ? guided : plan.get(selectedDate) || []).filter(item => item.show);
+        byId('campus-guided-preview').hidden = !guided.length;
+        const activities = guided.filter(item => item.show && !item.id.endsWith('-virtual-clases'));
         planList.replaceChildren();
         for (const item of activities) {
             const row = document.createElement('li');
@@ -195,21 +193,14 @@
             row.append(button);
             planList.append(row);
         }
-        if (!activities.length) {
-            const empty = document.createElement('li');
-            empty.className = 'campus-plan-empty';
-            empty.textContent = 'Este día no tiene actividades de muestra.';
-            planList.append(empty);
-        }
     }
 
     function renderMonth(focus = false) {
         byId('campus-month-label').textContent = monthFormat.format(new Date(month + 'T00:00:00Z'));
         monthDays.replaceChildren();
         const end = monthOffset(month, 1);
-        const dates = [...plan.keys()];
-        const min = dates[0];
-        const max = dates.at(-1);
+        const min = today < data.classCalendar.start ? today : data.classCalendar.start;
+        const max = today > data.classCalendar.end ? today : data.classCalendar.end;
         byId('campus-month-prev').disabled = month <= min;
         byId('campus-month-next').disabled = end > max;
         const active = selectedDate >= month && selectedDate < end ? selectedDate : month;
@@ -249,7 +240,6 @@
         selectedDate = today;
         month = monthOffset(today, 0);
         if (!window.CampusAccess?.isFree()) {
-            plan = data.buildSample(today);
             renderMonth();
             renderDay();
         }

@@ -483,9 +483,11 @@
             <h3 id="campus-plan-date" aria-live="polite"></h3>
             <p id="campus-home-group-note" class="campus-plan-empty" aria-live="polite">Selecciona tu grupo para ver el horario del día.</p>
             <ul id="campus-home-classes" class="campus-home-classes"></ul>
-            <p id="campus-plan-preview-label" class="campus-example-label">Plan de práctica de muestra</p>
-            <ul id="campus-plan-preview"></ul>
-            <button type="button" id="campus-open-day" class="campus-secondary">Abrir cronograma del día</button>
+            <div id="campus-guided-preview" hidden>
+                <p id="campus-plan-preview-label" class="campus-example-label">Repaso sugerido · Grupo Virtual</p>
+                <ul id="campus-plan-preview"></ul>
+                <button type="button" id="campus-open-day" class="campus-secondary">Abrir cronograma de estudio</button>
+            </div>
           </div>
           <div class="campus-month" aria-labelledby="campus-month-label">
             <div class="campus-month-heading">
@@ -1951,7 +1953,7 @@
         <script data-campus-assets="campus" src="script.js?v=20261122-simulacro-google"></script>
         <script data-campus-assets="campus" src="study-assessments.js?v=2"></script>
         <script data-campus-assets="campus" src="study-calendar-data.js?v=9"></script>
-        <script data-campus-assets="campus" src="campus-shell.js?v=7"></script>
+        <script data-campus-assets="campus" src="campus-shell.js?v=8"></script>
         <script data-campus-assets="campus" src="campus-information.js?v=1"></script>
         <script data-campus-assets="campus" src="student-results.js?v=11"></script>
         <link rel="stylesheet" data-campus-assets="campus-extra simulations" href="simulacro-library.css?v=7">
