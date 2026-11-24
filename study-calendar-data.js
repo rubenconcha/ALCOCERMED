@@ -210,5 +210,51 @@
         ],
     };
 
-    return { zone, kinds, today, move, monday, formatDay, pageRange, buildSample, classCalendar };
+    const weeklyReadings = {
+        '2026-11-23': {
+            morfofuncion: [
+                reading('morfofuncion', 'Histología', 'Capítulo 5', [144,179], [172,207], 'morfo-05', 'histología'),
+                reading('morfofuncion', 'Sistema tegumentario', 'Capítulo 6', [181,205], [209,233], 'morfo-06', 'sistema tegumentario'),
+            ],
+            'biologia-celular': [
+                reading('biologia-celular', 'Estructura de la membrana plasmática', 'Capítulo 3', [121,166], [121,166], 'biologia-03', 'estructura de la membrana plasmática'),
+                reading('biologia-celular', 'Macrotransporte', 'Capítulo 5', [215,255], [215,255], 'biologia-05', 'macrotransporte a través de la membrana plasmática'),
+            ],
+        },
+    };
+    function virtualStudy(key, group) {
+        if (group !== 'virtual' || key < classCalendar.start || key > classCalendar.end) return [];
+        const dayIndex = toDate(key).getUTCDay() - 1;
+        if (dayIndex < 0 || dayIndex > 4) return [];
+        const week = Math.round((toDate(monday(key)) - toDate(classCalendar.start)) / 604800000);
+        const weekly = weeklyReadings[monday(key)] || {};
+        const rows = [];
+        const add = (id, kind, start, end, title, description, details = {}) => rows.push({
+            id: key + '-virtual-' + id, date:key, kind, start, end, title, description, show:true, ...details,
+        });
+        const topic = (id, slug, kind, start, end, title, resource, guide) => {
+            const options = weekly[slug] || [];
+            add(id, kind, start, end, title, options.length ? guide : 'Los temas sugeridos para esta semana aún no están definidos en el cronograma.',
+                options.length ? { resource, reading:options[0], readingOptions:options, readingGroup:slug } : {});
+        };
+        const mfqId = ['mate','fis','quim','mate','fis'][dayIndex];
+        const mfq = classCalendar.subjects[mfqId] + ' · ' + classCalendar.topics[week][dayIndex];
+        const one = 'Elige un tema de la semana. No tienes que estudiar todos el mismo día.';
+        topic('morfo-estudio','morfofuncion','study','07:00','09:00','Morfofunción','reading',one);
+        topic('morfo-desglose','morfofuncion','exam','09:00','10:00','Desglose · Morfofunción','questions',one);
+        topic('morfo-simulacro','morfofuncion','exam','10:00','11:00','Simulacro · Morfofunción','evaluation',one);
+        add('suficiencia-1','practice','11:00','12:00',mfq,'Practica el tema de suficiencia del día.',{resource:'sufficiency'});
+        add('almuerzo','rest','12:00','13:00','Almuerzo y descanso','Haz una pausa antes de retomar el estudio.');
+        add('suficiencia-2','practice','13:00','14:00',mfq,'Segunda hora de práctica de suficiencia.',{resource:'sufficiency'});
+        topic('bio-estudio','biologia-celular','study','14:00','16:00','Biología Celular','reading',one);
+        topic('bio-desglose','biologia-celular','exam','16:00','17:00','Desglose · Biología Celular','questions',one);
+        const virtual = classCalendar.groups.virtual;
+        const lesson = virtual.days[dayIndex].map((id,i)=>virtual.times[i] + ' · ' + classCalendar.subjects[id]);
+        add('clases','free','17:00','21:00','Clases virtuales en vivo',lesson.join(' | '));
+        add('descanso','rest','21:00','21:30','Descanso','Pausa después de clases.');
+        add('libre','free','22:00','00:00','Estudio libre','Opcional: repasa Digestivo, Respiratorio, Urinario, Linfático o Reproductor.',{resource:'flashcards'});
+        return rows;
+    }
+
+    return { zone, kinds, today, move, monday, formatDay, pageRange, buildSample, classCalendar, virtualStudy };
 });

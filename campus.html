@@ -483,15 +483,9 @@
             <h3 id="campus-plan-date" aria-live="polite"></h3>
             <p id="campus-home-group-note" class="campus-plan-empty" aria-live="polite">Selecciona tu grupo para ver el horario del día.</p>
             <ul id="campus-home-classes" class="campus-home-classes"></ul>
-            <details id="campus-home-routine" class="campus-home-extra" hidden>
-                <summary>Rutina sugerida del grupo Virtual</summary>
-                <ul id="campus-home-routine-list" class="campus-home-classes"></ul>
-            </details>
-            <details class="campus-home-extra">
-                <summary>Plan de práctica de muestra</summary>
-                <ul id="campus-plan-preview"></ul>
-                <button type="button" id="campus-open-day" class="campus-secondary">Abrir plan de práctica del día</button>
-            </details>
+            <p id="campus-plan-preview-label" class="campus-example-label">Plan de práctica de muestra</p>
+            <ul id="campus-plan-preview"></ul>
+            <button type="button" id="campus-open-day" class="campus-secondary">Abrir cronograma del día</button>
           </div>
           <div class="campus-month" aria-labelledby="campus-month-label">
             <div class="campus-month-heading">
@@ -1575,44 +1569,13 @@
                                 </div>
                             </div>
                             <div id="calendar-bc-days" class="calendar-bc-days"></div>
-                            <aside id="calendar-bc-virtual-guide" class="calendar-bc-guide" aria-labelledby="calendar-bc-guide-title" hidden>
-                                <h4 id="calendar-bc-guide-title">Rutina sugerida · Grupo Virtual</h4>
-                                <p>Organiza tu estudio alrededor de tus clases en vivo. Los bloques de repaso son orientativos.</p>
-                                <div class="calendar-bc-guide-grid">
-                                    <section aria-label="Mañana">
-                                        <h5>Mañana · Morfofunción y suficiencia</h5>
-                                        <dl>
-                                            <div><dt>07:00–09:00</dt><dd>Estudia el tema de Morfofunción de la semana.</dd></div>
-                                            <div><dt>09:00–10:00</dt><dd>Revisa el desglose del tema y sus preguntas de exámenes pasados.</dd></div>
-                                            <div><dt>10:00–11:00</dt><dd>Haz un simulacro del tema. Es un bloque aparte de los exámenes pasados.</dd></div>
-                                            <div><dt>11:00–12:00</dt><dd>Practica la materia de suficiencia del día: Matemáticas, Física o Química.</dd></div>
-                                            <div><dt>12:00–13:00</dt><dd>Almuerzo y descanso.</dd></div>
-                                        </dl>
-                                    </section>
-                                    <section aria-label="Tarde">
-                                        <h5>Tarde · Biología y clases</h5>
-                                        <dl>
-                                            <div><dt>13:00–14:00</dt><dd>Segunda hora de práctica de la materia de suficiencia del día.</dd></div>
-                                            <div><dt>14:00–16:00</dt><dd>Estudia el tema de Biología Celular de la semana.</dd></div>
-                                            <div><dt>16:00–17:00</dt><dd>Revisa preguntas de exámenes pasados de Biología Celular.</dd></div>
-                                            <div><dt>17:00–21:00</dt><dd>Clases virtuales en vivo. Consulta arriba los bloques por materia.</dd></div>
-                                        </dl>
-                                    </section>
-                                    <section aria-label="Noche">
-                                        <h5>Noche · Repaso opcional</h5>
-                                        <dl>
-                                            <div><dt>21:00–21:30</dt><dd>Descanso después de clases.</dd></div>
-                                            <div><dt>22:00–00:00</dt><dd>Estudio libre. Sugerencia: empieza con tres sesiones de aparato digestivo y sigue con respiratorio. También puedes repasar urinario, linfático o reproductor masculino y femenino.</dd></div>
-                                        </dl>
-                                    </section>
-                                </div>
-                            </aside>
+                            <p id="calendar-bc-virtual-guide" class="calendar-bc-guide" hidden><button id="calendar-bc-open-study" type="button" class="calendar-primary">Abrir cronograma de estudio del grupo Virtual</button></p>
                         </div>
                     </section>
                     <div id="calendar-bc-practice" hidden>
                         <div id="calendar-board"></div>
                         <div class="calendar-sample">
-                            <span class="calendar-sample-badge">Plan de práctica de muestra</span>
+                            <span id="calendar-board-plan-label" class="calendar-sample-badge">Plan de práctica de muestra</span>
                             <span>Horarios de ejemplo · Bolivia</span>
                         </div>
                     </div>
@@ -1987,8 +1950,8 @@
         <script data-campus-assets="campus" src="study-media.js?v=20261021-visual5b"></script>
         <script data-campus-assets="campus" src="script.js?v=20261122-simulacro-google"></script>
         <script data-campus-assets="campus" src="study-assessments.js?v=2"></script>
-        <script data-campus-assets="campus" src="study-calendar-data.js?v=8"></script>
-        <script data-campus-assets="campus" src="campus-shell.js?v=6"></script>
+        <script data-campus-assets="campus" src="study-calendar-data.js?v=9"></script>
+        <script data-campus-assets="campus" src="campus-shell.js?v=7"></script>
         <script data-campus-assets="campus" src="campus-information.js?v=1"></script>
         <script data-campus-assets="campus" src="student-results.js?v=11"></script>
         <link rel="stylesheet" data-campus-assets="campus-extra simulations" href="simulacro-library.css?v=7">
@@ -1999,7 +1962,7 @@
         <script data-campus-assets="campus flashcards" src="student-library.js?v=12"></script>
         <script data-campus-assets="campus flashcard-deck" src="flashcard-workspace.js?v=20261109-foco"></script>
         <script data-campus-assets="calendar-pdf" src="study-calendar-pdf.js?v=2"></script>
-        <script data-campus-assets="campus calendar" src="study-calendar.js?v=17"></script>
+        <script data-campus-assets="campus calendar" src="study-calendar.js?v=18"></script>
         <script data-campus-assets="past-topics" src="past-exam-breakdown.js?v=12"></script>
         <script data-campus-assets="campus-extra past evaluations entrance-attempt" src="past-exams.js?v=16"></script>
         <script data-campus-assets="entrance-attempt" src="simulation-scope.js?v=13"></script>

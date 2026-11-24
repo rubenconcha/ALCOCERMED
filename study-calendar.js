@@ -13,12 +13,14 @@
     const workspace = byId('calendar-activity');
     const tools = byId('calendar-workspace-tools');
     const scripts = new Map();
+    const guidedTopic = new Map();
     const activityViews = { reading: 'study', questions: 'breakdown', evaluation: 'evaluation' };
     const viewTitles = { study: 'Estudio', orientation: 'Estudio', manual: 'Estudio', breakdown: 'Examen pasado', evaluation: 'Evaluación' };
     const actions = {
         practice: ['Abrir ejercicio', item => openStudyAsset(item, 'practice', () => {
             if (showScreen('sufficiency-practice-screen') !== false) window.SufficiencyPractice.openExercise(item.practice.id);
         })],
+        sufficiency: ['Ver ejercicios de suficiencia', () => window.showScreen('sufficiency-practice-screen')],
         simulation: ['Ver simulacros', () => window.openCampusSimulations()],
         results: ['Ver mis resultados', () => window.openStudentResults()],
         flashcards: ['Repasar con flashcards', () => window.openStudyLibrary()],
@@ -91,6 +93,7 @@
     function setUser(id = '') {
         if (state.user !== id) {
             state.user = id;
+            guidedTopic.clear();
             state.date = '';
             overviewDate = '';
             state.active = null;
@@ -170,7 +173,7 @@
                 if (date === state.reference) dateControl.setAttribute('aria-current', 'date');
                 top.append(dateControl);
                 cell.append(top);
-                const activities = (state.plan.get(date) || []).filter(item => item.show);
+                const activities = activitiesFor(date).filter(item => item.show);
                 const kinds = new Set();
                 const distinct = [], repeated = [];
                 for (const item of activities) {
@@ -193,7 +196,7 @@
         const list = element('div', 'fc-listWeek-view calendar-agenda');
         for (let offset = 0; offset < 7; offset++) {
             const date = data.move(start, offset);
-            const activities = (state.plan.get(date) || []).filter(item => item.show);
+            const activities = activitiesFor(date).filter(item => item.show);
             if (!activities.length) continue;
             const section = element('section', 'calendar-agenda-day');
             const heading = element('h3', 'fc-list-day-cushion');
@@ -294,6 +297,7 @@
         byId('calendar-bc-classes').hidden = !showClasses;
         byId('calendar-bc-practice').hidden = showClasses;
         if (showClasses) renderClassCalendar();
+        else renderOverview();
     }
     classesView.addEventListener('click', () => switchCalendarView(true));
     practiceView.addEventListener('click', () => switchCalendarView(false));
@@ -309,6 +313,11 @@
         groupSelect.value = isGroup(detail) ? detail : '';
         renderClassCalendar();
     });
+    byId('calendar-bc-open-study').addEventListener('click', () => {
+        const first = data.move(classCalendar.start, (classWeek || 0) * 7);
+        const current = data.today();
+        showDay(current >= first && current <= data.move(first, 4) ? current : first);
+    });
     byId('calendar-bc-prev').addEventListener('click', () => {
         if (classWeek > 0) { classWeek -= 1; renderClassCalendar(); }
     });
@@ -317,7 +326,8 @@
     });
 
     function renderOverview(focusClass) {
-        if (classesView.getAttribute('aria-pressed') === 'true') renderClassCalendar();
+        renderClassCalendar();
+        byId('calendar-board-plan-label').textContent = groupSelect.value === 'virtual' ? 'Estudio sugerido · Grupo Virtual' : 'Plan de práctica de muestra';
         updatePlan();
         overviewDate ||= state.date || state.reference;
         const [start, end] = range();
@@ -373,8 +383,12 @@
         }
     }
 
+    function activitiesFor(date) {
+        const virtual = data.virtualStudy(date, groupSelect.value);
+        return virtual.length ? virtual : state.plan.get(date) || [];
+    }
     function activities() {
-        return state.plan.get(state.date) || [];
+        return activitiesFor(state.date);
     }
 
     function renderProgress() {
@@ -454,6 +468,7 @@
     function updateView(next, selectedReading = reading) {
         view = next;
         reading = selectedReading;
+        if (state.active?.readingGroup && selectedReading) guidedTopic.set(state.active.readingGroup, selectedReading.topicLinks.evaluation);
         renderActivity();
         focusDay();
     }
@@ -492,7 +507,7 @@
         const group = element('div', 'calendar-study-tools');
         group.append(
             tool('Manual', 'book', () => updateView('orientation')),
-            tool('Examen pasado', 'agenda', () => chooseTopic('breakdown')),
+            tool(item.readingOptions ? 'Desglose y exámenes pasados' : 'Examen pasado', 'agenda', () => chooseTopic('breakdown')),
             tool('Evaluación', 'practice', () => chooseTopic('evaluation'))
         );
         card.append(content, group, readingSource(reading), element('p', 'calendar-study-guide', item.description));
@@ -554,15 +569,19 @@
         return window.openBanco({ materia: book.bankSubject, tema: book.bankTopic });
     }
 
-    async function renderBreakdown(isCurrent) {
-        const readings = activities().filter(item => item.reading).map(item => item.reading);
+    function addReadingSelect(readings, label, nextView) {
+        if (readings.length < 2) return;
         const select = element('select', 'calendar-topic-select');
-        select.setAttribute('aria-label', 'Tema del examen pasado');
-        readings.forEach((book, i) => select.add(new Option(book.subject + ' · ' + book.topic, String(i))));
-        select.value = String(readings.indexOf(reading));
-        select.onchange = () => updateView('breakdown', readings[Number(select.value)]);
+        select.setAttribute('aria-label', label);
+        readings.forEach((book, i) => select.add(new Option(book.section + ' · ' + book.topic, String(i))));
+        const selected = readings.findIndex(book => book.topicLinks.evaluation === reading?.topicLinks.evaluation);
+        select.value = String(Math.max(selected,0));
+        select.onchange = () => updateView(nextView, readings[Number(select.value)]);
         tools.append(select);
+    }
 
+    async function renderBreakdown(isCurrent) {
+        if (!state.active?.readingOptions) addReadingSelect(activities().filter(item => item.reading).map(item => item.reading), 'Tema del examen pasado', 'breakdown');
         const book = reading;
         const fallback = book.bankTopic ? () => openBank(book) : null;
         const status = message(workspace, book.subject + ' · ' + book.topic);
@@ -705,7 +724,9 @@
         byId('calendar-day-title').textContent = viewTitles[view] && reading
             ? viewTitles[view] + ' · ' + reading.topic
             : item?.title || 'Estudio del día';
-        byId('calendar-day-label').textContent = data.formatDay(state.date) + ' · Plan de muestra';
+        const hasGuided = data.virtualStudy(state.date, groupSelect.value).length > 0;
+        byId('calendar-day-label').textContent = data.formatDay(state.date) + (hasGuided ? ' · Grupo Virtual' : ' · Plan de muestra');
+        if (item?.readingOptions && reading && !examMounted) addReadingSelect(item.readingOptions, 'Tema sugerido de la semana', view);
         if (view === 'study') renderStudy(item);
         else if (view === 'manual' || view === 'orientation') renderManual(item, isCurrent);
         else if (view === 'breakdown') renderBreakdown(isCurrent);
@@ -725,7 +746,8 @@
     function setActivity(item) {
         state.active = item || null;
         view = activityViews[item?.resource];
-        reading = item?.reading || (item?.topicLinks && activities().find(entry => entry.reading?.topicLinks === item.topicLinks)?.reading);
+        reading = item?.readingOptions?.find(book => book.topicLinks.evaluation === guidedTopic.get(item.readingGroup))
+            || item?.reading || (item?.topicLinks && activities().find(entry => entry.reading?.topicLinks === item.topicLinks)?.reading);
     }
 
     function selectActivity(item) {

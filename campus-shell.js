@@ -112,7 +112,6 @@
 
     const homeGroup = byId('campus-home-group');
     const homeClasses = byId('campus-home-classes');
-    const homeRoutine = byId('campus-home-routine');
     const groupKey = () => 'ben-carson:calendar-group:' + (userId || 'local');
     let homeGroupAccount;
     const extraSubjects = new Set(['mate','fis','quim']);
@@ -144,15 +143,6 @@
         const group = Object.prototype.hasOwnProperty.call(course.groups, groupId) ? course.groups[groupId] : null;
         const note = byId('campus-home-group-note');
         homeClasses.replaceChildren();
-        homeRoutine.hidden = groupId !== 'virtual';
-        if (groupId === 'virtual') {
-            const routine = byId('campus-home-routine-list');
-            if (!routine.children.length) {
-                for (const item of document.querySelectorAll('#calendar-bc-virtual-guide dl > div')) {
-                    routine.append(homeClassRow(item.querySelector('dt').textContent, item.querySelector('dd').textContent));
-                }
-            }
-        }
         if (!group) { note.textContent = 'Selecciona tu grupo para ver el horario del día.'; return; }
         const date = new Date(selectedDate + 'T00:00:00Z');
         const day = date.getUTCDay() - 1;
@@ -162,6 +152,7 @@
         }
         const week = Math.floor((date.getTime() - Date.parse(course.start + 'T00:00:00Z')) / 604800000);
         note.textContent = group.location + ' · Semana ' + (week + 1) + ' · Hora de Bolivia';
+        if (data.virtualStudy(selectedDate, groupId).length) return;
         group.days[day].forEach((subject, slot) => {
             const isMfq = extraSubjects.has(subject);
             const isVirtualException = isMfq && course.virtualMfq.includes(selectedDate);
@@ -173,19 +164,21 @@
 
     homeGroup.addEventListener('change', () => {
         storage(groupKey(), homeGroup.value);
-        renderHomeClasses();
+        renderDay();
         window.dispatchEvent(new CustomEvent('ben-carson:calendar-group-change', { detail: homeGroup.value }));
     });
     window.addEventListener('ben-carson:calendar-group-change', ({ detail }) => {
         homeGroup.value = detail || '';
-        if (selectedDate) renderHomeClasses();
+        if (selectedDate) renderDay();
     });
 
     function renderDay() {
         syncHomeGroup();
         renderHomeClasses();
         byId('campus-plan-date').textContent = data.formatDay(selectedDate);
-        const activities = (plan.get(selectedDate) || []).filter(item => item.show);
+        const guided = data.virtualStudy(selectedDate, homeGroup.value);
+        byId('campus-plan-preview-label').textContent = guided.length ? 'Estudio sugerido · Grupo Virtual' : 'Plan de práctica de muestra';
+        const activities = (guided.length ? guided : plan.get(selectedDate) || []).filter(item => item.show);
         planList.replaceChildren();
         for (const item of activities) {
             const row = document.createElement('li');
@@ -303,7 +296,7 @@
         }
         if (screenId === 'home-screen') {
             refreshHome();
-            if (selectedDate) { syncHomeGroup(); renderHomeClasses(); }
+            if (selectedDate) renderDay();
         }
         syncMenu();
         if (hadSidebarFocus && sidebar.inert) menu.focus();
