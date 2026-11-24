@@ -8,7 +8,7 @@
     <script defer src="/assets/vendor/supabase.js?v=2.118.0"></script>
     <link href="/assets/mindmaps/fonts/outfit.css?v=3" rel="stylesheet">
     <link rel="stylesheet" href="/assets/vendor/font-awesome-6.4.0/css/all.min.css" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="admin.css?v=6">
+    <link rel="stylesheet" href="admin.css?v=7">
     <link rel="stylesheet" href="admin-topic-results.css?v=5">
 </head>
 <body>
@@ -134,15 +134,24 @@
                     <form id="membership-activation" class="subscription-card" method="post" aria-labelledby="membership-title">
                         <h2 id="membership-title"><i class="fas fa-circle-check" aria-hidden="true"></i> Activar suscripción</h2>
                         <p>Acceso a la plataforma, juegos, atlas y videoclases.</p>
-                        <div class="subscription-fields">
+                        <div class="subscription-fields subscription-activation-fields">
                             <label class="subscription-email">Correo del estudiante
                                 <input id="membership-email" name="email" type="email" placeholder="estudiante@correo.com" list="registered-emails" autocomplete="off" required>
                             </label>
                             <label>Fecha de inicio <input name="start" type="date" max="9999-12-30" required></label>
                             <label>Fecha de finalización <input name="end" type="date" max="9999-12-30" required></label>
+                            <label class="subscription-group">Grupo Ben Carson
+                                <select id="membership-group" name="student_group" aria-describedby="membership-group-note">
+                                    <option value="">No cambiar grupo</option>
+                                    <option value="presencial_1">Presencial 1</option>
+                                    <option value="presencial_2">Presencial 2</option>
+                                    <option value="virtual">Virtual</option>
+                                </select>
+                            </label>
                             <button type="submit" class="btn subscription-activate">Activar acceso completo</button>
                         </div>
                         <p class="subscription-note">El día de finalización está incluido. Se usa la hora de Bolivia.</p>
+                        <p id="membership-group-note" class="subscription-note">Para otros cursos o si no conoces el grupo, deja «No cambiar grupo».</p>
                         <p class="subscription-feedback" role="status"></p>
                         <details id="registered-students" class="registered-students">
                             <summary><i class="fas fa-users" aria-hidden="true"></i> Ver estudiantes registrados (<span id="registered-count">—</span>)</summary>
@@ -243,15 +252,27 @@
                 <div class="table-card">
                     <div class="table-header">
                         <div class="table-title"><i class="fas fa-users"></i> lista de estudiantes</div>
-                        <div class="table-search"><i class="fas fa-search"></i><input type="text" id="search-estudiantes" placeholder="buscar por nombre o correo..." oninput="filterEstudiantes()"></div>
+                        <div class="student-list-filters">
+                            <label>Grupo Ben Carson
+                                <select id="filter-estudiantes-grupo" onchange="filterEstudiantes()" aria-describedby="student-group-status" disabled>
+                                    <option value="">Todos los grupos</option>
+                                    <option value="presencial_1">Presencial 1</option>
+                                    <option value="presencial_2">Presencial 2</option>
+                                    <option value="virtual">Virtual</option>
+                                    <option value="unassigned">Sin grupo asignado</option>
+                                </select>
+                            </label>
+                            <div class="table-search"><i class="fas fa-search" aria-hidden="true"></i><input type="search" id="search-estudiantes" aria-label="Buscar estudiante por nombre o correo" placeholder="buscar por nombre o correo..." oninput="filterEstudiantes()"></div>
+                        </div>
                     </div>
+                    <p id="student-group-status" class="student-group-status" role="status"></p>
                     <div class="table-wrap">
                         <table>
                             <thead>
-                                <tr><th>estudiante</th><th>última conexión</th><th>evaluaciones y exámenes</th><th>promedio</th><th>videos vistos</th><th>bancos</th><th>repasos históricos</th><th>estado</th><th>acciones</th></tr>
+                                <tr><th>estudiante</th><th>grupo Ben Carson</th><th>última conexión</th><th>evaluaciones y exámenes</th><th>promedio</th><th>videos vistos</th><th>bancos</th><th>repasos históricos</th><th>estado</th><th>acciones</th></tr>
                             </thead>
                             <tbody id="tabla-estudiantes">
-                                <tr><td colspan="8"><div class="loading-overlay"><i class="fas fa-spinner fa-spin"></i> cargando estudiantes...</div></td></tr>
+                                <tr><td colspan="10"><div class="loading-overlay"><i class="fas fa-spinner fa-spin"></i> cargando estudiantes...</div></td></tr>
                             </tbody>
                         </table>
                     </div>
@@ -276,14 +297,24 @@
                                     <option value="cancelled">Quitadas</option>
                                 </select>
                             </div>
+                            <label>Grupo Ben Carson
+                                <select id="subscriptions-group" aria-describedby="subscriptions-group-status" disabled>
+                                    <option value="">Todos los grupos</option>
+                                    <option value="presencial_1">Presencial 1</option>
+                                    <option value="presencial_2">Presencial 2</option>
+                                    <option value="virtual">Virtual</option>
+                                    <option value="unassigned">Sin grupo asignado</option>
+                                </select>
+                            </label>
                         </div>
                     </div>
+                    <p id="subscriptions-group-status" class="student-group-status" role="status"></p>
                     <p id="subscriptions-status" class="subscription-list-status" role="status"></p>
                     <p id="subscriptions-feedback" class="subscription-list-status" role="status"></p>
                     <div class="table-wrap" tabindex="0" role="region" aria-labelledby="subscriptions-title">
                         <table class="subscription-table" aria-labelledby="subscriptions-title">
                             <thead>
-                                <tr><th scope="col">Estudiante</th><th scope="col">Acceso</th><th scope="col">Inicio</th><th scope="col">Finalización</th><th scope="col">Estado</th><th scope="col" class="subscription-actions">Acciones</th></tr>
+                                <tr><th scope="col">Estudiante</th><th scope="col">Grupo Ben Carson</th><th scope="col">Acceso</th><th scope="col">Inicio</th><th scope="col">Finalización</th><th scope="col">Estado</th><th scope="col" class="subscription-actions">Acciones</th></tr>
                             </thead>
                             <tbody id="subscriptions-rows"></tbody>
                         </table>
@@ -531,6 +562,6 @@
 <datalist id="registered-emails"></datalist>
 
 <script defer src="config.js"></script>
-<script defer src="admin.js?v=9"></script><script defer src="question-review.js?v=3"></script><script defer src="admin-topic-results.js?v=5"></script><script defer src="admin-subject-errors.js?v=1"></script><script defer src="admin-flashcard-topics.js?v=1"></script><script defer src="admin-section-tracking.js?v=5"></script><script defer src="membership-admin.js?v=8"></script>
+<script defer src="admin.js?v=10"></script><script defer src="question-review.js?v=3"></script><script defer src="admin-topic-results.js?v=5"></script><script defer src="admin-subject-errors.js?v=1"></script><script defer src="admin-flashcard-topics.js?v=1"></script><script defer src="admin-section-tracking.js?v=5"></script><script defer src="membership-admin.js?v=9"></script>
 </body>
 </html>

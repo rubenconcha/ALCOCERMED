@@ -1027,6 +1027,41 @@ tr:hover td {
   max-width: 1000px;
   margin-top: 12px;
 }
+.subscription-activation-fields {
+  grid-template-columns: minmax(185px, 1.3fr) minmax(140px, 1fr) minmax(140px, 1fr) minmax(135px, 1fr) auto;
+  max-width: none;
+}
+.student-list-filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  gap: 10px 12px;
+}
+.student-list-filters label {
+  display: grid;
+  gap: 4px;
+  font-size: 0.79rem;
+  font-weight: 600;
+  color: var(--text-medium);
+}
+.student-list-filters select {
+  min-height: 36px;
+  padding: 5px 9px;
+  font: inherit;
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  background: var(--card-bg);
+  color: var(--text-dark);
+}
+.subscription-table .tag-group-presencial_1 { color: #1d4ed8; background: #dbeafe; }
+.subscription-table .tag-group-presencial_2 { color: #6b21a8; background: #f3e8ff; }
+.subscription-table .tag-group-virtual { color: #166534; background: #dcfce7; }
+.student-group-status { margin: 0 18px 10px; font-size: 0.8rem; color: var(--text-medium); }
+.student-group-status:empty { display: none; }
+@media (max-width: 1240px) {
+  .subscription-activation-fields { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .subscription-activation-fields .subscription-email { grid-column: 1 / -1; }
+}
 .subscription-remove-fields { grid-template-columns: minmax(220px, 1.4fr) minmax(195px, 1fr) auto; max-width: 790px; }
 .subscription-fields label, .subscription-filters label {
   display: grid;
@@ -1116,7 +1151,8 @@ tr:hover td {
 
 @media (max-width: 540px) {
   .subscription-card { padding: 16px; }
-  .subscription-fields .subscription-email, .subscription-fields .btn { grid-column: 1 / -1; }
+  .subscription-fields .subscription-email, .subscription-fields .btn,
+  .subscription-activation-fields .subscription-group { grid-column: 1 / -1; }
   .subscription-remove-fields { grid-template-columns: minmax(0, 1fr); }
   .subscription-remove-fields .btn { justify-self: stretch; }
   .subscription-filters { display: grid; grid-template-columns: minmax(0, 1fr); width: 100%; }

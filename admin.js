@@ -15,6 +15,10 @@ const ADMIN_EMAILS = (CONFIG.ADMIN_EMAILS || []).map(e => String(e).toLowerCase(
 
 let _supabase = null;
 let currentAdmin = null;
+let studentGroups = null;
+let studentGroupsByEmail = null;
+let studentGroupRequest = 0;
+const studentGroupLabels = Object.freeze({ presencial_1: 'Presencial 1', presencial_2: 'Presencial 2', virtual: 'Virtual' });
 let cachedData = {
   devices: [],
   sims: [],
@@ -97,6 +101,14 @@ async function adminLogout() {
     console.warn('[Admin] error cerrando sesión:', err);
   }
   currentAdmin = null;
+  ++studentGroupRequest;
+  studentGroups = studentGroupsByEmail = null;
+  const studentGroupFilter = document.getElementById('filter-estudiantes-grupo');
+  if (studentGroupFilter) {
+    studentGroupFilter.value = '';
+    studentGroupFilter.disabled = true;
+  }
+  setText('student-group-status', '');
   window.QuestionReview?.clear(); window.AdminTopicResults?.clear(); window.AdminSectionTracking?.clear();
   window.AdminSubscriptions?.clear();
   cachedData = { devices: [], sims: [], banco: [], videos: [], estudiantes: [], userMap: {}, errors: [] };
@@ -172,7 +184,7 @@ function showContentTab(btn, tabId) {
 
 async function refreshAdminData() {
   setText('last-updated', 'actualizando...');
-  await loadAllData();
+  await Promise.all([loadAllData(), refreshStudentGroups()]);
   const active = document.querySelector('.admin-section.active');
   renderCurrentSection(active ? active.id.replace('section-', '') : 'dashboard');
   if(typeof window!=='undefined')window.AdminSectionTracking?.refreshProfile();
@@ -180,7 +192,7 @@ async function refreshAdminData() {
 
 function renderCurrentSection(section) {
   if (section === 'dashboard') renderDashboard();
-  else if (section === 'estudiantes') renderEstudiantes(cachedData.estudiantes);
+  else if (section === 'estudiantes') filterEstudiantes();
   else if (section === 'suscripciones') window.AdminSubscriptions?.load();
   else if (section === 'simulacros') renderSimulacros(cachedData.sims);
   else if (section === 'evaluaciones') { renderEvaluaciones(cachedData.banco); window.AdminTopicResults?.render(); window.AdminSectionTracking?.render(); }
@@ -470,17 +482,66 @@ function renderDataStatus() {
 /* ═══════════════════════════════════════════════
    ESTUDIANTES
    ═══════════════════════════════════════════════ */
+async function refreshStudentGroups() {
+  const admin = currentAdmin;
+  if (!admin) return;
+  const request = ++studentGroupRequest;
+  const filter = document.getElementById('filter-estudiantes-grupo');
+  const isCurrent = () => request === studentGroupRequest && admin === currentAdmin;
+  try {
+    const loaded = new Map();
+    const byEmail = new Map();
+    const ambiguous = new Set();
+    const pageSize = 250;
+    for (let offset = 0; ; offset += pageSize) {
+      const { data, error } = await getSupabase().rpc('campus_admin_list_ben_carson_groups')
+        .order('user_id').range(offset, offset + pageSize - 1);
+      if (!isCurrent()) return;
+      if (error || !Array.isArray(data)) throw error || new Error('Invalid group directory');
+      for (const item of data) {
+        if (item.user_id && Object.hasOwn(studentGroupLabels, item.student_group)) {
+          loaded.set(String(item.user_id), item.student_group);
+          const email = String(item.email || '').trim().toLowerCase();
+          if (email) {
+            if (byEmail.has(email)) ambiguous.add(email);
+            byEmail.set(email, item.student_group);
+          }
+        }
+      }
+      if (data.length < pageSize) break;
+    }
+    for (const email of ambiguous) byEmail.delete(email);
+    studentGroups = loaded;
+    studentGroupsByEmail = byEmail;
+    if (filter) filter.disabled = false;
+    setText('student-group-status', '');
+  } catch {
+    if (!isCurrent()) return;
+    studentGroups = studentGroupsByEmail = null;
+    if (filter) {
+      filter.value = '';
+      filter.disabled = true;
+    }
+    setText('student-group-status', 'No se pudieron cargar los grupos. Puedes seguir buscando por nombre o correo.');
+  }
+  if (isCurrent()) {
+    document.dispatchEvent(new Event('admin-ben-carson-groups-change'));
+    if (document.getElementById('section-estudiantes')?.classList.contains('active')) filterEstudiantes();
+  }
+}
+
 function renderEstudiantes(list) {
   const tbody = document.getElementById('tabla-estudiantes');
   if (!tbody) return;
   const rows = Array.isArray(list) ? list : [];
   if (!rows.length) {
-    tbody.innerHTML = `<tr><td colspan="9">${emptyState('fa-users', 'sin estudiantes con progreso', 'cuando un alumno entre o termine actividades, aparecerá aquí.')}</td></tr>`;
+    tbody.innerHTML = `<tr><td colspan="10">${emptyState('fa-users', 'Sin coincidencias', 'Prueba otro grupo, nombre o correo.')}</td></tr>`;
     return;
   }
   tbody.innerHTML = rows.map(u => `
     <tr>
       <td>${studentCell(u)}</td>
+      <td>${studentGroups === null ? '—' : (studentGroupLabels[studentGroups.get(u.user_id)] || 'Sin grupo asignado')}</td>
       <td>${formatDateShort(u.last_seen)}</td>
       <td><span class="tag tag-info">${u.sims}</span></td>
       <td>${renderScore(u.simAvg || u.bancoAvg || 0)}</td>
@@ -493,8 +554,13 @@ function renderEstudiantes(list) {
 }
 
 function filterEstudiantes() {
-  const q = getValue('search-estudiantes').toLowerCase();
-  const rows = cachedData.estudiantes.filter(u => [u.display, u.sub, u.user_id].join(' ').toLowerCase().includes(q));
+  const q = getValue('search-estudiantes').trim().toLowerCase();
+  const group = studentGroups === null ? '' : getValue('filter-estudiantes-grupo');
+  const rows = cachedData.estudiantes.filter(u => {
+    const groupOfStudent = studentGroups?.get(u.user_id);
+    const matchesGroup = !group || (group === 'unassigned' ? groupOfStudent === undefined : group === groupOfStudent);
+    return matchesGroup && [u.display, u.email, u.sub, u.user_id].join(' ').toLowerCase().includes(q);
+  });
   renderEstudiantes(rows);
 }
 

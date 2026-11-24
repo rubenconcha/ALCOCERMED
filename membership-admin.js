@@ -2,6 +2,8 @@
 
 window.AdminSubscriptions = (() => {
   const activation = document.getElementById('membership-activation');
+  const groupSelect = document.getElementById('membership-group');
+  const groupLabels = Object.freeze({ presencial_1: 'Presencial 1', presencial_2: 'Presencial 2', virtual: 'Virtual' });
   const removal = document.getElementById('membership-removal');
   const videos = document.getElementById('membership-videos');
   const forms = [activation, removal, videos];
@@ -11,6 +13,8 @@ window.AdminSubscriptions = (() => {
   const listFeedback = document.getElementById('subscriptions-feedback');
   const search = document.getElementById('subscriptions-search');
   const filter = document.getElementById('subscriptions-state');
+  const listGroup = document.getElementById('subscriptions-group');
+  const listGroupStatus = document.getElementById('subscriptions-group-status');
   const dialog = document.getElementById('subscription-confirm');
   const dialogTitle = document.getElementById('subscription-confirm-title');
   const dialogMessage = document.getElementById('subscription-confirm-message');
@@ -164,10 +168,14 @@ window.AdminSubscriptions = (() => {
   function render() {
     if (!rows) return;
     const query = search.value.trim().toLowerCase();
-    const shown = rows.filter(row =>
-      (!filter.value || row.status === filter.value) &&
-      (!query || [row.student_name, row.email].some(value => value?.toLowerCase().includes(query)))
-    );
+    const groupFilter = studentGroupsByEmail === null ? '' : listGroup.value;
+    const groupFor = row => studentGroupsByEmail?.get(normalizedEmail(row.email));
+    const shown = rows.filter(row => {
+      const group = groupFor(row);
+      return (!filter.value || row.status === filter.value) &&
+        (!groupFilter || (groupFilter === 'unassigned' ? group === undefined : group === groupFilter)) &&
+        (!query || [row.student_name, row.email].some(value => value?.toLowerCase().includes(query)));
+    });
     const body = document.createDocumentFragment();
     for (const row of shown) {
       const tr = document.createElement('tr');
@@ -203,7 +211,13 @@ window.AdminSubscriptions = (() => {
         });
         actions.append(button);
       }
-      tr.append(student, cell(access), cell(formatDate(row.starts_on)),
+      const group = groupFor(row);
+      const groupCell = cell('');
+      const groupTag = document.createElement('span');
+      groupTag.className = 'tag ' + (group ? 'tag-group-' + group : 'tag-muted');
+      groupTag.textContent = studentGroupsByEmail === null ? '—' : (groupLabels[group] || 'Sin grupo asignado');
+      groupCell.append(groupTag);
+      tr.append(student, groupCell, cell(access), cell(formatDate(row.starts_on)),
         cell(row.ends_on ? formatDate(row.ends_on) : 'Sin vencimiento'), status, actions);
       body.append(tr);
     }
@@ -294,6 +308,7 @@ window.AdminSubscriptions = (() => {
       if (adding) reactivate.close();
       feedback(adding ? listFeedback : status, successMessage(data), 'success');
       if (list.classList.contains('active')) load();
+      if (rpc === 'campus_admin_activate_ben_carson_group') void refreshStudentGroups();
     } catch (error) {
       if (!isCurrent()) return;
       if (error?.code === 'P0002') {
@@ -307,7 +322,10 @@ window.AdminSubscriptions = (() => {
             + 'o escríbelo con su dominio completo (por ejemplo @gmail.com).', 'error');
         }
       } else {
-        feedback(status, messageFor(error, 'No pudimos guardar el cambio. Vuelve a intentarlo.'), 'error');
+        const missingGroupFeature = rpc === 'campus_admin_activate_ben_carson_group' &&
+          ['PGRST202', '42883', '42P01'].includes(error?.code);
+        feedback(status, missingGroupFeature ? 'Los grupos aún no están habilitados. No se activó el acceso ni se guardó el grupo.'
+          : messageFor(error, 'No pudimos guardar el cambio. Vuelve a intentarlo.'), 'error');
       }
     } finally {
       if (pendingWrite === write) {
@@ -317,12 +335,15 @@ window.AdminSubscriptions = (() => {
     }
   }
 
-  function saveSubscription(form, email, scope, start, end) {
-    save(form, 'campus_admin_save_subscription', {
-      p_email: email, p_scope: scope, p_start: start, p_end: end,
-    }, result => (result?.status === 'scheduled' ? 'Acceso programado' :
+  function saveSubscription(form, email, scope, start, end, group = '') {
+    const attachingGroup = form === activation && scope === 'full' && Boolean(group);
+    const values = attachingGroup ? { p_email: email, p_start: start, p_end: end, p_group: group }
+      : { p_email: email, p_scope: scope, p_start: start, p_end: end };
+    return save(form, attachingGroup ? 'campus_admin_activate_ben_carson_group' : 'campus_admin_save_subscription',
+      values, result => (result?.status === 'scheduled' ? 'Acceso programado' :
       result?.status === 'expired' ? 'Período vencido guardado' : 'Acceso activado') +
-      ' para ' + email + ' del ' + formatDate(start) + ' al ' + formatDate(end) + '.');
+      ' para ' + email + ' del ' + formatDate(start) + ' al ' + formatDate(end) + '.' +
+      (attachingGroup ? ' Grupo Ben Carson: ' + groupLabels[group] + '.' : ''));
   }
 
   function openReactivation(row, label) {
@@ -365,9 +386,15 @@ window.AdminSubscriptions = (() => {
       const end = form.elements.end.value;
       const access = scope === 'full' ? 'acceso completo' : 'acceso solo a videos';
       const dates = 'del ' + formatDate(start) + ' al ' + formatDate(end);
+      const group = form === activation ? groupSelect.value : '';
+      if (group && !Object.hasOwn(groupLabels, group)) {
+        feedback(form.querySelector('.subscription-feedback'), 'Elige un grupo válido de Ben Carson.', 'error');
+        return;
+      }
+      const groupNote = group ? ' Grupo Ben Carson: ' + groupLabels[group] + '.' : '';
       confirmChange('Confirmar activación', 'Guardar ' + access + ' para ' + email + ' ' + dates +
-        '. Se reemplazarán las fechas anteriores de este acceso.', 'Confirmar activación',
-        () => saveSubscription(form, email, scope, start, end));
+        '. Se reemplazarán las fechas anteriores de este acceso.' + groupNote, 'Confirmar activación',
+        () => saveSubscription(form, email, scope, start, end, group));
     });
   }
 
@@ -408,7 +435,9 @@ window.AdminSubscriptions = (() => {
     feedback(listStatus, '');
     feedback(listFeedback, '');
     list.removeAttribute('aria-busy');
-    search.value = filter.value = '';
+    search.value = filter.value = listGroup.value = '';
+    listGroup.disabled = true;
+    feedback(listGroupStatus, '');
     for (const form of forms) {
       form.reset();
       if (form !== removal) resetDates(form);
@@ -418,5 +447,18 @@ window.AdminSubscriptions = (() => {
 
   search.addEventListener('input', render);
   filter.addEventListener('change', render);
+  listGroup.addEventListener('change', render);
+  function refreshSubscriptionGroupFilter() {
+    const unavailable = studentGroupsByEmail === null;
+    listGroup.disabled = unavailable;
+    if (unavailable) listGroup.value = '';
+    feedback(listGroupStatus, unavailable
+      ? 'No se pudieron cargar los grupos. Puedes buscar por nombre o correo y filtrar por estado.' : '');
+    render();
+  }
+  document.addEventListener('admin-ben-carson-groups-change', refreshSubscriptionGroupFilter);
+  if (studentGroupsByEmail !== null || document.getElementById('student-group-status')?.textContent) {
+    refreshSubscriptionGroupFilter();
+  }
   return { load, clear, setRegisteredEmails };
 })();
