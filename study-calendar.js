@@ -300,8 +300,13 @@
     groupSelect.addEventListener('change', () => {
         try {
             if (isGroup(groupSelect.value)) localStorage.setItem(groupPreference(), groupSelect.value);
-            else localStorage.removeItem(groupPreference());
+            else localStorage.setItem(groupPreference(), '');
         } catch {}
+        renderClassCalendar();
+        window.dispatchEvent(new CustomEvent('ben-carson:calendar-group-change', { detail: groupSelect.value }));
+    });
+    window.addEventListener('ben-carson:calendar-group-change', ({ detail }) => {
+        groupSelect.value = isGroup(detail) ? detail : '';
         renderClassCalendar();
     });
     byId('calendar-bc-prev').addEventListener('click', () => {

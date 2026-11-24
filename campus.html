@@ -471,12 +471,27 @@
       </section>
       <section class="campus-box campus-day-preview" aria-labelledby="campus-day-preview-title" data-premium-only hidden>
         <div class="campus-box-heading"><h2 id="campus-day-preview-title">Planificación diaria</h2><button type="button" id="campus-open-calendar" class="campus-link-button">Ver calendario</button></div>
-        <p class="campus-example-label">Plan de práctica de muestra</p>
         <div class="campus-day-preview-layout">
           <div>
+            <label class="campus-home-group-label" for="campus-home-group">Elige tu grupo</label>
+            <select id="campus-home-group" class="campus-home-group">
+                <option value="">Selecciona una opción</option>
+                <option value="presencial_1">Presencial 1 · MED-1 PSA</option>
+                <option value="presencial_2">Presencial 2 · MED-2 PSA</option>
+                <option value="virtual">Virtual</option>
+            </select>
             <h3 id="campus-plan-date" aria-live="polite"></h3>
-            <ul id="campus-plan-preview"></ul>
-            <button type="button" id="campus-open-day" class="campus-secondary">Abrir cronograma del día</button>
+            <p id="campus-home-group-note" class="campus-plan-empty" aria-live="polite">Selecciona tu grupo para ver el horario del día.</p>
+            <ul id="campus-home-classes" class="campus-home-classes"></ul>
+            <details id="campus-home-routine" class="campus-home-extra" hidden>
+                <summary>Rutina sugerida del grupo Virtual</summary>
+                <ul id="campus-home-routine-list" class="campus-home-classes"></ul>
+            </details>
+            <details class="campus-home-extra">
+                <summary>Plan de práctica de muestra</summary>
+                <ul id="campus-plan-preview"></ul>
+                <button type="button" id="campus-open-day" class="campus-secondary">Abrir plan de práctica del día</button>
+            </details>
           </div>
           <div class="campus-month" aria-labelledby="campus-month-label">
             <div class="campus-month-heading">
@@ -495,7 +510,7 @@
     <aside class="campus-box campus-notices" aria-labelledby="campus-notices-title">
       <div class="campus-box-heading"><h2 id="campus-notices-title">Avisos del campus</h2><button type="button" class="campus-link-button" data-campus-notices>Ver todos</button></div>
       <div id="campus-notice-list" class="campus-notice-list">
-        <details open data-premium-only hidden><summary><span>Calendario de estudio</span><small>Planificación</small></summary><p>Consulta un plan de práctica de muestra. Puedes abrir el cronograma de cada día y marcar las actividades que completes.</p><button type="button" class="campus-link-button" data-campus-action="calendar">Abrir calendario</button></details>
+        <details open data-premium-only hidden><summary><span>Calendario de estudio</span><small>Planificación</small></summary><p>Consulta el horario por grupo, el cronograma de temas y el plan de práctica.</p><button type="button" class="campus-link-button" data-campus-action="calendar">Abrir calendario</button></details>
         <details><summary><span>Textos oficiales</span><small>Biblioteca</small></summary><p>Consulta la bibliografía oficial de Medicina dentro del campus.</p><button type="button" class="campus-link-button" data-campus-action="texts">Ver textos</button></details>
         <details><summary><span>Práctica de suficiencia</span><small>Ejercicios</small></summary><p>Encuentra ejercicios por materia y consulta tus respuestas al finalizar.</p><button type="button" class="campus-link-button" data-campus-action="practice">Abrir práctica</button></details>
       </div>
@@ -1959,7 +1974,7 @@
         <link rel="stylesheet" data-campus-assets="campus-extra" href="/assets/vendor/font-awesome-6.4.0/css/all.min.css">
         <script data-campus-assets="exam-engine entrance-attempt" src="campus-exam-engine.js?v=4"></script>
         <link rel="stylesheet" data-campus-assets="campus" href="campus-navigation.css?v=4">
-        <link rel="stylesheet" data-campus-assets="campus" href="campus-home.css?v=5">
+        <link rel="stylesheet" data-campus-assets="campus" href="campus-home.css?v=6">
         <link rel="stylesheet" data-campus-assets="campus" href="campus-information.css?v=2">
         <link rel="stylesheet" data-campus-assets="campus" href="campus-topics.css?v=4">
         <link rel="stylesheet" data-campus-assets="campus" href="study-depth.css?v=3">
@@ -1973,7 +1988,7 @@
         <script data-campus-assets="campus" src="script.js?v=20261122-simulacro-google"></script>
         <script data-campus-assets="campus" src="study-assessments.js?v=2"></script>
         <script data-campus-assets="campus" src="study-calendar-data.js?v=8"></script>
-        <script data-campus-assets="campus" src="campus-shell.js?v=5"></script>
+        <script data-campus-assets="campus" src="campus-shell.js?v=6"></script>
         <script data-campus-assets="campus" src="campus-information.js?v=1"></script>
         <script data-campus-assets="campus" src="student-results.js?v=11"></script>
         <link rel="stylesheet" data-campus-assets="campus-extra simulations" href="simulacro-library.css?v=7">
@@ -1984,7 +1999,7 @@
         <script data-campus-assets="campus flashcards" src="student-library.js?v=12"></script>
         <script data-campus-assets="campus flashcard-deck" src="flashcard-workspace.js?v=20261109-foco"></script>
         <script data-campus-assets="calendar-pdf" src="study-calendar-pdf.js?v=2"></script>
-        <script data-campus-assets="campus calendar" src="study-calendar.js?v=16"></script>
+        <script data-campus-assets="campus calendar" src="study-calendar.js?v=17"></script>
         <script data-campus-assets="past-topics" src="past-exam-breakdown.js?v=12"></script>
         <script data-campus-assets="campus-extra past evaluations entrance-attempt" src="past-exams.js?v=16"></script>
         <script data-campus-assets="entrance-attempt" src="simulation-scope.js?v=13"></script>

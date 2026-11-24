@@ -52,3 +52,17 @@
 .dashboard-progress .streak-label{font-size:12px;color:#687589}
 @media(max-width:650px){.sidebar .nav-icon{width:38px;height:38px}.dashboard-progress{padding:20px}}
 @media(prefers-reduced-motion:reduce){.sidebar .nav-icon{transition:none}.sidebar .nav-item>a:hover .nav-icon{transform:none}}
+
+.campus-home-group-label{display:block;margin:0 0 4px;font-size:13px;font-weight:600}
+.campus-home-group{width:100%;min-width:0;min-height:44px;margin:0 0 12px;padding:7px 9px;border:1px solid #dce2ea;border-radius:8px;background:#fff;color:#192742;font:inherit}
+.campus-home-group:focus-visible,.campus-home-extra>summary:focus-visible{outline:2px solid #288cc7;outline-offset:2px}
+.campus-home-classes{padding:0;margin:0;list-style:none;display:grid;gap:6px}
+.campus-home-class-row{cursor:default}
+.campus-home-class-row strong,.campus-home-class-row small{display:block;overflow-wrap:anywhere}
+.campus-home-class-row small{font-size:12px}
+.campus-home-extra{margin-top:10px;border:1px solid #dce2ea;border-radius:8px;padding:8px 10px}
+.campus-home-extra>summary{cursor:pointer;font-weight:600;font-size:13px}
+.campus-home-extra>ul{margin-top:8px}
+.campus-home-extra[hidden]{display:none}
+.campus-dark .campus-home-group{background:#1e293b;color:#f8fafc;border-color:#37465b}
+.campus-dark .campus-home-extra{border-color:#37465b}

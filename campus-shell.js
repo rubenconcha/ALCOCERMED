@@ -110,7 +110,80 @@
         return value.toISOString().slice(0, 10);
     }
 
+    const homeGroup = byId('campus-home-group');
+    const homeClasses = byId('campus-home-classes');
+    const homeRoutine = byId('campus-home-routine');
+    const groupKey = () => 'ben-carson:calendar-group:' + (userId || 'local');
+    let homeGroupAccount;
+    const extraSubjects = new Set(['mate','fis','quim']);
+    const subjectAccents = { bio:'#288cc7', morfo:'#d5864d', salud:'#44966a', mate:'#8c67a9', fis:'#8c67a9', quim:'#8c67a9' };
+
+    function homeClassRow(time, title, description, accent) {
+        const row = document.createElement('li');
+        row.className = 'campus-plan-item campus-home-class-row';
+        if (accent) row.style.setProperty('--activity-accent', accent);
+        for (const [tag, value] of [['time', time], ['strong', title], ['small', description]]) {
+            if (!value) continue;
+            const node = document.createElement(tag);
+            node.textContent = value;
+            row.append(node);
+        }
+        return row;
+    }
+
+    function syncHomeGroup() {
+        const key = groupKey();
+        const saved = storage(key);
+        if (homeGroupAccount !== key || saved !== null) homeGroup.value = saved || '';
+        homeGroupAccount = key;
+    }
+
+    function renderHomeClasses() {
+        const course = data.classCalendar;
+        const groupId = homeGroup.value;
+        const group = Object.prototype.hasOwnProperty.call(course.groups, groupId) ? course.groups[groupId] : null;
+        const note = byId('campus-home-group-note');
+        homeClasses.replaceChildren();
+        homeRoutine.hidden = groupId !== 'virtual';
+        if (groupId === 'virtual') {
+            const routine = byId('campus-home-routine-list');
+            if (!routine.children.length) {
+                for (const item of document.querySelectorAll('#calendar-bc-virtual-guide dl > div')) {
+                    routine.append(homeClassRow(item.querySelector('dt').textContent, item.querySelector('dd').textContent));
+                }
+            }
+        }
+        if (!group) { note.textContent = 'Selecciona tu grupo para ver el horario del día.'; return; }
+        const date = new Date(selectedDate + 'T00:00:00Z');
+        const day = date.getUTCDay() - 1;
+        if (selectedDate < course.start || selectedDate > course.end || day < 0 || day > 4) {
+            note.textContent = group.location + ' · Sin clases programadas para esta fecha.';
+            return;
+        }
+        const week = Math.floor((date.getTime() - Date.parse(course.start + 'T00:00:00Z')) / 604800000);
+        note.textContent = group.location + ' · Semana ' + (week + 1) + ' · Hora de Bolivia';
+        group.days[day].forEach((subject, slot) => {
+            const isMfq = extraSubjects.has(subject);
+            const isVirtualException = isMfq && course.virtualMfq.includes(selectedDate);
+            const time = isVirtualException && groupId !== 'virtual' ? 'Hora por confirmar' : group.times[slot];
+            const title = course.subjects[subject] + (isVirtualException ? ' · Clase virtual' : '');
+            homeClasses.append(homeClassRow(time, title, isMfq ? course.topics[week][day] : '', subjectAccents[subject]));
+        });
+    }
+
+    homeGroup.addEventListener('change', () => {
+        storage(groupKey(), homeGroup.value);
+        renderHomeClasses();
+        window.dispatchEvent(new CustomEvent('ben-carson:calendar-group-change', { detail: homeGroup.value }));
+    });
+    window.addEventListener('ben-carson:calendar-group-change', ({ detail }) => {
+        homeGroup.value = detail || '';
+        if (selectedDate) renderHomeClasses();
+    });
+
     function renderDay() {
+        syncHomeGroup();
+        renderHomeClasses();
         byId('campus-plan-date').textContent = data.formatDay(selectedDate);
         const activities = (plan.get(selectedDate) || []).filter(item => item.show);
         planList.replaceChildren();
@@ -228,7 +301,10 @@
                 if (group) group.open = true;
             } else link.removeAttribute('aria-current');
         }
-        if (screenId === 'home-screen') refreshHome();
+        if (screenId === 'home-screen') {
+            refreshHome();
+            if (selectedDate) { syncHomeGroup(); renderHomeClasses(); }
+        }
         syncMenu();
         if (hadSidebarFocus && sidebar.inert) menu.focus();
     }
