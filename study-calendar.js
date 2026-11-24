@@ -247,6 +247,7 @@
         const group = isGroup(groupSelect.value) ? classCalendar.groups[groupSelect.value] : null;
         byId('calendar-bc-empty').hidden = !!group;
         byId('calendar-bc-content').hidden = !group;
+        byId('calendar-bc-virtual-guide').hidden = groupSelect.value !== 'virtual';
         if (!group) return;
         const lastWeek = classCalendar.topics.length - 1;
         if (classWeek === null) {

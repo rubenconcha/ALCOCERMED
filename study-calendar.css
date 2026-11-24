@@ -435,3 +435,16 @@
     #calendar-bc-content { padding:9px }
     .calendar-bc-slot { min-height:0; }
 }
+
+/* Optional virtual-group study routine, separate from the official class timetable. */
+.study-calendar #calendar-bc-virtual-guide[hidden] { display:none }
+.calendar-bc-guide { margin-top:18px; padding:14px; border:1px solid var(--cal-border); border-radius:10px; }
+.calendar-bc-guide h4 { color:var(--cal-ink); margin:0 0 4px; font-size:15px; }
+.calendar-bc-guide p { color:var(--cal-muted); margin:0 0 12px; font-size:12px; }
+.calendar-bc-guide-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr)); gap:8px; }
+.calendar-bc-guide-grid section { background:var(--cal-hover); border-radius:8px; padding:10px; min-width:0; }
+.calendar-bc-guide h5 { color:var(--cal-action); margin:0 0 7px; font-size:12px; }
+.calendar-bc-guide dl { display:grid; gap:6px; margin:0; }
+.calendar-bc-guide dl > div { display:grid; grid-template-columns:5.65rem minmax(0,1fr); gap:5px; border-top:1px solid var(--cal-border); padding-top:5px; }
+.calendar-bc-guide dt { color:var(--cal-ink); font-size:11px; font-weight:600; }
+.calendar-bc-guide dd { color:var(--cal-muted); margin:0; font-size:11px; overflow-wrap:anywhere; }
