@@ -73,7 +73,7 @@ assert.equal((nodes['explorar-subject-grid'].innerHTML.match(/class="explorar-su
     assert.match(html, /JUGAR DEMO/);
     assert.match(html, /Tema completo/);
     assert.match(html, /Solicitar acceso por WhatsApp/);
-    assert.match(html, /href="https:\/\/wa\.me\/59177921731" target="_blank"/);
+    assert.match(html, /href="https:\/\/wa\.me\/59175960539" target="_blank"/);
     assert.doesNotMatch(html, /Partida de muestra|Cinco preguntas más|startSubjectMiniGame/);
   }
 

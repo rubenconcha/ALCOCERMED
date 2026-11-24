@@ -3586,7 +3586,7 @@ function loadSubjectEvaluations(subject) {
                 if (isLocked) html += '<span class="locked-access-badge"><i class="fas fa-lock"></i> BLOQUEADO</span>';
                 html += '</div></div>';
                 if (isLocked) {
-                    html += '<a class="explorar-btn-study explorar-btn-locked" href="https://wa.me/59177921731" target="_blank" rel="noopener noreferrer" style="font-size:0.82rem;padding:12px 18px;border-radius:16px;font-weight:800;letter-spacing:0.02em;max-width:220px;line-height:1.25"><i class="fas fa-lock"></i> Solicitar acceso por WhatsApp</a>';
+                    html += '<a class="explorar-btn-study explorar-btn-locked" href="https://wa.me/59175960539" target="_blank" rel="noopener noreferrer" style="font-size:0.82rem;padding:12px 18px;border-radius:16px;font-weight:800;letter-spacing:0.02em;max-width:220px;line-height:1.25"><i class="fas fa-lock"></i> Solicitar acceso por WhatsApp</a>';
                 } else {
                     var round = GameRounds.existingRound(ev);
                     html += '<div class="game-round-actions">';

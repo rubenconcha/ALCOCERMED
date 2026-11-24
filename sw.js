@@ -1,4 +1,4 @@
-const CACHE_NAME = 'alcocermed-main-v213-simulacro-google';
+const CACHE_NAME = 'alcocermed-main-v214-whatsapp-contacto';
 const APP_SHELL = [
     './student-results.js?v=11',
     './student-results.css?v=1',
@@ -37,7 +37,7 @@ const APP_SHELL = [
     './platform-polish.js?v=1',
     './config.js',
     './device_guard.js?v=13',
-    './campus-access.js?v=17',
+    './campus-access.js?v=18',
     './campus-preview-policy.js?v=1',
     './official-flashcards.js?v=2',
     './study-depth.js?v=20',

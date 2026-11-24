@@ -1,9 +1,9 @@
-const CACHE_NAME = 'alcocermed-juegos-v120-solo-premium';
+const CACHE_NAME = 'alcocermed-juegos-v121-whatsapp-contacto';
 const ASSETS_TO_CACHE = [
     './game-rounds.js?v=1',
     './game-practice.js?v=20261021-visual5b',
     './game-question-images.js?v=1',
-    './app.js?v=2026111301',
+    './app.js?v=2026112401',
     './styles.css?v=87',
     '/juegos/logo-ben-carson-160.webp',
     './assets/preguntas-apoyo/mano-muneca.svg',

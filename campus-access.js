@@ -79,7 +79,7 @@ window.CampusAccess = (() => {
             const message = email
                 ? 'Hola, me registré en AlcocerMed con el correo ' + email + ' y quiero activar mi cuenta.'
                 : 'Hola, me registré en AlcocerMed y quiero activar mi cuenta.';
-            cta.href = 'https://wa.me/59177921731?text=' + encodeURIComponent(message);
+            cta.href = 'https://wa.me/59175960539?text=' + encodeURIComponent(message);
         }
     }
     function render() {

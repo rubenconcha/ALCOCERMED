@@ -25,12 +25,12 @@ test('una cuenta registrada sin plan entra al campus pero solo ve Inicio',async(
 });
 test('el aviso de cuenta registrada muestra el correo para activarla por WhatsApp',async()=>{
   const t=setup({data:{ready:true,premium:false}});
-  t.window.CampusStudentEmail='estudiante@correo.com';
+  t.window.CampusStudentEmail='estudiante+turno@correo.com';
   await t.access.resolve(t.client);
-  assert.equal(t.el('free-account-email').textContent,'estudiante@correo.com');
+  assert.equal(t.el('free-account-email').textContent,'estudiante+turno@correo.com');
   const href=t.el('free-account-whatsapp').href;
-  assert.match(href,/^https:\/\/wa\.me\/59177921731\?text=/);
-  assert.match(decodeURIComponent(href),/estudiante@correo\.com/);
+  assert.match(href,/^https:\/\/wa\.me\/59175960539\?text=/);
+  assert.equal(new URL(href).searchParams.get('text'),'Hola, me registré en AlcocerMed con el correo estudiante+turno@correo.com y quiero activar mi cuenta.');
 });
 test('verified current subscription unlocks resources',async()=>{
   const t=setup({data:{ready:true,premium:true,expires_at:'2099-01-01T00:00:00Z'}});
@@ -81,7 +81,23 @@ test('el login público ofrece registrarse y /registro abre el alta de estudiant
   assert.match(login, /<form id="login-form"[^>]* onsubmit="handleLogin\(event\)"/);
   assert.match(login, /href="\/recuperar\.html"/);
   assert.match(login, /<p class="login-register">[^<]*<a href="\/registro">Regístrate aquí<\/a>/);
-  assert.match(login, /<div class="login-assistance">\s*<a href="https:\/\/wa\.me\/59177921731"/);
+  assert.match(login, /<div class="login-assistance">\s*<a href="https:\/\/wa\.me\/59175960539"/);
+});
+
+test('contactos directos de la prepa usan Omar sin redirigir soporte de login ni pagos', () => {
+  const extractLinks = name => Array.from(fs.readFileSync(name,'utf8').matchAll(/<a\b[^>]*\bhref="(https:\/\/wa\.me\/[^"]+)"[^>]*>/g),
+      ([tag,href]) => ({tag,url:new URL(href)}));
+  const campus=extractLinks('campus.html');
+  assert.equal(campus.filter(({url})=>url.pathname==='/59175960539').length,6);
+  for(const id of ['free-account-whatsapp','atlas-enrollment-whatsapp','campus-toolbar-support','support-float']) {
+    assert.equal(campus.find(({tag})=>tag.includes(id))?.url.pathname,'/59175960539',id);
+  }
+  assert.equal(campus.find(({url})=>url.searchParams.get('text')?.includes('necesito ayuda para ingresar'))?.url.pathname,'/59173752688');
+  const sales=extractLinks('ventas.html');
+  assert.equal(sales.find(({tag})=>tag.includes('support-whatsapp'))?.url.pathname,'/59175960539');
+  assert.equal(sales.find(({tag})=>tag.includes('planWhatsApp'))?.url.pathname,'/59173752688');
+  assert.equal(extractLinks('juegos/index.html')[0]?.url.pathname,'/59175960539');
+  assert.equal(extractLinks('dispositivos.html')[0]?.url.pathname,'/59164840819');
 });
 
 test('la página de registro crea la cuenta y guarda el correo sin pedir plan', () => {
