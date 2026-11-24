@@ -105,6 +105,8 @@
                 } catch (_) { /* Ignore storage from an incomplete session. */ }
             }
             showOverview();
+            classWeek = null;
+            renderClassCalendar();
         }
         if (!id) screenChanged(false);
     }
@@ -218,7 +220,98 @@
         }
     }
 
+    const classCalendar = data.classCalendar;
+    const groupSelect = byId('calendar-bc-group');
+    const classesView = byId('calendar-bc-view-classes');
+    const practiceView = byId('calendar-bc-view-practice');
+    const groupPreference = () => 'ben-carson:calendar-group:' + (state.user || 'local');
+    const isGroup = key => Object.prototype.hasOwnProperty.call(classCalendar.groups, key);
+    const classDate = new Intl.DateTimeFormat('es-BO', { day: 'numeric', month: 'short', timeZone: 'UTC' });
+    let classWeek = null;
+    let groupUserKey = '';
+
+    function classDateLabel(date) {
+        return classDate.format(new Date(date + 'T00:00:00Z'));
+    }
+
+    function renderClassCalendar() {
+        const key = groupPreference();
+        if (key !== groupUserKey) {
+            groupUserKey = key;
+            groupSelect.value = '';
+            try {
+                const saved = localStorage.getItem(key);
+                if (isGroup(saved)) groupSelect.value = saved;
+            } catch {}
+        }
+        const group = isGroup(groupSelect.value) ? classCalendar.groups[groupSelect.value] : null;
+        byId('calendar-bc-empty').hidden = !!group;
+        byId('calendar-bc-content').hidden = !group;
+        if (!group) return;
+        const lastWeek = classCalendar.topics.length - 1;
+        if (classWeek === null) {
+            const startMs = Date.parse(classCalendar.start + 'T00:00:00Z');
+            const currentMs = Date.parse(data.today() + 'T00:00:00Z');
+            classWeek = Math.max(0, Math.min(lastWeek, Math.floor((currentMs - startMs) / 604800000)));
+        }
+        const monday = data.move(classCalendar.start, classWeek * 7);
+        const friday = data.move(monday, 4);
+        byId('calendar-bc-prev').disabled = classWeek <= 0;
+        byId('calendar-bc-next').disabled = classWeek >= lastWeek;
+        byId('calendar-bc-location').textContent = group.location;
+        byId('calendar-bc-week-label').textContent = 'Semana ' + (classWeek + 1) + ' · ' + classDateLabel(monday) + ' al ' + classDateLabel(friday);
+        const mfq = new Set(['mate', 'fis', 'quim']);
+        const dates = classCalendar.weekdays.map((weekday, index) => {
+            const date = data.move(monday, index);
+            const card = element('article', 'calendar-bc-day');
+            const dateTag = element('time', '', classDateLabel(date));
+            dateTag.dateTime = date;
+            const header = element('h4', 'calendar-bc-date', weekday);
+            header.append(dateTag);
+            if (date === data.today()) header.setAttribute('aria-current', 'date');
+            const list = element('ol', 'calendar-bc-slots');
+            group.days[index].forEach((subject, slot) => {
+                const row = element('li', 'calendar-bc-slot');
+                row.dataset.subject = subject;
+                const virtualMfq = mfq.has(subject) && classCalendar.virtualMfq.includes(date);
+                const adjusted = virtualMfq && groupSelect.value !== 'virtual';
+                row.append(element('span', 'calendar-bc-time', adjusted ? 'Hora por confirmar' : group.times[slot]),
+                    element('strong', '', classCalendar.subjects[subject]));
+                if (virtualMfq) row.append(element('span', 'calendar-bc-virtual', 'Clase virtual'));
+                if (mfq.has(subject)) row.append(element('small', '', classCalendar.topics[classWeek][index]));
+                list.append(row);
+            });
+            card.append(header, list);
+            return card;
+        });
+        byId('calendar-bc-days').replaceChildren(...dates);
+    }
+
+    function switchCalendarView(showClasses) {
+        classesView.setAttribute('aria-pressed', String(showClasses));
+        practiceView.setAttribute('aria-pressed', String(!showClasses));
+        byId('calendar-bc-classes').hidden = !showClasses;
+        byId('calendar-bc-practice').hidden = showClasses;
+        if (showClasses) renderClassCalendar();
+    }
+    classesView.addEventListener('click', () => switchCalendarView(true));
+    practiceView.addEventListener('click', () => switchCalendarView(false));
+    groupSelect.addEventListener('change', () => {
+        try {
+            if (isGroup(groupSelect.value)) localStorage.setItem(groupPreference(), groupSelect.value);
+            else localStorage.removeItem(groupPreference());
+        } catch {}
+        renderClassCalendar();
+    });
+    byId('calendar-bc-prev').addEventListener('click', () => {
+        if (classWeek > 0) { classWeek -= 1; renderClassCalendar(); }
+    });
+    byId('calendar-bc-next').addEventListener('click', () => {
+        if (classWeek !== null && classWeek < classCalendar.topics.length - 1) { classWeek += 1; renderClassCalendar(); }
+    });
+
     function renderOverview(focusClass) {
+        if (classesView.getAttribute('aria-pressed') === 'true') renderClassCalendar();
         updatePlan();
         overviewDate ||= state.date || state.reference;
         const [start, end] = range();
@@ -710,6 +803,7 @@
     byId('calendar-back').onclick = () => {
         if (!canLeaveActivity()) return;
         showOverview();
+        switchCalendarView(false);
         overviewDate = state.date;
         renderOverview();
     };

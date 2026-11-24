@@ -391,3 +391,47 @@
     #calendar-board .fc-daygrid-event { padding:4px 2px; margin:0 1px 2px }
     #calendar-board .fc-daygrid-event .fc-event-title { font-size:8px; line-height:12px }
 }
+
+/* Class timetable: use the same palette and spacing as the existing calendar. */
+.study-calendar :is(#calendar-bc-classes,#calendar-bc-practice,#calendar-bc-content,#calendar-bc-empty)[hidden] { display:none }
+.calendar-bc-modes { display:flex; flex-wrap:wrap; gap:8px; margin:5px 0 16px; }
+.calendar-bc-chip { display:inline-flex; align-items:center; justify-content:center; min-height:42px; padding:7px 13px; font-size:13px; font-weight:600; color:var(--cal-ink); background:var(--cal-panel); border:1px solid var(--cal-border); border-radius:8px; }
+.calendar-bc-chip[aria-pressed="true"] { color:var(--cal-action); background:var(--cal-hover); border-color:var(--cal-action); }
+.calendar-bc-chip:disabled { opacity:.42; cursor:default }
+.calendar-bc-classes { min-width:0; border:1px solid var(--cal-border); border-radius:12px; overflow:hidden; }
+.calendar-bc-header { display:flex; flex-wrap:wrap; align-items:flex-end; justify-content:space-between; gap:14px; padding:17px; background:var(--cal-hover); }
+.calendar-bc-header h3 { margin:3px 0; font-size:clamp(17px,2.5vw,22px); line-height:1.3; }
+.calendar-bc-header p { margin:0; color:var(--cal-muted); font-size:12px; }
+.calendar-bc-header .calendar-bc-eyebrow { color:var(--cal-action); font-weight:700; letter-spacing:.08em; }
+.calendar-bc-group { display:grid; gap:4px; min-width:0; }
+.calendar-bc-group label { font-size:12px; color:var(--cal-muted); font-weight:600; }
+.calendar-bc-group select { width:100%; font:600 13px Poppins, system-ui, sans-serif; min-height:44px; padding:7px 12px; color:var(--cal-ink); background:var(--cal-panel); border:1px solid var(--cal-border); border-radius:8px; }
+.calendar-bc-group select:focus-visible { outline:3px solid #3997d5; outline-offset:2px; }
+.calendar-bc-empty { padding:16px; margin:0; color:var(--cal-muted); }
+#calendar-bc-content { padding:14px; }
+.calendar-bc-week { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:8px; margin-bottom:12px; }
+.calendar-bc-week strong { color:var(--cal-action); font-size:13px; }
+.calendar-bc-week-nav { display:flex; align-items:center; gap:8px; font-size:12px; font-weight:600; }
+.calendar-bc-week-nav .calendar-bc-chip { width:42px; padding:0; }
+.calendar-bc-days { display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:8px; }
+.calendar-bc-day { min-width:0; border:1px solid var(--cal-border); border-radius:9px; overflow:hidden; }
+.calendar-bc-date { margin:0; display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:2px 5px; padding:8px 9px; font-size:12px; color:var(--cal-ink); background:var(--cal-hover); }
+.calendar-bc-date[aria-current="date"] { background:var(--cal-today); }
+.calendar-bc-date time { color:var(--cal-muted); font-weight:500; }
+.calendar-bc-slots { margin:0; padding:7px; display:grid; gap:7px; list-style:none; }
+.calendar-bc-slot { display:grid; justify-items:start; align-content:start; gap:3px; min-height:76px; border-left:3px solid var(--cal-blue); border-radius:5px; padding:6px; background:var(--cal-hover); overflow-wrap:anywhere; }
+.calendar-bc-slot[data-subject="morfo"] { border-color:#dc864d }
+.calendar-bc-slot[data-subject="salud"] { border-color:#44966a }
+.calendar-bc-slot:is([data-subject="mate"],[data-subject="fis"],[data-subject="quim"]) { border-color:#9b70bd }
+.calendar-bc-slot strong { font-size:12px; line-height:1.28; }
+.calendar-bc-slot small,.calendar-bc-time { color:var(--cal-muted); font-size:11px; line-height:1.32; }
+.calendar-bc-virtual { font-size:10px; font-weight:700; color:var(--cal-action); }
+@media (max-width: 1100px) { .calendar-bc-days { grid-template-columns:repeat(3,minmax(0,1fr)) } }
+@media (max-width: 740px) { .calendar-bc-days { grid-template-columns:repeat(2,minmax(0,1fr)) } }
+@media (max-width: 480px) {
+    .calendar-bc-days { grid-template-columns:minmax(0,1fr) }
+    .calendar-bc-group { width:100% }
+    .calendar-bc-header { padding:12px }
+    #calendar-bc-content { padding:9px }
+    .calendar-bc-slot { min-height:0; }
+}

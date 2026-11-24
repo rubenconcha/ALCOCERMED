@@ -182,5 +182,33 @@
         return plan;
     }
 
-    return { zone, kinds, today, move, monday, formatDay, pageRange, buildSample };
+    // Reference: three Ben Carson group timetables and the eight-week PREU contents calendar.
+    const classCalendar = {
+        start: '2026-11-23',
+        end: '2027-01-15',
+        weekdays: ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes'],
+        subjects: { bio: 'Biología Celular', morfo: 'Morfofunción', salud: 'Educación para la Salud',
+            mate: 'Matemáticas', fis: 'Física', quim: 'Química' },
+        groups: {
+            presencial_1: { location: 'MED-1 PSA · Aula 403', times: ['08:30–10:00', '10:05–11:30', '11:35–13:00'],
+                days: [['bio','mate','morfo'], ['bio','morfo','fis'], ['salud','quim','morfo'], ['bio','morfo','mate'], ['bio','fis','morfo']] },
+            presencial_2: { location: 'MED-2 PSA · Aula 405', times: ['08:30–10:00', '10:05–11:30', '11:35–13:00'],
+                days: [['morfo','bio','mate'], ['fis','bio','morfo'], ['morfo','salud','quim'], ['mate','bio','morfo'], ['morfo','bio','fis']] },
+            virtual: { location: 'Grupo Virtual', times: ['17:00–18:00', '18:05–19:20', '19:30–21:00'],
+                days: [['bio','morfo','mate'], ['bio','morfo','fis'], ['morfo','morfo','quim'], ['bio','salud','mate'], ['bio','morfo','fis']] },
+        },
+        virtualMfq: ['2026-12-25', '2026-12-31', '2027-01-01'],
+        topics: [
+            ['Números reales, operaciones y notación científica', 'Cifras significativas, magnitudes y unidades', 'Compuestos binarios: óxidos, hidruros y nomenclatura', 'Razones, proporciones y porcentajes', 'Conversiones, errores de medición y vectores'],
+            ['Expresiones algebraicas y productos notables', 'Vectores: componentes y operaciones', 'Compuestos ternarios: hidróxidos, oxoácidos y sales', 'Factorización y fracciones algebraicas', 'Movimiento, MRU y gráficos'],
+            ['Ecuaciones de primer grado y despejes', 'MRUV y aceleración', 'Tabla periódica, estructura atómica y configuración electrónica', 'Sistemas de ecuaciones lineales', 'Caída libre y movimiento vertical'],
+            ['Ecuaciones cuadráticas y sus métodos', 'Movimiento parabólico', 'Enlaces químicos, reacciones y balanceo', 'Desigualdades e inecuaciones', 'Movimiento circular uniforme y variado'],
+            ['Potencias, radicales y logaritmos', 'Estática y leyes de Newton', 'Mol, masas molares y cálculos estequiométricos', 'Funciones y ecuaciones exponenciales', 'Dinámica, rozamiento y gravitación'],
+            ['Sucesiones y progresiones', 'Trabajo, energía y potencia', 'Leyes de los gases y soluciones: concentración y dilución', 'Lógica, conjuntos y análisis combinatorio', 'Impulso y cantidad de movimiento'],
+            ['Trigonometría: razones e identidades', 'Hidrostática e hidrodinámica', 'Equilibrio químico; ácidos, bases y pH', 'Triángulos y ecuaciones trigonométricas', 'Calor, temperatura, ondas y óptica'],
+            ['Geometría analítica y cónicas', 'Electrostática, campo y potencial', 'Química orgánica: hidrocarburos y funciones orgánicas', 'Introducción a límites, derivadas e integrales', 'Circuitos, ley de Ohm y electromagnetismo'],
+        ],
+    };
+
+    return { zone, kinds, today, move, monday, formatDay, pageRange, buildSample, classCalendar };
 });

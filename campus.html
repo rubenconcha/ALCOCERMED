@@ -1532,10 +1532,42 @@
                 <div class="calendar-sheet">
                     <h2 class="calendar-overview-title">Calendario de estudio</h2>
                     <p id="calendar-load-status" class="calendar-load-status" role="status" hidden></p>
-                    <div id="calendar-board"></div>
-                    <div class="calendar-sample">
-                        <span class="calendar-sample-badge">Plan de práctica de muestra</span>
-                        <span>Horarios de ejemplo · Bolivia</span>
+                    <div class="calendar-bc-modes" role="group" aria-label="Vista del calendario">
+                        <button id="calendar-bc-view-classes" class="calendar-bc-chip" type="button" aria-pressed="true" aria-controls="calendar-bc-classes">Horario de clases</button>
+                        <button id="calendar-bc-view-practice" class="calendar-bc-chip" type="button" aria-pressed="false" aria-controls="calendar-bc-practice">Plan de práctica</button>
+                    </div>
+                    <section id="calendar-bc-classes" class="calendar-bc-classes" aria-labelledby="calendar-bc-title">
+                        <header class="calendar-bc-header">
+                            <div><p class="calendar-bc-eyebrow">PREPARATORIA BEN CARSON</p><h3 id="calendar-bc-title">Horario por grupo</h3><p>Del 23 de noviembre de 2026 al 15 de enero de 2027 · Hora de Bolivia</p></div>
+                            <div class="calendar-bc-group">
+                                <label for="calendar-bc-group">Elige tu grupo</label>
+                                <select id="calendar-bc-group">
+                                    <option value="">Selecciona una opción</option>
+                                    <option value="presencial_1">Presencial 1 · MED-1 PSA</option>
+                                    <option value="presencial_2">Presencial 2 · MED-2 PSA</option>
+                                    <option value="virtual">Virtual</option>
+                                </select>
+                            </div>
+                        </header>
+                        <p id="calendar-bc-empty" class="calendar-bc-empty">Selecciona tu grupo para ver sus clases, horarios y contenidos por semana.</p>
+                        <div id="calendar-bc-content" hidden>
+                            <div class="calendar-bc-week">
+                                <strong id="calendar-bc-location"></strong>
+                                <div class="calendar-bc-week-nav" role="group" aria-label="Cambiar semana del curso">
+                                    <button id="calendar-bc-prev" type="button" class="calendar-bc-chip" aria-label="Semana del curso anterior"><svg aria-hidden="true"><use href="/assets/calendar-icons.svg#previous"></use></svg></button>
+                                    <span id="calendar-bc-week-label" aria-live="polite"></span>
+                                    <button id="calendar-bc-next" type="button" class="calendar-bc-chip" aria-label="Semana del curso siguiente"><svg aria-hidden="true"><use href="/assets/calendar-icons.svg#next"></use></svg></button>
+                                </div>
+                            </div>
+                            <div id="calendar-bc-days" class="calendar-bc-days"></div>
+                        </div>
+                    </section>
+                    <div id="calendar-bc-practice" hidden>
+                        <div id="calendar-board"></div>
+                        <div class="calendar-sample">
+                            <span class="calendar-sample-badge">Plan de práctica de muestra</span>
+                            <span>Horarios de ejemplo · Bolivia</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1908,7 +1940,7 @@
         <script data-campus-assets="campus" src="study-media.js?v=20261021-visual5b"></script>
         <script data-campus-assets="campus" src="script.js?v=20261122-simulacro-google"></script>
         <script data-campus-assets="campus" src="study-assessments.js?v=2"></script>
-        <script data-campus-assets="campus" src="study-calendar-data.js?v=7"></script>
+        <script data-campus-assets="campus" src="study-calendar-data.js?v=8"></script>
         <script data-campus-assets="campus" src="campus-shell.js?v=5"></script>
         <script data-campus-assets="campus" src="campus-information.js?v=1"></script>
         <script data-campus-assets="campus" src="student-results.js?v=11"></script>
@@ -1920,7 +1952,7 @@
         <script data-campus-assets="campus flashcards" src="student-library.js?v=12"></script>
         <script data-campus-assets="campus flashcard-deck" src="flashcard-workspace.js?v=20261109-foco"></script>
         <script data-campus-assets="calendar-pdf" src="study-calendar-pdf.js?v=2"></script>
-        <script data-campus-assets="campus calendar" src="study-calendar.js?v=14"></script>
+        <script data-campus-assets="campus calendar" src="study-calendar.js?v=15"></script>
         <script data-campus-assets="past-topics" src="past-exam-breakdown.js?v=12"></script>
         <script data-campus-assets="campus-extra past evaluations entrance-attempt" src="past-exams.js?v=16"></script>
         <script data-campus-assets="entrance-attempt" src="simulation-scope.js?v=13"></script>
@@ -1932,7 +1964,7 @@
         <script data-campus-assets="sufficiency" src="suficiencia.js?v=18"></script>
         <link rel="stylesheet" data-campus-assets="campus flashcard-deck" href="flashcard-workspace.css?v=5">
         <link rel="stylesheet" data-campus-assets="campus flashcard-deck" href="flashcard-approved.css?v=6">
-        <link rel="stylesheet" data-campus-assets="campus calendar" href="study-calendar.css?v=12">
+        <link rel="stylesheet" data-campus-assets="campus calendar" href="study-calendar.css?v=13">
         <link rel="stylesheet" data-campus-assets="campus results" href="student-results.css?v=1">
         <link rel="stylesheet" data-campus-assets="maps" href="mindmap-viewer.css?v=8">
         <link rel="stylesheet" data-campus-assets="campus-extra intocables maps" href="intocables-sheets.css?v=3">
