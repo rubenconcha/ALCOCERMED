@@ -2,15 +2,31 @@ const {test}=require('node:test');
 const assert=require('node:assert/strict');
 const fs=require('node:fs');
 const data=require('../study-calendar-data.js');
+const vm=require('node:vm');
 
 test('the selected presencial group preserves every class slot from the supplied photos',()=>{
  const expected={presencial_1:[['bio','mate','morfo'],['bio','morfo','fis'],['salud','quim','morfo'],['bio','morfo','mate'],['bio','fis','morfo']],
  presencial_2:[['morfo','bio','mate'],['fis','bio','morfo'],['morfo','salud','quim'],['mate','bio','morfo'],['morfo','bio','fis']]};
  for(const [group,days] of Object.entries(expected))for(let i=0;i<5;i++){
-  const rows=data.groupDay(data.move('2026-11-23',i),group);
+  const rows=data.groupDay(data.move('2026-11-23',i),group).filter(row=>row.officialClass);
   assert.deepEqual(rows.map(r=>r.subject),days[i]);
   assert.deepEqual(rows.map(r=>[r.start,r.end]),[['08:30','10:00'],['10:05','11:30'],['11:35','13:00']]);
   assert.ok(rows.every(r=>r.officialClass));
+ }
+});
+test('both presencial groups follow the recorded after-class routine through the following midnight',()=>{
+ const expected=[['13:00','15:00','rest'],['15:00','17:00','reading'],['17:00','18:00','questions'],['18:00','19:00','simulation'],['19:00','20:00','rest'],['20:00','22:00','reading'],['22:00','23:00','questions'],['23:00','00:30','sufficiency']];
+ for(const group of ['presencial_1','presencial_2'])for(let i=0;i<5;i++){
+  const date=data.move('2026-11-23',i),rows=data.groupDay(date,group),study=rows.filter(row=>!row.officialClass);
+  assert.equal(rows.length,11);
+  assert.deepEqual(study.map(row=>[row.start,row.end,row.resource||row.kind]),expected);
+  assert.equal(new Set(rows.map(row=>row.id)).size,11);
+  assert.ok(rows.every(row=>row.id.startsWith(date+'-'+group+'-')));
+  assert.equal(study.at(-1).endDayOffset,1);assert.match(study.at(-1).description,/01:00/);
+  assert.deepEqual(study.at(-1).assignment,data.practiceFor(date,-1));
+  const morfo=study.filter(row=>row.readingGroup==='morfofuncion');
+  assert.deepEqual(morfo.map(row=>row.resource),['reading','questions','simulation']);
+  assert.ok(morfo.every(row=>row.readingOptions===morfo[0].readingOptions));
  }
 });
 test('course plans never fall back to unrelated sample topics, weekends or dates outside the course',()=>{
@@ -100,4 +116,33 @@ test('scheduled chapters include the verified topic cover and keep page lists ou
  assert.match(source,/Abrir tema/);
  const reader=fs.readFileSync('official-texts.js','utf8');
  assert.doesNotMatch(reader,/Páginas seleccionadas/);
+});
+
+test('assigned simulators mount within the calendar and ignore late papers after navigation or account changes',async()=>{
+ function setup(){
+  const nodes=new Map(),events=[];
+  const node=id=>{if(!nodes.has(id))nodes.set(id,{innerHTML:'Start',classList:{toggle(){}},setAttribute(){},replaceChildren(){}});return nodes.get(id);};
+  const format={key:'assigned',curatedId:'prepa-test',title:'Topic test',scope:'prepa',minutes:1,questionCount:1,topics:[{id:'morfo-5'}]};
+  let resolve;
+  const pending=new Promise(r=>resolve=r);
+  const context={console:{error(){}},Date,AbortSignal,currentUser:{id:'student'},currentCampusScreen:'study-calendar-screen',
+   document:{getElementById:node},CampusAccess:{isFree:()=>false},campo:(r,k)=>r[k],
+   getSupabase:()=>({auth:{getSession:async()=>({data:{session:{access_token:'test'}}})}}),
+   fetch:async()=>{await pending;return{ok:true,json:async()=>({id:'prepa-test',preview:false,questions:[{id:'test'}]})};},
+   SimulationScope:{validate:()=>true},simState:{},showSimScreen:id=>events.push(id),buildSimCircles(){},renderSimQuestion(){},
+   startSimTimer:()=>events.push('timer'),showToast:msg=>events.push(msg),EntranceLibrary:{format:()=>format,markSelected(){}}};
+  context.window=context;context.addEventListener=()=>{};
+  vm.createContext(context);vm.runInContext(fs.readFileSync('simulacro-ingreso.js','utf8'),context);
+  context.selectEntranceExam('assigned');
+  let current=true;
+  const start=context.iniciarSimulacro({button:node('assigned-button'),isCurrent:()=>current,mount:()=>events.push('mounted')});
+  return{context,events,start,resolve,cancel:()=>current=false};
+ }
+ const normal=setup();normal.resolve();await normal.start;
+ assert.deepEqual(normal.events,['mounted','sim-exam','timer']);assert.equal(normal.context.currentCampusScreen,'study-calendar-screen');
+ assert.equal(normal.context.simState.strictTiming,true);
+ for(const change of ['navigation','account']){
+  const t=setup();if(change==='navigation')t.cancel();else t.context.currentUser={id:'another-student'};
+  t.resolve();await t.start;assert.ok(!t.events.includes('mounted'));assert.ok(!t.events.includes('timer'));
+ }
 });

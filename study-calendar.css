@@ -420,6 +420,10 @@
 .calendar-bc-date time { color:var(--cal-muted); font-weight:500; }
 .calendar-bc-slots { margin:0; padding:7px; display:grid; gap:7px; list-style:none; }
 .calendar-bc-slot { display:grid; justify-items:start; align-content:start; gap:3px; min-height:76px; border-left:3px solid var(--cal-blue); border-radius:5px; padding:6px; background:var(--cal-hover); overflow-wrap:anywhere; }
+.calendar-bc-slot[type="button"] { width:100%; border-top:0; border-right:0; border-bottom:0; font:inherit; color:inherit; text-align:left; cursor:pointer; }
+.calendar-bc-slot[type="button"]:hover { background:var(--cal-today); }
+.calendar-bc-slot[type="button"]:focus-visible,.calendar-bc-open-day:focus-visible { outline:2px solid var(--cal-blue); outline-offset:-2px; }
+.calendar-bc-open-day { display:block; width:calc(100% - 14px); margin:0 7px 9px; padding:10px 6px; border:1px solid var(--cal-border); border-radius:6px; background:var(--cal-panel); color:var(--cal-action); font:inherit; font-size:12px; font-weight:600; cursor:pointer; }
 .calendar-bc-slot[data-subject="morfo"] { border-color:#dc864d }
 .calendar-bc-slot[data-subject="salud"] { border-color:#44966a }
 .calendar-bc-slot:is([data-subject="mate"],[data-subject="fis"],[data-subject="quim"]) { border-color:#9b70bd }

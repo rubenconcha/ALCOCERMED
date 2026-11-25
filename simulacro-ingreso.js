@@ -124,21 +124,25 @@
         return entry.promise;
     };
 
-    window.iniciarSimulacro = async function () {
+    window.iniciarSimulacro = async function (assigned) {
         const format = formatFor(selected);
         if (!format) return showToast('Elige una prueba del catálogo.', 'info');
         if (requiresPlan(format) && CampusAccess.isFree()) return CampusAccess.unlock();
         const request=++launchRequest,account=typeof currentUser==='undefined'?null:currentUser?.id;
-        const button = document.getElementById('sim-start-btn');
+        const isCurrent=()=>request===launchRequest&&(typeof currentUser==='undefined'?null:currentUser?.id)===account&&
+            (assigned ? assigned.isCurrent() : typeof currentCampusScreen==='undefined'||currentCampusScreen==='simulacro-screen');
+        const button = assigned?.button || document.getElementById('sim-start-btn');
+        const label = button.innerHTML;
         button.disabled = true;
         button.textContent = 'Preparando preguntas…';
         try {
             const rows = await window.prepareEntranceExam();
-            if (!rows || (requiresPlan(format) && CampusAccess.isFree()) || request!==launchRequest || (typeof currentUser==='undefined'?null:currentUser?.id)!==account || (typeof currentCampusScreen!=='undefined'&&currentCampusScreen!=='simulacro-screen')) return;
+            if (!rows || (requiresPlan(format) && CampusAccess.isFree()) || !isCurrent()) return;
             simState.mode = (format.pastId || format.curatedId) ? 'pasado' : 'oficial';
             simState.pastExamId = format.pastId || null;
             simState.strictTiming = true;
             simState.entranceOrigin = !format.topic;
+            simState.topicEvaluationId = null;
             document.getElementById('sim-another-exam').textContent = format.pastId ? 'Elegir otro simulacro' : 'Nuevo simulacro';
             document.getElementById('past-result-tools').hidden=true;
             simState.selectedExamen = format.title;
@@ -158,19 +162,22 @@
             document.getElementById('sim-exam-materia').textContent = format.title;
             document.getElementById('sim-exam-nq-info').textContent = rows.length + ' preguntas';
             document.getElementById('sim-total-num').textContent = rows.length;
+            if (assigned) {
+                document.getElementById('sim-another-exam').textContent='Volver al horario del simulacro';
+                assigned.mount();
+            }
             buildSimCircles();
             showSimScreen('sim-exam');
             renderSimQuestion();
             startSimTimer();
         } catch (error) {
-            if (request !== launchRequest || (typeof currentUser==='undefined'?null:currentUser?.id)!==account ||
-                (typeof currentCampusScreen!=='undefined'&&currentCampusScreen!=='simulacro-screen')) return;
+            if (!isCurrent()) return;
             if (error.status === 403) return CampusAccess.unlock();
             console.error('[Simulacro]', error);
             showToast(error.message || 'No se pudo preparar el simulacro.', 'error');
         } finally {
-            button.disabled = !selected;
-            button.innerHTML = '<i class="fas fa-play"></i> Comenzar';
+            button.disabled = assigned ? false : !selected;
+            button.innerHTML = assigned ? label : '<i class="fas fa-play"></i> Comenzar';
         }
     };
 

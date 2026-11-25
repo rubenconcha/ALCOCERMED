@@ -202,6 +202,7 @@
         finally { loading = false; $('past-start').disabled = false; $('past-start').textContent = isLocked(exam) ? 'Desbloquear' : 'Comenzar examen'; }
     };
     window.returnToExamSelection = function () {
+        if (window.CampusCalendar?.returnFromEvaluation()) return;
         if (simState.entranceOrigin) { window.openCampusSimulations(); return; }
         if (simState.mode === 'pasado') {
             // Remove the completed attempt from the campus back stack.

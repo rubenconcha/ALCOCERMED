@@ -58,7 +58,7 @@ test('Inicio uses the date picked in the mini calendar and updates the same acco
  ui.byId('campus-home-group').value='presencial_2';
  ui.byId('campus-home-group').listeners.change();
  assert.equal(ui.saved.get('ben-carson:calendar-group:student'),'presencial_2');
- assert.equal(ui.rows().length,3);
+ assert.equal(ui.rows().length,data.groupDay('2026-11-25','presencial_2').length);
  ui.rows()[0].children[0].onclick();
  assert.deepEqual(ui.calls.at(-1),['2026-11-25',data.groupDay('2026-11-25','presencial_2')[0].id]);
 });

@@ -137,7 +137,8 @@
         hint.textContent = item.resource === 'reading' ? 'Manual · Examen pasado · Evaluación'
             : item.resource === 'questions' ? 'Preguntas del tema de la semana'
             : item.resource === 'evaluation' ? 'Evaluación del tema de la semana'
-            : item.resource === 'sufficiency' ? 'Abrir práctica de suficiencia'
+            : item.resource === 'simulation' ? 'Simulacro del tema de la semana'
+            : item.resource === 'sufficiency' ? (item.endDayOffset ? 'Hasta las 00:30 del día siguiente · ampliable a la 01:00' : 'Abrir práctica de suficiencia')
             : item.id.endsWith('-clases') ? item.description.replace(/ \| /g, '\n')
             : item.kind === 'rest' ? 'Pausa del día'
             : item.resource === 'flashcards' ? 'Abrir flashcards' : 'Ver actividad';
@@ -180,7 +181,7 @@
         const note = byId('campus-home-group-note');
         note.textContent = !group ? 'Selecciona tu grupo para ver la planificación del día.'
             : !activities.length ? group.location + ' · Sin actividades programadas para esta fecha.'
-            : group.location + ' · Hora de Bolivia' + (homeGroup.value === 'virtual' ? ' · Repaso sugerido y clases en vivo' : ' · Horario de clases');
+            : group.location + ' · Hora de Bolivia' + (homeGroup.value === 'virtual' ? ' · Repaso sugerido y clases en vivo' : ' · Clases y estudio después de clases');
         homeClasses.replaceChildren(...activities.map(homeActivityRow));
     }
 

@@ -46,11 +46,14 @@
   for(const [id,label] of options)topic.add(new Option(label,id));
   if(topics.has(selected))topic.value=selected;
  }
+ async function catalog(){
+  if(window.CampusCatalogs?.simulations)return window.CampusCatalogs.simulations;
+  if(!catalogPromise)catalogPromise=fetch('/content/simulacros-catalog.json',{cache:'no-cache'}).then(r=>{if(!r.ok)throw Error('No pudimos cargar las pruebas.');return r.json();}).catch(e=>{catalogPromise=null;throw e;});
+  return catalogPromise;
+ }
  async function open(){
   try{
-   if(window.CampusCatalogs?.simulations){entries=window.CampusCatalogs.simulations.entries;updateTopics();render();return;}
-   if(!catalogPromise)catalogPromise=fetch('/content/simulacros-catalog.json',{cache:'no-cache'}).then(r=>{if(!r.ok)throw Error();return r.json();}).catch(e=>{catalogPromise=null;throw e;});
-   entries=(await catalogPromise).entries;updateTopics();render();
+   entries=(await catalog()).entries;updateTopics();render();
   }catch(_){$('sim-library-status').textContent='No pudimos cargar las pruebas.';list.replaceChildren();resetSelection();const retry=document.createElement('button');retry.type='button';retry.className='sim-library-retry';retry.textContent='Volver a cargar';retry.onclick=open;list.append(retry);}
  }
  function resetSelection(){
@@ -114,6 +117,19 @@
  }
  window.EntranceLibrary={
   open,openScreen,start,
+  async describeTopic(id){
+   entries=(await catalog()).entries;
+   const canonical=value=>String(value).replace(/-(\d+)$/,(_,n)=>'-'+Number(n));
+   return entries.find(e=>e.curatedId&&e.topics?.length===1&&canonical(e.topics[0].id)===canonical(id));
+  },
+  async startAssigned(entry,button,assigned){
+   if(locked(entry))return CampusAccess.unlock();
+   const owner=currentUser?.id;
+   await window.loadCampusAssets('entrance-attempt');
+   if(owner!==currentUser?.id||!assigned.isCurrent()||locked(entry))return;
+   window.selectEntranceExam(entry.key);
+   return window.iniciarSimulacro({...assigned,button});
+  },
   async openRequested(){
    const key=new URLSearchParams(location.search).get('simulacro');
    const opening=openScreen();

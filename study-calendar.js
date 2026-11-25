@@ -14,8 +14,8 @@
     const tools = byId('calendar-workspace-tools');
     const scripts = new Map();
     const guidedTopic = new Map();
-    const activityViews = { reading: 'study', questions: 'breakdown', evaluation: 'evaluation', sufficiency: 'practice' };
-    const viewTitles = { study: 'Estudio', orientation: 'Estudio', manual: 'Estudio', breakdown: 'Examen pasado', evaluation: 'Evaluación' };
+    const activityViews = { reading: 'study', questions: 'breakdown', evaluation: 'evaluation', simulation: 'simulation', sufficiency: 'practice' };
+    const viewTitles = { study: 'Estudio', orientation: 'Estudio', manual: 'Estudio', breakdown: 'Examen pasado', evaluation: 'Evaluación', simulation:'Simulacro' };
     const actions = {
         practice: ['Abrir ejercicio', item => openStudyAsset(item, 'practice', () => {
             if (showScreen('sufficiency-practice-screen') !== false) window.SufficiencyPractice.openExercise(item.practice.id);
@@ -280,7 +280,10 @@
             if (date === data.today()) header.setAttribute('aria-current', 'date');
             const list = element('ol', 'calendar-bc-slots');
             group.days[index].forEach((subject, slot) => {
-                const row = element('li', 'calendar-bc-slot');
+                const holder = element('li');
+                const activity = groupSelect.value === 'virtual' ? data.groupDay(date,'virtual').find(item=>item.id.endsWith('-clases'))
+                    : data.groupDay(date,groupSelect.value).find(item=>item.officialClass&&item.id.endsWith('-clase-'+slot));
+                const row = button('calendar-bc-slot', '', () => showDay(date,true,activity?.id));
                 row.dataset.subject = subject;
                 const virtualMfq = mfq.has(subject) && classCalendar.virtualMfq.includes(date);
                 const adjusted = virtualMfq && groupSelect.value !== 'virtual';
@@ -288,9 +291,12 @@
                     element('strong', '', classCalendar.subjects[subject]));
                 if (virtualMfq) row.append(element('span', 'calendar-bc-virtual', 'Clase virtual'));
                 if (mfq.has(subject)) row.append(element('small', '', classCalendar.topics[classWeek][index]));
-                list.append(row);
+                holder.append(row);
+                list.append(holder);
             });
-            card.append(header, list);
+            const study = data.groupDay(date,groupSelect.value).find(item=>item.id.endsWith('-morfo-estudio'));
+            const daily = button('calendar-bc-open-day', groupSelect.value==='virtual'?'Ver plan del día':'Ver estudio después de clases',()=>showDay(date,true,study?.id));
+            card.append(header, list, daily);
             return card;
         });
         byId('calendar-bc-days').replaceChildren(...dates);
@@ -336,7 +342,7 @@
 
     function renderOverview(focusClass) {
         renderClassCalendar();
-        byId('calendar-board-plan-label').textContent = isGroup(groupSelect.value) ? (groupSelect.value === 'virtual' ? 'Clases y repaso sugerido · Grupo Virtual' : 'Horario de clases · ' + classCalendar.groups[groupSelect.value].location) : 'Elige tu grupo para ver las actividades publicadas';
+        byId('calendar-board-plan-label').textContent = isGroup(groupSelect.value) ? (groupSelect.value === 'virtual' ? 'Clases y repaso sugerido · Grupo Virtual' : 'Clases y estudio · ' + classCalendar.groups[groupSelect.value].location) : 'Elige tu grupo para ver las actividades publicadas';
         updatePlan();
         overviewDate ||= state.date || state.reference;
         const [start, end] = range();
@@ -677,12 +683,18 @@
     }
 
     function evaluationFinished() {
+        if (examMounted && view === 'simulation' && state.active?.resource === 'simulation') {
+            state.completed.add(state.active.id);
+            saveProgress();
+            renderProgress();
+            return;
+        }
         if (!examMounted || !reading || simState.topicEvaluationId !== reading.topicLinks.evaluation) return;
         lastEvaluation = {
             date: state.date, topic: simState.topicEvaluationId, answers: simState.answers,
             started: simState.startTimestamp, finished: Date.now(),
         };
-        const scheduled = activities().find(item => item.resource === 'evaluation' && item.topicLinks === reading.topicLinks);
+        const scheduled = activities().find(item => item.resource === 'evaluation' && item.readingOptions?.some(book=>book.topicLinks.evaluation===reading.topicLinks.evaluation));
         if (scheduled) {
             state.completed.add(scheduled.id);
             saveProgress();
@@ -692,11 +704,45 @@
 
     function returnFromEvaluation() {
         if (!examMounted) return false;
-        updateView('evaluation');
+        updateView(view === 'simulation' ? 'simulation' : 'evaluation');
         return true;
     }
 
+    async function renderSimulation(item, isCurrent) {
+        const card = element('section','calendar-evaluation-card');
+        const book = reading;
+        const status = message(card,'Preparando el simulacro de '+book.topic+'…');
+        workspace.append(card);
+        try {
+            await window.loadCampusAssets('simulations');
+            if (!isCurrent()) return;
+            const exam = await window.EntranceLibrary.describeTopic(book.topicLinks.evaluation);
+            if (!isCurrent()) return;
+            if (!exam) throw new Error('Todavía no hay un simulacro publicado para este tema. Puedes repasar sus exámenes pasados.');
+            status.textContent = state.completed.has(item.id) ? 'Simulacro completado.' : 'Simulacro del tema de la semana.';
+            const fields = element('dl','calendar-evaluation-fields');
+            for (const [label,value] of [['Tema',exam.title],['Preguntas',exam.questionCount],['Duración',exam.minutes+' minutos'],['Horario del plan',item.start+' – '+item.end]]) {
+                fields.append(element('dt','',label),element('dd','',String(value)));
+            }
+            let pending = false;
+            const start = button('calendar-evaluation-start','Iniciar simulacro',async()=>{
+                if (pending) return;
+                pending=true;start.disabled=true;
+                try { await window.EntranceLibrary.startAssigned(exam,start,{isCurrent,mount:mountEvaluation}); }
+                catch (_) { if(isCurrent())showToast('No pudimos abrir el simulacro. Vuelve a intentarlo.','error'); }
+                finally { pending=false;start.disabled=false; }
+            });
+            card.append(fields,start);
+        } catch (error) {
+            if (!isCurrent()) return;
+            status.textContent = error.message;
+            card.append(button('calendar-outline','Ver exámenes pasados del tema',()=>updateView('breakdown',book)),
+                button('calendar-outline','Reintentar',()=>updateView('simulation',book)));
+        }
+    }
+
     async function renderDirectedPractice(item, isCurrent) {
+        if (item.endDayOffset) workspace.append(element('p','calendar-study-guide',item.description));
         const status = message(workspace, 'Preparando los ejercicios de este tema…');
         const assignment = item.assignment;
         if (!assignment?.topics?.length) {
@@ -826,12 +872,13 @@
             ? viewTitles[view] + ' · ' + reading.topic
             : item?.title || 'Estudio del día';
         const group = classCalendar.groups[groupSelect.value];
-        byId('calendar-day-label').textContent = data.formatDay(state.date) + (group ? ' · ' + group.location + (groupSelect.value === 'virtual' ? ' · Repaso sugerido' : '') : ' · Elige tu grupo');
+        byId('calendar-day-label').textContent = data.formatDay(state.date) + (group ? ' · ' + group.location + (groupSelect.value === 'virtual' ? ' · Repaso sugerido' : ' · Clases y estudio') : ' · Elige tu grupo');
         if (item?.readingOptions && reading && !examMounted) addReadingSelect(item.readingOptions, 'Tema de repaso de la semana', view);
         if (view === 'study') renderStudy(item);
         else if (view === 'manual' || view === 'orientation') renderManual(item, isCurrent);
         else if (view === 'breakdown') renderBreakdown(isCurrent);
         else if (view === 'evaluation') renderEvaluation(item, isCurrent);
+        else if (view === 'simulation') renderSimulation(item, isCurrent);
         else if (view === 'practice') renderDirectedPractice(item, isCurrent);
         else if (item) renderDefault(item);
         else {
@@ -846,8 +893,13 @@
 
     function canLeaveActivity() {
         if (!examMounted || !simState.timerInterval) return true;
-        if (!confirm('¿Salir de la evaluación? Se descartarán tus respuestas.')) return false;
-        window.TopicEvaluations.clear();
+        if (!confirm('¿Salir de la prueba? Se descartarán tus respuestas.')) return false;
+        clearInterval(simState.timerInterval);
+        simState.timerInterval=null;
+        simState.finalized=true;
+        simState.preguntas=[];
+        simState.answers=[];
+        window.TopicEvaluations?.clear();
         return true;
     }
 
@@ -950,7 +1002,7 @@
     };
     window.addEventListener('campus-access-change', () => {
         if (CampusAccess.isFree()) lastEvaluation = null;
-        if (dayIsVisible() && view === 'evaluation' && (!examMounted || CampusAccess.isFree())) renderActivity();
+        if (dayIsVisible() && ['evaluation','simulation'].includes(view) && (!examMounted || CampusAccess.isFree())) renderActivity();
     });
     window.CampusCalendar = {
         open() {

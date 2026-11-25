@@ -329,6 +329,36 @@
         return rows;
     }
 
+    function presencialStudy(key, groupId) {
+        const weekly = weeklyReadings[monday(key)] || {};
+        const rows = [];
+        const add = (id, kind, start, end, title, description, details = {}) => rows.push({
+            id: key + '-' + groupId + '-' + id, date:key, kind, start, end, title, description, show:true, ...details,
+        });
+        const topic = (id, slug, kind, start, end, title, resource) => {
+            const options = weekly[slug] || [];
+            add(id, kind, start, end, title, options.length
+                ? 'Continúa con el tema de la semana que elegiste para estudiar.'
+                : 'El tema de esta semana aún no está publicado en el cronograma.',
+                options.length ? {resource, reading:options[0], readingOptions:options, readingGroup:slug} : {});
+        };
+        add('almuerzo','rest','13:00','15:00','Almuerzo y descanso','Pausa después de las clases presenciales.');
+        topic('morfo-estudio','morfofuncion','study','15:00','17:00','Morfofunción','reading');
+        topic('morfo-examen','morfofuncion','exam','17:00','18:00','Examen pasado · Morfofunción','questions');
+        topic('morfo-simulacro','morfofuncion','exam','18:00','19:00','Simulacro · Morfofunción','simulation');
+        add('cena','rest','19:00','20:00','Cena y descanso','Haz una pausa antes del estudio de Biología Celular.');
+        topic('bio-estudio','biologia-celular','study','20:00','22:00','Biología Celular','reading');
+        topic('bio-preguntas','biologia-celular','exam','22:00','23:00','Examen pasado · Biología Celular','questions');
+        const assignment = practiceFor(key,-1);
+        const day = toDate(key).getUTCDay()-1;
+        const week = Math.floor((toDate(monday(key))-toDate(classCalendar.start))/604800000);
+        const subject = ['mate','fis','quim','mate','fis'][day];
+        add('suficiencia','practice','23:00','00:30',classCalendar.subjects[subject]+' · '+classCalendar.topics[week][day],
+            'Practica el tema del día. Termina a las 00:30 del día siguiente; puedes extenderlo hasta la 01:00.',
+            {resource:'sufficiency',assignment,endDayOffset:1});
+        return rows;
+    }
+
     // Official class slots come from the three supplied timetable photos. Study chapters
     // are only offered when the teacher confirmed them for this particular week.
     function groupDay(key, groupId) {
@@ -340,7 +370,7 @@
         const week = Math.floor((toDate(monday(key)) - toDate(classCalendar.start)) / 604800000);
         const weekly = weeklyReadings[monday(key)] || {};
         const slugs = {morfo:'morfofuncion', bio:'biologia-celular', salud:'educacion-salud'};
-        return group.days[index].map((subject, slot) => {
+        const classes = group.days[index].map((subject, slot) => {
             const [start,end] = group.times[slot].split('–');
             const options = weekly[slugs[subject]] || [];
             const mfq = ['mate','fis','quim'].includes(subject);
@@ -356,6 +386,7 @@
                    mfq?{resource:'sufficiency',assignment:practiceFor(key,-1)}:{}),
             };
         });
+        return classes.concat(presencialStudy(key,groupId));
     }
     function buildGroupPlan(reference, groupId) {
         const plan = new Map();
