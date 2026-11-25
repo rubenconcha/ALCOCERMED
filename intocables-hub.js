@@ -2,6 +2,7 @@
 window.IntocablesHub = (() => {
  let catalogue=[],premoniciones=[],lessons=new Map(),subject='',topic='',query='',format='sheets',initialized=false,requestId=0;
  let premonitionRequest=0;const premonitionContent=new Map();
+ let activePremonition = null;
  let coverRevision=0,coverOwner=null,observer=null;const covers=new Map(),pending=new Set();
  const subjects=['Morfofunción','Biología celular','Educación para la Salud'];
  const countLabels={sheets:'láminas',premoniciones:'premoniciones',cards:'fichas'};
@@ -65,15 +66,60 @@ window.IntocablesHub = (() => {
    if(meta)return window.openMmLightbox({...meta,section:'intocables',format:'illustrated-sheet'});
   }catch(_){if(currentCampusScreen==='intocables-hub-screen')status('No pudimos abrir la lámina. Vuelve a intentarlo.');}
  }
- function renderPremonition(item){
-  $('itc-premonition-kicker').textContent='PREMONICIONES BEN CARSON · '+String(item.materia||'').toLocaleUpperCase('es');
-  $('itc-premonition-title').textContent=item.titulo||'Premonición';
-  const count=(item.items||[]).length;
-  $('itc-premonition-subtitle').textContent=[item.capitulo,count?count+' temas':''].filter(Boolean).join(' · ');
-  $('itc-premonition-list').innerHTML=(item.items||[]).map(text=>'<li>'+esc(text)+'</li>').join('');
+ function readingPageLabel(references) {
+  const pages = [...new Set(references.map(ref => ref.printed || ref.page))].sort((a, b) => a - b);
+  const ranges = [];
+  let first = pages[0], last = first;
+  for (const page of pages.slice(1)) {
+   if (page === last + 1) { last = page; continue; }
+   ranges.push(first === last ? String(first) : first + '–' + last);
+   first = last = page;
+  }
+  ranges.push(first === last ? String(first) : first + '–' + last);
+  return (pages.length === 1 ? 'Pág. ' : 'Págs. ') + ranges.join(', ');
+ }
+ function renderPremonition(item) {
+  activePremonition = item;
+  $('itc-premonition-kicker').textContent = 'PREMONICIONES BEN CARSON · ' + String(item.materia || '').toLocaleUpperCase('es');
+  $('itc-premonition-title').textContent = item.titulo || 'Premonición';
+  const count = (item.items || []).length;
+  $('itc-premonition-subtitle').textContent = [item.capitulo, count ? count + ' temas' : ''].filter(Boolean).join(' · ');
+  $('itc-premonition-list').innerHTML = (item.items || []).map((entry, index) => {
+   if (typeof entry === 'string' || !entry.pages?.length) {
+    return '<li><span class="itc-premonition-label">' + esc(typeof entry === 'string' ? entry : entry.text) + '</span></li>';
+   }
+   return `<li><button type="button" class="itc-premonition-link" data-premonition-index="${index}">
+    <span><span class="itc-premonition-topic">${esc(entry.text)}</span><small>Texto oficial · ${esc(readingPageLabel(entry.pages))}</small></span>
+    <span class="itc-premonition-arrow" aria-hidden="true">↗</span></button></li>`;
+  }).join('');
+  $('itc-premonition-source').textContent = item.source ? [item.source.author, item.source.title, item.source.edition].join(' · ') : '';
+  $('itc-premonition-status').textContent = '';
+ }
+ async function readPremonition(index, button) {
+  const item = activePremonition, entry = item?.items?.[index];
+  if (!item?.source || !entry?.pages?.length) return;
+  if (window.CampusAccess?.isFree()) return window.CampusAccess.unlock();
+  const owner = currentUser?.id, request = ++premonitionRequest;
+  const dialog = $('itc-premonition-dialog');
+  button.disabled = true;
+  button.setAttribute('aria-busy', 'true');
+  $('itc-premonition-status').textContent = 'Abriendo texto oficial…';
+  try {
+   await window.loadCampusAssets('texts');
+   if (request !== premonitionRequest || owner !== currentUser?.id || !dialog.open || currentCampusScreen !== 'intocables-hub-screen') return;
+   if (window.CampusAccess?.isFree()) return window.CampusAccess.unlock();
+   await window.OfficialTexts.readPage(item.source.slug, entry.page || entry.pages[0].page, entry.pages);
+   if (request === premonitionRequest) $('itc-premonition-status').textContent = '';
+  } catch (_) {
+   if (request === premonitionRequest) $('itc-premonition-status').textContent = 'No pudimos abrir el texto. Selecciona el tema para reintentar.';
+  } finally {
+   button.disabled = false;
+   button.removeAttribute('aria-busy');
+  }
  }
  async function openPremonition(meta){
   if(window.CampusAccess?.isFree())return window.CampusAccess.unlock();
+  activePremonition=null;
   const owner=currentUser?.id,request=++premonitionRequest;status('');
   try{
    let item=premonitionContent.get(meta.id);
@@ -84,9 +130,10 @@ window.IntocablesHub = (() => {
     const response=await fetch('/api/premoniciones?id='+encodeURIComponent(meta.id),{headers:{Authorization:'Bearer '+token},cache:'no-store',signal:AbortSignal.timeout(15000)});
     if(response.status===403){if(request===premonitionRequest&&owner===currentUser?.id&&currentCampusScreen==='intocables-hub-screen')window.CampusAccess.unlock();return;}
     if(!response.ok)throw new Error('premonicion');
-    item=await response.json();premonitionContent.set(meta.id,item);
+    item=await response.json();
    }
    if(request!==premonitionRequest||owner!==currentUser?.id||currentCampusScreen!=='intocables-hub-screen')return;
+   premonitionContent.set(meta.id,item);
    renderPremonition(item);
    $('itc-premonition-dialog').showModal();
    window.CampusTracking?.record('intocables','opened',item.materia,item.tema,String(meta.id));
@@ -100,6 +147,12 @@ window.IntocablesHub = (() => {
   $('itc-subjects').addEventListener('click',e=>{const b=e.target.closest('[data-subject]');if(b){subject=b.dataset.subject;topic='';render();}});$('itc-topic').addEventListener('change',e=>{topic=e.target.value;render();});$('itc-search').addEventListener('input',e=>{query=e.target.value.trim();render();});$('itc-grid').addEventListener('click',e=>{const b=e.target.closest('[data-id]');if(b)openLesson(b.dataset.id);});
   $('itc-close').onclick=()=>$('itc-dialog').close();$('itc-dialog').onclick=e=>{if(e.target===$('itc-dialog'))$('itc-dialog').close();};$('itc-reveal').onclick=()=>{$('itc-answer').hidden=false;$('itc-reveal').hidden=true;};
   $('itc-premonition-close').onclick=()=>$('itc-premonition-dialog').close();$('itc-premonition-dialog').onclick=e=>{if(e.target===$('itc-premonition-dialog'))$('itc-premonition-dialog').close();};
+  $('itc-premonition-list').addEventListener('click',e=>{const button=e.target.closest('[data-premonition-index]');if(button)readPremonition(Number(button.dataset.premonitionIndex),button);});
+  $('itc-premonition-dialog').addEventListener('close', () => {
+   if ($('itc-premonition-dialog').open) return;
+   if (activePremonition) ++premonitionRequest;
+   activePremonition = null;
+  });
   window.addEventListener('campus-access-change',()=>{++requestId;++premonitionRequest;premonitionContent.clear();lessons.clear();clearCovers();$('itc-dialog').close();$('itc-premonition-dialog').close();['itc-key','itc-explain','itc-mistake','itc-question','itc-answer','itc-source'].forEach(id=>$(id).textContent='');if(!$('intocables-hub-screen').classList.contains('hidden'))load();});
   new MutationObserver(()=>{if($('intocables-hub-screen').classList.contains('hidden')){clearCovers();$('itc-premonition-dialog').close();}}).observe($('intocables-hub-screen'),{attributes:true,attributeFilter:['class']});
  }

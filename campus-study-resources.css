@@ -79,6 +79,7 @@
 .campus-resource-source { margin: 18px 0; color: #4d6580; font-size: .86rem; }
 .campus-resource-source a { color: #235d87; }
 .official-texts-fallback { display: flex; flex-wrap: wrap; gap: 8px; padding: 0 20px 12px; }
+.official-texts-fallback[hidden] { display: none; }
 .official-texts-stage {
     display: grid;
     flex: 1;

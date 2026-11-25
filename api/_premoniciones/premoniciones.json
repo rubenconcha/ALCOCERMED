@@ -7,18 +7,490 @@
     "materia": "Morfofunción",
     "tema": "Temas principales de anatomía y fisiología",
     "items": [
-      "Anatomía y fisiología.",
-      "Jerarquía estructural del cuerpo.",
-      "Variación anatómica y transposición visceral.",
-      "Características de la vida.",
-      "Homeostasis y retroalimentación negativa y positiva.",
-      "Imágenes médicas.",
-      "Posición anatómica.",
-      "Planos anatómicos.",
-      "Términos direccionales.",
-      "Regiones y cavidades.",
-      "Sistema de órganos."
-    ]
+      {
+        "text": "Anatomía y fisiología.",
+        "section": "1.1 · El ámbito de la anatomía y la fisiología",
+        "pages": [
+          {
+            "page": 30,
+            "printed": 2,
+            "marks": [
+              [
+                0.2793,
+                0.4594,
+                0.0539,
+                0.0106
+              ],
+              [
+                0.8275,
+                0.2807,
+                0.0631,
+                0.0111
+              ],
+              [
+                0.1994,
+                0.3109,
+                0.0522,
+                0.0106
+              ],
+              [
+                0.3612,
+                0.4594,
+                0.0522,
+                0.0106
+              ]
+            ]
+          },
+          {
+            "page": 31,
+            "printed": 3,
+            "marks": [
+              [
+                0.7416,
+                0.0495,
+                0.0509,
+                0.01
+              ],
+              [
+                0.2673,
+                0.2807,
+                0.0634,
+                0.0111
+              ],
+              [
+                0.8097,
+                0.0495,
+                0.0493,
+                0.01
+              ],
+              [
+                0.0909,
+                0.4403,
+                0.0935,
+                0.0161
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "text": "Jerarquía estructural del cuerpo.",
+        "section": "1.5 · La jerarquía de la complejidad",
+        "pages": [
+          {
+            "page": 40,
+            "printed": 12,
+            "marks": [
+              [
+                0.5269,
+                0.8821,
+                0.0869,
+                0.0161
+              ]
+            ]
+          },
+          {
+            "page": 41,
+            "printed": 13,
+            "marks": [
+              [
+                0.1215,
+                0.1619,
+                0.0585,
+                0.0111
+              ],
+              [
+                0.4186,
+                0.1768,
+                0.0585,
+                0.0111
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "text": "Variación anatómica y transposición visceral.",
+        "section": "1.5 · Variación anatómica y Conocimiento más a fondo 1.2",
+        "pages": [
+          {
+            "page": 42,
+            "printed": 14,
+            "marks": [
+              [
+                0.2438,
+                0.8525,
+                0.131,
+                0.0112
+              ],
+              [
+                0.5138,
+                0.1397,
+                0.1659,
+                0.0141
+              ],
+              [
+                0.0636,
+                0.3437,
+                0.1971,
+                0.0161
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "text": "Características de la vida.",
+        "section": "1.6 · Características de la vida",
+        "pages": [
+          {
+            "page": 43,
+            "printed": 15,
+            "marks": [
+              [
+                0.0909,
+                0.6482,
+                0.2474,
+                0.0161
+              ]
+            ]
+          },
+          {
+            "page": 44,
+            "printed": 16,
+            "marks": [
+              [
+                0.2496,
+                0.9341,
+                0.1609,
+                0.0111
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "text": "Homeostasis y retroalimentación negativa y positiva.",
+        "section": "1.6 · Homeostasis y retroalimentación negativa y positiva",
+        "pages": [
+          {
+            "page": 44,
+            "printed": 16,
+            "marks": [
+              [
+                0.0925,
+                0.4886,
+                0.0842,
+                0.0111
+              ],
+              [
+                0.1499,
+                0.5332,
+                0.0815,
+                0.0111
+              ]
+            ]
+          },
+          {
+            "page": 45,
+            "printed": 17,
+            "marks": [
+              [
+                0.7822,
+                0.8765,
+                0.072,
+                0.0106
+              ]
+            ]
+          },
+          {
+            "page": 46,
+            "printed": 18,
+            "marks": [
+              [
+                0.136,
+                0.3847,
+                0.081,
+                0.0111
+              ],
+              [
+                0.2542,
+                0.4886,
+                0.081,
+                0.0111
+              ],
+              [
+                0.4977,
+                0.7276,
+                0.2631,
+                0.0161
+              ],
+              [
+                0.5203,
+                0.7686,
+                0.1813,
+                0.0111
+              ]
+            ]
+          },
+          {
+            "page": 47,
+            "printed": 19,
+            "marks": [
+              [
+                0.6554,
+                0.8696,
+                0.072,
+                0.0106
+              ],
+              [
+                0.7112,
+                0.9315,
+                0.072,
+                0.0106
+              ],
+              [
+                0.3241,
+                0.65,
+                0.1742,
+                0.0111
+              ],
+              [
+                0.3275,
+                0.7391,
+                0.1748,
+                0.0111
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "text": "Imágenes médicas.",
+        "section": "Conocimiento más a fondo 1.5 · Imágenes médicas",
+        "pages": [
+          {
+            "page": 51,
+            "printed": 23,
+            "marks": [
+              [
+                0.1069,
+                0.3634,
+                0.1452,
+                0.0141
+              ]
+            ]
+          },
+          {
+            "page": 52,
+            "printed": 24
+          }
+        ]
+      },
+      {
+        "text": "Posición anatómica.",
+        "section": "Atlas A · Posición anatómica",
+        "pages": [
+          {
+            "page": 57,
+            "printed": 29,
+            "marks": [
+              [
+                0.0909,
+                0.1233,
+                0.1882,
+                0.0161
+              ],
+              [
+                0.1106,
+                0.1767,
+                0.1312,
+                0.0111
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "text": "Planos anatómicos.",
+        "section": "Atlas A · Planos anatómicos",
+        "pages": [
+          {
+            "page": 58,
+            "printed": 30,
+            "marks": [
+              [
+                0.0636,
+                0.1482,
+                0.1824,
+                0.0161
+              ],
+              [
+                0.3523,
+                0.2312,
+                0.1227,
+                0.0111
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "text": "Términos direccionales.",
+        "section": "Atlas A · Términos direccionales y Cuadro A.1",
+        "pages": [
+          {
+            "page": 58,
+            "printed": 30,
+            "marks": [
+              [
+                0.4977,
+                0.7151,
+                0.2218,
+                0.0161
+              ]
+            ]
+          },
+          {
+            "page": 59,
+            "printed": 31,
+            "marks": [
+              [
+                0.2641,
+                0.0932,
+                0.1628,
+                0.0129
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "text": "Regiones y cavidades.",
+        "section": "Atlas A · A.2 Principales regiones corporales y A.3 Cavidades y membranas corporales",
+        "pages": [
+          {
+            "page": 59,
+            "printed": 31,
+            "marks": [
+              [
+                0.7201,
+                0.5386,
+                0.2106,
+                0.0173
+              ]
+            ]
+          },
+          {
+            "page": 60,
+            "printed": 32
+          },
+          {
+            "page": 61,
+            "printed": 33
+          },
+          {
+            "page": 62,
+            "printed": 34,
+            "marks": [
+              [
+                0.5715,
+                0.1474,
+                0.1094,
+                0.0173
+              ],
+              [
+                0.6903,
+                0.1992,
+                0.0674,
+                0.0111
+              ]
+            ]
+          },
+          {
+            "page": 63,
+            "printed": 35,
+            "marks": [
+              [
+                0.1411,
+                0.7112,
+                0.0657,
+                0.0111
+              ],
+              [
+                0.2641,
+                0.0932,
+                0.0747,
+                0.0129
+              ]
+            ]
+          },
+          {
+            "page": 64,
+            "printed": 36
+          },
+          {
+            "page": 65,
+            "printed": 37
+          }
+        ]
+      },
+      {
+        "text": "Sistema de órganos.",
+        "section": "Atlas A · A.4 Sistemas de órganos y Figura A.11",
+        "pages": [
+          {
+            "page": 65,
+            "printed": 37,
+            "marks": [
+              [
+                0.5988,
+                0.1802,
+                0.2207,
+                0.0173
+              ],
+              [
+                0.7058,
+                0.2098,
+                0.1331,
+                0.0111
+              ]
+            ]
+          },
+          {
+            "page": 66,
+            "printed": 38,
+            "marks": [
+              [
+                0.1962,
+                0.9323,
+                0.1246,
+                0.0106
+              ]
+            ]
+          },
+          {
+            "page": 67,
+            "printed": 39,
+            "marks": [
+              [
+                0.2235,
+                0.9329,
+                0.1246,
+                0.0106
+              ]
+            ]
+          }
+        ]
+      }
+    ],
+    "source": {
+      "slug": "morfofuncion",
+      "title": "Anatomía y fisiología. La unidad entre forma y función",
+      "author": "Kenneth S. Saladin",
+      "edition": "6.ª edición · McGraw-Hill Interamericana",
+      "sha256": "e00074c7105c10052637b1c2a82f2b8959cf7c4cb9a91c4abd058ce958e58148"
+    }
   },
   {
     "id": "premo-morfo-02",
@@ -28,23 +500,776 @@
     "materia": "Morfofunción",
     "tema": "La química de la vida",
     "items": [
-      "Número atómico: elementos naturales (Cuadro 2.1).",
-      "Modelo planetario: electrones de valencia.",
-      "Isótopos, radioisótopos y radiación ionizante.",
-      "Iones, electrolitos y radicales libres.",
-      "Moléculas y enlaces químicos (Cuadro 2.3).",
-      "Agua: sustancias hidrofílicas e hidrofóbicas, adherencia y cohesión.",
-      "Soluciones, coloides, suspensiones y emulsiones (Cuadro 2.4).",
-      "Concentración de electrolitos.",
-      "Ácidos, bases y pH (Figura 2.12).",
-      "Energía potencial y energía cinética.",
-      "Cuadro 2.5: oxidación y reducción.",
-      "Carbohidratos: monosacáridos, disacáridos, oligosacáridos, polisacáridos, glucógeno, almidón y celulosa (Cuadro 2.6).",
-      "Ácidos grasos saturados e insaturados (Cuadro 2.7: HDL y LDL).",
-      "Estructura de la proteína: niveles 1, 2, 3 y 4.",
-      "Acciones de las enzimas y marcadores de enfermedad.",
-      "Fermentación anaeróbica y respiración aeróbica."
-    ]
+      {
+        "text": "Número atómico: elementos naturales (Cuadro 2.1).",
+        "section": "2.1 · Los elementos químicos y Cuadro 2.1",
+        "pages": [
+          {
+            "page": 71,
+            "printed": 43,
+            "marks": [
+              [
+                0.8496,
+                0.5282,
+                0.0694,
+                0.0111
+              ]
+            ]
+          },
+          {
+            "page": 72,
+            "printed": 44,
+            "marks": [
+              [
+                0.0829,
+                0.0934,
+                0.1165,
+                0.0136
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "text": "Modelo planetario: electrones de valencia.",
+        "section": "2.1 · Estructura atómica y electrones de valencia",
+        "pages": [
+          {
+            "page": 72,
+            "printed": 44,
+            "marks": [
+              [
+                0.5174,
+                0.3193,
+                0.0577,
+                0.0111
+              ],
+              [
+                0.6906,
+                0.3193,
+                0.0585,
+                0.0111
+              ]
+            ]
+          },
+          {
+            "page": 73,
+            "printed": 45,
+            "marks": [
+              [
+                0.4135,
+                0.2065,
+                0.0569,
+                0.0111
+              ],
+              [
+                0.8349,
+                0.6505,
+                0.0577,
+                0.0111
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "text": "Isótopos, radioisótopos y radiación ionizante.",
+        "section": "2.1 · Isótopos y radiactividad",
+        "pages": [
+          {
+            "page": 73,
+            "printed": 45,
+            "marks": [
+              [
+                0.3503,
+                0.7957,
+                0.0905,
+                0.0111
+              ],
+              [
+                0.2587,
+                0.8551,
+                0.0889,
+                0.0111
+              ],
+              [
+                0.525,
+                0.5317,
+                0.0625,
+                0.0111
+              ],
+              [
+                0.5589,
+                0.5614,
+                0.0617,
+                0.0111
+              ]
+            ]
+          },
+          {
+            "page": 74,
+            "printed": 46,
+            "marks": [
+              [
+                0.2724,
+                0.5406,
+                0.0898,
+                0.0111
+              ],
+              [
+                0.5781,
+                0.1017,
+                0.0799,
+                0.0106
+              ],
+              [
+                0.1306,
+                0.7485,
+                0.0617,
+                0.0111
+              ],
+              [
+                0.7527,
+                0.7336,
+                0.0617,
+                0.0111
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "text": "Iones, electrolitos y radicales libres.",
+        "section": "2.1 · Iones, electrólitos y radicales libres",
+        "pages": [
+          {
+            "page": 74,
+            "printed": 46,
+            "marks": [
+              [
+                0.6987,
+                0.762,
+                0.147,
+                0.0161
+              ],
+              [
+                0.5737,
+                0.6891,
+                0.0353,
+                0.0111
+              ],
+              [
+                0.4977,
+                0.762,
+                0.0525,
+                0.0161
+              ]
+            ]
+          },
+          {
+            "page": 75,
+            "printed": 47,
+            "marks": [
+              [
+                0.5818,
+                0.4292,
+                0.1025,
+                0.0111
+              ],
+              [
+                0.8782,
+                0.4887,
+                0.0622,
+                0.0111
+              ],
+              [
+                0.4044,
+                0.1025,
+                0.0353,
+                0.0111
+              ],
+              [
+                0.3748,
+                0.355,
+                0.0347,
+                0.0111
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "text": "Moléculas y enlaces químicos (Cuadro 2.3).",
+        "section": "2.1 · Moléculas y enlaces químicos; Cuadro 2.3",
+        "pages": [
+          {
+            "page": 75,
+            "printed": 47,
+            "marks": [
+              [
+                0.829,
+                0.6521,
+                0.0673,
+                0.0111
+              ],
+              [
+                0.5588,
+                0.6966,
+                0.0673,
+                0.0111
+              ]
+            ]
+          },
+          {
+            "page": 76,
+            "printed": 48,
+            "marks": [
+              [
+                0.517,
+                0.519,
+                0.1165,
+                0.0136
+              ],
+              [
+                0.0636,
+                0.3413,
+                0.0981,
+                0.0161
+              ],
+              [
+                0.0911,
+                0.3649,
+                0.0681,
+                0.0111
+              ]
+            ]
+          },
+          {
+            "page": 77,
+            "printed": 49,
+            "marks": [
+              [
+                0.288,
+                0.1471,
+                0.0673,
+                0.0111
+              ],
+              [
+                0.7608,
+                0.7376,
+                0.0673,
+                0.0111
+              ]
+            ]
+          },
+          {
+            "page": 78,
+            "printed": 50,
+            "marks": [
+              [
+                0.0788,
+                0.7408,
+                0.0673,
+                0.0111
+              ],
+              [
+                0.3854,
+                0.8893,
+                0.0673,
+                0.0111
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "text": "Agua: sustancias hidrofílicas e hidrofóbicas, adherencia y cohesión.",
+        "section": "2.2 · Agua",
+        "pages": [
+          {
+            "page": 79,
+            "printed": 51,
+            "marks": [
+              [
+                0.0909,
+                0.5927,
+                0.0581,
+                0.0111
+              ],
+              [
+                0.7335,
+                0.5036,
+                0.0586,
+                0.0111
+              ],
+              [
+                0.1566,
+                0.5927,
+                0.0597,
+                0.0111
+              ]
+            ]
+          },
+          {
+            "page": 80,
+            "printed": 52
+          }
+        ]
+      },
+      {
+        "text": "Soluciones, coloides, suspensiones y emulsiones (Cuadro 2.4).",
+        "section": "2.2 · Soluciones, coloides y suspensiones; Cuadro 2.4",
+        "pages": [
+          {
+            "page": 80,
+            "printed": 52,
+            "marks": [
+              [
+                0.0636,
+                0.4032,
+                0.1038,
+                0.0161
+              ],
+              [
+                0.0636,
+                0.459,
+                0.07,
+                0.0111
+              ]
+            ]
+          },
+          {
+            "page": 81,
+            "printed": 53,
+            "marks": [
+              [
+                0.3577,
+                0.4961,
+                0.0684,
+                0.0111
+              ],
+              [
+                0.1102,
+                0.7528,
+                0.1165,
+                0.0136
+              ],
+              [
+                0.2413,
+                0.5667,
+                0.0699,
+                0.0111
+              ],
+              [
+                0.6551,
+                0.6149,
+                0.0705,
+                0.0111
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "text": "Concentración de electrolitos.",
+        "section": "2.2 · Concentraciones de electrólitos",
+        "pages": [
+          {
+            "page": 82,
+            "printed": 54,
+            "marks": [
+              [
+                0.4977,
+                0.1466,
+                0.277,
+                0.0149
+              ],
+              [
+                0.5689,
+                0.2733,
+                0.2075,
+                0.0111
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "text": "Ácidos, bases y pH (Figura 2.12).",
+        "section": "2.2 · Ácidos, bases y pH; Figura 2.12",
+        "pages": [
+          {
+            "page": 82,
+            "printed": 54,
+            "marks": [
+              [
+                0.4977,
+                0.5839,
+                0.1891,
+                0.0161
+              ]
+            ]
+          },
+          {
+            "page": 83,
+            "printed": 55,
+            "marks": [
+              [
+                0.0909,
+                0.3701,
+                0.0978,
+                0.0124
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "text": "Energía potencial y energía cinética.",
+        "section": "2.3 · Energía",
+        "pages": [
+          {
+            "page": 84,
+            "printed": 56,
+            "marks": [
+              [
+                0.1501,
+                0.6066,
+                0.0527,
+                0.0111
+              ],
+              [
+                0.2058,
+                0.6066,
+                0.062,
+                0.0111
+              ],
+              [
+                0.0636,
+                0.6066,
+                0.0524,
+                0.0111
+              ],
+              [
+                0.3582,
+                0.6363,
+                0.0524,
+                0.0111
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "text": "Cuadro 2.5: oxidación y reducción.",
+        "section": "2.3 · Oxidación y reducción; Cuadro 2.5",
+        "pages": [
+          {
+            "page": 86,
+            "printed": 58,
+            "marks": [
+              [
+                0.5671,
+                0.5716,
+                0.0712,
+                0.0111
+              ],
+              [
+                0.0829,
+                0.0947,
+                0.1165,
+                0.0136
+              ],
+              [
+                0.2051,
+                0.3229,
+                0.0942,
+                0.0161
+              ],
+              [
+                0.0925,
+                0.6436,
+                0.0698,
+                0.0111
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "text": "Carbohidratos: monosacáridos, disacáridos, oligosacáridos, polisacáridos, glucógeno, almidón y celulosa (Cuadro 2.6).",
+        "section": "2.4 · Carbohidratos y Cuadro 2.6",
+        "pages": [
+          {
+            "page": 88,
+            "printed": 60,
+            "marks": [
+              [
+                0.1151,
+                0.709,
+                0.1018,
+                0.0111
+              ],
+              [
+                0.1858,
+                0.7982,
+                0.0994,
+                0.0111
+              ],
+              [
+                0.6184,
+                0.4367,
+                0.0906,
+                0.0111
+              ],
+              [
+                0.4977,
+                0.5258,
+                0.0882,
+                0.0111
+              ]
+            ]
+          },
+          {
+            "page": 89,
+            "printed": 61,
+            "marks": [
+              [
+                0.1419,
+                0.8873,
+                0.0695,
+                0.0111
+              ],
+              [
+                0.3184,
+                0.5431,
+                0.0909,
+                0.0106
+              ]
+            ]
+          },
+          {
+            "page": 90,
+            "printed": 62,
+            "marks": [
+              [
+                0.0829,
+                0.3576,
+                0.1165,
+                0.0136
+              ],
+              [
+                0.0829,
+                0.4158,
+                0.0926,
+                0.0106
+              ],
+              [
+                0.0829,
+                0.6248,
+                0.0799,
+                0.0106
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "text": "Ácidos grasos saturados e insaturados (Cuadro 2.7: HDL y LDL).",
+        "section": "2.4 · Lípidos y Cuadro 2.7; colesterol y lipoproteínas",
+        "pages": [
+          {
+            "page": 90,
+            "printed": 62,
+            "marks": [
+              [
+                0.6113,
+                0.7708,
+                0.0698,
+                0.0111
+              ],
+              [
+                0.517,
+                0.3576,
+                0.1165,
+                0.0136
+              ]
+            ]
+          },
+          {
+            "page": 91,
+            "printed": 63
+          },
+          {
+            "page": 92,
+            "printed": 64,
+            "marks": [
+              [
+                0.1342,
+                0.0877,
+                0.0457,
+                0.0111
+              ],
+              [
+                0.1835,
+                0.0877,
+                0.0649,
+                0.0111
+              ]
+            ]
+          },
+          {
+            "page": 94,
+            "printed": 66,
+            "marks": [
+              [
+                0.1347,
+                0.6817,
+                0.072,
+                0.0111
+              ],
+              [
+                0.438,
+                0.3008,
+                0.0407,
+                0.0106
+              ],
+              [
+                0.0797,
+                0.3144,
+                0.0556,
+                0.0106
+              ],
+              [
+                0.0833,
+                0.2328,
+                0.0226,
+                0.0106
+              ],
+              [
+                0.1637,
+                0.3961,
+                0.0226,
+                0.0106
+              ],
+              [
+                0.3439,
+                0.26,
+                0.0255,
+                0.0106
+              ],
+              [
+                0.2005,
+                0.3961,
+                0.0255,
+                0.0106
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "text": "Estructura de la proteína: niveles 1, 2, 3 y 4.",
+        "section": "2.4 · Estructura de las proteínas",
+        "pages": [
+          {
+            "page": 95,
+            "printed": 67,
+            "marks": [
+              [
+                0.0909,
+                0.5284,
+                0.2343,
+                0.0149
+              ]
+            ]
+          },
+          {
+            "page": 96,
+            "printed": 68,
+            "marks": [
+              [
+                0.6557,
+                0.8671,
+                0.163,
+                0.0106
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "text": "Acciones de las enzimas y marcadores de enfermedad.",
+        "section": "2.4 · Enzimas y metabolismo; enzimas sanguíneas como marcadores de enfermedad",
+        "pages": [
+          {
+            "page": 97,
+            "printed": 69,
+            "marks": [
+              [
+                0.0909,
+                0.6709,
+                0.2321,
+                0.0161
+              ],
+              [
+                0.751,
+                0.1373,
+                0.0915,
+                0.0141
+              ]
+            ]
+          },
+          {
+            "page": 98,
+            "printed": 70
+          }
+        ]
+      },
+      {
+        "text": "Fermentación anaeróbica y respiración aeróbica.",
+        "section": "2.4 · Trifosfato de adenosina, fermentación anaeróbica y respiración aeróbica",
+        "pages": [
+          {
+            "page": 101,
+            "printed": 73,
+            "marks": [
+              [
+                0.224,
+                0.6538,
+                0.1668,
+                0.0111
+              ],
+              [
+                0.1836,
+                0.7133,
+                0.1627,
+                0.0111
+              ],
+              [
+                0.1069,
+                0.8024,
+                0.1386,
+                0.0111
+              ],
+              [
+                0.2905,
+                0.8469,
+                0.135,
+                0.0111
+              ]
+            ]
+          }
+        ]
+      }
+    ],
+    "source": {
+      "slug": "morfofuncion",
+      "title": "Anatomía y fisiología. La unidad entre forma y función",
+      "author": "Kenneth S. Saladin",
+      "edition": "6.ª edición · McGraw-Hill Interamericana",
+      "sha256": "e00074c7105c10052637b1c2a82f2b8959cf7c4cb9a91c4abd058ce958e58148"
+    }
   },
   {
     "id": "premo-morfo-05",
@@ -54,21 +1279,650 @@
     "materia": "Morfofunción",
     "tema": "Histología",
     "items": [
-      "Funciones del tejido epitelial.",
-      "Cuadro 5.2: epitelio simple. Localización.",
-      "Cuadro 5.3: epitelio estratificado. Localización.",
-      "Función del tejido conectivo.",
-      "Células del tejido conectivo.",
-      "Tipos de fibras y componentes de la sustancia fundamental.",
-      "Síndrome de Marfan.",
-      "Cuadros 5.4, 5.5, 5.6, 5.7, 5.8, 5.9 y 5.10: localización y descripción de lo más importante (TCDR, TCDI y tipos de cartílagos).",
-      "Tejido muscular (Cuadro 5.11).",
-      "Características de los tipos de uniones celulares.",
-      "Tipos de glándulas según su secreción y modo de secreción.",
-      "Hiperplasia, hipertrofia y neoplasia.",
-      "Diferenciación, metaplasia y plasticidad celular (totipotentes, pluripotentes, multipotentes y unipotentes).",
-      "Atrofia, necrosis, gangrena y apoptosis."
-    ]
+      {
+        "text": "Funciones del tejido epitelial.",
+        "section": "5.2 · Funciones del tejido epitelial",
+        "pages": [
+          {
+            "page": 175,
+            "printed": 147,
+            "marks": [
+              [
+                0.1198,
+                0.337,
+                0.0714,
+                0.0111
+              ],
+              [
+                0.1198,
+                0.4707,
+                0.0665,
+                0.0111
+              ],
+              [
+                0.1198,
+                0.5153,
+                0.069,
+                0.0111
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "text": "Cuadro 5.2: epitelio simple. Localización.",
+        "section": "5.2 · Cuadro 5.2: Epitelio simple",
+        "pages": [
+          {
+            "page": 177,
+            "printed": 149,
+            "marks": [
+              [
+                0.1102,
+                0.0947,
+                0.1165,
+                0.0136
+              ]
+            ]
+          },
+          {
+            "page": 178,
+            "printed": 150,
+            "marks": [
+              [
+                0.0829,
+                0.095,
+                0.1165,
+                0.0136
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "text": "Cuadro 5.3: epitelio estratificado. Localización.",
+        "section": "5.2 · Cuadro 5.3: Epitelio estratificado",
+        "pages": [
+          {
+            "page": 179,
+            "printed": 151,
+            "marks": [
+              [
+                0.1106,
+                0.095,
+                0.1165,
+                0.0136
+              ]
+            ]
+          },
+          {
+            "page": 180,
+            "printed": 152,
+            "marks": [
+              [
+                0.0828,
+                0.0963,
+                0.1165,
+                0.0136
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "text": "Función del tejido conectivo.",
+        "section": "5.3 · Tejido conjuntivo: revisión general y funciones",
+        "pages": [
+          {
+            "page": 181,
+            "printed": 153,
+            "marks": [
+              [
+                0.5539,
+                0.4645,
+                0.1196,
+                0.0111
+              ],
+              [
+                0.5539,
+                0.5858,
+                0.111,
+                0.0111
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "text": "Células del tejido conectivo.",
+        "section": "5.3 · Componentes de tejido conjuntivo fibroso: células",
+        "pages": [
+          {
+            "page": 182,
+            "printed": 154,
+            "marks": [
+              [
+                0.0925,
+                0.4008,
+                0.0826,
+                0.0111
+              ],
+              [
+                0.0925,
+                0.4627,
+                0.0778,
+                0.0111
+              ],
+              [
+                0.0925,
+                0.5518,
+                0.0746,
+                0.0111
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "text": "Tipos de fibras y componentes de la sustancia fundamental.",
+        "section": "5.3 · Fibras y sustancia fundamental",
+        "pages": [
+          {
+            "page": 182,
+            "printed": 154,
+            "marks": [
+              [
+                0.4977,
+                0.6577,
+                0.0441,
+                0.0111
+              ],
+              [
+                0.5266,
+                0.6948,
+                0.0425,
+                0.0111
+              ],
+              [
+                0.2496,
+                0.261,
+                0.0657,
+                0.0111
+              ],
+              [
+                0.3183,
+                0.261,
+                0.0842,
+                0.0111
+              ]
+            ]
+          },
+          {
+            "page": 183,
+            "printed": 155,
+            "marks": [
+              [
+                0.1198,
+                0.0877,
+                0.0425,
+                0.0111
+              ],
+              [
+                0.1198,
+                0.1322,
+                0.0425,
+                0.0111
+              ],
+              [
+                0.0909,
+                0.3104,
+                0.1574,
+                0.0111
+              ],
+              [
+                0.5425,
+                0.2362,
+                0.1501,
+                0.0111
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "text": "Síndrome de Marfan.",
+        "section": "Conocimiento más a fondo 5.1 · Síndrome de Marfan",
+        "pages": [
+          {
+            "page": 184,
+            "printed": 156,
+            "marks": [
+              [
+                0.0929,
+                0.4292,
+                0.1337,
+                0.0111
+              ],
+              [
+                0.0797,
+                0.5779,
+                0.1611,
+                0.0141
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "text": "Cuadros 5.4, 5.5, 5.6, 5.7, 5.8, 5.9 y 5.10: localización y descripción de lo más importante (TCDR, TCDI y tipos de cartílagos).",
+        "section": "5.3 y 5.4 · Cuadros 5.4 a 5.10: tejidos conjuntivos y tejido nervioso",
+        "pages": [
+          {
+            "page": 185,
+            "printed": 157,
+            "marks": [
+              [
+                0.1102,
+                0.0955,
+                0.1165,
+                0.0136
+              ]
+            ]
+          },
+          {
+            "page": 186,
+            "printed": 158,
+            "marks": [
+              [
+                0.0829,
+                0.0955,
+                0.1165,
+                0.0136
+              ]
+            ]
+          },
+          {
+            "page": 187,
+            "printed": 159,
+            "marks": [
+              [
+                0.1102,
+                0.0969,
+                0.1165,
+                0.0136
+              ],
+              [
+                0.6163,
+                0.1113,
+                0.0725,
+                0.0111
+              ]
+            ]
+          },
+          {
+            "page": 188,
+            "printed": 160,
+            "marks": [
+              [
+                0.0829,
+                0.0962,
+                0.1165,
+                0.0136
+              ]
+            ]
+          },
+          {
+            "page": 189,
+            "printed": 161,
+            "marks": [
+              [
+                0.5443,
+                0.0955,
+                0.1165,
+                0.0136
+              ],
+              [
+                0.2052,
+                0.251,
+                0.0687,
+                0.0111
+              ],
+              [
+                0.1625,
+                0.6595,
+                0.0686,
+                0.0111
+              ]
+            ]
+          },
+          {
+            "page": 190,
+            "printed": 162,
+            "marks": [
+              [
+                0.0829,
+                0.0955,
+                0.1165,
+                0.0136
+              ]
+            ]
+          },
+          {
+            "page": 191,
+            "printed": 163,
+            "marks": [
+              [
+                0.216,
+                0.4485,
+                0.0775,
+                0.0111
+              ],
+              [
+                0.5443,
+                0.0955,
+                0.1279,
+                0.0136
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "text": "Tejido muscular (Cuadro 5.11).",
+        "section": "5.4 · Tejido muscular y Cuadro 5.11",
+        "pages": [
+          {
+            "page": 192,
+            "printed": 164,
+            "marks": [
+              [
+                0.1011,
+                0.2747,
+                0.0775,
+                0.0111
+              ],
+              [
+                0.1287,
+                0.0877,
+                0.0869,
+                0.0161
+              ],
+              [
+                0.1236,
+                0.1113,
+                0.0633,
+                0.0111
+              ]
+            ]
+          },
+          {
+            "page": 193,
+            "printed": 165,
+            "marks": [
+              [
+                0.1102,
+                0.0953,
+                0.1279,
+                0.0136
+              ],
+              [
+                0.3119,
+                0.0958,
+                0.0638,
+                0.0129
+              ],
+              [
+                0.3104,
+                0.3415,
+                0.0487,
+                0.0093
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "text": "Características de los tipos de uniones celulares.",
+        "section": "5.5 · Uniones celulares",
+        "pages": [
+          {
+            "page": 194,
+            "printed": 166,
+            "marks": [
+              [
+                0.0636,
+                0.8499,
+                0.2463,
+                0.0149
+              ],
+              [
+                0.095,
+                0.8726,
+                0.1942,
+                0.0111
+              ]
+            ]
+          },
+          {
+            "page": 195,
+            "printed": 167,
+            "marks": [
+              [
+                0.0909,
+                0.0877,
+                0.1162,
+                0.0149
+              ],
+              [
+                0.3012,
+                0.4074,
+                0.0829,
+                0.0111
+              ],
+              [
+                0.0909,
+                0.5506,
+                0.2706,
+                0.0149
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "text": "Tipos de glándulas según su secreción y modo de secreción.",
+        "section": "5.5 · Glándulas endocrinas y exocrinas; tipos y modos de secreción",
+        "pages": [
+          {
+            "page": 195,
+            "printed": 167,
+            "marks": [
+              [
+                0.525,
+                0.4685,
+                0.1866,
+                0.0149
+              ],
+              [
+                0.5825,
+                0.6546,
+                0.1454,
+                0.0111
+              ]
+            ]
+          },
+          {
+            "page": 196,
+            "printed": 168,
+            "marks": [
+              [
+                0.119,
+                0.6869,
+                0.1412,
+                0.0111
+              ]
+            ]
+          },
+          {
+            "page": 197,
+            "printed": 169,
+            "marks": [
+              [
+                0.0909,
+                0.634,
+                0.1829,
+                0.0149
+              ],
+              [
+                0.1214,
+                0.8201,
+                0.0369,
+                0.0111
+              ],
+              [
+                0.525,
+                0.4413,
+                0.1768,
+                0.0149
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "text": "Hiperplasia, hipertrofia y neoplasia.",
+        "section": "5.6 · Crecimiento de tejidos",
+        "pages": [
+          {
+            "page": 200,
+            "printed": 172,
+            "marks": [
+              [
+                0.2044,
+                0.141,
+                0.077,
+                0.0111
+              ],
+              [
+                0.3988,
+                0.2302,
+                0.0649,
+                0.0111
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "text": "Diferenciación, metaplasia y plasticidad celular (totipotentes, pluripotentes, multipotentes y unipotentes).",
+        "section": "5.6 · Desarrollo de tejidos y citoblastos",
+        "pages": [
+          {
+            "page": 200,
+            "printed": 172,
+            "marks": [
+              [
+                0.3568,
+                0.4604,
+                0.0738,
+                0.0111
+              ],
+              [
+                0.3453,
+                0.7227,
+                0.0663,
+                0.0112
+              ],
+              [
+                0.7767,
+                0.2362,
+                0.0786,
+                0.0111
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "text": "Atrofia, necrosis, gangrena y apoptosis.",
+        "section": "5.6 · Degeneración y muerte de tejidos",
+        "pages": [
+          {
+            "page": 201,
+            "printed": 173,
+            "marks": [
+              [
+                0.574,
+                0.251,
+                0.0553,
+                0.0111
+              ],
+              [
+                0.7231,
+                0.3253,
+                0.0545,
+                0.0111
+              ],
+              [
+                0.5693,
+                0.3253,
+                0.0617,
+                0.0111
+              ],
+              [
+                0.6507,
+                0.355,
+                0.0609,
+                0.0111
+              ],
+              [
+                0.5731,
+                0.7114,
+                0.0641,
+                0.0111
+              ],
+              [
+                0.6402,
+                0.7561,
+                0.0633,
+                0.0111
+              ]
+            ]
+          },
+          {
+            "page": 203,
+            "printed": 175,
+            "marks": [
+              [
+                0.6972,
+                0.2207,
+                0.0469,
+                0.0106
+              ],
+              [
+                0.378,
+                0.2362,
+                0.0633,
+                0.0111
+              ],
+              [
+                0.7583,
+                0.2207,
+                0.0568,
+                0.0106
+              ]
+            ]
+          }
+        ]
+      }
+    ],
+    "source": {
+      "slug": "morfofuncion",
+      "title": "Anatomía y fisiología. La unidad entre forma y función",
+      "author": "Kenneth S. Saladin",
+      "edition": "6.ª edición · McGraw-Hill Interamericana",
+      "sha256": "e00074c7105c10052637b1c2a82f2b8959cf7c4cb9a91c4abd058ce958e58148"
+    }
   },
   {
     "id": "premo-morfo-06",
@@ -78,22 +1932,766 @@
     "materia": "Morfofunción",
     "tema": "Sistema tegumentario",
     "items": [
-      "Introducción a la piel: porcentajes y medidas.",
-      "pH de la piel.",
-      "Células de la epidermis y capas de la epidermis.",
-      "Dermis: papilas dérmicas y capas.",
-      "Hipodermis (Cuadro 6.1).",
-      "Color de la piel: eumelanina y feomelanina.",
-      "Pecas, nevo y hemangiomas.",
-      "Lanugo fetal, lanugo infantil y pelo terminal.",
-      "Estructura del pelo: bulbo, raíz, tallo, médula, corteza y cutícula.",
-      "Color del pelo y crecimiento: anágena, catágena y telógena.",
-      "Placa ungueal, raíz ungueal, pliegue ungueal, hiponiquio y eponiquio.",
-      "Cuadro 6.2: glándulas cutáneas.",
-      "Cáncer de piel.",
-      "Quemaduras.",
-      "Cuadro 6.3: trastornos del sistema tegumentario."
-    ]
+      {
+        "text": "Introducción a la piel: porcentajes y medidas.",
+        "section": "6.1 · La piel y sus funciones",
+        "pages": [
+          {
+            "page": 209,
+            "printed": 181,
+            "marks": [
+              [
+                0.6041,
+                0.0882,
+                0.0442,
+                0.0111
+              ],
+              [
+                0.8558,
+                0.5189,
+                0.0442,
+                0.0111
+              ],
+              [
+                0.1216,
+                0.1385,
+                0.0545,
+                0.01
+              ],
+              [
+                0.3008,
+                0.1694,
+                0.0545,
+                0.01
+              ]
+            ]
+          },
+          {
+            "page": 210,
+            "printed": 182,
+            "marks": [
+              [
+                0.3251,
+                0.5198,
+                0.0449,
+                0.0111
+              ],
+              [
+                0.4977,
+                0.8452,
+                0.0985,
+                0.0161
+              ],
+              [
+                0.5186,
+                0.8689,
+                0.0667,
+                0.0111
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "text": "pH de la piel.",
+        "section": "6.1 · Resistencia a traumatismos e infecciones",
+        "pages": [
+          {
+            "page": 209,
+            "printed": 181,
+            "marks": [
+              [
+                0.7917,
+                0.6229,
+                0.0788,
+                0.0111
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "text": "Células de la epidermis y capas de la epidermis.",
+        "section": "6.1 · Células y estratos de la epidermis",
+        "pages": [
+          {
+            "page": 211,
+            "printed": 183,
+            "marks": [
+              [
+                0.0909,
+                0.4686,
+                0.2036,
+                0.0149
+              ],
+              [
+                0.3064,
+                0.9325,
+                0.1397,
+                0.0106
+              ]
+            ]
+          },
+          {
+            "page": 212,
+            "printed": 184,
+            "marks": [
+              [
+                0.0903,
+                0.4763,
+                0.1539,
+                0.0111
+              ]
+            ]
+          },
+          {
+            "page": 213,
+            "printed": 185
+          }
+        ]
+      },
+      {
+        "text": "Dermis: papilas dérmicas y capas.",
+        "section": "6.1 · Dermis y sus capas",
+        "pages": [
+          {
+            "page": 213,
+            "printed": 185,
+            "marks": [
+              [
+                0.8049,
+                0.1174,
+                0.0457,
+                0.0111
+              ],
+              [
+                0.525,
+                0.7423,
+                0.0695,
+                0.0161
+              ],
+              [
+                0.5629,
+                0.8254,
+                0.0567,
+                0.0111
+              ]
+            ]
+          },
+          {
+            "page": 214,
+            "printed": 186,
+            "marks": [
+              [
+                0.2537,
+                0.563,
+                0.0457,
+                0.0111
+              ],
+              [
+                0.3387,
+                0.563,
+                0.0457,
+                0.0111
+              ],
+              [
+                0.7852,
+                0.563,
+                0.0473,
+                0.0111
+              ],
+              [
+                0.6442,
+                0.5778,
+                0.0497,
+                0.0111
+              ],
+              [
+                0.853,
+                0.563,
+                0.0561,
+                0.0111
+              ],
+              [
+                0.5824,
+                0.6669,
+                0.0574,
+                0.0111
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "text": "Hipodermis (Cuadro 6.1).",
+        "section": "6.1 · Hipodermis y Cuadro 6.1",
+        "pages": [
+          {
+            "page": 214,
+            "printed": 186,
+            "marks": [
+              [
+                0.4977,
+                0.8314,
+                0.1139,
+                0.0161
+              ],
+              [
+                0.8209,
+                0.8551,
+                0.077,
+                0.0111
+              ]
+            ]
+          },
+          {
+            "page": 215,
+            "printed": 187,
+            "marks": [
+              [
+                0.36,
+                0.4021,
+                0.0762,
+                0.0111
+              ],
+              [
+                0.2778,
+                0.4615,
+                0.0762,
+                0.0111
+              ],
+              [
+                0.1567,
+                0.5951,
+                0.0694,
+                0.0111
+              ],
+              [
+                0.1102,
+                0.0952,
+                0.1165,
+                0.0136
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "text": "Color de la piel: eumelanina y feomelanina.",
+        "section": "6.1 · Color de la piel",
+        "pages": [
+          {
+            "page": 215,
+            "printed": 187,
+            "marks": [
+              [
+                0.1758,
+                0.7239,
+                0.0794,
+                0.0111
+              ],
+              [
+                0.2196,
+                0.7387,
+                0.0834,
+                0.0111
+              ]
+            ]
+          },
+          {
+            "page": 216,
+            "printed": 188
+          }
+        ]
+      },
+      {
+        "text": "Pecas, nevo y hemangiomas.",
+        "section": "6.1 · Marcas de la piel",
+        "pages": [
+          {
+            "page": 217,
+            "printed": 189,
+            "marks": [
+              [
+                0.5797,
+                0.3104,
+                0.0361,
+                0.0111
+              ],
+              [
+                0.708,
+                0.3253,
+                0.0369,
+                0.0111
+              ],
+              [
+                0.7473,
+                0.4292,
+                0.0911,
+                0.0111
+              ],
+              [
+                0.592,
+                0.459,
+                0.0909,
+                0.0111
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "text": "Lanugo fetal, lanugo infantil y pelo terminal.",
+        "section": "6.2 · Pelo: tipos y estructura",
+        "pages": [
+          {
+            "page": 218,
+            "printed": 190,
+            "marks": [
+              [
+                0.8265,
+                0.4158,
+                0.0786,
+                0.0111
+              ],
+              [
+                0.7359,
+                0.4307,
+                0.081,
+                0.0111
+              ],
+              [
+                0.4977,
+                0.4307,
+                0.0994,
+                0.0111
+              ],
+              [
+                0.6164,
+                0.4307,
+                0.0906,
+                0.0111
+              ]
+            ]
+          },
+          {
+            "page": 219,
+            "printed": 191,
+            "marks": [
+              [
+                0.2232,
+                0.1916,
+                0.0908,
+                0.0111
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "text": "Estructura del pelo: bulbo, raíz, tallo, médula, corteza y cutícula.",
+        "section": "6.2 · Estructura del pelo y del folículo",
+        "pages": [
+          {
+            "page": 219,
+            "printed": 191,
+            "marks": [
+              [
+                0.3369,
+                0.3068,
+                0.0374,
+                0.0111
+              ],
+              [
+                0.3961,
+                0.3662,
+                0.0374,
+                0.0111
+              ],
+              [
+                0.2705,
+                0.485,
+                0.0497,
+                0.0111
+              ],
+              [
+                0.0909,
+                0.4998,
+                0.0505,
+                0.0111
+              ],
+              [
+                0.4244,
+                0.485,
+                0.0537,
+                0.0111
+              ],
+              [
+                0.1717,
+                0.6038,
+                0.0545,
+                0.0111
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "text": "Color del pelo y crecimiento: anágena, catágena y telógena.",
+        "section": "6.2 · Textura, color y crecimiento del pelo; Figuras 6.8 y 6.9",
+        "pages": [
+          {
+            "page": 219,
+            "printed": 191,
+            "marks": [
+              [
+                0.525,
+                0.5506,
+                0.0528,
+                0.0111
+              ],
+              [
+                0.5634,
+                0.5803,
+                0.0553,
+                0.0111
+              ],
+              [
+                0.5859,
+                0.5506,
+                0.0559,
+                0.0111
+              ],
+              [
+                0.6298,
+                0.7288,
+                0.0593,
+                0.0111
+              ],
+              [
+                0.6583,
+                0.5506,
+                0.0543,
+                0.0111
+              ],
+              [
+                0.6525,
+                0.8625,
+                0.0561,
+                0.0111
+              ]
+            ]
+          },
+          {
+            "page": 220,
+            "printed": 192,
+            "marks": [
+              [
+                0.3426,
+                0.7251,
+                0.0537,
+                0.0111
+              ],
+              [
+                0.3562,
+                0.7696,
+                0.0537,
+                0.0111
+              ],
+              [
+                0.2198,
+                0.7102,
+                0.0569,
+                0.0111
+              ],
+              [
+                0.1645,
+                0.7845,
+                0.0569,
+                0.0111
+              ],
+              [
+                0.2915,
+                0.7102,
+                0.0553,
+                0.0111
+              ],
+              [
+                0.3869,
+                0.7845,
+                0.0553,
+                0.0111
+              ]
+            ]
+          },
+          {
+            "page": 221,
+            "printed": 193,
+            "marks": [
+              [
+                0.098,
+                0.332,
+                0.0508,
+                0.0093
+              ],
+              [
+                0.3319,
+                0.332,
+                0.0508,
+                0.0093
+              ],
+              [
+                0.4998,
+                0.332,
+                0.0541,
+                0.0093
+              ],
+              [
+                0.7391,
+                0.3319,
+                0.0528,
+                0.0093
+              ],
+              [
+                0.7391,
+                0.3846,
+                0.044,
+                0.0093
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "text": "Placa ungueal, raíz ungueal, pliegue ungueal, hiponiquio y eponiquio.",
+        "section": "6.2 · Uñas",
+        "pages": [
+          {
+            "page": 222,
+            "printed": 194,
+            "marks": [
+              [
+                0.2801,
+                0.5555,
+                0.0942,
+                0.0111
+              ],
+              [
+                0.2365,
+                0.704,
+                0.0944,
+                0.0111
+              ],
+              [
+                0.2046,
+                0.7189,
+                0.0738,
+                0.0111
+              ],
+              [
+                0.6197,
+                0.9326,
+                0.0623,
+                0.0106
+              ],
+              [
+                0.1085,
+                0.8526,
+                0.0674,
+                0.0111
+              ],
+              [
+                0.5386,
+                0.9326,
+                0.0592,
+                0.0106
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "text": "Cuadro 6.2: glándulas cutáneas.",
+        "section": "6.3 · Cuadro 6.2: Glándulas de la piel",
+        "pages": [
+          {
+            "page": 225,
+            "printed": 197,
+            "marks": [
+              [
+                0.1583,
+                0.5533,
+                0.0702,
+                0.0111
+              ],
+              [
+                0.1102,
+                0.0939,
+                0.1165,
+                0.0136
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "text": "Cáncer de piel.",
+        "section": "6.4 · Cáncer de piel",
+        "pages": [
+          {
+            "page": 225,
+            "printed": 197,
+            "marks": [
+              [
+                0.3904,
+                0.8687,
+                0.0874,
+                0.0112
+              ],
+              [
+                0.525,
+                0.2362,
+                0.0956,
+                0.0111
+              ],
+              [
+                0.8349,
+                0.6719,
+                0.0703,
+                0.0111
+              ]
+            ]
+          },
+          {
+            "page": 226,
+            "printed": 198,
+            "marks": [
+              [
+                0.2264,
+                0.8312,
+                0.0942,
+                0.0111
+              ],
+              [
+                0.3541,
+                0.6327,
+                0.0793,
+                0.0106
+              ],
+              [
+                0.1107,
+                0.8312,
+                0.0706,
+                0.0111
+              ],
+              [
+                0.1569,
+                0.9203,
+                0.069,
+                0.0111
+              ]
+            ]
+          },
+          {
+            "page": 227,
+            "printed": 199,
+            "marks": [
+              [
+                0.5741,
+                0.1471,
+                0.0982,
+                0.0111
+              ],
+              [
+                0.1968,
+                0.7894,
+                0.0886,
+                0.0106
+              ],
+              [
+                0.4093,
+                0.8454,
+                0.069,
+                0.0111
+              ],
+              [
+                0.0909,
+                0.9345,
+                0.069,
+                0.0111
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "text": "Quemaduras.",
+        "section": "6.4 · Quemaduras",
+        "pages": [
+          {
+            "page": 227,
+            "printed": 199,
+            "marks": [
+              [
+                0.525,
+                0.2051,
+                0.1255,
+                0.0161
+              ],
+              [
+                0.5519,
+                0.2288,
+                0.0834,
+                0.0111
+              ]
+            ]
+          },
+          {
+            "page": 228,
+            "printed": 200,
+            "marks": [
+              [
+                0.1787,
+                0.7562,
+                0.081,
+                0.0111
+              ],
+              [
+                0.7208,
+                0.815,
+                0.0722,
+                0.0106
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "text": "Cuadro 6.3: trastornos del sistema tegumentario.",
+        "section": "6.4 · Cuadro 6.3: Algunos trastornos del sistema tegumentario",
+        "pages": [
+          {
+            "page": 226,
+            "printed": 198,
+            "marks": [
+              [
+                0.0821,
+                0.0947,
+                0.1165,
+                0.0136
+              ]
+            ]
+          }
+        ]
+      }
+    ],
+    "source": {
+      "slug": "morfofuncion",
+      "title": "Anatomía y fisiología. La unidad entre forma y función",
+      "author": "Kenneth S. Saladin",
+      "edition": "6.ª edición · McGraw-Hill Interamericana",
+      "sha256": "e00074c7105c10052637b1c2a82f2b8959cf7c4cb9a91c4abd058ce958e58148"
+    }
   },
   {
     "id": "premo-morfo-07",
@@ -103,20 +2701,690 @@
     "materia": "Morfofunción",
     "tema": "Tejido óseo",
     "items": [
-      "Características generales de los huesos.",
-      "Células óseas y matriz.",
-      "Hueso compacto y hueso esponjoso.",
-      "Osificación intramembranosa y endocondral.",
-      "Zonas de la placa epifisaria.",
-      "Enanismo acondroplásico.",
-      "Remodelación ósea.",
-      "Depósito y resorción de minerales.",
-      "Homeostasis del calcio: hipocalcemia e hipercalcemia.",
-      "Hormonas: calcitriol, calcitonina y PTH (Cuadro 7.1).",
-      "Homeostasis de fosfato.",
-      "Fracturas y reparación.",
-      "Cuadro 7.2: enfermedades óseas."
-    ]
+      {
+        "text": "Características generales de los huesos.",
+        "section": "7.1 · Tejidos y órganos del sistema esquelético",
+        "pages": [
+          {
+            "page": 235,
+            "printed": 207,
+            "marks": [
+              [
+                0.525,
+                0.197,
+                0.2394,
+                0.0161
+              ],
+              [
+                0.6026,
+                0.1179,
+                0.0393,
+                0.0111
+              ],
+              [
+                0.7625,
+                0.1476,
+                0.0393,
+                0.0111
+              ]
+            ]
+          },
+          {
+            "page": 236,
+            "printed": 208,
+            "marks": [
+              [
+                0.6696,
+                0.7807,
+                0.0393,
+                0.0111
+              ],
+              [
+                0.7374,
+                0.7956,
+                0.0393,
+                0.0111
+              ]
+            ]
+          },
+          {
+            "page": 237,
+            "printed": 209,
+            "marks": [
+              [
+                0.3165,
+                0.5142,
+                0.0393,
+                0.0111
+              ],
+              [
+                0.1129,
+                0.5439,
+                0.0393,
+                0.0111
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "text": "Células óseas y matriz.",
+        "section": "7.2 · Células óseas y matriz",
+        "pages": [
+          {
+            "page": 237,
+            "printed": 209,
+            "marks": [
+              [
+                0.525,
+                0.2744,
+                0.1319,
+                0.0161
+              ],
+              [
+                0.5955,
+                0.3278,
+                0.0858,
+                0.0111
+              ],
+              [
+                0.6872,
+                0.5741,
+                0.0418,
+                0.0111
+              ],
+              [
+                0.5539,
+                0.7672,
+                0.0425,
+                0.0111
+              ]
+            ]
+          },
+          {
+            "page": 238,
+            "printed": 210,
+            "marks": [
+              [
+                0.16,
+                0.5117,
+                0.0814,
+                0.0106
+              ],
+              [
+                0.1197,
+                0.6634,
+                0.0411,
+                0.0111
+              ],
+              [
+                0.5269,
+                0.8031,
+                0.0621,
+                0.0161
+              ]
+            ]
+          },
+          {
+            "page": 239,
+            "printed": 211,
+            "marks": [
+              [
+                0.6648,
+                0.5877,
+                0.0421,
+                0.0111
+              ],
+              [
+                0.7059,
+                0.6026,
+                0.0421,
+                0.0111
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "text": "Hueso compacto y hueso esponjoso.",
+        "section": "7.2 · Hueso compacto y esponjoso",
+        "pages": [
+          {
+            "page": 239,
+            "printed": 211,
+            "marks": [
+              [
+                0.525,
+                0.5195,
+                0.1654,
+                0.0161
+              ],
+              [
+                0.7118,
+                0.5432,
+                0.1058,
+                0.0111
+              ]
+            ]
+          },
+          {
+            "page": 240,
+            "printed": 212,
+            "marks": [
+              [
+                0.4261,
+                0.2253,
+                0.09,
+                0.0093
+              ],
+              [
+                0.3582,
+                0.8792,
+                0.0993,
+                0.0106
+              ],
+              [
+                0.4261,
+                0.1991,
+                0.0929,
+                0.0093
+              ],
+              [
+                0.0842,
+                0.4624,
+                0.0929,
+                0.0093
+              ]
+            ]
+          },
+          {
+            "page": 241,
+            "printed": 213,
+            "marks": [
+              [
+                0.3294,
+                0.5877,
+                0.107,
+                0.0111
+              ],
+              [
+                0.8695,
+                0.2206,
+                0.0381,
+                0.0093
+              ],
+              [
+                0.0909,
+                0.475,
+                0.1688,
+                0.0161
+              ],
+              [
+                0.1083,
+                0.4986,
+                0.108,
+                0.0111
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "text": "Osificación intramembranosa y endocondral.",
+        "section": "7.3 · Osificación intramembranosa y endocondral",
+        "pages": [
+          {
+            "page": 242,
+            "printed": 214,
+            "marks": [
+              [
+                0.2413,
+                0.9158,
+                0.1176,
+                0.0111
+              ],
+              [
+                0.6114,
+                0.0877,
+                0.1721,
+                0.0161
+              ],
+              [
+                0.3871,
+                0.9158,
+                0.0839,
+                0.0111
+              ],
+              [
+                0.6114,
+                0.61,
+                0.1227,
+                0.0161
+              ]
+            ]
+          },
+          {
+            "page": 243,
+            "printed": 215,
+            "marks": [
+              [
+                0.3343,
+                0.4855,
+                0.1063,
+                0.0106
+              ],
+              [
+                0.2577,
+                0.7632,
+                0.1063,
+                0.0106
+              ]
+            ]
+          },
+          {
+            "page": 244,
+            "printed": 216,
+            "marks": [
+              [
+                0.3071,
+                0.5013,
+                0.0763,
+                0.0106
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "text": "Zonas de la placa epifisaria.",
+        "section": "7.3 · Crecimiento óseo y zonas de la metáfisis; Figura 7.12",
+        "pages": [
+          {
+            "page": 245,
+            "printed": 217,
+            "marks": [
+              [
+                0.1362,
+                0.1545,
+                0.0569,
+                0.0111
+              ],
+              [
+                0.5823,
+                0.1025,
+                0.0569,
+                0.0111
+              ]
+            ]
+          },
+          {
+            "page": 246,
+            "printed": 218,
+            "marks": [
+              [
+                0.1695,
+                0.5416,
+                0.1234,
+                0.0106
+              ],
+              [
+                0.289,
+                0.7047,
+                0.0569,
+                0.0111
+              ],
+              [
+                0.2618,
+                0.7938,
+                0.0558,
+                0.0111
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "text": "Enanismo acondroplásico.",
+        "section": "Conocimiento más a fondo 7.2 · Enanismo acondroplásico",
+        "pages": [
+          {
+            "page": 247,
+            "printed": 219,
+            "marks": [
+              [
+                0.1069,
+                0.1447,
+                0.1995,
+                0.0141
+              ],
+              [
+                0.124,
+                0.1647,
+                0.1504,
+                0.0106
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "text": "Remodelación ósea.",
+        "section": "7.3 · Remodelación ósea",
+        "pages": [
+          {
+            "page": 247,
+            "printed": 219,
+            "marks": [
+              [
+                0.525,
+                0.3546,
+                0.1699,
+                0.0149
+              ]
+            ]
+          },
+          {
+            "page": 248,
+            "printed": 220
+          }
+        ]
+      },
+      {
+        "text": "Depósito y resorción de minerales.",
+        "section": "7.4 · Depósito y resorción de minerales",
+        "pages": [
+          {
+            "page": 248,
+            "printed": 220,
+            "marks": [
+              [
+                0.4977,
+                0.1531,
+                0.3386,
+                0.0161
+              ]
+            ]
+          },
+          {
+            "page": 249,
+            "printed": 221
+          }
+        ]
+      },
+      {
+        "text": "Homeostasis del calcio: hipocalcemia e hipercalcemia.",
+        "section": "7.4 · Homeostasis del calcio",
+        "pages": [
+          {
+            "page": 249,
+            "printed": 221,
+            "marks": [
+              [
+                0.7147,
+                0.0877,
+                0.0906,
+                0.0111
+              ],
+              [
+                0.5445,
+                0.1619,
+                0.089,
+                0.0111
+              ],
+              [
+                0.668,
+                0.5184,
+                0.0945,
+                0.0111
+              ],
+              [
+                0.8435,
+                0.7263,
+                0.0929,
+                0.0111
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "text": "Hormonas: calcitriol, calcitonina y PTH (Cuadro 7.1).",
+        "section": "7.4 · Calcitriol, calcitonina, hormona paratiroidea y Cuadro 7.1",
+        "pages": [
+          {
+            "page": 250,
+            "printed": 222,
+            "marks": [
+              [
+                0.0636,
+                0.6869,
+                0.0591,
+                0.0111
+              ],
+              [
+                0.0636,
+                0.7211,
+                0.077,
+                0.0149
+              ],
+              [
+                0.1307,
+                0.6869,
+                0.0746,
+                0.0111
+              ],
+              [
+                0.2214,
+                0.6869,
+                0.1462,
+                0.0111
+              ]
+            ]
+          },
+          {
+            "page": 251,
+            "printed": 223,
+            "marks": [
+              [
+                0.1937,
+                0.5245,
+                0.0593,
+                0.0111
+              ],
+              [
+                0.8771,
+                0.8587,
+                0.0593,
+                0.0111
+              ],
+              [
+                0.0909,
+                0.6355,
+                0.0966,
+                0.0149
+              ],
+              [
+                0.1134,
+                0.6582,
+                0.0754,
+                0.0111
+              ],
+              [
+                0.525,
+                0.6503,
+                0.1931,
+                0.0149
+              ]
+            ]
+          },
+          {
+            "page": 252,
+            "printed": 224,
+            "marks": [
+              [
+                0.5946,
+                0.1025,
+                0.0593,
+                0.0111
+              ],
+              [
+                0.7479,
+                0.1322,
+                0.0593,
+                0.0111
+              ],
+              [
+                0.6623,
+                0.8744,
+                0.0621,
+                0.0106
+              ],
+              [
+                0.0884,
+                0.1806,
+                0.0566,
+                0.0093
+              ],
+              [
+                0.7582,
+                0.9016,
+                0.127,
+                0.0106
+              ],
+              [
+                0.0892,
+                0.4393,
+                0.0511,
+                0.0093
+              ],
+              [
+                0.6008,
+                0.3389,
+                0.0694,
+                0.0111
+              ]
+            ]
+          },
+          {
+            "page": 253,
+            "printed": 225,
+            "marks": [
+              [
+                0.1093,
+                0.1886,
+                0.0457,
+                0.0094
+              ],
+              [
+                0.6367,
+                0.3436,
+                0.0432,
+                0.0094
+              ],
+              [
+                0.1093,
+                0.1575,
+                0.0578,
+                0.0094
+              ],
+              [
+                0.1093,
+                0.33,
+                0.1148,
+                0.0094
+              ],
+              [
+                0.1093,
+                0.0947,
+                0.1165,
+                0.0136
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "text": "Homeostasis de fosfato.",
+        "section": "7.4 · Homeostasis del fosfato",
+        "pages": [
+          {
+            "page": 252,
+            "printed": 224,
+            "marks": [
+              [
+                0.0636,
+                0.8049,
+                0.2397,
+                0.0161
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "text": "Fracturas y reparación.",
+        "section": "7.5 · Fracturas y su reparación",
+        "pages": [
+          {
+            "page": 253,
+            "printed": 225,
+            "marks": [
+              [
+                0.525,
+                0.5446,
+                0.2497,
+                0.0161
+              ],
+              [
+                0.525,
+                0.8946,
+                0.2095,
+                0.0149
+              ]
+            ]
+          },
+          {
+            "page": 254,
+            "printed": 226
+          },
+          {
+            "page": 255,
+            "printed": 227
+          }
+        ]
+      },
+      {
+        "text": "Cuadro 7.2: enfermedades óseas.",
+        "section": "7.5 · Cuadro 7.2: Algunos trastornos óseos",
+        "pages": [
+          {
+            "page": 255,
+            "printed": 227,
+            "marks": [
+              [
+                0.1272,
+                0.4764,
+                0.0691,
+                0.0111
+              ],
+              [
+                0.1106,
+                0.611,
+                0.1165,
+                0.0136
+              ]
+            ]
+          }
+        ]
+      }
+    ],
+    "source": {
+      "slug": "morfofuncion",
+      "title": "Anatomía y fisiología. La unidad entre forma y función",
+      "author": "Kenneth S. Saladin",
+      "edition": "6.ª edición · McGraw-Hill Interamericana",
+      "sha256": "e00074c7105c10052637b1c2a82f2b8959cf7c4cb9a91c4abd058ce958e58148"
+    }
   },
   {
     "id": "premo-morfo-08",
@@ -126,20 +3394,1044 @@
     "materia": "Morfofunción",
     "tema": "Sistema óseo",
     "items": [
-      "Cuadro 8.2: características anatómicas de los huesos.",
-      "Huesos del cráneo, sobre todo: parietal (líneas temporales), etmoides, esfenoides y temporal.",
-      "Huesos faciales: estructuras que forman el paladar y estructuras de la mandíbula.",
-      "Fontanelas.",
-      "Vértebras: diferencia entre cervicales, torácicas, lumbares, sacras y coxis.",
-      "Curvaturas anormales: definición y causa.",
-      "Partes de las costillas, clasificación (Cuadro 8.4) y esternón.",
-      "Bordes de la escápula, apófisis coracoides y acromion.",
-      "Huesos de las extremidades superiores: partes y relación. Ejemplo: húmero, tuberosidad mayor y menor, entre ambas se encuentra la corredera bicipital.",
-      "Cuadro 8.5: comparación entre la pelvis del hombre y la de la mujer.",
-      "Huesos de la extremidad inferior: partes y relación.",
-      "Rotación embrionaria de las extremidades.",
-      "Arcos del pie."
-    ]
+      {
+        "text": "Cuadro 8.2: características anatómicas de los huesos.",
+        "section": "8.1 · Cuadro 8.2: Características anatómicas de los huesos",
+        "pages": [
+          {
+            "page": 264,
+            "printed": 236,
+            "marks": [
+              [
+                0.0796,
+                0.2821,
+                0.1165,
+                0.0136
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "text": "Huesos del cráneo, sobre todo: parietal (líneas temporales), etmoides, esfenoides y temporal.",
+        "section": "8.2 · Huesos parietales, temporales, esfenoides y etmoides",
+        "pages": [
+          {
+            "page": 270,
+            "printed": 242,
+            "marks": [
+              [
+                0.1542,
+                0.7636,
+                0.0641,
+                0.0111
+              ],
+              [
+                0.2147,
+                0.9196,
+                0.0641,
+                0.0111
+              ],
+              [
+                0.1416,
+                0.6819,
+                0.073,
+                0.0111
+              ],
+              [
+                0.1542,
+                0.7785,
+                0.073,
+                0.0111
+              ],
+              [
+                0.1045,
+                0.7933,
+                0.0697,
+                0.0111
+              ],
+              [
+                0.1045,
+                0.823,
+                0.0601,
+                0.0111
+              ]
+            ]
+          },
+          {
+            "page": 271,
+            "printed": 243,
+            "marks": [
+              [
+                0.1932,
+                0.4846,
+                0.0984,
+                0.0149
+              ]
+            ]
+          },
+          {
+            "page": 272,
+            "printed": 244,
+            "marks": [
+              [
+                0.52,
+                0.3174,
+                0.0941,
+                0.0149
+              ],
+              [
+                0.5172,
+                0.3402,
+                0.0697,
+                0.0111
+              ]
+            ]
+          },
+          {
+            "page": 273,
+            "printed": 245,
+            "marks": [
+              [
+                0.1666,
+                0.5451,
+                0.0697,
+                0.0111
+              ],
+              [
+                0.349,
+                0.6045,
+                0.0697,
+                0.0111
+              ],
+              [
+                0.1132,
+                0.7823,
+                0.0813,
+                0.0149
+              ],
+              [
+                0.1084,
+                0.805,
+                0.0601,
+                0.0111
+              ]
+            ]
+          },
+          {
+            "page": 274,
+            "printed": 246,
+            "marks": [
+              [
+                0.2088,
+                0.8164,
+                0.0588,
+                0.0093
+              ],
+              [
+                0.6304,
+                0.1397,
+                0.0732,
+                0.0141
+              ],
+              [
+                0.5282,
+                0.1597,
+                0.0544,
+                0.0106
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "text": "Huesos faciales: estructuras que forman el paladar y estructuras de la mandíbula.",
+        "section": "8.2 · Huesos faciales: maxilares, palatinos y mandíbula",
+        "pages": [
+          {
+            "page": 275,
+            "printed": 247,
+            "marks": [
+              [
+                0.1318,
+                0.7015,
+                0.0641,
+                0.0111
+              ],
+              [
+                0.1268,
+                0.7753,
+                0.0816,
+                0.0149
+              ],
+              [
+                0.1815,
+                0.7163,
+                0.0609,
+                0.0111
+              ],
+              [
+                0.3178,
+                0.746,
+                0.0714,
+                0.0111
+              ]
+            ]
+          },
+          {
+            "page": 276,
+            "printed": 248,
+            "marks": [
+              [
+                0.166,
+                0.2506,
+                0.0788,
+                0.0149
+              ],
+              [
+                0.1397,
+                0.2733,
+                0.0625,
+                0.0111
+              ],
+              [
+                0.5236,
+                0.2803,
+                0.0905,
+                0.0149
+              ],
+              [
+                0.5178,
+                0.3031,
+                0.073,
+                0.0111
+              ]
+            ]
+          },
+          {
+            "page": 277,
+            "printed": 249,
+            "marks": [
+              [
+                0.7595,
+                0.3285,
+                0.0714,
+                0.0111
+              ],
+              [
+                0.7559,
+                0.6726,
+                0.0714,
+                0.0111
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "text": "Fontanelas.",
+        "section": "8.2 · El cráneo en la lactancia y la infancia",
+        "pages": [
+          {
+            "page": 277,
+            "printed": 249,
+            "marks": [
+              [
+                0.554,
+                0.5241,
+                0.0697,
+                0.0111
+              ],
+              [
+                0.6031,
+                0.5983,
+                0.0697,
+                0.0111
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "text": "Vértebras: diferencia entre cervicales, torácicas, lumbares, sacras y coxis.",
+        "section": "8.3 · Características regionales de las vértebras; sacro y cóccix",
+        "pages": [
+          {
+            "page": 281,
+            "printed": 253,
+            "marks": [
+              [
+                0.5901,
+                0.1831,
+                0.0657,
+                0.0111
+              ],
+              [
+                0.6479,
+                0.4884,
+                0.0845,
+                0.0149
+              ],
+              [
+                0.6121,
+                0.198,
+                0.0345,
+                0.0111
+              ]
+            ]
+          },
+          {
+            "page": 282,
+            "printed": 254,
+            "marks": [
+              [
+                0.6307,
+                0.8125,
+                0.0657,
+                0.0111
+              ],
+              [
+                0.3366,
+                0.7146,
+                0.0587,
+                0.0106
+              ]
+            ]
+          },
+          {
+            "page": 283,
+            "printed": 255,
+            "marks": [
+              [
+                0.2126,
+                0.8442,
+                0.0657,
+                0.0111
+              ],
+              [
+                0.6754,
+                0.8516,
+                0.0657,
+                0.0111
+              ],
+              [
+                0.6479,
+                0.7546,
+                0.0774,
+                0.0149
+              ],
+              [
+                0.6445,
+                0.7773,
+                0.0609,
+                0.0111
+              ],
+              [
+                0.8714,
+                0.9333,
+                0.0609,
+                0.0111
+              ],
+              [
+                0.4388,
+                0.6172,
+                0.0553,
+                0.0106
+              ]
+            ]
+          },
+          {
+            "page": 284,
+            "printed": 256,
+            "marks": [
+              [
+                0.1867,
+                0.2139,
+                0.0585,
+                0.0111
+              ],
+              [
+                0.5871,
+                0.7635,
+                0.0576,
+                0.0111
+              ],
+              [
+                0.1866,
+                0.6442,
+                0.0795,
+                0.0149
+              ],
+              [
+                0.1994,
+                0.667,
+                0.0625,
+                0.0111
+              ],
+              [
+                0.0859,
+                0.8448,
+                0.046,
+                0.0149
+              ],
+              [
+                0.0813,
+                0.8675,
+                0.0361,
+                0.0111
+              ],
+              [
+                0.52,
+                0.5625,
+                0.0539,
+                0.0149
+              ],
+              [
+                0.5603,
+                0.615,
+                0.0425,
+                0.0111
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "text": "Curvaturas anormales: definición y causa.",
+        "section": "Conocimiento más a fondo 8.3 · Curvaturas anormales de la espina dorsal",
+        "pages": [
+          {
+            "page": 280,
+            "printed": 252,
+            "marks": [
+              [
+                0.0797,
+                0.5662,
+                0.1709,
+                0.0141
+              ],
+              [
+                0.1036,
+                0.606,
+                0.1238,
+                0.0106
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "text": "Partes de las costillas, clasificación (Cuadro 8.4) y esternón.",
+        "section": "8.3 · El esternón, las costillas y Cuadro 8.4",
+        "pages": [
+          {
+            "page": 286,
+            "printed": 258,
+            "marks": [
+              [
+                0.0636,
+                0.1652,
+                0.0993,
+                0.0149
+              ],
+              [
+                0.0636,
+                0.1879,
+                0.0749,
+                0.0111
+              ],
+              [
+                0.109,
+                0.3958,
+                0.0766,
+                0.0111
+              ],
+              [
+                0.0838,
+                0.4255,
+                0.0771,
+                0.0111
+              ]
+            ]
+          },
+          {
+            "page": 287,
+            "printed": 259,
+            "marks": [
+              [
+                0.1183,
+                0.251,
+                0.0723,
+                0.0111
+              ],
+              [
+                0.4903,
+                0.2956,
+                0.016,
+                0.0111
+              ],
+              [
+                0.602,
+                0.1618,
+                0.077,
+                0.0111
+              ],
+              [
+                0.918,
+                0.2212,
+                0.0224,
+                0.0111
+              ],
+              [
+                0.8472,
+                0.2064,
+                0.0707,
+                0.0111
+              ]
+            ]
+          },
+          {
+            "page": 288,
+            "printed": 260,
+            "marks": [
+              [
+                0.3672,
+                0.0949,
+                0.0807,
+                0.0129
+              ],
+              [
+                0.0829,
+                0.0943,
+                0.1165,
+                0.0136
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "text": "Bordes de la escápula, apófisis coracoides y acromion.",
+        "section": "8.4 · La escápula y sus marcas anatómicas",
+        "pages": [
+          {
+            "page": 288,
+            "printed": 260,
+            "marks": [
+              [
+                0.1425,
+                0.4228,
+                0.0682,
+                0.0112
+              ],
+              [
+                0.4977,
+                0.5727,
+                0.1014,
+                0.0149
+              ],
+              [
+                0.5438,
+                0.8257,
+                0.0641,
+                0.0111
+              ]
+            ]
+          },
+          {
+            "page": 289,
+            "printed": 261,
+            "marks": [
+              [
+                0.6752,
+                0.5504,
+                0.076,
+                0.0111
+              ],
+              [
+                0.1968,
+                0.4557,
+                0.0704,
+                0.0106
+              ],
+              [
+                0.2025,
+                0.5128,
+                0.0722,
+                0.0111
+              ],
+              [
+                0.1506,
+                0.177,
+                0.0583,
+                0.0093
+              ],
+              [
+                0.1506,
+                0.1452,
+                0.0505,
+                0.0093
+              ],
+              [
+                0.6839,
+                0.1174,
+                0.0505,
+                0.0093
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "text": "Huesos de las extremidades superiores: partes y relación. Ejemplo: húmero, tuberosidad mayor y menor, entre ambas se encuentra la corredera bicipital.",
+        "section": "8.4 · Las extremidades superiores: húmero, radio, cúbito, mano y dedos",
+        "pages": [
+          {
+            "page": 289,
+            "printed": 261,
+            "marks": [
+              [
+                0.3489,
+                0.587,
+                0.0513,
+                0.0111
+              ],
+              [
+                0.2048,
+                0.7343,
+                0.0513,
+                0.0111
+              ],
+              [
+                0.2168,
+                0.764,
+                0.035,
+                0.0111
+              ],
+              [
+                0.1198,
+                0.7937,
+                0.0345,
+                0.0111
+              ],
+              [
+                0.2839,
+                0.764,
+                0.0414,
+                0.0111
+              ],
+              [
+                0.2376,
+                0.7937,
+                0.0417,
+                0.0111
+              ],
+              [
+                0.6119,
+                0.6246,
+                0.1254,
+                0.0111
+              ]
+            ]
+          },
+          {
+            "page": 290,
+            "printed": 262,
+            "marks": [
+              [
+                0.232,
+                0.6991,
+                0.0513,
+                0.0111
+              ],
+              [
+                0.3645,
+                0.8997,
+                0.0513,
+                0.0111
+              ],
+              [
+                0.3422,
+                0.7882,
+                0.0361,
+                0.0111
+              ],
+              [
+                0.2818,
+                0.8031,
+                0.0345,
+                0.0111
+              ],
+              [
+                0.4333,
+                0.7288,
+                0.0417,
+                0.0111
+              ],
+              [
+                0.2513,
+                0.7734,
+                0.0417,
+                0.0111
+              ],
+              [
+                0.0545,
+                0.2334,
+                0.0969,
+                0.0093
+              ]
+            ]
+          },
+          {
+            "page": 291,
+            "printed": 263,
+            "marks": [
+              [
+                0.2511,
+                0.3253,
+                0.0502,
+                0.0111
+              ],
+              [
+                0.4253,
+                0.1322,
+                0.0345,
+                0.0111
+              ],
+              [
+                0.4347,
+                0.1768,
+                0.0345,
+                0.0111
+              ],
+              [
+                0.2989,
+                0.1174,
+                0.0417,
+                0.0111
+              ],
+              [
+                0.2171,
+                0.1471,
+                0.0417,
+                0.0111
+              ]
+            ]
+          },
+          {
+            "page": 292,
+            "printed": 264,
+            "marks": [
+              [
+                0.4952,
+                0.8319,
+                0.0334,
+                0.0093
+              ],
+              [
+                0.1428,
+                0.8729,
+                0.0334,
+                0.0106
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "text": "Cuadro 8.5: comparación entre la pelvis del hombre y la de la mujer.",
+        "section": "8.5 · Cuadro 8.5: Comparación de la pelvis en el hombre y en la mujer",
+        "pages": [
+          {
+            "page": 295,
+            "printed": 267,
+            "marks": [
+              [
+                0.4021,
+                0.8005,
+                0.0692,
+                0.0111
+              ]
+            ]
+          },
+          {
+            "page": 296,
+            "printed": 268,
+            "marks": [
+              [
+                0.6598,
+                0.7604,
+                0.0622,
+                0.0106
+              ],
+              [
+                0.0829,
+                0.0943,
+                0.1165,
+                0.0136
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "text": "Huesos de la extremidad inferior: partes y relación.",
+        "section": "8.5 · Las extremidades inferiores: fémur, rótula, tibia, peroné y pie",
+        "pages": [
+          {
+            "page": 295,
+            "printed": 267,
+            "marks": [
+              [
+                0.6222,
+                0.1174,
+                0.0393,
+                0.0111
+              ],
+              [
+                0.7461,
+                0.2028,
+                0.0393,
+                0.0111
+              ],
+              [
+                0.8137,
+                0.2028,
+                0.0398,
+                0.0111
+              ],
+              [
+                0.7386,
+                0.8711,
+                0.0393,
+                0.0111
+              ],
+              [
+                0.7022,
+                0.1174,
+                0.0297,
+                0.0111
+              ],
+              [
+                0.7758,
+                0.2622,
+                0.0299,
+                0.0111
+              ],
+              [
+                0.8907,
+                0.2622,
+                0.0457,
+                0.0111
+              ]
+            ]
+          },
+          {
+            "page": 296,
+            "printed": 268,
+            "marks": [
+              [
+                0.8307,
+                0.8129,
+                0.0387,
+                0.0111
+              ],
+              [
+                0.0895,
+                0.8421,
+                0.0506,
+                0.0149
+              ],
+              [
+                0.0843,
+                0.8649,
+                0.0402,
+                0.0111
+              ],
+              [
+                0.5506,
+                0.902,
+                0.0291,
+                0.0111
+              ]
+            ]
+          },
+          {
+            "page": 297,
+            "printed": 269,
+            "marks": [
+              [
+                0.1925,
+                0.8112,
+                0.0393,
+                0.0111
+              ],
+              [
+                0.2123,
+                0.6407,
+                0.0358,
+                0.0106
+              ],
+              [
+                0.459,
+                0.826,
+                0.0393,
+                0.0111
+              ],
+              [
+                0.2406,
+                0.5553,
+                0.0298,
+                0.0093
+              ],
+              [
+                0.1168,
+                0.6994,
+                0.0381,
+                0.0149
+              ],
+              [
+                0.3034,
+                0.7221,
+                0.0297,
+                0.0111
+              ],
+              [
+                0.1726,
+                0.7369,
+                0.0457,
+                0.0111
+              ],
+              [
+                0.3603,
+                0.93,
+                0.0457,
+                0.0111
+              ]
+            ]
+          },
+          {
+            "page": 298,
+            "printed": 270,
+            "marks": [
+              [
+                0.2721,
+                0.7802,
+                0.0297,
+                0.0111
+              ],
+              [
+                0.4846,
+                0.29,
+                0.0282,
+                0.0093
+              ],
+              [
+                0.7152,
+                0.1285,
+                0.0373,
+                0.0093
+              ],
+              [
+                0.4785,
+                0.3283,
+                0.0403,
+                0.0093
+              ]
+            ]
+          },
+          {
+            "page": 299,
+            "printed": 271
+          }
+        ]
+      },
+      {
+        "text": "Rotación embrionaria de las extremidades.",
+        "section": "8.5 · Rotación embrionaria de las extremidades y Figura 8.41",
+        "pages": [
+          {
+            "page": 299,
+            "printed": 271,
+            "marks": [
+              [
+                0.2836,
+                0.62,
+                0.1905,
+                0.0111
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "text": "Arcos del pie.",
+        "section": "8.5 · Arcos del pie y Figura 8.42",
+        "pages": [
+          {
+            "page": 299,
+            "printed": 271,
+            "marks": [
+              [
+                0.5731,
+                0.9325,
+                0.0345,
+                0.0111
+              ]
+            ]
+          },
+          {
+            "page": 300,
+            "printed": 272,
+            "marks": [
+              [
+                0.1299,
+                0.7018,
+                0.0342,
+                0.0111
+              ],
+              [
+                0.0867,
+                0.8057,
+                0.0342,
+                0.0111
+              ],
+              [
+                0.1438,
+                0.5681,
+                0.0826,
+                0.0111
+              ],
+              [
+                0.345,
+                0.6275,
+                0.0826,
+                0.0111
+              ],
+              [
+                0.3487,
+                0.6572,
+                0.0705,
+                0.0111
+              ],
+              [
+                0.3278,
+                0.2557,
+                0.0552,
+                0.0093
+              ]
+            ]
+          }
+        ]
+      }
+    ],
+    "source": {
+      "slug": "morfofuncion",
+      "title": "Anatomía y fisiología. La unidad entre forma y función",
+      "author": "Kenneth S. Saladin",
+      "edition": "6.ª edición · McGraw-Hill Interamericana",
+      "sha256": "e00074c7105c10052637b1c2a82f2b8959cf7c4cb9a91c4abd058ce958e58148"
+    }
   },
   {
     "id": "premo-morfo-09",
@@ -149,20 +4441,1598 @@
     "materia": "Morfofunción",
     "tema": "Articulaciones",
     "items": [
-      "Clasificación: articulaciones óseas, fibrosas, cartilaginosas y sinoviales.",
-      "Articulaciones fibrosas: tipos de suturas (ejemplos), gonfosis y sindesmosis.",
-      "Sincondrosis y sínfisis.",
-      "Anatomía general de la articulación sinovial.",
-      "Sistema de palancas: ventaja mecánica y tipos de palancas.",
-      "Clases de articulación sinovial (tipo y ejemplo).",
-      "Movimientos articulares: definición y en qué eje suceden. Énfasis en circunducción, rotación, supinación, pronación, dorsiflexión, flexión plantar, inversión y eversión.",
-      "Articulaciones especiales: cómo se forma la articulación y el tipo de articulación.",
-      "ATM: ligamentos. Art. hombro: bolsas y extensión de los ligamentos.",
-      "Art. codo: ligamentos. Art. cadera: ligamentos.",
-      "Art. rodilla: meniscos, LCA, LCP y retináculos.",
-      "Art. tobillo: ligamentos.",
-      "Cuadro 9.1: trastornos articulares comunes. Énfasis en gota, dislocación y reumatismo.",
-      "Artritis reumatoide y osteoartritis."
+      {
+        "text": "Clasificación: articulaciones óseas, fibrosas, cartilaginosas y sinoviales.",
+        "section": "9.1 a 9.4 · Articulaciones óseas, fibrosas, cartilaginosas y sinoviales",
+        "pages": [
+          {
+            "page": 307,
+            "printed": 279,
+            "marks": [
+              [
+                0.2918,
+                0.8497,
+                0.1355,
+                0.0112
+              ]
+            ]
+          },
+          {
+            "page": 308,
+            "printed": 280,
+            "marks": [
+              [
+                0.3356,
+                0.1619,
+                0.1354,
+                0.0111
+              ],
+              [
+                0.0636,
+                0.2373,
+                0.2002,
+                0.0161
+              ],
+              [
+                0.4977,
+                0.2373,
+                0.2226,
+                0.0161
+              ],
+              [
+                0.16,
+                0.9026,
+                0.1368,
+                0.0106
+              ],
+              [
+                0.5243,
+                0.1619,
+                0.1877,
+                0.0111
+              ],
+              [
+                0.1791,
+                0.2065,
+                0.1635,
+                0.0111
+              ]
+            ]
+          },
+          {
+            "page": 309,
+            "printed": 281
+          },
+          {
+            "page": 310,
+            "printed": 282,
+            "marks": [
+              [
+                0.4977,
+                0.1482,
+                0.279,
+                0.0161
+              ],
+              [
+                0.7012,
+                0.2016,
+                0.188,
+                0.0111
+              ]
+            ]
+          },
+          {
+            "page": 311,
+            "printed": 283,
+            "marks": [
+              [
+                0.305,
+                0.1471,
+                0.1635,
+                0.0111
+              ],
+              [
+                0.1647,
+                0.7673,
+                0.2584,
+                0.0173
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "text": "Articulaciones fibrosas: tipos de suturas (ejemplos), gonfosis y sindesmosis.",
+        "section": "9.2 · Suturas, gonfosis y sindesmosis",
+        "pages": [
+          {
+            "page": 308,
+            "printed": 280,
+            "marks": [
+              [
+                0.5936,
+                0.1174,
+                0.0481,
+                0.0111
+              ],
+              [
+                0.7995,
+                0.3204,
+                0.048,
+                0.0111
+              ],
+              [
+                0.8558,
+                0.3204,
+                0.0532,
+                0.0111
+              ],
+              [
+                0.4753,
+                0.8784,
+                0.0519,
+                0.0093
+              ],
+              [
+                0.7445,
+                0.8082,
+                0.0742,
+                0.0093
+              ],
+              [
+                0.0636,
+                0.9162,
+                0.0695,
+                0.0106
+              ]
+            ]
+          },
+          {
+            "page": 309,
+            "printed": 281,
+            "marks": [
+              [
+                0.2349,
+                0.0877,
+                0.0472,
+                0.0111
+              ],
+              [
+                0.0909,
+                0.1516,
+                0.0649,
+                0.0149
+              ],
+              [
+                0.3214,
+                0.0877,
+                0.0535,
+                0.0111
+              ],
+              [
+                0.525,
+                0.2853,
+                0.0767,
+                0.0149
+              ],
+              [
+                0.1033,
+                0.0877,
+                0.079,
+                0.0111
+              ]
+            ]
+          },
+          {
+            "page": 310,
+            "printed": 282,
+            "marks": [
+              [
+                0.1488,
+                0.2585,
+                0.0545,
+                0.0111
+              ],
+              [
+                0.0636,
+                0.1763,
+                0.1066,
+                0.0149
+              ],
+              [
+                0.0956,
+                0.1991,
+                0.0809,
+                0.0111
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "text": "Sincondrosis y sínfisis.",
+        "section": "9.3 · Sincondrosis y sínfisis",
+        "pages": [
+          {
+            "page": 310,
+            "printed": 282,
+            "marks": [
+              [
+                0.5723,
+                0.2164,
+                0.0829,
+                0.0111
+              ],
+              [
+                0.4977,
+                0.2457,
+                0.1091,
+                0.0149
+              ],
+              [
+                0.4683,
+                0.9281,
+                0.0384,
+                0.0093
+              ],
+              [
+                0.0636,
+                0.8646,
+                0.0373,
+                0.0106
+              ]
+            ]
+          },
+          {
+            "page": 311,
+            "printed": 283,
+            "marks": [
+              [
+                0.2115,
+                0.6887,
+                0.0712,
+                0.0106
+              ],
+              [
+                0.0909,
+                0.1838,
+                0.0588,
+                0.0149
+              ],
+              [
+                0.3882,
+                0.4131,
+                0.0393,
+                0.0112
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "text": "Anatomía general de la articulación sinovial.",
+        "section": "9.4 · Anatomía general de las articulaciones sinoviales",
+        "pages": [
+          {
+            "page": 311,
+            "printed": 283,
+            "marks": [
+              [
+                0.525,
+                0.5789,
+                0.1755,
+                0.0161
+              ],
+              [
+                0.402,
+                0.1471,
+                0.0529,
+                0.0111
+              ],
+              [
+                0.3208,
+                0.7673,
+                0.079,
+                0.0173
+              ]
+            ]
+          },
+          {
+            "page": 312,
+            "printed": 284,
+            "marks": [
+              [
+                0.109,
+                0.7825,
+                0.0529,
+                0.0111
+              ],
+              [
+                0.7964,
+                0.5159,
+                0.0529,
+                0.0111
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "text": "Sistema de palancas: ventaja mecánica y tipos de palancas.",
+        "section": "9.4 · Articulaciones y sistemas de palancas",
+        "pages": [
+          {
+            "page": 312,
+            "printed": 284
+          },
+          {
+            "page": 313,
+            "printed": 285,
+            "marks": [
+              [
+                0.0909,
+                0.7909,
+                0.151,
+                0.0149
+              ],
+              [
+                0.5753,
+                0.5906,
+                0.1184,
+                0.0111
+              ]
+            ]
+          },
+          {
+            "page": 314,
+            "printed": 286,
+            "marks": [
+              [
+                0.2167,
+                0.5831,
+                0.1148,
+                0.0111
+              ],
+              [
+                0.1948,
+                0.2008,
+                0.0932,
+                0.0093
+              ],
+              [
+                0.0636,
+                0.6644,
+                0.1565,
+                0.0149
+              ]
+            ]
+          },
+          {
+            "page": 315,
+            "printed": 287
+          }
+        ]
+      },
+      {
+        "text": "Clases de articulación sinovial (tipo y ejemplo).",
+        "section": "9.4 · Clases de articulaciones sinoviales",
+        "pages": [
+          {
+            "page": 316,
+            "printed": 288,
+            "marks": [
+              [
+                0.4977,
+                0.393,
+                0.2981,
+                0.0149
+              ]
+            ]
+          },
+          {
+            "page": 317,
+            "printed": 289
+          },
+          {
+            "page": 318,
+            "printed": 290
+          },
+          {
+            "page": 319,
+            "printed": 291
+          }
+        ]
+      },
+      {
+        "text": "Movimientos articulares: definición y en qué eje suceden. Énfasis en circunducción, rotación, supinación, pronación, dorsiflexión, flexión plantar, inversión y eversión.",
+        "section": "9.4 · Ejes de rotación y movimientos de las articulaciones sinoviales",
+        "pages": [
+          {
+            "page": 316,
+            "printed": 288,
+            "marks": [
+              [
+                0.0636,
+                0.7309,
+                0.1412,
+                0.0149
+              ]
+            ]
+          },
+          {
+            "page": 317,
+            "printed": 289,
+            "marks": [
+              [
+                0.1968,
+                0.7707,
+                0.0984,
+                0.0106
+              ]
+            ]
+          },
+          {
+            "page": 318,
+            "printed": 290
+          },
+          {
+            "page": 319,
+            "printed": 291
+          },
+          {
+            "page": 320,
+            "printed": 292,
+            "marks": [
+              [
+                0.7243,
+                0.2803,
+                0.1234,
+                0.0149
+              ],
+              [
+                0.7643,
+                0.3031,
+                0.0947,
+                0.0111
+              ]
+            ]
+          },
+          {
+            "page": 321,
+            "printed": 293,
+            "marks": [
+              [
+                0.8196,
+                0.7389,
+                0.0852,
+                0.0106
+              ],
+              [
+                0.0909,
+                0.8387,
+                0.2026,
+                0.0149
+              ]
+            ]
+          },
+          {
+            "page": 322,
+            "printed": 294,
+            "marks": [
+              [
+                0.1695,
+                0.9338,
+                0.1415,
+                0.0106
+              ]
+            ]
+          },
+          {
+            "page": 323,
+            "printed": 295
+          },
+          {
+            "page": 324,
+            "printed": 296
+          },
+          {
+            "page": 325,
+            "printed": 297,
+            "marks": [
+              [
+                0.0909,
+                0.0877,
+                0.2738,
+                0.0149
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "text": "Articulaciones especiales: cómo se forma la articulación y el tipo de articulación.",
+        "section": "9.5 · Anatomía de diartrosis seleccionadas",
+        "pages": [
+          {
+            "page": 326,
+            "printed": 298,
+            "marks": [
+              [
+                0.1374,
+                0.0951,
+                0.2428,
+                0.0173
+              ],
+              [
+                0.0928,
+                0.3876,
+                0.1124,
+                0.0161
+              ],
+              [
+                0.0841,
+                0.4113,
+                0.0818,
+                0.0111
+              ]
+            ]
+          },
+          {
+            "page": 327,
+            "printed": 299,
+            "marks": [
+              [
+                0.2071,
+                0.1322,
+                0.0794,
+                0.0111
+              ],
+              [
+                0.1254,
+                0.2065,
+                0.0794,
+                0.0111
+              ]
+            ]
+          },
+          {
+            "page": 328,
+            "printed": 300,
+            "marks": [
+              [
+                0.2859,
+                0.4852,
+                0.0794,
+                0.0111
+              ],
+              [
+                0.1775,
+                0.6782,
+                0.0794,
+                0.0111
+              ]
+            ]
+          },
+          {
+            "page": 329,
+            "printed": 301,
+            "marks": [
+              [
+                0.1201,
+                0.8005,
+                0.1124,
+                0.0161
+              ],
+              [
+                0.1111,
+                0.8242,
+                0.0803,
+                0.0111
+              ]
+            ]
+          },
+          {
+            "page": 330,
+            "printed": 302,
+            "marks": [
+              [
+                0.3644,
+                0.8281,
+                0.0794,
+                0.0111
+              ],
+              [
+                0.1547,
+                0.9023,
+                0.0794,
+                0.0111
+              ]
+            ]
+          },
+          {
+            "page": 331,
+            "printed": 303,
+            "marks": [
+              [
+                0.2542,
+                0.622,
+                0.0689,
+                0.0112
+              ],
+              [
+                0.1403,
+                0.783,
+                0.0786,
+                0.0111
+              ]
+            ]
+          },
+          {
+            "page": 332,
+            "printed": 304,
+            "marks": [
+              [
+                0.1695,
+                0.8461,
+                0.072,
+                0.0106
+              ]
+            ]
+          },
+          {
+            "page": 333,
+            "printed": 305,
+            "marks": [
+              [
+                0.4356,
+                0.2959,
+                0.0667,
+                0.0106
+              ],
+              [
+                0.0909,
+                0.8773,
+                0.0794,
+                0.0111
+              ]
+            ]
+          },
+          {
+            "page": 334,
+            "printed": 306,
+            "marks": [
+              [
+                0.1695,
+                0.5856,
+                0.072,
+                0.0106
+              ],
+              [
+                0.5674,
+                0.6732,
+                0.0592,
+                0.0094
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "text": "ATM: ligamentos. Art. hombro: bolsas y extensión de los ligamentos.",
+        "section": "9.5 · Articulaciones temporomandibular y del hombro",
+        "pages": [
+          {
+            "page": 326,
+            "printed": 298,
+            "marks": [
+              [
+                0.0928,
+                0.3876,
+                0.276,
+                0.0161
+              ],
+              [
+                0.4683,
+                0.553,
+                0.0557,
+                0.0093
+              ],
+              [
+                0.4683,
+                0.6605,
+                0.0557,
+                0.0093
+              ]
+            ]
+          },
+          {
+            "page": 327,
+            "printed": 299,
+            "marks": [
+              [
+                0.5542,
+                0.1828,
+                0.2332,
+                0.0161
+              ],
+              [
+                0.4301,
+                0.1174,
+                0.0657,
+                0.0111
+              ],
+              [
+                0.3141,
+                0.1322,
+                0.0665,
+                0.0111
+              ]
+            ]
+          },
+          {
+            "page": 328,
+            "printed": 300,
+            "marks": [
+              [
+                0.2859,
+                0.4852,
+                0.1603,
+                0.0111
+              ],
+              [
+                0.6958,
+                0.5382,
+                0.1588,
+                0.0111
+              ],
+              [
+                0.1363,
+                0.7673,
+                0.0657,
+                0.0111
+              ],
+              [
+                0.3729,
+                0.7822,
+                0.0665,
+                0.0111
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "text": "Art. codo: ligamentos. Art. cadera: ligamentos.",
+        "section": "9.5 · Articulaciones del codo y de la cadera",
+        "pages": [
+          {
+            "page": 328,
+            "printed": 300,
+            "marks": [
+              [
+                0.5269,
+                0.1333,
+                0.2051,
+                0.0161
+              ],
+              [
+                0.804,
+                0.2609,
+                0.1092,
+                0.0111
+              ],
+              [
+                0.5269,
+                0.4551,
+                0.2404,
+                0.0161
+              ],
+              [
+                0.1363,
+                0.7673,
+                0.0657,
+                0.0111
+              ],
+              [
+                0.3729,
+                0.7822,
+                0.0665,
+                0.0111
+              ]
+            ]
+          },
+          {
+            "page": 329,
+            "printed": 301,
+            "marks": [
+              [
+                0.1968,
+                0.6452,
+                0.1297,
+                0.0106
+              ],
+              [
+                0.1146,
+                0.7548,
+                0.0665,
+                0.0111
+              ],
+              [
+                0.1187,
+                0.8836,
+                0.0647,
+                0.0111
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "text": "Art. rodilla: meniscos, LCA, LCP y retináculos.",
+        "section": "9.5 · Articulación de la rodilla",
+        "pages": [
+          {
+            "page": 329,
+            "printed": 301,
+            "marks": [
+              [
+                0.6513,
+                0.8439,
+                0.0553,
+                0.0111
+              ],
+              [
+                0.6993,
+                0.8588,
+                0.0553,
+                0.0111
+              ],
+              [
+                0.7596,
+                0.7251,
+                0.0665,
+                0.0111
+              ]
+            ]
+          },
+          {
+            "page": 330,
+            "printed": 302,
+            "marks": [
+              [
+                0.4977,
+                0.828,
+                0.0545,
+                0.0111
+              ],
+              [
+                0.7436,
+                0.828,
+                0.0545,
+                0.0111
+              ]
+            ]
+          },
+          {
+            "page": 331,
+            "printed": 303,
+            "marks": [
+              [
+                0.5352,
+                0.323,
+                0.0448,
+                0.0093
+              ],
+              [
+                0.5352,
+                0.3384,
+                0.0448,
+                0.0093
+              ],
+              [
+                0.5352,
+                0.3069,
+                0.043,
+                0.0093
+              ]
+            ]
+          },
+          {
+            "page": 332,
+            "printed": 304,
+            "marks": [
+              [
+                0.0671,
+                0.3029,
+                0.0448,
+                0.0093
+              ],
+              [
+                0.4117,
+                0.3059,
+                0.0448,
+                0.0093
+              ],
+              [
+                0.4117,
+                0.2584,
+                0.043,
+                0.0093
+              ],
+              [
+                0.4117,
+                0.2855,
+                0.043,
+                0.0093
+              ]
+            ]
+          },
+          {
+            "page": 333,
+            "printed": 305,
+            "marks": [
+              [
+                0.1069,
+                0.2142,
+                0.0481,
+                0.0106
+              ],
+              [
+                0.5445,
+                0.5127,
+                0.0448,
+                0.0093
+              ],
+              [
+                0.2606,
+                0.2142,
+                0.0462,
+                0.0106
+              ],
+              [
+                0.6036,
+                0.4442,
+                0.043,
+                0.0093
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "text": "Art. tobillo: ligamentos.",
+        "section": "9.5 · Articulación del tobillo",
+        "pages": [
+          {
+            "page": 331,
+            "printed": 303,
+            "marks": [
+              [
+                0.5542,
+                0.7449,
+                0.2198,
+                0.0161
+              ],
+              [
+                0.2485,
+                0.7384,
+                0.0657,
+                0.0111
+              ],
+              [
+                0.4212,
+                0.7681,
+                0.0657,
+                0.0111
+              ]
+            ]
+          },
+          {
+            "page": 332,
+            "printed": 304,
+            "marks": [
+              [
+                0.4117,
+                0.2479,
+                0.0557,
+                0.0093
+              ],
+              [
+                0.4117,
+                0.275,
+                0.0557,
+                0.0093
+              ]
+            ]
+          },
+          {
+            "page": 333,
+            "printed": 305,
+            "marks": [
+              [
+                0.1961,
+                0.2142,
+                0.0587,
+                0.0106
+              ],
+              [
+                0.2089,
+                0.2414,
+                0.0587,
+                0.0106
+              ]
+            ]
+          },
+          {
+            "page": 334,
+            "printed": 306,
+            "marks": [
+              [
+                0.8034,
+                0.4438,
+                0.0557,
+                0.0093
+              ],
+              [
+                0.8034,
+                0.3868,
+                0.0557,
+                0.0093
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "text": "Cuadro 9.1: trastornos articulares comunes. Énfasis en gota, dislocación y reumatismo.",
+        "section": "9.5 · Cuadro 9.1: Algunos trastornos articulares comunes",
+        "pages": [
+          {
+            "page": 334,
+            "printed": 306,
+            "marks": [
+              [
+                0.083,
+                0.6294,
+                0.1165,
+                0.0136
+              ],
+              [
+                0.083,
+                0.7241,
+                0.0259,
+                0.0094
+              ],
+              [
+                0.083,
+                0.6918,
+                0.059,
+                0.0094
+              ],
+              [
+                0.0927,
+                0.9103,
+                0.059,
+                0.0094
+              ],
+              [
+                0.4384,
+                0.6546,
+                0.061,
+                0.0094
+              ],
+              [
+                0.083,
+                0.7699,
+                0.0642,
+                0.0094
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "text": "Artritis reumatoide y osteoartritis.",
+        "section": "Conocimiento más a fondo 9.5 · Artritis y articulaciones artificiales",
+        "pages": [
+          {
+            "page": 335,
+            "printed": 307,
+            "marks": [
+              [
+                0.3398,
+                0.255,
+                0.0696,
+                0.0106
+              ],
+              [
+                0.314,
+                0.3231,
+                0.0696,
+                0.0106
+              ],
+              [
+                0.1466,
+                0.4456,
+                0.1069,
+                0.0106
+              ],
+              [
+                0.2176,
+                0.6363,
+                0.1067,
+                0.0106
+              ]
+            ]
+          }
+        ]
+      }
+    ],
+    "source": {
+      "slug": "morfofuncion",
+      "title": "Anatomía y fisiología. La unidad entre forma y función",
+      "author": "Kenneth S. Saladin",
+      "edition": "6.ª edición · McGraw-Hill Interamericana",
+      "sha256": "e00074c7105c10052637b1c2a82f2b8959cf7c4cb9a91c4abd058ce958e58148"
+    }
+  },
+  {
+    "id": "premo-bio-05",
+    "orden": 5,
+    "capitulo": "Capítulo 5",
+    "titulo": "Macrotransporte",
+    "materia": "Biología celular",
+    "tema": "Macrotransporte a través de la membrana plasmática",
+    "source": {
+      "slug": "biologia-celular",
+      "title": "Biología celular biomédica",
+      "author": "Alfonso Calvo González",
+      "edition": "1.ª edición · Elsevier España · 2015",
+      "sha256": "6a9e9d5f3bada584603d87ef954237ce9f8d5f02f28a16c90b3228bd7328d72b",
+      "chapter": "Capítulo 5 · Macrotransporte a través de la membrana plasmática: endocitosis y exocitosis",
+      "chapterAuthors": [
+        "Álvaro Martín",
+        "Diego Peñafiel",
+        "Alfonso Calvo"
+      ]
+    },
+    "items": [
+      {
+        "text": "Pinocitosis mediada por clatrina.",
+        "section": "Endocitosis · Pinocitosis mediada por clatrina",
+        "pages": [
+          {
+            "page": 218,
+            "printed": 218,
+            "marks": [
+              [
+                0.6909,
+                0.0765,
+                0.0651,
+                0.0198
+              ],
+              [
+                0.0082,
+                0.147,
+                0.0627,
+                0.0197
+              ]
+            ]
+          },
+          {
+            "page": 219,
+            "printed": 219,
+            "marks": [
+              [
+                0.2196,
+                0.6846,
+                0.0529,
+                0.0172
+              ]
+            ]
+          },
+          {
+            "page": 220,
+            "printed": 220,
+            "marks": [
+              [
+                0.0242,
+                0.4384,
+                0.0529,
+                0.0172
+              ]
+            ]
+          },
+          {
+            "page": 221,
+            "printed": 221,
+            "marks": [
+              [
+                0.3419,
+                0.1,
+                0.0627,
+                0.0197
+              ],
+              [
+                0.4396,
+                0.1,
+                0.0647,
+                0.0198
+              ]
+            ]
+          },
+          {
+            "page": 222,
+            "printed": 222,
+            "marks": [
+              [
+                0.4419,
+                0.225,
+                0.0627,
+                0.0197
+              ],
+              [
+                0.6227,
+                0.272,
+                0.0627,
+                0.0197
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "text": "Características del endosoma.",
+        "section": "Endocitosis · El endosoma y sus rutas; Figuras 5.8 a 5.10",
+        "pages": [
+          {
+            "page": 222,
+            "printed": 222,
+            "marks": [
+              [
+                0.8386,
+                0.6472,
+                0.0859,
+                0.0197
+              ],
+              [
+                0.0082,
+                0.6707,
+                0.0879,
+                0.0198
+              ]
+            ]
+          },
+          {
+            "page": 223,
+            "printed": 223,
+            "marks": [
+              [
+                0.2412,
+                0.2505,
+                0.0758,
+                0.0172
+              ],
+              [
+                0.4082,
+                0.2659,
+                0.0758,
+                0.0172
+              ]
+            ]
+          },
+          {
+            "page": 224,
+            "printed": 224
+          },
+          {
+            "page": 225,
+            "printed": 225,
+            "marks": [
+              [
+                0.1931,
+                0.3152,
+                0.0758,
+                0.0172
+              ],
+              [
+                0.269,
+                0.3455,
+                0.0758,
+                0.0172
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "text": "Endocitosis mediada por caveolas.",
+        "section": "Endocitosis · Pinocitosis mediada por cavéolas",
+        "pages": [
+          {
+            "page": 226,
+            "printed": 226,
+            "marks": [
+              [
+                0.3765,
+                0.1,
+                0.0718,
+                0.0198
+              ],
+              [
+                0.3285,
+                0.1235,
+                0.0705,
+                0.0197
+              ]
+            ]
+          },
+          {
+            "page": 227,
+            "printed": 227,
+            "marks": [
+              [
+                0.5575,
+                0.803,
+                0.0647,
+                0.0172
+              ]
+            ]
+          },
+          {
+            "page": 228,
+            "printed": 228,
+            "marks": [
+              [
+                0.0082,
+                0.147,
+                0.0708,
+                0.0197
+              ],
+              [
+                0.3526,
+                0.2954,
+                0.0704,
+                0.0197
+              ]
+            ]
+          },
+          {
+            "page": 229,
+            "printed": 229,
+            "marks": [
+              [
+                0.3517,
+                0.0765,
+                0.0705,
+                0.0197
+              ],
+              [
+                0.0931,
+                0.1235,
+                0.0704,
+                0.0197
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "text": "Macropinocitosis.",
+        "section": "Endocitosis · Macropinocitosis y Figura 5.12",
+        "pages": [
+          {
+            "page": 229,
+            "printed": 229,
+            "marks": [
+              [
+                0.0082,
+                0.5032,
+                0.2086,
+                0.0282
+              ],
+              [
+                0.1382,
+                0.5399,
+                0.1464,
+                0.0198
+              ]
+            ]
+          },
+          {
+            "page": 230,
+            "printed": 230,
+            "marks": [
+              [
+                0.4872,
+                0.3452,
+                0.1417,
+                0.0197
+              ],
+              [
+                0.0529,
+                0.3998,
+                0.1414,
+                0.0197
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "text": "Opsoninas.",
+        "section": "Fagocitosis · Opsoninas y receptores Fc",
+        "pages": [
+          {
+            "page": 231,
+            "printed": 231,
+            "marks": [
+              [
+                0.0082,
+                0.5866,
+                0.0878,
+                0.0198
+              ],
+              [
+                0.3863,
+                0.6571,
+                0.0845,
+                0.0197
+              ]
+            ]
+          },
+          {
+            "page": 232,
+            "printed": 232
+          }
+        ]
+      },
+      {
+        "text": "Formación del fagolisosoma.",
+        "section": "Fagocitosis · Formación del fagolisosoma y Figura 5.14",
+        "pages": [
+          {
+            "page": 232,
+            "printed": 232,
+            "marks": [
+              [
+                0.1712,
+                0.426,
+                0.0957,
+                0.0172
+              ],
+              [
+                0.4546,
+                0.5071,
+                0.1141,
+                0.0198
+              ]
+            ]
+          },
+          {
+            "page": 233,
+            "printed": 233
+          }
+        ]
+      },
+      {
+        "text": "Tipos de exocitosis.",
+        "section": "Exocitosis · Exocitosis constitutiva y regulada",
+        "pages": [
+          {
+            "page": 235,
+            "printed": 235,
+            "marks": [
+              [
+                0.6478,
+                0.2,
+                0.1893,
+                0.0198
+              ],
+              [
+                0.0082,
+                0.6545,
+                0.2756,
+                0.0282
+              ],
+              [
+                0.3376,
+                0.247,
+                0.1637,
+                0.0198
+              ]
+            ]
+          },
+          {
+            "page": 236,
+            "printed": 236,
+            "marks": [
+              [
+                0.0082,
+                0.2373,
+                0.2396,
+                0.0282
+              ],
+              [
+                0.0082,
+                0.2975,
+                0.1637,
+                0.0198
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "text": "Participación de las proteínas ARF (figuras 5.19 y 5.20).",
+        "section": "Gemación y fusión de vesículas · Figuras 5.19 y 5.20",
+        "page": 238,
+        "pages": [
+          {
+            "page": 237,
+            "printed": 237
+          },
+          {
+            "page": 238,
+            "printed": 238
+          },
+          {
+            "page": 239,
+            "printed": 239
+          }
+        ]
+      },
+      {
+        "text": "Neurotransmisores excitadores y otros inhibidores.",
+        "section": "Exocitosis y endocitosis en la sinapsis neuronal · Neurotransmisores",
+        "pages": [
+          {
+            "page": 240,
+            "printed": 240,
+            "marks": [
+              [
+                0.6932,
+                0.325,
+                0.2586,
+                0.0198
+              ],
+              [
+                0.5354,
+                0.3485,
+                0.0946,
+                0.0197
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "text": "Esquema que representa el complejo SNARE de la sinapsis neuronal (figura 5.22).",
+        "section": "Exocitosis y endocitosis en la sinapsis neuronal · Complejo SNARE y Figura 5.22",
+        "page": 242,
+        "pages": [
+          {
+            "page": 241,
+            "printed": 241,
+            "marks": [
+              [
+                0.0932,
+                0.8707,
+                0.1446,
+                0.0197
+              ]
+            ]
+          },
+          {
+            "page": 242,
+            "printed": 242
+          },
+          {
+            "page": 243,
+            "printed": 243
+          }
+        ]
+      }
     ]
   }
 ]

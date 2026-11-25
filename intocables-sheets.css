@@ -27,14 +27,33 @@
 .itc-premonition-card .itc-card-middle{padding:0 20px;margin:10px 0 18px;flex:1;gap:8px}
 .itc-premonition-card .itc-card-middle strong{font-size:1.25rem;line-height:1.24}
 .itc-premonition-card .itc-card-bottom{margin:0 20px;padding:14px 0 18px}
-.itc-premonition-dialog{width:min(780px,calc(100vw - 24px))}
-.itc-premonition-dialog .itc-dialog-body{max-height:calc(90vh - 64px);overflow:auto}
-.itc-premonition-subtitle{color:#5b7691;margin:0 0 18px;font-size:.92rem}
-.itc-premonition-list{margin:0;padding-left:22px;display:grid;gap:9px}
-.itc-premonition-list li{padding:9px 0 9px 4px;border-bottom:1px solid #eef3f8;line-height:1.45}
+.itc-premonition-dialog{width:min(860px,calc(100vw - 24px));max-height:calc(100dvh - 32px);margin:auto;overflow:hidden}
+.itc-premonition-dialog[open]{display:flex;flex-direction:column}
+.itc-premonition-dialog .itc-dialog-head{flex-shrink:0}
+.itc-premonition-dialog .itc-dialog-body{max-height:none;min-height:0;overflow:auto}
+.itc-premonition-subtitle{color:#5b7691;margin:6px 0 10px;font-size:.88rem}
+.itc-premonition-heading{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:18px}
+.itc-premonition-heading>div{min-width:0}
+.itc-premonition-heading h2{margin:0;text-transform:none}
+.itc-premonition-instruction{color:#53647a;font-size:.82rem;line-height:1.5}
+.itc-premonition-reminder{display:block;width:112px;height:128px;flex:0 0 112px;object-fit:contain}
+.itc-premonition-list{margin:0;padding-left:24px;display:grid;gap:0}
+.itc-premonition-list li{padding:0 0 0 4px;border-bottom:1px solid #e8eef5;line-height:1.5}
 .itc-premonition-list li::marker{color:#0d80ba;font-weight:800}
-.itc-premonition-note{margin-top:18px;font-size:.76rem;color:#7088a2}
+.itc-premonition-link{display:flex;align-items:center;justify-content:space-between;gap:16px;width:100%;padding:13px 10px 13px 4px;border:0;border-radius:8px;background:transparent;color:#1e293b;font:inherit;text-align:left;cursor:pointer}
+.itc-premonition-link,.itc-premonition-link *{text-transform:none}
+.itc-premonition-topic{display:block;font-weight:500}
+.itc-premonition-link small{display:block;color:#61758c;font-size:.75rem;line-height:1.5;margin-top:3px}
+.itc-premonition-link:hover{background:#f3f7fb}
+.itc-premonition-link:focus-visible{outline:2px solid #1677ad;outline-offset:2px;background:#edf5fc}
+.itc-premonition-link:disabled{opacity:.65;cursor:progress}
+.itc-premonition-arrow{color:#1677ad;font-size:1.1rem;flex-shrink:0}
+.itc-premonition-label{display:block;padding:13px 4px}
+.itc-premonition-status:empty{display:none}
+.itc-premonition-status{margin-top:14px;color:#a03e21;font-size:.82rem;line-height:1.5}
+.itc-premonition-note{margin-top:18px;font-size:.73rem;color:#7088a2;line-height:1.6;text-transform:none}
 @media(max-width:600px){.itc-premonition-banner{aspect-ratio:16/7;padding:14px}.itc-premonition-banner strong{font-size:1.5rem}}
+@media(max-width:600px){.itc-premonition-heading{gap:10px}.itc-premonition-heading h2{font-size:1.35rem}.itc-premonition-reminder{width:78px;height:98px;flex-basis:78px}.itc-premonition-link{gap:10px;padding-block:14px}.itc-premonition-topic{font-size:.94rem}.itc-premonition-instruction{font-size:.78rem}}
 
 .itc-premonition-brand{display:flex;align-items:center;gap:10px;min-width:0}
 .itc-premonition-brand img{display:block;flex:0 0 36px;width:36px;height:36px;object-fit:contain;border-radius:8px;background:#fff}

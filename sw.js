@@ -1,4 +1,4 @@
-const CACHE_NAME = 'alcocermed-main-v217-calendario-estudio-diario';
+const CACHE_NAME = 'alcocermed-main-v218-premoniciones-lectura';
 const APP_SHELL = [
     './video-community.js?v=1',
     './video-community.css?v=1',
@@ -57,7 +57,7 @@ const APP_SHELL = [
     './flashcard-workspace.js?v=20261109-foco',
     './script.js?v=20261122-simulacro-google',
     './campus-login.js?v=9',
-    './campus-catalogs.js?v=5',
+    './campus-catalogs.js?v=6',
     './campus-exam-engine.js?v=4',
     './topic-evaluations.js?v=20261112-muestra',
     './topic-evaluations.css?v=6',
@@ -84,8 +84,8 @@ const APP_SHELL = [
     '/assets/vendor/font-awesome-6.4.0/webfonts/fa-solid-900.woff2',
     '/assets/vendor/font-awesome-6.4.0/webfonts/fa-v4compatibility.woff2',
 
-    './intocables-hub.js?v=7',
-    './intocables-sheets.css?v=3',
+    './intocables-hub.js?v=8',
+    './intocables-sheets.css?v=4',
     './assets/study-art/intocables-hero.webp',
     './study-assessments.js?v=2',
     './simulation-scope.js?v=13',
@@ -96,7 +96,7 @@ const APP_SHELL = [
     './study-summaries.js?v=20261113-inscripcion',
     './summary-pdf-reader.js?v=10',
     './summary-pdf-reader.css?v=5',
-    './campus-study-resources.css?v=8',
+    './campus-study-resources.css?v=9',
     './study-calendar.css?v=14',
     './study-calendar-data.js?v=9',
     './study-calendar-pdf.js?v=2',
