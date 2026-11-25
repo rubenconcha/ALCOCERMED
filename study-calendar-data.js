@@ -49,7 +49,7 @@
             practice: { id: 'factores-si', subject: 'Física', topic: 'Factores de conversión del SI' },
         },
         {
-            morning: reading('morfofuncion', 'Histología', 'Capítulo 5', [144, 157], [172, 185], 'morfo-05', 'histología'),
+            morning: reading('morfofuncion', 'Histología', 'Capítulo 5', [143, 157], [171, 185], 'morfo-05', 'histología'),
             health: health('Niveles de prevención', 4, 5, 'salud-04'),
             practice: { id: 'volumen-porcentaje', subject: 'Matemáticas', topic: 'Volumen estimado, porcentajes y tiempo' },
         },
@@ -286,8 +286,8 @@
     const weeklyReadings = {
         '2026-11-23': {
             morfofuncion: [
-                reading('morfofuncion', 'Histología', 'Capítulo 5', [144,179], [172,207], 'morfo-05', 'histología'),
-                reading('morfofuncion', 'Sistema tegumentario', 'Capítulo 6', [181,205], [209,233], 'morfo-06', 'sistema tegumentario'),
+                reading('morfofuncion', 'Histología', 'Capítulo 5', [143,179], [171,207], 'morfo-05', 'histología'),
+                reading('morfofuncion', 'Sistema tegumentario', 'Capítulo 6', [180,205], [208,233], 'morfo-06', 'sistema tegumentario'),
             ],
             'biologia-celular': [
                 reading('biologia-celular', 'Estructura de la membrana plasmática', 'Capítulo 3', [121,166], [121,166], 'biologia-03', 'estructura de la membrana plasmática'),

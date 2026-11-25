@@ -311,3 +311,6 @@
     .campus-resource-screen { padding: 8px 0 36px; }
     .campus-resource-screen .sim-header { align-items: flex-start; }
 }
+
+/* Loading and citation controls must disappear when the reader marks them hidden. */
+#official-texts-reader :is(#official-texts-status,#official-texts-citations,#official-texts-reader-download-status)[hidden] { display:none }

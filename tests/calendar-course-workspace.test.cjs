@@ -85,3 +85,19 @@ test('daily exercises are constrained to the assigned subject and exact existing
  assert.ok(!physics.some(q=>/circuit|lente|onda|movimiento/i.test(q.topic)));
  assert.deepEqual(data.practiceQuestions(bank.questions,data.practiceFor('2026-12-15',0)),[]);
 });
+
+
+test('scheduled chapters include the verified topic cover and keep page lists out of the study card',()=>{
+ const rows=data.groupDay('2026-11-24','virtual');
+ const morfo=rows.find(item=>item.readingGroup==='morfofuncion').readingOptions;
+ const bio=rows.find(item=>item.readingGroup==='biologia-celular').readingOptions;
+ assert.deepEqual(morfo.map(book=>[book.pdf[0],book.printed[0]]),[[171,143],[208,180]]);
+ // Calvo has a chapter-number-only separator before these titled opening pages.
+ assert.deepEqual(bio.map(book=>book.pdf[0]),[121,215]);
+ const js=fs.readFileSync('study-calendar.js','utf8');
+ const source=js.slice(js.indexOf('    function readingSource('),js.indexOf('    function renderStudy('));
+ assert.doesNotMatch(source,/Páginas impresas|pageRange|PDF /);
+ assert.match(source,/Abrir tema/);
+ const reader=fs.readFileSync('official-texts.js','utf8');
+ assert.doesNotMatch(reader,/Páginas seleccionadas/);
+});

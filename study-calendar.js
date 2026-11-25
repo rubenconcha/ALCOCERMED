@@ -501,8 +501,7 @@
         source.append(
             element('strong', '', book.title),
             element('span', '', book.credit + ' · ' + book.section),
-            element('span', '', 'Páginas impresas ' + data.pageRange(book.printed) + ' · PDF ' + data.pageRange(book.pdf)),
-            element('span', 'calendar-reading-link-label', 'Estudiar este tema en el texto oficial →')
+            element('span', 'calendar-reading-link-label', 'Abrir tema →')
         );
         return source;
     }

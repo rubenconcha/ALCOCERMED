@@ -1,4 +1,4 @@
-const CACHE_NAME = 'alcocermed-main-v224-calendario-navegacion';
+const CACHE_NAME = 'alcocermed-main-v225-calendario-caratulas';
 const APP_SHELL = [
     './video-community.js?v=1',
     './video-community.css?v=1',

@@ -161,7 +161,7 @@
         discardReader();
         const controller = opening = new AbortController();
         const { signal } = controller;
-        status.textContent = citations ? 'Páginas seleccionadas · ' + citations.map(ref => ref.printed || ref.page).join(', ')
+        status.textContent = citations ? 'Abriendo lectura…'
             : text.credit + ' · ' + text.edition;
         status.hidden = false;
         toolbar.inert = pages.inert = citationsBar.inert = true;
