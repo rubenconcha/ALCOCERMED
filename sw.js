@@ -1,5 +1,7 @@
-const CACHE_NAME = 'alcocermed-main-v215-docentes-comentarios';
+const CACHE_NAME = 'alcocermed-main-v216-videoclases-comunidad';
 const APP_SHELL = [
+    './video-community.js?v=1',
+    './video-community.css?v=1',
     './student-results.js?v=11',
     './student-results.css?v=1',
     './question-review.js?v=15',
@@ -35,7 +37,7 @@ const APP_SHELL = [
     './campus-navigation.css?v=4',
     './campus-atlas.css?v=5',
     '/device-limit.css?v=1',
-    './campus-home.css?v=5',
+    './campus-home.css?v=6',
     './campus-information.css?v=2',
     './campus-information.js?v=1',
     './campus-topics.css?v=4',
@@ -83,7 +85,7 @@ const APP_SHELL = [
     '/assets/vendor/font-awesome-6.4.0/webfonts/fa-v4compatibility.woff2',
 
     './intocables-hub.js?v=7',
-    './intocables-sheets.css?v=2',
+    './intocables-sheets.css?v=3',
     './assets/study-art/intocables-hero.webp',
     './study-assessments.js?v=2',
     './simulation-scope.js?v=13',
@@ -95,12 +97,12 @@ const APP_SHELL = [
     './summary-pdf-reader.js?v=10',
     './summary-pdf-reader.css?v=5',
     './campus-study-resources.css?v=8',
-    './study-calendar.css?v=12',
-    './study-calendar-data.js?v=7',
+    './study-calendar.css?v=14',
+    './study-calendar-data.js?v=9',
     './study-calendar-pdf.js?v=2',
-    './study-calendar.js?v=14',
+    './study-calendar.js?v=18',
     './campus-shell.css?v=4',
-    './campus-shell.js?v=5',
+    './campus-shell.js?v=8',
     './campus-section-tracking.js?v=1',
     './campus-atlas.js?v=12',
     './study-media.js?v=20261021-visual5b',

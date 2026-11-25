@@ -111,6 +111,7 @@ async function adminLogout() {
   setText('student-group-status', '');
   window.QuestionReview?.clear(); window.AdminTopicResults?.clear(); window.AdminSectionTracking?.clear();
   window.AdminSubscriptions?.clear();
+  window.VideoCommunity?.clearAdmin();
   cachedData = { devices: [], sims: [], banco: [], videos: [], estudiantes: [], userMap: {}, errors: [] };
   document.getElementById('admin-login-screen').classList.remove('hidden');
   document.getElementById('admin-app').style.display = 'none';
@@ -196,7 +197,7 @@ function renderCurrentSection(section) {
   else if (section === 'suscripciones') window.AdminSubscriptions?.load();
   else if (section === 'simulacros') renderSimulacros(cachedData.sims);
   else if (section === 'evaluaciones') { renderEvaluaciones(cachedData.banco); window.AdminTopicResults?.render(); window.AdminSectionTracking?.render(); }
-  else if (section === 'videoclases') renderVideoclases(cachedData.videos);
+  else if (section === 'videoclases') { renderVideoclases(cachedData.videos); loadVideoParticipation(); }
   else if (section === 'contenido') loadContenido(getSupabase());
 }
 
@@ -904,3 +905,41 @@ window.verDetalleEstudiante = verDetalleEstudiante;
 window.restaurarDispositivo = restaurarDispositivo;
 window.closeModal = closeModal;
 window.showToast = showToast;
+
+let videoCommunityAssets = null;
+function ensureVideoCommunityAssets() {
+    if (window.VideoCommunity) return Promise.resolve(window.VideoCommunity);
+    if (videoCommunityAssets) return videoCommunityAssets;
+    videoCommunityAssets = new Promise((resolve, reject) => {
+        if (!document.getElementById('video-community-style')) {
+            const css = document.createElement('link');
+            css.id = 'video-community-style'; css.rel = 'stylesheet'; css.href = '/video-community.css?v=1';
+            document.head.append(css);
+        }
+        const script = document.createElement('script');
+        script.src = '/video-community.js?v=1'; script.async = true;
+        script.onload = () => window.VideoCommunity ? resolve(window.VideoCommunity) : reject(new Error('community'));
+        script.onerror = () => { script.remove(); videoCommunityAssets = null; reject(new Error('community')); };
+        document.head.append(script);
+    });
+    return videoCommunityAssets;
+}
+
+async function loadVideoParticipation() {
+  const owner = currentAdmin?.id;
+  const host = document.getElementById('section-videoclases');
+  const isCurrent = () => Boolean(owner && currentAdmin?.id === owner && host?.classList.contains('active'));
+  if (!isCurrent()) return;
+  try {
+    const community = await ensureVideoCommunityAssets();
+    if (isCurrent()) await community.mountAdmin({host, sb: getSupabase(), isCurrent, student: getStudent});
+  } catch (_) {
+    if (!isCurrent()) return;
+    let retry = document.getElementById('vc-community-admin-retry');
+    if (!retry) {
+      retry = document.createElement('button'); retry.type = 'button'; retry.id = 'vc-community-admin-retry';
+      retry.textContent = 'Reintentar participación de videoclases'; host.append(retry);
+    }
+    retry.onclick = () => { retry.remove(); loadVideoParticipation(); };
+  }
+}

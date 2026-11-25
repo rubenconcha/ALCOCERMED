@@ -3276,6 +3276,25 @@ const BEN_CARSON_5050_LESSON = Object.freeze({
     MATERIA: 'MORFOFUNCIÓN',
     TEMA: 'Posición, planos y términos anatómicos',
 });
+let videoCommunityAssets = null;
+function ensureVideoCommunityAssets() {
+    if (window.VideoCommunity) return Promise.resolve(window.VideoCommunity);
+    if (videoCommunityAssets) return videoCommunityAssets;
+    videoCommunityAssets = new Promise((resolve, reject) => {
+        if (!document.getElementById('video-community-style')) {
+            const css = document.createElement('link');
+            css.id = 'video-community-style'; css.rel = 'stylesheet'; css.href = '/video-community.css?v=1';
+            document.head.append(css);
+        }
+        const script = document.createElement('script');
+        script.src = '/video-community.js?v=1'; script.async = true;
+        script.onload = () => window.VideoCommunity ? resolve(window.VideoCommunity) : reject(new Error('community'));
+        script.onerror = () => { script.remove(); videoCommunityAssets = null; reject(new Error('community')); };
+        document.head.append(script);
+    });
+    return videoCommunityAssets;
+}
+
 const BEN_CARSON_5050_PLAYBACK_PATH = '/api/flashcards?bc5050_playback=1';
 
 async function getBenCarson5050Playback() {
@@ -3375,6 +3394,7 @@ function measureVideoPlayback(frame, url) {
 }
 
 function clearVideoclases() {
+    window.VideoCommunity?.close();
     ++vcState.playRequest;
     const modal = document.getElementById('vc-modal');
     if (modal && !modal.classList.contains('hidden')) window.closeVcModal();
@@ -3679,15 +3699,27 @@ window.openVcModal = async function (v) {
     modal.classList.remove('hidden');
     document.body.style.overflow = 'hidden';
 
-    // The protected class has no legacy DB video ID. Do not store its ephemeral playback link.
-    if (secured) return;
-    // Registrar visualización en la nube (asumimos 100% de progreso al abrirlo)
-    registrarVideoVistoEnNube(
-        campo(v, 'id') || campo(v, 'url_video') || campo(v, 'titulo'),
-        campo(v, 'titulo') || 'Video sin título',
-        campo(v, 'materia') || 'General',
-        100
-    );
+    // Participation uses a stable catalog ID, never the protected video's signed URL.
+    const videoId = secured ? 'ben-carson-5050' : String(campo(v, 'id') || '');
+    let slot = document.getElementById('vc-community-slot');
+    if (!slot) {
+        slot = document.createElement('div'); slot.id = 'vc-community-slot';
+        modal.querySelector('.vc-modal-inner').append(slot);
+    }
+    slot.replaceChildren();
+    const openCommunity = () => Promise.resolve().then(ensureVideoCommunityAssets).then(community => {
+        if (!current() || modal.classList.contains('hidden')) return;
+        slot.replaceChildren();
+        community.mount({host: slot, sb: getSupabase(), user: currentUser, videoId,
+            frame: iframe, playerUrl: embedUrl, isCurrent: current});
+    }).catch(() => {
+        if (!current() || modal.classList.contains('hidden')) return;
+        const retry = document.createElement('button');
+        retry.type = 'button'; retry.className = 'btn-back-game';
+        retry.textContent = 'Reintentar comentarios y reacciones'; retry.onclick = openCommunity;
+        slot.replaceChildren(retry);
+    });
+    openCommunity();
 
 };
 
@@ -3696,6 +3728,8 @@ window.closeVcModal = function (e) {
     if (!modal) return;
     if (e && e.target !== modal) return;
     ++vcState.playRequest;
+    window.VideoCommunity?.close();
+    document.getElementById('vc-community-slot')?.replaceChildren();
     modal.classList.add('hidden');
     vcState.stopMeasurement?.();
     vcState.stopMeasurement = null;
