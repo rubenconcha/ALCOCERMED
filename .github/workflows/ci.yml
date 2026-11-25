@@ -38,7 +38,7 @@ jobs:
         run: |
           node --check study-calendar.js
           node --check study-calendar-pdf.js
-          node --test tests/study-calendar.test.cjs
+          node --test tests/study-calendar.test.cjs tests/calendar-course-workspace.test.cjs
       - name: Check student result history and isolation
         run: |
           node --check student-results.js

@@ -1,4 +1,4 @@
-const CACHE_NAME = 'alcocermed-main-v216-videoclases-comunidad';
+const CACHE_NAME = 'alcocermed-main-v217-calendario-estudio-diario';
 const APP_SHELL = [
     './video-community.js?v=1',
     './video-community.css?v=1',

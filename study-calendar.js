@@ -183,7 +183,7 @@
                 for (const item of distinct.concat(repeated).slice(0, 2)) {
                     const control = dayButton(date, item.title, 'fc-daygrid-event', item);
                     control.replaceChildren(element('span', 'fc-event-title', item.title));
-                    setActivityStyle(control, item.kind, item.reading?.slug);
+                    setActivityStyle(control, item.kind, item.reading?.slug || item.readingSlug);
                     cell.append(control);
                 }
                 if (activities.length > 2) cell.append(dayButton(date, '+' + (activities.length - 2) + ' más', 'fc-daygrid-more-link'));
@@ -206,20 +206,21 @@
                 const row = dayButton(date, item.title, 'fc-list-event', item);
                 row.replaceChildren(element('span', 'fc-list-event-time', item.end ? item.start + ' – ' + item.end : item.start),
                     element('span', 'fc-list-event-title', item.title));
-                setActivityStyle(row, item.kind, item.reading?.slug);
+                setActivityStyle(row, item.kind, item.reading?.slug || item.readingSlug);
                 section.append(row);
             }
             list.append(section);
         }
-        if (!list.children.length) list.append(element('p', 'fc-list-empty', 'No hay actividades de muestra para esta semana.'));
+        if (!list.children.length) list.append(element('p', 'fc-list-empty', 'No hay actividades publicadas para esta semana.'));
         return list;
     }
 
     function updatePlan() {
         const reference = data.today();
-        if (state.reference !== reference) {
+        if (state.reference !== reference || state.planGroup !== groupSelect.value) {
             state.reference = reference;
-            state.plan = data.buildSample(reference);
+            state.planGroup = groupSelect.value;
+            state.plan = data.buildGroupPlan(reference, groupSelect.value);
         }
     }
 
@@ -227,6 +228,11 @@
     const groupSelect = byId('calendar-bc-group');
     const classesView = byId('calendar-bc-view-classes');
     const practiceView = byId('calendar-bc-view-practice');
+    const groupControl = groupSelect.parentElement;
+    const groupHome = groupControl.parentElement;
+    classesView.textContent = 'Horario por semana';
+    practiceView.textContent = 'Calendario';
+    practiceView.parentElement.prepend(practiceView);
     const groupPreference = () => 'ben-carson:calendar-group:' + (state.user || 'local');
     const isGroup = key => Object.prototype.hasOwnProperty.call(classCalendar.groups, key);
     const classDate = new Intl.DateTimeFormat('es-BO', { day: 'numeric', month: 'short', timeZone: 'UTC' });
@@ -302,16 +308,20 @@
     classesView.addEventListener('click', () => switchCalendarView(true));
     practiceView.addEventListener('click', () => switchCalendarView(false));
     groupSelect.addEventListener('change', () => {
+        if (!canLeaveActivity()) { groupSelect.value = state.planGroup || ''; return; }
         try {
             if (isGroup(groupSelect.value)) localStorage.setItem(groupPreference(), groupSelect.value);
             else localStorage.setItem(groupPreference(), '');
         } catch {}
-        renderClassCalendar();
         window.dispatchEvent(new CustomEvent('ben-carson:calendar-group-change', { detail: groupSelect.value }));
     });
     window.addEventListener('ben-carson:calendar-group-change', ({ detail }) => {
+        if (!canLeaveActivity()) return;
         groupSelect.value = isGroup(detail) ? detail : '';
         renderClassCalendar();
+        updatePlan();
+        if (!dayPanel.hidden) showDay(state.date || data.today(), false);
+        else renderOverview();
     });
     byId('calendar-bc-open-study').addEventListener('click', () => {
         const first = data.move(classCalendar.start, (classWeek || 0) * 7);
@@ -327,7 +337,7 @@
 
     function renderOverview(focusClass) {
         renderClassCalendar();
-        byId('calendar-board-plan-label').textContent = groupSelect.value === 'virtual' ? 'Estudio sugerido · Grupo Virtual' : 'Plan de práctica de muestra';
+        byId('calendar-board-plan-label').textContent = isGroup(groupSelect.value) ? (groupSelect.value === 'virtual' ? 'Clases y repaso sugerido · Grupo Virtual' : 'Horario de clases · ' + classCalendar.groups[groupSelect.value].location) : 'Elige tu grupo para ver las actividades publicadas';
         updatePlan();
         overviewDate ||= state.date || state.reference;
         const [start, end] = range();
@@ -374,7 +384,7 @@
         try {
             await Promise.all([window.loadCampusAssets('calendar-pdf'), loadScript('/vendor/jspdf/jspdf.umd.min.js')]);
             const pdf = window.StudyCalendarPdf.create(window.jspdf.jsPDF, state.plan, start, end);
-            pdf.save('AlcocerMed-programa-de-muestra-' + start + '.pdf');
+            pdf.save('AlcocerMed-programa-' + (groupSelect.value || 'sin-grupo') + '-' + start + '.pdf');
             setStatus('');
         } catch (_) {
             setStatus('No se pudo preparar el programa. Vuelve a pulsar Descargar programa.');
@@ -384,8 +394,7 @@
     }
 
     function activitiesFor(date) {
-        const virtual = data.virtualStudy(date, groupSelect.value);
-        return virtual.length ? virtual : state.plan.get(date) || [];
+        return state.plan.get(date) || [];
     }
     function activities() {
         return activitiesFor(state.date);
@@ -470,6 +479,7 @@
         reading = selectedReading;
         if (state.active?.readingGroup && selectedReading) guidedTopic.set(state.active.readingGroup, selectedReading.topicLinks.evaluation);
         renderActivity();
+        renderPlan();
         focusDay();
     }
 
@@ -506,8 +516,8 @@
         content.append(symbol, copy);
         const group = element('div', 'calendar-study-tools');
         group.append(
-            tool('Manual', 'book', () => updateView('orientation')),
-            tool(item.readingOptions ? 'Desglose y exámenes pasados' : 'Examen pasado', 'agenda', () => chooseTopic('breakdown')),
+            tool('Manual', 'book', () => updateView('manual')),
+            tool('Examen pasado', 'agenda', () => chooseTopic('breakdown')),
             tool('Evaluación', 'practice', () => chooseTopic('evaluation'))
         );
         card.append(content, group, readingSource(reading), element('p', 'calendar-study-guide', item.description));
@@ -689,7 +699,7 @@
     function renderDefault(item) {
         const card = element('section', 'calendar-info-card');
         const body = element('div');
-        const title = item?.title || 'Día sin actividades de muestra';
+        const title = item?.title || 'Día sin actividades publicadas';
         const detail = item?.description || 'Usa las flechas del horario para consultar otro día.';
         card.append(icon('info'), body);
         body.append(element('h3', '', title), element('p', '', detail));
@@ -724,14 +734,20 @@
         byId('calendar-day-title').textContent = viewTitles[view] && reading
             ? viewTitles[view] + ' · ' + reading.topic
             : item?.title || 'Estudio del día';
-        const hasGuided = data.virtualStudy(state.date, groupSelect.value).length > 0;
-        byId('calendar-day-label').textContent = data.formatDay(state.date) + (hasGuided ? ' · Grupo Virtual' : ' · Plan de muestra');
-        if (item?.readingOptions && reading && !examMounted) addReadingSelect(item.readingOptions, 'Tema sugerido de la semana', view);
+        const group = classCalendar.groups[groupSelect.value];
+        byId('calendar-day-label').textContent = data.formatDay(state.date) + (group ? ' · ' + group.location + (groupSelect.value === 'virtual' ? ' · Repaso sugerido' : '') : ' · Elige tu grupo');
+        if (item?.readingOptions && reading && !examMounted) addReadingSelect(item.readingOptions, 'Tema de repaso de la semana', view);
         if (view === 'study') renderStudy(item);
         else if (view === 'manual' || view === 'orientation') renderManual(item, isCurrent);
         else if (view === 'breakdown') renderBreakdown(isCurrent);
         else if (view === 'evaluation') renderEvaluation(item, isCurrent);
-        else renderDefault(item);
+        else if (item) renderDefault(item);
+        else {
+            const card = element('section', 'calendar-study-card');
+            card.append(element('h3', '', isGroup(groupSelect.value) ? 'Sin actividades publicadas para este día' : 'Elige tu grupo'),
+                element('p', 'calendar-study-guide', isGroup(groupSelect.value) ? 'Puedes cambiar de fecha o consultar el calendario.' : 'Selecciona Presencial 1, Presencial 2 o Virtual en el horario para ver tus clases y los temas de repaso confirmados.'));
+            workspace.append(card);
+        }
         renderRating();
         renderProgress();
     }
@@ -775,16 +791,18 @@
         list.replaceChildren();
         for (const item of activities()) {
             const row = element('li', 'calendar-plan-row');
-            setActivityStyle(row, item.kind, item.reading?.slug);
+            setActivityStyle(row, item.kind, item.reading?.slug || item.readingSlug);
             const select = button('calendar-plan-item', '', () => selectActivity(item));
             select.dataset.calendarActivity = item.id;
             const times = element('span', 'calendar-plan-times', item.start);
             if (item.end) times.append(element('span', '', item.end));
-            select.append(times, element('span', 'calendar-plan-item-label', item.title));
+            const chosen = item.readingOptions?.find(book => book.topicLinks.evaluation === guidedTopic.get(item.readingGroup)) || item.reading;
+            const label = chosen && item.readingOptions ? item.title + ' · ' + chosen.topic : item.title;
+            select.append(times, element('span', 'calendar-plan-item-label', label));
             row.append(select, completionButton(item, 'calendar-plan-complete'));
             list.append(row);
         }
-        if (!list.children.length) list.append(element('li', 'calendar-plan-empty', 'Este día no tiene actividades de muestra.'));
+        if (!list.children.length) list.append(element('li', 'calendar-plan-empty', isGroup(groupSelect.value) ? 'Este día no tiene actividades publicadas.' : 'Selecciona tu grupo para ver el horario.'));
         updateSelection();
         renderProgress();
     }
@@ -793,6 +811,8 @@
         if (!canLeaveActivity()) return;
         const entering = dayPanel.hidden;
         state.date = date;
+        updatePlan();
+        if (groupControl.parentElement !== plan) { groupControl.classList.add('calendar-day-group'); plan.prepend(groupControl); }
         const items = activities();
         setActivity(items.find(item => item.id === activityId) || items[0]);
         overview.hidden = true;
@@ -805,6 +825,8 @@
 
     function showOverview() {
         clearPanel();
+        groupControl.classList.remove('calendar-day-group');
+        groupHome.append(groupControl);
         overview.hidden = false;
         dayPanel.hidden = true;
     }
@@ -831,9 +853,8 @@
     byId('calendar-back').onclick = () => {
         if (!canLeaveActivity()) return;
         showOverview();
-        switchCalendarView(false);
         overviewDate = state.date;
-        renderOverview();
+        switchCalendarView(false);
     };
     window.addEventListener('campus-access-change', () => {
         if (CampusAccess.isFree()) lastEvaluation = null;
@@ -842,13 +863,15 @@
     window.CampusCalendar = {
         open() {
             if (!canLeaveActivity() || showScreen('study-calendar-screen') === false) return;
-            showOverview();
-            renderOverview();
+            renderClassCalendar();
+            updatePlan();
+            showDay(data.today());
         },
         openDate(date, activityId) {
             const value = new Date(date + 'T00:00:00Z');
             if (!/^\d{4}-\d{2}-\d{2}$/.test(date) || Number.isNaN(value.getTime()) || currentDateKey(value) !== date) return false;
             if (showScreen('study-calendar-screen') === false) return false;
+            renderClassCalendar();
             updatePlan();
             showDay(date, true, activityId);
             return true;

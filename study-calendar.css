@@ -448,3 +448,9 @@
 .calendar-bc-guide dl > div { display:grid; grid-template-columns:5.65rem minmax(0,1fr); gap:5px; border-top:1px solid var(--cal-border); padding-top:5px; }
 .calendar-bc-guide dt { color:var(--cal-ink); font-size:11px; font-weight:600; }
 .calendar-bc-guide dd { color:var(--cal-muted); margin:0; font-size:11px; overflow-wrap:anywhere; }
+
+/* Keep the original daily workspace while the group picker stays within the schedule. */
+.calendar-plan .calendar-day-group { display:grid; gap:5px; width:100%; margin:0 0 16px; }
+.calendar-plan .calendar-day-group label { font-size:11px; color:var(--cal-muted); }
+.calendar-plan .calendar-day-group select { width:100%; max-width:100%; min-height:40px; font-family:inherit; font-size:12px; font-weight:600; }
+.calendar-plan-item-label { min-width:0; }

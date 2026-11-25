@@ -241,13 +241,13 @@
         const mfq = classCalendar.subjects[mfqId] + ' · ' + classCalendar.topics[week][dayIndex];
         const one = 'Elige un tema de la semana. No tienes que estudiar todos el mismo día.';
         topic('morfo-estudio','morfofuncion','study','07:00','09:00','Morfofunción','reading',one);
-        topic('morfo-desglose','morfofuncion','exam','09:00','10:00','Desglose · Morfofunción','questions',one);
-        topic('morfo-simulacro','morfofuncion','exam','10:00','11:00','Simulacro · Morfofunción','evaluation',one);
+        topic('morfo-desglose','morfofuncion','exam','09:00','10:00','Examen pasado · Morfofunción','questions',one);
+        topic('morfo-simulacro','morfofuncion','exam','10:00','11:00','Evaluación · Morfofunción','evaluation',one);
         add('suficiencia-1','practice','11:00','12:00',mfq,'Practica el tema de suficiencia del día.',{resource:'sufficiency'});
         add('almuerzo','rest','12:00','13:00','Almuerzo y descanso','Haz una pausa antes de retomar el estudio.');
         add('suficiencia-2','practice','13:00','14:00',mfq,'Segunda hora de práctica de suficiencia.',{resource:'sufficiency'});
         topic('bio-estudio','biologia-celular','study','14:00','16:00','Biología Celular','reading',one);
-        topic('bio-desglose','biologia-celular','exam','16:00','17:00','Desglose · Biología Celular','questions',one);
+        topic('bio-desglose','biologia-celular','exam','16:00','17:00','Examen pasado · Biología Celular','questions',one);
         const virtual = classCalendar.groups.virtual;
         const lesson = virtual.days[dayIndex].map((id,i)=>virtual.times[i] + ' · ' + classCalendar.subjects[id]);
         add('clases','free','17:00','21:00','Clases virtuales en vivo',lesson.join(' | '));
@@ -256,5 +256,42 @@
         return rows;
     }
 
-    return { zone, kinds, today, move, monday, formatDay, pageRange, buildSample, classCalendar, virtualStudy };
+    // Official class slots come from the three supplied timetable photos. Study chapters
+    // are only offered when the teacher confirmed them for this particular week.
+    function groupDay(key, groupId) {
+        const group = classCalendar.groups[groupId];
+        if (!group || key < classCalendar.start || key > classCalendar.end) return [];
+        if (groupId === 'virtual') return virtualStudy(key, groupId);
+        const index = toDate(key).getUTCDay() - 1;
+        if (index < 0 || index > 4) return [];
+        const week = Math.floor((toDate(monday(key)) - toDate(classCalendar.start)) / 604800000);
+        const weekly = weeklyReadings[monday(key)] || {};
+        const slugs = {morfo:'morfofuncion', bio:'biologia-celular', salud:'educacion-salud'};
+        return group.days[index].map((subject, slot) => {
+            const [start,end] = group.times[slot].split('–');
+            const options = weekly[slugs[subject]] || [];
+            const mfq = ['mate','fis','quim'].includes(subject);
+            const virtualClass = mfq && classCalendar.virtualMfq.includes(key);
+            return {
+                id:key+'-'+groupId+'-clase-'+slot, date:key, kind:mfq?'practice':'study',
+                start:virtualClass?'Por confirmar':start, end:virtualClass?'':end, show:true,
+                title:classCalendar.subjects[subject], subject, readingSlug:slugs[subject], officialClass:true,
+                description:(virtualClass?'Clase virtual: confirma el horario con la preparatoria. ':'Clase de '+group.location+'. ') +
+                    (options.length?'Elige qué tema confirmado de esta semana quieres repasar; son alternativas de estudio.':
+                     mfq?classCalendar.topics[week][index]:'El tema de esta clase aún no está publicado.'),
+                ...(options.length?{resource:'reading',reading:options[0],readingOptions:options,readingGroup:slugs[subject]}:
+                   mfq?{resource:'sufficiency'}:{}),
+            };
+        });
+    }
+    function buildGroupPlan(reference, groupId) {
+        const plan = new Map();
+        if (!Object.prototype.hasOwnProperty.call(classCalendar.groups,groupId)) return plan;
+        for (let key=classCalendar.start; key<=classCalendar.end; key=move(key,1)) {
+            const items=groupDay(key,groupId);
+            if(items.length)plan.set(key,items);
+        }
+        return plan;
+    }
+    return { zone, kinds, today, move, monday, formatDay, pageRange, buildSample, classCalendar, virtualStudy, groupDay, buildGroupPlan };
 });
