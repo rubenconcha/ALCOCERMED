@@ -43,7 +43,7 @@ window.IntocablesHub = (() => {
   const filtered=pool().filter(i=>(!subject||i.materia===subject)&&(!topic||i.tema===topic)&&normal([i.titulo,i.tema,i.materia,i.capitulo].join(' ')).includes(normal(query)));
   $('itc-count').textContent=filtered.length+' '+(countLabels[format]||'material');
   $('itc-grid').innerHTML=filtered.length?filtered.map(i=>{const locked=!i.acceso_gratis&&window.CampusAccess?.isFree(),sheet=i.kind==='sheets',premon=i.kind==='premoniciones';
-   const cover=sheet||(premon&&i.image)?`<span class="itc-sheet-cover ${premon?'itc-premonition-cover':''}" data-cover-id="${esc(i.id)}"><span class="itc-cover-placeholder"><span>${locked?'Imagen protegida':premon?'Cargando imagen…':'Lámina ilustrada'}</span></span><img data-sheet-id="${esc(i.id)}" alt="${premon?'Imagen original de ':'Vista de '}${esc(i.titulo)}" hidden></span>`:'';
+   const cover=sheet||(premon&&i.image)?`<span class="itc-sheet-cover ${premon?'itc-premonition-cover':''}" data-cover-id="${esc(i.id)}"><span class="itc-cover-placeholder"><span>${locked?'Imagen protegida':premon?'Cargando imagen…':'Lámina ilustrada'}</span></span><img data-sheet-id="${esc(i.id)}" alt="${premon?'Imagen original de ':'Vista de '}${esc(i.titulo)}" hidden></span>`:premon?`<span class="itc-premonition-paper-cover"><img src="/assets/campus-logo.webp" alt="" width="64" height="64"><span>PREMONICIONES</span><strong>${esc(i.titulo)}</strong></span>`:'';
    const top=premon?'PREMONICIÓN':sheet?'LÁMINA':String(i.orden).padStart(2,'0');
    const detail=premon?esc(i.capitulo||'')+(i.count?' · '+esc(i.count)+' temas':''):esc(i.tema);
    const action=locked?'Disponible con un plan':premon?'Abrir premonición':sheet?'Abrir lámina':'Abrir ficha';
@@ -91,6 +91,7 @@ window.IntocablesHub = (() => {
   $('itc-premonition-subtitle').textContent = [item.capitulo, count ? count + ' temas' : ''].filter(Boolean).join(' · ');
   const hasImage = Boolean(item.image);
   $('itc-premonition-dialog').classList.toggle('itc-premonition-image-dialog', hasImage);
+  $('itc-premonition-paper').hidden = hasImage;
   $('itc-premonition-heading').hidden = hasImage;
   $('itc-premonition-list').hidden = hasImage;
   $('itc-premonition-image-view').hidden = !hasImage;
@@ -111,9 +112,7 @@ window.IntocablesHub = (() => {
    if (typeof entry === 'string' || !entry.pages?.length) {
     return '<li><span class="itc-premonition-label">' + esc(typeof entry === 'string' ? entry : entry.text) + '</span></li>';
    }
-   return `<li><button type="button" class="itc-premonition-link" data-premonition-index="${index}">
-    <span><span class="itc-premonition-topic">${esc(entry.text)}</span><small>Texto oficial · ${esc(readingPageLabel(entry.pages))}</small></span>
-    <span class="itc-premonition-arrow" aria-hidden="true">↗</span></button></li>`;
+   return `<li><button type="button" class="itc-premonition-link" data-premonition-index="${index}" title="Leer en el texto oficial · ${esc(readingPageLabel(entry.pages))}"><span class="itc-premonition-topic">${esc(entry.text)}</span></button></li>`;
   }).join('');
   $('itc-premonition-source').textContent = item.source ? [item.source.author, item.source.title, item.source.edition].join(' · ') : '';
   $('itc-premonition-status').textContent = '';

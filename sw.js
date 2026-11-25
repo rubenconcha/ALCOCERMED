@@ -1,4 +1,4 @@
-const CACHE_NAME = 'alcocermed-main-v221-premoniciones-imagen';
+const CACHE_NAME = 'alcocermed-main-v222-premoniciones-membrana';
 const APP_SHELL = [
     './video-community.js?v=1',
     './video-community.css?v=1',
@@ -57,7 +57,7 @@ const APP_SHELL = [
     './flashcard-workspace.js?v=20261109-foco',
     './script.js?v=20261122-simulacro-google',
     './campus-login.js?v=9',
-    './campus-catalogs.js?v=7',
+    './campus-catalogs.js?v=8',
     './campus-exam-engine.js?v=4',
     './topic-evaluations.js?v=20261112-muestra',
     './topic-evaluations.css?v=6',
@@ -84,8 +84,8 @@ const APP_SHELL = [
     '/assets/vendor/font-awesome-6.4.0/webfonts/fa-solid-900.woff2',
     '/assets/vendor/font-awesome-6.4.0/webfonts/fa-v4compatibility.woff2',
 
-    './intocables-hub.js?v=9',
-    './intocables-sheets.css?v=5',
+    './intocables-hub.js?v=10',
+    './intocables-sheets.css?v=6',
     './assets/study-art/intocables-hero.webp',
     './study-assessments.js?v=2',
     './simulation-scope.js?v=13',

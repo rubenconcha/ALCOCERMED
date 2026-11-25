@@ -11,19 +11,26 @@ const css = fs.readFileSync('intocables-sheets.css', 'utf8');
 const sw = fs.readFileSync('sw.js', 'utf8');
 const vercel = JSON.parse(fs.readFileSync('vercel.json', 'utf8'));
 
-test('el material conserva Morfofunción e incorpora los diez puntos de Macrotransporte', () => {
-  assert.equal(premoniciones.length, 8);
+test('el material conserva Morfofunción, Macrotransporte y los dieciséis puntos de Membrana plasmática', () => {
+  assert.equal(premoniciones.length, 9);
   const morphology = premoniciones.filter(item => item.materia === 'Morfofunción');
   assert.deepEqual(morphology.map(item => item.orden), [1, 2, 5, 6, 7, 8, 9]);
   assert.ok(morphology.every(item => item.items.length >= 11));
   assert.ok(premoniciones.every(item => /^Capítulo \d+$/.test(item.capitulo)));
-  assert.equal(new Set(premoniciones.map(item => item.id)).size, 8);
+  assert.equal(new Set(premoniciones.map(item => item.id)).size, 9);
   const macro = premoniciones.find(item => item.id === 'premo-bio-05');
   assert.equal(macro.items.length, 10);
   assert.equal(macro.source.slug, 'biologia-celular');
   assert.deepEqual(macro.items.map(item => item.page || item.pages[0].page), [218, 222, 226, 229, 231, 232, 235, 238, 240, 242]);
   assert.match(macro.items[7].text, /ARF.*5\.19.*5\.20/);
   assert.match(macro.items[9].text, /SNARE.*5\.22/);
+  const membrane = premoniciones.find(item => item.id === 'premo-bio-03');
+  assert.equal(membrane.items.length, 16);
+  assert.equal(membrane.source.slug, 'biologia-celular');
+  assert.deepEqual(membrane.source.chapterAuthors, ['Carlos Bravo', 'Alfonso Calvo']);
+  assert.deepEqual(membrane.items.map(item => item.page), [123, 122, 130, 132, 133, 133, 134, 135, 140, 143, 145, 148, 149, 151, 152, 156]);
+  assert.match(membrane.items[11].text, /Hemoglobinuria paroxística nocturna/);
+  assert.match(membrane.items[15].section, /glucocáliz; Figura 3-20/);
 });
 
 test('cada tema identifica su libro oficial, sección y páginas válidas con su numeración impresa', () => {
@@ -66,11 +73,13 @@ test('Intocables muestra Láminas y la nueva subdivisión Premoniciones Ben Cars
   assert.match(html, /data-format="premoniciones"[^>]*>Premoniciones Ben Carson<\/button>/);
   assert.match(html, /id="itc-premonition-dialog"/);
   assert.match(html, /id="itc-premonition-list"/);
-  assert.match(html, /intocables-hub\.js\?v=9/);
+  assert.match(html, /intocables-hub\.js\?v=10/);
   assert.match(html, /intocables-sheets\.css\?v=\d+/);
   assert.match(html, /campus-catalogs\.js\?v=\d+/);
   assert.match(css, /\.itc-premonition-list/);
   assert.match(css, /\.itc-premonition-hotspot/);
+  assert.match(html, /id="itc-premonition-paper"/);
+  assert.match(css, /\.itc-premonition-paper-cover/);
   assert.doesNotMatch(hub, /itc-premonition-banner/);
 });
 
@@ -127,7 +136,7 @@ test('la ruta queda registrada con sus archivos y bloqueada al acceso directo', 
   assert.equal(rewrite?.destination, '/api/premoniciones?id=invalid');
   const cacheVersion = Number(sw.match(/CACHE_NAME = 'alcocermed-main-v(\d+)-[^']+'/)?.[1]);
   assert.ok(cacheVersion >= 209, 'mantiene una versión de caché igual o más reciente');
-  assert.match(sw, /'\.\/intocables-hub\.js\?v=9'/);
+  assert.match(sw, /'\.\/intocables-hub\.js\?v=10'/);
   const stylesheet = html.match(/href="(intocables-sheets\.css\?v=\d+)"/)?.[1];
   assert.ok(stylesheet, 'el campus carga la hoja de estilo con versión');
   assert.ok(sw.includes("'./" + stylesheet + "'"), 'el caché usa la misma versión que el campus');
@@ -145,7 +154,7 @@ test('los temas abren su lectura específica y conservan la lista al cerrar el l
     $: get,
     esc: value => String(value).replace(/&/g, '&amp;').replace(/</g, '&lt;'),
     activePremonition: null, premonitionRequest: 0,
-    premonitionZoom: 1, covers: new Map([['premo-bio-05', 'blob:original-image']]),
+    premonitionZoom: 1, covers: new Map([['premo-bio-05', 'blob:original-image'], ['premo-bio-03', 'blob:membrane-image']]),
     currentUser: { id: 'student' }, currentCampusScreen: 'intocables-hub-screen',
     window: {
       CampusAccess: { isFree: () => free, unlock: () => calls.push('locked') },
@@ -179,6 +188,24 @@ test('los temas abren su lectura específica y conservan la lista al cerrar el l
     assert.equal(get('itc-premonition-dialog').open, true);
     assert.equal(button.disabled, false);
   }
+  const membrane = premoniciones.find(item => item.id === 'premo-bio-03');
+  context.renderPremonition(membrane);
+  assert.equal(get('itc-premonition-image').src, 'blob:membrane-image');
+  assert.equal((get('itc-premonition-hotspots').innerHTML.match(/data-premonition-index=/g) || []).length, 16);
+  for (let i = 0; i < membrane.items.length; i++) {
+    await context.readPremonition(i, button);
+    const [slug, page, refs] = calls.at(-1);
+    assert.equal(slug, 'biologia-celular');
+    assert.equal(page, membrane.items[i].page);
+    assert.equal(refs, membrane.items[i].pages);
+  }
+  context.renderPremonition(premoniciones[0]);
+  assert.equal(get('itc-premonition-paper').hidden, false);
+  assert.equal(get('itc-premonition-image-view').hidden, true);
+  assert.equal(get('itc-premonition-list').hidden, false);
+  assert.match(get('itc-premonition-list').innerHTML, /Anatomía y fisiología/);
+  await context.readPremonition(0, button);
+  assert.equal(calls.at(-1)[0], 'morfofuncion');
   context.window.loadCampusAssets = async () => { throw new Error('offline'); };
   await context.readPremonition(0, button);
   assert.match(get('itc-premonition-status').textContent, /reintentar/);
@@ -192,19 +219,25 @@ test('los temas abren su lectura específica y conservan la lista al cerrar el l
   assert.equal(calls.at(-1), 'locked');
 });
 
-test('la imagen original se conserva íntegra y las diez zonas se mantienen dentro de sus renglones', () => {
-  const macro = premoniciones.find(item => item.id === 'premo-bio-05');
-  const original = fs.readFileSync('api/_premoniciones/' + macro.image.file);
-  assert.equal(crypto.createHash('sha256').update(original).digest('hex'), macro.image.sha256);
-  assert.equal(macro.image.sha256, '9e40bf9ac309c4a8973d1caa9a3ab45ef263d4ed32c39bfe4e5a1d974d245693');
-  assert.equal(original.readUInt32BE(16), macro.image.width);
-  assert.equal(original.readUInt32BE(20), macro.image.height);
-  for (const [index, entry] of macro.items.entries()) {
+test('las dos imágenes originales se conservan íntegras y sus zonas se mantienen dentro de los renglones', () => {
+  const originals = {
+    'premo-bio-05': '9e40bf9ac309c4a8973d1caa9a3ab45ef263d4ed32c39bfe4e5a1d974d245693',
+    'premo-bio-03': '3175112be7fdd81ff549f1e3c967cfe40fab51ff053a62b82b28ff7095f6c212',
+  };
+  for (const [id, sha256] of Object.entries(originals)) {
+   const item = premoniciones.find(entry => entry.id === id);
+   const original = fs.readFileSync('api/_premoniciones/' + item.image.file);
+   assert.equal(crypto.createHash('sha256').update(original).digest('hex'), item.image.sha256);
+   assert.equal(item.image.sha256, sha256);
+   assert.equal(original.readUInt32BE(16), item.image.width);
+   assert.equal(original.readUInt32BE(20), item.image.height);
+   for (const [index, entry] of item.items.entries()) {
     const [x, y, width, height] = entry.region;
     assert.ok(x >= 0 && y >= 0 && width > 0 && height > 0);
-    assert.ok(x + width <= macro.image.width && y + height <= macro.image.height);
-    const next = macro.items[index + 1];
+    assert.ok(x + width <= item.image.width && y + height <= item.image.height);
+    const next = item.items[index + 1];
     if (next) assert.ok(y + height <= next.region[1], 'las zonas no se superponen');
+   }
   }
 });
 
@@ -229,12 +262,16 @@ test('la imagen de la premonición exige el mismo acceso que su lectura y devuel
     assert.equal(res.statusCode, 403);
     assert.equal(res.body, undefined);
     global.fetch = async () => ({ ok: true, json: async () => ({ ready: true, premium: true }) });
-    res = response();
-    await handler(request, res);
-    assert.equal(res.statusCode, 200);
-    assert.equal(res.headers['Content-Type'], 'image/png');
-    assert.equal(res.headers['Cache-Control'], 'private, no-store');
-    assert.deepEqual(res.body, fs.readFileSync('api/_premoniciones/images/macrotransporte.png'));
+    for (const id of ['premo-bio-03', 'premo-bio-05']) {
+      request.query.id = id;
+      res = response();
+      await handler(request, res);
+      assert.equal(res.statusCode, 200);
+      assert.equal(res.headers['Content-Type'], 'image/png');
+      assert.equal(res.headers['Cache-Control'], 'private, no-store');
+      const item = premoniciones.find(item => item.id === id);
+      assert.deepEqual(res.body, fs.readFileSync('api/_premoniciones/' + item.image.file));
+    }
   } finally {
     global.fetch = originalFetch;
   }
