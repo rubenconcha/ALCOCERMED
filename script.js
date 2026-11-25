@@ -3296,11 +3296,12 @@ function ensureVideoCommunityAssets() {
 }
 
 const BEN_CARSON_5050_PLAYBACK_PATH = '/api/flashcards?bc5050_playback=1';
+const BEN_CARSON_BIO_PLAYBACK_PATH = '/api/flashcards?bc_biologia_playback=1';
 
-async function getBenCarson5050Playback() {
+async function getBenCarson5050Playback(playbackPath = BEN_CARSON_5050_PLAYBACK_PATH) {
     const { data, error } = await getSupabase().auth.getSession();
     if (error || !data?.session?.access_token) throw new Error('Vuelve a iniciar sesión para ver la videoclase.');
-    const response = await fetch(BEN_CARSON_5050_PLAYBACK_PATH, {
+    const response = await fetch(playbackPath, {
         method: 'POST',
         headers: { Authorization: 'Bearer ' + data.session.access_token },
         cache: 'no-store',
@@ -3664,10 +3665,11 @@ window.openVcModal = async function (v) {
         currentUser?.id === owner && currentCampusSessionId === session;
     if (!await verifyVideoclasesAccess(current)) return;
     const secured = v === BEN_CARSON_5050_LESSON;
+    const protectedBiology = campo(v, 'url_video') === BEN_CARSON_BIO_PLAYBACK_PATH;
     let embedUrl;
-    if (secured) {
+    if (secured || protectedBiology) {
         try {
-            embedUrl = await getBenCarson5050Playback();
+            embedUrl = await getBenCarson5050Playback(protectedBiology ? BEN_CARSON_BIO_PLAYBACK_PATH : BEN_CARSON_5050_PLAYBACK_PATH);
         } catch (error) {
             if (current() && CampusAccess.canUseVideos()) {
                 showToast(error instanceof Error && ['Vuelve a iniciar sesión para ver la videoclase.',
@@ -3688,7 +3690,7 @@ window.openVcModal = async function (v) {
     document.getElementById('vc-modal-materia').textContent = (campo(v, 'materia') || '').toLowerCase();
     var iframe = document.getElementById('vc-iframe');
     if (iframe) {
-        if (secured) iframe.referrerPolicy = 'strict-origin-when-cross-origin';
+        if (secured || protectedBiology) iframe.referrerPolicy = 'strict-origin-when-cross-origin';
         else iframe.removeAttribute('referrerpolicy');
         vcState.stopMeasurement?.();
         vcState.stopMeasurement = measureVideoPlayback(iframe, embedUrl);

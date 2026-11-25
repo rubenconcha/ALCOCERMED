@@ -1,4 +1,4 @@
-const CACHE_NAME = 'alcocermed-main-v226-cronograma-presencial';
+const CACHE_NAME = 'alcocermed-main-v227-video-biologia';
 const APP_SHELL = [
     './video-community.js?v=1',
     './video-community.css?v=1',

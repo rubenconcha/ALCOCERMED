@@ -22,7 +22,7 @@ jobs:
       - name: Check video reactions, comments and player isolation
         run: |
           node --check video-community.js
-          node --test tests/video-community.test.cjs tests/videoclases-topics.test.cjs
+          node --test tests/video-community.test.cjs tests/videoclases-topics.test.cjs tests/video-protected-lessons.test.cjs
       - name: Check device authorization and email code flow
         run: node --test tests/device-email-code.test.cjs tests/platform-audit.test.cjs
       - name: Check sufficiency exam bank and student flow

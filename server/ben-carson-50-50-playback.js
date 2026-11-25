@@ -15,7 +15,7 @@ function isAllowedOrigin(origin, env) {
   return env.VERCEL_ENV === 'production' && PRODUCTION_ORIGINS.has(origin);
 }
 const GUID = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
-function createHandler({ fetcher = fetch, env = process.env, now = Date.now, defaultPublishableKey } = {}) {
+function createHandler({ fetcher = fetch, env = process.env, now = Date.now, defaultPublishableKey, videoGuid } = {}) {
   return async function playback(req, res) {
     res.setHeader('Cache-Control', 'private, no-store, max-age=0');
     res.setHeader('Vercel-CDN-Cache-Control', 'no-store');
@@ -33,7 +33,8 @@ function createHandler({ fetcher = fetch, env = process.env, now = Date.now, def
       return send(401, { error: 'sign_in_required' });
     }
     const key = env.ALCOCERMED_SUPABASE_PUBLISHABLE_KEY || env.SUPABASE_ANON_KEY || defaultPublishableKey;
-    const guid = env.ALCOCERMED_BC5050_BUNNY_VIDEO_GUID;
+    // Optional server-selected lesson. Never read a Bunny GUID from the client request.
+    const guid = videoGuid || env.ALCOCERMED_BC5050_BUNNY_VIDEO_GUID;
     const signingKey = env.ALCOCERMED_BC5050_BUNNY_EMBED_TOKEN_KEY;
     if (!key || !GUID.test(guid || '') || !signingKey) {
       return send(503, { error: 'playback_unavailable' });
