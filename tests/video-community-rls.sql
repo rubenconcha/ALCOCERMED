@@ -69,6 +69,14 @@ do $$begin
   raise exception 'Displaced device accepted'; exception when insufficient_privilege then insert into video_qa_checks values('displaced device cannot react',true);end;
 end$$;
 reset role;
+select set_config('request.jwt.claims',jsonb_build_object('sub',(select u.id from auth.users u where lower(u.email)='pichon4488@gmail.com' limit 1),'role','authenticated')::text,true);
+set local role authenticated;
+do $$declare n integer;begin
+ if not public.campus_is_admin() then raise exception 'Admin fixture unavailable';end if;
+ delete from public.campus_video_comments where user_id in (select id from video_qa_ids);get diagnostics n=row_count;
+ insert into video_qa_checks values('teacher can moderate comments',n=1);
+end$$;
+reset role;
 insert into video_qa_checks values('anonymous cannot read comments',not has_table_privilege('anon','public.campus_video_comments','select'));
 insert into video_qa_checks values('anonymous cannot read reactions',not has_table_privilege('anon','public.campus_video_reactions','select'));
 do $$begin if exists(select 1 from video_qa_checks where not coalesce(ok,false)) then raise exception 'Video RLS check failed';end if;end$$;

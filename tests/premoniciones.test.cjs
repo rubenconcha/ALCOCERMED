@@ -35,8 +35,8 @@ test('Intocables muestra Láminas y la nueva subdivisión Premoniciones Ben Cars
   assert.match(html, /id="itc-premonition-dialog"/);
   assert.match(html, /id="itc-premonition-list"/);
   assert.match(html, /intocables-hub\.js\?v=7/);
-  assert.match(html, /intocables-sheets\.css\?v=2/);
-  assert.match(html, /campus-catalogs\.js\?v=4/);
+  assert.match(html, /intocables-sheets\.css\?v=\d+/);
+  assert.match(html, /campus-catalogs\.js\?v=\d+/);
   assert.match(css, /\.itc-premonition-list/);
   assert.match(css, /\.itc-premonition-banner/);
 });
@@ -95,5 +95,7 @@ test('la ruta queda registrada con sus archivos y bloqueada al acceso directo', 
   const cacheVersion = Number(sw.match(/CACHE_NAME = 'alcocermed-main-v(\d+)-[^']+'/)?.[1]);
   assert.ok(cacheVersion >= 209, 'mantiene una versión de caché igual o más reciente');
   assert.match(sw, /'\.\/intocables-hub\.js\?v=7'/);
-  assert.match(sw, /'\.\/intocables-sheets\.css\?v=2'/);
+  const stylesheet = html.match(/href="(intocables-sheets\.css\?v=\d+)"/)?.[1];
+  assert.ok(stylesheet, 'el campus carga la hoja de estilo con versión');
+  assert.ok(sw.includes("'./" + stylesheet + "'"), 'el caché usa la misma versión que el campus');
 });
