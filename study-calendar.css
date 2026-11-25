@@ -477,3 +477,22 @@
         color: #272331;
     }
 }
+
+/* The full bibliography card opens only the selected chapter in the inline reader. */
+.calendar-reading-link { width:100%; font-family:inherit; text-align:left; cursor:pointer }
+.calendar-reading-link:hover { border-color:var(--cal-blue); background:var(--cal-hover) }
+.calendar-reading-link-label { color:var(--cal-action); font-size:12px; font-weight:600; margin-top:3px }
+
+/* Topic exercises stay within the daily calendar workspace. */
+.calendar-practice-layout { display:grid; grid-template-columns:minmax(0,1.15fr) minmax(0,1fr); align-items:start; gap:14px }
+.calendar-practice-question { padding:20px; border:1px solid var(--cal-border); border-top:3px solid #4c57b4; border-radius:9px; background:var(--cal-panel); min-width:0 }
+.calendar-practice-position { font-size:12px; color:var(--cal-muted); margin:0 0 14px }
+.calendar-practice-prompt { font-size:17px; line-height:1.6; white-space:pre-line; margin:0 0 20px }
+.calendar-practice-options { display:grid; gap:8px; margin-bottom:16px }
+.calendar-practice-option { display:flex; gap:10px; align-items:center; padding:12px; width:100%; text-align:left; border:1px solid var(--cal-border); border-radius:9px; background:var(--cal-hover); color:var(--cal-ink); font:inherit; line-height:1.5 }
+.calendar-practice-option[aria-pressed="true"] { border-color:var(--cal-blue); background:var(--cal-panel) }
+.calendar-practice-option.is-correct { background:#e2faec; border-color:#278354; color:#176140 }
+.calendar-practice-option.is-wrong { background:#ffe5e6; border-color:#d74c50; color:#9e2132 }
+.calendar-practice-letter { display:grid; place-items:center; width:27px; height:27px; flex:none; background:var(--cal-panel); color:var(--cal-action); border-radius:50%; font-weight:600 }
+.calendar-practice-navigation { display:flex; align-items:center; justify-content:space-between; gap:12px; margin:14px 0; font-size:12px; color:var(--cal-muted) }
+@media(max-width:1050px) { .calendar-practice-layout { grid-template-columns:minmax(0,1fr) } }

@@ -1,4 +1,4 @@
-const CACHE_NAME = 'alcocermed-main-v222-premoniciones-membrana';
+const CACHE_NAME = 'alcocermed-main-v223-calendario-dirigido';
 const APP_SHELL = [
     './video-community.js?v=1',
     './video-community.css?v=1',

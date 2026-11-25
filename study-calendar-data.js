@@ -210,6 +210,79 @@
         ],
     };
 
+    // Exact existing exercise topics for each day of the supplied eight-week plan.
+    // Empty lists deliberately show an unavailable state instead of an unrelated exercise.
+    const practiceTopics = [
+        [
+            ['Aritmética','Números racionales','Expresiones decimales','Números primos','Notación científica','Potencias de diez','Múltiplos positivos'],
+            ['Unidades','Medición','Magnitudes','Prefijos','Centímetros a metros','Minutos a segundos'],
+            ['Nomenclatura'],
+            ['Razones algebraicas','Dividir dos valores'],
+            ['Unidades','Medición','Prefijos','Centímetros a metros','Minutos a segundos','Vectores','Suma de vectores'],
+        ],
+        [
+            ['Expresiones algebraicas','Identidades algebraicas','Polinomios','Operaciones con polinomios','Productos notables'],
+            ['Vectores','Suma de vectores'],
+            [],
+            ['Factorización','División algebraica','División de polinomios','Ecuaciones racionales'],
+            ['Cinemática','Movimiento relativo','Movimiento en dos etapas','Encuentros y posición','Rapidez constante','Cinemática y unidades','Rapidez con conversión de longitud'],
+        ],
+        [
+            [],
+            ['Movimiento uniformemente acelerado','Aceleración desde el reposo'],
+            ['Estructura atómica','Capacidad de orbitales','Masa atómica','Unidad de masa atómica','Elementos diferentes'],
+            ['Sistemas de ecuaciones','Sistemas lineales'],
+            ['Caída libre','Tiro vertical'],
+        ],
+        [
+            ['Ecuaciones cuadráticas'],
+            [],
+            ['Enlaces químicos','Tipos de reacción','Balance de ecuaciones','Relación molar y balance','Balance y proporciones molares','Descomposición y coeficientes'],
+            ['Inecuaciones','Inecuaciones cuadráticas'],
+            [],
+        ],
+        [
+            ['Potencias y radicales','Logaritmos','Logaritmos con base variable','Potencias de diez'],
+            ['Segunda ley de Newton','Fuerza neta','Peso de un cuerpo','Dinámica','Plano inclinado','Plano inclinado sin rozamiento'],
+            ['Masa molar','Cantidad de sustancia','Moles y moléculas','Masa de un átomo','Masa y número de átomos','Moles y número de átomos','De moles a gramos','De gramos a moles','Masa desde moles'],
+            [],
+            ['Dinámica','Segunda ley de Newton','Fuerza neta','Peso de un cuerpo'],
+        ],
+        [
+            [],
+            ['Energía','Energía cinética','Energía cinética básica','Trabajo','Potencia y rendimiento'],
+            [],
+            ['Lógica','Lógica proposicional','Conjuntos','Operaciones con conjuntos','Intersección de conjuntos','Contar elementos','Unir dos listas','Números comunes','Quitar elementos'],
+            [],
+        ],
+        [
+            [], [],
+            ['Ácidos y bases','Neutralización ácido-base'],
+            [],
+            ['Temperatura','Dilatación','Dilatación lineal','Escalas de temperatura','Ondas','Rapidez de una onda','Óptica','Lentes convergentes','Lentes divergentes'],
+        ],
+        [
+            [],
+            ['Campo eléctrico','Campo eléctrico y distancia','Definición de campo eléctrico','Carga eléctrica'],
+            [], [],
+            ['Circuitos','Resistencias en paralelo','Corriente eléctrica','Corriente y carga eléctrica','Ley de Ohm y serie','Ley de Ohm básica'],
+        ],
+    ];
+    function practiceFor(key, block = 0) {
+        const day = toDate(key).getUTCDay() - 1;
+        if (key < classCalendar.start || key > classCalendar.end || day < 0 || day > 4) return null;
+        const week = Math.floor((toDate(monday(key)) - toDate(classCalendar.start)) / 604800000);
+        return { subject:['matematicas','fisica','quimica','matematicas','fisica'][day],
+            topics:practiceTopics[week]?.[day] || [], block };
+    }
+    function practiceQuestions(questions, assignment) {
+        if (!assignment || !Array.isArray(questions)) return [];
+        const pool = questions.filter(q => q.subject === assignment.subject && !q.source?.collection && assignment.topics.includes(q.topic));
+        // Two study hours use separate question sets instead of reopening the same exercise.
+        const half = Math.ceil(pool.length / 2);
+        return (assignment.block === 1 ? (pool.slice(half).length ? pool.slice(half) : pool) : assignment.block === 0 ? pool.slice(0, half) : pool).slice(0, 20);
+    }
+
     const weeklyReadings = {
         '2026-11-23': {
             morfofuncion: [
@@ -243,9 +316,9 @@
         topic('morfo-estudio','morfofuncion','study','07:00','09:00','Morfofunción','reading',one);
         topic('morfo-desglose','morfofuncion','exam','09:00','10:00','Examen pasado · Morfofunción','questions',one);
         topic('morfo-simulacro','morfofuncion','exam','10:00','11:00','Evaluación · Morfofunción','evaluation',one);
-        add('suficiencia-1','practice','11:00','12:00',mfq,'Practica el tema de suficiencia del día.',{resource:'sufficiency'});
+        add('suficiencia-1','practice','11:00','12:00',mfq,'Practica el tema de suficiencia del día.',{resource:'sufficiency', assignment:practiceFor(key,0)});
         add('almuerzo','rest','12:00','13:00','Almuerzo y descanso','Haz una pausa antes de retomar el estudio.');
-        add('suficiencia-2','practice','13:00','14:00',mfq,'Segunda hora de práctica de suficiencia.',{resource:'sufficiency'});
+        add('suficiencia-2','practice','13:00','14:00',mfq,'Segunda hora de práctica de suficiencia.',{resource:'sufficiency', assignment:practiceFor(key,1)});
         topic('bio-estudio','biologia-celular','study','14:00','16:00','Biología Celular','reading',one);
         topic('bio-desglose','biologia-celular','exam','16:00','17:00','Examen pasado · Biología Celular','questions',one);
         const virtual = classCalendar.groups.virtual;
@@ -280,7 +353,7 @@
                     (options.length?'Elige qué tema confirmado de esta semana quieres repasar; son alternativas de estudio.':
                      mfq?classCalendar.topics[week][index]:'El tema de esta clase aún no está publicado.'),
                 ...(options.length?{resource:'reading',reading:options[0],readingOptions:options,readingGroup:slugs[subject]}:
-                   mfq?{resource:'sufficiency'}:{}),
+                   mfq?{resource:'sufficiency',assignment:practiceFor(key,-1)}:{}),
             };
         });
     }
@@ -293,5 +366,5 @@
         }
         return plan;
     }
-    return { zone, kinds, today, move, monday, formatDay, pageRange, buildSample, classCalendar, virtualStudy, groupDay, buildGroupPlan };
+    return { zone, kinds, today, move, monday, formatDay, pageRange, buildSample, classCalendar, virtualStudy, groupDay, buildGroupPlan, practiceFor, practiceQuestions };
 });

@@ -14,13 +14,12 @@
     const tools = byId('calendar-workspace-tools');
     const scripts = new Map();
     const guidedTopic = new Map();
-    const activityViews = { reading: 'study', questions: 'breakdown', evaluation: 'evaluation' };
+    const activityViews = { reading: 'study', questions: 'breakdown', evaluation: 'evaluation', sufficiency: 'practice' };
     const viewTitles = { study: 'Estudio', orientation: 'Estudio', manual: 'Estudio', breakdown: 'Examen pasado', evaluation: 'Evaluación' };
     const actions = {
         practice: ['Abrir ejercicio', item => openStudyAsset(item, 'practice', () => {
             if (showScreen('sufficiency-practice-screen') !== false) window.SufficiencyPractice.openExercise(item.practice.id);
         })],
-        sufficiency: ['Ver ejercicios de suficiencia', () => window.showScreen('sufficiency-practice-screen')],
         simulation: ['Ver simulacros', () => window.openCampusSimulations()],
         results: ['Ver mis resultados', () => window.openStudentResults()],
         flashcards: ['Repasar con flashcards', () => window.openStudyLibrary()],
@@ -497,11 +496,13 @@
     }
 
     function readingSource(book) {
-        const source = element('div', 'calendar-reading-source');
+        const source = button('calendar-reading-source calendar-reading-link', '', () => updateView('manual', book));
+        source.setAttribute('aria-label', 'Estudiar ' + book.topic + ' en el texto oficial');
         source.append(
             element('strong', '', book.title),
             element('span', '', book.credit + ' · ' + book.section),
-            element('span', '', 'Páginas impresas ' + data.pageRange(book.printed) + ' · PDF ' + data.pageRange(book.pdf))
+            element('span', '', 'Páginas impresas ' + data.pageRange(book.printed) + ' · PDF ' + data.pageRange(book.pdf)),
+            element('span', 'calendar-reading-link-label', 'Estudiar este tema en el texto oficial →')
         );
         return source;
     }
@@ -696,6 +697,96 @@
         return true;
     }
 
+    async function renderDirectedPractice(item, isCurrent) {
+        const status = message(workspace, 'Preparando los ejercicios de este tema…');
+        const assignment = item.assignment;
+        if (!assignment?.topics?.length) {
+            status.textContent = 'Todavía no hay ejercicios específicos publicados para este tema. No se mostrarán preguntas de otros temas.';
+            return;
+        }
+        try {
+            await window.loadCampusAssets('sufficiency');
+            if (!isCurrent() || window.CampusAccess?.isFree()) return;
+            const bank = await window.Sufficiency.readIndex();
+            if (!isCurrent()) return;
+            const selected = data.practiceQuestions(bank.questions, assignment);
+            if (!selected.length) {
+                status.textContent = 'Todavía no hay ejercicios específicos publicados para este bloque del tema.';
+                return;
+            }
+            const pack = await window.Sufficiency.readQuestions(selected.map(q => q.id));
+            if (!isCurrent()) return;
+            const lookup = new Map(pack.questions.map(q => [q.id, q]));
+            const questions = selected.map(q => lookup.get(q.id));
+            if (questions.some(q => !q || q.subject !== assignment.subject || !assignment.topics.includes(q.topic))) throw new Error('Preguntas no disponibles');
+            const answers = new Map();
+            let index = 0;
+            function draw(focus = false) {
+                if (!isCurrent()) return;
+                const q = questions[index];
+                const answer = answers.get(q.id) || { selected:null, checked:false };
+                const card = element('section', 'calendar-practice-question');
+                card.dataset.question = q.id;
+                const position = element('p', 'calendar-practice-position', 'Ejercicio ' + (index + 1) + ' de ' + questions.length + ' · ' + q.topic);
+                const heading = element('h3', 'calendar-practice-prompt', q.text);
+                heading.tabIndex = -1;
+                const options = element('div', 'calendar-practice-options');
+                const check = button('calendar-primary', 'Comprobar respuesta', () => {
+                    if (answer.selected === null) return;
+                    answer.checked = true;
+                    answers.set(q.id, answer);
+                    draw();
+                });
+                check.disabled = answer.selected === null || answer.checked;
+                q.options.forEach((text, i) => {
+                    const control = button('calendar-practice-option', '', () => {
+                        answer.selected = i;
+                        answers.set(q.id, answer);
+                        for (const [n, option] of [...options.children].entries()) option.setAttribute('aria-pressed', String(n === i));
+                        check.disabled = false;
+                    });
+                    control.append(element('span', 'calendar-practice-letter', String.fromCharCode(65+i)), element('span', '', text));
+                    control.setAttribute('aria-pressed', String(i === answer.selected));
+                    if (answer.checked) {
+                        control.disabled = true;
+                        if (i === q.correct) control.classList.add('is-correct');
+                        else if (i === answer.selected) control.classList.add('is-wrong');
+                    }
+                    options.append(control);
+                });
+                card.append(position, heading, options, check);
+                const review = { options:q.options, selected:answer.checked?answer.selected:null,
+                    accepted:answer.checked?[q.correct]:[], explanation:answer.checked?q.explanation:'',
+                    option_explanations:q.options.map((_,i)=>q.comentarios_opciones?.['ABCDE'[i]]) };
+                const solution = document.createElement('template');
+                if (answer.checked && q.solution) solution.innerHTML = window.SufficiencyCore.solutionHtml(q);
+                const commentary = window.QuestionReview.showCommentary(review, {
+                    lockedMessage:answer.checked?undefined:'Comprueba tu respuesta para ver el paso a paso.',
+                    workedSolution:solution.content.firstElementChild,
+                });
+                const layout = element('div', 'calendar-practice-layout');
+                layout.append(card, commentary);
+                const nav = element('nav', 'calendar-practice-navigation');
+                nav.setAttribute('aria-label', 'Ejercicios de esta actividad');
+                const previous = button('calendar-outline', '← Anterior', () => { index--; draw(true); });
+                const next = button('calendar-primary', 'Siguiente →', () => { index++; draw(true); });
+                previous.disabled = index === 0;
+                next.disabled = index === questions.length - 1;
+                nav.append(previous, element('span', '', [...answers.values()].filter(a => a.checked).length + ' de ' + questions.length + ' comprobadas'), next);
+                const complete = completionButton(item, 'calendar-outline calendar-complete-detail', false);
+                workspace.replaceChildren(layout, nav, complete);
+                renderProgress();
+                if (focus) heading.focus({ preventScroll:true });
+            }
+            draw();
+        } catch (_) {
+            if (!isCurrent()) return;
+            workspace.replaceChildren();
+            message(workspace, 'No pudimos cargar los ejercicios de este tema.');
+            workspace.append(button('calendar-outline', 'Reintentar', () => updateView('practice')));
+        }
+    }
+
     function renderDefault(item) {
         const card = element('section', 'calendar-info-card');
         const body = element('div');
@@ -741,6 +832,7 @@
         else if (view === 'manual' || view === 'orientation') renderManual(item, isCurrent);
         else if (view === 'breakdown') renderBreakdown(isCurrent);
         else if (view === 'evaluation') renderEvaluation(item, isCurrent);
+        else if (view === 'practice') renderDirectedPractice(item, isCurrent);
         else if (item) renderDefault(item);
         else {
             const card = element('section', 'calendar-study-card');

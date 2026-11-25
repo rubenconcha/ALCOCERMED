@@ -62,3 +62,26 @@ test('daily schedule keeps the unpinned navigation rail clear without changing t
  assert.match(css,/@media \(min-width: 769px\)/);
  assert.ok(css.includes('.campus-shell:not(.campus-menu-pinned):has(#home-screen:not(.hidden), #study-calendar-screen:not(.hidden) #calendar-day:not([hidden])) #sidebar { width: var(--shell-rail) }'));
 });
+
+
+test('daily exercises are constrained to the assigned subject and exact existing topic, with separate study hours',()=>{
+ const bank=require('../api/_sufficiency/bank.json');
+ for(let date=data.classCalendar.start;date<=data.classCalendar.end;date=data.move(date,1)){
+  for(const group of ['virtual','presencial_1','presencial_2']){
+   const rows=data.groupDay(date,group).filter(item=>item.resource==='sufficiency');
+   for(const item of rows){
+    const selected=data.practiceQuestions(bank.questions,item.assignment);
+    assert.ok(selected.length<=20);
+    for(const q of selected){assert.equal(q.subject,item.assignment.subject);assert.ok(item.assignment.topics.includes(q.topic));assert.ok(!q.source?.collection);}
+   }
+   if(group==='virtual'&&rows.length===2){
+    const first=data.practiceQuestions(bank.questions,rows[0].assignment),second=data.practiceQuestions(bank.questions,rows[1].assignment);
+    if(first.length+second.length>2)assert.ok(first.every(q=>!second.some(r=>r.id===q.id)));
+   }
+  }
+ }
+ const physics=data.practiceQuestions(bank.questions,data.practiceFor('2026-11-24',0));
+ assert.ok(physics.length>0);assert.ok(physics.some(q=>q.topic==='Magnitudes'));
+ assert.ok(!physics.some(q=>/circuit|lente|onda|movimiento/i.test(q.topic)));
+ assert.deepEqual(data.practiceQuestions(bank.questions,data.practiceFor('2026-12-15',0)),[]);
+});
