@@ -774,7 +774,8 @@
                 next.disabled = index === questions.length - 1;
                 nav.append(previous, element('span', '', [...answers.values()].filter(a => a.checked).length + ' de ' + questions.length + ' comprobadas'), next);
                 const complete = completionButton(item, 'calendar-outline calendar-complete-detail', false);
-                workspace.replaceChildren(layout, nav, complete);
+                card.append(nav, complete);
+                workspace.replaceChildren(layout);
                 renderProgress();
                 if (focus) heading.focus({ preventScroll:true });
             }
