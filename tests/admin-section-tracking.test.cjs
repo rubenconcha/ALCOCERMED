@@ -17,7 +17,7 @@ test('new activity is protected by own-or-admin RLS and server actor/time',()=>{
 });
 test('a section selected while loading is refreshed instead of the old tab',async()=>{
  const source=fs.readFileSync('admin.js','utf8');let finish,active='dashboard',rendered;
- const context={setText(){},loadAllData:()=>new Promise(resolve=>{finish=resolve;}),document:{querySelector:()=>({id:'section-'+active})},renderCurrentSection:id=>{rendered=id;}};
+ const context={setText(){},refreshStudentGroups:async()=>{},loadAllData:()=>new Promise(resolve=>{finish=resolve;}),document:{querySelector:()=>({id:'section-'+active})},renderCurrentSection:id=>{rendered=id;}};
  vm.createContext(context);vm.runInContext(source.slice(source.indexOf('async function refreshAdminData()'),source.indexOf('function renderCurrentSection(')),context);
  const pending=context.refreshAdminData();active='evaluaciones';finish();await pending;assert.equal(rendered,'evaluaciones');
 });
