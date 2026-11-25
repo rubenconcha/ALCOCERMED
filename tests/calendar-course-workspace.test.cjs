@@ -55,3 +55,10 @@ test('calendar entry opens the daily workspace and leaves the monthly calendar a
  assert.match(js,/tool\('Manual', 'book', \(\) => updateView\('manual'\)\)/);
  assert.match(js,/tool\('Examen pasado'/);assert.match(js,/tool\('Evaluación'/);
 });
+
+
+test('daily schedule keeps the unpinned navigation rail clear without changing the full menu',()=>{
+ const css=fs.readFileSync('study-calendar.css','utf8');
+ assert.match(css,/@media \(min-width: 769px\)/);
+ assert.ok(css.includes('.campus-shell:not(.campus-menu-pinned):has(#study-calendar-screen:not(.hidden) #calendar-day:not([hidden])) #sidebar { width: var(--shell-rail) }'));
+});

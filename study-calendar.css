@@ -454,3 +454,26 @@
 .calendar-plan .calendar-day-group label { font-size:11px; color:var(--cal-muted); }
 .calendar-plan .calendar-day-group select { width:100%; max-width:100%; min-height:40px; font-family:inherit; font-size:12px; font-weight:600; }
 .calendar-plan-item-label { min-width:0; }
+
+/* Keep the daily schedule clear; the toolbar menu still opens the full navigation. */
+@media (min-width: 769px) {
+    .campus-shell:not(.campus-menu-pinned):has(#study-calendar-screen:not(.hidden) #calendar-day:not([hidden])) #sidebar { width: var(--shell-rail) }
+    .campus-shell:not(.campus-menu-pinned):has(#study-calendar-screen:not(.hidden) #calendar-day:not([hidden])) #sidebar :is(.sidebar-header, .user-session) {
+        justify-content: center;
+        padding-inline: 0;
+    }
+    .campus-shell:not(.campus-menu-pinned):has(#study-calendar-screen:not(.hidden) #calendar-day:not([hidden])) #sidebar :is(
+        .sidebar-logo-text, .user-info, .sidebar-logout-btn, .nav-label, .nav-badge, .arrow, .campus-lock-badge,
+        .campus-nav-chevron, .campus-nav-group > ul, .sidebar-toggle-btn
+    ) { display: none }
+    .campus-shell:not(.campus-menu-pinned):has(#study-calendar-screen:not(.hidden) #calendar-day:not([hidden])) #sidebar :is(.nav-item > a, .campus-nav-group > summary) {
+        justify-content: center;
+        padding: 0;
+        gap: 0;
+    }
+    .campus-shell:not(.campus-menu-pinned):has(#study-calendar-screen:not(.hidden) #calendar-day:not([hidden])) #sidebar .nav-item-active > a { padding-left: 0 !important }
+    .campus-shell:not(.campus-menu-pinned):has(#study-calendar-screen:not(.hidden) #calendar-day:not([hidden])) #sidebar .campus-nav-group:has(.nav-item-active) > summary {
+        background: var(--shell-gold);
+        color: #272331;
+    }
+}
