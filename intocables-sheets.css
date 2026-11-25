@@ -18,10 +18,7 @@
 
 /* Premoniciones Ben Carson · subdivisión de Intocables */
 .itc-premonition-card{padding:0;overflow:hidden;justify-content:flex-start}
-.itc-premonition-banner{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;padding:20px 16px;aspect-ratio:3/2;background:radial-gradient(ellipse at 22% 12%,#2d739f 0%,transparent 58%),linear-gradient(135deg,#0b2440,#123a5c 55%,#1c4f72);color:#fff;border-bottom:1px solid #e1eaf1}
-.itc-premonition-banner small{font-size:.62rem;letter-spacing:.18em;font-weight:800;color:#ffd66b}
-.itc-premonition-banner strong{font-size:2.15rem;line-height:1;letter-spacing:-.02em}
-.itc-premonition-banner span{font-size:.68rem;letter-spacing:.16em;font-weight:700;color:#cfe6f6}
+.itc-premonition-cover{aspect-ratio:16/9}
 .itc-premonition-card .itc-card-top{padding:14px 20px 0}
 .itc-premonition-card .itc-number{font-size:.67rem;letter-spacing:.15em}
 .itc-premonition-card .itc-card-middle{padding:0 20px;margin:10px 0 18px;flex:1;gap:8px}
@@ -36,7 +33,6 @@
 .itc-premonition-heading>div{min-width:0}
 .itc-premonition-heading h2{margin:0;text-transform:none}
 .itc-premonition-instruction{color:#53647a;font-size:.82rem;line-height:1.5}
-.itc-premonition-reminder{display:block;width:112px;height:128px;flex:0 0 112px;object-fit:contain}
 .itc-premonition-list{margin:0;padding-left:24px;display:grid;gap:0}
 .itc-premonition-list li{padding:0 0 0 4px;border-bottom:1px solid #e8eef5;line-height:1.5}
 .itc-premonition-list li::marker{color:#0d80ba;font-weight:800}
@@ -52,9 +48,29 @@
 .itc-premonition-status:empty{display:none}
 .itc-premonition-status{margin-top:14px;color:#a03e21;font-size:.82rem;line-height:1.5}
 .itc-premonition-note{margin-top:18px;font-size:.73rem;color:#7088a2;line-height:1.6;text-transform:none}
-@media(max-width:600px){.itc-premonition-banner{aspect-ratio:16/7;padding:14px}.itc-premonition-banner strong{font-size:1.5rem}}
-@media(max-width:600px){.itc-premonition-heading{gap:10px}.itc-premonition-heading h2{font-size:1.35rem}.itc-premonition-reminder{width:78px;height:98px;flex-basis:78px}.itc-premonition-link{gap:10px;padding-block:14px}.itc-premonition-topic{font-size:.94rem}.itc-premonition-instruction{font-size:.78rem}}
+@media(max-width:600px){.itc-premonition-heading{gap:10px}.itc-premonition-heading h2{font-size:1.35rem}.itc-premonition-link{gap:10px;padding-block:14px}.itc-premonition-topic{font-size:.94rem}.itc-premonition-instruction{font-size:.78rem}}
 
 .itc-premonition-brand{display:flex;align-items:center;gap:10px;min-width:0}
 .itc-premonition-brand img{display:block;flex:0 0 36px;width:36px;height:36px;object-fit:contain;border-radius:8px;background:#fff}
 .itc-premonition-brand + button{flex:0 0 34px;margin-inline-start:8px}
+
+.itc-premonition-image-dialog { width: min(1420px, calc(100vw - 24px)); }
+.itc-premonition-image-dialog .itc-dialog-body { display: flex; flex-direction: column; padding: 0; overflow: hidden; }
+#itc-premonition-image-view { display: flex; flex-direction: column; min-height: 0; }
+.itc-premonition-heading[hidden], .itc-premonition-list[hidden], #itc-premonition-image-view[hidden] { display: none; }
+.itc-premonition-tools { display: flex; flex-shrink: 0; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; padding: 10px 16px; background: #f5f8fc; border-bottom: 1px solid #dce3eb; font-size: .8rem; }
+.itc-premonition-tools > div { display: flex; align-items: center; gap: 6px; }
+.itc-premonition-tools button { min-width: 36px; min-height: 36px; padding: 6px 10px; border: 1px solid #dce3eb; border-radius: 7px; background: #fff; color: #173456; font: inherit; cursor: pointer; }
+.itc-premonition-tools button:disabled { opacity: .45; cursor: default; }
+.itc-premonition-tools output { min-width: 44px; text-align: center; }
+.itc-premonition-image-stage { min-height: 0; max-height: calc(100dvh - 190px); overflow: auto; overscroll-behavior: contain; background: #eef2f8; }
+.itc-premonition-board { position: relative; width: 100%; min-width: 100%; }
+.itc-premonition-board > img { display: block; width: 100%; height: auto; max-width: none; }
+.itc-premonition-hotspots { position: absolute; inset: 0; }
+.itc-premonition-hotspot { position: absolute; padding: 0; border: 0; border-radius: 3px; background: transparent; cursor: pointer; }
+.itc-premonition-hotspot:hover, .itc-premonition-hotspot:focus-visible { outline: 2px solid #dca515; outline-offset: 2px; background: #ffce452b; }
+.itc-premonition-hotspot:disabled { cursor: progress; }
+.itc-premonition-hotspot > span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.itc-premonition-image-dialog .itc-premonition-note { flex-shrink: 0; margin: 0; padding: 10px 16px; }
+.itc-premonition-image-dialog .itc-premonition-status:not(:empty) { margin: 0; padding: 10px 16px; }
+@media (max-width: 600px) { .itc-premonition-tools { padding: 8px 10px; } }

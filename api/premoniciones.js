@@ -1,4 +1,6 @@
 const catalog = require('./_premoniciones/premoniciones.json');
+const { readFileSync } = require('node:fs');
+const { join } = require('node:path');
 const byId = new Map(catalog.map(item => [item.id, item]));
 const supabaseUrl = 'https://asnwhddmurstzmghuyin.supabase.co';
 const anonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFzbndoZGRtdXJzdHptZ2h1eWluIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzY1MDcwODAsImV4cCI6MjA5MjA4MzA4MH0.bd3kz5Xji6gQknGVw_M2d80XUTwcKzLyOEqKQwfaTmo';
@@ -25,6 +27,11 @@ module.exports = async function handler(req, res) {
     if (!access?.ready || !access.premium) return res.status(403).end();
   } catch (_) {
     return res.status(503).end();
+  }
+  if (req.query.format === 'image') {
+    if (!item.image) return res.status(404).end();
+    res.setHeader('Content-Type', 'image/png');
+    return res.status(200).end(readFileSync(join(__dirname, '_premoniciones', item.image.file)));
   }
   res.setHeader('Content-Type', 'application/json; charset=utf-8');
   return res.status(200).end(JSON.stringify(item));

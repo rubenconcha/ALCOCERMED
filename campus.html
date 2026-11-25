@@ -1710,9 +1710,15 @@
             <dialog id="itc-premonition-dialog" class="itc-dialog itc-premonition-dialog" aria-labelledby="itc-premonition-title">
                 <div class="itc-dialog-head"><div class="itc-premonition-brand"><img src="/assets/campus-logo.webp" width="36" height="36" alt="Logo de la Preparatoria Ben Carson" decoding="async"><span id="itc-premonition-kicker">PREMONICIONES BEN CARSON</span></div><button type="button" id="itc-premonition-close" aria-label="Cerrar premonición"><span aria-hidden="true">×</span></button></div>
                 <div class="itc-dialog-body">
-                    <div class="itc-premonition-heading">
+                    <div class="itc-premonition-heading" id="itc-premonition-heading">
                         <div><h2 id="itc-premonition-title"></h2><p class="itc-premonition-subtitle" id="itc-premonition-subtitle"></p><p class="itc-premonition-instruction">Selecciona un tema para estudiarlo en el texto oficial.</p></div>
-                        <img class="itc-premonition-reminder" src="/assets/teacher-stickers/recuerda.webp" width="112" height="128" alt="Recuerda" loading="lazy" decoding="async">
+                    </div>
+                    <div id="itc-premonition-image-view" hidden>
+                        <div class="itc-premonition-tools" role="toolbar" aria-label="Vista de la imagen">
+                            <span>Selecciona un tema de la imagen</span>
+                            <div><button type="button" id="itc-premonition-zoom-out" aria-label="Reducir imagen">−</button><output id="itc-premonition-zoom-value">100%</output><button type="button" id="itc-premonition-zoom-in" aria-label="Ampliar imagen">+</button><button type="button" id="itc-premonition-fit">Ajustar</button></div>
+                        </div>
+                        <div class="itc-premonition-image-stage"><div class="itc-premonition-board" id="itc-premonition-board"><img id="itc-premonition-image" alt=""><div id="itc-premonition-hotspots" class="itc-premonition-hotspots"></div></div></div>
                     </div>
                     <ol class="itc-premonition-list" id="itc-premonition-list"></ol>
                     <p id="itc-premonition-status" class="itc-premonition-status" role="status" aria-live="polite"></p>
@@ -1947,7 +1953,7 @@
         <link rel="stylesheet" data-campus-assets="campus" href="campus-topics.css?v=4">
         <link rel="stylesheet" data-campus-assets="campus" href="study-depth.css?v=3">
         <link rel="stylesheet" data-campus-assets="campus" href="study-media.css?v=20261021-visual5c">
-        <script data-campus-assets="campus" src="campus-catalogs.js?v=6"></script>
+        <script data-campus-assets="campus" src="campus-catalogs.js?v=7"></script>
         <script data-campus-assets="campus" src="official-flashcards.js?v=2"></script>
         <script data-campus-assets="campus" src="study-depth.js?v=20"></script>
         <script data-campus-assets="campus" src="campus-section-tracking.js?v=1"></script>
@@ -1982,14 +1988,14 @@
         <link rel="stylesheet" data-campus-assets="campus calendar" href="study-calendar.css?v=14">
         <link rel="stylesheet" data-campus-assets="campus results" href="student-results.css?v=1">
         <link rel="stylesheet" data-campus-assets="maps" href="mindmap-viewer.css?v=8">
-        <link rel="stylesheet" data-campus-assets="campus-extra intocables maps" href="intocables-sheets.css?v=4">
+        <link rel="stylesheet" data-campus-assets="campus-extra intocables maps" href="intocables-sheets.css?v=5">
         <link rel="stylesheet" data-campus-assets="reader" href="summary-pdf-reader.css?v=5">
         <link rel="stylesheet" data-campus-assets="campus texts practice" href="campus-study-resources.css?v=9">
         <script data-campus-assets="maps" src="mindmap-download.js?v=2"></script>
         <script data-campus-assets="maps" src="mindmap-premium.js?v=4"></script>
         <script data-campus-assets="maps" src="mindmap-practice.js?v=20261021-visual5b"></script>
         <script data-campus-assets="maps" src="mindmap-viewer.js?v=21"></script>
-        <script data-campus-assets="campus-extra intocables maps" src="intocables-hub.js?v=8"></script>
+        <script data-campus-assets="campus-extra intocables maps" src="intocables-hub.js?v=9"></script>
         <script data-campus-assets="reader" src="summary-pdf-reader.js?v=10"></script>
         <script data-campus-assets="campus texts" src="official-texts.js?v=14"></script>
         <script data-campus-assets="practice" src="sufficiency-practice-content.js?v=2"></script>

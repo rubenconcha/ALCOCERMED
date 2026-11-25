@@ -3,6 +3,7 @@ window.IntocablesHub = (() => {
  let catalogue=[],premoniciones=[],lessons=new Map(),subject='',topic='',query='',format='sheets',initialized=false,requestId=0;
  let premonitionRequest=0;const premonitionContent=new Map();
  let activePremonition = null;
+ let premonitionZoom = 1;
  let coverRevision=0,coverOwner=null,observer=null;const covers=new Map(),pending=new Set();
  const subjects=['Morfofunción','Biología celular','Educación para la Salud'];
  const countLabels={sheets:'láminas',premoniciones:'premoniciones',cards:'fichas'};
@@ -11,16 +12,19 @@ window.IntocablesHub = (() => {
  const normal=v=>String(v??'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
  function clearCovers(){coverRevision++;observer?.disconnect();observer=null;for(const url of covers.values())URL.revokeObjectURL(url);covers.clear();pending.clear();coverOwner=null;document.querySelectorAll('.itc-sheet-cover img[data-sheet-id]').forEach(img=>{img.removeAttribute('src');img.hidden=true;});}
  async function showCovers(){
-  observer?.disconnect();if(window.CampusAccess?.isFree()||format!=='sheets')return;
+  observer?.disconnect();if(window.CampusAccess?.isFree()||!['sheets','premoniciones'].includes(format))return;
+  const premonitionImages=format==='premoniciones';
   const revision=coverRevision,session=(await getSupabase().auth.getSession()).data.session,token=session?.access_token;if(!token||revision!==coverRevision||window.CampusAccess?.isFree())return;
   if(coverOwner&&coverOwner!==token){clearCovers();return;}coverOwner=token;
   const paint=(id,url)=>document.querySelectorAll('img[data-sheet-id]').forEach(img=>{if(img.dataset.sheetId===id){img.src=url;img.hidden=false;}});
   const fetchCover=async id=>{
    if(covers.has(id)){paint(id,covers.get(id));return;}if(pending.has(id))return;pending.add(id);
    try{
-    const response=await fetch('/api/mindmap?id='+encodeURIComponent(id)+'&format=image',{headers:{Authorization:'Bearer '+token},cache:'no-store',signal:AbortSignal.timeout(15000)});if(!response.ok)return;
+    const endpoint=premonitionImages?'/api/premoniciones':'/api/mindmap';
+    const response=await fetch(endpoint+'?id='+encodeURIComponent(id)+'&format=image',{headers:{Authorization:'Bearer '+token},cache:'no-store',signal:AbortSignal.timeout(15000)});if(!response.ok)return;
     const blob=await response.blob(),current=(await getSupabase().auth.getSession()).data.session;
     if(revision!==coverRevision||coverOwner!==token||current?.access_token!==token||window.CampusAccess?.isFree())return;
+    if(covers.has(id)){paint(id,covers.get(id));return;}
     const url=URL.createObjectURL(blob);covers.set(id,url);paint(id,url);
    }catch(_){/* Sheet opening remains available if a cover fails. */}finally{if(revision===coverRevision)pending.delete(id);}
   };
@@ -39,19 +43,20 @@ window.IntocablesHub = (() => {
   const filtered=pool().filter(i=>(!subject||i.materia===subject)&&(!topic||i.tema===topic)&&normal([i.titulo,i.tema,i.materia,i.capitulo].join(' ')).includes(normal(query)));
   $('itc-count').textContent=filtered.length+' '+(countLabels[format]||'material');
   $('itc-grid').innerHTML=filtered.length?filtered.map(i=>{const locked=!i.acceso_gratis&&window.CampusAccess?.isFree(),sheet=i.kind==='sheets',premon=i.kind==='premoniciones';
-   const cover=sheet?`<span class="itc-sheet-cover" data-cover-id="${esc(i.id)}"><span class="itc-cover-placeholder"><img src="/assets/campus-study-brand.webp" alt=""><span>${locked?'Lámina protegida':'Lámina ilustrada'}</span></span><img data-sheet-id="${esc(i.id)}" alt="Vista de ${esc(i.titulo)}" hidden></span>`:'';
-   const banner=premon?`<span class="itc-premonition-banner" aria-hidden="true"><small>PREMONICIONES</small><strong>CAP. ${esc(i.orden)}</strong><span>BEN CARSON</span></span>`:'';
+   const cover=sheet||(premon&&i.image)?`<span class="itc-sheet-cover ${premon?'itc-premonition-cover':''}" data-cover-id="${esc(i.id)}"><span class="itc-cover-placeholder"><span>${locked?'Imagen protegida':premon?'Cargando imagen…':'Lámina ilustrada'}</span></span><img data-sheet-id="${esc(i.id)}" alt="${premon?'Imagen original de ':'Vista de '}${esc(i.titulo)}" hidden></span>`:'';
    const top=premon?'PREMONICIÓN':sheet?'LÁMINA':String(i.orden).padStart(2,'0');
    const detail=premon?esc(i.capitulo||'')+(i.count?' · '+esc(i.count)+' temas':''):esc(i.tema);
    const action=locked?'Disponible con un plan':premon?'Abrir premonición':sheet?'Abrir lámina':'Abrir ficha';
-   return `<button type="button" class="itc-card ${sheet?'itc-sheet-card ':''}${premon?'itc-premonition-card ':''}${locked?'is-locked':''}" data-id="${esc(i.id)}" aria-label="${locked?'Bloqueado: ':''}${esc(i.titulo)}">${cover}${banner}<span class="itc-card-top"><span class="itc-number">${top}</span><span class="itc-card-symbol" aria-hidden="true">${locked?'🔒':'↗'}</span></span><span class="itc-card-middle"><span class="itc-card-subject">${esc(i.materia)}</span><strong>${esc(i.titulo)}</strong><span class="itc-card-topic">${detail}</span></span><span class="itc-card-bottom">${action} <span aria-hidden="true">→</span></span></button>`;}).join(''):'<div class="itc-empty">No hay material con estos filtros. Prueba con otro tema.</div>';
+   return `<button type="button" class="itc-card ${sheet?'itc-sheet-card ':''}${premon?'itc-premonition-card ':''}${locked?'is-locked':''}" data-id="${esc(i.id)}" aria-label="${locked?'Bloqueado: ':''}${esc(i.titulo)}">${cover}<span class="itc-card-top"><span class="itc-number">${top}</span><span class="itc-card-symbol" aria-hidden="true">${locked?'🔒':'↗'}</span></span><span class="itc-card-middle"><span class="itc-card-subject">${esc(i.materia)}</span><strong>${esc(i.titulo)}</strong><span class="itc-card-topic">${detail}</span></span><span class="itc-card-bottom">${action} <span aria-hidden="true">→</span></span></button>`;}).join(''):'<div class="itc-empty">No hay material con estos filtros. Prueba con otro tema.</div>';
   showCovers().catch(()=>{});
  }
  async function load(){const current=++requestId;status('');try{
   if(window.CampusAccess?.isFree())format='cards';
   $('itc-formats').querySelectorAll('button').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.format===format)));
   if(!catalogue.length)catalogue=window.CampusCatalogs?.intocables||[];
-  if(!premoniciones.length)premoniciones=(window.CampusCatalogs?.premoniciones||[]).map(i=>({...i,kind:'premoniciones',acceso_gratis:false}));
+  if(!premoniciones.length)premoniciones=(window.CampusCatalogs?.premoniciones||[])
+   .map(i=>({...i,kind:'premoniciones',acceso_gratis:false}))
+   .sort((a,b)=>Number(Boolean(b.image))-Number(Boolean(a.image)));
   if(!catalogue.length){const [response]=await Promise.all([fetch('/content/intocables_catalogo_2026.json'),window.loadMindmapCatalog?.()]);if(!response.ok)throw Error();const cards=await response.json();catalogue=cards.map(i=>({...i,kind:'cards'})).concat((window.MINDMAP_PREMIUM_CATALOG||[]).filter(m=>m.curated||m.section==='intocables').map((m,i)=>({...m,kind:'sheets',tema:m.id.startsWith('morfo_18_sangre__')?'Sangre':m.tema,orden:i+1,original:m})));}
   if(current!==requestId)return;render();if(format!=='cards'){status('');return;}
   await ensureSupabaseSdk();const {data,error}=await getSupabase().from('intocables_esenciales').select('*').order('orden');if(error)throw error;if(current!==requestId)return;lessons=new Map((data||[]).map(i=>[i.id,i]));status(lessons.size?'':'Inicia sesión para leer las fichas disponibles.');render();
@@ -84,6 +89,24 @@ window.IntocablesHub = (() => {
   $('itc-premonition-title').textContent = item.titulo || 'Premonición';
   const count = (item.items || []).length;
   $('itc-premonition-subtitle').textContent = [item.capitulo, count ? count + ' temas' : ''].filter(Boolean).join(' · ');
+  const hasImage = Boolean(item.image);
+  $('itc-premonition-dialog').classList.toggle('itc-premonition-image-dialog', hasImage);
+  $('itc-premonition-heading').hidden = hasImage;
+  $('itc-premonition-list').hidden = hasImage;
+  $('itc-premonition-image-view').hidden = !hasImage;
+  if (hasImage) {
+   $('itc-premonition-image').src = covers.get(item.id);
+   $('itc-premonition-image').alt = 'Premoniciones · ' + item.titulo;
+   $('itc-premonition-image').width = item.image.width;
+   $('itc-premonition-image').height = item.image.height;
+   $('itc-premonition-hotspots').innerHTML = item.items.map((entry, index) => {
+    if (!entry.region) return '';
+    const [x, y, width, height] = entry.region;
+    const position = `left:${x / item.image.width * 100}%;top:${y / item.image.height * 100}%;width:${width / item.image.width * 100}%;height:${height / item.image.height * 100}%`;
+    return `<button type="button" class="itc-premonition-hotspot" style="${position}" data-premonition-index="${index}" aria-label="${esc(entry.text)} · Leer en el texto oficial" title="${esc(entry.text)}"><span>${esc(entry.text)}</span></button>`;
+   }).join('');
+   setPremonitionZoom(1);
+  }
   $('itc-premonition-list').innerHTML = (item.items || []).map((entry, index) => {
    if (typeof entry === 'string' || !entry.pages?.length) {
     return '<li><span class="itc-premonition-label">' + esc(typeof entry === 'string' ? entry : entry.text) + '</span></li>';
@@ -94,6 +117,13 @@ window.IntocablesHub = (() => {
   }).join('');
   $('itc-premonition-source').textContent = item.source ? [item.source.author, item.source.title, item.source.edition].join(' · ') : '';
   $('itc-premonition-status').textContent = '';
+ }
+ function setPremonitionZoom(value) {
+  premonitionZoom = Math.max(1, Math.min(4, value));
+  $('itc-premonition-board').style.width = premonitionZoom * 100 + '%';
+  $('itc-premonition-zoom-value').textContent = Math.round(premonitionZoom * 100) + '%';
+  $('itc-premonition-zoom-out').disabled = premonitionZoom === 1;
+  $('itc-premonition-zoom-in').disabled = premonitionZoom === 4;
  }
  async function readPremonition(index, button) {
   const item = activePremonition, entry = item?.items?.[index];
@@ -132,6 +162,15 @@ window.IntocablesHub = (() => {
     if(!response.ok)throw new Error('premonicion');
     item=await response.json();
    }
+   if(item.image&&!covers.has(meta.id)){
+    const session=(await getSupabase().auth.getSession()).data.session,token=session?.access_token;
+    if(!token)throw new Error('session');
+    const response=await fetch('/api/premoniciones?id='+encodeURIComponent(meta.id)+'&format=image',{headers:{Authorization:'Bearer '+token},cache:'no-store',signal:AbortSignal.timeout(15000)});
+    if(!response.ok)throw new Error('image');
+    const image=await response.blob();
+    if(request!==premonitionRequest||owner!==currentUser?.id||currentCampusScreen!=='intocables-hub-screen')return;
+    if(!covers.has(meta.id))covers.set(meta.id,URL.createObjectURL(image));
+   }
    if(request!==premonitionRequest||owner!==currentUser?.id||currentCampusScreen!=='intocables-hub-screen')return;
    premonitionContent.set(meta.id,item);
    renderPremonition(item);
@@ -148,6 +187,10 @@ window.IntocablesHub = (() => {
   $('itc-close').onclick=()=>$('itc-dialog').close();$('itc-dialog').onclick=e=>{if(e.target===$('itc-dialog'))$('itc-dialog').close();};$('itc-reveal').onclick=()=>{$('itc-answer').hidden=false;$('itc-reveal').hidden=true;};
   $('itc-premonition-close').onclick=()=>$('itc-premonition-dialog').close();$('itc-premonition-dialog').onclick=e=>{if(e.target===$('itc-premonition-dialog'))$('itc-premonition-dialog').close();};
   $('itc-premonition-list').addEventListener('click',e=>{const button=e.target.closest('[data-premonition-index]');if(button)readPremonition(Number(button.dataset.premonitionIndex),button);});
+  $('itc-premonition-hotspots').addEventListener('click',e=>{const button=e.target.closest('[data-premonition-index]');if(button)readPremonition(Number(button.dataset.premonitionIndex),button);});
+  $('itc-premonition-zoom-in').onclick=()=>setPremonitionZoom(premonitionZoom+.5);
+  $('itc-premonition-zoom-out').onclick=()=>setPremonitionZoom(premonitionZoom-.5);
+  $('itc-premonition-fit').onclick=()=>setPremonitionZoom(1);
   $('itc-premonition-dialog').addEventListener('close', () => {
    if ($('itc-premonition-dialog').open) return;
    if (activePremonition) ++premonitionRequest;

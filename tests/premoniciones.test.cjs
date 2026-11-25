@@ -2,6 +2,7 @@ const { test } = require('node:test');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const vm = require('node:vm');
+const crypto = require('node:crypto');
 
 const premoniciones = require('../api/_premoniciones/premoniciones.json');
 const html = fs.readFileSync('campus.html', 'utf8');
@@ -65,11 +66,12 @@ test('Intocables muestra Láminas y la nueva subdivisión Premoniciones Ben Cars
   assert.match(html, /data-format="premoniciones"[^>]*>Premoniciones Ben Carson<\/button>/);
   assert.match(html, /id="itc-premonition-dialog"/);
   assert.match(html, /id="itc-premonition-list"/);
-  assert.match(html, /intocables-hub\.js\?v=8/);
+  assert.match(html, /intocables-hub\.js\?v=9/);
   assert.match(html, /intocables-sheets\.css\?v=\d+/);
   assert.match(html, /campus-catalogs\.js\?v=\d+/);
   assert.match(css, /\.itc-premonition-list/);
-  assert.match(css, /\.itc-premonition-banner/);
+  assert.match(css, /\.itc-premonition-hotspot/);
+  assert.doesNotMatch(hub, /itc-premonition-banner/);
 });
 
 test('abrir una premonición consulta la API protegida y pinta la lista', () => {
@@ -125,7 +127,7 @@ test('la ruta queda registrada con sus archivos y bloqueada al acceso directo', 
   assert.equal(rewrite?.destination, '/api/premoniciones?id=invalid');
   const cacheVersion = Number(sw.match(/CACHE_NAME = 'alcocermed-main-v(\d+)-[^']+'/)?.[1]);
   assert.ok(cacheVersion >= 209, 'mantiene una versión de caché igual o más reciente');
-  assert.match(sw, /'\.\/intocables-hub\.js\?v=8'/);
+  assert.match(sw, /'\.\/intocables-hub\.js\?v=9'/);
   const stylesheet = html.match(/href="(intocables-sheets\.css\?v=\d+)"/)?.[1];
   assert.ok(stylesheet, 'el campus carga la hoja de estilo con versión');
   assert.ok(sw.includes("'./" + stylesheet + "'"), 'el caché usa la misma versión que el campus');
@@ -134,7 +136,7 @@ test('la ruta queda registrada con sus archivos y bloqueada al acceso directo', 
 test('los temas abren su lectura específica y conservan la lista al cerrar el lector', async () => {
   const nodes = new Map();
   const get = id => {
-    if (!nodes.has(id)) nodes.set(id, { textContent: '', innerHTML: '', open: true });
+    if (!nodes.has(id)) nodes.set(id, { textContent: '', innerHTML: '', open: true, style: {}, classList: { toggle() {} } });
     return nodes.get(id);
   };
   const calls = [];
@@ -143,6 +145,7 @@ test('los temas abren su lectura específica y conservan la lista al cerrar el l
     $: get,
     esc: value => String(value).replace(/&/g, '&amp;').replace(/</g, '&lt;'),
     activePremonition: null, premonitionRequest: 0,
+    premonitionZoom: 1, covers: new Map([['premo-bio-05', 'blob:original-image']]),
     currentUser: { id: 'student' }, currentCampusScreen: 'intocables-hub-screen',
     window: {
       CampusAccess: { isFree: () => free, unlock: () => calls.push('locked') },
@@ -158,6 +161,12 @@ test('los temas abren su lectura específica y conservan la lista al cerrar el l
   context.renderPremonition(macro);
   assert.equal((get('itc-premonition-list').innerHTML.match(/data-premonition-index=/g) || []).length, 10);
   assert.match(get('itc-premonition-list').innerHTML, /SNARE/);
+  assert.equal(get('itc-premonition-list').hidden, true);
+  assert.equal(get('itc-premonition-image').src, 'blob:original-image');
+  assert.equal((get('itc-premonition-hotspots').innerHTML.match(/data-premonition-index=/g) || []).length, 10);
+  context.setPremonitionZoom(3);
+  assert.equal(get('itc-premonition-board').style.width, '300%');
+  assert.equal(get('itc-premonition-zoom-value').textContent, '300%');
   assert.match(get('itc-premonition-source').textContent, /Alfonso Calvo/);
   assert.equal(context.readingPageLabel([{ printed: 173 }, { printed: 175 }]), 'Págs. 173, 175');
   const button = { disabled: false, setAttribute() {}, removeAttribute() {} };
@@ -181,4 +190,52 @@ test('los temas abren su lectura específica y conservan la lista al cerrar el l
   free = true;
   await context.readPremonition(0, button);
   assert.equal(calls.at(-1), 'locked');
+});
+
+test('la imagen original se conserva íntegra y las diez zonas se mantienen dentro de sus renglones', () => {
+  const macro = premoniciones.find(item => item.id === 'premo-bio-05');
+  const original = fs.readFileSync('api/_premoniciones/' + macro.image.file);
+  assert.equal(crypto.createHash('sha256').update(original).digest('hex'), macro.image.sha256);
+  assert.equal(macro.image.sha256, '9e40bf9ac309c4a8973d1caa9a3ab45ef263d4ed32c39bfe4e5a1d974d245693');
+  assert.equal(original.readUInt32BE(16), macro.image.width);
+  assert.equal(original.readUInt32BE(20), macro.image.height);
+  for (const [index, entry] of macro.items.entries()) {
+    const [x, y, width, height] = entry.region;
+    assert.ok(x >= 0 && y >= 0 && width > 0 && height > 0);
+    assert.ok(x + width <= macro.image.width && y + height <= macro.image.height);
+    const next = macro.items[index + 1];
+    if (next) assert.ok(y + height <= next.region[1], 'las zonas no se superponen');
+  }
+});
+
+test('la imagen de la premonición exige el mismo acceso que su lectura y devuelve los bytes originales', async () => {
+  const handler = require('../api/premoniciones.js');
+  const request = { method: 'GET', query: { id: 'premo-bio-05', format: 'image' }, headers: {} };
+  const response = () => ({
+    headers: {}, statusCode: null,
+    setHeader(key, value) { this.headers[key] = value; },
+    status(value) { this.statusCode = value; return this; },
+    end(body) { this.body = body; return this; },
+  });
+  let res = response();
+  await handler(request, res);
+  assert.equal(res.statusCode, 401);
+  const originalFetch = global.fetch;
+  try {
+    global.fetch = async () => ({ ok: true, json: async () => ({ ready: true, premium: false }) });
+    request.headers.authorization = 'Bearer student';
+    res = response();
+    await handler(request, res);
+    assert.equal(res.statusCode, 403);
+    assert.equal(res.body, undefined);
+    global.fetch = async () => ({ ok: true, json: async () => ({ ready: true, premium: true }) });
+    res = response();
+    await handler(request, res);
+    assert.equal(res.statusCode, 200);
+    assert.equal(res.headers['Content-Type'], 'image/png');
+    assert.equal(res.headers['Cache-Control'], 'private, no-store');
+    assert.deepEqual(res.body, fs.readFileSync('api/_premoniciones/images/macrotransporte.png'));
+  } finally {
+    global.fetch = originalFetch;
+  }
 });

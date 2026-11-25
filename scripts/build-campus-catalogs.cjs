@@ -17,8 +17,8 @@ const data = {
             ...cardMetadata(map), kind: 'sheets', orden: index + 1,
             tema: map.id.startsWith('morfo_18_sangre__') ? 'Sangre' : map.tema,
         }))),
-    premoniciones: require('../api/_premoniciones/premoniciones.json').map(({ id, orden, capitulo, titulo, materia, tema, items }) => ({
-        id, orden, capitulo, titulo, materia, tema, count: items.length,
+    premoniciones: require('../api/_premoniciones/premoniciones.json').map(({ id, orden, capitulo, titulo, materia, tema, items, image }) => ({
+        id, orden, capitulo, titulo, materia, tema, count: items.length, ...(image ? { image: true } : {}),
     })),
 };
 writeFileSync(join(__dirname, '..', 'campus-catalogs.js'),
