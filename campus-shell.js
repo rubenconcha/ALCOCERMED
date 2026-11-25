@@ -14,7 +14,6 @@
     const noticesDialog = byId('campus-notices-dialog');
     const profileDialog = byId('campus-profile-dialog');
     const monthDays = byId('campus-month-days');
-    const planList = byId('campus-plan-preview');
     const monthFormat = new Intl.DateTimeFormat('es-BO', { month: 'long', year: 'numeric', timeZone: 'UTC' });
     const actions = {
         calendar: () => window.openStudyCalendar(),
@@ -113,19 +112,43 @@
     const homeClasses = byId('campus-home-classes');
     const groupKey = () => 'ben-carson:calendar-group:' + (userId || 'local');
     let homeGroupAccount;
-    const extraSubjects = new Set(['mate','fis','quim']);
-    const subjectAccents = { bio:'#288cc7', morfo:'#d5864d', salud:'#44966a', mate:'#8c67a9', fis:'#8c67a9', quim:'#8c67a9' };
-
-    function homeClassRow(time, title, description, accent) {
+    function homeActivityRow(item) {
         const row = document.createElement('li');
-        row.className = 'campus-plan-item campus-home-class-row';
-        if (accent) row.style.setProperty('--activity-accent', accent);
-        for (const [tag, value] of [['time', time], ['strong', title], ['small', description]]) {
-            if (!value) continue;
-            const node = document.createElement(tag);
-            node.textContent = value;
-            row.append(node);
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.className = 'campus-plan-item campus-home-activity';
+        button.dataset.kind = item.kind;
+        const subject = item.reading?.slug || item.readingSlug;
+        if (subject) button.dataset.subject = subject;
+        button.dataset.activity = item.id;
+        const time = document.createElement('span');
+        time.className = 'campus-home-activity-time';
+        for (const value of [item.start, item.end].filter(Boolean)) {
+            const part = document.createElement('span');
+            part.textContent = value;
+            time.append(part);
         }
+        const content = document.createElement('span');
+        content.className = 'campus-home-activity-content';
+        const title = document.createElement('strong');
+        title.textContent = item.title;
+        content.append(title);
+        const hint = document.createElement('small');
+        hint.textContent = item.resource === 'reading' ? 'Manual · Examen pasado · Evaluación'
+            : item.resource === 'questions' ? 'Preguntas del tema de la semana'
+            : item.resource === 'evaluation' ? 'Evaluación del tema de la semana'
+            : item.resource === 'sufficiency' ? 'Abrir práctica de suficiencia'
+            : item.id.endsWith('-clases') ? item.description.replace(/ \| /g, '\n')
+            : item.kind === 'rest' ? 'Pausa del día'
+            : item.resource === 'flashcards' ? 'Abrir flashcards' : 'Ver actividad';
+        content.append(hint);
+        const arrow = document.createElement('span');
+        arrow.className = 'campus-home-activity-arrow';
+        arrow.textContent = '→';
+        arrow.setAttribute('aria-hidden', 'true');
+        button.append(time, content, arrow);
+        button.onclick = () => window.openStudyCalendar(selectedDate, item.id);
+        row.append(button);
         return row;
     }
 
@@ -134,30 +157,6 @@
         const saved = storage(key);
         if (homeGroupAccount !== key || saved !== null) homeGroup.value = saved || '';
         homeGroupAccount = key;
-    }
-
-    function renderHomeClasses() {
-        const course = data.classCalendar;
-        const groupId = homeGroup.value;
-        const group = Object.prototype.hasOwnProperty.call(course.groups, groupId) ? course.groups[groupId] : null;
-        const note = byId('campus-home-group-note');
-        homeClasses.replaceChildren();
-        if (!group) { note.textContent = 'Selecciona tu grupo para ver el horario del día.'; return; }
-        const date = new Date(selectedDate + 'T00:00:00Z');
-        const day = date.getUTCDay() - 1;
-        if (selectedDate < course.start || selectedDate > course.end || day < 0 || day > 4) {
-            note.textContent = group.location + ' · Sin clases programadas para esta fecha.';
-            return;
-        }
-        const week = Math.floor((date.getTime() - Date.parse(course.start + 'T00:00:00Z')) / 604800000);
-        note.textContent = 'Horario oficial · ' + group.location + ' · Semana ' + (week + 1) + ' · Hora de Bolivia';
-        group.days[day].forEach((subject, slot) => {
-            const isMfq = extraSubjects.has(subject);
-            const isVirtualException = isMfq && course.virtualMfq.includes(selectedDate);
-            const time = isVirtualException && groupId !== 'virtual' ? 'Hora por confirmar' : group.times[slot];
-            const title = course.subjects[subject] + (isVirtualException ? ' · Clase virtual' : '');
-            homeClasses.append(homeClassRow(time, title, isMfq ? course.topics[week][day] : '', subjectAccents[subject]));
-        });
     }
 
     homeGroup.addEventListener('change', () => {
@@ -172,27 +171,17 @@
 
     function renderDay() {
         syncHomeGroup();
-        renderHomeClasses();
         byId('campus-plan-date').textContent = data.formatDay(selectedDate);
-        const guided = data.virtualStudy(selectedDate, homeGroup.value);
-        byId('campus-guided-preview').hidden = !guided.length;
-        const activities = guided.filter(item => item.show && !item.id.endsWith('-virtual-clases'));
-        planList.replaceChildren();
-        for (const item of activities) {
-            const row = document.createElement('li');
-            const button = document.createElement('button');
-            button.type = 'button';
-            button.className = 'campus-plan-item';
-            button.style.setProperty('--activity-accent', data.kinds[item.kind].color);
-            const time = document.createElement('time');
-            time.textContent = item.end ? item.start + ' – ' + item.end : item.start;
-            const title = document.createElement('span');
-            title.textContent = item.title;
-            button.append(time, title);
-            button.onclick = () => window.openStudyCalendar(selectedDate, item.id);
-            row.append(button);
-            planList.append(row);
-        }
+        // Inicio and Calendario share one plan, including the virtual evening classes.
+        byId('campus-guided-preview').hidden = true;
+        byId('campus-plan-preview').replaceChildren();
+        const group = data.classCalendar.groups[homeGroup.value];
+        const activities = data.groupDay(selectedDate, homeGroup.value).filter(item => item.show);
+        const note = byId('campus-home-group-note');
+        note.textContent = !group ? 'Selecciona tu grupo para ver la planificación del día.'
+            : !activities.length ? group.location + ' · Sin actividades programadas para esta fecha.'
+            : group.location + ' · Hora de Bolivia' + (homeGroup.value === 'virtual' ? ' · Repaso sugerido y clases en vivo' : ' · Horario de clases');
+        homeClasses.replaceChildren(...activities.map(homeActivityRow));
     }
 
     function renderMonth(focus = false) {

@@ -792,3 +792,16 @@
 @media (prefers-reduced-motion: reduce) {
     .campus-shell :is(.main-content, #sidebar, .campus-mood-grid button) { transition: none }
 }
+
+/* One daily plan, with the same activity palette as Calendario. */
+.campus-shell #campus-guided-preview[hidden] { display:none }
+.campus-shell #campus-home-classes { max-height:520px; overflow:auto; overscroll-behavior:contain; scrollbar-width:thin; padding:3px 5px 3px 3px; gap:8px }
+.campus-shell .campus-home-activity { display:grid; grid-template-columns:43px minmax(0,1fr) 18px; align-items:center; gap:10px; min-height:64px; padding:10px 11px; border:1px solid transparent; border-left:3px solid var(--kind-color); border-radius:10px; background:var(--kind-soft); color:var(--kind-ink); font:inherit; text-align:left; cursor:pointer }
+.campus-shell .campus-home-activity:hover { background:var(--kind-soft); color:var(--kind-ink); border-color:var(--kind-color) }
+.campus-shell .campus-home-activity:focus-visible { outline:2px solid var(--kind-color); outline-offset:1px }
+.campus-home-activity-time { display:grid; gap:3px; font-size:11px; line-height:1.3; font-weight:600; font-variant-numeric:tabular-nums }
+.campus-home-activity-content { display:grid; gap:4px; min-width:0 }
+.campus-home-activity-content strong { font-size:13px; line-height:1.4; font-weight:600; overflow-wrap:anywhere }
+.campus-home-activity-content small { font-size:11px; line-height:1.5; white-space:pre-line }
+.campus-home-activity-arrow { font-size:20px; text-align:right }
+@media (max-width:440px) { .campus-shell #campus-home-classes { max-height:440px } }

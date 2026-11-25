@@ -1,4 +1,4 @@
-const CACHE_NAME = 'alcocermed-main-v219-calendario-menu';
+const CACHE_NAME = 'alcocermed-main-v220-inicio-plan-unificado';
 const APP_SHELL = [
     './video-community.js?v=1',
     './video-community.css?v=1',
