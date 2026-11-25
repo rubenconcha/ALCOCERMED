@@ -25,6 +25,7 @@
    source: String(read(q, 'fuente_comentario') || read(q, 'fuente') || ''),
    printed_page: String(read(q, 'pagina_impresa') || ''),
    pdf_page: String(read(q, 'paginas_pdf') || ''),
+   ...(/^Examen pasado\b/i.test(read(q, 'fuente') || '') ? { pastExam: true } : {}),
    ...(reading?.title ? { reading } : {}),
    ...(Array.isArray(references) && references.length ? { references } : {}),
    ...(Number.isInteger(referenceRevision) ? { reference_revision: referenceRevision } : {}),
@@ -188,6 +189,32 @@
   return content;
  }
 
+ function teacherSticker(review, explanation, historical) {
+  const cues = [explanation, review.teaching?.concepto,
+   ...(review.teaching?.afirmaciones || []).map(claim => claim.comentario),
+   ...(review.option_explanations || [])].filter(Boolean).join(' ');
+  let name = 'recuerda';
+  if (/\btrampa\b/i.test(cues)) name = 'ojo-pregunta-trampa';
+  else if (/\bimportante\b/i.test(cues)) name = 'importante';
+  else if (/\bnota\s*:/i.test(cues)) name = 'nota';
+  else if (historical || review.pastExam || /^Examen pasado\b/i.test(review.source || '')) name = 'pregunta-de-examen';
+  else if (Number.isInteger(review.selected) && review.accepted?.length) {
+   name = review.accepted.includes(review.selected) ? 'cree-en-ti' : 'vamos-estudiante';
+  }
+  const figure = el('figure', null, 'qr-teacher');
+  figure.setAttribute('aria-hidden', 'true');
+  const image = el('img', null, 'qr-teacher-image');
+  image.src = '/assets/teacher-stickers/' + name + '.webp';
+  image.alt = '';
+  image.width = 384;
+  image.height = 384;
+  image.loading = 'lazy';
+  image.decoding = 'async';
+  image.onerror = () => figure.remove();
+  figure.append(image);
+  return figure;
+ }
+
  function showCommentary(review, { lockedMessage, workedSolution, sourceNote, compactSource = false, bankMode = false, openReading, showTeachingKey = false } = {}) {
   const panel = el('section', null, 'qr-commentary');
   const heading = el('h4', null, 'qr-commentary-title');
@@ -202,7 +229,11 @@
    return panel;
   }
 
-  if (review.teaching) panel.append(showTeaching(review.teaching, showTeachingKey));
+  const layout = el('div', null, 'qr-commentary-layout');
+  const copy = el('div', null, 'qr-commentary-text');
+  layout.append(copy);
+  panel.append(layout);
+  if (review.teaching) copy.append(showTeaching(review.teaching, showTeachingKey));
 
   const { options = [], selected, accepted = [], option_explanations = [], source, printed_page, pdf_page, reading } = review;
   const explanation = studentComment(review.explanation);
@@ -214,15 +245,15 @@
   });
 
   if (!review.teaching && workedSolution) {
-   if (bankMode) panel.append(el('h5', 'Cómo se resuelve', 'qr-subheading'));
-   panel.append(workedSolution);
+   if (bankMode) copy.append(el('h5', 'Cómo se resuelve', 'qr-subheading'));
+   copy.append(workedSolution);
   } else if (!review.teaching && !patternOnly && explanation && !reasons.some(({ comment }) => comment === explanation)) {
    if (bankMode) {
     const tidy = text => String(text || '').trim().toLowerCase().replace(/[.!?]+$/, '');
     const echo = accepted.some(index => tidy(options[index]) === tidy(explanation));
-    panel.append(el('h5', echo ? 'Respuesta correcta' : 'Por qué es correcta', 'qr-subheading'));
+    copy.append(el('h5', echo ? 'Respuesta correcta' : 'Por qué es correcta', 'qr-subheading'));
    }
-   panel.append(el('p', explanation, 'qr-commentary-copy'));
+   copy.append(el('p', explanation, 'qr-commentary-copy'));
   }
 
   if (reasons.length) {
@@ -242,18 +273,22 @@
     const showNow = index === selected && !correct || correct && !explanation && !workedSolution;
     (more && !showNow ? more : list).append(entry);
    }
-   if (list.childElementCount) panel.append(list);
+   if (list.childElementCount) copy.append(list);
    if (more?.childElementCount) {
     const detail = el('details', null, 'qr-bank-reasons');
     detail.append(el('summary', 'Revisar los incisos'), more);
-    panel.append(detail);
+    copy.append(detail);
    }
   }
 
   if (!review.teaching && !workedSolution && !reasons.length && (patternOnly || !explanation)) {
    const keys = accepted.map(index => 'ABCDE'[index]).filter(Boolean).join(', ');
-   if (keys) panel.append(el('p', (bankMode ? 'Respuesta correcta · ' : 'Clave del examen · ') + keys, 'qr-commentary-copy'));
+   if (keys) copy.append(el('p', (bankMode ? 'Respuesta correcta · ' : 'Clave del examen · ') + keys, 'qr-commentary-copy'));
    else if (!source) panel.hidden = true;
+  }
+
+  if (review.teaching || workedSolution || reasons.length || explanation && !patternOnly) {
+   layout.append(teacherSticker(review, explanation, compactSource || showTeachingKey));
   }
 
   if (reading) panel.append(showReading(reading, openReading));

@@ -2974,6 +2974,30 @@ body.wayground-active .main-content {
     overflow-wrap: anywhere;
 }
 .qr-commentary.qr-locked { border-style: dashed; }
+.qr-commentary { container-type: inline-size; }
+.qr-commentary-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: start;
+    gap: clamp(10px, 3cqw, 16px);
+}
+.qr-commentary-text { min-width: 0; }
+.qr-teacher {
+    margin: 0;
+    width: clamp(88px, 28cqw, 144px);
+    max-width: 100%;
+    pointer-events: none;
+}
+.qr-teacher-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+@container (max-width: 280px) {
+    .qr-commentary-layout { grid-template-columns: minmax(0, 1fr); }
+    .qr-teacher { justify-self: end; width: 88px; }
+}
 .qr-commentary h4.qr-commentary-title {
     margin: 0 0 10px;
     display: flex;

@@ -1,8 +1,15 @@
-const CACHE_NAME = 'alcocermed-main-v214-whatsapp-contacto';
+const CACHE_NAME = 'alcocermed-main-v215-docentes-comentarios';
 const APP_SHELL = [
     './student-results.js?v=11',
     './student-results.css?v=1',
     './question-review.js?v=15',
+    './assets/teacher-stickers/cree-en-ti.webp',
+    './assets/teacher-stickers/recuerda.webp',
+    './assets/teacher-stickers/ojo-pregunta-trampa.webp',
+    './assets/teacher-stickers/pregunta-de-examen.webp',
+    './assets/teacher-stickers/vamos-estudiante.webp',
+    './assets/teacher-stickers/importante.webp',
+    './assets/teacher-stickers/nota.webp',
     './suficiencia-core.js?v=12',
     './suficiencia.js?v=18',
     './suficiencia.css?v=9',
