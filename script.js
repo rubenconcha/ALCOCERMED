@@ -3297,6 +3297,7 @@ function ensureVideoCommunityAssets() {
 
 const BEN_CARSON_5050_PLAYBACK_PATH = '/api/flashcards?bc5050_playback=1';
 const BEN_CARSON_BIO_PLAYBACK_PATH = '/api/flashcards?bc_biologia_playback=1';
+const BEN_CARSON_HISTOLOGY_PLAYBACK_PATH = '/api/flashcards?bc_histologia_playback=1';
 
 async function getBenCarson5050Playback(playbackPath = BEN_CARSON_5050_PLAYBACK_PATH) {
     const { data, error } = await getSupabase().auth.getSession();
@@ -3665,11 +3666,12 @@ window.openVcModal = async function (v) {
         currentUser?.id === owner && currentCampusSessionId === session;
     if (!await verifyVideoclasesAccess(current)) return;
     const secured = v === BEN_CARSON_5050_LESSON;
-    const protectedBiology = campo(v, 'url_video') === BEN_CARSON_BIO_PLAYBACK_PATH;
+    const lessonPath = campo(v, 'url_video');
+    const protectedLessonPath = [BEN_CARSON_BIO_PLAYBACK_PATH, BEN_CARSON_HISTOLOGY_PLAYBACK_PATH].includes(lessonPath) ? lessonPath : null;
     let embedUrl;
-    if (secured || protectedBiology) {
+    if (secured || protectedLessonPath) {
         try {
-            embedUrl = await getBenCarson5050Playback(protectedBiology ? BEN_CARSON_BIO_PLAYBACK_PATH : BEN_CARSON_5050_PLAYBACK_PATH);
+            embedUrl = await getBenCarson5050Playback(protectedLessonPath || BEN_CARSON_5050_PLAYBACK_PATH);
         } catch (error) {
             if (current() && CampusAccess.canUseVideos()) {
                 showToast(error instanceof Error && ['Vuelve a iniciar sesión para ver la videoclase.',
@@ -3690,7 +3692,7 @@ window.openVcModal = async function (v) {
     document.getElementById('vc-modal-materia').textContent = (campo(v, 'materia') || '').toLowerCase();
     var iframe = document.getElementById('vc-iframe');
     if (iframe) {
-        if (secured || protectedBiology) iframe.referrerPolicy = 'strict-origin-when-cross-origin';
+        if (secured || protectedLessonPath) iframe.referrerPolicy = 'strict-origin-when-cross-origin';
         else iframe.removeAttribute('referrerpolicy');
         vcState.stopMeasurement?.();
         vcState.stopMeasurement = measureVideoPlayback(iframe, embedUrl);

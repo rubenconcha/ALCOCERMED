@@ -146,8 +146,10 @@ test('sin tema seleccionado la clase protegida sigue disponible y su flujo no se
   assert.match(script, /const BEN_CARSON_5050_PLAYBACK_PATH = '\/api\/flashcards\?bc5050_playback=1';/);
 });
 
-test('la clase de Biología obtiene reproducción firmada y usa su propio ID para comentarios y progreso',async()=>{
- const row={id:2,TITULO:'Modelos estructurales de la membrana plasmática',MATERIA:'BIOLOGÍA CELULAR',TEMA:'Estructura de la membrana plasmática',URL_VIDEO:'/api/flashcards?bc_biologia_playback=1'};
+for (const row of [
+ {id:2,TITULO:'Modelos estructurales de la membrana plasmática',MATERIA:'BIOLOGÍA CELULAR',TEMA:'Estructura de la membrana plasmática',URL_VIDEO:'/api/flashcards?bc_biologia_playback=1'},
+ {id:3,TITULO:'Clasificación de tejidos · Parte 1',MATERIA:'MORFOFUNCIÓN',TEMA:'Histología',URL_VIDEO:'/api/flashcards?bc_histologia_playback=1'}
+]) test(row.TITULO+' obtiene reproducción firmada y mantiene sus propios comentarios y progreso',async()=>{
  const t=harness([row]),paths=[],mounts=[];
  t.context.currentCampusSessionId='session';t.context.window.campusNavigationRequest=1;
  t.document.body={style:{}};
@@ -157,9 +159,9 @@ test('la clase de Biología obtiene reproducción firmada y usa su propio ID par
  t.context.ensureVideoCommunityAssets=async()=>({mount:options=>mounts.push(options)});
  await t.context.window.openVcModal(row);
  await new Promise(resolve=>setImmediate(resolve));
- assert.deepEqual(paths,['/api/flashcards?bc_biologia_playback=1']);
+ assert.deepEqual(paths,[row.URL_VIDEO]);
  assert.equal(t.document.getElementById('vc-iframe').src,'https://player.mediadelivery.net/embed/817157/signed-test');
- assert.equal(mounts.length,1);assert.equal(mounts[0].videoId,'2');
- assert.equal(t.document.getElementById('vc-modal-materia').textContent,'biología celular');
+ assert.equal(mounts.length,1);assert.equal(mounts[0].videoId,String(row.id));
+ assert.equal(t.document.getElementById('vc-modal-materia').textContent,row.MATERIA.toLowerCase());
  assert.equal(t.document.getElementById('vc-iframe').referrerPolicy,'strict-origin-when-cross-origin');
 });

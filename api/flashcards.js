@@ -20,6 +20,11 @@ module.exports = async function handler(req, res) {
     res.setHeader('Cache-Control', 'private, no-store');
     res.setHeader('X-Content-Type-Options', 'nosniff');
     res.setHeader('X-Robots-Tag', 'noindex');
+    if (req.method === 'POST' && req.query?.bc_histologia_playback === '1') {
+        const { createHandler } = require('../server/ben-carson-50-50-playback.js');
+        const { guid } = require('../server/ben-carson-histologia-lesson.json');
+        return createHandler({ defaultPublishableKey: anonKey, videoGuid: guid })(req, res);
+    }
     if (req.method === 'POST' && req.query?.bc_biologia_playback === '1') {
         const { createHandler } = require('../server/ben-carson-50-50-playback.js');
         const { guid } = require('../server/ben-carson-biologia-lesson.json');
