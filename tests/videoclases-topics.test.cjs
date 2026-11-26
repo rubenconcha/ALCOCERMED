@@ -148,7 +148,8 @@ test('sin tema seleccionado la clase protegida sigue disponible y su flujo no se
 
 for (const row of [
  {id:2,TITULO:'Modelos estructurales de la membrana plasmática',MATERIA:'BIOLOGÍA CELULAR',TEMA:'Estructura de la membrana plasmática',URL_VIDEO:'/api/flashcards?bc_biologia_playback=1'},
- {id:3,TITULO:'Clasificación de tejidos · Parte 1',MATERIA:'MORFOFUNCIÓN',TEMA:'Histología',URL_VIDEO:'/api/flashcards?bc_histologia_playback=1'}
+ {id:3,TITULO:'Clasificación de tejidos · Parte 1',MATERIA:'MORFOFUNCIÓN',TEMA:'Histología',URL_VIDEO:'/api/flashcards?bc_histologia_playback=1'},
+ {id:4,TITULO:'Clasificación de tejidos · Parte 2',MATERIA:'MORFOFUNCIÓN',TEMA:'Histología',URL_VIDEO:'/api/flashcards?bc_histologia2_playback=1'}
 ]) test(row.TITULO+' obtiene reproducción firmada y mantiene sus propios comentarios y progreso',async()=>{
  const t=harness([row]),paths=[],mounts=[];
  t.context.currentCampusSessionId='session';t.context.window.campusNavigationRequest=1;

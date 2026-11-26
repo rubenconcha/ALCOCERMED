@@ -1,4 +1,4 @@
-const CACHE_NAME = 'alcocermed-main-v228-video-histologia';
+const CACHE_NAME = 'alcocermed-main-v229-video-histologia2';
 const APP_SHELL = [
     './video-community.js?v=1',
     './video-community.css?v=1',

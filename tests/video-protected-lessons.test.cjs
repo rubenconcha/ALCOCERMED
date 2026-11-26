@@ -36,7 +36,7 @@ test('the deployed API dispatches all protected lesson routes without exposing p
  const previousEnv=process.env.VERCEL_ENV;process.env.VERCEL_ENV='production';
  t.after(()=>{if(previousEnv===undefined)delete process.env.VERCEL_ENV;else process.env.VERCEL_ENV=previousEnv;});
  const api=require('../api/flashcards.js');
- for(const route of ['bc5050_playback','bc_biologia_playback','bc_histologia_playback']){
+ for(const route of ['bc5050_playback','bc_biologia_playback','bc_histologia_playback','bc_histologia2_playback']){
   const result={headers:{}};
   const res={setHeader(k,v){result.headers[k]=v;},status(n){result.status=n;return this;},json(body){result.body=body;return this;}};
   await api({method:'POST',query:{[route]:'1'},headers:{origin:'https://www.alcocermed.com'}},res);

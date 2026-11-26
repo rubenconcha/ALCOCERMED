@@ -3298,6 +3298,7 @@ function ensureVideoCommunityAssets() {
 const BEN_CARSON_5050_PLAYBACK_PATH = '/api/flashcards?bc5050_playback=1';
 const BEN_CARSON_BIO_PLAYBACK_PATH = '/api/flashcards?bc_biologia_playback=1';
 const BEN_CARSON_HISTOLOGY_PLAYBACK_PATH = '/api/flashcards?bc_histologia_playback=1';
+const BEN_CARSON_HISTOLOGY2_PLAYBACK_PATH = '/api/flashcards?bc_histologia2_playback=1';
 
 async function getBenCarson5050Playback(playbackPath = BEN_CARSON_5050_PLAYBACK_PATH) {
     const { data, error } = await getSupabase().auth.getSession();
@@ -3667,7 +3668,7 @@ window.openVcModal = async function (v) {
     if (!await verifyVideoclasesAccess(current)) return;
     const secured = v === BEN_CARSON_5050_LESSON;
     const lessonPath = campo(v, 'url_video');
-    const protectedLessonPath = [BEN_CARSON_BIO_PLAYBACK_PATH, BEN_CARSON_HISTOLOGY_PLAYBACK_PATH].includes(lessonPath) ? lessonPath : null;
+    const protectedLessonPath = [BEN_CARSON_BIO_PLAYBACK_PATH, BEN_CARSON_HISTOLOGY_PLAYBACK_PATH, BEN_CARSON_HISTOLOGY2_PLAYBACK_PATH].includes(lessonPath) ? lessonPath : null;
     let embedUrl;
     if (secured || protectedLessonPath) {
         try {
