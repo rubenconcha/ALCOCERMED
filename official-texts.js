@@ -17,6 +17,21 @@
             credit: 'Departamento de Medicina Social y Familiar · Facultad de Medicina, UMSS',
             edition: '1.ª edición · 2025',
         },
+        {
+            subject: 'Matemática', slug: 'matematicas', art: 'mfq-matematicas', pages: 309,
+            title: 'Matemática · Texto integrado · Medicina UMSS 2027',
+            credit: 'Preparatoria Ben Carson', edition: 'Teoría, ejemplos y práctica · 2027',
+        },
+        {
+            subject: 'Física', slug: 'fisica', art: 'mfq-fisica', pages: 132,
+            title: 'Física · Texto integrado · Medicina UMSS 2027',
+            credit: 'Preparatoria Ben Carson', edition: 'Teoría, ejemplos y práctica · 2027',
+        },
+        {
+            subject: 'Química', slug: 'quimica', art: 'mfq-quimica', pages: 137,
+            title: 'Química · Texto integrado · Medicina UMSS 2027',
+            credit: 'Preparatoria Ben Carson', edition: 'Teoría, ejemplos y práctica · 2027',
+        },
     ];
     const $ = id => document.getElementById(id);
     const dialog = $('official-texts-reader');
@@ -227,7 +242,8 @@
         illustration.className = 'official-text-icon';
         illustration.src = '/assets/study-art/' + text.art + '.webp';
         illustration.alt = '';
-        illustration.width = illustration.height = 84;
+        illustration.width = 84;
+        illustration.height = text.art.startsWith('mfq-') ? 112 : 84;
         illustration.loading = 'lazy';
         illustration.decoding = 'async';
         const subject = document.createElement('p');

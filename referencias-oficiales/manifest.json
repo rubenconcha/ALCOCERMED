@@ -18,6 +18,30 @@
       "paginas_pdf": 1251,
       "sha256": "e00074c7105c10052637b1c2a82f2b8959cf7c4cb9a91c4abd058ce958e58148",
       "bytes": 42410570
+    },
+    {
+      "archivo": "Fisica_Completada_UMSS_2027 (1) (1).pdf",
+      "materia": "fisica",
+      "paginas_pdf": 132,
+      "sha256": "947de21e3a00468da21d8ecc2be3c79660c3459f6190e1bc8165ffd79d1aff23",
+      "bytes": 15275270,
+      "fecha_autorizacion": "2026-11-26"
+    },
+    {
+      "archivo": "Quimica_Completada_UMSS_2027 (1) (1).pdf",
+      "materia": "quimica",
+      "paginas_pdf": 137,
+      "sha256": "dd99d67c577fdde9cf717b0d18007ccdfb3538bceaad5dad3b8158fc6c5e111c",
+      "bytes": 10257897,
+      "fecha_autorizacion": "2026-11-26"
+    },
+    {
+      "archivo": "Matematica_Completada_UMSS_2027 (2) (1).pdf",
+      "materia": "matematicas",
+      "paginas_pdf": 309,
+      "sha256": "fc5ae1d389a63511b4ac5a80ea60104f26bc57db65de328491bb8c62b2b19e98",
+      "bytes": 29232411,
+      "fecha_autorizacion": "2026-11-26"
     }
   ]
 }

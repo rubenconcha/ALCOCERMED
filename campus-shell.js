@@ -138,7 +138,7 @@
             : item.resource === 'questions' ? 'Preguntas del tema de la semana'
             : item.resource === 'evaluation' ? 'Evaluación del tema de la semana'
             : item.resource === 'simulation' ? 'Simulacro del tema de la semana'
-            : item.resource === 'sufficiency' ? (item.endDayOffset ? 'Hasta las 00:30 del día siguiente · ampliable a la 01:00' : 'Abrir práctica de suficiencia')
+            : item.resource === 'sufficiency' ? (item.endDayOffset ? 'Hasta las 00:30 del día siguiente · ampliable a la 01:00' : item.reading ? 'Texto oficial · Ejercicios del tema' : 'Abrir práctica de suficiencia')
             : item.id.endsWith('-clases') ? item.description.replace(/ \| /g, '\n')
             : item.kind === 'rest' ? 'Pausa del día'
             : item.resource === 'flashcards' ? 'Abrir flashcards' : 'Ver actividad';

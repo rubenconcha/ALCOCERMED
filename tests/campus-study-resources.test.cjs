@@ -53,7 +53,7 @@ test('conversion reference uses the corrected acre, joule, kelvin and SI prefix 
     assert.equal(rows['deca (da)'], '10¹');
 });
 
-test('the three verified UMSS books open their private page segments and download the originals', async () => {
+test('the six verified UMSS books open their private page segments and download the originals', async () => {
     const downloads = [];
     function node() {
         return {
@@ -129,7 +129,7 @@ test('the three verified UMSS books open their private page segments and downloa
         },
     });
     assert.deepEqual(get('grid').children.map(card => card.children[1].textContent),
-        ['Morfofunción', 'Biología Celular y Molecular', 'Educación en Salud e Investigación']);
+        ['Morfofunción', 'Biología Celular y Molecular', 'Educación en Salud e Investigación', 'Matemática', 'Física', 'Química']);
     assert.match(get('grid').children[0].children[4].textContent, /6.ª edición/);
     assert.equal(get('grid').children[1].children[3].textContent, 'Alfonso Calvo González');
     assert.match(get('grid').children[1].children[4].textContent, /1.ª edición · Elsevier España · 2015/);
@@ -138,13 +138,14 @@ test('the three verified UMSS books open their private page segments and downloa
         ['morfofuncion', 'morphology'],
         ['biologia-celular', 'cell'],
         ['educacion-salud', 'health-education'],
+        ['matematicas', 'mfq-matematicas'], ['fisica', 'mfq-fisica'], ['quimica', 'mfq-quimica'],
     ];
     for (const [index, card] of get('grid').children.entries()) {
         const [subject, art] = catalog[index];
         const icon = card.children[0];
         assert.equal(icon.src, '/assets/study-art/' + art + '.webp');
         assert.equal(icon.alt, '');
-        assert.ok(funnel.includes('src="' + icon.src + '"'), subject);
+        if (index < 3) assert.ok(funnel.includes('src="' + icon.src + '"'), subject);
         assert.ok(fs.existsSync(path.join(__dirname, '..', icon.src.slice(1))), icon.src);
         const [open, save] = card.children[5].children;
         const url = '/api/texto-oficial?materia=' + subject;
@@ -157,8 +158,8 @@ test('the three verified UMSS books open their private page segments and downloa
     }
     await get('download').onclick();
     assert.equal(downloads.at(-1), loaded.at(-1).replace('&vista=tramo&desde=10', '&descarga=fixture'));
-    assert.equal(new Set(loaded).size, 3);
-    assert.deepEqual(firstPages, [1, 9, 1]);
+    assert.equal(new Set(loaded).size, 6);
+    assert.deepEqual(firstPages, [1, 9, 1, 1, 1, 1]);
     await window.OfficialTexts.readPage('morfofuncion', 707);
     assert.equal(firstPages.at(-1), 707);
     assert.equal(get('download').hidden, true);
@@ -184,7 +185,7 @@ test('the three verified UMSS books open their private page segments and downloa
     assert.equal(readings.at(-1).page, 9);
     assert.equal(readings.at(-1).citations, null);
     assert.equal(get('download').hidden, false);
-    assert.deepEqual(coverMethods, ['GET', 'GET', 'GET', 'HEAD', 'HEAD']);
+    assert.deepEqual(coverMethods, ['GET', 'GET', 'GET', 'GET', 'GET', 'GET', 'HEAD', 'HEAD']);
 });
 
 test('the PDF relay checks campus access, streams private PDFs and grants one short-lived download', async () => {
@@ -220,7 +221,8 @@ test('the PDF relay checks campus access, streams private PDFs and grants one sh
         return { status: res.statusCode, headers, body: Buffer.concat(chunks).toString() };
     }
     assert.equal((await request('https://example.com')).status, 404);
-    assert.equal((await request('matematicas')).status, 404);
+    assert.equal((await request('historia')).status, 404);
+    for (const slug of ['matematicas', 'fisica', 'quimica']) assert.equal((await request(slug)).status, 401);
     assert.equal((await request('morfofuncion', { method: 'DELETE' })).status, 405);
     assert.equal((await request('morfofuncion')).status, 401);
     assert.equal(calls.length, 0);
@@ -288,7 +290,31 @@ test('the PDF relay checks campus access, streams private PDFs and grants one sh
     assert.equal(segment.headers['Cache-Control'], 'private, no-store');
     assert.equal(segment.body.length, length);
     assert.equal(calls.at(-1)[1].headers.Range, `bytes=${offset}-${offset + length - 1}`);
-    upstream = () => new Response('<h1>Denied</h1>', { headers: { 'Content-Type': 'text/html' } });
+    for (const slug of ['matematicas', 'fisica', 'quimica']) {
+        const manifest = require('../api/_official_texts/segments.json')[slug];
+        const [offset, length] = manifest.segments[2];
+        upstream = () => new Response(new Uint8Array(length), {status:206,headers:{
+            'Content-Type':'application/octet-stream','Content-Length':length,
+            'Content-Range':`bytes ${offset}-${offset+length-1}/${manifest.bytes}`,
+        }});
+        const page = await request(slug,{authorization,view:'tramo',start:'2'});
+        assert.equal(page.status,200,slug);
+        assert.equal(page.body.length,length);
+        assert.equal(calls.at(-1)[0].pathname,`/umss/curso-basico-2027/lector/tramos-v1/${slug}.bin`);
+        assert.equal(page.headers['Cache-Control'],'private, no-store');
+        assert.match(page.headers['Content-Disposition'],new RegExp(`UMSS-2027-${slug}`));
+        premium = false;
+        assert.equal((await request(slug,{authorization,method:'POST'})).status,403);
+        assert.equal((await request(slug,{authorization,view:'tramo',start:'4'})).status,403);
+        assert.equal((await request(slug,{authorization,view:'tramo',start:'2'})).status,200);
+        upstream = () => new Response(null,{headers:{'Content-Type':'image/webp'}});
+        const preview = await request(slug,{authorization,method:'HEAD',view:'portada'});
+        assert.equal(preview.status,200);
+        assert.equal(preview.headers['X-Official-Preview-Pages'],'2,3');
+        assert.equal(preview.headers['X-Official-Reader'],undefined);
+        premium = true;
+    }
+    upstream = () => new Response('<h1>Denied</h1>',  { headers: { 'Content-Type': 'text/html' } });
     const rejected = await request('morfofuncion', { authorization });
     assert.equal(rejected.status, 502);
     assert.equal(rejected.body, '');

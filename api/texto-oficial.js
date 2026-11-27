@@ -6,7 +6,7 @@ const { createHmac, timingSafeEqual } = require('node:crypto');
 const books = require('./_official_texts/segments.json');
 const samplePages = require('./_official_texts/sample-pages.cjs');
 
-const subjects = new Set(['morfofuncion', 'biologia-celular', 'educacion-salud']);
+const subjects = new Set(Object.keys(books));
 const library = 'https://ln3dltv3md2wx5wh.private.blob.vercel-storage.com/umss/curso-basico-2025-2026/';
 const campusAccess = 'https://asnwhddmurstzmghuyin.supabase.co/rest/v1/rpc/campus_access';
 const anonKey = process.env.SUPABASE_ANON_KEY || require('./_flashcards/config.json').anonKey;
@@ -122,7 +122,8 @@ module.exports = async function handler(req, res) {
 
     const extension = cover ? 'webp' : 'pdf';
     const objectPath = segmented ? 'lector/tramos-v1/' + subject + '.bin' : (view ? 'lector/' : '') + subject + '.' + extension;
-    const upstream = new URL(objectPath, library);
+    const sourceLibrary = book.year === 2027 ? library.replace('curso-basico-2025-2026/', 'curso-basico-2027/') : library;
+    const upstream = new URL(objectPath, sourceLibrary);
     const contentType = cover ? 'image/webp' : 'application/pdf';
     const allowedType = cover ? /^(image\/webp|application\/octet-stream)(?:;|$)/i : /^application\/(pdf|octet-stream)(?:;|$)/i;
     const headers = { Authorization: 'Bearer ' + secret, 'Accept-Encoding': 'identity' };
@@ -149,7 +150,7 @@ module.exports = async function handler(req, res) {
         }
         res.statusCode = segment ? 200 : pdf.status;
         res.setHeader('Content-Type', contentType);
-        res.setHeader('Content-Disposition', `${download ? 'attachment' : 'inline'}; filename="UMSS-2025-2026-${subject}.${extension}"`);
+        res.setHeader('Content-Disposition', `${download ? 'attachment' : 'inline'}; filename="UMSS-${book.year === 2027 ? 2027 : '2025-2026'}-${subject}.${extension}"`);
         if (cover) {
             if (availablePages) res.setHeader('X-Official-Preview-Pages', availablePages.join(','));
             else res.setHeader('X-Official-Reader', reading ? req.headers['x-official-reader'] : issueGrant(secret, subject, true));

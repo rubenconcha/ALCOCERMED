@@ -1,6 +1,6 @@
 # Fuentes oficiales de AlcocerMed
 
-Por indicación expresa del usuario del 19 de octubre de 2026, el contenido académico de AlcocerMed debe basarse únicamente en los tres PDF guardados en `referencias-oficiales/`. Consulta [README.md](referencias-oficiales/README.md) y [manifest.json](referencias-oficiales/manifest.json) para identificar los archivos.
+Por indicación expresa del usuario, el contenido académico de AlcocerMed debe basarse únicamente en los PDF autorizados y registrados en `referencias-oficiales/`: los tres textos de Medicina del 19 de octubre de 2026 y los textos de Física, Química y Matemática UMSS 2027 incorporados el 26 de noviembre de 2026. Consulta [README.md](referencias-oficiales/README.md) y [manifest.json](referencias-oficiales/manifest.json) para identificar los archivos.
 
 - Esta regla se aplica a explicaciones, animaciones, guiones, preguntas, flashcards, resúmenes y demás material académico del proyecto.
 - No sustituyas estos textos por sitios web, otros libros, otras ediciones ni conocimiento general. Si el material no respalda una afirmación, indícalo y solicita una fuente oficial adicional cuando resulte necesario.

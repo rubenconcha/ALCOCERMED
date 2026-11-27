@@ -48,7 +48,7 @@ test('only confirmed weekly Medicine alternatives are offered and all three tool
   assert.deepEqual(morfo.readingOptions.map(r=>r.topicLinks.evaluation),['morfo-05','morfo-06']);
   assert.deepEqual(bio.readingOptions.map(r=>r.topicLinks.evaluation),['biologia-03','biologia-05']);
   for(const r of [...morfo.readingOptions,...bio.readingOptions])assert.deepEqual(r.topicLinks.past.topics,[r.topicLinks.evaluation]);
-  assert.ok(data.groupDay('2026-11-30',group).every(r=>!r.readingOptions?.length));
+  assert.ok(data.groupDay('2026-11-30',group).filter(r=>['morfofuncion','biologia-celular'].includes(r.readingGroup)).every(r=>!r.readingOptions?.length));
  }
 });
 test('virtual suggested study and official evening classes remain separate',()=>{

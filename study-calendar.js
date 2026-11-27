@@ -479,10 +479,12 @@
         planToggle.setAttribute('aria-label', open ? 'Ocultar horario' : 'Mostrar horario');
     }
 
+    const readingKey = book => book?.id || book?.topicLinks?.evaluation;
+
     function updateView(next, selectedReading = reading) {
         view = next;
         reading = selectedReading;
-        if (state.active?.readingGroup && selectedReading) guidedTopic.set(state.active.readingGroup, selectedReading.topicLinks.evaluation);
+        if (state.active?.readingGroup && selectedReading) guidedTopic.set(state.active.readingGroup, readingKey(selectedReading));
         renderActivity();
         renderPlan();
         focusDay();
@@ -553,7 +555,7 @@
     }
 
     function renderManual(item, isCurrent) {
-        tools.append(manualNav());
+        tools.append(item.resource === 'sufficiency' ? practiceNav() : manualNav());
         if (view === 'orientation') {
             const title = element('div', 'calendar-reading-heading');
             title.append(element('h3', '', reading.topic), element('p', '', reading.subject + ' · ' + reading.section));
@@ -590,7 +592,7 @@
         const select = element('select', 'calendar-topic-select');
         select.setAttribute('aria-label', label);
         readings.forEach((book, i) => select.add(new Option(book.section + ' · ' + book.topic, String(i))));
-        const selected = readings.findIndex(book => book.topicLinks.evaluation === reading?.topicLinks.evaluation);
+        const selected = readings.findIndex(book => readingKey(book) === readingKey(reading));
         select.value = String(Math.max(selected,0));
         select.onchange = () => updateView(nextView, readings[Number(select.value)]);
         tools.append(select);
@@ -741,7 +743,34 @@
         }
     }
 
+    function practiceNav() {
+        const nav = element('nav', 'calendar-manual-nav');
+        nav.setAttribute('aria-label', 'Estudiar y practicar este tema');
+        for (const [id,label] of [['practice','Ejercicios del tema'],['manual','Texto oficial']]) {
+            const tab = button('calendar-manual-tab', label, () => updateView(id));
+            tab.setAttribute('aria-pressed', String(view === id));
+            nav.append(tab);
+        }
+        return nav;
+    }
+
+    function practiceReading() {
+        if (!reading) return null;
+        const card = element('section','calendar-study-card calendar-practice-reading');
+        const cover = element('img','calendar-practice-cover');
+        cover.src = '/assets/study-art/mfq-' + reading.slug + '.webp';
+        cover.alt = 'Portada de ' + reading.title;
+        cover.width = 56; cover.height = 76; cover.decoding = 'async';
+        const text = element('div');
+        text.append(element('h3','',reading.topic), element('p','calendar-study-guide',reading.title));
+        card.append(cover,text,button('calendar-primary','Leer este apartado',() => updateView('manual')));
+        return card;
+    }
+
     async function renderDirectedPractice(item, isCurrent) {
+        if (reading) tools.append(practiceNav());
+        const reference = practiceReading();
+        if (reference) workspace.append(reference);
         if (item.endDayOffset) workspace.append(element('p','calendar-study-guide',item.description));
         const status = message(workspace, 'Preparando los ejercicios de este tema…');
         const assignment = item.assignment;
@@ -820,14 +849,14 @@
                 nav.append(previous, element('span', '', [...answers.values()].filter(a => a.checked).length + ' de ' + questions.length + ' comprobadas'), next);
                 const complete = completionButton(item, 'calendar-outline calendar-complete-detail', false);
                 card.append(nav, complete);
-                workspace.replaceChildren(layout);
+                workspace.replaceChildren(...[reference,layout].filter(Boolean));
                 renderProgress();
                 if (focus) heading.focus({ preventScroll:true });
             }
             draw();
         } catch (_) {
             if (!isCurrent()) return;
-            workspace.replaceChildren();
+            workspace.replaceChildren(...[reference].filter(Boolean));
             message(workspace, 'No pudimos cargar los ejercicios de este tema.');
             workspace.append(button('calendar-outline', 'Reintentar', () => updateView('practice')));
         }
@@ -840,6 +869,22 @@
         const detail = item?.description || 'Usa las flechas del horario para consultar otro día.';
         card.append(icon('info'), body);
         body.append(element('h3', '', title), element('p', '', detail));
+        if (item?.studyLinks?.length) {
+            const links = element('div','calendar-study-tools');
+            links.append(element('p','calendar-study-guide','Texto oficial de la clase de hoy'));
+            for (const book of item.studyLinks) {
+                const control = button('calendar-outline',book.topic,async () => {
+                    control.disabled = true;
+                    try {
+                        await window.loadCampusAssets('texts');
+                        window.OfficialTexts.readRange(book.slug,...book.pdf);
+                    } catch (_) { showToast('No pudimos abrir la lectura. Vuelve a intentarlo.','error'); }
+                    finally { control.disabled = false; }
+                });
+                links.append(control);
+            }
+            body.append(links);
+        }
         const action = actions[item?.resource];
         if (action) {
             const [label, run] = action;
@@ -906,7 +951,7 @@
     function setActivity(item) {
         state.active = item || null;
         view = activityViews[item?.resource];
-        reading = item?.readingOptions?.find(book => book.topicLinks.evaluation === guidedTopic.get(item.readingGroup))
+        reading = item?.readingOptions?.find(book => readingKey(book) === guidedTopic.get(item.readingGroup))
             || item?.reading || (item?.topicLinks && activities().find(entry => entry.reading?.topicLinks === item.topicLinks)?.reading);
     }
 
@@ -940,8 +985,8 @@
             select.dataset.calendarActivity = item.id;
             const times = element('span', 'calendar-plan-times', item.start);
             if (item.end) times.append(element('span', '', item.end));
-            const chosen = item.readingOptions?.find(book => book.topicLinks.evaluation === guidedTopic.get(item.readingGroup)) || item.reading;
-            const label = chosen && item.readingOptions ? item.title + ' · ' + chosen.topic : item.title;
+            const chosen = item.readingOptions?.find(book => readingKey(book) === guidedTopic.get(item.readingGroup)) || item.reading;
+            const label = chosen && item.readingOptions && item.resource !== 'sufficiency' ? item.title + ' · ' + chosen.topic : item.title;
             select.append(times, element('span', 'calendar-plan-item-label', label));
             row.append(select, completionButton(item, 'calendar-plan-complete'));
             list.append(row);

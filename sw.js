@@ -1,4 +1,4 @@
-const CACHE_NAME = 'alcocermed-main-v229-video-histologia2';
+const CACHE_NAME = 'alcocermed-main-v230-textos-mfq-2027';
 const APP_SHELL = [
     './video-community.js?v=1',
     './video-community.css?v=1',
@@ -97,12 +97,12 @@ const APP_SHELL = [
     './summary-pdf-reader.js?v=10',
     './summary-pdf-reader.css?v=5',
     './campus-study-resources.css?v=9',
-    './study-calendar.css?v=14',
-    './study-calendar-data.js?v=9',
+    './study-calendar.css?v=15',
+    './study-calendar-data.js?v=10',
     './study-calendar-pdf.js?v=2',
-    './study-calendar.js?v=18',
+    './study-calendar.js?v=19',
     './campus-shell.css?v=4',
-    './campus-shell.js?v=8',
+    './campus-shell.js?v=9',
     './campus-section-tracking.js?v=1',
     './campus-atlas.js?v=12',
     './study-media.js?v=20261021-visual5b',
@@ -119,7 +119,7 @@ const APP_SHELL = [
     './vendor/jspdf/jspdf.umd.min.js',
     './vendor/pdfjs/pdf.min.mjs',
     './vendor/pdfjs/pdf.worker.min.mjs',
-    './official-texts.js?v=14',
+    './official-texts.js?v=15',
     './assets/study-art/morphology.webp',
     './assets/study-art/cell.webp',
     './assets/study-art/health-education.webp',

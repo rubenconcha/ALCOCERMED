@@ -283,6 +283,112 @@
         return (assignment.block === 1 ? (pool.slice(half).length ? pool.slice(half) : pool) : assignment.block === 0 ? pool.slice(0, half) : pool).slice(0, 20);
     }
 
+    // Verified against the three teacher-supplied PDF files (26 November 2026).
+    // Printed numbering restarts inside these compilations; only PDF page numbers are used.
+    const mfqSections = {
+        reales:['matematicas','Números reales y operaciones',52,56],
+        notacion:['fisica','Notación científica y redondeo',2,3],
+        razones:['matematicas','Razones, proporciones y porcentajes',32,38],
+        algebra:['matematicas','Expresiones y operaciones algebraicas',57,76],
+        productos:['matematicas','Productos y cocientes notables',101,110],
+        factores:['matematicas','Factorización',111,118],
+        fracciones:['matematicas','Fracciones algebraicas',118,125],
+        ecuaciones:['matematicas','Ecuaciones de primer grado y despejes',77,84],
+        sistemas:['matematicas','Sistemas de ecuaciones lineales',138,143],
+        cuadraticas:['matematicas','Ecuaciones de segundo grado',149,154],
+        inecuaciones:['matematicas','Desigualdades e inecuaciones',154,160],
+        potencias:['matematicas','Potencias y radicales',125,130],
+        logaritmos:['matematicas','Logaritmos',160,163],
+        exponenciales:['matematicas','Funciones y ecuaciones exponenciales',163,167],
+        progresiones:['matematicas','Sucesiones y progresiones',167,176],
+        logica:['matematicas','Lógica y proposiciones',182,188],
+        conjuntos:['matematicas','Conjuntos',276,280],
+        combinatoria:['matematicas','Análisis combinatorio',195,197],
+        razonesTrig:['matematicas','Razones y funciones trigonométricas',206,214],
+        identidades:['matematicas','Identidades trigonométricas',225,230],
+        triangulos:['matematicas','Resolución de triángulos',215,225],
+        ecuacionesTrig:['matematicas','Ecuaciones trigonométricas',230,233],
+        recta:['matematicas','Geometría analítica y recta',243,249],
+        circunferencia:['matematicas','Circunferencia',249,255],
+        parabola:['matematicas','Parábola',255,263],
+        elipse:['matematicas','Elipse',263,270],
+        hiperbola:['matematicas','Hipérbola',270,276],
+        limites:['matematicas','Funciones y límites',281,288],
+        derivadas:['matematicas','Derivadas',289,291],
+        integrales:['matematicas','Integrales',292,293],
+        medicion:['fisica','Cifras significativas, magnitudes y unidades',2,6],
+        errores:['fisica','Precisión, exactitud y errores',7,9],
+        vectores:['fisica','Magnitudes vectoriales y operaciones',12,18],
+        mru:['fisica','Movimiento y MRU',30,34],
+        mruv:['fisica','MRUV y aceleración',35,38],
+        vertical:['fisica','Caída libre y movimiento vertical',38,43],
+        parabolico:['fisica','Movimiento parabólico',43,49],
+        circular:['fisica','Movimiento circular uniforme y variado',49,57],
+        estatica:['fisica','Estática y condiciones de equilibrio',58,63],
+        newton:['fisica','Leyes de Newton y rozamiento',63,66],
+        gravitacion:['fisica','Dinámica circular y gravitación',68,72],
+        trabajo:['fisica','Trabajo mecánico',72,75],
+        energia:['fisica','Energía mecánica',76,82],
+        potencia:['fisica','Potencia mecánica',83,85],
+        impulso:['fisica','Impulso y cantidad de movimiento',85,90],
+        hidrostatica:['fisica','Hidrostática',90,95],
+        hidrodinamica:['fisica','Hidrodinámica, Bernoulli y Torricelli',95,99],
+        temperatura:['fisica','Temperatura y dilatación térmica',26,29],
+        ondas:['fisica','Ondas y sonido',19,20],
+        optica:['fisica','Luz y óptica',21,26],
+        electrostatica:['fisica','Electrostática y ley de Coulomb',100,105],
+        campo:['fisica','Campo eléctrico',106,110],
+        potencial:['fisica','Potencial eléctrico',111,115],
+        ohm:['fisica','Corriente, resistencia y ley de Ohm',116,124],
+        circuitos:['fisica','Circuitos y leyes de Kirchhoff',125,128],
+        magnetismo:['fisica','Electromagnetismo',128,131],
+        binarios:['quimica','Compuestos binarios: óxidos e hidruros',2,7],
+        ternarios:['quimica','Hidróxidos y oxoácidos',8,13],
+        sales:['quimica','Sales inorgánicas y nomenclatura',14,23],
+        periodica:['quimica','Tabla periódica',24,28],
+        atomica:['quimica','Estructura atómica y configuración electrónica',29,35],
+        enlaces:['quimica','Enlaces químicos',36,39],
+        reacciones:['quimica','Reacciones químicas',40,42],
+        balanceo:['quimica','Balanceo de ecuaciones',43,49],
+        mol:['quimica','Átomos, moles y moléculas',50,55],
+        estequiometria:['quimica','Estequiometría y leyes gravimétricas',56,68],
+        gases:['quimica','Leyes de los gases',62,70],
+        soluciones:['quimica','Concentración y dilución de soluciones',70,78],
+        equilibrio:['quimica','Cinética y equilibrio químico',85,89],
+        ph:['quimica','Equilibrio, ácidos, bases y pH',90,94],
+        organica:['quimica','Carbono e hidrocarburos',95,109],
+        oxigenadas:['quimica','Funciones orgánicas oxigenadas',110,122],
+        nitrogenadas:['quimica','Funciones nitrogenadas y sales orgánicas',123,129],
+    };
+    const mfqSchedule = [
+        [['reales','notacion'],['medicion'],['binarios'],['razones'],['medicion','errores','vectores']],
+        [['algebra','productos'],['vectores'],['ternarios','sales'],['factores','fracciones'],['mru']],
+        [['ecuaciones'],['mruv'],['periodica','atomica'],['sistemas'],['vertical']],
+        [['cuadraticas'],['parabolico'],['enlaces','reacciones','balanceo'],['inecuaciones'],['circular']],
+        [['potencias','logaritmos'],['estatica','newton'],['mol','estequiometria'],['exponenciales'],['newton','gravitacion']],
+        [['progresiones'],['trabajo','energia','potencia'],['gases','soluciones'],['logica','conjuntos','combinatoria'],['impulso']],
+        [['razonesTrig','identidades'],['hidrostatica','hidrodinamica'],['equilibrio','ph'],['triangulos','ecuacionesTrig'],['temperatura','ondas','optica']],
+        [['recta','circunferencia','parabola','elipse','hiperbola'],['electrostatica','campo','potencial'],['organica','oxigenadas','nitrogenadas'],['limites','derivadas','integrales'],['ohm','circuitos','magnetismo']],
+    ];
+    function mfqReadings(key) {
+        if (key < classCalendar.start || key > classCalendar.end) return [];
+        const index = toDate(key).getUTCDay() - 1;
+        const week = Math.floor((toDate(monday(key)) - toDate(classCalendar.start)) / 604800000);
+        return (mfqSchedule[week]?.[index] || []).map(id => {
+            const [slug,topic,first,last] = mfqSections[id];
+            const label = {matematicas:'Matemática',fisica:'Física',quimica:'Química'}[slug];
+            return {id:'mfq-'+id,slug,topic,section:label+' · 2027',subject:label,
+                title:label+' · Texto integrado · Medicina UMSS 2027',credit:'Preparatoria Ben Carson',
+                pdf:[first,last],printed:[]};
+        });
+    }
+    function mfqStudy(key, block = -1) {
+        const readingOptions = mfqReadings(key);
+        const assignment = practiceFor(key,block);
+        return {resource:'sufficiency',assignment,reading:readingOptions[0],readingOptions,
+            readingSlug:assignment?.subject,readingGroup:'mfq-'+key};
+    }
+
     const weeklyReadings = {
         '2026-11-23': {
             morfofuncion: [
@@ -316,14 +422,14 @@
         topic('morfo-estudio','morfofuncion','study','07:00','09:00','Morfofunción','reading',one);
         topic('morfo-desglose','morfofuncion','exam','09:00','10:00','Examen pasado · Morfofunción','questions',one);
         topic('morfo-simulacro','morfofuncion','exam','10:00','11:00','Evaluación · Morfofunción','evaluation',one);
-        add('suficiencia-1','practice','11:00','12:00',mfq,'Practica el tema de suficiencia del día.',{resource:'sufficiency', assignment:practiceFor(key,0)});
+        add('suficiencia-1','practice','11:00','12:00',mfq,'Practica el tema de suficiencia del día.',mfqStudy(key,0));
         add('almuerzo','rest','12:00','13:00','Almuerzo y descanso','Haz una pausa antes de retomar el estudio.');
-        add('suficiencia-2','practice','13:00','14:00',mfq,'Segunda hora de práctica de suficiencia.',{resource:'sufficiency', assignment:practiceFor(key,1)});
+        add('suficiencia-2','practice','13:00','14:00',mfq,'Segunda hora de práctica de suficiencia.',mfqStudy(key,1));
         topic('bio-estudio','biologia-celular','study','14:00','16:00','Biología Celular','reading',one);
         topic('bio-desglose','biologia-celular','exam','16:00','17:00','Examen pasado · Biología Celular','questions',one);
         const virtual = classCalendar.groups.virtual;
         const lesson = virtual.days[dayIndex].map((id,i)=>virtual.times[i] + ' · ' + classCalendar.subjects[id]);
-        add('clases','free','17:00','21:00','Clases virtuales en vivo',lesson.join(' | '));
+        add('clases','free','17:00','21:00','Clases virtuales en vivo',lesson.join(' | '), {studyLinks:mfqReadings(key)});
         add('descanso','rest','21:00','21:30','Descanso','Pausa después de clases.');
         add('libre','free','22:00','00:00','Estudio libre','Opcional: repasa Digestivo, Respiratorio, Urinario, Linfático o Reproductor.',{resource:'flashcards'});
         return rows;
@@ -355,7 +461,7 @@
         const subject = ['mate','fis','quim','mate','fis'][day];
         add('suficiencia','practice','23:00','00:30',classCalendar.subjects[subject]+' · '+classCalendar.topics[week][day],
             'Practica el tema del día. Termina a las 00:30 del día siguiente; puedes extenderlo hasta la 01:00.',
-            {resource:'sufficiency',assignment,endDayOffset:1});
+            {...mfqStudy(key,-1),endDayOffset:1});
         return rows;
     }
 
@@ -383,7 +489,7 @@
                     (options.length?'Elige qué tema confirmado de esta semana quieres repasar; son alternativas de estudio.':
                      mfq?classCalendar.topics[week][index]:'El tema de esta clase aún no está publicado.'),
                 ...(options.length?{resource:'reading',reading:options[0],readingOptions:options,readingGroup:slugs[subject]}:
-                   mfq?{resource:'sufficiency',assignment:practiceFor(key,-1)}:{}),
+                   mfq?mfqStudy(key,-1):{}),
             };
         });
         return classes.concat(presencialStudy(key,groupId));
@@ -397,5 +503,5 @@
         }
         return plan;
     }
-    return { zone, kinds, today, move, monday, formatDay, pageRange, buildSample, classCalendar, virtualStudy, groupDay, buildGroupPlan, practiceFor, practiceQuestions };
+    return { zone, kinds, today, move, monday, formatDay, pageRange, buildSample, classCalendar, virtualStudy, groupDay, buildGroupPlan, practiceFor, practiceQuestions, mfqReadings };
 });

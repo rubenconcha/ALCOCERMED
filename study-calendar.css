@@ -504,3 +504,14 @@
 @media (min-width:769px) {
  .calendar-workspace-tools:has(.calendar-manual-nav) { display:flex; align-items:center; gap:8px; padding-block:5px }
 }
+
+/* A compact book reference stays beside the assigned exercises. */
+.calendar-practice-reading { display:flex; align-items:center; gap:16px; margin:16px; }
+.calendar-practice-reading > div { flex:1; min-width:0; }
+.calendar-practice-reading h3 { margin:0 0 6px; font-size:1rem; }
+.calendar-practice-reading p { margin:0; }
+.calendar-practice-cover { object-fit:contain; flex:none; border-radius:4px; }
+@media (max-width:600px) {
+  .calendar-practice-reading { flex-wrap:wrap; gap:12px; }
+  .calendar-practice-reading > button { width:100%; }
+}

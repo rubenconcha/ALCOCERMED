@@ -33,6 +33,7 @@ async function build() {
         const slug = slugs[question.materia];
         for (const value of String(question.paginas_pdf || '').match(/\d+/g) || []) pages[slug]?.add(Number(value));
     }
+    for (const slug of ['matematicas', 'fisica', 'quimica']) pages[slug] = new Set([2, 3]);
     return Object.fromEntries(Object.entries(pages).map(([slug, entries]) => [slug, [...entries].sort((a, b) => a - b)]));
 }
 

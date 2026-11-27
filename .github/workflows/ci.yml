@@ -33,7 +33,7 @@ jobs:
         run: |
           node --check sufficiency-practice.js
           node --check summary-pdf-reader.js
-          node --test tests/campus-study-resources.test.cjs tests/study-summaries.test.cjs
+          node --test tests/campus-study-resources.test.cjs tests/study-summaries.test.cjs tests/mfq-official-texts.test.cjs
       - name: Check study calendar and sample schedule
         run: |
           node --check study-calendar.js

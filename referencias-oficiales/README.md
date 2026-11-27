@@ -1,11 +1,7 @@
-# Biblioteca oficial de AlcocerMed
+# Textos autorizados
 
-El usuario proporcionó estos tres textos el 19 de octubre de 2026 como fuentes de consulta para el contenido académico de Medicina.
+Los originales privados se conservan íntegros en esta carpeta y en el almacenamiento protegido del campus. `manifest.json` registra nombres, páginas, tamaño y SHA-256; los PDF no se incluyen en Git.
 
-- **Morfofunción** · `morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf`
-- **Biología celular** · `Biologia_Celular_Biomedica_St_Alfonso_Ca (1).pdf`
-- **Educación en salud e investigación** · `EDUCACION EN SALUD E INVESTIGACION CB24-25 (1).pdf`
+El usuario autorizó el 19 de octubre de 2026 los textos de Saladin, Alfonso Calvo y Educación en Salud. El 26 de noviembre de 2026 entregó y autorizó los tres PDF de Física, Química y Matemática para Medicina UMSS 2027, con portada de Preparatoria Ben Carson.
 
-El [manifiesto](manifest.json) identifica los archivos por tamaño, número de páginas del PDF y huella SHA-256. Consigue el archivo pertinente por el canal privado indicado por el usuario antes de citar o redactar contenido. Conserva los originales y sus extracciones fuera del repositorio público y del despliegue.
-
-Confirma la autoría y edición en el propio PDF. Cita el capítulo o la sección y registra la página impresa junto con la página del PDF. El texto de Biología celular corresponde a Alfonso Calvo.
+Los tres libros nuevos reúnen material con numeraciones impresas que reinician. Sus enlaces usan la página real del PDF, sin inferir una numeración impresa continua. El calendario mantiene sus horarios y enlaza los apartados del tema de cada fecha para Presencial 1, Presencial 2 y Virtual. Los originales de descarga conservan exactamente las huellas del manifiesto.
