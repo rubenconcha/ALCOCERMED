@@ -744,7 +744,7 @@
     }
 
     function practiceNav() {
-        const nav = element('nav', 'calendar-manual-nav');
+        const nav = element('nav', 'calendar-manual-nav calendar-practice-nav');
         nav.setAttribute('aria-label', 'Estudiar y practicar este tema');
         for (const [id,label] of [['practice','Ejercicios del tema'],['manual','Texto oficial']]) {
             const tab = button('calendar-manual-tab', label, () => updateView(id));

@@ -515,3 +515,6 @@
   .calendar-practice-reading { flex-wrap:wrap; gap:12px; }
   .calendar-practice-reading > button { width:100%; }
 }
+
+.calendar-practice-nav { grid-template-columns:repeat(2,max-content); }
+.calendar-practice-nav button { white-space:nowrap; }
