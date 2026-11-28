@@ -60,6 +60,8 @@ window.CampusAccess = (() => {
     }
     function reset() {
         state = { premium: false, ready: false };
+        const activationStatus = document.getElementById('free-account-recheck-status');
+        if (activationStatus) activationStatus.textContent = '';
         catalogPromise = null;
         render();
     }
@@ -118,8 +120,46 @@ window.CampusAccess = (() => {
         return true;
     }
 
-    return { check, requirePremium, apply, reset, resolve, refresh, isFree, isRegistered, canUseVideos, permits, unlock, catalog };
+    async function refreshRegistered(client, isCurrent) {
+        const before = state;
+        let access;
+        try { access = await check(client); }
+        catch (error) {
+            if (!isCurrent() || before !== state) return 'stale';
+            throw error;
+        }
+        if (!isCurrent() || before !== state) return 'stale';
+        apply(access);
+        return isFree() ? 'pending' : 'active';
+    }
+
+    return { check, requirePremium, apply, reset, resolve, refresh, refreshRegistered, isFree, isRegistered, canUseVideos, permits, unlock, catalog };
 })();
+
+window.recheckCampusActivation = async function (button) {
+    if (button.disabled || !CampusAccess.isRegistered() || !CampusAccess.isFree()) return;
+    const owner = currentUser?.id;
+    const session = currentCampusSessionId;
+    if (!owner || !session) return;
+    const isCurrent = () => !campusSigningOut && currentUser?.id === owner && currentCampusSessionId === session;
+    const status = document.getElementById('free-account-recheck-status');
+    button.disabled = true;
+    status.textContent = 'Verificando tu acceso…';
+    try {
+        const result = await CampusAccess.refreshRegistered(getSupabase(), isCurrent);
+        if (!isCurrent()) return;
+        if (result === 'active') window.loadCampusAssets?.('campus-extra').catch(() => {});
+        status.textContent = result === 'pending'
+            ? 'Este correo todavía no tiene acceso vigente. Si ya te confirmaron la activación, verifica que estés usando el mismo correo y contáctanos por WhatsApp.' : '';
+    } catch (error) {
+        if (!isCurrent()) return;
+        status.textContent = ['DEVICE_LIMIT', 'NOT_AUTHENTICATED'].includes(error.code)
+            ? 'Vuelve a iniciar sesión con este correo y completa la verificación si se te solicita.'
+            : 'No pudimos verificar tu acceso en este momento. Intenta de nuevo.';
+    } finally {
+        button.disabled = false;
+    }
+};
 
 // Retain the requested exam across Google's fixed, allow-listed /campus callback.
 const googleSimulationReturnKey = 'alcocer_google_return_simulation';

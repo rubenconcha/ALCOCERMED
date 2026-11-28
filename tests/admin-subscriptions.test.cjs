@@ -43,3 +43,19 @@ test('si el servidor no encuentra el correo se sugiere el registrado más pareci
   assert.match(subscriptions, /form\.elements\.email\.value = suggestion/);
   assert.match(subscriptions, /Colocamos el correo registrado más parecido:/);
 });
+
+
+test('el panel avisa el motivo real si la activación queda bloqueada por nómina o cuenta suspendida', () => {
+  const {runInNewContext} = require('node:vm');
+  const source = subscriptions.match(/function messageFor\(error, fallback\) \{[\s\S]*?\n  \}/)?.[0];
+  assert.ok(source);
+  const messageFor = runInNewContext('(' + source + ')');
+  for (const text of [
+    'Este correo no está en la nómina autorizada. No se guardó la suscripción.',
+    'Las fechas elegidas exceden la vigencia autorizada en la nómina. No se guardó la suscripción.',
+    'Esta cuenta está suspendida. No se guardó la suscripción.',
+  ]) {
+    assert.equal(messageFor({code:'22023',message:text},'Falló'),text);
+  }
+  assert.match(subscriptions, /messageFor\(error, 'No pudimos guardar el cambio\. Vuelve a intentarlo\.'\), 'error'\)/);
+});

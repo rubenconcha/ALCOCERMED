@@ -15,3 +15,10 @@ body.campus-pending .sidebar .campus-nav-contact{display:none!important}
 .free-account-banner .campus-primary{display:inline-block}
 .login-notice{margin:0 0 14px;padding:11px 13px;border-radius:11px;background:#eef7ff;border:1px solid #cfe4f4;color:#1d5a7f;font-size:.85rem;line-height:1.45;text-align:center}
 
+
+.free-account-actions{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.free-account-actions button{font:inherit;font-weight:700;padding:10px 15px;border:1px solid #517895;border-radius:12px;color:#234665;background:white;cursor:pointer}
+.free-account-actions button:disabled{opacity:.65;cursor:wait}
+.free-account-actions button:focus-visible{outline:3px solid #2680a9;outline-offset:2px}
+#free-account-recheck-status{margin:12px 0 0}
+#free-account-recheck-status:empty{margin:0}

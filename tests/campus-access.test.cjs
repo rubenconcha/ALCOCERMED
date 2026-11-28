@@ -11,7 +11,9 @@ function setup(response){
     Date,Event:class Event{constructor(type){this.type=type}}
   };
   vm.createContext(context);vm.runInContext(fs.readFileSync('campus-access.js','utf8'),context);
-  return {access:context.window.CampusAccess,client:{rpc:async()=>response},el,classes,location:context.window.location,window:context.window};
+  const client={rpc:async()=>response};
+  Object.assign(context,{CampusAccess:context.window.CampusAccess,getSupabase:()=>client,currentUser:{id:'fixture'},currentCampusSessionId:'fixture-session',campusSigningOut:false});
+  return {access:context.window.CampusAccess,client,el,classes,location:context.window.location,window:context.window,context};
 }
 test('una cuenta registrada sin plan entra al campus pero solo ve Inicio',async()=>{
   const t=setup({data:{ready:true,premium:false,expires_at:'2020-01-01T00:00:00Z'}});
@@ -173,4 +175,55 @@ test('a videos-only entitlement stays on Inicio; stale refreshes cannot revoke t
     data: { ready: true, premium: false, atlas: false, videos: false },
   }) }, () => true), {code:'PREMIUM_REQUIRED'});
   assert.equal(t.access.permits('videoclases-screen'), false);
+});
+
+test('una cuenta pendiente puede verificar la activación vigente sin volver a iniciar sesión', async () => {
+  const t = setup({data:{ready:true,premium:false}});
+  await t.access.resolve(t.client);
+  assert.equal(await t.access.refreshRegistered(t.client, () => true), 'pending');
+  assert.equal(t.el('free-account-banner').hidden, false);
+  assert.equal(t.access.permits('study-library'), false);
+  const checked = [];
+  const client = {rpc: async name => {
+    checked.push(name);
+    return {data:{ready:true,premium:true,expires_at:'2099-01-01T00:00:00Z'}};
+  }};
+  assert.equal(await t.access.refreshRegistered(client, () => true), 'active');
+  assert.deepEqual(checked, ['campus_access']);
+  assert.equal(t.el('free-account-banner').hidden, true);
+  assert.equal(t.access.permits('study-library'), true);
+});
+
+test('la nueva comprobación no brinca los límites de dispositivo ni reutiliza otra sesión', async () => {
+  const pending = {ready:true,premium:false};
+  const t = setup({data:pending});
+  await t.access.resolve(t.client);
+  await assert.rejects(t.access.refreshRegistered({rpc:async()=>({data:{code:'DEVICE_LIMIT',ready:false}})}, () => true), {code:'DEVICE_LIMIT'});
+  assert.equal(t.access.permits('study-library'), false);
+  let release;
+  let isCurrent = true;
+  const request = t.access.refreshRegistered({rpc:() => new Promise(resolve => { release = resolve; })}, () => isCurrent);
+  isCurrent = false;
+  t.access.reset();
+  await t.access.resolve(t.client);
+  release({data:{ready:true,premium:true}});
+  assert.equal(await request, 'stale');
+  assert.equal(t.access.permits('study-library'), false);
+});
+
+test('el botón intenta de nuevo bajo la misma sesión y carga el material al obtener acceso real', async () => {
+  const t = setup({data:{ready:true,premium:false}});
+  await t.access.resolve(t.client);
+  const assets = [];
+  t.window.loadCampusAssets = async passed => { assets.push(passed); };
+  const button = {disabled:false};
+  await t.window.recheckCampusActivation(button);
+  assert.match(t.el('free-account-recheck-status').textContent,/todavía no tiene acceso vigente/);
+  assert.equal(t.access.permits('study-library'),false);
+  t.client.rpc = async () => ({data:{ready:true,premium:true}});
+  await t.window.recheckCampusActivation(button);
+  assert.deepEqual(assets,['campus-extra']);
+  assert.equal(t.access.permits('study-library'),true);
+  assert.equal(t.el('free-account-recheck-status').textContent,'');
+  assert.equal(button.disabled,false);
 });
