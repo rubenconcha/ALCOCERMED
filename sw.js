@@ -1,4 +1,4 @@
-const CACHE_NAME = 'alcocermed-main-v231-textos-mfq-2027';
+const CACHE_NAME = 'alcocermed-main-v232-activacion-campus';
 const APP_SHELL = [
     './video-community.js?v=1',
     './video-community.css?v=1',
@@ -33,7 +33,7 @@ const APP_SHELL = [
     './commerce.css?v=1',
     './student-white.css?v=2',
     './campus-theme.css?v=4',
-    './campus-access.css?v=5',
+    './campus-access.css?v=6',
     './campus-navigation.css?v=4',
     './campus-atlas.css?v=5',
     '/device-limit.css?v=1',
@@ -46,7 +46,7 @@ const APP_SHELL = [
     './platform-polish.js?v=1',
     './config.js',
     './device_guard.js?v=13',
-    './campus-access.js?v=18',
+    './campus-access.js?v=19',
     './campus-preview-policy.js?v=1',
     './official-flashcards.js?v=2',
     './study-depth.js?v=20',
