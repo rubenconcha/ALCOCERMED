@@ -22,7 +22,7 @@ test('el panel ofrece elegir el correo registrado en lugar de escribirlo', () =>
 test('los correos registrados se cargan y se muestran para activar con un toque', () => {
   assert.match(adminJs, /window\.AdminSubscriptions\?\.setRegisteredEmails\?\.\(cachedData\.estudiantes\)/);
   assert.match(subscriptions, /function setRegisteredEmails\(students\)/);
-  assert.match(subscriptions, /return \{ load, loadAccessCounts, clear, setRegisteredEmails \}/);
+  assert.match(subscriptions, /return \{ load, loadAccessCounts, currentStudents, clear, setRegisteredEmails \}/);
   assert.match(subscriptions, /function fillActivationEmail\(email\)/);
   assert.match(subscriptions, /function renderRegistered\(\)/);
   assert.match(subscriptions, /button\.addEventListener\('click', \(\) => fillActivationEmail\(row\.email\)\)/);
@@ -64,7 +64,22 @@ test('el panel separa los accesos vigentes de todas las cuentas registradas', ()
   assert.match(adminHtml, /<option value="active" selected>Estudiantes vigentes<\/option>/);
   assert.match(subscriptions, /rpc\('campus_admin_access_counts'\)/);
   assert.match(subscriptions, /counts\.active_students/);
-  assert.match(subscriptions, /counts\.registered \+ ' cuentas registradas/);
+  assert.match(subscriptions, /Sin incluir personal ni accesos históricos/);
   assert.match(subscriptions, /blocked: \['Sin acceso efectivo'/);
   assert.doesNotMatch(adminJs, /setText\('dash-total-users', users\.length\)/);
+});
+
+test('las vistas de gestión omiten historial sin quitar la búsqueda para activar', () => {
+  const {runInNewContext} = require('node:vm');
+  const statusSource = subscriptions.match(/const manageableStatuses = [^;]+;/)?.[0];
+  const statuses = runInNewContext(statusSource + ' manageableStatuses;');
+  assert.equal(statuses.has('active'), true);
+  assert.equal(statuses.has('scheduled'), true);
+  assert.equal(statuses.has('expired'), false);
+  assert.equal(statuses.has('cancelled'), false);
+  assert.match(subscriptions, /subscriptions\.filter\(row => manageableStatuses\.has\(row\.status\)\)/);
+  assert.match(subscriptions, /row\.scope === 'full' && row\.status === 'active'/);
+  assert.match(adminJs, /access\.emails\.has\(/);
+  assert.doesNotMatch(adminHtml, /<option value="(?:expired|cancelled)">/);
+  assert.match(adminHtml, /Buscar correo para activar/);
 });

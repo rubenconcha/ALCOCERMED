@@ -44,7 +44,18 @@ window.AdminSubscriptions = (() => {
     annual: 'Anual',
     lifetime: 'De por vida',
   };
+  const manageableStatuses = new Set(['active', 'staff', 'blocked', 'included', 'scheduled']);
   let rows = null;
+  let listFailed = false;
+
+  function currentStudents() {
+    return { emails: rows === null ? null : new Set(rows.filter(row => row.scope === 'full' && row.status === 'active')
+      .map(row => normalizedEmail(row.email)).filter(Boolean)), error: listFailed };
+  }
+
+  function notifyCurrentStudents() {
+    document.dispatchEvent(new Event('admin-current-students-change'));
+  }
   let directory = [];
   let listRequest = 0;
   let countsRequest = 0;
@@ -171,9 +182,7 @@ window.AdminSubscriptions = (() => {
 
   function renderAccessCounts(counts) {
     document.getElementById('dash-total-users').textContent = counts ? String(counts.active_students) : '—';
-    document.getElementById('dash-users-delta').textContent = counts
-      ? counts.registered + ' cuentas registradas en total (incluye personal)'
-      : 'Cuentas registradas: —';
+    document.getElementById('dash-users-delta').textContent = 'Sin incluir personal ni accesos históricos';
   }
 
   async function loadAccessCounts() {
@@ -257,7 +266,7 @@ window.AdminSubscriptions = (() => {
       : (shown.length === 1 ? '1 registro' : shown.length + ' registros');
     feedback(listStatus, shown.length ? count : rows.length
       ? 'No hay suscripciones que coincidan con la búsqueda.'
-      : 'Todavía no hay suscripciones registradas.');
+      : 'No hay accesos por gestionar.');
   }
 
   async function load() {
@@ -265,6 +274,8 @@ window.AdminSubscriptions = (() => {
     if (!admin) return;
     const request = ++listRequest;
     rows = null;
+    listFailed = false;
+    notifyCurrentStudents();
     table.replaceChildren();
     feedback(listStatus, 'Cargando suscripciones…');
     list.setAttribute('aria-busy', 'true');
@@ -281,10 +292,15 @@ window.AdminSubscriptions = (() => {
         subscriptions.push(...page);
         if (page.length < pageSize) break;
       }
-      rows = subscriptions;
+      rows = subscriptions.filter(row => manageableStatuses.has(row.status));
+      notifyCurrentStudents();
       render();
     } catch (error) {
-      if (isCurrent()) feedback(listStatus, messageFor(error, 'No se pudo cargar la lista. Pulsa Actualizar para volver a intentar.'), 'error');
+      if (isCurrent()) {
+        listFailed = true;
+        notifyCurrentStudents();
+        feedback(listStatus, messageFor(error, 'No se pudo cargar la lista. Pulsa Actualizar para volver a intentar.'), 'error');
+      }
     } finally {
       if (isCurrent()) list.removeAttribute('aria-busy');
     }
@@ -339,7 +355,7 @@ window.AdminSubscriptions = (() => {
       const adding = form === reactivateForm;
       if (adding) reactivate.close();
       feedback(adding ? listFeedback : status, successMessage(data), 'success');
-      if (list.classList.contains('active')) load();
+      if (list.classList.contains('active') || document.getElementById('section-estudiantes')?.classList.contains('active')) load();
       void loadAccessCounts();
       if (rpc === 'campus_admin_activate_ben_carson_group') void refreshStudentGroups();
     } catch (error) {
@@ -461,6 +477,8 @@ window.AdminSubscriptions = (() => {
     reactivateForm.reset();
     setSaving(false);
     rows = null;
+    listFailed = false;
+    notifyCurrentStudents();
     table.replaceChildren();
     directory = [];
     if (registeredList) registeredList.replaceChildren();
@@ -496,5 +514,5 @@ window.AdminSubscriptions = (() => {
   if (studentGroupsByEmail !== null || document.getElementById('student-group-status')?.textContent) {
     refreshSubscriptionGroupFilter();
   }
-  return { load, loadAccessCounts, clear, setRegisteredEmails };
+  return { load, loadAccessCounts, currentStudents, clear, setRegisteredEmails };
 })();

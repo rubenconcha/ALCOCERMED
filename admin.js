@@ -193,7 +193,7 @@ async function refreshAdminData() {
 
 function renderCurrentSection(section) {
   if (section === 'dashboard') renderDashboard();
-  else if (section === 'estudiantes') filterEstudiantes();
+  else if (section === 'estudiantes') void window.AdminSubscriptions?.load?.();
   else if (section === 'suscripciones') window.AdminSubscriptions?.load();
   else if (section === 'simulacros') renderSimulacros(cachedData.sims);
   else if (section === 'evaluaciones') { renderEvaluaciones(cachedData.banco); window.AdminTopicResults?.render(); window.AdminSectionTracking?.render(); }
@@ -551,13 +551,26 @@ function renderEstudiantes(list) {
     </tr>`).join('');
 }
 
+document.addEventListener('admin-current-students-change', () => {
+  if (document.getElementById('section-estudiantes')?.classList.contains('active')) filterEstudiantes();
+});
+
 function filterEstudiantes() {
+  const access = window.AdminSubscriptions?.currentStudents?.();
+  if (!access?.emails) {
+    setText('student-access-status', access?.error
+      ? 'No se pudieron verificar los accesos vigentes. Pulsa Actualizar para volver a intentar.'
+      : 'Verificando accesos vigentes…');
+    document.getElementById('tabla-estudiantes')?.replaceChildren();
+    return;
+  }
+  setText('student-access-status', '');
   const q = getValue('search-estudiantes').trim().toLowerCase();
   const group = studentGroups === null ? '' : getValue('filter-estudiantes-grupo');
   const rows = cachedData.estudiantes.filter(u => {
     const groupOfStudent = studentGroups?.get(u.user_id);
     const matchesGroup = !group || (group === 'unassigned' ? groupOfStudent === undefined : group === groupOfStudent);
-    return matchesGroup && [u.display, u.email, u.sub, u.user_id].join(' ').toLowerCase().includes(q);
+    return access.emails.has(String(u.email || '').trim().toLowerCase()) && matchesGroup && [u.display, u.email, u.sub, u.user_id].join(' ').toLowerCase().includes(q);
   });
   renderEstudiantes(rows);
 }

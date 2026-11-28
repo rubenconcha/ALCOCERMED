@@ -154,7 +154,7 @@
                         <p id="membership-group-note" class="subscription-note">Para otros cursos o si no conoces el grupo, deja «No cambiar grupo».</p>
                         <p class="subscription-feedback" role="status"></p>
                         <details id="registered-students" class="registered-students">
-                            <summary><i class="fas fa-users" aria-hidden="true"></i> Ver estudiantes registrados (<span id="registered-count">—</span>)</summary>
+                            <summary><i class="fas fa-users" aria-hidden="true"></i> Buscar correo para activar (<span id="registered-count">—</span>)</summary>
                             <p class="registered-note">Toca un correo para completar el campo «Correo del estudiante» sin escribirlo.</p>
                             <ul id="registered-students-list" class="registered-list"></ul>
                             <p id="registered-status" class="subscription-feedback" role="status"></p>
@@ -197,7 +197,7 @@
                     <div class="stat-card">
                         <div class="stat-header"><span class="stat-label">estudiantes con acceso vigente</span><div class="stat-icon orange"><i class="fas fa-users"></i></div></div>
                         <div class="stat-value" id="dash-total-users">—</div>
-                        <div class="stat-delta up" id="dash-users-delta"><i class="fas fa-arrow-up"></i> cuentas registradas: —</div>
+                        <div class="stat-delta up" id="dash-users-delta"><i class="fas fa-arrow-up"></i> sin incluir personal ni accesos históricos</div>
                     </div>
                     <div class="stat-card">
                         <div class="stat-header"><span class="stat-label">evaluaciones y exámenes entregados</span><div class="stat-icon blue"><i class="fas fa-clipboard-check"></i></div></div>
@@ -251,7 +251,7 @@
             <section id="section-estudiantes" class="admin-section">
                 <div class="table-card">
                     <div class="table-header">
-                        <div class="table-title"><i class="fas fa-users"></i> lista de estudiantes</div>
+                        <div class="table-title"><i class="fas fa-users"></i> estudiantes con acceso vigente</div>
                         <div class="student-list-filters">
                             <label>Grupo Ben Carson
                                 <select id="filter-estudiantes-grupo" onchange="filterEstudiantes()" aria-describedby="student-group-status" disabled>
@@ -265,6 +265,7 @@
                             <div class="table-search"><i class="fas fa-search" aria-hidden="true"></i><input type="search" id="search-estudiantes" aria-label="Buscar estudiante por nombre o correo" placeholder="buscar por nombre o correo..." oninput="filterEstudiantes()"></div>
                         </div>
                     </div>
+                    <p id="student-access-status" class="student-group-status" role="status"></p>
                     <p id="student-group-status" class="student-group-status" role="status"></p>
                     <div class="table-wrap">
                         <table>
@@ -291,13 +292,11 @@
                                 <label for="subscriptions-state">Estado</label>
                                 <select id="subscriptions-state">
                                     <option value="active" selected>Estudiantes vigentes</option>
-                                    <option value="">Todos los estados</option>
+                                    <option value="">Accesos por gestionar</option>
                                     <option value="staff">Personal con acceso</option>
                                     <option value="blocked">Sin acceso efectivo</option>
                                     <option value="included">Videos incluidos</option>
                                     <option value="scheduled">Programadas</option>
-                                    <option value="expired">Vencidas</option>
-                                    <option value="cancelled">Quitadas</option>
                                 </select>
                             </div>
                             <label>Grupo Ben Carson
@@ -565,6 +564,6 @@
 <datalist id="registered-emails"></datalist>
 
 <script defer src="config.js"></script>
-<script defer src="admin.js?v=11"></script><script defer src="question-review.js?v=3"></script><script defer src="admin-topic-results.js?v=5"></script><script defer src="admin-subject-errors.js?v=1"></script><script defer src="admin-flashcard-topics.js?v=1"></script><script defer src="admin-section-tracking.js?v=5"></script><script defer src="membership-admin.js?v=11"></script>
+<script defer src="admin.js?v=12"></script><script defer src="question-review.js?v=3"></script><script defer src="admin-topic-results.js?v=5"></script><script defer src="admin-subject-errors.js?v=1"></script><script defer src="admin-flashcard-topics.js?v=1"></script><script defer src="admin-section-tracking.js?v=5"></script><script defer src="membership-admin.js?v=12"></script>
 </body>
 </html>
