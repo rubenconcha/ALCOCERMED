@@ -31,6 +31,9 @@ window.AdminSubscriptions = (() => {
   const emailSuggestions = document.getElementById('registered-emails');
   const statuses = {
     active: ['Vigente', 'tag-success'],
+    staff: ['Personal con acceso', 'tag-info'],
+    blocked: ['Sin acceso efectivo', 'tag-muted'],
+    included: ['Incluido en acceso completo', 'tag-info'],
     scheduled: ['Programada', 'tag-info'],
     expired: ['Vencida', 'tag-muted'],
     cancelled: ['Quitada', 'tag-danger'],
@@ -44,6 +47,7 @@ window.AdminSubscriptions = (() => {
   let rows = null;
   let directory = [];
   let listRequest = 0;
+  let countsRequest = 0;
   let pendingWrite = null;
   let confirmedAction = null;
   let reactivationTarget = null;
@@ -165,6 +169,32 @@ window.AdminSubscriptions = (() => {
     return td;
   }
 
+  function renderAccessCounts(counts) {
+    document.getElementById('dash-total-users').textContent = counts ? String(counts.active_students) : '—';
+    document.getElementById('dash-users-delta').textContent = counts
+      ? counts.registered + ' cuentas registradas en total (incluye personal)'
+      : 'Cuentas registradas: —';
+  }
+
+  async function loadAccessCounts() {
+    const admin = currentAdmin;
+    if (!admin) return;
+    const request = ++countsRequest;
+    const isCurrent = () => request === countsRequest && admin === currentAdmin;
+    try {
+      const { data, error } = await getSupabase().rpc('campus_admin_access_counts');
+      if (!isCurrent()) return;
+      if (error || !Number.isSafeInteger(data?.active_students) || data.active_students < 0 ||
+          !Number.isSafeInteger(data?.registered) || data.registered < data.active_students) {
+        renderAccessCounts(null);
+        return;
+      }
+      renderAccessCounts(data);
+    } catch (_) {
+      if (isCurrent()) renderAccessCounts(null);
+    }
+  }
+
   function render() {
     if (!rows) return;
     const query = search.value.trim().toLowerCase();
@@ -196,7 +226,7 @@ window.AdminSubscriptions = (() => {
       status.append(badge);
       const actions = cell('');
       actions.className = 'subscription-actions';
-      if (row.email && ['active', 'scheduled', 'cancelled'].includes(row.status)) {
+      if (row.email && ['active', 'staff', 'blocked', 'included', 'scheduled', 'cancelled'].includes(row.status)) {
         const label = row.scope === 'videos' ? 'solo videos' : 'suscripción completa';
         const adding = row.status === 'cancelled';
         const button = document.createElement('button');
@@ -222,7 +252,9 @@ window.AdminSubscriptions = (() => {
       body.append(tr);
     }
     table.replaceChildren(body);
-    const count = shown.length === 1 ? '1 registro' : shown.length + ' registros';
+    const count = filter.value === 'active'
+      ? (shown.length === 1 ? '1 estudiante vigente' : shown.length + ' estudiantes vigentes')
+      : (shown.length === 1 ? '1 registro' : shown.length + ' registros');
     feedback(listStatus, shown.length ? count : rows.length
       ? 'No hay suscripciones que coincidan con la búsqueda.'
       : 'Todavía no hay suscripciones registradas.');
@@ -308,6 +340,7 @@ window.AdminSubscriptions = (() => {
       if (adding) reactivate.close();
       feedback(adding ? listFeedback : status, successMessage(data), 'success');
       if (list.classList.contains('active')) load();
+      void loadAccessCounts();
       if (rpc === 'campus_admin_activate_ben_carson_group') void refreshStudentGroups();
     } catch (error) {
       if (!isCurrent()) return;
@@ -417,6 +450,8 @@ window.AdminSubscriptions = (() => {
 
   function clear() {
     ++listRequest;
+    ++countsRequest;
+    renderAccessCounts(null);
     pendingWrite = null;
     confirmedAction = null;
     if (dialog.open) dialog.close();
@@ -435,7 +470,8 @@ window.AdminSubscriptions = (() => {
     feedback(listStatus, '');
     feedback(listFeedback, '');
     list.removeAttribute('aria-busy');
-    search.value = filter.value = listGroup.value = '';
+    search.value = listGroup.value = '';
+    filter.value = 'active';
     listGroup.disabled = true;
     feedback(listGroupStatus, '');
     for (const form of forms) {
@@ -460,5 +496,5 @@ window.AdminSubscriptions = (() => {
   if (studentGroupsByEmail !== null || document.getElementById('student-group-status')?.textContent) {
     refreshSubscriptionGroupFilter();
   }
-  return { load, clear, setRegisteredEmails };
+  return { load, loadAccessCounts, clear, setRegisteredEmails };
 })();

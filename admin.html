@@ -195,9 +195,9 @@
                 </div>
                 <div class="stats-grid">
                     <div class="stat-card">
-                        <div class="stat-header"><span class="stat-label">total estudiantes</span><div class="stat-icon orange"><i class="fas fa-users"></i></div></div>
+                        <div class="stat-header"><span class="stat-label">estudiantes con acceso vigente</span><div class="stat-icon orange"><i class="fas fa-users"></i></div></div>
                         <div class="stat-value" id="dash-total-users">—</div>
-                        <div class="stat-delta up" id="dash-users-delta"><i class="fas fa-arrow-up"></i> registrados en auth</div>
+                        <div class="stat-delta up" id="dash-users-delta"><i class="fas fa-arrow-up"></i> cuentas registradas: —</div>
                     </div>
                     <div class="stat-card">
                         <div class="stat-header"><span class="stat-label">evaluaciones y exámenes entregados</span><div class="stat-icon blue"><i class="fas fa-clipboard-check"></i></div></div>
@@ -282,7 +282,7 @@
             <section id="section-suscripciones" class="admin-section" aria-labelledby="subscriptions-title">
                 <div class="table-card">
                     <div class="table-header subscription-list-header">
-                        <h2 class="table-title" id="subscriptions-title">Estudiantes con suscripción</h2>
+                        <h2 class="table-title" id="subscriptions-title">Accesos al campus</h2>
                         <div class="subscription-filters">
                             <label>Buscar estudiante
                                 <input id="subscriptions-search" type="search" placeholder="Nombre o correo">
@@ -290,8 +290,11 @@
                             <div class="subscription-filter">
                                 <label for="subscriptions-state">Estado</label>
                                 <select id="subscriptions-state">
+                                    <option value="active" selected>Estudiantes vigentes</option>
                                     <option value="">Todos los estados</option>
-                                    <option value="active">Vigentes</option>
+                                    <option value="staff">Personal con acceso</option>
+                                    <option value="blocked">Sin acceso efectivo</option>
+                                    <option value="included">Videos incluidos</option>
                                     <option value="scheduled">Programadas</option>
                                     <option value="expired">Vencidas</option>
                                     <option value="cancelled">Quitadas</option>
@@ -562,6 +565,6 @@
 <datalist id="registered-emails"></datalist>
 
 <script defer src="config.js"></script>
-<script defer src="admin.js?v=10"></script><script defer src="question-review.js?v=3"></script><script defer src="admin-topic-results.js?v=5"></script><script defer src="admin-subject-errors.js?v=1"></script><script defer src="admin-flashcard-topics.js?v=1"></script><script defer src="admin-section-tracking.js?v=5"></script><script defer src="membership-admin.js?v=9"></script>
+<script defer src="admin.js?v=11"></script><script defer src="question-review.js?v=3"></script><script defer src="admin-topic-results.js?v=5"></script><script defer src="admin-subject-errors.js?v=1"></script><script defer src="admin-flashcard-topics.js?v=1"></script><script defer src="admin-section-tracking.js?v=5"></script><script defer src="membership-admin.js?v=11"></script>
 </body>
 </html>

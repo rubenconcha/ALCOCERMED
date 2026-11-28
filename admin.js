@@ -185,7 +185,7 @@ function showContentTab(btn, tabId) {
 
 async function refreshAdminData() {
   setText('last-updated', 'actualizando...');
-  await Promise.all([loadAllData(), refreshStudentGroups()]);
+  await Promise.all([loadAllData(), refreshStudentGroups(), window.AdminSubscriptions?.loadAccessCounts?.()]);
   const active = document.querySelector('.admin-section.active');
   renderCurrentSection(active ? active.id.replace('section-', '') : 'dashboard');
   if(typeof window!=='undefined')window.AdminSectionTracking?.refreshProfile();
@@ -371,17 +371,14 @@ function buildStudentRows(data) {
    DASHBOARD
    ═══════════════════════════════════════════════ */
 function renderDashboard() {
-  const users = cachedData.estudiantes;
   const sims = cachedData.sims;
   const bancos = cachedData.banco;
   const vids = cachedData.videos;
   const allScores = [...sims.map(r => number(r.porcentaje ?? r.score)), ...bancos.map(r => number(r.porcentaje ?? pct(r.correctas, r.total)))].filter(n => n > 0);
 
-  setText('dash-total-users', users.length);
   setText('dash-total-sims', sims.length);
   setText('dash-promedio', (allScores.length ? Math.round(avg(allScores)) : 0) + '%');
   setText('dash-videos', vids.length);
-  setText('dash-users-delta', (knownEmailsCount() ? `${knownEmailsCount()} con correo visible` : 'estudiantes con actividad'));
   setText('dash-sims-delta', `${countThisMonth(sims, 'created_at')} este mes`);
   setText('dash-promedio-delta', `${bancos.length} bancos + ${sims.length} entregas de evaluaciones y exámenes`);
   setText('dash-videos-delta', `${unique(vids.map(v => v.user_id)).length} estudiantes activos`);

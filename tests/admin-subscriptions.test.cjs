@@ -22,7 +22,7 @@ test('el panel ofrece elegir el correo registrado en lugar de escribirlo', () =>
 test('los correos registrados se cargan y se muestran para activar con un toque', () => {
   assert.match(adminJs, /window\.AdminSubscriptions\?\.setRegisteredEmails\?\.\(cachedData\.estudiantes\)/);
   assert.match(subscriptions, /function setRegisteredEmails\(students\)/);
-  assert.match(subscriptions, /return \{ load, clear, setRegisteredEmails \}/);
+  assert.match(subscriptions, /return \{ load, loadAccessCounts, clear, setRegisteredEmails \}/);
   assert.match(subscriptions, /function fillActivationEmail\(email\)/);
   assert.match(subscriptions, /function renderRegistered\(\)/);
   assert.match(subscriptions, /button\.addEventListener\('click', \(\) => fillActivationEmail\(row\.email\)\)/);
@@ -58,4 +58,13 @@ test('el panel avisa el motivo real si la activación queda bloqueada por nómin
     assert.equal(messageFor({code:'22023',message:text},'Falló'),text);
   }
   assert.match(subscriptions, /messageFor\(error, 'No pudimos guardar el cambio\. Vuelve a intentarlo\.'\), 'error'\)/);
+});
+
+test('el panel separa los accesos vigentes de todas las cuentas registradas', () => {
+  assert.match(adminHtml, /<option value="active" selected>Estudiantes vigentes<\/option>/);
+  assert.match(subscriptions, /rpc\('campus_admin_access_counts'\)/);
+  assert.match(subscriptions, /counts\.active_students/);
+  assert.match(subscriptions, /counts\.registered \+ ' cuentas registradas/);
+  assert.match(subscriptions, /blocked: \['Sin acceso efectivo'/);
+  assert.doesNotMatch(adminJs, /setText\('dash-total-users', users\.length\)/);
 });
