@@ -250,6 +250,19 @@ window.AdminSubscriptions = (() => {
         });
         actions.append(button);
       }
+      if (row.email && row.scope === 'full' && ['active', 'blocked'].includes(row.status) &&
+          typeof window.restaurarDispositivo === 'function') {
+        const reset = document.createElement('button');
+        reset.type = 'button';
+        reset.className = 'btn btn-sm btn-secondary';
+        reset.textContent = 'Restaurar dispositivo';
+        reset.setAttribute('aria-label', 'Restaurar dispositivo de ' + row.email);
+        reset.disabled = Boolean(pendingWrite);
+        reset.addEventListener('click', () => {
+          if (currentAdmin && !pendingWrite) window.restaurarDispositivo(row.email);
+        });
+        actions.prepend(reset);
+      }
       const group = groupFor(row);
       const groupCell = cell('');
       const groupTag = document.createElement('span');
